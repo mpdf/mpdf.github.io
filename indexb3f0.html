@@ -1,0 +1,109 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=404&op_target=print&id=462 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:31 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Installation & Setup</div>
+<h3>Upgrading to v4.x - <span class="redbold">Archived</span></h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h6>Where has it gone?<br />
+</h6> 
+<p>Some of the files - or their contents - have been moved or renamed in version 4. If you have made changes/modifications to previous versions, and want to make those changes to the new versions, this may help you find things:</p> 
+<p>Declarations of all variables have been moved to the top of the mPDF class.</p> 
+<p>Variables are now initialised (when required) either in the <span class="function">function mpdf()</span> if they are internal variables, or in the config.php file.</p> 
+<p>The file <span class="filename">htmltoolkit.php</span> is removed:</p> 
+<ul> 
+<li><span class="function">GetCodepage()</span> is moved to <span class="filename">config_cp.php</span> which contains configurable values for codepages</li> 
+<li>most functions from <span class="filename">htmltoolkit.php</span> are now included within the mpdf class (at end of <span class="filename">mpdf.php</span> file) </li> 
+<li>character substitutions are now in <span class="filename">/includes/subs_[codepage].php</span> files</li> 
+<li>a few remaining stand-alone functions have moved to <span class="filename">/includes/functions.php</span></li> 
+</ul> 
+<p><span class="filename">mpdf_config.php</span> has been renamed <span class="filename">config_fonts.php</span></p> 
+<p><span class="filename">gif.php</span> has moved to <span class="filename">/classes/gif.php</span></p> 
+<p><span class="filename">CJKdata.php</span> has moved to <span class="filename">/includes/</span></p> 
+<p><span class="filename">no_img2.gif</span> is now <span class="filename">/includes/no_image.jpg</span></p> 
+<h6>Additional notes for developers<br />
+</h6> 
+<p><span class="function">split()</span> has been replaced by <span class="function">preg_split</span> or <span class="function">explode</span> as split is depracated in PHP 5.3</p> 
+<p><span class="function">set_magic_quotes_runtime</span> has been wrapped in a check as it is depracated in PHP 5.3</p> 
+<p>A number of subroutine functions have been used to tidy up the code.</p> 
+<p>Handling of HTML Headers and Footers has been changed, so that all are 'written' at the end of the document.</p> 
+<p>The files in <span class="filename">/patterns/*.*</span> used for hyphenation are changed to ASCII safe text (were win-1252 encoded)</p> 
+<p>If a double-sided document is generated (<span class="parameter">mirrorMargins</span>/<span class="parameter">useOddEven</span>) then the PDF file is set to use Duplex printing by default</p> 
+<p>mPDFi altered - can now simply capture errors on reading file by editing <span class="filename">mpdfi.php</span> see fn. <span class="function">SetSourceFile()</span></p> 
+<p>Some internal variables have been changed:</p> 
+<ul> 
+<li>&nbsp;<span class="parameter">$mb_encoding -&gt; $mb_enc</span></li> 
+<li>&nbsp;<span class="parameter">$saveHeaderLinksE_N etc. -&gt; $saveHeaderLinks</span> (array)</li> 
+<li>&nbsp;<span class="parameter">$saveFooterLinksE_N etc. -&gt; $saveFooterLinks</span> (array)</li> 
+<li>&nbsp;<span class="parameter">$saveHTMLHeaderE_N etc. -&gt; $saveHTMLHeader</span> (array)</li> 
+<li>&nbsp;<span class="parameter">$saveHTMLFooter_N etc. -&gt; $saveHTMLFooter</span> (array)</li> 
+<li>&nbsp;<span class="parameter">$tblborderstyles -&gt; $borderstyles</span></li> 
+</ul> 
+<p>Script will die with an error message if <span class="function">mb_string</span> functions not enabled.</p> 
+<p><span class="parameter">FPDF_FONTPATH</span> changed to <span class="parameter">MPDF_FONTPATH</span></p> 
+<p><span class="function">_getfontpath()</span> removed - replaced with <span class="parameter">MPDF_FONTPATH</span></p> 
+<p>functions <span class="function">DottedRect</span> and <span class="function">DrawDot</span> removed (not used)</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 17 Dec 2009 - <span class="redbold">Archived</span><br />
+Validated 28 Feb 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:37:15 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=404&op_target=print&id=462 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:31 GMT -->
+</html>

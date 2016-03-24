@@ -1,0 +1,95 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=480&op_target=print&id=550 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>AddSpotColor</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<div> 
+<div> 
+<p>(mPDF &gt;= 5.1)</p> 
+<p>AddSpotColor – Define a Spot colour</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>AddSpotColor</b> ( string <span class="parameter">$name</span> , int <span class="parameter">$c</span> , int <span class="parameter">$m</span>, int <span class="parameter">$y</span> , int <span class="parameter">$k</span> )</p> 
+<p>Define a Spot colour which can be used in the document. Spot colours need to be defined at the start of the script.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">name</span></p> 
+<p class="manual_param_dd">Specifies the name used for the spot colour.</p> 
+<p class="manual_param_dt"><span class="parameter">c, m, y, k</span></p> 
+<p class="manual_param_dd"><span class="parameter">S</span>pecifies the CMYK values to be used to display in the document or if the spot colour is not available.<br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+$mpdf-&gt;AddSpotColor('PANTONE 534 EC',85,65,47,9);<br /> 
+<br /> 
+?&gt;<br />
+<br />
+HTML<br />
+&lt;p style="color: spot(PANTONE 300 EC,80%);"&gt;This will be printed using PANTONE 300 EC at 80% tint&lt;/p&gt;</p> 
+</div> 
+</div>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 11 Jan 2013<br />
+Validated 13 Jan 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:13:36 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=480&op_target=print&id=550 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

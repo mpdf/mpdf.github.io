@@ -1,0 +1,130 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=119&op_target=print&id=150 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; HTML control tags</div>
+<h3>tocentry</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 1.0)</p> 
+<p>tocentry – Insert an entry for the Table of Contents</p> 
+<h5>Description</h5> 
+<p class="manual_block">&lt;<b>tocentry</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">level</span> ] [ <span class="parameter">name</span> ] /&gt;</p> 
+<p>Insert an entry for the Table of Contents referencing the current writing position in the document.</p> 
+<p>&nbsp;</p> 
+<p class="manual_block"><b>Note: </b>The position for the Table of Contents must be specified using <a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; at some point before <a href="http://mpdf1.com/manual/index.php?tid=125">Output()</a> is called.</p> 
+<p class="manual_block"><b>Note:</b> From mPDF 2.3 you can use more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">name</span>.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">content</span></p> 
+<p class="manual_param_dd">This parameter sets the text as it will appear in the ToC entry. Text should be UTF-8 encoded. <br />
+<span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;tocentry content="&amp;lt; 40" /&gt;<br /> 
+It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.<br />
+<span class="smallblock">REQUIRED</span></p> 
+<p class="manual_param_dt"><span class="parameter">level</span></p> 
+<p class="manual_param_dd">Specify the level of this entry (i.e. like heading 1,2,3) as a positive integer&nbsp; <br /> 
+Starts at level 0<br />
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">name</span></p> 
+<p class="manual_param_dd">Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry, if using more than one <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">name</span> can be any alphanumeric characters (except just "0") and is case-insensitive.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the default <acronym title="Table of Contents">ToC</acronym>.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br />
+"ALL" will add this entry to every ToC active in the document.</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.3</td> 
+<td><span class="parameter">name</span> attribute was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+$mpdf=new mPDF();<br /> 
+$mpdf-&gt;WriteHTML('Introduction');<br /> 
+$mpdf-&gt;WriteHTML('&lt;tocpagebreak /&gt;');<br /> 
+<br /> 
+$mpdf-&gt;WriteHTML('&lt;tocentry content="Chapter 1" /&gt;');<br /> 
+$mpdf-&gt;WriteHTML('Chapter 1 ...');<br /> 
+$mpdf=Output();<br /> 
+<br /> 
+?&gt;</p> 
+<h5>Notes</h5> 
+<p class="manual_block"><b>Note</b>: Since mPDF 2.0 <b>insertTOC()</b> should <b>not</b> be called at the end of the document. <a href="http://mpdf1.com/manual/index.php?tid=30">Output()</a> will automatically generate the ToC if it has been defined with either or <a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> or&nbsp;&lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt;.</p> 
+<h6>Recommended placement</h6> 
+<p>Recommended placement of ToC Entries is just after the first word following the opening tag of the block element:</p> 
+<p class="examplecode">&lt;h2&gt;First&lt;tocentry... /&gt; word of a heading or block&lt;/h2&gt;</p> 
+<p>or alternatively just after the opening tag of the block element:</p> 
+<p class="examplecode">&lt;h2&gt;&lt;tocentry... /&gt;Heading or block&lt;/h2&gt;</p> 
+<p>or just after a word to be marked:</p> 
+<p class="examplecode">... this is a word&lt;tocentry... /&gt; in the middle of text to be marked ...</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"> <a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> - Insert a Table of Contents in the document </li> 
+<li class="manual_boxlist"> &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; - Insert a Table of Contents in the document </li> 
+<li class="manual_boxlist"> <a href="http://mpdf1.com/manual/index.php?tid=185">TOC_Entry()</a> - Mark a ToC entry in the document </li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 6 Feb 2009<br />
+Validated 13 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:19:53 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=119&op_target=print&id=150 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+</html>

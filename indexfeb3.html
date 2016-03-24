@@ -1,0 +1,170 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=364&op_target=print&id=418 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:07 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Graphs</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF can generate graphs from table data. This requires the <b>JPGraph</b> program, which is an open-source PHP library available from <a href="http://www.aditus.nu/jpgraph/" target="_blank">http://www.aditus.nu/jpgraph/</a></p> 
+<p>Graphs have only been tested with the PHP5 version of JPGraph.</p> 
+<h6>Installation</h6> 
+<p>JPGraph needs to be installed on your server. Follow the instructions for installing JPGraph, including configuring the script to access the TTF fonts necessary to produce JPGraphs.</p> 
+<p class="manual_block"><b>Note:</b> Check that you have a subfolder in your /mpdf/ folder named /graph_cache/ and make sure it is writeable.</p> 
+<h6>Using Graphs in mPDF</h6> 
+<p>See the example below. The table containing data must precede the graph. Nested tables will be ignored.</p> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+include("../mpdf.php");<br />
+<br />
+// This must be defined before including mpdf.php file<br />
+define("_JPGRAPH_PATH", '../../jpgraph_5/src/'); <br />
+<br />
+// Change these if necessary to the name of font files you can access from JPGraph<br />
+define("_TTF_FONT_NORMAL", 'arial.ttf');<br />
+define("_TTF_FONT_BOLD", 'arialbd.ttf');<br />
+<br />
+$mpdf=new mPDF(); <br />
+<br />
+// This must be set to allow mPDF to parse table data<br />
+$mpdf-&gt;useGraphs = true;<br />
+<br />
+$html = '<br />
+&lt;table id="tbl_1"&gt;&lt;tbody&gt;<br />
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Female&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Male&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;35 - 44&lt;/td&gt;&lt;td&gt;&lt;b&gt;4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;45 - 54&lt;/td&gt;&lt;td&gt;&lt;b&gt;5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;7&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;55 - 64&lt;/td&gt;&lt;td&gt;&lt;b&gt;21&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;18&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;65 - 74&lt;/td&gt;&lt;td&gt;&lt;b&gt;11&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;14&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;75 - 84&lt;/td&gt;&lt;td&gt;&lt;b&gt;10&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;10&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;85 - 94&lt;/td&gt;&lt;td&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;95 - 104&lt;/td&gt;&lt;td&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;TOTAL&lt;/td&gt;&lt;td&gt;54&lt;/td&gt;&lt;td&gt;52&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;/tbody&gt;&lt;/table&gt;<br />
+<br />
+&lt;jpgraph table="tbl_1" type="bar" title="New subscriptions" label-y="% patients" label-x="Age group" series="cols" data-row-end="-1" show-values="1" width="600" legend-overlap="1" hide-grid="1" hide-y-axis="1" /&gt;<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br />
+$mpdf-&gt;Output();<br />
+exit;<br />
+<br />
+?&gt;</p> 
+<p>&nbsp;</p> 
+<h6>Result<br />
+</h6> 
+<p>This should produce a PDF file like this:</p> 
+<p>&nbsp;</p> 
+<table id="tbl_1" class="bpmNoLines"> <tbody> 
+<tr> 
+<td>&nbsp;</td> 
+<td><b>Female</b></td> 
+<td><b>Male</b></td> 
+</tr> 
+<tr> 
+<td>35 - 44</td> 
+<td><b>4</b></td> 
+<td><b>2</b></td> 
+</tr> 
+<tr> 
+<td>45 - 54</td> 
+<td><b>5</b></td> 
+<td><b>7</b></td> 
+</tr> 
+<tr> 
+<td>55 - 64</td> 
+<td><b>21</b></td> 
+<td><b>18</b></td> 
+</tr> 
+<tr> 
+<td>65 - 74</td> 
+<td><b>11</b></td> 
+<td><b>14</b></td> 
+</tr> 
+<tr> 
+<td>75 - 84</td> 
+<td><b>10</b></td> 
+<td><b>10</b></td> 
+</tr> 
+<tr> 
+<td>85 - 94</td> 
+<td><b>2</b></td> 
+<td><b>1</b></td> 
+</tr> 
+<tr> 
+<td>95 - 104</td> 
+<td><b>1</b></td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>TOTAL</td> 
+<td>54</td> 
+<td>52</td> 
+</tr> 
+</tbody> </table> 
+<p><img src="http://mpdf1.com/manual/files/images/example_graph.png" alt="example_graph.png" /></p> 
+<p>&nbsp;</p> 
+<p>Note that graphs can be rotated as with images using&lt;jpgraph rotate="90" ... (see <a href="http://mpdf1.com/manual/index.php?tid=257">HTML attributes</a>)</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 22 Apr 2009<br />
+<span class="redbold">Draft (not yet validated)</span></div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:10:34 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=364&op_target=print&id=418 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:07 GMT -->
+</html>

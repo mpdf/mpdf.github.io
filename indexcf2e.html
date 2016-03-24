@@ -1,0 +1,100 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=130&op_target=print&id=161 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>SetBasePath()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 1.0)</p> 
+<p>SetBasePath – Specifies a base URL for mPDF to interpret relative URLs</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>SetBasePath</b> ( string <span class="parameter">$url</span> )</p> 
+<p>Specifies that mPDF should interpret any URLs in the HTML code relative to this <span class="parameter">url</span>. Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, and images.</p> 
+<p class="manual_block"><b>Note:</b> From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.</p> 
+<p class="manual_block"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">url</span></p> 
+<p class="manual_param_dd">A full URL should be provided, but the following will all work:<br />
+http://www.mydomain.com<br />
+http://www.mydomain.com/index.php<br />
+http://www.mydomain.com/path/<span class="smallblock"><br />
+</span></p> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+$mpdf=new mPDF();<br />
+<br />
+$url = "http://www.php.net/manual/en/function.iconv.php";<br />
+$html = file_get_contents($url);<br />
+$mpdf-&gt;setBasePath($url);<br />
+// Now any relative paths e.g. &lt;img src="../picture.jpg" /&gt; will be parsed relative to a<br />
+&nbsp;&nbsp; base path of "http://www.php.net/manual/en/"<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br /> 
+$mpdf-&gt;Output();<br /> 
+<br /> 
+?&gt;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 6 Feb 2009<br />
+Validated 13 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:15:32 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=130&op_target=print&id=161 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

@@ -1,0 +1,266 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=456&op_target=print&id=525 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>TOCpagebreakByArray()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 5.0)</p> 
+<p>TOCpagebreakByArray — Insert a table of contents in the document using an array of parameters</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>TOCpagebreakByArray</b> ([ array <span class="parameter">$arr</span> ])</p> 
+<p>Add a new page to the document using an array of (optional) parameters, marking the point at which a Table of Contents (<acronym title="Table of Contents">ToC</acronym>) will be inserted in the document at the end of writing. The numerous parameters specify both paging details for the continuing document, and for the <acronym title="Table of Contents">ToC</acronym> when it is generated.</p> 
+<p class="manual_block"><b>Note:</b> From mPDF 5.7 the layout of a table of contents can be controlled using CSS. <span class="parameter">font</span> <span class="parameter">font-size</span> and <span class="parameter">indent</span> have become redundant.</p> 
+<p class="manual_block"><b>Note:</b> When writing a <span class="smallblock">DOUBLE-SIDED</span> document, the <acronym title="Table of Contents">ToC</acronym> will always start on an <span class="smallblock">ODD</span> page. Therefore there is no option to specifiy the pagebreak <span class="parameter">type </span>as in <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> - using <b>TOCpagebreakByArray()</b> will always continue the document on an <span class="smallblock">ODD</span> page.</p> 
+<p class="manual_block"><b>Note:</b> Page numbering is always suppressed in the <acronym title="Table of Contents">ToC</acronym>.</p> 
+<p class="manual_block"><b>Note:</b> The <acronym title="Table of Contents">ToC</acronym> is generated at the end of the document. Unless otherwise specified, the <acronym title="Table of Contents">ToC</acronym> will inherit the page margins, headers/footers and orientation of the last page written to the document.</p> 
+<p class="manual_block"><b>Note:</b> You can include more than one <acronym title="Table of Contents">ToC</acronym> in the document using the parameter <span class="parameter">name</span>.</p> 
+<p class="manual_block"><b>Note:</b> If <b>TOCpagebreakByArray()</b> is used at the start of a blank (<span class="smallblock">ODD</span>) page, no new page(s) will be added. This was added in mPDF 2.3 to allow a <acronym title="Table of Contents">ToC</acronym> to be placed on the first page, or to allow a <acronym title="Table of Contents">ToC</acronym> to follow another <acronym title="Table of Contents">ToC</acronym>. In this case, any properties for the continuing document are ignored. If you define several <acronym title="Table of Contents">ToC</acronym>s following immediately on from one another, set the properties in the first <acronym title="Table of Contents">ToC</acronym> you define.</p> 
+<h5>Parameters</h5> 
+<p class="manual_block">The initial parameters specify characteristics for the <acronym title="Table of Contents">ToC</acronym>, which is generated automatically at the end of the document when <a href="http://mpdf1.com/manual/index.php?tid=125">Output()</a> is called.</p> 
+<p><span class="parameter">paging</span> = <span class="smallblock">TRUE</span>|1|<span class="smallblock">FALSE</span>|0</p> 
+<p class="manual_param_dd">Specify whether to show page numbers in the <acronym title="Table of Contents">ToC</acronym>.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses a default value of <span class="smallblock">TRUE</span>.<br /> 
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p> 
+<p class="manual_param_dd"><b>Values</b><br /> 
+<span class="smallblock">TRUE</span> <i>or</i> 1: show page numbers in the <acronym title="Table of Contents">ToC</acronym>.<br /> 
+<span class="smallblock">FALSE</span> <i>or</i> 0: do not show page numbers in the <acronym title="Table of Contents">ToC</acronym>.</p> 
+<p class="manual_param_dt"><span class="parameter">links </span> = <span class="smallblock">TRUE</span>|1|<span class="smallblock">FALSE</span>|0</p> 
+<p class="manual_param_dd">Specify whether to generate hyperlinks in the <acronym title="Table of Contents">ToC</acronym>.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses a default value of <span class="smallblock">FALSE</span>.<br /> 
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p> 
+<p class="manual_param_dd"><b>Values</b><br /> 
+<span class="smallblock">TRUE</span> <i>or</i> 1: show hyperlinks in the <acronym title="Table of Contents">ToC</acronym>.<br /> 
+<span class="smallblock">FALSE</span> <i>or</i> 0: do not show hyperlinks in the <acronym title="Table of Contents">ToC</acronym>.</p> 
+<p class="manual_param_dt"><span class="parameter">toc-orientation </span></p> 
+<p class="manual_param_dd">This attribute specifies the orientation of the <acronym title="Table of Contents">ToC</acronym> pages.<br /> 
+<span class="smallblock">BLANK</span> or omitted leaves the orientation unchanged i.e. at the end of the document (before the <acronym title="Table of Contents">ToC</acronym> is generated)</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br /> 
+L <i>or</i> landscape: Landscape<br /> 
+P <i>or</i> portrait:&nbsp;Portrait</p> 
+<p class="manual_param_dt"><span class="parameter">toc-margin-left<br /> 
+toc-margin-right<br /> 
+</span><span class="parameter">toc-margin-top<br /> 
+toc-margin-bottom<br /> 
+</span><span class="parameter">toc-margin-header<br /> 
+toc-margin-footer</span></p> 
+<p class="manual_param_dd">Set the page margins for the <acronym title="Table of Contents">ToC</acronym>. <br /> 
+All values should be specified as <span class="smallblock">LENGTH</span> in millimetres.<br /> 
+If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current margin unchanged i.e. the margins current at the end of the document.<br /> 
+"0" (zero) will set the margin to zero.</p> 
+<p><span class="parameter">outdent</span></p> 
+<p class="manual_param_dd">Set a negative indent for the last line of each <acronym title="Table of Contents">ToC</acronym> entry.<br />
+Values should be <span class="smallblock">BLANK </span>string or any valid CSS <span class="smallblock">LENGTH</span>.<br /> 
+This will cause the line to extend beyond the right margin; you can prevent this by setting <span class="smallblock">PADDING-RIGHT</span> equal to this value.<br /> 
+<span class="smallblock">DEFAULT</span> 0</p> 
+<p class="manual_param_dt"><span class="parameter">toc-odd-header-name<br /> 
+toc-even-header-name</span><span class="parameter"><br /> 
+toc-odd-footer-name<br /> 
+</span><span class="parameter">toc-even-footer-name</span></p> 
+<p class="manual_param_dd">Selects a header or footer by name to use for the <acronym title="Table of Contents">ToC</acronym>. The header/footer must already have been defined using <a href="http://mpdf1.com/manual/index.php?tid=165">DefHeaderByName()</a>, <a href="http://mpdf1.com/manual/index.php?tid=166">DefFooterByName()</a>, <a href="http://mpdf1.com/manual/index.php?tid=169">DefHTMLHeaderByName()</a>, or <a href="http://mpdf1.com/manual/index.php?tid=170">DefHTMLFooterByName()</a>.<br /> 
+If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the header/footer unchanged. NB <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">toc-</span><span class="parameter">odd-header-value</span> to -1 to turn the header off.</p> 
+<p class="manual_block"><b>Note:</b> You must add the prefix 'html_' before the name if it is a HTMLHeader.</p> 
+<p class="manual_param_dt"><span class="parameter">toc-odd-header-value</span><span class="parameter"><br /> 
+toc-even-header-value<br /> 
+toc-odd-footer-value</span><span class="parameter"><br /> 
+toc-even-footer-value</span></p> 
+<p class="manual_param_dd">Specify whether to show a header or footer in the <acronym title="Table of Contents">ToC</acronym>. The header/footer must already have been defined using <a href="http://mpdf1.com/manual/index.php?tid=165">DefHeaderByName()</a>, <a href="http://mpdf1.com/manual/index.php?tid=166">DefFooterByName()</a>, <a href="http://mpdf1.com/manual/index.php?tid=169">DefHTMLHeaderByName()</a>, or <a href="http://mpdf1.com/manual/index.php?tid=170">DefHTMLFooterByName()</a>.<br /> 
+If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the header/footer state unchanged.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br /> 
+1 <i>or</i> on: Show the selected header/footer in the <acronym title="Table of Contents">ToC</acronym>. <br /> 
+-1 <i>or</i> off: Hide the selected header/footer in the <acronym title="Table of Contents">ToC</acronym>.</p> 
+<p class="manual_param_dt"><span class="parameter">toc-preHTML</span></p> 
+<p class="manual_param_dd">Specify the HTML code to appear before the <acronym title="Table of Contents">ToC</acronym> e.g. '&lt;h1&gt;Contents&lt;/h1&gt;'. Note that in contrast with the HTML equivalent &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; the text does not need to use HTML-entities.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted will enter no text</p> 
+<p class="manual_param_dt"><span class="parameter">toc-postHTML</span></p> 
+<p class="manual_param_dd">Specify the HTML code to appear after the <acronym title="Table of Contents">ToC</acronym> e.g. '&lt;p&gt;Comments to go below the ToC&lt;/p&gt;'. Note that in contrast with the HTML equivalent &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; the text does not need to use HTML-entities.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted will enter no text.</p> 
+<p class="manual_param_dt"><span class="parameter">toc-bookmarkText </span></p> 
+<p class="manual_param_dd">Specify the text as it will appear as a <span class="smallblock">BOOKMARK</span> for the <acronym title="Table of Contents">ToC</acronym>&nbsp; e.g. 'Content list'.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted will not create a <span class="smallblock">BOOKMARK</span>.</p> 
+<p class="manual_param_dt"><span class="parameter">name</span></p> 
+<p class="manual_param_dd">Specify which <acronym title="Table of Contents">ToC</acronym> to include at this point, if using more than one <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">name</span> can be any alphanumeric characters (except just "0") and is case-insensitive.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the default <acronym title="Table of Contents">ToC</acronym>.</p> 
+<p><span class="parameter">toc-pageselector</span></p> 
+<p class="manual_param_dd">Select a named CSS @page for the&nbsp; <acronym title="Table of Contents">ToC</acronym>.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p> 
+<p class="manual_param_dd">See <a href="http://mpdf1.com/manual/index.php?tid=307">Using @page</a> for more information</p> 
+<p class="manual_param_dt"><span class="parameter">toc-sheet-size</span></p> 
+<p class="manual_param_dd"><span class="parameter">sheet-size</span> can be specified either as a pre-defined page size, or as an array of width and height in millimetres e.g. array(210,297).<br /> 
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br /> 
+A0 - A10, B0 - B10, C0 - C10<br /> 
+4A0, 2A0, RA0 - RA4, SRA0 - SRA4<br /> 
+Letter, Legal, Executive, Folio<br /> 
+Demy, Royal<br /> 
+A (Type A paperback 111x178mm)<br /> 
+B (Type B paperback 128x198mm)</p> 
+<p class="manual_param_dd">All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L"</p> 
+<p>&nbsp;</p> 
+<p class="manual_block">The rest of the parameters are defined exactly as for <a href="http://mpdf1.com/manual/index.php?tid=455">AddPageByArray()</a>. Note that these parameters define page numbering, margins, headers/footers for the document as it continues from this point on; in the final document this will be the part of the document immediately after the <acronym title="Table of Contents">ToC</acronym>.<br /> 
+Please refer to <a href="http://mpdf1.com/manual/index.php?tid=455">AddPageByArray()</a> for further details.<span class="parameter">&nbsp;</span></p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>5.0</td> 
+<td> 
+<p>Function was added.</p> 
+</td> 
+</tr> 
+<tr> 
+<td>5.7</td> 
+<td> 
+<p><span class="parameter">outdent</span> parameter added</p> 
+<p><span class="parameter">font</span>, <span class="parameter">font-size</span> and <span class="parameter">indent</span> redundant</p> 
+</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+$mpdf=new mPDF();<br /> 
+$mpdf-&gt;WriteHTML('Introduction');<br /> 
+$mpdf-&gt;TOCpagebreakByArray();<br /> 
+<br /> 
+$mpdf-&gt;TOC_Entry("Chapter 1",0);<br /> 
+$mpdf-&gt;WriteHTML('Chapter 1 ...');<br /> 
+$mpdf=Output();<br /> 
+<br /> 
+?&gt;</p> 
+<p class="examplecode"><b>Example #2</b> - Blank template as example</p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+$mpdf=new mPDF();<br /> 
+$mpdf-&gt;WriteHTML('Introduction');<br /> 
+$mpdf-&gt;TOCpagebreakByArray(array(<br />
+&nbsp;&nbsp;&nbsp; 'tocfont' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'tocfontsize' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'tocindent' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'TOCusePaging' =&gt; true, <br />
+&nbsp;&nbsp;&nbsp; 'TOCuseLinking' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'toc_orientation' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'toc_mgl' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_mgr' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_mgt' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_mgb' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_mgh' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_mgf' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_ohname' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_ehname' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_ofname' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_efname' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'toc_ohvalue' =&gt; 0,<br />
+&nbsp;&nbsp;&nbsp; 'toc_ehvalue' =&gt; 0,<br />
+&nbsp;&nbsp;&nbsp; 'toc_ofvalue' =&gt; 0,<br />
+&nbsp;&nbsp;&nbsp; 'toc_efvalue' =&gt; 0, <br />
+&nbsp;&nbsp;&nbsp; 'toc_preHTML' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'toc_postHTML' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'toc_bookmarkText' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'resetpagenum' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'pagenumstyle' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'suppress' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'orientation' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'mgl' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'mgr' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'mgt' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'mgb' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'mgh' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'mgf' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'ohname' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'ehname' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'ofname' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'efname' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; 'ohvalue' =&gt; 0,<br />
+&nbsp;&nbsp;&nbsp; 'ehvalue' =&gt; 0,<br />
+&nbsp;&nbsp;&nbsp; 'ofvalue' =&gt; 0,<br />
+&nbsp;&nbsp;&nbsp; 'efvalue' =&gt; 0, <br />
+&nbsp;&nbsp;&nbsp; 'toc_id' =&gt; 0, <br />
+&nbsp;&nbsp;&nbsp; 'pagesel' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'toc_pagesel' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'sheetsize' =&gt; '', <br />
+&nbsp;&nbsp;&nbsp; 'toc_sheetsize' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; ));<br /> 
+<br /> 
+$mpdf-&gt;TOC_Entry("Chapter 1",0);<br /> 
+$mpdf-&gt;WriteHTML('Chapter 1 ...');<br /> 
+$mpdf=Output();<br /> 
+<br /> 
+?&gt;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=185">TOC_Entry()</a> - Add an entry for Table of Contents</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> - Add a new page</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=455">AddPageByArray()</a> - Add a new page using an array of parameters</li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; - Custom HTML tag - equivalent to <b>TOCpagebreakByArray()</b></li> 
+</ul> 
+<p><span class="jslink"><br />
+</span></p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 30 Sep 2010<br />
+Validated 30 Sep 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:17:43 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=456&op_target=print&id=525 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

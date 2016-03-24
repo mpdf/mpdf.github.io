@@ -1,0 +1,107 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=423&op_target=print&id=482 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF Variables</div>
+<h3>collapseBlockMargins</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 4.2)</p> 
+<p>collapseBlockMargins – Specify whether to collapse (vertical) margins between block elements</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>collapseBlockMargins</b></p> 
+<p>Specify whether to collapse (vertical) margins between block elements. In line with CSS specification, the top/bottom margins of adjoining block-style elements are collapsed to the larger of the two. This works between all block elements such as DIV, P, H1-6 etc. and also lists and tables.</p> 
+<p>NB Firefox does not collapse margins above and below tables, but IE8 does.</p> 
+<h5>Values</h5> 
+<p class="manual_param_dt"><span class="parameter">collapseBlockMargins</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p> 
+<p class="manual_param_dd"><b>Values</b><br /> 
+<span class="smallblock">TRUE </span>: enable collapse<br /> 
+<span class="smallblock">FALSE</span>: disable collapse<br /> 
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>4.2</td> 
+<td>Variable was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1<br /> 
+</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+include("../mpdf.php");<br /> 
+$mpdf=new mPDF();<br /> 
+<br />
+$html = '<br />
+&lt;div style="margin-bottom: 3em;"&gt;This DIV has a bottom margin defined as 3em&lt;/div&gt;<br />
+&lt;div style="margin-top: 2em;"&gt;This DIV has a top margin defined as 2em. The space between these DIVs will collapse to 3em&lt;/div&gt;';<br />
+<br /> 
+$mpdf-&gt;WriteHTML($html);<br /> 
+$mpdf-&gt;Output();<br /> 
+?&gt;</p> 
+<p class="manual_block"><b>Note:</b> The collapse of margins at the top and bottom of the page is unaffected by this variable. This is set by the custom CSS property <span class="code">margin-collapse: collapse|none</span> which can be defined in the <span class="code">defaultCSS</span> variable in <span class="filename">config.php</span> or elsewhere.</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 12 Feb 2010<br />
+Validated 12 Feb 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:22:04 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=423&op_target=print&id=482 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+</html>

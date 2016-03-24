@@ -1,0 +1,117 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=566&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:44 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Math Formulae with MathJax</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF does not support MathML or LaTeX math formulae directly. However you can include math in a PDF document making use of <a href="http://www.mathjax.org/">MathJax</a> following the steps below.</p> 
+<p class="manual_block"><b>Note:</b> See alternative method to this in <a href="http://mpdf1.com/manual/index.php?tid=495">Math with MathJax 2</a></p> 
+<p>MathJax is a Javascript program which renders math equations in a browser from either MathML or LaTeX sources. You need to use MathJax first to render the equation, and MathJax needs to be configured to offer SVG as an output option. To demonstrate, start with a sample page such as <a href="http://www.mathjax.org/demos/tex-samples/">http://www.mathjax.org/demos/tex-samples/ </a></p> 
+<p>1) Open the HTML page in your browser (allowing MathJax to render the equations).</p> 
+<p>2) Right click over one of the equations and select: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG (This re-renders all the equations n the page in SVG format),</p> 
+<p>3) Save the page including the javascript-processed code. In Firefox, select File &gt;&gt; Save Page As... (This doesn't work in IE which only saves the original HTML code prior to processing).</p> 
+<p>4) Edit the file to make any necessary changes e.g. CSS stylesheets.</p> 
+<p>5) Run the following script to produce your PDF document (assumes you saved the file as TeXSample.htm). This adjusts the SVG code produced to allow mPDF to display it:</p> 
+<p class="examplecode">$mpdf=new mPDF(''); <br />
+<br />
+$html = file_get_contents('TeXSample.htm');<br />
+<br />
+preg_match_all('/&lt;svg([^&gt;]*)style="(.*?)"/',$html,$m);<br />
+for ($i=0;$i&lt;count($m[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $style=$m[2][$i];<br />
+&nbsp;&nbsp;&nbsp; preg_match('/width: (.*?);/',$style, $wr);<br />
+&nbsp;&nbsp;&nbsp; $w = $mpdf-&gt;ConvertSize($wr[1],0,$mpdf-&gt;FontSize) * $mpdf-&gt;dpi/25.4;<br />
+&nbsp;&nbsp;&nbsp; preg_match('/height: (.*?);/',$style, $hr);<br />
+&nbsp;&nbsp;&nbsp; $h = $mpdf-&gt;ConvertSize($hr[1],0,$mpdf-&gt;FontSize) * $mpdf-&gt;dpi/25.4;<br />
+&nbsp;&nbsp;&nbsp; $replace = '&lt;svg'.$m[1][$i].' width="'.$w.'" height="'.$h.'" style="'.$m[2][$i].'"';<br />
+&nbsp;&nbsp;&nbsp; $html = str_replace($m[0][$i],$replace,$html);<br />
+}<br />
+preg_match_all('/&lt;path d="(.*?)" stroke-width="(.*?)" id="(.*?)"&gt;&lt;\/path&gt;/',$html, $d);<br />
+$defs = array();<br />
+for ($i=0;$i&lt;count($d[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $defs[$d[3][$i]]['sw'] = 0;<br />
+&nbsp;&nbsp;&nbsp; $defs[$d[3][$i]]['path'] = $d[1][$i];<br />
+}<br />
+$html = preg_replace('/&lt;defs.*?&lt;\/defs&gt;/','',$html);<br />
+preg_match_all('/&lt;use xlink:href="#([a-zA-Z0-9\-]+)"([^&gt;]*)&gt;&lt;\/use&gt;/',$html,$m);<br />
+for ($i=0;$i&lt;count($m[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $replace = '&lt;path d="'.$defs[$m[1][$i]]['path'].'" stroke-width="'.$defs[$m[1][$i]]['sw'].'"'.$m[2][$i].'&gt;&lt;/path&gt;';<br />
+&nbsp;&nbsp;&nbsp; $html = str_replace($m[0][$i],$replace,$html);<br />
+<br />
+}<br />
+preg_match_all('/&lt;use y="([-]{0,1}[0-9]+)" x="([-]{0,1}[0-9]+)" xlink:href="#([a-zA-Z0-9\-]+)"([^&gt;]*)&gt;&lt;\/use&gt;/',$html,$m);<br />
+for ($i=0;$i&lt;count($m[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $replace = '&lt;g '.$m[4][$i].'&gt;&lt;g transform="translate('.$m[2][$i].','.$m[1][$i].')"&gt;&lt;path d="'.$defs[$m[3][$i]]['path'].'" stroke-width="'.$defs[$m[3][$i]]['sw'].'"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;';<br />
+&nbsp;&nbsp;&nbsp; $html = str_replace($m[0][$i],$replace,$html);<br />
+}<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br />
+$mpdf-&gt;Output(); <br />
+exit;<br />
+<br />
+</p> 
+<p>See an example of output: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a></p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 14 Jan 2013<br />
+Validated 14 Jan 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:44 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=566&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:44 GMT -->
+</html>

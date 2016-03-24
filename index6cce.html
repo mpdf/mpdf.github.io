@@ -1,0 +1,149 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=347&op_target=print&id=397 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>SetAutoFont()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 2.3&nbsp;&nbsp; &lt;= 5.7)</p> 
+<p>SetAutoFont – Automatically detect language in the input HTML text and use appropriate fonts</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>SetAutoFont</b> ( int <span class="parameter">$flag</span> )</p> 
+<p>Turns on the AutoFont function, which automatically detects language in the input HTML text and uses appropriate fonts.</p> 
+<p class="manual_block"><b>Note:</b> This function was removed in mPDF 6.0&nbsp; Use <a href="http://mpdf1.com/manual/index.php?tid=510"><span class="code">autoLangToFont</span></a> for the same results</p> 
+<p>AutoFont uses <span class="code">&lt;span lang="" class="lang_xx"&gt;...&lt;/span&gt;</span> to mark text which is auto-detected. See <a href="http://mpdf1.com/manual/index.php?tid=356">lang</a> for further details, but note that SetAutoFont also:</p> 
+<ul> 
+<li>disables support for text-align=justify</li> 
+<li>sets <a href="http://mpdf1.com/manual/index.php?tid=344">$useLang</a>=<span class="smallblock">TRUE</span></li> 
+<li>sets <a href="http://mpdf1.com/manual/index.php?tid=157">$biDirectional</a>=<span class="smallblock">TRUE</span> (if AUTOFONT_RTL is set)</li> 
+</ul> 
+<p class="manual_block"><b>Note:</b> Using automatic language detection adds considerable processing time when creating a large document.</p> 
+<p class="manual_block"><b>Note:</b> It is better to mark the HTML text yourself using block tags e.g. <span class="code">&lt;p lang=""</span> rather than relying on mPDF to set <span class="code">&lt;span lang=""</span> if possible; when set at block level, it allows appropriate changes to text alignment, character spacing and text-justification.</p> 
+<p class="manual_block"><b>Note:</b> Automatic language detection is based on analysis of the characters in the text. It is therefore not precise, and in particular it may be difficult to distinguish between different arabic languages (arabic, farsi, urdu, pashto etc), CJK languages (even between Chinese and Japanese text in same text chunk).</p> 
+<p class="manual_block"><b>Note:</b> Chinese Traditional and Simplified Chinese share so many characters that mPDF does not even try to distinguish which is being used. If AutoFont is being used and a chinese languages is identified, it is marked as <span class="code">&lt;span lang="zh"&gt;...&lt;/span&gt;</span>.<br />
+The font actually used for default chinese is determined by the settings in function <span class="function">GetCodepage()</span> in <span class="filename">config_cp.php</span>; by default this is Chinese Simplified (GB, GBK).</p> 
+<p class="manual_block"><b>Note:</b> SetAutoFont is only valid when using UTF-8 as the codepage for the document.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">flag</span></p> 
+<p class="manual_param_dd">This parameter specifies which languages are auto-detected. Either an integer or one of the defined constants can be used.<br />
+SetAutoFont(0) will turn off any auto-detection. Bitwise operators can be used with the defined constants e.g.<br />
+SetAutoFont(AUTOFONT_CJK | AUTOFONT_THAIVIET) will turn on autodetection for CJK languages and Thai and Vietnamese.</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+AUTOFONT_CJK = 1 = Any CJK languages (Chinese - Japanese - Korean)<br />
+AUTOFONT_THAIVIET = 2 = Thai and Vietnamese<br />
+AUTOFONT_RTL = 4 = RTL languages i.e. Hebrew and Arabic, including Pashto, Urdu etc.<br />
+AUTOFONT_INDIC = 8 = Indic languages such as Devanagari<br />
+AUTOFONT_ALL = 15 = All of the above<br /> 
+<span class="smallblock">DEFAULT</span>: AUTOFONT_ALL (15)</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>4.0</td> 
+<td>AutoFont marks up the <span class="code">&lt;span&gt;</span> with <span class="code">class="lang_xx"</span> as well as&nbsp;&nbsp;<span class="code">lang</span><span class="code">="xx"</span></td> 
+</tr> 
+<tr> 
+<td>2.3</td> 
+<td>Function was added.</td> 
+</tr> 
+<tr> 
+<td>2.3</td> 
+<td>Internal variable <span class="parameter">$pregRTLchars</span> was altered for better detection of arabic/hebrew</td> 
+</tr> 
+<tr> 
+<td>6.0</td> 
+<td>Removed in favour of autoLangToFont</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1<br /> 
+</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+include("../mpdf.php");<br /> 
+$mpdf=new mPDF('utf-8'); <br />
+<br />
+$html = '<br />
+&lt;p&gt;Most of this text is in English, but has occasional words in Chinese:其貢獻在 or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: البرادعی&lt;/p&gt;<br />
+&lt;p&gt;البرادعی -12- البرادعی&lt;/p&gt;<br />
+&lt;p&gt;其貢獻在國際間亦備受肯定，2005年&lt;/p&gt;<br />
+';<br /> 
+<br /> 
+$mpdf-&gt;SetAutoFont();<br /> 
+<br /> 
+$mpdf-&gt;WriteHTML($html);<br /> 
+<br /> 
+$mpdf-&gt;Output();<br /> 
+<br /> 
+?&gt;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=344">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=343">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=356">lang</a> - Information on mPDF support for the HTML attribute lang</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 4 Mar 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:15:22 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=347&op_target=print&id=397 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

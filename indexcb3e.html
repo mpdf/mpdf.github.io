@@ -1,0 +1,79 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=446&op_target=print&id=505 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:33 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Troubleshooting</div>
+<h3>Resizing</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF automatically resizes content in some circumstances. Using the default settings and CSS properties, the following are resized:</p> 
+<ul> 
+<li>tables will resize so that the tallest row (cell) will fit on a page [this is the only one that cannot be overridden]</li> 
+<li>tables will resize to fit the minimum width into the available width (minimum width of a table is when no words are broken) - override using CSS <span class="code">&lt;table style="overflow: hidden|visible|wrap"&gt;</span></li> 
+<li>tables will resize to fit the table into the remaining available space left on a page, as long as it is within the limit set by configurable variable <span class="code">$this-&gt;shrink_tables_to_fit</span> - this can be prevented by setting this value to "1" in <span class="filename">config.php</span> or <span class="code">&lt;table autosize="1"&gt;</span></li> 
+<li>block elements (e.g. &lt;div&gt;) with <span class="code">position:fixed</span> or <span class="code">position:absolute</span> and <span class="code">overflow:auto</span> (the default) will resize the contents if required to fit on the page - override by changing the value of <span class="code">overflow</span></li> 
+<li>images will resize if necessary to fit onto a page</li> 
+</ul> 
+<p>Tables may also resize if you set the CSS property <span class="code">page-break-inside: avoid</span></p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 29 Mar 2010<br />
+Validated 10 Jan 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:12:57 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=446&op_target=print&id=505 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:33 GMT -->
+</html>

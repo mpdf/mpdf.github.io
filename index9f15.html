@@ -1,0 +1,140 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=125&op_target=print&id=156 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>Output()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(FPDF)</p> 
+<p>Output – Finalise the document and send it to specified destination</p> 
+<h5>Description</h5> 
+<p class="manual_block">string <b>Output</b> ([ string <span class="parameter">$filename</span> , string <span class="parameter">$dest</span> ])</p> 
+<p>Send the document to a given destination: browser, file or string. In the case of browser, the plug-in may be used (if present) or a download ("Save as" dialog box) may be forced.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">filename</span></p> 
+<p class="manual_param_dd">The name of the file. If not specified, the document will be sent to the browser (destination I).<br />
+<span class="smallblock">BLANK</span> or omitted: "doc.pdf"</p> 
+<p class="manual_param_dt"><span class="parameter">dest</span></p> 
+<p class="manual_param_dd">Destination where to send the document.<br />
+<span class="smallblock">DEFAULT</span>: "I" i.e. Browser</p> 
+<p class="manual_param_dd">I: send the file inline to the browser. The plug-in is used if available. The name given by <span class="parameter">filename</span> is used when one selects the "Save as" option on the link generating the PDF.<br /> 
+D: send to the browser and force a file download with the name given by <span class="parameter">filename</span>.<br /> 
+F: save to a local file with the name given by <span class="parameter">filename</span> (may include a path).<br /> 
+S: return the document as a string. <span class="parameter">filename</span> is ignored.</p> 
+<p class="manual_block"><b>Note:</b> You can use the 'S' option to e-mail a PDF file - see example under&nbsp;<a href="http://mpdf1.com/manual/index.php?tid=373">E-mail a PDF file</a>.</p> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+// Sends output inline to browser<br />
+$mpdf=new mPDF();<br />
+$mpdf-&gt;WriteHTML('&lt;p&gt;Hallo World&lt;/p&gt;');<br />
+$mpdf-&gt;Output();<br />
+<br />
+?&gt;</p> 
+<p class="examplecode"><b>Example #2</b></p> 
+<p class="examplecode">&lt;?php<br />
+// Saves file on the server as 'filename.pdf'<br />
+$mpdf=new mPDF();<br />
+$mpdf-&gt;WriteHTML('&lt;p&gt;Hallo World&lt;/p&gt;');<br />
+$mpdf-&gt;Output('filename.pdf','F');<br />
+<br />
+?&gt;</p> 
+<p class="examplecode"><b>Example #3 - Sending file as e-mail (and also to browser</b>)</p> 
+<p class="examplecode">$mpdf=new mPDF();<br />
+<br /> 
+$mpdf-&gt;WriteHTML($html);<br /> 
+<br /> 
+$content = $mpdf-&gt;Output('', 'S');<br /> 
+<br /> 
+$content = chunk_split(base64_encode($content));<br /> 
+$mailto = 'recipient@domain.com';<br /> 
+$from_name = 'Your name';<br /> 
+$from_mail = 'sender@domain.com';<br /> 
+$replyto = 'sender@domain.com';<br /> 
+$uid = md5(uniqid(time())); <br /> 
+$subject = 'Your e-mail subject here';<br /> 
+$message = 'Your e-mail message here';<br /> 
+$filename = 'filename.pdf';<br /> 
+<br /> 
+$header = "From: ".$from_name." &lt;".$from_mail."&gt;\r\n";<br /> 
+$header .= "Reply-To: ".$replyto."\r\n";<br /> 
+$header .= "MIME-Version: 1.0\r\n";<br /> 
+$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";<br /> 
+$header .= "This is a multi-part message in MIME format.\r\n";<br /> 
+$header .= "--".$uid."\r\n";<br /> 
+$header .= "Content-type:text/plain; charset=iso-8859-1\r\n";<br /> 
+$header .= "Content-Transfer-Encoding: 7bit\r\n\r\n";<br /> 
+$header .= $message."\r\n\r\n";<br /> 
+$header .= "--".$uid."\r\n";<br /> 
+$header .= "Content-Type: application/pdf; name=\"".$filename."\"\r\n";<br /> 
+$header .= "Content-Transfer-Encoding: base64\r\n";<br /> 
+$header .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n\r\n";<br /> 
+$header .= $content."\r\n\r\n";<br /> 
+$header .= "--".$uid."--";<br /> 
+$is_sent = @mail($mailto, $subject, "", $header);<br /> 
+<br /> 
+$mpdf-&gt;Output();<br /> 
+exit;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 6 Feb 2009<br />
+Validated 9 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:14:46 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=125&op_target=print&id=156 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

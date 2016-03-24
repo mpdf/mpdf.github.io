@@ -1,0 +1,347 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=366&op_target=print&id=420 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:23 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Real life examples</div>
+<h3>Invoice</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>This example will produce a tabulated Invoice with headers and footers. See the <a href="http://mpdf1.com/manual/files/docs/example_invoice.pdf">result</a>.</p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+include("../mpdf.php");<br /> 
+<br /> 
+$mpdf=new mPDF('win-1252','A4','','',20,15,48,25,10,10); <br /> 
+$mpdf-&gt;useOnlyCoreFonts = true;&nbsp;&nbsp;&nbsp; // false is default<br /> 
+$mpdf-&gt;SetProtection(array('print'));<br /> 
+$mpdf-&gt;SetTitle("Acme Trading Co. - Invoice");<br /> 
+$mpdf-&gt;SetAuthor("Acme Trading Co.");<br /> 
+$mpdf-&gt;SetWatermarkText("Paid");<br /> 
+$mpdf-&gt;showWatermarkText = true;<br /> 
+$mpdf-&gt;watermark_font = 'DejaVuSansCondensed';<br /> 
+$mpdf-&gt;watermarkTextAlpha = 0.1;<br /> 
+$mpdf-&gt;SetDisplayMode('fullpage');<br /> 
+<br /> 
+$html = '<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;style&gt;<br />
+body {font-family: sans-serif;<br />
+&nbsp;&nbsp;&nbsp; font-size: 10pt;<br />
+}<br />
+p {&nbsp;&nbsp;&nbsp; margin: 0pt;<br />
+}<br />
+td { vertical-align: top; }<br />
+.items td {<br />
+&nbsp;&nbsp;&nbsp; border-left: 0.1mm solid #000000;<br />
+&nbsp;&nbsp;&nbsp; border-right: 0.1mm solid #000000;<br />
+}<br />
+table thead td { background-color: #EEEEEE;<br />
+&nbsp;&nbsp;&nbsp; text-align: center;<br />
+&nbsp;&nbsp;&nbsp; border: 0.1mm solid #000000;<br />
+}<br />
+.items td.blanktotal {<br />
+&nbsp;&nbsp;&nbsp; background-color: #FFFFFF;<br />
+&nbsp;&nbsp;&nbsp; border: 0mm none #000000;<br />
+&nbsp;&nbsp;&nbsp; border-top: 0.1mm solid #000000;<br />
+&nbsp;&nbsp;&nbsp; border-right: 0.1mm solid #000000;<br />
+}<br />
+.items td.totals {<br />
+&nbsp;&nbsp;&nbsp; text-align: right;<br />
+&nbsp;&nbsp;&nbsp; border: 0.1mm solid #000000;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+<br />
+&lt;!--mpdf<br />
+&lt;htmlpageheader name="myheader"&gt;<br />
+&lt;table width="100%"&gt;&lt;tr&gt;<br />
+&lt;td width="50%" style="color:#0000BB;"&gt;&lt;span style="font-weight: bold; font-size: 14pt;"&gt;Acme Trading Co.&lt;/span&gt;&lt;br /&gt;123 Anystreet&lt;br /&gt;Your City&lt;br /&gt;GD12 4LP&lt;br /&gt;&lt;span style="font-size: 15pt;"&gt;&amp;#9742;&lt;/span&gt; 01777 123 567&lt;/td&gt;<br />
+&lt;td width="50%" style="text-align: right;"&gt;Invoice No.&lt;br /&gt;&lt;span style="font-weight: bold; font-size: 12pt;"&gt;0012345&lt;/span&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;&lt;/table&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+<br />
+&lt;htmlpagefooter name="myfooter"&gt;<br />
+&lt;div style="border-top: 1px solid #000000; font-size: 9pt; text-align: center; padding-top: 3mm; "&gt;<br />
+Page {PAGENO} of {nb}<br />
+&lt;/div&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+<br />
+&lt;sethtmlpageheader name="myheader" value="on" show-this-page="1" /&gt;<br />
+&lt;sethtmlpagefooter name="myfooter" value="on" /&gt;<br />
+mpdf--&gt;<br />
+<br />
+&lt;div style="text-align: right"&gt;Date: '.date('jS F Y').'&lt;/div&gt;<br />
+<br />
+&lt;table width="100%" style="font-family: serif;" cellpadding="10"&gt;<br />
+&lt;tr&gt;<br />
+&lt;td width="45%" style="border: 0.1mm solid #888888;"&gt;&lt;span style="font-size: 7pt; color: #555555; font-family: sans;"&gt;SOLD TO:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;345 Anotherstreet&lt;br /&gt;Little Village&lt;br /&gt;Their City&lt;br /&gt;CB22 6SO&lt;/td&gt;<br />
+&lt;td width="10%"&gt;&amp;nbsp;&lt;/td&gt;<br />
+&lt;td width="45%" style="border: 0.1mm solid #888888;"&gt;&lt;span style="font-size: 7pt; color: #555555; font-family: sans;"&gt;SHIP TO:&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;345 Anotherstreet&lt;br /&gt;Little Village&lt;br /&gt;Their City&lt;br /&gt;CB22 6SO&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;/table&gt;<br />
+<br />
+<br />
+&lt;table class="items" width="100%" style="font-size: 9pt; border-collapse: collapse;" cellpadding="8"&gt;<br />
+&lt;thead&gt;<br />
+&lt;tr&gt;<br />
+&lt;td width="15%"&gt;REF. NO.&lt;/td&gt;<br />
+&lt;td width="10%"&gt;QUANTITY&lt;/td&gt;<br />
+&lt;td width="45%"&gt;DESCRIPTION&lt;/td&gt;<br />
+&lt;td width="15%"&gt;UNIT PRICE&lt;/td&gt;<br />
+&lt;td width="15%"&gt;AMOUNT&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;/thead&gt;<br />
+&lt;tbody&gt;<br />
+&lt;!-- ITEMS HERE --&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MF1234567&lt;/td&gt;<br />
+&lt;td align="center"&gt;10&lt;/td&gt;<br />
+&lt;td&gt;Large pack Hoover bags&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;2.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;25.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MX37801982&lt;/td&gt;<br />
+&lt;td align="center"&gt;1&lt;/td&gt;<br />
+&lt;td&gt;Womans waterproof jacket&lt;br /&gt;Options - Red and charcoal.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MR7009298&lt;/td&gt;<br />
+&lt;td align="center"&gt;25&lt;/td&gt;<br />
+&lt;td&gt;Steel nails; oval head; 30mm x 3mm. Packs of 1000.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;12.26&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;325.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MF1234567&lt;/td&gt;<br />
+&lt;td align="center"&gt;10&lt;/td&gt;<br />
+&lt;td&gt;Large pack Hoover bags&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;2.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;25.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MX37801982&lt;/td&gt;<br />
+&lt;td align="center"&gt;1&lt;/td&gt;<br />
+&lt;td&gt;Womans waterproof jacket&lt;br /&gt;Options - Red and charcoal.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MR7009298&lt;/td&gt;<br />
+&lt;td align="center"&gt;25&lt;/td&gt;<br />
+&lt;td&gt;Steel nails; oval head; 30mm x 3mm. Packs of 1000.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;12.26&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;325.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MF1234567&lt;/td&gt;<br />
+&lt;td align="center"&gt;10&lt;/td&gt;<br />
+&lt;td&gt;Large pack Hoover bags&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;2.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;25.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MX37801982&lt;/td&gt;<br />
+&lt;td align="center"&gt;1&lt;/td&gt;<br />
+&lt;td&gt;Womans waterproof jacket&lt;br /&gt;Options - Red and charcoal.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MR7009298&lt;/td&gt;<br />
+&lt;td align="center"&gt;25&lt;/td&gt;<br />
+&lt;td&gt;Steel nails; oval head; 30mm x 3mm. Packs of 1000.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;12.26&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;325.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MF1234567&lt;/td&gt;<br />
+&lt;td align="center"&gt;10&lt;/td&gt;<br />
+&lt;td&gt;Large pack Hoover bags&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;2.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;25.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MX37801982&lt;/td&gt;<br />
+&lt;td align="center"&gt;1&lt;/td&gt;<br />
+&lt;td&gt;Womans waterproof jacket&lt;br /&gt;Options - Red and charcoal.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MR7009298&lt;/td&gt;<br />
+&lt;td align="center"&gt;25&lt;/td&gt;<br />
+&lt;td&gt;Steel nails; oval head; 30mm x 3mm. Packs of 1000.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;12.26&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;325.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MF1234567&lt;/td&gt;<br />
+&lt;td align="center"&gt;10&lt;/td&gt;<br />
+&lt;td&gt;Large pack Hoover bags&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;2.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;25.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MX37801982&lt;/td&gt;<br />
+&lt;td align="center"&gt;1&lt;/td&gt;<br />
+&lt;td&gt;Womans waterproof jacket&lt;br /&gt;Options - Red and charcoal.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MF1234567&lt;/td&gt;<br />
+&lt;td align="center"&gt;10&lt;/td&gt;<br />
+&lt;td&gt;Large pack Hoover bags&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;2.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;25.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MX37801982&lt;/td&gt;<br />
+&lt;td align="center"&gt;1&lt;/td&gt;<br />
+&lt;td&gt;Womans waterproof jacket&lt;br /&gt;Options - Red and charcoal.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MR7009298&lt;/td&gt;<br />
+&lt;td align="center"&gt;25&lt;/td&gt;<br />
+&lt;td&gt;Steel nails; oval head; 30mm x 3mm. Packs of 1000.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;12.26&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;325.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MR7009298&lt;/td&gt;<br />
+&lt;td align="center"&gt;25&lt;/td&gt;<br />
+&lt;td&gt;Steel nails; oval head; 30mm x 3mm. Packs of 1000.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;12.26&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;325.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MF1234567&lt;/td&gt;<br />
+&lt;td align="center"&gt;10&lt;/td&gt;<br />
+&lt;td&gt;Large pack Hoover bags&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;2.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;25.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MX37801982&lt;/td&gt;<br />
+&lt;td align="center"&gt;1&lt;/td&gt;<br />
+&lt;td&gt;Womans waterproof jacket&lt;br /&gt;Options - Red and charcoal.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;112.56&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td align="center"&gt;MR7009298&lt;/td&gt;<br />
+&lt;td align="center"&gt;25&lt;/td&gt;<br />
+&lt;td&gt;Steel nails; oval head; 30mm x 3mm. Packs of 1000.&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;12.26&lt;/td&gt;<br />
+&lt;td align="right"&gt;&amp;pound;325.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;!-- END ITEMS HERE --&gt;<br />
+&lt;tr&gt;<br />
+&lt;td class="blanktotal" colspan="3" rowspan="6"&gt;&lt;/td&gt;<br />
+&lt;td class="totals"&gt;Subtotal:&lt;/td&gt;<br />
+&lt;td class="totals"&gt;&amp;pound;1825.60&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td class="totals"&gt;Tax:&lt;/td&gt;<br />
+&lt;td class="totals"&gt;&amp;pound;18.25&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td class="totals"&gt;Shipping:&lt;/td&gt;<br />
+&lt;td class="totals"&gt;&amp;pound;42.56&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td class="totals"&gt;&lt;b&gt;TOTAL:&lt;/b&gt;&lt;/td&gt;<br />
+&lt;td class="totals"&gt;&lt;b&gt;&amp;pound;1882.56&lt;/b&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td class="totals"&gt;Deposit:&lt;/td&gt;<br />
+&lt;td class="totals"&gt;&amp;pound;100.00&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;tr&gt;<br />
+&lt;td class="totals"&gt;&lt;b&gt;Balance due:&lt;/b&gt;&lt;/td&gt;<br />
+&lt;td class="totals"&gt;&lt;b&gt;&amp;pound;1782.56&lt;/b&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;<br />
+&lt;/tbody&gt;<br />
+&lt;/table&gt;<br />
+&lt;div style="text-align: center; font-style: italic;"&gt;Payment terms: payment due in 30 days&lt;/div&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$mpdf-&gt;Output(); exit;<br />
+<br />
+exit;<br />
+<br />
+?&gt;</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 23 Apr 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:11:38 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=366&op_target=print&id=420 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:23 GMT -->
+</html>

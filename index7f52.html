@@ -1,0 +1,124 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=392&op_target=print&id=446 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:27 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Real life examples</div>
+<h3>A5 Booklet</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>This script was written to create a new PDF file based on a pre-existing PDF document, converting an A4 document into an A5 booklet ready for duplex printing. Page order is adjusted, and page orientation is rotated so that it prints a landscape booklet.</p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+include("../mpdf.php");<br /> 
+<br />
+$mpdf=new mPDF('','A4-L','','',0,0,0,0,0,0); <br />
+$mpdf-&gt;SetImportUse();&nbsp;&nbsp;&nbsp; <br />
+$ow = $mpdf-&gt;h;<br />
+$oh = $mpdf-&gt;w;<br />
+$pw = $mpdf-&gt;w / 2;<br />
+$ph = $mpdf-&gt;h;<br />
+<br />
+$mpdf-&gt;SetDisplayMode('fullpage');<br />
+<br />
+$pagecount = $mpdf-&gt;SetSourceFile('A4sourcefile.pdf');<br />
+$pp = GetBookletPages($pagecount);<br />
+<br />
+foreach($pp AS $v) {<br />
+&nbsp;&nbsp;&nbsp; $mpdf-&gt;AddPage(); <br />
+&nbsp;&nbsp;&nbsp; if ($v[0]&gt;0 &amp;&amp; $v[0]&lt;=$pagecount) {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $tplIdx = $mpdf-&gt;ImportPage($v[0], 0,0,$ow,$oh);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;UseTemplate($tplIdx, 0, 0, $pw, $ph);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; if ($v[1]&gt;0 &amp;&amp; $v[1]&lt;=$pagecount) {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $tplIdx = $mpdf-&gt;ImportPage($v[1], 0,0,$ow,$oh);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;UseTemplate($tplIdx, $pw, 0, $pw, $ph);<br />
+&nbsp;&nbsp;&nbsp; }<br />
+}<br />
+<br />
+$mpdf-&gt;Output();<br />
+<br />
+exit;<br />
+<br /> 
+function GetBookletPages($np, $backcover=true) {<br />
+&nbsp;&nbsp;&nbsp; $lastpage = $np;<br />
+&nbsp;&nbsp;&nbsp; $np = 4*ceil($np/4);<br />
+&nbsp;&nbsp;&nbsp; $pp = array();<br />
+&nbsp;&nbsp;&nbsp; for ($i=1; $i&lt;=$np/2; $i++) {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $p1 = $np - $i + 1;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($backcover) {&nbsp;&nbsp;&nbsp; <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($i == 1) { $p1 = $lastpage; }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else if ($p1 &gt;= $lastpage) { $p1 = 0; }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($i % 2 == 1) { <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $pp[] = array( $p1,&nbsp; $i ); <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; else { <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $pp[] = array( $i, $p1 ); <br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; return $pp;<br />
+}<br />
+<br /> 
+?&gt;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 18 Sep 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:12:01 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=392&op_target=print&id=446 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:27 GMT -->
+</html>

@@ -1,0 +1,146 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=572&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Real life examples</div>
+<h3>E-mail a PDF file</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>This example shows how to create a PDF file and e-mail it:</p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+include("../mpdf.php"); //Include mPDF Class <br />
+<br /> 
+$mpdf=new mPDF(); // Create new mPDF Document<br />
+<br /> 
+//Beginning Buffer to save PHP variables and HTML tags<br /> 
+ob_start(); <br />
+<br /> 
+// Function Date<br /> 
+$day = date('d');<br /> 
+$month = date('m');<br /> 
+$year = date('Y');<br />
+<br /> 
+switch ($month)<br /> 
+{ <br /> 
+case 1: $month = "January"; break;<br /> 
+case 2: $month = "February"; break;<br /> 
+case 3: $month = "March"; break;<br /> 
+case 4: $month = "April"; break;<br /> 
+case 5: $month = "May"; break;<br /> 
+case 6: $month = "June"; break;<br /> 
+case 7: $month = "July"; break;<br /> 
+case 8: $month = "August"; break;<br /> 
+case 9: $month = "September"; break;<br /> 
+case 10: $month = "October"; break;<br /> 
+case 11: $month = "November"; break;<br /> 
+case 12: $month = "December"; break;<br /> 
+}<br />
+<br /> 
+echo "Hello World<br /> 
+Today is $month $day, $year";<br />
+<br /> 
+$html = ob_get_contents();<br /> 
+ob_end_clean();<br /> 
+//Here convert the encode for UTF-8, if you prefer the ISO-8859-1 just change for $mpdf-&gt;WriteHTML($html);<br /> 
+$mpdf-&gt;WriteHTML(utf8_encode($html)); <br />
+<br /> 
+$content = $mpdf-&gt;Output('', 'S');<br />
+<br /> 
+$content = chunk_split(base64_encode($content));<br /> 
+$mailto = 'mailto@mailto.com'; //Mailto here<br /> 
+$from_name = 'ACME Corps Ltd'; //Name of sender mail<br /> 
+$from_mail = 'mailfrom@mailfrom.com'; //Mailfrom here<br /> 
+$subject = 'subjecthere'; <br /> 
+$message = 'mailmessage';<br /> 
+$filename = "yourfilename-".date("d-m-Y_H-i",time()); //Your Filename with local date and time<br />
+<br /> 
+//Headers of PDF and e-mail<br /> 
+$boundary = "XYZ-" . date("dmYis") . "-ZYX"; <br />
+<br /> 
+$header = "--$boundary\r\n"; <br /> 
+$header .= "Content-Transfer-Encoding: 8bits\r\n"; <br /> 
+$header .= "Content-Type: text/html; charset=ISO-8859-1\r\n\r\n"; // or utf-8<br /> 
+$header .= "$message\r\n";<br /> 
+$header .= "--$boundary\r\n";<br /> 
+$header .= "Content-Type: application/pdf; name=\"".$filename."\"\r\n";<br /> 
+$header .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n";<br /> 
+$header .= "Content-Transfer-Encoding: base64\r\n\r\n";<br /> 
+$header .= "$content\r\n"; <br /> 
+$header .= "--$boundary--\r\n";<br />
+<br /> 
+$header2 = "MIME-Version: 1.0\r\n";<br /> 
+$header2 .= "From: ".$from_name." \r\n"; <br /> 
+$header2 .= "Return-Path: $from_mail\r\n";<br /> 
+$header2 .= "Content-type: multipart/mixed; boundary=\"$boundary\"\r\n";<br /> 
+$header2 .= "$boundary\r\n";<br />
+<br /> 
+mail($mailto,$subject,$header,$header2, "-r".$from_mail);<br />
+<br /> 
+$mpdf-&gt;Output($filename ,'I');<br /> 
+exit;<br />
+<br />
+?&gt;</p> 
+<p class="manual_block"><b>Note:</b> Submitted by a user. See <a href="http://www.mpdf1.com/mpdf/forum/comments.php?DiscussionID=663&amp;page=1#Item_5">message</a> in the Forum.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.1</div>
+<div class="right">Created 5 Oct 2013<br />
+Validated 5 Oct 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:41:15 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=572&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->
+</html>

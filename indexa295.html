@@ -1,0 +1,130 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=402&op_target=print&id=456 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>WriteFixedPosHTML()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 4.0)</p> 
+<p>WriteFixedPosHTML — Write HTML to a fixed position on the current page</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>WriteFixedPosHTML</b> ( string <span class="parameter">$html</span> , float <span class="parameter">$x</span> , float <span class="parameter">$y</span> , float <span class="parameter">$w</span> , float <span class="parameter">$h</span> [, string <span class="parameter">$overflow</span> ])</p> 
+<p>Write HTML to a fixed position on the current page.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">html</span></p> 
+<p class="manual_param_dd">This parameter specifies the text to write to the document - parsed as HTML code</p> 
+<p class="manual_param_dt"><span class="parameter">x</span></p> 
+<p class="manual_param_dd">Sets the <span class="parameter">x</span> position of the (left edge) of the block element, set in mm from the left of the page.<span class="smallblock"><br />
+</span></p> 
+<p class="manual_param_dt"><span class="parameter">y</span></p> 
+<p class="manual_param_dd">Sets the <span class="parameter">y</span> position of the (top edge) of the block element, set in mm from the top of the page.<span class="smallblock"><br /> 
+</span></p> 
+<p class="manual_param_dt"><span class="parameter">w</span></p> 
+<p class="manual_param_dd">Sets the width of the block element, in mm.<span class="smallblock"><br /> 
+</span></p> 
+<p class="manual_param_dt"><span class="parameter">h</span></p> 
+<p class="manual_param_dd">Sets the height of the block element, in mm.<span class="smallblock"><br /> 
+</span></p> 
+<p><span class="parameter">overflow</span></p> 
+<p class="manual_param_dd">Specifies how to handle text which would not fit inside the block element, with its dimensions as specified.<br /> 
+<span class="smallblock"></span></p> 
+<p class="manual_param_dd"><b>Values</b><br /> 
+visible: show all text, even if it spills over outside the dimensions of the block element<br /> 
+hidden: hide any text (clip) which spills over outside the dimensions of the block element<br />
+auto: force text to be reduced in size if required to fit inside the dimensions of the block element<br /> 
+<span class="smallblock">BLANK</span> uses the default value of 'visible'</p> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>4.0</td> 
+<td> 
+<p>Function was added.</p> 
+</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+$mpdf=new mPDF();<br /> 
+<br /> 
+$mpdf-&gt;WriteHTML('&lt;p&gt;Beginning bit of document...&lt;/p&gt;');<br /> 
+<br />
+$mpdf-&gt;WriteFixedPosHTML('&lt;p&gt;This text will appear just where I want it!&lt;/p&gt;', 30, 120, 50, 90, 'auto');<br /> 
+<br /> 
+$mpdf=Output();<br /> 
+<br /> 
+?&gt;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=121">WriteHTML</a> - Add an Index entry in the document </li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=401">Fixed position elements</a> - About fixed-position elements (using CSS)<br />
+</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 22 Nov 2009<br />
+<span class="redbold">Draft (not yet validated)</span></div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:18:06 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=402&op_target=print&id=456 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

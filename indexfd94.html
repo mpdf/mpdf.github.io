@@ -1,0 +1,81 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=364&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:38 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Headers & Footers</div>
+<h3>Page numbers & Date</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>In any page header or footer, {PAGENO} or {DATE j-m-Y} can be used - which will be replaced by the page number or current date. j-m-Y can be replaced by any of the valid formats used in the php <a href="http://www.php.net/manual/en/function.date.php" target="_blank">date()</a> function.</p> 
+<p>The page number is the calculated number, taking regard of any resetting of numbering during the document.</p> 
+<p>You can also use the GLOBAL replacement aliases {nb} and {nbpg} (see&nbsp;<a href="http://mpdf1.com/manual/index.php?tid=303">Replaceable Aliases</a>).</p> 
+<h6>Page numbers in HTML headers/footers<br />
+</h6> 
+<p>NOTE: One or two characters are used as a placeholder when setting HTMLHeaders &amp; HTMLFooters. This is defined at the top of mpdf.php as:</p> 
+<p>var $headerPageNoMarker = "!|";</p> 
+<p>The character(s) should ideally be at least as wide as the widest numeral in the font chosen, as it is later replaced by the pagenumber.</p> 
+<p>If the default character(s) are ones you would use in the document/in your header/footer, you can redefine the value by editing the mpdf.php file - must be 1 or ASCII character(s), or</p> 
+<p class="examplecode">$mpdf-&gt;headerPageNoMarker = "xx";</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 14 Feb 2009<br />
+Validated 15 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:20 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=364&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:38 GMT -->
+</html>

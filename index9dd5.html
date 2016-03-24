@@ -1,0 +1,81 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=329&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:36 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Character substitution</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &lt;= 4.x)</p> 
+<h6>Character (font) substitution<br />
+</h6> 
+<p>In documents using win-1251, iso-8859-2/4/7/9 codepages, characters which are not included in the main codepage, but which <i>are</i> included in any of the core Adobe fonts (<a href="http://mpdf1.com/manual/index.php?tid=56">win-1252</a>,&nbsp; <a href="http://mpdf1.com/manual/index.php?tid=71">Symbols</a>,&nbsp; <a href="http://mpdf1.com/manual/index.php?tid=70">Dingbats</a>) will display using the core fonts. Because they are displayed using a different font they may appear 'odd'.</p> 
+<p>This "character (font) substitution" allows a small file size, whilst making most characters at least readable. If appearance is more important than file size/speed, then consider using a UTF-8 output file.</p> 
+<p class="manual_block"><b>Note:</b> Character substitution was turned ON by default, prior to v4.0</p> 
+<p>&nbsp;</p> 
+<p>A similar substitution can be enabled when using utf-8 (multibyte) documents, by setting the configuration variable in <span class="filename">config.php</span>:</p> 
+<p class="examplecode">$this-&gt;useSubstitutionsMB = true;</p> 
+<p>Any characters which do not have a corresponding glyph in the required font file, will be substituted by the appropriate character from the core Adobe fonts (<a href="http://mpdf1.com/manual/index.php?tid=56">win-1252</a>,&nbsp; <a href="http://mpdf1.com/manual/index.php?tid=71">Symbols</a>,&nbsp; <a href="http://mpdf1.com/manual/index.php?tid=70">Dingbats</a>. If the characters are not included in these core fonts, they may be substituted from the default font for the document if present.</p> 
+<p>It is not recommended to enable this for regular use, as it will add to the processing time.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 10 Feb 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:12 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=329&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:36 GMT -->
+</html>

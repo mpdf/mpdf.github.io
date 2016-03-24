@@ -1,0 +1,132 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=289&op_target=print&id=339 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>WriteBarcode()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 2.0)</p> 
+<p>mPDF – Write an EAN-13 (ISBN-13) barcode</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>writeBarcode</b> ( string <span class="parameter">$code</span> [, int <span class="parameter">$showisbn</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$size</span> [, float <span class="parameter">$border</span> [, float <span class="parameter">$padding_left</span> , float <span class="parameter">$padding_right</span> , float <span class="parameter">$padding_top</span> , float <span class="parameter">$padding_bottom</span> ]]]]]])</p> 
+<p>Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specification can be found at <a href="http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf">http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf</a></p> 
+<p class="manual_block"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">code</span></p> 
+<p class="manual_param_dd">This parameter specifies the EAN-13 (ISBN-13) code. Accepts 12 or 13 digits (i.e. with or without the check digit) and may optionally contain hyphens e.g. 978-09542-2461-5&nbsp; or&nbsp; 978095422461</p> 
+<p class="manual_param_dt"><span class="parameter">showisbn</span></p> 
+<p class="manual_param_dd">Specif whether to show the EAN-13 (ISBN-13) code <b>above</b> the barcode. NB The numbers will always appear below the bars, but the code abive the bars is optional.</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+1 (or any positive value): show the EAN-13 code<br />
+0 zero: Hide the EAN-13 code<br />
+<span class="smallblock">BLANK</span> or omitted: 1</p> 
+<p class="manual_param_dt"><span class="parameter">x</span></p> 
+<p class="manual_param_dd">Sets the <span class="parameter">x</span> (horizontal) position for the barcode.<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses the current writing position in the document.</p> 
+<p><span class="parameter">y</span></p> 
+<p class="manual_param_dd">Sets the <span class="parameter">y</span> (vertical) position for the barcode.<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses the current writing position in the document.</p> 
+<p class="manual_param_dt"><span class="parameter">size</span></p> 
+<p class="manual_param_dd">This parameter specifies the size of the barcode relative to the standard. Values between 0.8 and 2.0 (80% to 200%) are accepted.<br />
+<span class="smallblock">DEFAULT</span>: 1</p> 
+<p class="manual_param_dt"><span class="parameter">border</span></p> 
+<p class="manual_param_dd">This parameter specifies whether or not to show a border around the barcode.</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+1 or <span class="smallblock">TRUE</span> (or any positive value) will set a border<br />
+0 or <span class="smallblock">FALSE</span> or <span class="smallblock">BLANK</span> will omit the border<br />
+<span class="smallblock">DEFAULT</span>: "0" i.e. No border</p> 
+<p class="manual_param_dt"><span class="parameter">padding_left</span><br />
+<span class="parameter">padding</span><span class="parameter">_right</span><br />
+<span class="parameter">padding</span><span class="parameter">_top</span><br /> 
+<span class="parameter">padding</span><span class="parameter">_bottom</span><span class="parameter"><br />
+</span></p> 
+<p class="manual_param_dd">Sets the padding around the barcode.<br />
+All values should be specified as <span class="smallblock">LENGTH</span> in millimetres<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses the default values.</p> 
+<p class="manual_param_dd"><span class="smallblock">DEFAULT</span> <b>Values</b><br />
+<span class="parameter">padding</span><span class="parameter">_left</span> 1<br />
+<span class="parameter">padding</span><span class="parameter">_right</span> 1<br />
+<span class="parameter">padding</span><span class="parameter">_top</span> 2<br />
+<span class="parameter">padding</span><span class="parameter">_bottom</span> 2</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.0</td> 
+<td>The function was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+$mpdf=new mPDF();<br />
+$mpdf-&gt;writeBarcode('978-1234-567-890'); <br />
+$mpdf-&gt;Output();<br />
+<br />
+?&gt;</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 13 Feb 2009<br />
+Validated 13 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:17:56 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=289&op_target=print&id=339 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

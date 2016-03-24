@@ -1,0 +1,170 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=244&op_target=print&id=294 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:03 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Index</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF can generate an index at the end of document using:</p> 
+<ul> 
+<li>&lt;indexentry content="Buffalo" /&gt; to make index entries at the appropriate place in the HTML text</li> 
+<li>&lt;indexinsert ... /&gt; generates and inserts the Index at the end of document</li> 
+</ul> 
+<p class="manual_block"><b>Note:</b> Indexes have been completely rewritten in mPDF 6. The notes below refer to mPDF v6.0+</p> 
+<ul> 
+<li>&lt;indexentry&gt; or IndexEntry() should be used to create Index entries during document writing.</li> 
+<li>&lt;indexinsert&gt; or InsertIndex() should be used to generate the Index at the end of the document.</li> 
+</ul> 
+<p>When an Index is inserted in the PDF document using &lt;indexinsert&gt; or InsertIndex(), the Index is generated (internally) as HTML code in the following format (with the markup as shown):</p> 
+<p class="examplecode">&lt;div class="mpdf_index_main"&gt;<br /> 
+&lt;div class="mpdf_index_letter"&gt;<b>A</b>&lt;/div&gt;<br /> 
+&lt;div class="mpdf_index_entry"&gt;<b>Aardvark</b>&lt;a class="mpdf_index_link" href="#page37"&gt;37&lt;/a&gt;<br /> 
+&lt;/div&gt;<br /> 
+...<br /> 
+&lt;/div&gt;</p> 
+<p>CSS stylesheets can thus be used to control the layout of the Index e.g.:</p> 
+<p class="examplecode">/* For Index */<br /> 
+div.mpdf_index_main {<br /> 
+&nbsp; &nbsp; line-height: normal;<br /> 
+&nbsp; &nbsp; font-family: sans-serif;<br /> 
+}<br /> 
+div.mpdf_index_letter {<br /> 
+&nbsp; &nbsp; line-height: normal;<br /> 
+&nbsp; &nbsp; font-family: sans-serif;<br /> 
+&nbsp; &nbsp; font-size: 1.8em;<br /> 
+&nbsp; &nbsp; font-weight: bold;<br /> 
+&nbsp; &nbsp; text-transform: uppercase;<br /> 
+&nbsp; &nbsp; page-break-after: avoid; <br /> 
+&nbsp; &nbsp; margin-top: 0.3em; <br /> 
+&nbsp; &nbsp; margin-collapse: collapse;<br /> 
+}<br /> 
+div.mpdf_index_entry {<br /> 
+&nbsp; &nbsp; line-height: normal;<br /> 
+&nbsp; &nbsp; font-family: sans-serif;<br /> 
+&nbsp; &nbsp; text-indent: -1.5em;<br /> 
+}<br /> 
+a.mpdf_index_link { <br /> 
+&nbsp; &nbsp; color: #000000; <br /> 
+&nbsp; &nbsp; text-decoration: none;<br /> 
+}</p> 
+<p>A default stylesheet for Indexes is included in <span class="filename">mpdf.css</span></p> 
+<h6>Index Collation</h6> 
+<p>In order to generate an Index with non-ASCII characters, entries need to be sorted accordingly (collation), and non-ASCII characters should map to the appropriate Dividing letter e.g.:</p> 
+<p class="manual_block"><b>A</b><br />
+Alonso, Fernando<br />
+Ãlvarez, Isaac<br />
+Arroyo Molino, David <br />
+<b>B</b><br /> 
+BenÃtez, Carlos</p> 
+<p>Entries in an Index can now be sorted using any of the Locale values available on your system. Set it using the "collation" property/parameter e.g.:</p> 
+<p class="examplecode">&lt;indexinsert usedivletters="on" links="off" <b>collation="es_ES.utf8"</b> collation-group="Spanish_Spain" /&gt;</p> 
+<p>- or -</p> 
+<p class="examplecode">$mpdf-&gt;InsertIndex(true, false, <b>"es_ES.utf8"</b>, "Spanish_Spain");</p> 
+<p>NB You should always choose a UTF-8 collation, even when you are using Core fonts or e.g. charset-in=win-1252, because mPDF handles all text internally as UTF-8 encoded.</p> 
+<p>You can see which Locales are available on your (Unix) system: <span class="code">&lt;?php system('locale -a') ?&gt;</span></p> 
+<p>Note: Index collation will probably not work on Windows servers because of the problems setting Locales under Windows.</p> 
+<p>If you have set your index to use Dividing letters, you can also determine how letters are grouped under a dividing letter. In the example index above, we want Ã to be grouped under the letter a/A. Set the "collation-group" using:</p> 
+<p class="examplecode">&lt;indexinsert usedivletters="on" links="off" collation="es_ES.utf8" <b>collation-group="Spanish_Spain"</b> /&gt;</p> 
+<p>- or -</p> 
+<p class="examplecode">$mpdf-&gt;InsertIndex(true, false, "es_ES.utf8", <b>"Spanish_Spain"</b>);</p> 
+<p>Values should be selected from the available file names in folder /collations/.</p> 
+<p>Note: This will not affect the overall order of entries, which is determined by the value of "collation".</p> 
+<p>Note: The groupings do not always match the order set by locale. This is because the data for collations has come from different sources. The files in /collations/ can be edited.</p> 
+<p>The array consists of [index]: unicode decimal value of character =&gt; unicode decimal value of character to group under: e.g. Ã [A tilde] (U+00C3) (decimal 195) =&gt; a (U+0061) (decimal 97). The target character should always be the lowercase form.</p> 
+<h6>Non-ASCII chcracters in Index entries</h6> 
+<p>Note: htmlspecials_encode should be used to encode the text of content in &lt;indexentry&gt; - although not when using IndexEntry().</p> 
+<h6>Columns</h6> 
+<p>From mPDF 6.0, columns are not specified as part of the &lt;indexinsert&gt;, so a typical 2-column index might be produced by:</p> 
+<p class="examplecode">&lt;pagebreak type="next-odd" /&gt;<br /> 
+&lt;h2&gt;Index&lt;/h2&gt;<br /> 
+&lt;columns column-count="2" column-gap="5" /&gt;<br /> 
+&lt;indexinsert usedivletters="on" links="on" collation="en_US.utf8" collationgroup="English_United_States" /&gt;<br /> 
+&lt;columns column-count="1" /&gt;</p> 
+<h6>Index Sub-entries</h6> 
+<p>Index entries can contain sub-entries, separated by colons e.g.</p> 
+<p class="examplecode">&lt;indexentry content="Mammals:elephants" /&gt;</p> 
+<p>A shorthand way of displaying subentries is set by default, which suppresses the main entry if &gt; 1 subEntry. It can be disabled/enabled using the configurable variable $this-&gt;indexUseSubentries in config.php.</p> 
+<p>This is the default appearance, with $this-&gt;indexUseSubentries = false; -</p> 
+<p class="manual_block">Mammals 73<br /> 
+- elephants 142<br /> 
+- humans 173<br /> 
+Marsupials<br /> 
+- kangaroos 75<br /> 
+- wombats 86</p> 
+<p>Index entries can also include simple mark-up tags and/or more than one colon e.g:</p> 
+<p class="examplecode">&lt;indexentry content="Mammals:&amp;lt;b&amp;gt;elephants&amp;lt;/b&amp;gt;: breeding" /&gt;</p> 
+<p>which appears as:</p> 
+<p class="manual_block">Mammals<br /> 
+- <b>elephants</b>: breeding 15</p> 
+<p>This is the appearance with $this-&gt;indexUseSubentries = false;</p> 
+<p class="manual_block">Mammals 73<br /> 
+Mammals, elephants 142<br /> 
+Mammals, <b>elephants</b>: breeding 15<br /> 
+Mammals, humans 173<br /> 
+Marsupials, kangaroos 75<br /> 
+Marsupials, wombats 86</p> 
+<h6>Customised appearance (advanced)</h6> 
+<p>Several variables set at beginning of function InsertIndex() in mpdf.php which could be changed to alter appearance of Index. e.g. spacer, and joiner characters.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 9 Feb 2009<br />
+Validated 4 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:10:14 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=244&op_target=print&id=294 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:03 GMT -->
+</html>

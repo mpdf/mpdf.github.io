@@ -1,0 +1,164 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=272&op_target=print&id=322 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>Overview</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>mPDF Functions by Category</h5> 
+<h6>Main controls</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=184">mPDF</a> - Main class constructor</p> 
+<p>mPDFI - [Depracated] - see <a href="http://mpdf1.com/manual/index.php?tid=432">SetImportUse()</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=121">WriteHTML</a> - Write HTML code to the document</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=125">Output</a> - Finalise the document and send it to specified destination</p> 
+<h6>Configuration</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=432">SetImportUse</a> - Enables use of templates and imported PDF files (was mPDFI)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=433">StartProgressBarOutput</a> - Show progress bars whilst generating PDF file</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=131">SetAnchor2Bookmark</a> - Specifies how PDF Book marks are created from HTML anchors</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=130">SetBasePath</a> - Specifies a base URL for mPDF to interpret relative URLs</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=251">SetCompression</a> - Specifies that mPDF should compress the data for the PDF file</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=158">SetDefaultFont</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=434">SetDefaultBodyCSS</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=159">SetDefaultFontSize</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=156">SetDirectionality</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=128">SetDisplayMode</a> - Specify the initial Display Mode when the PDF file is opened</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=347">SetAutoFont</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=330">RestrictUnicodeFonts</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=193">SetUserRights</a> -</p> 
+<h6>Document Metadata</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=132">SetTitle</a> - Set the document title</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=194">SetAuthor</a> - Set the document author</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=195">SetCreator</a> - Set the document creator</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=197">SetSubject</a> - Set the document subject</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=196">SetKeywords</a> - Set the document keywords</p> 
+<h6>Encryption &amp; Passwords</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=129">SetProtection</a> - Encrypts and sets the PDF document permissions</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=193">SetUserRights</a> -</p> 
+<h6>Watermarks (page backgrounds)</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=269">SetWatermarkImage</a> - Set an image to use as a Watermark</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=186">SetWatermarkText</a> - Set the text to use as a Watermark</p> 
+<h6>Page Numbering</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=198">AliasNbPages</a> -Defines the placeholder used to insert total number of pages into the document</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=199">AliasNbPageGroups</a> -Defines the placeholder used to insert total page number into the document</p> 
+<h6>Colours</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=480">AddSpotColor</a> - Define a Spot Colour to be referenced in the document</p> 
+<p>&nbsp;</p> 
+<p>The following methods have HTML equivalents e,g, &lt;pagebreak /&gt; and AddPage():</p> 
+<h6>Paging</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=29">AddPage</a> - Add a new page</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=455">AddPageByArray</a> - Add a new page using array of parameters</p> 
+<h6>Bookmarks (Outlines)</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=138">Bookmark</a> -Add a Bookmark to the document</p> 
+<h6>Annotations</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=281">Annotation</a> -Add an Annotation to the document</p> 
+<h6>Index</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=144">CreateIndex</a> -Generate an Index for the document (mPDF &lt; v6.0)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=532">InsertIndex</a> - Generate an Index for the document (mPDF &gt;= v6.0)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=145">IndexEntry</a> -Insert an Index entry for the document</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=308">IndexEntrySee</a> - Insert a cross-reference entry for the document Index</p> 
+<h6>Columns</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=139">SetColumns</a> -Control the use of multiple columns on the page</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=138">AddColumn</a> - Start a new Column</p> 
+<h6>Page Headers &amp; Footers</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=166">DefFooterByName</a> - Define a page footer by name</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=165">DefHeaderByName</a> - Define a page header by name</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=170">DefHTMLFooterByName</a> - Define an HTML page footer by name</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=169">DefHTMLHeaderByName</a> - Define an HTML page header by name</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=151">SetFooter</a> - Set a page footer</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=168">SetFooterByName</a> - Set a page footer by name</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=149">SetHeader</a> - Set a page header</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=167">SetHeaderByName</a> - Set a page header by name</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=152">SetHTMLFooter</a> - Set an HTML page footer</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=172">SetHTMLFooterByName</a> - Set an HTML page footer by name</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=150">SetHTMLHeader</a> - Set an HTML page header</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=171">SetHTMLHeaderByName</a> - Set an HTML page header by name</p> 
+<h6>Table of Contents</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak</a> - Insert a table of contents in the document</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=456">TOCpagebreakByArray</a> - Insert a table of contents in the document using an array of parameters</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=185">TOC_Entry</a> - Insert an entry for the Table of Contents</p> 
+<p>&nbsp;</p> 
+<p>Other Miscellaneous methods:</p> 
+<h6>Replacing text in existing PDF files</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=351">OverWrite</a> - Replace specified text strings in an existing PDF file</p> 
+<h6>Control Visibility</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=471">SetVisibility</a> - Control the visibility of subsequent objects</p> 
+<h6>Import PDF files &amp; Templates</h6> 
+<p>mPDFI - [Depracated] - see <a href="http://mpdf1.com/manual/index.php?tid=432">SetImportUse()</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=336">Thumbnail</a> - Print thumbnails of an external PDF file</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=337">SetSourceFile</a> - Specify the source PDF file used to import pages into the document</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=338">ImportPage</a> - Import a page from an external PDF file</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=339">UseTemplate</a> - Insert an imported page from an external PDF file</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=340">SetPageTemplate</a> - Specify a page from an external PDF file to use as a template</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=341">SetDocTemplate</a> - Specify an external PDF file to use as a template</p> 
+<h6>Barcode</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=289">WriteBarcode</a> - Write an EAN-13 (ISBN-13) barcode</p> 
+<h6>Write directly to page without HTML</h6> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=190">AutosizeText</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=191">RoundedRect</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=188">WriteCell</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=189">WriteText</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=192">Shaded_box</a> -</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=470">CircularText</a> - NB This does have an HTML equivalent as &lt;textcircle&gt;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 10 Feb 2009<br />
+Validated 30 Sep 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:13:15 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=272&op_target=print&id=322 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

@@ -1,0 +1,568 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=379&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:32 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Choosing a configuration</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &lt;= 4.6)</p> 
+<p>In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at least in some form).</p> 
+<p class="manual_block"><b>Note:</b> The "codepage" referred to on this page refers to the internal codepage used by the PDF file. All input to mPDF should be UTF-8 encoded.</p> 
+<p class="manual_block"><b>Note:</b> From mPDF &gt;=4.0 subsets of fonts can be embedded in the PDF file, allowing much smaller font files, whilst taking more time to process. This is enabled by starting mPDF with the suffix '-s' in any of the multibyte forms e.g. <br />
+new mPDF('UTF-8-s') but also 'ar-s', 'vi-s' etc.</p> 
+<h5>Single language / codepage</h5> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td>Characters in your document<br />
+</td> 
+<td>File size</td> 
+<td>Respect CSS font-family</td> 
+<td>Configuration</td> 
+<td>mPDF() language code <sup>[2]</sup><br />
+</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Western European</b> languages (English, Italian, German)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=56">win-1252</a> + <a href="http://mpdf1.com/manual/index.php?tid=71">Symbols</a> + <a href="http://mpdf1.com/manual/index.php?tid=70">Dingbats</a></p> 
+</td> 
+<td> 
+<p>Smallest</p> 
+</td> 
+<td>NO<sup>[1]</sup></td> 
+<td> 
+<p>new mPDF()</p> 
+<p>$mpdf-&gt;useOnlyCoreFonts=true</p> 
+</td> 
+<td> 
+<p>en, ca, cy, da, de, es, eu, fr, ga, fi, is, it, nl, no, pt, sv</p> 
+</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Western European</b> languages (English, Italian, German)</p> 
+<a href="http://mpdf1.com/manual/index.php?tid=56">win-1252</a> + <a href="http://mpdf1.com/manual/index.php?tid=71">Symbols</a> + <a href="http://mpdf1.com/manual/index.php?tid=70">Dingbats</a></td> 
+<td>Small</td> 
+<td>Yes</td> 
+<td>new mPDF()</td> 
+<td>en, ca, cy, da, de, es, eu, fr, ga, fi, is, it, nl, no, pt, sv</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Central and Eastern European</b> (Polish, Croatian, Czech, Slovak, <span class="mw-redirect">Slovenian</span>, Serbian, and Hungarian)</p> 
+<a href="http://mpdf1.com/manual/index.php?tid=324">ISO-8859-2</a>&nbsp;</td> 
+<td>Small</td> 
+<td>Yes</td> 
+<td>new mPDF('iso-8859-2')</td> 
+<td>cs, hr, hu, pl, ro, sk, sl</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b><span class="mw-redirect">Cyrillic</span></b> (Russian, Bulgarian, Serbian, Macedonian and Bulgarian)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=328">win-1251</a></p> 
+</td> 
+<td>Small</td> 
+<td>Yes</td> 
+<td>new mPDF('win-1251')</td> 
+<td>bg, mk, ru, sr, uk</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Baltic</b> (Estonian, Latvian, Lithuanian, Greenlandic)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=325">iso-8859-4</a></p> 
+</td> 
+<td>Small</td> 
+<td>Yes</td> 
+<td>new mPDF('iso-8859-4')</td> 
+<td>et, kl, lt, lv</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Greek</b> language (<span class="mw-redirect">monotonic orthography</span>)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=326">iso-8859-7</a></p> 
+</td> 
+<td>Small</td> 
+<td>Yes</td> 
+<td>new mPDF('iso-8859-7')</td> 
+<td>el</td> 
+</tr> 
+<tr> 
+<td> 
+<p>Latin-5 (<b>Turkish, Kurdish</b>)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=327">iso-8859-9</a></p> 
+</td> 
+<td>Small</td> 
+<td>Yes</td> 
+<td>new mPDF('iso-8859-9')</td> 
+<td>tr</td> 
+</tr> 
+</tbody> </table> 
+<p>[1] Only uses Adobe core fonts: Helvetica, Times, Courier, Symbols and Dingbats.</p> 
+<p>[2] Configured set-up for calling class by language code e.g. $mpdf = new mPDF('en') or mPDF('en-GB'). These are configurable in function <span class="function">GetCodepage()</span> in <span class="filename">config_cp.php</span></p> 
+<h6>Character (font) substitution<br />
+</h6> 
+<p>In all of these configurations other than the top 2 (win-1252), characters which are not included in the main codepage, but which are included in any of the core packages (<a href="http://mpdf1.com/manual/index.php?tid=56">win-1252</a>,&nbsp; <a href="http://mpdf1.com/manual/index.php?tid=71">Symbols</a>,&nbsp; <a href="http://mpdf1.com/manual/index.php?tid=70">Dingbats</a>) will display, but characters in the higher part of win-1252 will be displayed used the core Helvetica/Times/Courier fonts and may appear 'odd'.</p> 
+<p>This "character (font) substitution" is set by default to be used, allowing a small file size, but making most characters at least readable. If appearance is more important than file size/speed, then consider using a UTF-8 output file.</p> 
+<p>&nbsp;</p> 
+<h5>Chinese-Japanese-Korean<br />
+</h5> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td>Characters in your document</td> 
+<td>File size</td> 
+<td>Speed</td> 
+<td>Respect CSS font-family</td> 
+<td>Configuration</td> 
+<td>mPDF() language code <sup>[2]</sup><br />
+</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Japanese</b></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=61">SHIFT_JIS</a></p> 
+</td> 
+<td>Small</td> 
+<td>&nbsp;</td> 
+<td>NO <sup>[1]</sup><br />
+</td> 
+<td> 
+<p>new&nbsp;mPDF('SJIS')</p> 
+<p>&nbsp;</p> 
+</td> 
+<td>ja</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Chinese - Simplified</b></p> 
+<p>(People's Republic of China)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=64">GBK / CP936<br />
+</a></p> 
+</td> 
+<td>Small</td> 
+<td>&nbsp;</td> 
+<td>NO <sup>[1]</sup></td> 
+<td>new mPDF('GBK')</td> 
+<td>zh, zh-CN</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Chinese - Traditional</b></p> 
+<p>(Taiwan, Hong Kong)</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=57">Big-5</a></p> 
+</td> 
+<td>Small</td> 
+<td>&nbsp;</td> 
+<td>NO <sup>[1]</sup></td> 
+<td>new&nbsp;mPDF('BIG5')</td> 
+<td>zh-HK, zh-TW</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Korean</b></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=63">UHC / CP949</a></p> 
+</td> 
+<td>Small</td> 
+<td>&nbsp;</td> 
+<td>NO <sup>[1]</sup></td> 
+<td>new mPDF('UHC')</td> 
+<td>ko</td> 
+</tr> 
+<tr> 
+<td><b>Any CJK language</b><br />
+</td> 
+<td>Small</td> 
+<td><b>Slow<br />
+(if using lang)<br />
+</b></td> 
+<td>Yes - but <b>need to specify the font</b><sup>[3]</sup><b> or the language</b><sup>[4]</sup> for any text using a CJK codepage which wasn't initially set <br />
+</td> 
+<td>[any of the above]</td> 
+<td>[any of the above]</td> 
+</tr> 
+<tr> 
+<td rowspan="2"> 
+<p><b>Any CJK language</b></p> 
+<p>+ other languages</p> 
+</td> 
+<td><b>Large</b></td> 
+<td><b>Slow<br /> 
+(if using lang)</b></td> 
+<td>Yes - but <b>need to specify the font</b><sup>[3]</sup><b> or the language</b><sup>[4]</sup> for all CJK text <sup>[3]</sup></td> 
+<td>new&nbsp;mPDF('UTF-8')</td> 
+<td>&nbsp;-</td> 
+</tr> 
+<tr> 
+<td><b>Large</b></td> 
+<td><b>Slow</b></td> 
+<td>Yes (overridden for CJK text)</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetAutoFont(<span class="smallblock">AUTOFONT_ALL</span>);</p> 
+</td> 
+<td>&nbsp;-</td> 
+</tr> 
+</tbody> </table> 
+<p>[1] Uses the font&nbsp;of the appropriate codepage of the Adobe Asian font pack.</p> 
+<p>[2] Configured set-up for calling class by language code e.g. $mpdf = new mPDF('en') or mPDF('en-GB'). These are configurable in function GetCodepage() in htmltoolkit.php</p> 
+<p>[3] For example <span class="code">&lt;p style="font-family: BIG5"&gt;仝娃阿哀愛挨姶&lt;/p&gt;</span></p> 
+<p>[4] For example <span class="code">&lt;p lang="zh-CN"&gt;仝娃阿哀愛挨姶&lt;/p&gt;</span></p> 
+<p>Font substitution occurs with CJK documents as described above.</p> 
+<p>The codepages/fonts that Adobe uses for CJK languages all support ASCII characters, and have variable coverage of win-1252, cyrillic, greek and and other characters. Most English will be displayed without problem using CJK fonts only.</p> 
+<p>&nbsp;</p> 
+<h5>Thai and Vietnamese<br />
+</h5> 
+<p>Vietnamese and Thai languages are poorly covered by most of the available fonts, meaning that without some control, many characters may not be displayed correctly.</p> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td>Characters to show</td> 
+<td>File size</td> 
+<td>Speed</td> 
+<td>Respect CSS font-family</td> 
+<td>Configuration</td> 
+<td>mPDF() language code<br />
+</td> 
+</tr> 
+<tr> 
+<td rowspan="3"> 
+<p><b>Vietnamese</b></p> 
+<p>+ Western European, Central and Eastern European, Russian, Cyrillic, Baltic, Greek, Turkish and Kurdish languages, Symbols &amp; Dingbats</p> 
+</td> 
+<td>Large</td> 
+<td>&nbsp;</td> 
+<td>NO <sup>[1]</sup><br />
+</td> 
+<td> 
+<p>new&nbsp;mPDF('vi')<sup>[1]</sup></p> 
+</td> 
+<td>vi<br />
+</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slow</b></td> 
+<td>Yes (overridden for Vietnamese)</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetAutoFont(<span class="smallblock">AUTOFONT_THAIVIET</span>);</p> 
+</td> 
+<td>&nbsp;-</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slow</b></td> 
+<td>Yes (overridden for Vietnamese) but <b>need to specify the language</b> for all Vietnamese text <sup>[2]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+</td> 
+<td>-</td> 
+</tr> 
+<tr> 
+<td rowspan="3"> 
+<p><b>Thai</b></p> 
+<p>+ Western European, Central and Eastern European, Russian, Cyrillic, Baltic, Greek, Turkish and Kurdish languages, Symbols &amp; Dingbats</p> 
+</td> 
+<td>Large</td> 
+<td>&nbsp;</td> 
+<td>NO <sup>[1]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('th')<sup>[1]</sup></p> 
+</td> 
+<td>th</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slow</b></td> 
+<td>Yes (overridden for Thai)</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetAutoFont(<span class="smallblock">AUTOFONT_THAIVIET</span>);</p> 
+</td> 
+<td>&nbsp;-</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slow</b></td> 
+<td>Yes (overridden for Thai) but <b>need to specify the language</b> for all Thai text <sup>[3]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+</td> 
+<td>-</td> 
+</tr> 
+</tbody> </table> 
+<p>[1] RestrictUnicodeFonts() is set automatically if the class mPDF is called by language code e.g. new mPDF('vi'). It forces the whole document to keep to a restricted set of font(s), thus ensuring that all characters are displayed.</p> 
+<p>[2] For example <span class="code">&lt;p lang="vi"&gt;Một khảo sát mới cho biết&lt;/p&gt;</span></p> 
+<p>[3] For example <span class="code">&lt;p lang="th"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;</span></p> 
+<h5><br />
+</h5> 
+<h5>RTL languages - Hebrew &amp; Arabic</h5> 
+<p>You need to download the additional font pack for Arabic fonts</p> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td>Characters to show</td> 
+<td>File size</td> 
+<td>Speed</td> 
+<td>Document layout</td> 
+<td>Respect CSS font-family</td> 
+<td>Configuration</td> 
+<td>mPDF() language code<br />
+</td> 
+</tr> 
+<tr> 
+<td rowspan="3"> 
+<p><b>Hebrew</b></p> 
+<p>(+ Western European, Central and Eastern European, Russian, Cyrillic, Baltic, Greek, Turkish and Kurdish languages, Symbols &amp; Dingbats)</p> 
+</td> 
+<td>Large</td> 
+<td>&nbsp;</td> 
+<td>RTL</td> 
+<td>Partial - but <b>need to specify the language</b> for any text which is not Hebrew <sup>[2]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('he');<sup>[1]</sup></p> 
+</td> 
+<td>he<br />
+</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slower</b></td> 
+<td>RTL</td> 
+<td>Yes (overridden for Hebrew)</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetDirectionality('rtl'); <sup>[1]</sup></p> 
+<p>$mpdf-&gt;SetAutoFont(<span class="smallblock">AUTOFONT_RTL</span>);</p> 
+</td> 
+<td>-</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slower</b></td> 
+<td>RTL</td> 
+<td>Yes (overridden for Hebrew) but <b>need to specify the language</b> for all Hebrew text <sup>[2]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetDirectionality('rtl'); <sup>[1]</sup></p> 
+</td> 
+<td>-</td> 
+</tr> 
+<tr> 
+<td rowspan="3"><b>Arabic, Persian/Farsi, Urdu, Pashto, Sindhi</b> 
+<p>(+ Western European, Central and Eastern European, Russian, Cyrillic, Baltic, Greek, Turkish and Kurdish languages, Symbols &amp; Dingbats)</p> 
+</td> 
+<td>Large</td> 
+<td>&nbsp;</td> 
+<td>RTL</td> 
+<td>Partial - but <b>need to specify the language</b> for any text which is not the initial specified language <sup>[2]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('ar')&nbsp; or</p> 
+<p>new&nbsp;mPDF('fa')&nbsp; or</p> 
+<p>new&nbsp;mPDF('ps') or</p> 
+<p>new&nbsp;mPDF('ur')&nbsp; or</p> 
+<p>new&nbsp;mPDF('sd')<sup>[1]</sup></p> 
+</td> 
+<td>ar, fa, ps, ur, sd</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slower</b></td> 
+<td>RTL</td> 
+<td>Yes (overridden for Arabic)</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetDirectionality('rtl'); <sup>[1]</sup></p> 
+<p>$mpdf-&gt;SetAutoFont(<span class="smallblock">AUTOFONT_RTL</span>);</p> 
+</td> 
+<td>-</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slower</b></td> 
+<td>RTL</td> 
+<td>Yes (overridden for Arabic) but <b>need to specify the language</b> for all RTL text <sup>[2]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetDirectionality('rtl'); <sup>[1]</sup></p> 
+</td> 
+<td>-</td> 
+</tr> 
+</tbody> </table> 
+<p>[1] SetDirectionality() and RestrictUnicodeFonts() are set automatically if the class mPDF is called by language code e.g. new mPDF('ar'). SetDirectionality() forces the whole document to a RTL layout. RestrictUnicodeFonts() forces the whole document to keep to the specified font(s), thus ensuring that all characters are displayed.</p> 
+<p>[2] For example <span class="code">&lt;p lang="ar"&gt;البرادعی البرادعی&lt;/p&gt;</span></p> 
+<p>File size is always large due to to Unicode fonts being used.</p> 
+<h5>Indic languages</h5> 
+<p>You need to download the additional font pack for Indic fonts</p> 
+<p>&nbsp;</p> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td>Characters to show</td> 
+<td>File size</td> 
+<td>Speed</td> 
+<td>Document layout</td> 
+<td>Respect CSS font-family</td> 
+<td>Configuration</td> 
+<td>mPDF() language code<br />
+</td> 
+</tr> 
+<tr> 
+<td rowspan="3"> 
+<p><b>Bengali, Devanagari, Malayalam, Gujarati, Kannada, Oriya, Punjabi, Tamil, Telugu<br />
+</b></p> 
+<p>(+ Western European, Central and Eastern European, Russian, Cyrillic, Baltic, Greek, Turkish and Kurdish languages, Symbols &amp; Dingbats)</p> 
+</td> 
+<td>Large</td> 
+<td>&nbsp;</td> 
+<td>RTL</td> 
+<td>Partial&nbsp;but <b>need to specify the language</b> for any text not in the initial specified language <sup>[2]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('xx')<sup>[1]</sup></p> 
+</td> 
+<td>bn, hi, ml, gu, kn, or, pa, ta, te<br />
+</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slower</b></td> 
+<td>RTL</td> 
+<td>Yes (overridden for Indic)</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetAutoFont(<span class="smallblock">AUTOFONT_INDIC</span>);</p> 
+</td> 
+<td>-</td> 
+</tr> 
+<tr> 
+<td>Large</td> 
+<td><b>Slower</b></td> 
+<td>RTL</td> 
+<td>Yes (overridden for Indic) but <b>need to specify the language</b> for all Indic text <sup>[2]</sup></td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>&nbsp;</p> 
+</td> 
+<td>-</td> 
+</tr> 
+</tbody> </table> 
+<p>[1] RestrictUnicodeFonts() is set automatically if the class mPDF is called by language code e.g. new mPDF('hi'). RestrictUnicodeFonts() forces the whole document to keep to the specified font(s), thus ensuring that all characters are displayed.</p> 
+<p>[2] For example <span class="code">&lt;p lang="hi"&gt;</span><span class="l">पहला पन्ना</span><span class="code">&lt;/p&gt;</span></p> 
+<p>File size is always large due to to Unicode fonts being used.</p> 
+<p>&nbsp;</p> 
+<h5>Multi-lingual documents</h5> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td>Characters to show</td> 
+<td>Speed<br />
+</td> 
+<td>Respect CSS font-family</td> 
+<td>Configuration</td> 
+</tr> 
+<tr> 
+<td> 
+<p><b>Multi-lingual document</b> including</p> 
+<p>Western European, Central and Eastern European, Russian, Cyrillic, Baltic, Greek, Turkish and Kurdish languages, Symbols &amp; Dingbats</p> 
+<p>but <b>NOT</b></p> 
+<p>Thai, Vietnamese, Hebrew, Arabic, CJK or Indic languages</p> 
+</td> 
+<td> 
+<p>&nbsp;</p> 
+</td> 
+<td>Yes</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>&nbsp;</p> 
+</td> 
+</tr> 
+<tr> 
+<td rowspan="2"> 
+<p><b>Multi-lingual document</b> including</p> 
+Thai, Vietnamese, Hebrew, Arabic, CJK or Indic languages</td> 
+<td><b>Slow</b><br />
+</td> 
+<td>Yes - but <b>need to specify appropriate font-family</b><sup>[1]</sup><b> or language</b><sup>[2]</sup> for Thai, Vietnamese, Hebrew, Arabic, CJK or Indic text</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+</td> 
+</tr> 
+<tr> 
+<td><b>Slowest</b></td> 
+<td>Yes (overridden for Thai, Vietnamese, Hebrew, Arabic, CJK or Indic text)<br />
+</td> 
+<td> 
+<p>new&nbsp;mPDF('UTF-8')</p> 
+<p>$mpdf-&gt;SetAutoFont(<span class="smallblock">AUTOFONT_ALL</span>);</p> 
+</td> 
+</tr> 
+</tbody> </table> 
+<p>[1] For example <span class="code">&lt;p style="font-family: BIG5"&gt;仝娃阿哀愛挨姶&lt;/p&gt;</span></p> 
+<p>[2] For example <span class="code">&lt;p lang="zh-CN"&gt;仝娃阿哀愛挨姶&lt;/p&gt;</span></p> 
+<p>File size is always large due to to Unicode fonts being used.</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=281">RTL &amp; Bidirectional text</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=347">SetAutoFont()</a> - Automatically detect language in the input HTML text and use appropriate fonts</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=344">useLang</a> - Specify whether to recognise/support HTML attribute lang</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=375">useOnlyCoreFonts</a> - Forces mPDF to use the core Adobe fonts</li> 
+</ul> 
+<p>There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a>.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 19 Feb 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:37:40 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=379&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:32 GMT -->
+</html>

@@ -1,0 +1,116 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=427&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:47 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Real life examples</div>
+<h3>E-mail a PDF file</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>This example shows how to create a PDF file and e-mail it:</p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+include("../mpdf.php");<br /> 
+<br /> 
+$mpdf=new mPDF(); <br />
+<br />
+// $html must be defined<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$content = $mpdf-&gt;Output('', 'S');<br />
+<br />
+$content = chunk_split(base64_encode($content));<br />
+$mailto = 'recipient@domain.com';<br />
+$from_name = 'Your name';<br />
+$from_mail = 'sender@domain.com';<br />
+$replyto = 'sender@domain.com';<br />
+$uid = md5(uniqid(time())); <br />
+$subject = 'Your e-mail subject here';<br />
+$message = 'Your e-mail message here';<br />
+$filename = 'filename.pdf';<br /> 
+<br />
+$header = "From: ".$from_name." &lt;".$from_mail."&gt;\r\n";<br />
+$header .= "Reply-To: ".$replyto."\r\n";<br />
+$header .= "MIME-Version: 1.0\r\n";<br />
+$header .= "Content-Type: multipart/mixed; boundary=\"".$uid."\"\r\n\r\n";<br />
+$header .= "This is a multi-part message in MIME format.\r\n";<br />
+$header .= "--".$uid."\r\n";<br />
+$header .= "Content-type:text/plain; charset=iso-8859-1\r\n";<br />
+$header .= "Content-Transfer-Encoding: 7bit\r\n\r\n";<br />
+$header .= $message."\r\n\r\n";<br />
+$header .= "--".$uid."\r\n";<br />
+$header .= "Content-Type: application/pdf; name=\"".$filename."\"\r\n";<br />
+$header .= "Content-Transfer-Encoding: base64\r\n";<br />
+$header .= "Content-Disposition: attachment; filename=\"".$filename."\"\r\n\r\n";<br />
+$header .= $content."\r\n\r\n";<br />
+$header .= "--".$uid."--";<br />
+$is_sent = @mail($mailto, $subject, "", $header);<br />
+<br />
+// You can now optionally also send it to the browser<br />
+$mpdf-&gt;Output();<br />
+exit;<br />
+<br />
+?&gt;</p> 
+<p class="manual_block"><b>Note:</b> If you have problems with this example, try using \n instead of \r\n. See the note in <a href="http://uk3.php.net/manual/en/function.mail.php">PHP mail</a>.</p> 
+<p class="manual_block"><b>Note:</b> Also see the <a href="http://www.mpdf1.com/mpdf/forum/comments.php?DiscussionID=663&amp;page=1#Item_1">message thread</a> in the Forum</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 5 May 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:52 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=427&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:47 GMT -->
+</html>

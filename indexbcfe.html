@@ -1,0 +1,132 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=138&op_target=print&id=169 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>Bookmark()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 1.0)</p> 
+<p>Bookmark – Add a Bookmark to the document</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>Bookmark</b> ( string <span class="parameter">$content</span> [, int <span class="parameter">$level</span> [, float <span class="parameter">$y</span> ]])</p> 
+<p>Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.</p> 
+<p class="manual_block"><b>Note:</b> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">content</span></p> 
+<p class="manual_param_dd">Specifies the text to appear as a Bookmark.<br />
+<span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;annotation content="This is &amp;lt; 40" /&gt;<br /> 
+It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.</p> 
+<p class="manual_param_dt"><span class="parameter">level</span></p> 
+<p class="manual_param_dd"><span class="parameter">level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 below. Accepts an integer from 0 to the maximum depth you wish.<br />
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">y</span></p> 
+<p class="manual_param_dd"><span class="parameter">y</span> specifies the y-coordinate on the page for the Bookmark. The top of the page is 0. The default is the current writing position on the page.<br />
+<span class="smallblock"></span></p> 
+<h5></h5> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+$mpdf=new mPDF();<br />
+$mpdf-&gt;Bookmark('Start of the document');<br />
+$mpdf-&gt;WriteHTML('&lt;div&gt;Section 1 text&lt;/div&gt;');<br />
+$mpdf-&gt;Output('filename.pdf');<br />
+<br />
+?&gt;</p> 
+<p class="examplecode"><b>Example #2</b></p> 
+<p class="examplecode"><br />
+$mpdf=new mPDF();<br />
+<br /> 
+$mpdf-&gt;Bookmark('Section 1', 0);<br />
+$mpdf-&gt;WriteHTML('&lt;div&gt;Section 1 text&lt;/div&gt;');<br />
+<br />
+$mpdf-&gt;Bookmark('Chapter 1', 1);<br /> 
+$mpdf-&gt;WriteHTML('&lt;div&gt;Chapter 1 text&lt;/div&gt;');<br /> 
+<br /> 
+$mpdf-&gt;Bookmark('Chapter 2', 1);<br /> 
+$mpdf-&gt;WriteHTML('&lt;div&gt;Chapter 2 text&lt;/div&gt;');<br /> 
+<br /> 
+$mpdf-&gt;Bookmark('Section 2', 0);<br /> 
+$mpdf-&gt;WriteHTML('&lt;div&gt;Section 2 text&lt;/div&gt;');<br /> 
+<br /> 
+$mpdf-&gt;Bookmark('Chapter 3', 1);<br /> 
+$mpdf-&gt;WriteHTML('&lt;div&gt;Chapter 3 text&lt;/div&gt;');<br /> 
+<br /> 
+$mpdf-&gt;Output('filename.pdf');<br />
+<br />
+This will produce a Bookmark tree in Adobe Reader:<br />
++ Section 1<br />
+&nbsp; + Chapter 1<br />
+&nbsp; + Chapter 2<br />
++ Section 2<br />
+&nbsp; + Chapter 3</p> 
+<h5>Notes</h5> 
+<p class="manual_block"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in <a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a>.</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=118">bookmark</a>&gt; - Custom HTML tag - equivalent to Bookmark()<br />
+</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 6 Feb 2009<br />
+Validated 8 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:13:53 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=138&op_target=print&id=169 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

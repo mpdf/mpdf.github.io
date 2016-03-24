@@ -1,0 +1,112 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=192&op_target=print&id=223 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>Shaded_box()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>&nbsp;</p> 
+<p class="manual_block"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</p> 
+<p><code><b>Shaded_box</b>(<b>string</b> title[, <b>string</b> font[, <b>float</b> fontstyle[, <b>float</b> fontsize[, <b>float</b> width[, <b>string</b> style[, <b>float</b> radius[, <b>string</b> backgroundcolor[, <b>string</b> color[, <b>float</b> padding]]]]]]]]])<br /> 
+</code> Writes a single line of text surrounded by a box directly to the PDF document at the current position. The box can have rounded corners, and be filled with background-colour.</p> 
+<ul> 
+<li><code>title</code><br /> 
+UTF-8 encoded text (single line)</li> 
+<li><code>font</code><br /> 
+Font family<br /> 
+Default = '' i.e. default document font</li> 
+<li><code>fontstyle</code><br /> 
+Font style as one of B (bold), I (italic), BI (bold-italic) or blank for normal<br /> 
+Default = 'B' i.e. bold</li> 
+<li><code>fontsize</code><br /> 
+Font size in points (pt)<br /> 
+Default = '' i.e. default document font size</li> 
+<li><code>width</code><br /> 
+Width of the box - any units acceptable in CSS can be used e.g. pt, px, mm, % (of page width)<br /> 
+Default = '70%'</li> 
+<li><code>style</code><br /> 
+Box style: D or empty string - draw border (default); F - fill; DF or FD - draw and fill<br /> 
+Default = 'DF' i.e. border and fill</li> 
+<li><code>radius</code><br /> 
+Radius of the rounded corners<br /> 
+Default = 2.5</li> 
+<li><code>backgroundcolor</code><br /> 
+Fill colour for the box - as #rrggbb<br /> 
+Default = '#FFFFFF'</li> 
+<li><code>color</code><br /> 
+Text colour - as #rrggbb<br /> 
+Default = '#000000'</li> 
+<li><code>padding</code><br /> 
+Padding between text and box border, in millimeters<br /> 
+Default = 2</li> 
+</ul> 
+<p>&nbsp;</p> 
+<p>&nbsp;</p> 
+<p class="manual_block">This method accepts UTF-8 encoded text, and will reverse RTL (right-to-left) text when appropriate.</p> 
+<p class="manual_block">Text containing HTML entities, as well as decimal and hex e.g. &amp; apos; &amp; #8812; or &amp; #x21a4; can be used, by setting:<br /> 
+$mpdf-&gt;text_input_as_HTML = true; (default = false)<br /> 
+This will convert all the above to their apropriate characters, otherwise the text will be output as it is.</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 8 Feb 2009<br />
+<span class="redbold">Draft (not yet validated)</span></div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:17:23 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=192&op_target=print&id=223 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

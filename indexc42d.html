@@ -1,0 +1,211 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=405&op_target=print&id=463 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:31 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Installation & Setup</div>
+<h3>Arabic, CJK & Indic fonts - <span class="redbold">Archived</span></h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>Installing Arabic &amp; Indic fonts - version 4.x<br />
+</h5> 
+<p>If you wish to use arabic or indic languages in mPDF, you will need to download the additional font packs. These should be unZipped, and the files copied to the <span class="filename">/unifont/</span> directory. The font packs include the necessary files to embed font subsets.</p> 
+<p class="manual_block"><b>Note:</b> Remember to edit the file <span class="filename">config_fonts.php</span> to make the fonts available to mPDF (you simply need to un-comment the appropriate lines).</p> 
+<h6>Arabic fonts</h6> 
+<p>Languages covered:</p> 
+<ul> 
+<li>arabic</li> 
+<li>persian (farsi)</li> 
+<li>urdu</li> 
+<li>pashto</li> 
+<li>sindhi</li> 
+</ul> 
+<p>NB You can add additional arabic fonts to support arabic languages, but they must be Unicode font files and include characters for the Arabic Presentation Forms-B (FE70–FEFF).</p> 
+<table class="bpmTopnTail"> <thead> 
+<tr> 
+<td>Font name in mPDF</td> 
+<td>Language supported</td> 
+</tr> 
+</thead> <tbody> 
+<tr> 
+<td>ar_1_001 to ar_1_007<br />
+ar_2_001 to ar_2_004</td> 
+<td>Arabic</td> 
+</tr> 
+<tr> 
+<td>ar_k_001, ar_k_002</td> 
+<td>Arabic (Koranic)</td> 
+</tr> 
+<tr> 
+<td>fa_1_001, fa_1_002</td> 
+<td>Persian (Farsi)</td> 
+</tr> 
+<tr> 
+<td>ps_1_001</td> 
+<td>Pashto</td> 
+</tr> 
+<tr> 
+<td>sd_1_001, sd_1_002</td> 
+<td>Sindhi</td> 
+</tr> 
+<tr> 
+<td>ur_1_001</td> 
+<td>Urdu</td> 
+</tr> 
+</tbody> </table> 
+<p>The font is the name to use as the CSS font-family e.g. <span class="filename">&lt;p style="font-family: ar_1_001;"&gt;العربية&lt;/p&gt;</span></p> 
+<p>The definitions in <span class="filename">config_cp.php</span> also mean that you can use: <span class="filename">&lt;p lang="ar"&gt;العربية&lt;/p&gt;</span></p> 
+<h6>Indic fonts</h6> 
+<p>Languages/Scripts covered:</p> 
+<ul> 
+<li>devanagari/hindi</li> 
+<li>bengali</li> 
+<li>gujarati</li> 
+<li>kannada</li> 
+<li>malayalam</li> 
+<li>oriya</li> 
+<li>punjabi</li> 
+<li>tamil</li> 
+<li>telugu<br />
+</li> 
+</ul> 
+<p>NB You cannot add additional Indic fonts to use with mPDF. The conjunct forms needed to display indic languages are not encoded by Unicode, so the fonts use custom encoding in the font files to access these conjuncts. Support for these fonts is therefore font-specific.</p> 
+<table class="bpmTopnTail"> <thead> 
+<tr> 
+<td>Font name in mPDF</td> 
+<td>Language supported</td> 
+</tr> 
+</thead> <tbody> 
+<tr> 
+<td>ind_hi_1_001</td> 
+<td>Hindi / Devanagari</td> 
+</tr> 
+<tr> 
+<td>ind_bn_1_001</td> 
+<td>Bengali</td> 
+</tr> 
+<tr> 
+<td>ind_gu_1_001</td> 
+<td>Gujarati</td> 
+</tr> 
+<tr> 
+<td>ind_kn_1_001</td> 
+<td>Kannada</td> 
+</tr> 
+<tr> 
+<td>ind_ml_1_001</td> 
+<td>Malayalam</td> 
+</tr> 
+<tr> 
+<td>ind_or_1_001</td> 
+<td>Oriya</td> 
+</tr> 
+<tr> 
+<td>ind_pa_1_001</td> 
+<td>Punjabi</td> 
+</tr> 
+<tr> 
+<td>ind_ta_1_001</td> 
+<td>Tamil</td> 
+</tr> 
+<tr> 
+<td>ind_te_1_001</td> 
+<td>Telugu</td> 
+</tr> 
+</tbody> </table> 
+<p>The font is the name to use as the CSS font-family e.g. <span class="filename">&lt;p style="font-family: ind_hi_1_001;"&gt;हिन्दी&lt;/p&gt;</span></p> 
+<p>The definitions in <span class="filename">config_cp.php</span> also mean that you can use: <span class="filename">&lt;p lang="hi"&gt;हिन्दी&lt;/p&gt;</span></p> 
+<h5>CJK Fonts</h5> 
+<p>CJK font files are large because of the large number of characters (glyphs) they contain. Adobe Reader offers a free download of CJK font packs, which allows a small PDF file to be created. The end-user must download the fonts when prompted by Adobe Reader.</p> 
+<p>In version 4, with the introduction of embedded font subsets, it is feasible to create files using open-source CJK fonts, which can be read without the user having to download any additional files. A CJK font pack is offered which contains 2 fonts:</p> 
+<p>&nbsp;</p> 
+<table class="bpmTopnTail"> <thead> 
+<tr> 
+<td>Font name in mPDF</td> 
+<td>Languages supported</td> 
+</tr> 
+</thead> <tbody> 
+<tr> 
+<td>unbatang_0613</td> 
+<td>Korean (UHC)<br />
+</td> 
+</tr> 
+<tr> 
+<td>zn_hannom_a</td> 
+<td> 
+<p>Chinese (BIG-5, GBK, HKCSS)</p> 
+<p>Japanese (SJIS)</p> 
+</td> 
+</tr> 
+</tbody> </table> 
+<p>The font is the name to use as the CSS font-family e.g. <span class="filename">&lt;p style="font-family: unbatang_0613;"&gt;</span><span>汉语 </span><span>漢語</span><span class="filename">&lt;/p&gt;</span></p> 
+<p>The definitions in <span class="filename">config_cp.php</span> can be edited so that you use: <span class="filename">&lt;p lang="zh"&gt;</span><span><span class="extiw">한국어</span></span><span class="filename">&lt;/p&gt;</span></p> 
+<p><span class="filename">zn_hannom_a</span> - contains all of the characters in SJIS, BIG-5, GBK, and HKCSS codepages (Japanese &amp; Chinese), (except greek and cyrillic characters, and HKCS &gt; U+x20000;)</p> 
+<p><span class="filename">unbatang_0613</span> - contains all characters in the UHC codepage (Korean)</p> 
+<h6>CJK Font sources<br />
+</h6> 
+<p>Han Nom font is from <a href="http://vietunicode.sourceforge.net/fonts/fonts_hannom.html">http://vietunicode.sourceforge.net/fonts/fonts_hannom.html</a> (Hi-res version) HAN NOM A <br />
+unBatang_0613 is from <a href="http://kldp.net/projects/unfonts/download">http://kldp.net/projects/unfonts/download</a></p> 
+<p class="manual_block"><b>Note: </b>Characters in Unicode Plane 2 (&gt; U+20000 e.g. some of the HKCS characters) can only be displayed in mPDF using the BIG5 Adobe font. The ttf2ufm utility used to create mPDF font files does not appear to extract characters outside the Unicode Basic Multilingual Plane (BMP - 0000–FFFF)</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 17 Dec 2009 - <span class="redbold">Archived</span><br />
+Validated 21 Apr 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:37:21 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=405&op_target=print&id=463 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:31 GMT -->
+</html>

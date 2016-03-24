@@ -1,0 +1,95 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=32&op_target=print&id=52 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:29 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Troubleshooting</div>
+<h3>Known Issues</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h6>Crashing with no error message</h6> 
+<p>Ensure mbregex is enabled as part of mb_string. <span>Apparently this is enabled by default when you enable mbstring in most cases, however with cPanel and some other non-standard environments this might not be the case, so people have to explicitly look for and enable mbregex (i.e. compile PHP with <span>`--enable-mbregex`</span>.</span></p> 
+<h6>Blank pages or some sections missing</h6> 
+<p>If you pass a large chunk of code to WriteHTML() whether as CSS styles or the main HTML code, you may get a blank page output, or that section of code missing.</p> 
+<p>The PHP function preg_replace() has a maximum string length it will parse (by default this is often about 100000 characters). Over this, PHP silently returns a null value. So long strings of code will be replaced by nothing!</p> 
+<p>You may be able to increase the value of <a href="http://www.php.net/manual/en/pcre.configuration.php#ini.pcre.backtrack-limit">pcre.backtrack_limit</a> at runtime if your system allows; alternatively, break your HTML into chunks and pass them one at a time to WriteHTML()</p> 
+<p>pcre.backtrack_limit is configurable from PHP &gt;= 5.2.0</p> 
+<p>The default value was increased from 100,000 to 1,000,000 from PHP &gt;= 5.3.7</p> 
+<p class="examplecode">ini_set("pcre.backtrack_limit","1000000");</p> 
+<h6>Keep-with-table</h6> 
+<p>If <a href="http://mpdf1.com/manual/index.php?tid=267">use_kwt</a> ("keep-with-table") is set, and a heading element precedes a table inside a div with border/background set: it doesn't work e.g.</p> 
+<p class="examplecode">&lt;div style="border: 1px solid #000000; background-color: #EEEEFF;"&gt;&lt;h2&gt;Title&lt;/h2&gt;&lt;table...</p> 
+<h6>Program dies with no error message when generating a large PDF file</h6> 
+<p>A timeout due to Apache configuration 'TimeOut' will cause the script to terminate with no error message, despite increasing the PHP time limit etc.</p> 
+<p>See also <a href="http://mpdf1.com/manual/index.php?tid=331">Blank screen</a> for a bug when using localhost</p> 
+<h5>Problems fixed from mPDF &gt;= 5.0</h5> 
+<h6>Indic Fonts - ASCII characters</h6> 
+<p>The Indic fonts (added mPDF 4.0) do not contain the basic ASCII characters: a-z, A-Z, and in some: ` and $</p> 
+<p>The font files have been edited to add these characters if you are using embedded font subsets (so all ASCII chars show), but they will not be available if you are not using subsets. In this case you need to mark up HTML text with <span class="parameter">lang</span> or <span class="parameter">font-family</span>.</p> 
+<h6>Adobe Reader 7 error reading file with embedded SVG image</h6> 
+<p>With some SVG images, Adobe Reader 7 throws an error - "Problem with Type 3 font, form or pattern".</p> 
+<h5>See Also</h5> 
+<ul> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=261">Limitations</a></li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 4 Jul 2006<br />
+Validated 14 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:12:22 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=32&op_target=print&id=52 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:29 GMT -->
+</html>

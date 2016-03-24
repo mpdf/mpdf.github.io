@@ -1,0 +1,87 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=435&op_target=print&id=494 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:16 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Capture HTML output</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>One way of outputting a webpage to mPDF without re-writing your scripts too much, is to buffer the output:</p> 
+<p class="examplecode">include("../mpdf.php");<br />
+$mpdf=new mPDF();<br />
+// Buffer the following html with PHP so we can store it to a variable later<br />
+ob_start();<br />
+<br />
+// This is where your script would normally output the HTML using echo or print<br />
+<br />
+// Now collect the output buffer into a variable<br />
+$html = ob_get_contents();<br />
+ob_end_clean();<br />
+<br />
+// send the captured HTML from the output buffer to the mPDF class for processing<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$mpdf-&gt;Output();<br />
+exit;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 14 Feb 2010<br />
+Validated 19 Jan 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:11:03 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=435&op_target=print&id=494 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:16 GMT -->
+</html>

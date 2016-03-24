@@ -1,0 +1,122 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=348&op_target=print&id=398 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:42 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>mPDFI() - <span class="redbold">Archived</span></h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 2.3)</p> 
+<p>mPDFI – Initialise an instance of mPDFI class</p> 
+<p class="manual_block"><b>NOTE:</b> The functions available with mPDFI are now incorporated into mPDF. See <a href="http://mpdf1.com/manual/index.php?tid=424">enableImports</a>.</p> 
+<h5>Description</h5> 
+<p class="manual_block">class <b>mPDFI</b> ([ string <span class="parameter">$codepage</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])</p> 
+<p>Initialise an instance of mPDFI class. mPDFI is an extension of class mPDF, used for importing external PDF files and using templates. Using mPDFI loads a class which has all the functionalilty of mPDF with the added functions.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dd">The parameters are identical to those for <a href="http://mpdf1.com/manual/index.php?tid=184">mPDF()</a>.</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.3</td> 
+<td>Class mPDFI was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+include("../mpdf.php");<br />
+<br />
+// include the class file<br />
+include("../mpdfi/mpdfi.php");<br />
+<br />
+// initiate PDF<br />
+$mpdf=new mPDFI(); <br />
+<br />
+$mpdf-&gt;WriteHTML('You can use this just like mPDF, but also import and use templates...');<br />
+<br />
+$mpdf-&gt;Output();<br />
+<br />
+?&gt;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=336">Thumbnail()</a> - Print thumbnails of an external PDF file<br /> 
+</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=337">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document<br /> 
+</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=338">ImportPage()</a> - Import a page from an external PDF file<br /> 
+</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=339">UseTemplate()</a> - Insert an imported page from an external PDF file<br /> 
+</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=340">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template<br /> 
+</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=341">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=361">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li> 
+</ul> 
+<p>&nbsp;</p> 
+<ul> </ul> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 4 Mar 2009 - <span class="redbold">Archived</span><br />
+Validated 4 Mar 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:35 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=348&op_target=print&id=398 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:42 GMT -->
+</html>

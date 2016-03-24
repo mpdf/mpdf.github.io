@@ -1,0 +1,245 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=363&op_target=print&id=416 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; HTML control tags</div>
+<h3>jpgraph</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 2.4)</p> 
+<p>jpgraph — Generate a graph from table data (requires <a href="http://www.aditus.nu/jpgraph/" target="_blank">JPGraph</a> integration)</p> 
+<h5>Description</h5> 
+<p class="manual_block">&lt;<b>jpgraph</b> [ <span class="parameter">table </span>] [ <span class="parameter">type </span>] [ <span class="parameter">stacked </span>] [ <span class="parameter">dpi </span>] [ <span class="parameter">title </span>] [ <span class="parameter">splines </span>] [ <span class="parameter">bandw </span>] [ <span class="parameter">antialias </span>] [ <span class="parameter">label-y</span> ] [ <span class="parameter">label-x </span>] [ <span class="parameter">axis-x</span> ] [ <span class="parameter">axis-y</span> ] [ <span class="parameter">percent </span>] [ <span class="parameter">series </span>] [ <span class="parameter">data-col-begin</span> ] [ <span class="parameter">data-row-begin</span> ] [ <span class="parameter">data-col-end</span> ] [ <span class="parameter">data-row-end</span> ] [ <span class="parameter">show-values</span> ] [ <span class="parameter">width</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">legend-overlap</span> ] [ <span class="parameter">hide-grid</span> ] [ <span class="parameter">hide-y-axis</span> ] /&gt;</p> 
+<p>Generates and inserts a graph into the document at the current writing position. &lt;jpgraph&gt; must follow the table which it refers to (not necessarily immediately). Requires <span class="parameter">useGraphs</span> set to <span class="smallblock">TRUE</span>.</p> 
+<p class="manual_block"><b>Note: </b>This requires <a href="http://www.aditus.nu/jpgraph/" target="_blank">JPGraph</a> to be installed on the server. See <a href="http://mpdf1.com/manual/index.php?tid=364">Graphs</a> for further information.</p> 
+<h5>Attributes</h5> 
+<p class="manual_param_dt"><span class="parameter">table</span></p> 
+<p class="manual_param_dd">This attribute (optionally) specifies the table "id" or "name" from which to use data. <br /> 
+<span class="smallblock">BLANK</span> or omitted - uses data from the most recent table (in order of the HTML code being parsed) as long as the table did not have an "id" or "name" defined.</p> 
+<p class="manual_param_dt"><span class="parameter">type</span></p> 
+<p class="manual_param_dd">Specifies the type of graph.&nbsp;<br />
+<span class="smallblock">BLANK</span> or omitted uses the default value.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br /> 
+bar<br />
+horiz_bar (horizontal bar graph)<br />
+line<br />
+radar<br />
+pie<br />
+pie3d<br />
+xy<br />
+scatter<br />
+<span class="smallblock">DEFAULT</span>: bar</p> 
+<p class="manual_block">Graphs of type xy or scatter will expect exactly two columns/rows of numerical data - giving X and Y co-ordinates respectively. In the xy graph, the x values need to be in numerical order.</p> 
+<p class="manual_param_dt"><span class="parameter">stacked</span> = 1|0</p> 
+<p class="manual_param_dd">Specifies whether to "stack" bars in graphs of type <i>bar</i> or <i>horizontal-bar</i>.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses default value.<br />
+<span class="smallblock">DEFAULT</span>: 0 (OFF)</p> 
+<p class="manual_param_dt"><span class="parameter">dpi</span></p> 
+<p class="manual_param_dd">Sets the image resolution of the graph in dots per inch (dpi). NB Large values will use extensive amounts of memory.<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses default value.</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+<span class="smallblock">INTEGER</span>: between 50 - 2400<br /> 
+<span class="smallblock">DEFAULT</span>: 150</p> 
+<p class="manual_param_dt"><span class="parameter">title&nbsp;</span></p> 
+<p class="manual_param_dd">Specifies a text string to use atitle for the graph</p> 
+<p class="manual_param_dt"><span class="parameter">splines</span> = 1|0</p> 
+<p class="manual_param_dd">Specify whether to smooth lines for <span class="parameter">xy</span>-type line graphs <br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">bandw</span> = 1|0</p> 
+<p class="manual_param_dd">Specify whether to create a black and white graph<br /> 
+<span class="smallblock">DEFAULT</span>: 0 (colour)</p> 
+<p class="manual_param_dt"><span class="parameter">antialias </span> = 1|0</p> 
+<p class="manual_param_dd">Specify whether to use antialias in generating the graphs.<br />
+If antialias is used better quality curves are produced, but graph lines will only be 1px wide - which will be very thin when using higher resolutions e.g. 300dpi (this is a limitation set by JPGraph)<br />
+<span class="smallblock">DEFAULT</span>: 1 (use antialias) for all types except <span class="parameter">line</span> and <span class="parameter">radar</span>.</p> 
+<p class="manual_param_dt"><span class="parameter">label-y</span></p> 
+<p class="manual_param_dd">Specifies a text string to use a label across the y-axis</p> 
+<p class="manual_param_dt"><span class="parameter">label-x </span></p> 
+<p class="manual_param_dd">Specifies a text string to use a label across the x-axis</p> 
+<p class="manual_param_dt"><span class="parameter">axis-x</span></p> 
+<p class="manual_param_dd">Specify the scale or type of x-axis.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br />
+text: uses text labels for the x-axis<br />
+lin: use a linear scale<br />
+log: use a logarithmic scale<br />
+<span class="smallblock">DEFAULT</span>: text (except if splines are set when it will default to 'lin')</p> 
+<p class="manual_param_dt"><span class="parameter">axis-y</span></p> 
+<p class="manual_param_dd">Specify the scale or type of y-axis.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br />
+lin: use a linear scale for the y-axis<br />
+percent: show a percent sign on a linear scale<br />
+log: use a logarithmic scale<br />
+<span class="smallblock">DEFAULT</span>: lin</p> 
+<p class="manual_param_dt"><span class="parameter">percent </span> = 1|0</p> 
+<p class="manual_param_dd">Specify whether to graph the data as percentages of the series total. This useful if you have 2 series of data to compare such as the number of cycle accidents per age group compared with the population broken down by age group.<br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">series </span></p> 
+<p class="manual_param_dd">Specify whether the table data has the data series in columns or rows.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-sensitive)<br />
+cols: data series are read from table columns<br />
+rows: data series are read from table rows<br /> 
+<span class="smallblock">DEFAULT</span>:cols</p> 
+<p class="manual_param_dt"><span class="parameter">data-col-begin</span></p> 
+<p class="manual_param_dd">Specify the column number to start reading data</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+<span class="smallblock">INTEGER</span>: <br /> 
+<span class="smallblock">DEFAULT</span>: 2 (except <span class="parameter">scatter </span>and <span class="parameter">xy </span>and <span class="parameter">series</span>='cols', when = 1)</p> 
+<p class="manual_param_dt"><span class="parameter">data-row-begin</span></p> 
+<p class="manual_param_dd">Specify the row number to start reading data</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+<span class="smallblock"> INTEGER</span>: <br /> 
+<span class="smallblock">DEFAULT</span>: 2 (except <span class="parameter">scatter </span>and <span class="parameter">xy </span>and <span class="parameter">series</span>='rows', when = 1)</p> 
+<p class="manual_param_dt"><span class="parameter">data-col-end</span></p> 
+<p class="manual_param_dd">Specify the last column number to contain data.</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+0: Read data up to, and including, the last column<br />
+<span class="smallblock">POSITIVE INTEGER</span>: Specify the last column by number to include data<br />
+<span class="smallblock">NEGATIVE INTEGER</span>: Specify the column reading from the last column e.g. "-2" = 2nd column from last<br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">data-row-end</span></p> 
+<p class="manual_param_dd">Specify the last row number to contain data.</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+0: Read data up to, and including, the last row <br /> 
+<span class="smallblock">POSITIVE INTEGER</span>: Specify the last row by number to include data<br />
+<span class="smallblock">NEGATIVE INTEGER</span>: Specify the row reading from the last row e.g. "-2" = 2nd row from last<br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">show-values</span> = 1|0</p> 
+<p class="manual_param_dd">Specify whether to show the value for each data point<br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">width<br />
+height</span></p> 
+<p class="manual_param_dd">Specify width and/or height fro the graph. If only one is specified, the graph is resized in proportion to the default sizings.</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+<span class="smallblock"> </span>Any valid CSS value including 100%, 300px etc. If no units are defined, pixels are assumed.<br /> 
+<span class="smallblock">DEFAULT</span>: Values are set according to graph type (in graph.php)<br />
+&nbsp;&nbsp; $defsize['pie'] = array('w' =&gt; 600, 'h' =&gt; 300);<br />
+&nbsp;&nbsp; $defsize['pie3d'] = array('w' =&gt; 600, 'h' =&gt; 300);<br />
+&nbsp;&nbsp; $defsize['radar'] = array('w' =&gt; 600, 'h' =&gt; 300);<br />
+&nbsp;&nbsp; $defsize['line'] = array('w' =&gt; 600, 'h' =&gt; 400);<br />
+&nbsp;&nbsp; $defsize['xy'] = array('w' =&gt; 600, 'h' =&gt; 400);<br />
+&nbsp;&nbsp; $defsize['scatter'] = array('w' =&gt; 600, 'h' =&gt; 400);<br />
+&nbsp;&nbsp; $defsize['bar'] = array('w' =&gt; 600, 'h' =&gt; 400);<br />
+&nbsp;&nbsp; $defsize['horiz_bar'] = array('w' =&gt; 600, 'h' =&gt; 500);</p> 
+<p class="manual_param_dt"><span class="parameter">legend-overlap</span> = 1|0</p> 
+<p class="manual_param_dd">Specify whether to overlap the legend box over the graph (ignored for <span class="parameter">pie</span>, <span class="parameter">pie3d</span> and <span class="parameter">radar</span>)<br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">hide-grid</span> = 1|0</p> 
+<p class="manual_param_dd">Specify whether to hide the grid lines (ignored for <span class="parameter">pie</span>, <span class="parameter">pie3d</span> and <span class="parameter">radar</span>)<br />
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">hide-y-axis</span> = 1|0</p> 
+<p class="manual_param_dd">Specify whether to hide the whole y-axis - including the grid lines (ignored for <span class="parameter">pie</span>, <span class="parameter">pie3d</span> and <span class="parameter">radar</span>)<br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_block"><b>Note:</b> Other attributes or styles supported by &lt;img&gt; can be used, except for <span class="parameter">width </span>and <span class="parameter">height </span>(which are ignored) and of course <span class="parameter">src</span>.</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.4</td> 
+<td>The function was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+include("../mpdf.php");<br />
+<br />
+define("_JPGRAPH_PATH", '../../jpgraph_5/src/'); // must define this before including mpdf.php file<br />
+<br />
+define("_TTF_FONT_NORMAL", 'arial.ttf');<br />
+define("_TTF_FONT_BOLD", 'arialbd.ttf');<br />
+<br />
+$mpdf=new mPDF(); <br />
+<br />
+$mpdf-&gt;useGraphs = true;<br />
+<br />
+$html = '<br />
+&lt;table id="tbl_1"&gt;&lt;tbody&gt;<br />
+&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Female&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Male&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;35 - 44&lt;/td&gt;&lt;td&gt;&lt;b&gt;4&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;45 - 54&lt;/td&gt;&lt;td&gt;&lt;b&gt;5&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;7&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;55 - 64&lt;/td&gt;&lt;td&gt;&lt;b&gt;21&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;18&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;65 - 74&lt;/td&gt;&lt;td&gt;&lt;b&gt;11&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;14&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;75 - 84&lt;/td&gt;&lt;td&gt;&lt;b&gt;10&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;10&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;85 - 94&lt;/td&gt;&lt;td&gt;&lt;b&gt;2&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;95 - 104&lt;/td&gt;&lt;td&gt;&lt;b&gt;1&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;tr&gt;&lt;td&gt;TOTAL&lt;/td&gt;&lt;td&gt;54&lt;/td&gt;&lt;td&gt;52&lt;/td&gt;&lt;/tr&gt;<br />
+&lt;/tbody&gt;&lt;/table&gt;<br />
+<br />
+&lt;jpgraph table="tbl_1" type="bar" stacked="0" dpi="300" title="New subscriptions" splines="1" bandw="0" antialias="1" label-y="% patients" label-x="Age group" axis-x="text" axis-y="lin" percent="0"&nbsp; series="cols" data-col-begin="2" data-row-begin="2" data-col-end="0" data-row-end="-1" show-values="1" width="600" legend-overlap="1" hide-grid="1" hide-y-axis="1" /&gt;<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($html );<br />
+$mpdf-&gt;Output();<br />
+exit;<br />
+?&gt;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=362">useGraphs</a> - Parse table data from the HTML, and allow the use of &lt;<a href="http://mpdf1.com/manual/index.php?tid=363">jpgraph</a>&gt;</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=364">Graphs</a> - More about JPGraph and graphs<br /> 
+</li> 
+</ul> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 22 Apr 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:19:17 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=363&op_target=print&id=416 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+</html>

@@ -1,0 +1,100 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=325&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:35 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Font substitution</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &lt;= 4.x)</p> 
+<p>If a font or default font is declared in mPDF (including the default stylesheet, and any CSS stylesheets etc.) the font that is actually set is determined by:</p> 
+<h6>UTF-8 codepage</h6> 
+<p>The font requested (including style) is checked to see if it is available to mPDF: set by the array <i>available_unifonts*</i> defined in mpdf_config.php<br /> 
+If the requested font (and style) is not available:</p> 
+<ol> 
+<li>If the font[nostyle] exists - selected</li> 
+<li>If only one font available in <i>available_fonts*</i> - selected</li> 
+<li>Substitute a font of similar type (sans-serif, serif, or mono) - this first one in the <i>sans_fonts</i>, <i>serif_fonts</i>, and <i>mono_fonts</i> arrays are used. The font-family-type is determined by the three arrays <i>sans_fonts</i>, <i>serif_fonts</i>, and <i>mono_fonts</i> defined in mpdf_config.php</li> 
+<li>If no font has yet been selected, the first font in the array <i>available_fonts*</i> is selected</li> 
+</ol> 
+<p>* Note that the array <i>available_unifonts</i> is altered when certain languages are defined e.g.<br /> 
+If 'ur' (Urdu) is set as the language, the only font which contains the necessary characters is Scheherazade. In <span class="filename">config_cp.php</span>, the value $mpdf_pdf_unifonts = "scheherazade"; is used to redefine array <i>available_unifonts</i> to only include Scheherazade, and thus restrict font selection.</p> 
+<h6>CJK codepages</h6> 
+<p>If<span class="parameter"> <a href="http://mpdf1.com/manual/index.php?tid=124">use_CJK_only</a> </span>is set to true (default=false, see Getting Started), then only the fonts big5, sjis, uhc, and gb can be selected. All other fonts are ignored.</p> 
+<p>Otherwise, any of the CJK fonts or other Unicode fonts can be selected (as above).</p> 
+<h6>win-1252 codepage</h6> 
+<p>If<span class="parameter"> <a href="http://mpdf1.com/manual/index.php?tid=375">useOnlyCoreFonts</a> </span>is set to true (default=false, see Getting Started), then all font requests will be substituted by Arial/Helvetica, Times or Courier i.e. the core Adobe fonts. mPDF determines whether the requested font is a sans-serif, serif or monospace font, and substitutes accordingly. The font-family-type is determined by the three arrays <i>sans_fonts</i>, <i>serif_fonts</i>, and <i>mono_fonts</i> defined in mpdf_config.php</p> 
+<p>If<span class="parameter"> <a href="http://mpdf1.com/manual/index.php?tid=375">useOnlyCoreFonts</a> </span>is set to false (default), then fonts are checked to see if they are available to mPDF: set by the array <i>available_fonts</i> defined in mpdf_config.php<br /> 
+If the requested font (and style) is not available:</p> 
+<ol> 
+<li>If the font[nostyle] exists - selected</li> 
+<li>If only one font available in <i>available_fonts</i> - selected</li> 
+<li>Substitute a font of similar type (sans-serif, serif, or mono) - this first one in the <i>sans_fonts</i>, <i>serif_fonts</i>, and <i>mono_fonts</i> arrays are used</li> 
+<li>If no font has yet been selected, the first font in the array <i>available_fonts</i> is selected</li> 
+</ol> 
+<h6>Other codepages</h6> 
+<p>As for win-1252 when<span class="parameter"> <a href="http://mpdf1.com/manual/index.php?tid=375">useOnlyCoreFonts</a> </span>is set to false.</p> 
+<h6>Character (font) substitution</h6> 
+<p>If some circumstances, individual characters are replaced by glyphs from another font - see <a href="http://mpdf1.com/manual/index.php?tid=279">character (font) substitution</a>.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 10 Feb 2009<br />
+Validated 22 Aug 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:08 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=325&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:35 GMT -->
+</html>

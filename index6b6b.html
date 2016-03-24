@@ -1,0 +1,481 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=257&op_target=print&id=307 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:47 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; HTML support</div>
+<h3>HTML Attributes</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>HTML tag Attributes (in-line) supported</h5> 
+<p>Example of an HTML attribute: &lt;div <span class="parameter">align</span>="center"&gt;</p> 
+<p>mPDF supports attribute values in single or double quotes e.g. &lt;div align="center"&gt; or &lt;div align='center'&gt;</p> 
+<p>Minimised attributes are not supported e.g. &lt;input type="checkbox" <i>disabled</i> /&gt;</p> 
+<p>XHTML specification is recommended for best compliance with mPDF.</p> 
+<p class="manual_block"><b>Note:</b> The attributes <span class="parameter">class</span>, <span class="parameter">id</span> and <span class="parameter">style</span> are supported on most HTML tags: see <a href="http://mpdf1.com/manual/index.php?tid=34">Supported CSS</a> for details.</p> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td rowspan="2">HTML, BODY and ALL recognised tags<br />
+</td> 
+<td>lang*<br />
+</td> 
+<td><span class="smallblock">LANGUAGE-COUNTRY CODE</span> *<br />
+</td> 
+</tr> 
+<tr> 
+<td>dir</td> 
+<td>rtl | ltr&nbsp;&nbsp; (mPDF &gt;= 6.0)<span class="smallblock"></span></td> 
+</tr> 
+<tr> 
+<td>HTML, BODY</td> 
+<td>dir</td> 
+<td>rtl | ltr&nbsp; (mPDF &gt;= 5.0)<br />
+</td> 
+</tr> 
+<tr> 
+<td>P, DIV</td> 
+<td>align</td> 
+<td>left | center | right | justify<br />
+</td> 
+</tr> 
+<tr> 
+<td rowspan="10">TABLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+<td>border</td> 
+<td>1 | 0</td> 
+</tr> 
+<tr> 
+<td>width<br />
+</td> 
+<td><span class="smallblock">LENGTH</span></td> 
+</tr> 
+<tr> 
+<td>align</td> 
+<td> 
+<p>left | center | right | char</p> 
+<p>char was added in mPDF 5.7</p> 
+</td> 
+</tr> 
+<tr> 
+<td>char</td> 
+<td> 
+<p>Used in conjunction with align="char". Default if omitted is period "."</p> 
+<p>Non-ASCII characters can be defined with HTML entities e.g. &amp;middot; or &amp;#183;</p> 
+<p>As per HTML 4 spec.</p> 
+<p>Added mPDF 5.7</p> 
+</td> 
+</tr> 
+<tr> 
+<td>bgcolor</td> 
+<td>#rrggbb</td> 
+</tr> 
+<tr> 
+<td>cellSpacing</td> 
+<td><span class="smallblock">LENGTH</span></td> 
+</tr> 
+<tr> 
+<td>cellPadding</td> 
+<td><span class="smallblock">LENGTH</span></td> 
+</tr> 
+<tr> 
+<td><i>(repeat_header)</i></td> 
+<td>1&nbsp;&nbsp; (removed from mPDF &gt;= 5.4; use &lt;thead&gt;)<br />
+</td> 
+</tr> 
+<tr> 
+<td><i>autosize</i></td> 
+<td> 
+<p><span class="smallblock">FLOAT</span>&nbsp; value &gt;= 0</p> 
+<p>Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be &gt;=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom attribute)</p> 
+</td> 
+</tr> 
+<tr> 
+<td><i>rotate</i></td> 
+<td>90 | -90</td> 
+</tr> 
+<tr> 
+<td>TR</td> 
+<td>bgcolor</td> 
+<td>#rrggbb</td> 
+</tr> 
+<tr> 
+<td rowspan="8">TD, TH <br />
+&nbsp;&nbsp;&nbsp;&nbsp;</td> 
+<td>width<br />
+</td> 
+<td><span class="smallblock">LENGTH</span></td> 
+</tr> 
+<tr> 
+<td>height</td> 
+<td><span class="smallblock">LENGTH</span> (but not %)</td> 
+</tr> 
+<tr> 
+<td>align</td> 
+<td>left | center | right</td> 
+</tr> 
+<tr> 
+<td>valign</td> 
+<td>top&nbsp; |middle | bottom</td> 
+</tr> 
+<tr> 
+<td>bgcolor</td> 
+<td>#rrggbb</td> 
+</tr> 
+<tr> 
+<td>colspan</td> 
+<td><span class="smallblock">INTEGER</span></td> 
+</tr> 
+<tr> 
+<td>rowspan</td> 
+<td><span class="smallblock">INTEGER</span></td> 
+</tr> 
+<tr> 
+<td>nowrap</td> 
+<td>nowrap</td> 
+</tr> 
+<tr> 
+<td>OL, UL</td> 
+<td>font-size</td> 
+<td><span class="smallblock">FONT-SIZE</span> <br />
+</td> 
+</tr> 
+<tr> 
+<td rowspan="2">OL</td> 
+<td>type</td> 
+<td>1 | A | a | I | i | disc | circle | square</td> 
+</tr> 
+<tr> 
+<td>start</td> 
+<td><span class="smallblock">INTEGER</span> (mPDF &gt;= 5.7)</td> 
+</tr> 
+<tr> 
+<td>UL</td> 
+<td>type</td> 
+<td>disc | circle | square</td> 
+</tr> 
+<tr> 
+<td rowspan="3">IMG</td> 
+<td>width, height<br />
+</td> 
+<td><span class="smallblock">LENGTH</span></td> 
+</tr> 
+<tr> 
+<td>max-height, max-width, min-height, min-width</td> 
+<td><span class="smallblock">LENGTH</span></td> 
+</tr> 
+<tr> 
+<td><i>rotate</i></td> 
+<td> 
+<p>90 | -90 | 180</p> 
+<p>90 = clockwise</p> 
+<p>When width is specified e.g. width="3cm" this is applied to the rotated image i.e. will be width 3cm after rotating</p> 
+</td> 
+</tr> 
+<tr> 
+<td rowspan="3">HR&nbsp;<br />
+</td> 
+<td>width</td> 
+<td>nn%</td> 
+</tr> 
+<tr> 
+<td>align</td> 
+<td>left | center | right</td> 
+</tr> 
+<tr> 
+<td>color</td> 
+<td>#rrggbb</td> 
+</tr> 
+<tr> 
+<td rowspan="3">FONT</td> 
+<td>face</td> 
+<td><span class="smallblock">FONT-FAMILY</span> <br />
+</td> 
+</tr> 
+<tr> 
+<td>size</td> 
+<td>1 | 2 | 3 | 4 | 5 | 6 | 7 | -1 | +1</td> 
+</tr> 
+<tr> 
+<td>color</td> 
+<td>#rrggbb</td> 
+</tr> 
+<tr> 
+<td rowspan="2">FORM</td> 
+<td>method</td> 
+<td>get | post&nbsp; (default=post)&nbsp; (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td>action</td> 
+<td><span class="smallblock">URI</span>&nbsp; (mPDF &gt;= 5.3</td> 
+</tr> 
+<tr> 
+<td rowspan="6">TEXTAREA</td> 
+<td>cols</td> 
+<td><span class="smallblock">INTEGER</span></td> 
+</tr> 
+<tr> 
+<td>rows</td> 
+<td><span class="smallblock">INTEGER</span></td> 
+</tr> 
+<tr> 
+<td>readonly</td> 
+<td>readonly</td> 
+</tr> 
+<tr> 
+<td>required</td> 
+<td>required&nbsp; [HTML5] (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td>spellcheck</td> 
+<td>true | false [HTML5] Default=false (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td>onChange</td> 
+<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td rowspan="3">TEXTAREA, SELECT, INPUT<br />
+</td> 
+<td>disabled</td> 
+<td>disabled</td> 
+</tr> 
+<tr> 
+<td>title</td> 
+<td><span class="smallblock">TEXT</span></td> 
+</tr> 
+<tr> 
+<td>name</td> 
+<td> 
+<p><span class="smallblock">TEXT</span>&nbsp;&nbsp;</p> 
+<p>Field names in Active Forms must only contain letters, numbers, colon(:), undersore(_) or hyphen(-).</p> 
+<p>(This is largely as per HTML spec, but cannot contain period(.) as this is part of PDF spec for name heirarchies)</p> 
+</td> 
+</tr> 
+<tr> 
+<td rowspan="6">SELECT</td> 
+<td>size</td> 
+<td><span class="smallblock">INTEGER</span><br />
+size = n rows visible. Default=1<br />
+</td> 
+</tr> 
+<tr> 
+<td>multiple</td> 
+<td>multiple</td> 
+</tr> 
+<tr> 
+<td>required</td> 
+<td>required [HTML5] (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td>spellcheck</td> 
+<td> 
+<p>true | false [HTML5] Default=false (mPDF &gt;= 5.3)</p> 
+Only if also editable and size=1</td> 
+</tr> 
+<tr> 
+<td>editable</td> 
+<td> 
+<p>editable&nbsp; [HTML5] Default=false (mPDF &gt;= 5.3)</p> 
+<p>Only if size=1</p> 
+</td> 
+</tr> 
+<tr> 
+<td>onChange</td> 
+<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td rowspan="2">OPTION</td> 
+<td>selected</td> 
+<td>selected</td> 
+</tr> 
+<tr> 
+<td>value</td> 
+<td><span class="smallblock">TEXT</span></td> 
+</tr> 
+<tr> 
+<td>INPUT</td> 
+<td>type</td> 
+<td>text | password | hidden | image | button | submit | reset | radio | checkbox<br />
+</td> 
+</tr> 
+<tr> 
+<td rowspan="2">INPUT (text, password, hidden, image, button, submit, reset)</td> 
+<td>size</td> 
+<td><span class="smallblock">INTEGER<br />
+</span>size=n=width as number of characters</td> 
+</tr> 
+<tr> 
+<td>value</td> 
+<td><span class="smallblock">TEXT</span><br />
+</td> 
+</tr> 
+<tr> 
+<td rowspan="5">INPUT (text, password)</td> 
+<td>maxlength</td> 
+<td><span class="smallblock">INTEGER</span></td> 
+</tr> 
+<tr> 
+<td>readonly</td> 
+<td>readonly</td> 
+</tr> 
+<tr> 
+<td>required</td> 
+<td>required [HTML5] (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td>spellcheck</td> 
+<td> 
+<p>true | false [HTML5] Default=false (mPDF &gt;= 5.3)</p> 
+</td> 
+</tr> 
+<tr> 
+<td>onChange</td> 
+<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td rowspan="3">INPUT (image, button, submit, reset)</td> 
+<td>alt</td> 
+<td><span class="smallblock">TEXT</span></td> 
+</tr> 
+<tr> 
+<td>src</td> 
+<td><span class="smallblock">TEXT</span></td> 
+</tr> 
+<tr> 
+<td>onClick</td> 
+<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF &gt;= 5.3)</td> 
+</tr> 
+<tr> 
+<td>INPUT (button, submit, reset)</td> 
+<td><i>noprint</i></td> 
+<td> 
+<p>noprint</p> 
+<p>(mPDF &gt;= 5.3)</p> 
+</td> 
+</tr> 
+<tr> 
+<td>INPUT (radio, checkbox)<br />
+</td> 
+<td>value</td> 
+<td><span class="smallblock">TEXT</span> In Active Forms value(s) for radio buttons and checkboxes are required, and can only contain letters, numbers, colon(:), undersore(_), hyphen(-) or period(.)</td> 
+</tr> 
+<tr> 
+<td>DOTTAB</td> 
+<td><i>outdent</i></td> 
+<td><span class="smallblock">LENGTH</span> (mPDF &gt;= 5.7)</td> 
+</tr> 
+<tr> 
+<td>METER</td> 
+<td> 
+<p>value, max, min, low, high, optimum</p> 
+</td> 
+<td><span class="smallblock">FLOAT</span><br />
+[HTML5 spec]<br />
+</td> 
+</tr> 
+<tr> 
+<td>PROGRESS</td> 
+<td>value, max</td> 
+<td><span class="smallblock">FLOAT</span><br />
+[HTML5 spec]</td> 
+</tr> 
+<tr> 
+<td rowspan="2">METER, PROGRESS</td> 
+<td>width, height</td> 
+<td><span class="smallblock">LENGTH</span></td> 
+</tr> 
+<tr> 
+<td><i>type</i></td> 
+<td>Any alphanumeric string. If present, will select custom progress/meter formats - IF they have been defined by the user by editing script <span class="filename">classes/meter.php</span></td> 
+</tr> 
+</tbody> </table> 
+<p>* <span class="parameter">lang</span> is only recognised when the variable <a href="http://mpdf1.com/manual/index.php?tid=344">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)</p> 
+<p class="manual_block"><b>Note:</b> Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</p> 
+<p class="manual_block"><b>Note:</b> Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in their formal/long form i.e. selected="selected"</p> 
+<p class="manual_block"><b>Note:</b> <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="http://mpdf1.com/manual/index.php?tid=184">mPDF()</a>.</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.0</td> 
+<td>TD border="1" was supported &lt;= mPDF 1.3, but is not valid HTML and is now ignored</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>TABLE align="..." with a rotated table - changed to set the alignment ignoring the rotation i.e. align=right sets the table to the right side of the page (looking as though it is bottom-aligned)</td> 
+</tr> 
+<tr> 
+<td>2.3</td> 
+<td><span class="parameter">lang</span> was added.</td> 
+</tr> 
+<tr> 
+<td>4.0</td> 
+<td>Default value of <span class="parameter">lang</span> changed to <span class="smallblock">TRUE</span></td> 
+</tr> 
+<tr> 
+<td>5.0</td> 
+<td><span class="parameter">dir</span> was added to HTML and BODY<br />
+</td> 
+</tr> 
+</tbody> </table>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 9 Feb 2009<br />
+Validated 14 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:06:13 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=257&op_target=print&id=307 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:47 GMT -->
+</html>

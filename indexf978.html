@@ -1,0 +1,118 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=452&op_target=print&id=515 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:38:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Installation & Setup</div>
+<h3>Installation v5.x</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h6>First-time users</h6> 
+<p>Installation:</p> 
+<ul> 
+<li>Download the .zip file and unzip it</li> 
+<li>Create a folder e.g. <span class="filename">/mpdf</span> on your server </li> 
+<li>Upload all of the files to the server, maintaining the folders as they are </li> 
+<li>Ensure that you have write permissions set for the following folders: 
+<ul> 
+<li><span class="filename">/ttfontdata/</span> <br />
+</li> 
+<li><span class="filename">/tmp/</span> <br />
+</li> 
+<li><span class="filename">/graph_cache/</span></li> 
+</ul> 
+</li> 
+</ul> 
+<p>To test the installation, point your browser to the example files folder e.g. <span class="filename">[path_to_mpdf_folder]/mpdf/examples/</span></p> 
+<p>If you wish to install additional fonts please see the notes in <a href="http://mpdf1.com/manual/index.php?tid=453">Fonts &amp; Languages</a> for further instructions.</p> 
+<p>If you wish to define a different folder for temporary files rather than <span class="filename">/tmp/</span> see the note on '<a href="http://mpdf1.com/manual/index.php?tid=445">Folder for temporary files</a>'.</p> 
+<p>If you have problems, please read the section on <a href="http://mpdf1.com/manual/index.php?tid=32">troubleshooting</a> in the manual.</p> 
+<h6><br /> 
+Upgrading from version mPDF 5.0 Beta<br />
+</h6> 
+<p>There is no upgrade package from v5 beta because so many of the files have had at least minor changes. You can overwrite most of the files, taking care to keep a note of your 3 configuration files.</p> 
+<p class="manual_block"><b>Important:</b> You must delete all temporary files in the <span class="filename">/ttfontdata/</span> folder.</p> 
+<h6>Changes from 5.0 Beta</h6> 
+<ul> 
+<li>config.php file has been changed (extra CJK characters to recognise CJK blocks)</li> 
+<li><span class="code">$this-&gt;backupSubsFont</span> (in <span class="filename">config_fonts.php</span>) optionally now takes an array</li> 
+<li>no need to define <span class="code">'cjk'=&gt;true</span> or <span class="code">'sip|smp'=&gt;true</span> in <span class="filename">config_fonts.php</span> (ignored; cf. <span class="code">$this-&gt;BMPonly</span>)</li> 
+<li>Indic language fonts have been altered to add Latin and Latin-1 Supplement characters</li> 
+<li>progress bars now has an external progbar.css and configurable main heading</li> 
+<li>added initial parameter <span class="code">new mPDF('+aCJK')</span> or <span class="code">'-aCJK'</span> to override default useAdobeCJK at runtime</li> 
+<li>QRCode is not included in main download (but as an extra package)</li> 
+</ul> 
+<h6>Earlier versions</h6> 
+<p>If you have been using earlier versions of mPDF, most scripts should work as before. But note:<br />
+- Arial, Helvetica, Times and Courier are now treated like any other font<br />
+- the whole CSS font string is parsed e.g. style="font-family:'Lucida Grande';" will look for a font 'lucidagrande'<br />
+and not 'lucida'</p> 
+<p>Configurable variables:</p> 
+<ul> 
+<li><span class="code">$mpdf-&gt;useSubstitutionsMB</span> is now depracated, but will work as an alias for <span class="code">$mpdf-&gt;useSubstitutions</span></li> 
+<li><span class="code">$mpdf-&gt;useOnlyCoreFonts</span> is now depracated and is ignored. Use <span class="code">new mPDF('c')</span></li> 
+<li><span class="code">$this-&gt;use_CJK_only</span> is now depracated and is ignored. See <span class="code">$this-&gt;useAdobeCJK</span> and <span class="code">new mPDF('+aCJK')</span> or <span class="code">'-aCJK'</span></li> 
+</ul> 
+<p>The initial parameters e.g. <span class="code">new mPDF('utf-8')</span> have all changed. Old ones may be recognised, or will be ignored.</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 21 Aug 2010<br />
+Validated 22 Sep 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:03:33 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=452&op_target=print&id=515 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:38:58 GMT -->
+</html>

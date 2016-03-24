@@ -1,0 +1,327 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=313&op_target=print&id=363 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:52 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Headers & Footers</div>
+<h3>Headers & Footers - Method 4</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>This uses <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers &amp; footers. This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the headers/footers at any time during the document.</p> 
+<p>Note that <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.</p> 
+<p class="manual_block"><b>Note:</b> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</p> 
+<p class="manual_block"><b>Note:&nbsp;</b><a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a>, <a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a>, &lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebrea</a>k&gt; &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; and <a href="http://mpdf1.com/manual/index.php?tid=307">@page</a> can reference both HTML and NON-HTML headers/footers. When referring to an HTML header/footer you must add the prefix 'html_' to distinguish them.</p> 
+<h5>Defining NAMED HTML Headers/Footers<br />
+</h5> 
+<p class="examplecode"><b>Example #1</b> - Using PHP</p> 
+<p class="examplecode"><br />
+$mpdf=new mPDF(); <br />
+<br />
+$mpdf-&gt;DefHTMLHeaderByName('Chapter2Header','&lt;div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;"&gt;Chapter 2&lt;/div&gt;');<br />
+<br />
+$mpdf-&gt;DefHTMLFooterByName('Chapter2Footer','&lt;div style="text-align: right; font-weight: bold; font-size: 8pt; font-style: italic;"&gt;Chapter 2 Footer&lt;/div&gt;');</p> 
+<p class="examplecode"><b>Example #2</b> - Using Custom HTML tags</p> 
+<p class="examplecode"><br />
+$mpdf=new mPDF(); <br />
+<br />
+$html = '<br />
+&lt;htmlpageheader name="myHeader1"&gt;<br />
+&lt;div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;"&gt;My document&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+<br />
+&lt;htmlpageheader name="myHeader2"&gt;<br />
+&lt;div style="border-bottom: 1px solid #000000; font-weight: bold;&nbsp; font-size: 10pt;"&gt;My document&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+<br />
+&lt;htmlpagefooter name="myFooter1"&gt;<br />
+&lt;table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; <br />
+&nbsp;&nbsp;&nbsp; color: #000000; font-weight: bold; font-style: italic;"&gt;&lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%"&gt;&lt;span style="font-weight: bold; font-style: italic;"&gt;{DATE j-m-Y}&lt;/span&gt;&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" align="center" style="font-weight: bold; font-style: italic;"&gt;{PAGENO}/{nbpg}&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" style="text-align: right; "&gt;My document&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/table&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+<br />
+&lt;htmlpagefooter name="myFooter2"&gt;<br />
+&lt;table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; <br />
+&nbsp;&nbsp;&nbsp; color: #000000; font-weight: bold; font-style: italic;"&gt;&lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%"&gt;&lt;span style="font-weight: bold; font-style: italic;"&gt;My document&lt;/span&gt;&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" align="center" style="font-weight: bold; font-style: italic;"&gt;{PAGENO}/{nbpg}&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" style="text-align: right; "&gt;{DATE j-m-Y}&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/table&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+<br />
+';</p> 
+<h5>Referencing a Header/Footer by NAME<br />
+</h5> 
+<p>Once you have defined <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers/footers for your document, you can reference them using:</p> 
+<ul> 
+<li>Methods for <span class="smallblock">HTML</span> headers/footers only - <b>Recommended</b> when setting the first page header/footer at the start of a document (although they can also be used to change headers/footers during the document). 
+<ul> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=171">SetHTMLHeaderByName()</a> - see Example #3&nbsp; </li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=172">SetHTMLFooterByName()</a> - see Example #3<br />
+</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=307">@page</a> - see Example #5<br />
+</li> 
+<li>&lt;<a href="http://mpdf1.com/manual/index.php?tid=179">sethtmlpageheader</a>&gt; - see Example #4<br />
+</li> 
+<li>&lt;<a href="http://mpdf1.com/manual/index.php?tid=180">sethtmlpagefooter</a>&gt; - see Example#4<br />
+</li> 
+</ul> 
+</li> 
+</ul> 
+<ul> 
+<li>Methods to access any headers/footers (<span class="smallblock">HTML</span> or <span class="smallblock">NON-HTML</span>) - <b>Recommended</b> when changing header/footer during the document. 
+<ul> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> - see Example #6<br />
+</li> 
+<li>&lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebrea</a>k&gt; - see Example #7<br />
+</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=307">@page</a> - see Example #5<br />
+</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> - see Example #8</li> 
+<li>&lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; - see Example #9</li> 
+</ul> 
+</li> 
+</ul> 
+<h5>Setting a named HTML header at the start of a document</h5> 
+<p>When using a <span class="smallblock">NAMED</span> header on the first page, remember that mPDF writes the header as the first page is started. This is usually when you first use WriteHTML() which automatically triggers an AddPage().</p> 
+<p class="examplecode"><b>Example #3</b> - SetHTMLHeaderByName()</p> 
+<p class="examplecode">$mpdf = new mPDF();<br />
+<br />
+// Define an HTML header named 'MyHeader1' here (as Example #1)<br />
+<br />
+$mpdf-&gt;SetHTMLHeaderByName('MyHeader1');<br />
+<br />
+$mpdf-&gt;WriteHTML('Document text');<br /> 
+$mpdf-&gt;Output();</p> 
+<p>In this example using custom HTML tags to set the <span class="smallblock">HTML</span> header, notice that &lt;sethtmlpageheader&gt; has <span class="parameter">show-this-page</span> = 1. This is because as soon as you call WriteHTML(), mPDF has added the first page, so this fixes the problem by forcing the header to show on the first page:</p> 
+<p class="examplecode"><b>Example #4</b> - &lt;sethtmlpageheader&gt;</p> 
+<p class="examplecode">$mpdf = new mPDF();<br /> 
+<br />
+$html = '<br />
+&lt;htmlpageheader name="MyHeader1"&gt;<br /> 
+&lt;div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;"&gt;My document&lt;/div&gt;<br /> 
+&lt;/htmlpageheader&gt;<br /> 
+<br /> 
+&lt;htmlpagefooter name="MyFooter1"&gt;<br /> 
+&lt;table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; <br /> 
+&nbsp;&nbsp;&nbsp; color: #000000; font-weight: bold; font-style: italic;"&gt;&lt;tr&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%"&gt;&lt;span style="font-weight: bold; font-style: italic;"&gt;{DATE j-m-Y}&lt;/span&gt;&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" align="center" style="font-weight: bold; font-style: italic;"&gt;{PAGENO}/{nbpg}&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" style="text-align: right; "&gt;My document&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/table&gt;<br /> 
+&lt;/htmlpagefooter&gt;<br /> 
+<br /> 
+&lt;sethtmlpageheader name="MyHeader1" value="on" <b>show-this-page="1"</b> /&gt;<br />
+&lt;sethtmlpagefooter name="MyFooter1" value="on" /&gt;<br />
+<br />
+&lt;div&gt;Start of the document ... and all the rest&lt;/div&gt;<br />
+';<br />
+<br /> 
+$mpdf-&gt;WriteHTML($html);<br /> 
+$mpdf-&gt;Output();</p> 
+<p>&nbsp;</p> 
+<p class="examplecode"><b>Example #5</b> - @page</p> 
+<p class="examplecode">$mpdf=new mPDF(); <br />
+<br />
+$html = '<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;style&gt;<br />
+@page {<br />
+&nbsp; size: auto;<br />
+&nbsp; odd-header-name: <b>html_M</b>yHeader1;<br />
+&nbsp; odd-footer-name: <b>html_</b>MyFooter1;<br />
+}<br />
+@page chapter2 {<br />
+&nbsp;&nbsp;&nbsp; odd-header-name: <b>html_M</b>yHeader2;<br />
+&nbsp;&nbsp;&nbsp; odd-footer-name: <b>html_M</b>yFooter2;<br />
+}<br />
+@page noheader {<br />
+&nbsp;&nbsp;&nbsp; odd-header-name: _blank;<br />
+&nbsp;&nbsp;&nbsp; odd-footer-name: _blank;<br />
+}<br />
+div.chapter2 {<br />
+&nbsp;&nbsp;&nbsp; page-break-before: always;<br />
+&nbsp;&nbsp;&nbsp; page: chapter2;<br />
+}<br />
+div.noheader {<br />
+&nbsp;&nbsp;&nbsp; page-break-before: always;<br />
+&nbsp;&nbsp;&nbsp; page: noheader;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;htmlpageheader name="MyHeader1"&gt;<br /> 
+&lt;div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;"&gt;My document&lt;/div&gt;<br /> 
+&lt;/htmlpageheader&gt;<br /> 
+<br /> 
+&lt;htmlpageheader name="MyHeader2"&gt;<br /> 
+&lt;div style="border-bottom: 1px solid #000000; font-weight: bold;&nbsp; font-size: 10pt;"&gt;My document&lt;/div&gt;<br /> 
+&lt;/htmlpageheader&gt;<br /> 
+<br /> 
+&lt;htmlpagefooter name="MyFooter1"&gt;<br /> 
+&lt;table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; <br /> 
+&nbsp;&nbsp;&nbsp; color: #000000; font-weight: bold; font-style: italic;"&gt;&lt;tr&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%"&gt;&lt;span style="font-weight: bold; font-style: italic;"&gt;{DATE j-m-Y}&lt;/span&gt;&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" align="center" style="font-weight: bold; font-style: italic;"&gt;{PAGENO}/{nbpg}&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" style="text-align: right; "&gt;My document&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/table&gt;<br /> 
+&lt;/htmlpagefooter&gt;<br /> 
+<br /> 
+&lt;htmlpagefooter name="MyFooter2"&gt;<br /> 
+&lt;table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; <br /> 
+&nbsp;&nbsp;&nbsp; color: #000000; font-weight: bold; font-style: italic;"&gt;&lt;tr&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%"&gt;&lt;span style="font-weight: bold; font-style: italic;"&gt;My document&lt;/span&gt;&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" align="center" style="font-weight: bold; font-style: italic;"&gt;{PAGENO}/{nbpg}&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" style="text-align: right; "&gt;{DATE j-m-Y}&lt;/td&gt;<br /> 
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/table&gt;<br /> 
+&lt;/htmlpagefooter&gt;<br />
+<br />
+&lt;div&gt;Here is the text of the first chapter&lt;/div&gt;<br />
+<br />
+&lt;div class="chapter2"&gt;Text of Chapter 2&lt;/div&gt;<br />
+<br />
+&lt;div class="noheader"&gt;No-Header page&lt;/div&gt;<br />
+<br />
+&lt;/body&gt;&lt;/html&gt;<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$mpdf-&gt;Output();</p> 
+<h5>Selecting a named header during the document</h5> 
+<p class="examplecode"><b>Example #6</b> - AddPage()</p> 
+<p class="examplecode">$mpdf-&gt;WriteHTML('Document text');<br />
+<br />
+// In a SINGLE-SIDED document, the 'ODD' values set the default for all pages.<br />
+$mpdf-&gt;AddPage('','','','','','','','','','','', '<b>html_</b>MyHeader2', '', '<b>html_</b>MyFooter2', '', 1, 0, 1, 0);<br /> 
+<br /> 
+$mpdf-&gt;WriteHTML('Document text');<br />
+<br />
+// Turn Headers and Footers off<br />
+$mpdf-&gt;AddPage('','','','','','','','','','','', '', '', '', '', -1, 0, -1, 0);<br /> 
+<br /> 
+$mpdf-&gt;WriteHTML('Document text with No Headers/Footers');</p> 
+<p class="examplecode"><b>Example #7</b> - &lt;pagebreak&gt;</p> 
+<p class="examplecode">$html = '<br /> 
+&lt;p&gt;Document text&lt;/p&gt;<br /> 
+<br /> 
+&lt;pagebreak odd-header-name="<b>html_</b>MyHeader2" odd-header-value="on" odd-footer-name="<b>html_</b>MyFooter2" odd-footer-value="on" /&gt;<br /> 
+<br /> 
+&lt;p&gt;Text of Chapter 2/p&gt;<br /> 
+<br /> 
+&lt;!-- TO TURN HEADER/FOOTER OFF FOR A NEW PAGE --&gt;<br /> 
+&lt;pagebreak odd-header-value="off" odd-footer-value="off" /&gt;<br /> 
+<br /> 
+&lt;p&gt;No-Header page/p&gt;<br /> 
+';<br /> 
+<br /> 
+$mpdf-&gt;WriteHTML($html);</p> 
+<h5>Table of Contents</h5> 
+<p class="examplecode"><b>Example #8</b> - TOCpagebreak()</p> 
+<p class="examplecode">$mpdf = new mPDF();<br />
+<br />
+// Define HTML headers here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 'MyHeader2', 'MyFooter2' (as Example #1)<br />
+<br />
+$mpdf-&gt;SetHTMLHeaderByName('MyHeader1');<br />
+<br /> 
+$mpdf-&gt;WriteHTML('Introduction of document...');<br />
+<br />
+$mpdf-&gt;TOCpagebreak ('', '', '', '', '', '', '', '', '', '', '', '', '<b>html_</b>MyTOCHeader', '', '<b>html_</b>MyTOCFooter', '', 1, 0 , 1, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '<b>html_</b>MyHeader2', '', '<b>html_</b>MyFooter2', '', 1, 0,&nbsp; 1,0); <br />
+<br />
+$mpdf-&gt;WriteHTML('Main part of document...');<br /> 
+<br /> 
+$mpdf-&gt;Output();</p> 
+<p class="examplecode"><b>Example #9</b> - &lt;tocpagebreak&gt;</p> 
+<p class="examplecode">$html = '<br />
+<br />
+&lt;!-- Define HTML headers etc&nbsp; here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 'MyHeader2', 'MyFooter2' (as Example #2) --&gt;<br />
+<br />
+&lt;p&gt;Introduction: Here starts the document&lt;/p&gt;<br /> 
+<br />
+&lt;tocpagebreak toc-odd-header-name='<b>html_</b>MyTOCHeader' toc-odd-footer-name='<b>html_</b>MyTOCFooter' toc-odd-header-value="1" toc-odd-footer-value="1"odd-header-name='<b>html_</b>MyHeader2' odd-header-value="1"&nbsp; odd-footer-name='<b>html_</b>MyFooter2' odd-footer-value="1" /&gt;<br />
+<br /> 
+&lt;p&gt;Text of Chapter 2... &lt;/p&gt;<br />
+';<br />
+<br /> 
+$mpdf-&gt;WriteHTML($html);</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=169">DefHTMLHeaderByName()</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=170">DefHTMLFooterByName()</a></li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=177">htmlpageheader</a>&gt;</li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=178">htmlpagefooter</a>&gt;</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=171">SetHTMLHeaderByName()</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=172">SetHTMLFooterByName()</a></li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=179">sethtmlpageheader</a>&gt;</li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=180">sethtmlpagefooter</a>&gt;</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a></li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebrea</a>k&gt;</li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt;</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=307">@page</a></li> 
+</ul> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 14 Feb 2009<br />
+Validated 15 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:07:16 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=313&op_target=print&id=363 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:52 GMT -->
+</html>

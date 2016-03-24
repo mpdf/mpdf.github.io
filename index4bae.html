@@ -1,0 +1,101 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=505&op_target=print&id=581 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:24 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>lang HTML attribute v6.x</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>The HTML lang attribute has a number of uses:</p> 
+<ul> 
+<li>when OTL tables are being used for a font, the language from the lang attribute is used to select which OTL features are applied;</li> 
+<li>used in conjunction with CSS :lang selector to allow CSS styles to be applied;</li> 
+<li>can be used in conjunction with <span class="code">autoLangToFont</span> and <span class="code">autoScriptToLang</span> (cf.)</li> 
+</ul> 
+<p>mPDF supports use of the <span class="code">lang</span> selector in CSS. All of the following are supported:</p> 
+<ul> 
+<li><span class="code">:lang(fr)</span></li> 
+<li><span class="code">p:lang(fr)</span></li> 
+<li><span class="code">span:lang("syr")</span></li> 
+<li><span class="code">[lang="fr"]</span></li> 
+<li><span class="code">[lang='fr']</span></li> 
+<li><span class="code">p[lang=fr]</span></li> 
+<li><span class="code">p[lang="zh-TW"]</span></li> 
+</ul> 
+<p>Note: <span class="code">[lang=zh]</span> will match <span class="code">lang="zh-TW"</span> and <span class="code">lang="zh-HK"</span></p> 
+<p>Limitation: class selectors and attribute selectors should be of equal specificity in CSS specification e.g.</p> 
+<p class="examplecode">:lang(syr) { color: blue; }<br /> 
+.syriac { color: red; }</p> 
+<p>should be of equal specificity, and thus apply whichever comes later in the CSS stylesheet. mPDF however gives <span class="code">:lang</span> priority over <span class="code">.class</span></p> 
+<p class="manual_block"><b>The use of the lang attribute and CSS selector is the recommended method for handling multi-lingual documents</b></p> 
+<h6>Language tags</h6> 
+<p>IETF tags should be used for lang which comply with the following:</p> 
+<ul> 
+<li>a 2 or 3 letter Language code, followed optionally by</li> 
+<li>a hyphen and a 4 letter Script code, and or</li> 
+<li>a hyphen and a 2 letter Region code</li> 
+<li>i.e. [xx|xxx]{-Xxxx}{-XX}</li> 
+<li>mPDF deals with IETF tags as case insensitive</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 3 Jan 2015<br />
+Validated 3 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:05:09 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=505&op_target=print&id=581 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:24 GMT -->
+</html>

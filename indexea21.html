@@ -1,0 +1,100 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=77&op_target=print&id=108 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:47 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Tables</div>
+<h3>Tables</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>Styles</h5> 
+<p>For a full list of CSS styles supported by mPDF for tables/cells, see&nbsp;<a href="http://mpdf1.com/manual/index.php?tid=34">Valid CSS</a>. Note the custom attribute "topntail" which I have added to add a horizontal border at the top and bottom of the table, and under the THEAD row if present.</p> 
+<p>Block-level tags (DIV, P etc) are ignored inside tables, including any CSS styles - inline CSS or stylesheet classes, id etc. To set text characteristics within a table/cell, either define the CSS for the table/cell, or use in-line tags e.g. &lt;SPAN style="..."&gt;</p> 
+<p>Both models of border-collapse are supported (CSS border-collapse:collapse or separate), as well as cellSpacing and cellPadding.</p> 
+<h5>Rotate</h5> 
+<p>Tables can be rotated by 90 degrees clockwise or anticlockwise using either:<br /> 
+&lt;table rotate="90|-90"&gt; or<br /> 
+&lt;table style="rotate:90|-90;"&gt;<br /> 
+(90 is clockwise, and -90 is anticlockwise)</p> 
+<p>Table rotation is disabled when columns are used.</p> 
+<h5>Autosize</h5> 
+<p>If a table's minimum width is too wide for the page/div/column, it will automatically reduce the font size in order to fit. The minimum width is calculated by the sum of column widths required to fit the longest single word in the column.</p> 
+<p>This function is ON by default, set in the <span class="filename">config.php</span> file as var <span class="code">$shrink_tables_to_fit=1.4</span></p> 
+<p>The font size will only be reduced to a minimum size to avoid ridiculous results. The value of <span class="code">$shrink_tables_to_fit</span> is the maximum factor by which the font-size will be reduced.</p> 
+<p>If it is turned off e.g. <span class="code">$mpdf-&gt;shrink_tables_to_fit=0;</span> it is overridden by a specific declaration for a table e.g.:<br /> 
+<span class="code">&lt;table autosize="2.4"&gt;</span> or<br /> 
+<span class="code">&lt;table style="autosize:2.4;"&gt;</span></p> 
+<p>A value of 1 will prevent any (unnecessary) resizing.</p> 
+<h5>page-break-inside:avoid</h5> 
+<p>If a table has the property page-break-inside:avoid and will not fit on the page, mPDF tries to shrink it to fit - up to a maximum "shrink-factor" set by the variable $mpdf-&gt;shrink_tables_to_fit - default is 1.4 (i.e. about 70% original size). If this still won't fit, it moves it to the next page.</p> 
+<p>A shrunk table may not be what you want. You can prevent this resizing either by setting the maximum shrink-factor for a particular table e.g. &lt;table autosize="1"&gt; or by setting the variable for the whole document i.e. <span class="code">$mpdf-&gt;shrink_tables_to_fit=1;</span><br /> 
+(Note that mPDF will always resize tables if it is the only way to fit a row or whole table onto a full page.)</p> 
+<h5>Repeating Table Header row on new page</h5> 
+<p>If a table is split onto more than one page, the first row of the table will be repeated at the top of the new page if either:<br /> 
+<span class="code">&lt;table repeat_header="1"&gt;</span> or<br /> 
+<span class="code">&lt;thead&gt;</span> or <span class="code">&lt;tfoot&gt; </span>is defined</p> 
+<h5>Error reporting</h5> 
+<p>NB 2 values are defined in the <span class="filename">config.php</span> file which control error reporting for tables:<br /> 
+<span class="code">$table_error_report = false;</span> // Die and report error if table is too wide to contain whole words (even after autosizing)<br /> 
+<span class="code">$table_error_report_param = '';</span> // Parameter which can be passed to show in error report i.e. chapter number being processed.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 27 Jul 2007<br />
+Validated 4 Jun 2011 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:06:23 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=77&op_target=print&id=108 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:47 GMT -->
+</html>

@@ -1,0 +1,87 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=276&op_target=print&id=326 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:40 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Default Font</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p><b>Default font &amp; font-size</b></p> 
+<p>A default font and font-size are required for mPDF to function. These are determined by:</p> 
+<p>Declared when instantiating the mPDF class (see Getting Started). These "provisional" default values will be active if you are using functions to write directly to the PDF file e.g.</p> 
+<p class="examplecode">$mpdf=new mPDF('','A4',9,'dejavusans');<br />
+$mpdf-&gt;WriteCell(110,5,'Hallo World');</p> 
+<p>If you are using WriteHTML() these "provisional" default values are overridden, and defaults are set as follows:</p> 
+<ul> 
+<li>If mPDF('c') is set, the default font is set as 'helvetica', 'times' or 'courier'</li> 
+<li>Otherwise the default font is set by the value in the default stylesheet <span class="code">$default_CSS</span> in <span class="filename">config.php</span> </li> 
+<li>NB The default font-<i>size</i> is also set by the value in the default stylesheet <span class="code">$default_CSS</span></li> 
+</ul> 
+<p>&nbsp;</p> 
+<p>If the secondary default CSS stylesheet <span class="filename">mpdf.css</span> contains values to define the BODY tag, these values will override the above e.g.</p> 
+<p class="examplecode">body { font-family: serif; font-size: 10pt; }</p> 
+<p>If a CSS stylesheet is used with WriteHTML() and contains values to define the BODY tag, these values will override the above.</p> 
+<p>In-line style used in the &lt;body&gt; tag will override the default values e.g.</p> 
+<p class="examplecode">&lt;body style="font-family: serif; font-size: 10pt;"&gt;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 10 Feb 2009<br />
+Validated 22 Aug 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:05:38 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=276&op_target=print&id=326 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:40 GMT -->
+</html>

@@ -1,0 +1,267 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=477&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Paging</div>
+<h3>Using @page</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 4.2)</p> 
+<p class="manual_block"><b>Note:</b> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</p> 
+<p>&nbsp;</p> 
+<h5>About CSS Paged Media<br />
+</h5> 
+<p>The paged media model of CSS (http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html) is used as a basis</p> 
+<p class="examplecode">&nbsp;&nbsp; _____________________________<br />
+&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&lt;- sheet<br />
+&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&lt;--+-- crop marks<br />
+&nbsp; |&nbsp;&nbsp; ______________________&nbsp; __|<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp; ______________&nbsp;&nbsp;&nbsp; |&lt;--+-- page box<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; HEADER&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |<br />
+&nbsp; |&nbsp; | D |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | B |&nbsp;&nbsp; |<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&lt;--+---+-- page box minus margins = printed area<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; |<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp; |___FOOTER_____|&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; A: margin-top<br />
+&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; B: margin-right<br />
+&nbsp; |&nbsp; |______________________|&nbsp;&nbsp; |&nbsp;&nbsp; C: margin-bottom<br />
+&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; D: margin-left<br />
+&nbsp; |_____________________________|</p> 
+<p>The dimensions set when calling a new mPDF() set the Sheet size.</p> 
+<p>The Page-box size is assumed to be the same as the sheet size by default.</p> 
+<p>The page-box margins are therefore by default the left/right/top and bottom margins.</p> 
+<p>NB Page-box margins are INSIDE the page-box (unlike block elements in CSS).</p> 
+<h5>Supported CSS selectors<br />
+</h5> 
+<p>The CSS <span class="code">@page</span> selector is partially supported in mPDF with the following properties:</p> 
+<p class="examplecode">@page {<br />
+&nbsp; size: 8.5in 11in;&nbsp; &lt;length&gt;{1,2} | auto | portrait | landscape&nbsp; ('em' 'ex' and % are not allowed; length values are width height<br />
+&nbsp; margin: 10%; &lt;any of the usual CSS values for margins&gt; (% of page-box width for LR, of height for TB)<br />
+&nbsp; margin-header: 5mm; &lt;any of the usual CSS values for margins&gt;<br />
+&nbsp; margin-footer: 5mm; &lt;any of the usual CSS values for margins&gt;<br />
+&nbsp; marks: crop | cross | none<br />
+&nbsp; header: html_myHTMLHeaderOdd;<br />
+&nbsp; footer: html_myHTMLFooterOdd;<br />
+&nbsp; background: ...<br />
+&nbsp; background-image: ...<br />
+&nbsp; background-position ...<br />
+&nbsp; background-repeat ...<br />
+&nbsp; background-color ...<br />
+&nbsp; background-gradient: ...<br />
+}</p> 
+<h6>Notes<br />
+</h6> 
+<p>All properties except size are optional.</p> 
+<p>Three values for the <span class="parameter">size</span> property set the page box to the same size as the sheet:</p> 
+<p><span class="code">auto</span><br />
+&nbsp;&nbsp;&nbsp; The page box will be set to the size and orientation of the target sheet.</p> 
+<p><span class="code">landscape</span><br />
+&nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the longer sides are horizontal.</p> 
+<p><span class="code">portrait</span><br />
+&nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the shorter sides are horizontal.</p> 
+<p>&nbsp;</p> 
+<p>The header and footer names refer to named headers/footers set in your document.</p> 
+<p>NB The prefix "html_" used before the name is used to denote a header/footer defined as HTML code.</p> 
+<p>If a header/Footer name is set as _blank (or any name that hasn't been defined) it will turn off Headers/Footers.</p> 
+<p>Crop marks indicate where the page should be cut. Cross marks (also known as register marks or registration marks) are used to align sheets.</p> 
+<p>If you have defined @page {} in the CSS, then the values for the margins will override the ones set calling a new mPDF().</p> 
+<p>IMPORTANT - if you define a @page {} but don't specifiy margins, they will be set to the initial margin values of mPDF.</p> 
+<p>If you set a page(-box) smaller than the sheet size, the margins are increased by the difference between the page-box and sheet size - automatically centering the page-box inside the sheet.</p> 
+<p>If you change page-box orientation, the sheet orientation will follow.</p> 
+<p>Note that block-style elements - and any styling associated with it - will be terminated at a page-break.</p> 
+<h5>Pseudo-selectors<br />
+</h5> 
+<p>CSS pseudo-selectors :left :right and :first are recognised by mPDF and support the same properties as @page except:</p> 
+<ul> 
+<li>size</li> 
+<li>margin-left</li> 
+<li>margin-right<br />
+</li> 
+<li>odd-header-name</li> 
+<li>even-header-name</li> 
+<li>odd-footer-name</li> 
+<li>even-footer-name</li> 
+</ul> 
+<p>Example:</p> 
+<p class="examplecode">@page :right {<br />
+&nbsp; margin-top: 3cm;<br />
+&nbsp; margin-bottom: 4cm;<br />
+&nbsp; header: html_myHeader;<br />
+}</p> 
+<p>&nbsp;</p> 
+<p>Pseudo-selectors for page can change top, bottom, header and footer margins, but not left and right margins. mPDF can only cope with one set of (optionally mirrored) left/right margins.</p> 
+<p>Properties specified in a :first @page rule override those specified in :right (or :left) @page rules for the first page only</p> 
+<h5>Named @page selectors<br />
+</h5> 
+<p>Named pages are also supported e.g.:</p> 
+<p class="examplecode">@page rotated { size: landscape; }</p> 
+<p>You can then refer to the named page in other CSS style sheets:</p> 
+<p class="examplecode">div.onitsside { page: rotated; page-break-before: right; }</p> 
+<p><span class="code">&lt;div class="onitsside"&gt;</span> will thus start a new right/odd page which will be in landscape.</p> 
+<h5>Setting a named page</h5> 
+<p>You can also set the page using parameters in:</p> 
+<ul> 
+<li>functions: <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> and <a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a></li> 
+<li>html tags: &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; &lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt; and &lt;<a href="http://mpdf1.com/manual/index.php?tid=353">formfeed</a>&gt;</li> 
+</ul> 
+<h6>page-break-before<br />
+</h6> 
+<p>The CSS property 'page-break-before' is useful in conjunction with a named page definition.</p> 
+<p class="code">page-break-before: always|left|right;</p> 
+<p><span class="code">always</span><br />
+&nbsp;&nbsp;&nbsp; Always force a page break before the generated block element.</p> 
+<p><span class="code">left</span><br />
+&nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a left/even page.</p> 
+<p><span class="code">right</span><br />
+&nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a right/odd page.</p> 
+<p>So, for example, <span class="code">page-break-before: right</span> is equivalent of <span class="code">AddPage(... 'NEXT-ODD'...)</span></p> 
+<h6>Example using Headers and Footers</h6> 
+<p class="examplecode">$mpdf=new mPDF(); <br />
+$mpdf-&gt;useOddEven = 1;<br />
+$html = '<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+&lt;style&gt;<br />
+@page {<br />
+&nbsp; size: auto;<br />
+&nbsp; odd-header-name: html_myHeader1;<br />
+&nbsp; even-header-name: html_myHeader2;<br />
+&nbsp; odd-footer-name: html_myFooter1;<br />
+&nbsp; even-footer-name: html_myFooter2;<br />
+}<br />
+@page chapter2 {<br />
+&nbsp;&nbsp;&nbsp; odd-header-name: html_Chapter2HeaderOdd;<br />
+&nbsp;&nbsp;&nbsp; even-header-name: html_Chapter2HeaderEven;<br />
+&nbsp;&nbsp;&nbsp; odd-footer-name: html_Chapter2FooterOdd;<br />
+&nbsp;&nbsp;&nbsp; even-footer-name: html_Chapter2FooterEven;<br />
+}<br />
+@page noheader {<br />
+&nbsp;&nbsp;&nbsp; odd-header-name: _blank;<br />
+&nbsp;&nbsp;&nbsp; even-header-name: _blank;<br />
+&nbsp;&nbsp;&nbsp; odd-footer-name: _blank;<br />
+&nbsp;&nbsp;&nbsp; even-footer-name: _blank;<br />
+}<br />
+div.chapter2 {<br />
+&nbsp;&nbsp;&nbsp; page-break-before: right;<br />
+&nbsp;&nbsp;&nbsp; page: chapter2;<br />
+}<br />
+div.noheader {<br />
+&nbsp;&nbsp;&nbsp; page-break-before: right;<br />
+&nbsp;&nbsp;&nbsp; page: noheader;<br />
+}<br />
+&lt;/style&gt;<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+&lt;htmlpageheader name="myHeader1" style="display:none"&gt;<br />
+&lt;div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;"&gt;My document&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+&lt;htmlpageheader name="myHeader2" style="display:none"&gt;<br />
+&lt;div style="border-bottom: 1px solid #000000; font-weight: bold;&nbsp; font-size: 10pt;"&gt;My document&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+&lt;htmlpagefooter name="myFooter1" style="display:none"&gt;<br />
+&lt;table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; <br />
+&nbsp;&nbsp;&nbsp; color: #000000; font-weight: bold; font-style: italic;"&gt;&lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%"&gt;&lt;span style="font-weight: bold; font-style: italic;"&gt;{DATE j-m-Y}&lt;/span&gt;&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" align="center" style="font-weight: bold; font-style: italic;"&gt;{PAGENO}/{nbpg}&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" style="text-align: right; "&gt;My document&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/table&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+&lt;htmlpagefooter name="myFooter2" style="display:none"&gt;<br />
+&lt;table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; <br />
+&nbsp;&nbsp;&nbsp; color: #000000; font-weight: bold; font-style: italic;"&gt;&lt;tr&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%"&gt;&lt;span style="font-weight: bold; font-style: italic;"&gt;My document&lt;/span&gt;&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" align="center" style="font-weight: bold; font-style: italic;"&gt;{PAGENO}/{nbpg}&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;td width="33%" style="text-align: right; "&gt;{DATE j-m-Y}&lt;/td&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/tr&gt;&lt;/table&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+<br />
+&lt;htmlpageheader name="Chapter2HeaderOdd" style="display:none"&gt;<br />
+&lt;div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;"&gt;Chapter 2&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+&lt;htmlpageheader name="Chapter2HeaderEven" style="display:none"&gt;<br />
+&lt;div style="border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;"&gt;Chapter 2&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+&lt;htmlpagefooter name="Chapter2FooterOdd" style="display:none"&gt;<br />
+&lt;div style="text-align: right; font-weight: bold; font-size: 8pt; font-style: italic;"&gt;Chapter 2 Footer&lt;/div&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+&lt;htmlpagefooter name="Chapter2FooterEven" style="display:none"&gt;<br />
+&lt;div style="font-weight: bold; font-size: 8pt; font-style: italic;"&gt;Chapter 2 Footer&lt;/div&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+<br />
+Hallo World<br />
+<br />
+&lt;div class="chapter2"&gt;Text of Chapter 2&lt;/div&gt;<br />
+<br />
+&lt;div class="noheader"&gt;No-Header page&lt;/div&gt;<br />
+<br />
+&lt;/body&gt;&lt;/html&gt;<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$mpdf-&gt;Output();</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.1</div>
+<div class="right">Created 10 Feb 2010<br />
+Validated 15 Jan 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:41:05 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=477&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->
+</html>

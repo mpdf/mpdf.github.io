@@ -1,0 +1,87 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=437&op_target=print&id=496 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:16 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Saving to a database</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>If you want to save the created file to a database (not necessarily recommended), one user has suggested the following:</p> 
+<p class="examplecode">$s = $mpdf-&gt;Output('','S');<br />
+$data = bin2hex($s);<br />
+$query = "INSERT INTO aaa SET content=0x".$data." ";</p> 
+<p>When you want to output the PDf file:</p> 
+<p class="examplecode">// Get the database content into the variable $data<br />
+$pdf = pack("H*" , $data ); <br />
+header('Content-Type: application/pdf');<br />
+header('Content-Length: '.strlen($pdf));<br />
+header('Content-disposition: inline; filename="'.$name.'"');<br />
+header('Cache-Control: public, must-revalidate, max-age=0'); <br />
+header('Pragma: public');<br />
+header('Expires: Sat, 26 Jul 1997 05:00:00 GMT'); <br />
+header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');<br />
+echo $pdf;<br />
+exit;</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 23 Feb 2010<br />
+Validated 4 Jun 2011 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:11:06 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=437&op_target=print&id=496 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:16 GMT -->
+</html>

@@ -1,0 +1,123 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=359&op_target=print&id=412 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF Utilities</div>
+<h3>preparePreText()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(htmltoolkit &gt;= 2.4)</p> 
+<p>PreparePreText – Prepares text to be output ignoring the HTML markup</p> 
+<h5>Description</h5> 
+<p class="manual_block">string <b>preparePreText</b> ( string <span class="parameter">$text</span> [, string <span class="parameter">$formfeed</span> ])</p> 
+<p>Prepares text to be output ignoring the HTML markup. This is useful to output a large text file (e.g. a PHP script file) using <a href="http://mpdf1.com/manual/index.php?tid=121">WriteHTML()</a>. This will surround the text with &lt;pre&gt; tags whilst preventing &lt;pre&gt;tags included in the text from being parsed. It also allows use of a text string marker (<span class="parameter">formfeed</span>) to be replaced by a formfeed in the output file.</p> 
+<p class="manual_block"><b>Note:</b> Prior to mPDF 5.1 you should use the <span class="parameter">$mode </span>parameter of <a href="http://mpdf1.com/manual/index.php?tid=121">WriteHTML()</a> as '2' to avoid parsing the text for style tags. See example below.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">text</span></p> 
+<p class="manual_param_dd">This parameter specifies the text string to prepare.</p> 
+<p class="manual_param_dt"><span class="parameter">formfeed</span></p> 
+<p class="manual_param_dd"><span class="parameter">formfeed</span> specifies the string to be replaced by a formfeed in the output file.<br />
+<span class="smallblock">DEFAULT</span>: "//FF//"</p> 
+<h5>Return value</h5> 
+<p>Returns a text string.</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.4</td> 
+<td>Function was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+include("../mpdf.php");<br />
+<br />
+$text = file_get_contents('scriptfile.php');<br />
+$text = preparePreText($text);<br />
+<br />
+// Default spaces/tab in mPDF is 8 as specified by HTML spec.<br />
+// Notepad and other text editors use a value of 6<br />
+$mpdf-&gt;tabSpaces = 6;<br />
+<br />
+// If 'scriptfile.php' is iso-8859-1 or win-1252 encoded, use<br />
+$mpdf-&gt;allow_charset_conversion=true;<br />
+$mpdf-&gt;charset_in='windows-1252';<br />
+<br />
+$mpdf-&gt;WriteHTML($text, 2);<br />
+<br />
+$mpdf-&gt;Output();<br />
+exit;<br />
+<br />
+?&gt;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=341">WriteHTML()</a> - Write HTML code to a PDF file</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=352">tabSpaces</a> - Specifies the number of spaces to substitue for a <span class="smallblock">TAB</span> character</li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=126">allow_charset_conversion</a> - Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">charset_in</span> </li> 
+<li><a href="http://mpdf1.com/manual/index.php?tid=160">charset_in</a> - Define the character encoding of any input HTML</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 22 Apr 2009<br />
+Validated 30 Apr 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:27:19 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=359&op_target=print&id=412 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+</html>

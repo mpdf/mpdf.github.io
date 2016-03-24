@@ -1,0 +1,225 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=418&op_target=print&id=476 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:27 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Real life examples</div>
+<h3>Letterhead letters</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>Using the CSS @page selector, these are a couple of similar methods for producing multiple letters into 1 PDF file, where each letter uses a letterhead for page one then plain paper for the remaining pages.</p> 
+<h6>Method 1</h6> 
+<p class="examplecode">$header = '<br />
+&lt;!--mpdf<br />
+&lt;htmlpageheader name="letterheader"&gt;<br />
+&lt;table width="100%" style=" font-family: sans-serif;"&gt;&lt;tr&gt;<br />
+&lt;td width="50%" style="color:#0000BB; "&gt;&lt;span style="font-weight: bold; font-size: 14pt;"&gt;Acme Trading Co.&lt;/span&gt;&lt;br /&gt;123 Anystreet&lt;br /&gt;Your City&lt;br /&gt;GD12 4LP&lt;br /&gt;&lt;span style="font-size: 15pt;"&gt;☎&lt;/span&gt; 01777 123 567&lt;/td&gt;<br />
+&lt;td width="50%" style="text-align: right; vertical-align: top;"&gt;Invoice No.&lt;br /&gt;&lt;span style="font-weight: bold; font-size: 12pt;"&gt;0012345&lt;/span&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;&lt;/table&gt;<br />
+&lt;div style="margin-top: 1cm; text-align: right; font-family: sans-serif;"&gt;{DATE jS F Y}&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+<br />
+&lt;htmlpagefooter name="letterfooter2"&gt;<br />
+&lt;div style="border-top: 1px solid #000000; font-size: 9pt; text-align: center; padding-top: 3mm; font-family: sans-serif; "&gt;<br />
+Page {PAGENO} of {nbpg}<br />
+&lt;/div&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+<br />
+mpdf--&gt;<br />
+<br />
+&lt;style&gt;<br />
+@page {<br /> 
+margin-top: 2.5cm;<br /> 
+margin-bottom: 2.5cm;<br /> 
+margin-left: 2cm;<br /> 
+margin-right: 2cm;<br /> 
+footer: html_letterfooter2;<br /> 
+background-color: pink;<br />
+}<br />
+<br />
+@page :first {<br /> 
+margin-top: 8cm;<br /> 
+margin-bottom: 4cm;&nbsp; <br /> 
+header: html_letterheader;<br /> 
+footer: _blank;<br /> 
+resetpagenum: 1; <br /> 
+background-color: lightblue;<br />
+}<br />
+@page letterhead {<br /> 
+margin-top: 2.5cm;<br /> 
+margin-bottom: 2.5cm;<br /> 
+margin-left: 2cm;<br /> 
+margin-right: 2cm;<br /> 
+footer: html_letterfooter2;<br /> 
+background-color: pink;<br />
+}<br />
+<br />
+@page letterhead :first {<br /> 
+margin-top: 8cm;<br /> 
+margin-bottom: 4cm;&nbsp; <br /> 
+header: html_letterheader;<br /> 
+footer: _blank;<br /> 
+resetpagenum: 1; <br /> 
+background-color: lightblue;<br />
+}<br />
+&lt;/style&gt;<br />
+';<br />
+<br />
+$letter = 'Dear Sir or Madam,&lt;br /&gt;<br />
+Contents of your letter...<br />
+&lt;pagebreak /&gt;<br />
+... more letter on page 2 ...<br />
+&lt;pagebreak /&gt;<br />
+... more letter on page 3 ...<br />
+<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($header);<br />
+<br />
+$mpdf-&gt;WriteHTML($letter);<br />
+$mpdf-&gt;WriteHTML('&lt;pagebreak page-selector="letterhead" /&gt;');<br />
+$mpdf-&gt;WriteHTML($letter);<br />
+$mpdf-&gt;WriteHTML('&lt;pagebreak page-selector="letterhead" /&gt;');<br />
+$mpdf-&gt;WriteHTML($letter);<br />
+<br />
+$mpdf-&gt;Output();</p> 
+<h6>Method 2</h6> 
+<p class="examplecode">$header = '<br />
+&lt;!--mpdf<br />
+&lt;htmlpageheader name="letterheader"&gt;<br />
+&lt;table width="100%" style=" font-family: sans-serif;"&gt;&lt;tr&gt;<br />
+&lt;td width="50%" style="color:#0000BB; "&gt;&lt;span style="font-weight: bold; font-size: 14pt;"&gt;Acme Trading Co.&lt;/span&gt;&lt;br /&gt;123 Anystreet&lt;br /&gt;Your City&lt;br /&gt;GD12 4LP&lt;br /&gt;&lt;span style="font-size: 15pt;"&gt;☎&lt;/span&gt; 01777 123 567&lt;/td&gt;<br />
+&lt;td width="50%" style="text-align: right; vertical-align: top;"&gt;Invoice No.&lt;br /&gt;&lt;span style="font-weight: bold; font-size: 12pt;"&gt;0012345&lt;/span&gt;&lt;/td&gt;<br />
+&lt;/tr&gt;&lt;/table&gt;<br />
+&lt;div style="margin-top: 1cm; text-align: right; font-family: sans-serif;"&gt;{DATE jS F Y}&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+<br />
+&lt;htmlpagefooter name="letterfooter2"&gt;<br />
+&lt;div style="border-top: 1px solid #000000; font-size: 9pt; text-align: center; padding-top: 3mm; font-family: sans-serif; "&gt;<br />
+Page {PAGENO} of {nbpg}<br />
+&lt;/div&gt;<br />
+&lt;/htmlpagefooter&gt;<br />
+<br />
+mpdf--&gt;<br />
+<br />
+&lt;style&gt;<br />
+@page {<br /> 
+margin-top: 2.5cm;<br /> 
+margin-bottom: 2.5cm;<br /> 
+margin-left: 2cm;<br /> 
+margin-right: 2cm;<br /> 
+footer: html_letterfooter2;<br /> 
+background-color: pink;<br />
+}<br />
+<br />
+@page :first {<br /> 
+margin-top: 8cm;<br /> 
+margin-bottom: 4cm;<br /> 
+header: html_letterheader;<br /> 
+footer: _blank;<br /> 
+resetpagenum: 1; <br /> 
+background-color: yellow;<br />
+}<br />
+@page letterhead :first {<br /> 
+margin-top: 8cm;<br /> 
+margin-bottom: 4cm;&nbsp; <br /> 
+header: html_letterheader;<br /> 
+footer: _blank;<br /> 
+resetpagenum: 1; <br /> 
+background-color: lightblue;<br />
+}<br />
+.letter { &nbsp;&nbsp;&nbsp; <br /> 
+page-break-before: always; <br /> 
+page: letterhead;<br />
+}<br />
+&lt;/style&gt;<br />
+';<br />
+<br />
+$firstletter = '&lt;div&gt;Dear Sir or Madam,&lt;br /&gt;<br />
+Contents of your letter...<br />
+&lt;pagebreak /&gt;<br />
+... more letter on page 2 ...<br />
+&lt;pagebreak /&gt;<br />
+... more letter on page 3 ...<br />
+&lt;/div&gt;<br />
+';<br />
+<br />
+$letter = '&lt;div class="letter"&gt;Dear Sir or Madam,&lt;br /&gt;<br />
+Contents of your letter...<br />
+&lt;pagebreak /&gt;<br />
+... more letter on page 2 ...<br />
+&lt;pagebreak /&gt;<br />
+... more letter on page 3 ...<br />
+&lt;/div&gt;<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($header);<br />
+<br />
+$mpdf-&gt;WriteHTML($firstletter);<br />
+$mpdf-&gt;WriteHTML($letter);<br />
+$mpdf-&gt;WriteHTML($letter);<br />
+<br />
+$mpdf-&gt;Output();</p> 
+<p><br />
+</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 28 Jan 2010<br />
+Validated 3 Oct 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:12:09 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=418&op_target=print&id=476 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:27 GMT -->
+</html>

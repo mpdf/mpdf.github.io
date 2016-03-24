@@ -1,0 +1,159 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=403&op_target=print&id=461 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:31 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Installation & Setup</div>
+<h3>Embedded font subsets v4.x - <span class="redbold">Archived</span></h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h6>Using embedded font subsets</h6> 
+<p>The standard usage of mPDF creates PDF files with embedded fonts. You can choose between embedding small font files with font information about characters from selected codepages e.g. win-1252. This makes small PDF files, but limits the characters that can be used in the document. Alternatively - in UTF-8 mode - large font files are embedded, resulting in large PDF files, but allowing a wide range of characters to display.</p> 
+<p>Introduced in version 4.x, mPDF will allow the option to embed a subset of a font (only those characters used in the document) - making all characters available, but with a small PDF file size. This is done by adding -s when instantiating the mpdf class e.g. <span class="parameter">$mpdf = new mPDF('utf-8-s');</span></p> 
+<p>mPDF requires extra files for each font in order to re-assemble a font subset. You will need to download the extra font file pack in order to use subsets. These files should be uploaded to the <span class="filename">[path_to_mpdf_folder]/unifont/</span> folder on your server.</p> 
+<p>NB The additional .dat,&nbsp; .dat.php,&nbsp; and .uni2gn.php files for the basic font pack take up about 29MB file space when uncompressed.</p> 
+<p>Once these additional files have been uploaded, you should be able to create a PDF document with font subsets just by using the '-s'.</p> 
+<p>Using embedded font subsets will cause an increase in processing time to generate the file.</p> 
+<table class="bpmTopnTailC"> <thead> 
+<tr> <th>&nbsp;</th> 
+<td><b>Utf-8</b></td> 
+<td><b>Utf-8-s (subsets)</b></td> 
+</tr> 
+</thead> <tbody> 
+<tr> <th colspan="3"><b>Example (very large file)<br />
+</b></th> </tr> 
+<tr> <th>Compiled in </th> 
+<td>1.76 sec</td> 
+<td>3.36 sec</td> 
+</tr> 
+<tr> <th>Peak Memory usage </th> 
+<td>17.25 MB</td> 
+<td>18.00 MB</td> 
+</tr> 
+<tr> <th>PDF file size </th> 
+<td>2.5 MB</td> 
+<td>531 kB</td> 
+</tr> 
+<tr> <th>Number of fonts</th> 
+<td>35</td> 
+<td>35</td> 
+</tr> 
+<tr> <th colspan="3"><b>Example (medium file)</b></th> </tr> 
+<tr> <th>Compiled in</th> 
+<td>0.96 sec</td> 
+<td>1.98 sec</td> 
+</tr> 
+<tr> <th>Peak Memory usage</th> 
+<td>19.0 MB</td> 
+<td>19.75 MB</td> 
+</tr> 
+<tr> <th>PDF file size</th> 
+<td>2.6 MB</td> 
+<td>294 kB</td> 
+</tr> 
+<tr> <th>Number of fonts</th> 
+<td>8</td> 
+<td>8</td> 
+</tr> 
+<tr> <th colspan="3"><b>Example (small file)<br />
+</b></th> </tr> 
+<tr> <th>Compiled in</th> 
+<td>0.08 sec</td> 
+<td>0.19 sec</td> 
+</tr> 
+<tr> <th>Peak Memory usage</th> 
+<td>13.0 MB</td> 
+<td>14.00 MB</td> 
+</tr> 
+<tr> <th>PDF file size </th> 
+<td>347 kB</td> 
+<td>29 kB</td> 
+</tr> 
+<tr> <th>Number of fonts</th> 
+<td>2</td> 
+<td>2</td> 
+</tr> 
+</tbody> </table> 
+<p>&nbsp;</p> 
+<h5>Installing additional font files</h5> 
+<p>The additional font files required for embedding subsets are not included in the basic installation, and need to be downloaded separately. These files should be uploaded to your server in the <span class="filename">[mpdf]/unifont/</span>&nbsp; directory.</p> 
+<table class="bpmTopnTail"> <thead> 
+<tr> <th>&nbsp;</th> 
+<td>Basic files required</td> 
+<td>Additional files required<br />
+for embedding subsets</td> 
+</tr> 
+</thead> <tbody> 
+<tr> <th><span class="filename">mpdf/unifont/</span>&nbsp; directory<br />
+(UTF-8 font files)</th> 
+<td><span class="filename">[fontname].php<br />
+</span><span class="filename">[fontname].z<br />
+</span><span class="filename">[fontname].ctg.z</span></td> 
+<td><span class="filename">[fontname].dat<br />
+</span><span class="filename">[fontname].dat.php<br />
+</span><span class="filename">[fontname].uni2gn.php</span></td> 
+</tr> 
+</tbody> </table> 
+<p>NB Indic fonts contain an additional <span class="filename">[fontname].volt.php</span> file</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 17 Dec 2009 - <span class="redbold">Archived</span><br />
+Validated 21 Apr 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:37:11 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=403&op_target=print&id=461 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:31 GMT -->
+</html>

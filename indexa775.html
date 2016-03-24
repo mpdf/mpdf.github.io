@@ -1,0 +1,171 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=121&op_target=print&id=152 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>WriteHTML()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 1.0)</p> 
+<p>WriteHTML — Write HTML code to the document</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>WriteHTML</b> ( string <span class="parameter">$html</span> [, int <span class="parameter">$mode</span> [, boolean <span class="parameter">$initialise</span> [, boolean <span class="parameter">$close</span> ]]])</p> 
+<p>Write <span class="parameter">html</span> code to the document.</p> 
+<p class="manual_block"><b>Note:</b> Prior to mPDF 4.2 a fatal error was caused if <span class="parameter">html</span> was passed as a <span class="smallblock">NULL</span> value, <span class="smallblock">FALSE</span> or an undefined variable.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">html</span></p> 
+<p class="manual_param_dd">UTF-8 encoded HTML code to write to the document.</p> 
+<p class="manual_param_dt"><span class="parameter">mode</span></p> 
+<p class="manual_param_dd">Controls what parts of the <span class="parameter">html</span> code is parsed.</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+0 - Parses a whole <span class="parameter">html</span> document<br />
+1 - Parses the <span class="parameter">html</span> as styles and stylesheets only<br />
+2 - Parses the <span class="parameter">html</span> as output elements only<br />
+3 - (For internal use only - parses the <span class="parameter">html</span> code without writing to document)<br />
+4 - (For internal use only - writes the <span class="parameter">html</span> code to a buffer)<br />
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dd"><b>Mode #0</b> (<span class="smallblock">DEFAULT</span>)<br />
+Metadata:<br />
+- title is read from &lt;title&gt;...&lt;/title&gt; tags<br />
+- subject, keywords and author are read from &lt;meta ...<br />
+<br />
+Charset:<br />
+- if <span class="parameter">$allow_charset_conversion</span> = <span class="smallblock">TRUE</span> and a charset= statement is present, mPDF will attempt to convert all the following HTML input from the specified charset to UTF-8<br />
+<br />
+CSS styles:<br />
+- any CSS found between &lt;style&gt;...&lt;/style&gt; tags<br />
+- stylesheets specified by @import url(*.css)<br />
+- stylesheets specified by &lt;link rel="stylesheet" href=""<br />
+NB Stylesheets with media="all" or media ="screen" will always be parsed.<br />
+The variable <span class="parameter">$disablePrintCSS</span> will determine whether stylesheets media="print" are parsed or not.<br />
+<br />
+Anything between &lt;style&gt; tags is then discarded.<br />
+<br />
+If &lt;body&gt; tags are found, all <span class="parameter">html</span> outside these tags are discarded, and the rest is parsed as content for the document.<br />
+If no &lt;body&gt; tags are found, all remaining <span class="parameter">html</span> is parsed as content.</p> 
+<p class="manual_param_dd"><b>Mode #1</b><br />
+The html input is only parsed as CSS style information only.<br />
+The code does not have to be surrounded by &lt;style&gt; tags, so you can pass the contents of a stylesheet directly - see Example #1.</p> 
+<p class="manual_param_dd"><b>Mode #2</b><br />
+If &lt;body&gt; tags are found, all <span class="parameter">html</span> outside these tags are discarded, and the rest is parsed as content for the document.<br />
+If no &lt;body&gt; tags are found, all <span class="parameter">html</span> is parsed as content.<br />
+Prior to mPDF 4.2 the default CSS was not parsed when using <span class="parameter">mode</span> #2</p> 
+<p class="manual_param_dt"><span class="parameter">initialise</span></p> 
+<p class="manual_param_dd">Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span> to determine whether to initialise all buffers, starting all HTML elements from new. See example 2 for use. You must start with a WriteHTML() that calls <span class="parameter">initialise</span>=<span class="smallblock">TRUE</span><br />
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p> 
+<p class="manual_param_dt"><span class="parameter">close</span></p> 
+<p class="manual_param_dd">Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span> to specify whether all HTML elements are closed, and buffers cleared. See example 2 for use. You must end with a WriteHTML() that calls <span class="parameter">close</span>=<span class="smallblock">TRUE</span><br />
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p> 
+<h5><br />
+</h5> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th> <th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.0</td> 
+<td>Using WriteHTML without the <span class="parameter">mode</span> parameter no longer clears any CSS styles already imported.</td> 
+</tr> 
+<tr> 
+<td>2.1</td> 
+<td>Parameters <span class="parameter">initialise</span> and <span class="parameter">close</span> introduced.</td> 
+</tr> 
+<tr> 
+<td>4.2</td> 
+<td>Accepts <span class="smallblock">NULL</span> string as paramter without error.<br />
+Parses default CSS when using <span class="parameter">mode</span> as 2</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+$mpdf=new mPDF();<br />
+<br /> 
+$stylesheet = file_get_contents('style.css');<br />
+$mpdf-&gt;WriteHTML($stylesheet,1);<br />
+$mpdf-&gt;WriteHTML('&lt;p&gt;Hallo World&lt;/p&gt;', 2);<br />
+<br />
+$mpdf-&gt;Output();<br /> 
+?&gt;</p> 
+<p class="examplecode"><b>Example #2</b></p> 
+<p class="examplecode">// You can write parts of HTML elements by using the initialise and close parameters:<br />
+<br />
+$mpdf-&gt;WriteHTML('&lt;p&gt;This is the beginning...', 2, true, false);<br />
+$mpdf-&gt;WriteHTML('...this is the middle...', 2, false, false);<br />
+$mpdf-&gt;WriteHTML('...and this is the end&lt;/p&gt;', 2, false, true);</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=126">allow_charset_conversion</a> - attempts to read any charset declaration in the HTML code</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=230">disablePrintCSS</a> - prevents stylesheets set for print media being parsed</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=202">ignore_invalid_utf8</a> - prevents mPDF from failing if text contains invalid UTF-8 characters<br />
+</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=160">charset_in</a> - specify the input text character set if not UTF-8<br />
+</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=157">biDirectional</a> - specify whether mPDF should test for <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text<br />
+</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=135">allow_html_optional_endtags</a> -specify whether mPDF should try to accommodate optional HTML endtags</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=333">restoreBlockPagebreaks</a> - keep current HTML tags/CSS styles active when forcing a page-break or formfeed<br />
+</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 6 Feb 2009<br />
+Validated 13 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:18:10 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=121&op_target=print&id=152 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

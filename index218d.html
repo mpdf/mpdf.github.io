@@ -1,0 +1,86 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=258&op_target=print&id=308 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:47 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; HTML support</div>
+<h3>Custom HTML Tags</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF uses a number of custom HTML tags (see <a href="http://mpdf1.com/manual/index.php?tid=305">HTML Control Tags - Overview</a>).</p> 
+<p>In addition to those, the custom tags &lt;ttz&gt; &lt;tts&gt; and &lt;tta&gt; are reserved for use internally within the mPDF program to denote the core symbol, dingbat and arial characters.</p> 
+<h5>Invalid HTML?<br />
+</h5> 
+<p>(mPDF &gt;= 2.2)</p> 
+<p>If you want to hide mPDF custom tags from a browser, enclose any mPDF code within:</p> 
+<p class="examplecode">&lt;!--mpdf&nbsp; ..&nbsp; anything you want to write ...&nbsp; mpdf--&gt;</p> 
+<p>As these are the standard comment tags recognised by every browser, this will create valid HTML which should output correctly in any circumstances. mPDF will strip away the <span class="parameter">&lt;!--mpdf</span> tag and any following spaces, and the <span class="parameter">mpdf--&gt;</span> tag and any preceeding spaces, and process all enclosed code.</p> 
+<p class="manual_block"><b>Note:</b> Almost all mPDF custom tags are self closing e.g. &lt;pagebreak /&gt;. If you do not use self-closing tags, the HTML may not show correctly in a browser unless you hide the tags in special comments as above.</p> 
+<p>Most browsers will ignore (self-closing) tags that are not recognised, but &lt;htmlpageheader&gt; and &lt;htmlpagefooter&gt; are different, as they contain innerHTML e.g.</p> 
+<p class="examplecode">&lt;htmlpageheader name="phname"&gt;HTML code in here&lt;/htmlpageheader&gt;</p> 
+<p>The enclosed innerHTML will be output by a browser, so you need to hide it; either use the special comment tags as above, or an alternative is to use CSS, e.g. add to your stylesheet</p> 
+<p class="examplecode">htmlpageheader { display : none; }<br />
+htmlpagefooter { display : none; }</p> 
+<p>Yet another way is to use in-line CSS:</p> 
+<p class="examplecode">&lt;htmlpageheader name="phname" style="display: none;"&gt;HTML code in here&lt;/htmlpageheader&gt;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 9 Feb 2009<br />
+Validated 14 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:06:19 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=258&op_target=print&id=308 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:47 GMT -->
+</html>

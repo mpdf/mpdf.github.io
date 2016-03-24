@@ -1,0 +1,286 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=110&op_target=print&id=141 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; HTML control tags</div>
+<h3>pagebreak</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 1.0)</p> 
+<p>pagebreak — Add a new page</p> 
+<h5>Description</h5> 
+<p class="manual_block">&lt;<b>pagebreak</b> [&nbsp;<span class="parameter">orientation</span> ] [&nbsp;<span class="parameter">type</span> ] [&nbsp;<span class="parameter">resetpagenum</span> ] [&nbsp;<span class="parameter">pagenumstyle</span> ] [&nbsp;<span class="parameter">suppress</span> ] <br />
+[ <span class="parameter">margin-left</span> ] [ <span class="parameter">margin-right</span> ] [ <span class="parameter">margin-top</span> ] [ <span class="parameter">margin-bottom</span> ] [ <span class="parameter">margin-header</span> ] [ <span class="parameter">margin-footer</span> ]<br />
+[ <span class="parameter">odd-header-name</span> ] [ <span class="parameter">odd-header-value</span> ] [ <span class="parameter">even-header-name</span> ] [ <span class="parameter">even-header-value</span> ] [ <span class="parameter">odd-footer-name</span> ] [ <span class="parameter">odd-footer-value</span> ] [ <span class="parameter">even-footer-name</span> ] [ <span class="parameter">even-footer-value</span> ] [ <span class="parameter">page-selector</span> ] [ <span class="parameter">sheet-size</span> ] [ <span class="parameter">page-break-type</span> ] /&gt;</p> 
+<p>Add a new page to the document. All properties set by a pagebreak will continue on subsequent pages until reset.</p> 
+<p>The attribute <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional page-break (<span class="parameter">type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a page-break with <span class="parameter">type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).</p> 
+<p>Number of pages added:</p> 
+<table class="bpmTopicC"> <tbody> 
+<tr> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td colspan="2"><span class="smallblock">DOUBLE-SIDED</span></td> 
+</tr> 
+<tr> 
+<td><span class="parameter">type</span></td> 
+<td><span class="smallblock">SINGLE-SIDED</span> <br />
+</td> 
+<td>Currently<br /> 
+<span class="smallblock">ODD</span> page</td> 
+<td>Currently<br /> 
+<span class="smallblock">EVEN</span> page</td> 
+</tr> 
+<tr> 
+<td><span class="smallblock">BLANK</span></td> 
+<td>1</td> 
+<td>1</td> 
+<td>1</td> 
+</tr> 
+<tr> 
+<td>O or ODD</td> 
+<td>0</td> 
+<td>0</td> 
+<td>1</td> 
+</tr> 
+<tr> 
+<td>E or EVEN</td> 
+<td>0</td> 
+<td>1</td> 
+<td>0</td> 
+</tr> 
+<tr> 
+<td>NEXT-ODD</td> 
+<td>1</td> 
+<td>2</td> 
+<td>1</td> 
+</tr> 
+<tr> 
+<td>NEXT-EVEN</td> 
+<td>1</td> 
+<td>1</td> 
+<td>2</td> 
+</tr> 
+</tbody> </table> 
+<p class="manual_block"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</p> 
+<p class="manual_block"><b>Note</b>: &lt;newpage&gt; and &lt;page_break&gt; are synonymous. &lt;pagebreak&gt; is the preferred form.</p> 
+<p class="manual_block"><b>Note:</b> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</p> 
+<h5>Attributes</h5> 
+<p class="manual_param_dt"><span class="parameter">orientation</span> = L|P|landscape|portrait</p> 
+<p class="manual_param_dd">This attribute specifies the orientation of the new page.<br /> 
+<span class="smallblock">BLANK</span> or omitted leaves the current orientation unchanged</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br />
+L <i>or</i> landscape: Landscape<br /> 
+P <i>or</i> portrait:&nbsp;Portrait</p> 
+<p class="manual_param_dt"><span class="parameter">type</span> = E|O|even|odd|next-odd|next-even</p> 
+<ul> </ul> 
+<p class="manual_param_dd">If <span class="parameter">type</span> is specified when writiing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, the page-break is conditional; a new page will only be added if necessary to meet the specified condition.&nbsp;<br />
+If&nbsp;not writing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, a page-break <span class="parameter">type</span>="E" will be ignored, whilst a page-break <span class="parameter">type</span>="O" will always force a new page.<br />
+<span class="smallblock">BLANK</span> or omitted will force a new page unconditionally.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br />
+O <i>or</i> odd: Add a new page if required to make current page an&nbsp;<span class="smallblock">ODD</span>&nbsp;one.<br /> 
+E <i>or</i> even: Add a new page if required to make current page an&nbsp;<span class="smallblock">EVEN</span>&nbsp;one. <br /> 
+NEXT-ODD: Add one or two pages as required to make the current page <span class="smallblock">ODD</span>.<br />
+NEXT-EVEN: Add one or two pages as required to make the current page <span class="smallblock">EVEN</span>.</p> 
+<p class="manual_param_dt"><span class="parameter">resetpagenum</span> = 1 - ∞</p> 
+<p class="manual_param_dd">Sets/resets the document page number to <span class="parameter">resetpagenum</span> starting on the new page. (The value must be a positive integer).<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the current&nbsp;page number sequence&nbsp;unchanged.</p> 
+<p class="manual_param_dt"><span class="parameter">pagenumstyle</span> = 1|A|a|I|i|[+ any value supported for list-style-type]</p> 
+<ul> </ul> 
+<p class="manual_param_dd">Sets/resets the page numbering style (values as for cf. <a href="http://mpdf1.com/manual/index.php?tid=34">lists</a>)<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;page number&nbsp;style&nbsp;unchanged.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-sensitive)<br />
+1: Decimal - 1,2,3,4...<br /> 
+A: Alpha uppercase - A,B,C,D...<br /> 
+a: Alpha lowercase - a,b,c,d...<br /> 
+I: Roman uppercase - I, II, III, IV...<br /> 
+i: Roman lowercase - i, ii, iii, iv...</p> 
+<p class="manual_param_dt"><span class="parameter">suppress</span> = on|off|1|0</p> 
+<ul> </ul> 
+<p class="manual_param_dd"><span class="parameter">suppress</span>=on will suppress document page numbers from the new page onwards (until <span class="parameter">suppress</span>=off is used)<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;condition unchanged.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br />
+1 <i>or</i> on: Suppress (hide) page numbers from the new page forwards.<br /> 
+0 <i>or</i> off: Show page numbers from the new page forwards.</p> 
+<p class="manual_param_dt"><span class="parameter">margin-left</span><br /> 
+<span class="parameter">margin-right</span><br /> 
+<span class="parameter">margin-top</span><br /> 
+<span class="parameter">margin-bottom</span><br /> 
+<span class="parameter">margin-header</span><br /> 
+<span class="parameter">margin-footer</span></p> 
+<p class="manual_param_dd">Sets the page margins from the new page forwards.<br /> 
+All values should be specified as <span class="smallblock">LENGTH</span> in any valid CSS form.<br />
+If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current margin unchanged. NB "0" (zero) will set the margin to zero.</p> 
+<p class="manual_param_dt"><span class="parameter">odd-header-name</span><br /> 
+<span class="parameter">even-header-name</span><br /> 
+<span class="parameter">odd-footer-name</span><br /> 
+<span class="parameter">even-footer-name</span></p> 
+<p class="manual_param_dd">Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using &lt;<a href="http://mpdf1.com/manual/index.php?tid=173">pageheader</a>&gt;, &lt;<a href="http://mpdf1.com/manual/index.php?tid=174">pagefooter</a>&gt;, &lt;<a href="http://mpdf1.com/manual/index.php?tid=177">htmlpageheader</a>&gt;, or &lt;<a href="http://mpdf1.com/manual/index.php?tid=178">htmlpagefooter</a>&gt;.<br />
+If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the header/footer unchanged. NB "" will not unset the header. Use <span class="parameter">odd-header-value</span> to turn the header off.</p> 
+<p class="manual_block"><b>Note:</b> You must add the prefix 'html_' before the name if it is a HTMLHeader.</p> 
+<p class="manual_param_dt"><span class="parameter">odd-header-value</span><br />
+<span class="parameter">even-header-</span><span class="parameter">value</span><br />
+<span class="parameter">odd-footer-</span><span class="parameter">value</span><br />
+<span class="parameter">even-footer-</span><span class="parameter">value</span></p> 
+<p class="manual_param_dd">Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using &lt;<a href="http://mpdf1.com/manual/index.php?tid=173">pageheader</a>&gt;, &lt;<a href="http://mpdf1.com/manual/index.php?tid=174">pagefooter</a>&gt;, &lt;<a href="http://mpdf1.com/manual/index.php?tid=177">htmlpageheader</a>&gt;, or &lt;<a href="http://mpdf1.com/manual/index.php?tid=178">htmlpagefooter</a>&gt;.<br />
+If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the header/footer state unchanged.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br />
+1 <i>or</i> on: Start using the selected header/footer from the new page onwards.<br />
+-1 <i>or</i> off: Stop using the selected header from the new page onwards.</p> 
+<p><span class="parameter">page-selector</span></p> 
+<p class="manual_param_dd">Select a named CSS @page.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p> 
+<p class="manual_param_dd">See <a href="http://mpdf1.com/manual/index.php?tid=307">Using @page</a> for more information</p> 
+<p class="manual_param_dt"><span class="parameter">sheet-size</span></p> 
+<p class="manual_param_dd"><span class="parameter">sheet-size</span> can be specified either as a pre-defined page size, or as two <span class="smallblock">LENGTH</span> values separated by a space, representing width and height e.g. '210mm 297mm'. em, ex and % are not accepted. Note that this is different from the 'size' property of the page-box used with the CSS @page selector.<br />
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br />
+A0 - A10, B0 - B10, C0 - C10<br /> 
+4A0, 2A0, RA0 - RA4, SRA0 - SRA4<br />
+Letter, Legal, Executive, Folio<br />
+Demy, Royal<br />
+A (Type A paperback 111x178mm)<br />
+B (Type B paperback 128x198mm)<br />
+&lt;<span class="smallblock">LENGTH</span>&gt;{2}</p> 
+<p class="manual_param_dd">All of the pre-defined values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L"</p> 
+<p class="manual_param_dt"><span class="parameter">page-break-type</span> = slice|clone|clonebycss</p> 
+<p class="manual_param_dd"><span class="parameter">slice </span>- no border and no padding are inserted at a break. The effect is as though the element were rendered with no breaks present, and then sliced by the breaks afterward<br />
+<span class="parameter">cloneall</span> - each page fragment is independently wrapped with the borders and padding of all open elements<br />
+<span class="parameter">clonebycss</span> - open elements which have the (custom) CSS property "box-decoration-break" set to "clone" are independently wrapped with their border and padding<br />
+<span class="smallblock">BLANK</span>&nbsp;or omitted - default page break type is used - as specified by <span class="code">defaultPagebreakType</span></p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>1.3</td> 
+<td> 
+<p>Values NEXT-ODD and NEXT-EVEN for <span class="parameter">type</span> were added.</p> 
+<p>Parameters <span class="parameter">resetpagenum</span> , <span class="parameter">pagenumstyle</span> and <span class="parameter">suppress</span> were added.&nbsp;</p> 
+</td> 
+</tr> 
+<tr> 
+<td>2.0</td> 
+<td>Parameters <span class="parameter">margin-left</span> , <span class="parameter">margin-right</span> , <span class="parameter">margin-top</span> , <span class="parameter">margin-bottom</span> , <span class="parameter">margin-header</span> , <span class="parameter">margin-footer</span> , <span class="parameter">odd-header-name</span> , <span class="parameter">odd-header-value</span> , <span class="parameter">even-header-name</span> , <span class="parameter">even-header-value</span> , <span class="parameter">odd-footer-name</span> , <span class="parameter">odd-footer-value</span> , <span class="parameter">even-footer-name</span> , <span class="parameter">even-footer-value</span>&nbsp; were added.<br />
+</td> 
+</tr> 
+<tr> 
+<td>3.0</td> 
+<td><span class="parameter">resetpagenum</span> changed to allow positive integers above 1</td> 
+</tr> 
+<tr> 
+<td>4.2</td> 
+<td>Parameter <span class="parameter">page-selector</span> was added</td> 
+</tr> 
+<tr> 
+<td>4.3</td> 
+<td>Parameter <span class="parameter">sheet-size</span> was added</td> 
+</tr> 
+<tr> 
+<td>6.0</td> 
+<td>Parameter <span class="parameter">page-break-type</span> was added</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;html&gt;<br />
+&lt;p&gt;Text of introduction...&lt;/p&gt;<br />
+&lt;pagebreak type="NEXT-ODD" resetpagenum="1" pagenumstyle="i" suppress="off" /&gt;<br />
+&lt;p&gt;Text of main book...&lt;/p&gt;<br />
+&lt;/html&gt;</p> 
+<p class="examplecode"><b>Example #2</b> - Defining new margins and page orientation</p> 
+<p class="examplecode">&lt;html&gt;<br />
+<br />
+&lt;p&gt;Text of introduction...&lt;/p&gt;<br />
+&lt;pagebreak orientation="landscape" margin-left="60mm" margin-right="40mm" margin-top="55mm" margin-bottom="30mm" margin-header="12mm" margin-footer="12mm" /&gt;<br />
+&lt;p&gt;Text of main book...&lt;/p&gt;<br />
+<br />
+&lt;/html&gt;</p> 
+<p class="examplecode"><b>Example #3</b> - Changing headers/footers</p> 
+<p class="examplecode">&lt;html&gt;<br />
+<br />
+&lt;pageheader name="myHeader1" content-center="My document" header-style="font-weight: bold;" line="on" /&gt;<br />
+<br />
+&lt;htmlpageheader name="myHeader2"&gt;<br />
+&lt;div style="text-align: center; font-weight: bold;"&gt;My document&lt;/div&gt;<br />
+&lt;/htmlpageheader&gt;<br />
+<br />
+&lt;p&gt;Text of introduction...&lt;/p&gt;<br />
+<br />
+&lt;pagebreak type="NEXT-ODD" odd-header-name="myHeader1" odd-header-value="1" even-header-name="html_myHeader2" even-header-value="1" odd-footer-value="-1" even-footer-value="-1" /&gt;<br />
+<br />
+&lt;p&gt;Text of main book...&lt;/p&gt;<br />
+&lt;/html&gt;</p> 
+<h5>Notes</h5> 
+<p class="manual_block"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a>.</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> - Add one or more (conditional) pages to the document</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=108">Page breaks</a></li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=353">formfeed</a>&gt; - Forces a new page keeping current HTML tags/CSS active</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=333">restoreBlockPageBreaks</a> - Configure pagebreak to act like formfeed</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 5 Feb 2009<br />
+Validated 13 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:19:22 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=110&op_target=print&id=141 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+</html>

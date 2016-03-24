@@ -1,0 +1,92 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=262&op_target=print&id=556 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Text Justification</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>Justifying text &amp; Spacing</h5> 
+<h6>Character and Word spacing</h6> 
+<p>When text-alignment is set to Justify (i.e. aligning to both right and left margins), word spacing and character spacing are normally used to justify text.</p> 
+<p>The default is to use a mix of character and word spacing. The ratio is set by variables defined at the top of the mpdf.php file:</p> 
+<p class="examplecode">var $jSWord = 0.4;&nbsp; // Percentage(/100) of spacing to allocate to Word vs. Character<br /> 
+var $jSmaxChar = 2; // Maximum spacing to allocate to character spacing. (0 = no maximum)</p> 
+<p>The maximum (<span class="parameter">$jSmaxChar</span>) will prevent excessive, ugly and difficult-to-read character spacing.</p> 
+<p>CJK characters usually need to be character-spaced (as each character is like a word), and cursive scripts like Arabic or Indic texts need to be word-spaced. You can override some of the default settings also by using CSS letter-spacing:</p> 
+<p class="examplecode">div.arabic {<br />
+&nbsp;&nbsp; text-align: justify;<br />
+&nbsp;&nbsp; letter-spacing: 0; <br />
+}</p> 
+<h6>Kashida in Arabic text</h6> 
+<p>In Arabic text, justification can be achieved by elongating the line between characters - this is known as "kashida". Kashida can be used by configuring the font in <span class="filename">config_fonts.php</span>&nbsp; cf. <a href="http://mpdf1.com/manual/index.php?tid=502">OpenType layout features (OTL)</a></p> 
+<h6>Non-breaking space (NBSP)</h6> 
+<p>The non-breaking space character is supported when using all codepages other than CJK - unless the font chosen does not have a glyph/character representing the nbsp (? only FreeSerif); in these cases the nbsp is converted to a normal space. When supported, it prevents word wrapping and prevents collapse of white space as expected with HTML.</p> 
+<h6>The last line</h6> 
+<p>The last line of justified text is left-aligned, but when the penultimate line has been stretched to fit the page width it appears best if the last line also has increased spacing.</p> 
+<p>If the penultimate line was stretched considerably, the last line may look odd using the same spacing, so maximum values for the character-spacing (<span class="parameter">$jSmaxCharLast</span>) and word-spacing (<span class="parameter">$jSmaxWordLast</span>) can be set in the configuration file.</p> 
+<h6>Justification before line-breaks</h6> 
+<p>In a justified text block, an inline &lt;img&gt;, &lt;textarea&gt;, &lt;input&gt;, or &lt;select&gt; element which causes a new line, force the previous line to be justified. However, a &lt;hr&gt; or &lt;br&gt; do not force justification of the preceeding text.</p> 
+<p>This behaviour matches most browsers. To allow optional compliance with the bahaviour of MS Word, which also justifies text before a &lt;br&gt; you can set the configurable variable <a href="http://mpdf1.com/manual/index.php?tid=441">justifyB4br</a> to true.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.1</div>
+<div class="right">Created 13 Jan 2013<br />
+Validated 14 Jan 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:09:50 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=262&op_target=print&id=556 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+</html>

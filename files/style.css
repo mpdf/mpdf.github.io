@@ -1,0 +1,80 @@
+/* Additional CSS - cannot access $css values - care with defining absolute font size etc. - use em or % */
+
+p.boxed_text , div p.boxed_text , div.bpmbook p.boxed_text {
+	background-color:#FFFFFF;
+	border:1px solid black;
+	padding:0.5em;
+	padding:0.5em 1em;
+	margin:0.5em 1em;
+}
+
+span.inline_heading , div span.inline_heading , div.bpmbook span.inline_heading {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+/*	font-variant: small-caps; */
+}
+
+h5, div h5, div.bpmbook h5 {
+	margin-top: 1.5em;
+}
+
+p.manual_block , div p.manual_block , div.bpmbook p.manual_block {
+	background-color:#FFFFFF;
+	border:1px solid black;
+	padding:0.5em;
+
+	padding:0.5em 1em;
+	margin:0.5em 1em;
+}
+
+p.examplecode, div p.examplecode, div.bpmbook p.examplecode {
+	font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console",Monaco,"Courier New",Courier,monospace; 
+	background-color:#EEEEEE;
+	border:1px outset #000000;
+	margin:1em;
+	padding:0.5em;
+	text-align:left;
+}
+
+.filename {
+	font-family: "Lucida Console",Monaco,"Courier New",Courier,monospace; 
+	font-size: 95%;
+	color: #444444; 
+}
+
+.function {
+	font-family: Verdana,monospace;
+	font-size: 85%;
+	font-style: italic;
+	color: #444444; 
+}
+
+p.manual_param_dt , div p.manual_param_dt , div.bpmbook p.manual_param_dt {
+	padding:0.5em;
+}
+
+p.manual_param_dd , div p.manual_param_dd , div.bpmbook p.manual_param_dd {
+	background-color:#F5F5FF;
+	border:2px groove #FFFFFF;
+	margin:0.5em 0 0.5em 2em;
+	padding:0.5em;
+}
+
+li.manual_boxlist {
+	list-style-type:square;
+}
+
+span.parameter, div span.parameter, div.bpmbook span.parameter {
+	font-style:italic;
+	font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console",Monaco,"Courier New",Courier,monospace; 
+}
+
+span.smallblock, div span.smallblock, div.bpmbook span.smallblock {
+	font-family:arial,helvetica,sans-serif;
+	font-size:85%;
+	font-weight:bold;
+}
+
+table.bpmTopic, div.bpmbook table.bpmTopic {
+	margin-left: 2em;
+}

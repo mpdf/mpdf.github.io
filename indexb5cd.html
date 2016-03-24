@@ -1,0 +1,110 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=113&op_target=print&id=144 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; HTML control tags</div>
+<h3>columns</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 1.0)</p> 
+<p>columns – Control use of Columns on the page</p> 
+<h5>Description</h5> 
+<p class="manual_block">&lt;<b>columns</b>&nbsp; <span class="parameter">column-count</span> [ <span class="parameter">vAlign</span> ] [ <span class="parameter">column-gap</span> ]&nbsp; /&gt;</p> 
+<p>Define, start or stop Columns in the document.</p> 
+<p class="manual_block"><b>Note:</b> The maximum ratio to adjust column height when justifying is set by <a href="http://mpdf1.com/manual/index.php?tid=140">$max_colH_correction</a> - too large a value can give ugly results</p> 
+<p class="manual_block"><b>Note:</b> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() or use &lt;columns&gt; after commands like <a href="http://mpdf1.com/manual/index.php?tid=150">SetHTMLHeader()</a> etc.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">column-count</span></p> 
+<p class="manual_param_dd">Set the number of (vertical) columns to use on a page<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 or 1 turns Columns OFF i.e. the whole page is used as one column.<br /> 
+<span class="smallblock">DEFAULT</span>: 1</p> 
+<p class="manual_param_dt"><span class="parameter">vAlign</span></p> 
+<p class="manual_param_dd">Automatically adjusts height of columns to be equal if set to J or justify.<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted turns vertical-alignment OFF</p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br /> 
+J or justify<br /> 
+<span class="smallblock">DEFAULT</span>: ""</p> 
+<p class="manual_param_dt"><span class="parameter">column-gap</span></p> 
+<p class="manual_param_dd">Set the gap between columns in millimeters<br /> 
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses default value.<br /> 
+<span class="smallblock">DEFAULT</span>: 5 (mm)</p> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+$mpdf=new mPDF();<br /> 
+$mpdf-&gt;WriteHTML('&lt;columns column-count="3" vAlign="J" column-gap="7" /&gt;');<br /> 
+$mpdf-&gt;WriteHTML('&lt;p&gt;Some text...&lt;/p&gt;');<br /> 
+$mpdf-&gt;WriteHTML('&lt;columnbreak /&gt;');<br /> 
+$mpdf-&gt;WriteHTML('&lt;p&gt;Next column...&lt;/p&gt;');<br /> 
+$mpdf=Output();<br /> 
+<br /> 
+?&gt;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=301">AddColumn()</a> - Start a new Column</li> 
+<li class="manual_boxlist">&lt;<a href="http://mpdf1.com/manual/index.php?tid=114">columnbreak</a>&gt; - Start a new Column</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=139">SetColumns()</a> - Control the use of multiple columns on the page - PHP equivalent of &lt;columns&gt;</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 5 Feb 2009<br />
+Validated 13 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:18:46 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=113&op_target=print&id=144 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+</html>

@@ -1,0 +1,120 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=254&op_target=print&id=304 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; CSS & Stylesheets</div>
+<h3>Stylesheets & CSS - Introduction</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>Default CSS styles are defined in <span class="filename">config.php</span> file (as <span class="code">var $default_CSS</span>) which is based on the recommended default values for HTML4 - <a href="http://www.w3.org/TR/CSS21/sample.html">http://www.w3.org/TR/CSS21/sample.html</a> The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.</p> 
+<p>The following are supported (in order of ascending priority - lower ones in list overwrite higher):</p> 
+<ul> 
+<li>HTML attributes e.g. &lt;div align="center"&gt; (see <a href="http://mpdf1.com/manual/index.php?tid=257">supported HTML attributes</a>)</li> 
+<li>CSS Stylesheets - included in header of HTML document or as &lt;link&nbsp; /&gt; or as @import() 
+<ul> 
+<li>- html tags e.g. p { font-size:12pt; color:#880000; }</li> 
+<li>- class e.g. .stylename { font-size:9pt; }</li> 
+<li>- id e.g. #style { font-size:9pt; }</li> 
+</ul> 
+</li> 
+<li>In-line CSS style e.g. &lt;p style="font-family:monospace;"&gt;</li> 
+</ul> 
+<p class="manual_block">Note: Prior to mPDF 5.x HTML attributes overrode CSS styles.</p> 
+<p>CSS attributes, used in stylesheets or in-line, can define:</p> 
+<ul> 
+<li>most tags/elements e.g. div, p, body, table, span</li> 
+<li>class-names e.g. p.mystylename { font-size:9pt; }</li> 
+<li>id e.g. div#style { font-size:9pt; }</li> 
+</ul> 
+<p>Tag, class and id can share a similar name e.g. p {...} .p {...} and #p {...} are handled uniquely</p> 
+<p>There is some support for 'cascaded' CSS e.g. div.topic table.type1 td {...}<br /> 
+- table, tr, th and td will only be recognised as the last items (as above)<br /> 
+- only 'block' elements (not 'in-line') can be included i.e. div.style1 a {...} will not work, nor will a#class1 {...}</p> 
+<p>For a full list of CSS attributes supported see <a href="http://mpdf1.com/manual/index.php?tid=34">Supported CSS</a></p> 
+<p>Note the OUTLINE style (which is not supported in most browsers) does work in mPDF e.g.<br /> 
+&lt;span style="outline-width:thin|medium|thick; outline-color:#rrggbb|invert"&gt;</p> 
+<h5>Using a stylesheet</h5> 
+<p>The WriteHTML() method takes second parameter i.e. <span class="parameter">mode</span>. See <a href="http://mpdf1.com/manual/index.php?tid=121">WriteHTML()</a> for details of this and other parameters.</p> 
+<p><span class="parameter">mode</span><br /> 
+0 - Use this (default) if the text you pass is a complete HTML page including head and body and style definitions.<br /> 
+1 - Use this when you want to set a CSS stylesheet - see example below<br /> 
+2 - Write HTML code without the &lt;head&gt; information. Does not need to be contained in &lt;body&gt;</p> 
+<p class="examplecode">Example using a stylesheet</p> 
+<p class="examplecode"><br /> 
+$stylesheet = file_get_contents('style.css');<br /> 
+$mpdf-&gt;WriteHTML($stylesheet,1);<br /> 
+$mpdf-&gt;WriteHTML($html,2);</p> 
+<h5>Media selectors</h5> 
+<p>mPDF supports media-dependent CSS styles as:</p> 
+<p class="examplecode">@media print { <br />
+&nbsp;p { color: red; } <br />
+}<br />
+<br />
+&lt;style media="print"&gt;<br />
+&nbsp;p { color: red; } <br /> 
+&lt;/style&gt;<br />
+<br />
+&lt;link rel="stylesheet" media="print" href="..." /&gt;</p> 
+<p>By default mPDF will match stylesheets set for "print" or "all" media. This can be changed by the configurable variable <a href="http://mpdf1.com/manual/index.php?tid=442">CSSselectMedia</a>.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 9 Feb 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:07:34 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=254&op_target=print&id=304 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+</html>

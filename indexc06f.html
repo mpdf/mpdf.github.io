@@ -1,0 +1,110 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=368&op_target=print&id=422 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:23 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Real life examples</div>
+<h3>Colour Charts CMYK</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>This example produces colour charts for all the CMYK colours (incrementing each value by 10). See the <a href="http://mpdf1.com/manual/files/docs/example_colors.pdf">result</a>.</p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+include("../mpdf.php");<br />
+<br />
+$mpdf=new mPDF('win-1252','A4-L'); <br />
+<br />
+$mpdf-&gt;useOnlyCoreFonts = true;<br />
+$mpdf-&gt;SetDisplayMode('fullpage');<br />
+<br />
+$mpdf-&gt;SetFontSize(6);<br />
+<br />
+$pm = 8;&nbsp;&nbsp; // page margin<br />
+$w = 20;<br />
+$h = 10;<br />
+$m = 5;<br />
+<br />
+for($k=0;$k&lt;=8;$k++) {&nbsp;&nbsp;&nbsp; // Black - page group<br />
+&nbsp;for($y=0;$y&lt;=10;$y++) {&nbsp;&nbsp;&nbsp; // Yellow - page group<br />
+&nbsp; $mpdf-&gt;AddPage();<br />
+&nbsp; for($i=0;$i&lt;=10;$i++) {&nbsp;&nbsp;&nbsp; // Rows (Magenta)<br />
+&nbsp;&nbsp;&nbsp; for($j=0; $j&lt;=10; $j++) {&nbsp;&nbsp;&nbsp; // Cols (Cyan)<br />
+&nbsp;&nbsp;&nbsp; $mpdf-&gt;SetXY($pm+($j*($w+$m)),$pm+($i*($h+$m)));<br />
+&nbsp;&nbsp;&nbsp; $mpdf-&gt;SetFillColor(($j*10),($i*10),($y*10),($k*10));<br />
+&nbsp;&nbsp;&nbsp; $mpdf-&gt;Cell($w,$h,'',0,0,'L',1);<br />
+&nbsp;&nbsp;&nbsp; $mpdf-&gt;SetXY($pm+($j*($w+$m)),$h+$pm+($i*($h+$m)));<br />
+&nbsp;&nbsp;&nbsp; $txt = 'C:'.($j*10).' M:'.($i*10).' Y:'.($y*10).' K:'.($k*10);<br />
+&nbsp;&nbsp;&nbsp; $mpdf-&gt;Cell($w,4,$txt,0,0,'L');<br />
+<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp; }<br />
+&nbsp;}<br />
+}<br />
+<br />
+$mpdf-&gt;Output('mpdf.pdf','I');<br />
+<br />
+exit;<br />
+<br />
+?&gt;</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 24 Apr 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:11:47 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=368&op_target=print&id=422 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:23 GMT -->
+</html>

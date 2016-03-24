@@ -1,0 +1,1271 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=273&op_target=print&id=323 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF Variables</div>
+<h3>Overview</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>mPDF Variables by Category</h5> 
+<p>Most of the following variables are set as defaults in the configuration file config.php&nbsp; When set there, they are written as e.g.:</p> 
+<p class="examplecode">$<b>this</b>-&gt;variablename = true;</p> 
+<p>Alternatively you can redefine the variable in individual scripts; here it will be written as e.g. (assuming your class object is "mpdf"):</p> 
+<p class="examplecode">$<b>mpdf</b>-&gt;variablename = true;</p> 
+<table class="bpmTopic"> <thead> 
+<tr> 
+<td>Category</td> 
+<td>Variable</td> 
+<td>Default value</td> 
+<td>Scope<sup>[1]</sup></td> 
+<td>Version</td> 
+<td>Notes</td> 
+</tr> 
+</thead> <tbody> 
+<tr> 
+<td>Paging</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=394">mirrorMargins</a></td> 
+<td>0</td> 
+<td><span class="smallblock">DOCUMENT</span> <br />
+</td> 
+<td>4.0</td> 
+<td>The alias <span class="parameter">useOddEven</span> was used before v4.0<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td> 
+<p>restoreBlockPagebreaks</p> 
+</td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>2.3</td> 
+<td>&nbsp;Removed v6.0<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=354">forcePortraitMargins</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>2.3</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=355">displayDefaultOrientation</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>2.3</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=390">autoPageBreak</a></td> 
+<td><span class="smallblock">TRUE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=412">setAutoTopMargin</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=413">setAutoBottomMargin</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=414">autoMarginPadding</a></td> 
+<td>2</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=476">margBuffer</a></td> 
+<td>2</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.5</td> 
+<td>Allows an (empty) end of block to extend beyond the bottom margin by this amount (mm)</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=486">printers_info</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>5.1</td> 
+<td>Adds date and page info for printer when using @page and "marks:crop;"</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=487">bleedMargin</a></td> 
+<td>5</td> 
+<td>&nbsp;</td> 
+<td>5.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=488">crossMarkMargin</a></td> 
+<td>5</td> 
+<td>&nbsp;</td> 
+<td>5.1</td> 
+<td>Distance of cross mark from margin in mm</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=489">cropMarkMargin</a></td> 
+<td>8</td> 
+<td>&nbsp;</td> 
+<td>5.1</td> 
+<td>Distance of crop mark from margin in mm</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=490">cropMarkLength</a></td> 
+<td>18</td> 
+<td>&nbsp;</td> 
+<td>5.1</td> 
+<td>Default length in mm of crop line</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=491">nonPrintMargin</a></td> 
+<td>8</td> 
+<td>&nbsp;</td> 
+<td>5.1</td> 
+<td>Non-printable border at edge of paper sheet in mm</td> 
+</tr> 
+<tr> 
+<td> 
+<p>Page numbering</p> 
+</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=217">aliasNbPg</a></td> 
+<td>"{nb}"</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td>NB The default value will not appear correctly in a PDF version of this page; it is substituted by the number of pages.</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=219">aliasNbPgGp</a></td> 
+<td>"{nbpg}"</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td>NB The default value will not appear correctly in a PDF version of this page; it is substituted by the number of pages.</td> 
+</tr> 
+<tr> 
+<td><br />
+</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=379">pagenumPrefix</a></td> 
+<td>""</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=380">pagenumSuffix</a></td> 
+<td>""</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=381">nbpgPrefix</a></td> 
+<td>""</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=382">nbpgSuffix</a></td> 
+<td>""</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=529">defaultPageNumStyle</a></td> 
+<td>"1"</td> 
+<td><span class="smallblock"><span class="smallblock">DOCUMENT</span></span></td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Fonts, Languages and Character sets</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=126">percentSubset<br />
+</a></td> 
+<td>30</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.0 <br />
+</td> 
+<td>Control subsetting behaviour for fonts<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=469">useKerning</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.4</td> 
+<td>Set to <span class="smallblock">TRUE</span> to enable CSS support for <span class="parameter">font-kerning</span></td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=463">maxTTFFilesize</a></td> 
+<td>2000</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.0</td> 
+<td>Control subsetting behaviour for fonts</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=126">allow_charset_conversion</a></td> 
+<td><span class="smallblock">TRUE</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=160">charset_in</a></td> 
+<td><i><span class="smallblock">NULL</span></i></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=157">biDirectional</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>use_CJK_only</td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>Removed mPDF 5.0<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=458">useAdobeCJK</a></td> 
+<td><span class="smallblock">TRUE</span></td> 
+<td><span class="smallblock">DOCUMENT*</span></td> 
+<td>5.0</td> 
+<td>* You must only change this variable in the <span class="filename">config.php</span> file.<br />
+Use initial parameter to change at runtime e.g. <span class="code">$mpdf=new mPDF('+aCJK');</span><br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td> 
+<p>autoFontGroupSize</p> 
+</td> 
+<td>2</td> 
+<td>&nbsp;</td> 
+<td>2.3</td> 
+<td>Removed in v6.0<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=344">useLang</a></td> 
+<td><span class="smallblock">TRUE</span></td> 
+<td>&nbsp;</td> 
+<td>2.3</td> 
+<td> 
+<p>Default value <span class="smallblock">FALSE</span> before v4.0</p> 
+<p>Removed in v6.0</p> 
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=511">autoScriptToLang</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>6.0</td> 
+<td> 
+<p>Replaces SetAutoFont function</p> 
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=510">autoLangToFont</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>6.0</td> 
+<td> 
+<p>Replaces useLang</p> 
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=512">baseScript</a></td> 
+<td><span class="smallblock">1</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=514">autoArabic</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=513">autoVietnamese</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>disableMultilingualJustify <br />
+</td> 
+<td><span class="smallblock">TRUE</span></td> 
+<td>&nbsp;</td> 
+<td>2.3</td> 
+<td>&nbsp;Removed in v6.0<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=421">falseBoldWeight</a></td> 
+<td>5</td> 
+<td>&nbsp;</td> 
+<td>4.2</td> 
+<td>Weight for bold text when using an artificial (outline) bold</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=459">smCapsScale</a></td> 
+<td>0.75</td> 
+<td>&nbsp;</td> 
+<td>5.0</td> 
+<td>Factor of 1 to scale capital letters</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=460">smCapsStretch</a></td> 
+<td>115</td> 
+<td>&nbsp;</td> 
+<td>5.0</td> 
+<td>% to stretch small caps horizontally</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=492">backupSubsFont</a></td> 
+<td>array('dejavusanscondensed')</td> 
+<td>&nbsp;</td> 
+<td>5.0</td> 
+<td><b>Set in config_fonts.php</b></td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=493">backupSIPFont</a></td> 
+<td><span class="smallblock">NOT DEFINED</span></td> 
+<td>&nbsp;</td> 
+<td>5.0</td> 
+<td><b>Set in config_fonts.php</b></td> 
+</tr> 
+<tr> 
+<td>Configuration</td> 
+<td>useOnlyCoreFonts</td> 
+<td><span class="smallblock">FALSE</span> <br />
+</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>(3.0) <br />
+</td> 
+<td> 
+<p>Removed mPDF 5.0 - Use</p> 
+<p><span class="code">$mpdf=new mPDF('c');</span></p> 
+<p>The alias <span class="parameter">use_embeddedfonts_1252</span> was used before v4.0</p> 
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=477">repackageTTF</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=229">useSubstitutions</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>(4.0)</td> 
+<td> 
+<p>NB Altered behaviour mPDF &gt;= 5.0</p> 
+<p>Default value <span class="smallblock">TRUE</span> before v4.0</p> 
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>useSubstitutionsMB</td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>4.2</td> 
+<td> 
+<p>Removed in mPDF 5.0</p> 
+<p>Use useSusbstitutions instead.</p> 
+<p>Substitute missing characters in UTF-8(multibyte) documents - from core fonts</p> 
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=423">collapseBlockMargins</a></td> 
+<td><span class="smallblock">TRUE</span></td> 
+<td>&nbsp;</td> 
+<td>4.2</td> 
+<td>Allows top and bottom margins to collapse between block elements</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=449">dpi</a></td> 
+<td>96</td> 
+<td>&nbsp;</td> 
+<td>4.5</td> 
+<td>Specifies size conversion for objects with size set by "px"</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=424">enableImports</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT*</span></td> 
+<td>4.3</td> 
+<td>Enable Imported PDF files (templates) [was mPDFI]<br />
+* You must only change this variable in the <span class="filename">config.php</span> file.<br />
+Use <a href="http://mpdf1.com/manual/index.php?tid=432">SetImportUse()</a> to change at runtime.</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=378">allow_output_buffering</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=135">allow_html_optional_endtags</a></td> 
+<td><span class="smallblock">TRUE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=202">ignore_invalid_utf8</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=147">text_input_as_HTML</a></td> 
+<td><span class="smallblock">FALSE</span> <br />
+</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=395">showStats</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=425">progressBar</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT*</span></td> 
+<td>4.2</td> 
+<td>Shows progress-bars whilst generating file<br />
+* You must only change this variable in the <span class="filename">config.php</span> file.<br />
+Use <a href="http://mpdf1.com/manual/index.php?tid=433">StartProgressBarOutput()</a> to set at runtime.</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=461">progbar_heading</a></td> 
+<td>"mPDF file progress"</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.0</td> 
+<td>Customise the use of progress-bars</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=462">progbar_altHTML</a></td> 
+<td>""</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.0</td> 
+<td>Customise the use of progress-bars</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=426">incrementFPR1 [1-4]</a></td> 
+<td>10,20,30,50</td> 
+<td>&nbsp;</td> 
+<td>4.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Debugging</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=391">debug</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=466">debugfonts</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.0</td> 
+<td>Show errors and warning notes for fonts</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=383">showImageErrors</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>PDF/A1-b, PDF/X-1a<br />
+Colorspaces<br />
+</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=427">PDFA</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.3</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=428">PDFAauto</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.3</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=482">PDFX</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=483">PDFXauto</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=429">ICCProfile</a></td> 
+<td>""</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.3</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=484">restrictColorSpace</a></td> 
+<td>0</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Annotations</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=283">title2annots</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>2.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=282">annotMargin</a></td> 
+<td><i><span class="smallblock">NULL</span></i></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>2.2 <br />
+</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=287">annotOpacity</a></td> 
+<td>0.5</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>2.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Bookmarks (Outlines)</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=207">anchor2Bookmark</a></td> 
+<td>0</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=531">h2bookmarks</a></td> 
+<td>array()</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.7</td> 
+<td>Automatically generate bookmarks from Heading elements H1-H6</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=530">h2toc</a></td> 
+<td>array()</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.7</td> 
+<td>Automatically generate ToC entries from Heading elements H1-H6</td> 
+</tr> 
+<tr> 
+<td>CSS &amp; Styles</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=442">CSSselectMedia</a></td> 
+<td>"print"<br />
+</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.4</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>disablePrintCSS</td> 
+<td><i><span class="smallblock">NULL</span></i></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td><span class="smallblock">DEPRACATED</span> from &gt;= 4.4</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>rtlCSS</td> 
+<td>2</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;REMOVED from v 5.1<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td> 
+<p>useDefaultCSS2</p> 
+</td> 
+<td>&nbsp;</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td><span class="smallblock">DEPRACATED</span> from &gt;= 2.2</td> 
+</tr> 
+<tr> 
+<td>Page Headers &amp; Footers</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=211">defaultfooterfontsize</a></td> 
+<td>8</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=212">defaultfooterfontstyle</a></td> 
+<td>"BI"</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=213">defaultfooterline</a></td> 
+<td>1 <br />
+</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=208">defaultheaderfontsize</a></td> 
+<td>8</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=209">defaultheaderfontstyle</a></td> 
+<td>"BI"</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=210">defaultheaderline</a></td> 
+<td>1</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=215">footer_line_spacing</a></td> 
+<td>0.25</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=214">header_line_spacing</a></td> 
+<td>0.25</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=181">forcePortraitHeaders</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>headerPageNoMarker</td> 
+<td>"!|" <br />
+</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>&nbsp;</td> 
+<td><span class="smallblock">DEPRACATED</span> from &gt;= 4.0</td> 
+</tr> 
+<tr> 
+<td>Tables</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=430">simpleTables</a></td> 
+<td><span class="smallblock">FALSE</span> <br />
+</td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.3</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=444">packTableData</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>4.4</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>cacheTables</td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.4</td> 
+<td>Removed v6.0<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=450">tableMinSizePriority</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>4.6</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=226">ignore_table_percents</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>2.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=225">ignore_table_widths</a></td> 
+<td><span class="smallblock">FALSE</span> <br />
+</td> 
+<td>&nbsp;</td> 
+<td>2.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=224">keep_table_proportions</a></td> 
+<td><span class="smallblock">FALSE</span> <br />
+</td> 
+<td>&nbsp;</td> 
+<td>2.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=153">shrink_tables_to_fit</a></td> 
+<td>1.4 <br />
+</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=154">table_error_report</a></td> 
+<td><span class="smallblock">FALSE</span> <br />
+</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=155">table_error_report_param</a></td> 
+<td>"" <br />
+</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=267">use_kwt</a></td> 
+<td><span class="smallblock">FALSE</span> <br />
+</td> 
+<td>&nbsp;</td> 
+<td>2.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=465">iterationCounter</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.0</td> 
+<td>Enables the use of a replaceable iteration counter in table headers or footers</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=498">decimal_align</a></td> 
+<td><span class="smallblock">cf.</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.7</td> 
+<td>Array of characters enabled to align table columns</td> 
+</tr> 
+<tr> 
+<td>Images</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=148">img_dpi</a></td> 
+<td>96</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Text Spacing &amp; Justification</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=431">normalLineheight</a></td> 
+<td>1.33</td> 
+<td>&nbsp;</td> 
+<td>4.2</td> 
+<td>Value used for line-height when CSS specified as 'normal'</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=523">useFixedNormalLineHeight</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=524">useFixedTextBaseline</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=525">adjustFontDescLineheight</a></td> 
+<td>1.14</td> 
+<td>&nbsp;</td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td><br />
+</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=205">jSmaxChar</a></td> 
+<td>2</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=396">jSmaxWordLast</a></td> 
+<td>2</td> 
+<td>&nbsp;</td> 
+<td>5.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=485">jSmaxCharLast</a></td> 
+<td>1</td> 
+<td>&nbsp;</td> 
+<td>5.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>jSpacing</td> 
+<td><i><span class="smallblock">NULL</span></i></td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;<span class="smallblock">DEPRACATED</span> from &gt;= 5.1<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=204">jSWord</a></td> 
+<td>0.4</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>orphansAllowed</td> 
+<td>5</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;Removed mPDF 5.7</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=478">allowCJKorphans</a></td> 
+<td><span class="smallblock">TRUE</span></td> 
+<td>&nbsp;</td> 
+<td>5.2</td> 
+<td>Wrapping of CJK text</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=479">allowCJKoverflow</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>5.2</td> 
+<td>Wrapping of CJK text</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=497">CJKforceend</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>5.7</td> 
+<td>Wrapping of CJK text</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=352">tabSpaces</a></p> 
+</td> 
+<td>8</td> 
+<td>&nbsp;</td> 
+<td>2.3</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=441">justifyB4br</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>4.4</td> 
+<td>Justify the line before a &lt;br&gt; when using text-align: justify</td> 
+</tr> 
+<tr> 
+<td>Hyphenation</td> 
+<td>hyphenate</td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>2.5</td> 
+<td>&nbsp;Removed mPDF 5.7</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>hyphenateTables</td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>2.5</td> 
+<td>&nbsp;Removed mPDF 5.7</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=372">SHYlang</a></td> 
+<td>"en"</td> 
+<td>&nbsp;</td> 
+<td>2.5</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Columns</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=223">keepColumns</a></td> 
+<td><span class="smallblock">FALSE</span> <br />
+</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=140">max_colH_correction</a></td> 
+<td>1.15</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Lists</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=518">list_auto_mode</a><br />
+</td> 
+<td>"browser"<br />
+</td> 
+<td>&nbsp;</td> 
+<td>6.0<br />
+</td> 
+<td>&nbsp;<br />
+</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=519">list_indent_default</a></td> 
+<td>"40px"</td> 
+<td>&nbsp;</td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=520">list_indent_default_mpdf</a></td> 
+<td>"0em"</td> 
+<td>&nbsp;</td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=521">list_marker_offset</a></td> 
+<td>"5.5pt"</td> 
+<td>&nbsp;</td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=522">list_symbol_size</a></td> 
+<td>"3.6pt"</td> 
+<td>&nbsp;</td> 
+<td>6.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td>list_align_style</td> 
+<td>"R"</td> 
+<td>&nbsp;</td> 
+<td>2.1</td> 
+<td>Removed mPDF 6.0</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=134">list_indent_first_level</a></td> 
+<td>0</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=228">list_number_suffix</a></td> 
+<td>&nbsp;"."</td> 
+<td>&nbsp;</td> 
+<td>2.1</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Watermarks</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=270">showWatermarkImage</a></td> 
+<td>&nbsp;<i><span class="smallblock">NULL</span></i></td> 
+<td>&nbsp;</td> 
+<td>2.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=187">showWatermarkText</a></td> 
+<td>&nbsp;<i><span class="smallblock">NULL</span></i></td> 
+<td>&nbsp;</td> 
+<td>2.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=143">watermark_font</a></td> 
+<td>&nbsp;""<br />
+</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=271">watermarkImageAlpha</a></td> 
+<td>&nbsp;0.2</td> 
+<td>&nbsp;</td> 
+<td>2.2<br />
+</td> 
+<td>Can be changed by <a href="http://mpdf1.com/manual/index.php?tid=186">SetWatermarkImage()</a></td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=448">watermarkImgAlphaBlend</a></td> 
+<td>"Normal"</td> 
+<td>&nbsp;</td> 
+<td>4.5</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=443">watermarkImgBehind</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td>&nbsp;</td> 
+<td>4.4</td> 
+<td>Place watermark images behind page contents</td> 
+</tr> 
+<tr> 
+<td>&nbsp;</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=268">watermarkTextAlpha</a></td> 
+<td>&nbsp;0.2</td> 
+<td>&nbsp;</td> 
+<td>2.2</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Borders</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=384">autoPadding</a></td> 
+<td><span class="smallblock">FALSE</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>3.0</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td>Bookmarks</td> 
+<td><a href="http://mpdf1.com/manual/index.php?tid=472">bookmarkStyles</a></td> 
+<td><span class="smallblock">array()</span></td> 
+<td><span class="smallblock">DOCUMENT</span></td> 
+<td>5.4</td> 
+<td>Specify appearance of Bookmarks in PDF reader</td> 
+</tr> 
+</tbody> </table> 
+<p>[1] Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of the document. All others can be changed during the course of creating the document.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 10 Feb 2009<br />
+Validated 13 Jan 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:20:24 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=273&op_target=print&id=323 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+</html>

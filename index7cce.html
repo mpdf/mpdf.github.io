@@ -1,0 +1,140 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=343&op_target=print&id=393 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF Variables</div>
+<h3>autoFontGroupSize</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 2.3&nbsp; &lt;6.0)</p> 
+<p>autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont</p> 
+<h5>Value</h5> 
+<p class="manual_block">void <b>autoFontGroupSize</b></p> 
+<p>Specify the chunk size of text to group when auto-detecting languages using <a href="http://mpdf1.com/manual/index.php?tid=347">SetAutoFont()</a>.</p> 
+<p class="manual_block"><b>Note:</b> This variable is removed from mPDF v 6.0</p> 
+<p>Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage is that it may include bits of other languages either side, forcing them in the font used for the "foreign" language.<br /> 
+Smaller chunks (1) - analysing word by word - takes more processing time, and cannot reverse RTL sentences. In text with CJK language, it makes it harder for mPDF to correctly identify between e.g. Korean and Chinese which share some characters. Thus words may be identified alternately as Korean or Chinese.</p> 
+<h5>Values</h5> 
+<p class="manual_param_dt"><span class="parameter">autoFontGroupSize</span></p> 
+<p class="manual_param_dd"><b>Values</b><br /> 
+1: individual words are analysed<br />
+2: words are analysed to see if they are distinctive of a particular language, and then surrounding text that is compatible is grouped together with these words<br />
+3: as big chunks as possible are grouped, including ASCII characters and punctuation<br /> 
+<span class="smallblock">DEFAULT</span>: 2</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.3</td> 
+<td>Variable was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1<br /> 
+</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+include("../mpdf.php");<br /> 
+$mpdf=new mPDF('utf-8'); <br />
+<br /> 
+$html = "<br />
+&lt;style&gt;<br />
+p { font-family: FreeSerif; }<br />
+&lt;/style&gt;<br />
+&lt;p&gt;Most of this text is in English, but has occasional words in Chinese:来自商务 or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: الابيض&lt;/p&gt;<br />
+&lt;p&gt;الابيض "بشدة" تفجير&lt;/p&gt;<br />
+&lt;p&gt;其截至 WHO 年底 2005 笔&lt;/p&gt;<br />
+";<br />
+<br />
+$mpdf-&gt;SetAutoFont();<br />
+<br />
+$mpdf-&gt;autoFontGroupSize = 1;<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$mpdf-&gt;autoFontGroupSize = 2;<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$mpdf-&gt;autoFontGroupSize = 3;<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$html2 = "&lt;p&gt;In this example, the word boundaries from different languages are already defined by marking with &amp;lt;span&amp;gt; tags&lt;/p&gt;<br />
+&lt;p&gt;Most of this text is in English, but has occasional words in Chinese:&lt;span&gt;来自商务&lt;/span&gt; or Vietnamese: &lt;span&gt;Một khảo sát mới cho biết&lt;/span&gt;, or maybe even Arabic: &lt;span&gt;الابيض&lt;/span&gt;&lt;/p&gt;<br />
+";<br />
+$mpdf-&gt;WriteHTML($html2);<br />
+<br />
+<br />
+$mpdf-&gt;Output();<br /> 
+<br /> 
+?&gt;<br />
+<br />
+<a href="http://mpdf1.com/manual/files/docs/example_autofontgroupsize.pdf">See the result of this as a PDF file</a></p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=344">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=343">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=356">lang</a> - Information on mPDF support for the HTML attribute lang</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 4 Mar 2009<br />
+Validated 4 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:21:14 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=343&op_target=print&id=393 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+</html>

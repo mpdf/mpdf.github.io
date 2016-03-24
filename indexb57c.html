@@ -1,0 +1,314 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=310&op_target=print&id=360 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:52 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Headers & Footers</div>
+<h3>Headers & Footers - Method 1</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control over styling. There are several variants of this method, using string or array. The simplest form does not allow different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.</p> 
+<h5>Setting a Header/Footer at the start of a document<br />
+</h5> 
+<h6>Variant #1 (Simplest form)</h6> 
+<p>Use a single command with a string as parameter, to set a header/footer at the right margin of the page on <span class="smallblock">ODD</span> pages, and left margin for <span class="smallblock">EVEN</span> pages (if <span class="smallblock">DOUBLE-SIDED</span> document), or right margin for all pages.</p> 
+<p class="examplecode">$mpdf = new mPDF();<br />
+$mpdf-&gt;SetHeader('Document Title');<br />
+$mpdf-&gt;WriteHTML('Document text');<br />
+$mpdf-&gt;Output();</p> 
+<h6>Variant #2 (Split string)</h6> 
+<p>Set a header/footer in three parts. The text string defines three strings divided by '|' which will set a header at the left/centre/right margin of the page on <span class="smallblock">ODD</span> pages and right/centre/left margin for <span class="smallblock">EVEN</span> pages (if&nbsp; <span class="smallblock">DOUBLE-SIDED</span> document), or left/centre/right margin for all pages. Note the use of {PAGENO} which can be used in any type of header or footer.</p> 
+<p class="examplecode">$mpdf = new mPDF();<br /> 
+$mpdf-&gt;SetHeader('Document Title|Center Text|{PAGENO}');<br /> 
+$mpdf-&gt;SetFooter('Document Title');<br /> 
+$mpdf-&gt;WriteHTML('Document text');<br /> 
+$mpdf-&gt;Output();</p> 
+<h6>Variant #3 (Controlling style with variables)</h6> 
+<p>This is the same as Variant #2, but you can control some aspects of style for the headers/footers by altering certain mPDF variables.</p> 
+<p class="examplecode">$mpdf = new mPDF();<br /> 
+$mpdf-&gt;SetHeader('Document Title|Center Text|{PAGENO}');<br /> 
+$mpdf-&gt;SetFooter('Document Title');<br />
+<br />
+$mpdf-&gt;defaultheaderfontsize=10;<br />
+$mpdf-&gt;defaultheaderfontstyle='B';<br />
+$mpdf-&gt;defaultheaderline=0;<br /> 
+$mpdf-&gt;defaultfooterfontsize=10;<br /> 
+$mpdf-&gt;defaultfooterfontstyle='BI';<br /> 
+$mpdf-&gt;defaultfooterline=0;<br />
+<br /> 
+$mpdf-&gt;WriteHTML('Document text');<br /> 
+$mpdf-&gt;Output();</p> 
+<h6>Variant #4 (Array) - DEPRACATED<br />
+</h6> 
+<p>Set a header/footer using an array of values. This allows greater control over styling. Recommended to use Variant #5, which is very similar, but specifies <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> forms separately.</p> 
+<p class="examplecode"><br />
+$arr = array (<br />
+&nbsp; 'odd' =&gt; array (<br />
+&nbsp;&nbsp;&nbsp; 'L' =&gt; array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'content' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-size' =&gt; 10,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-style' =&gt; 'B',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-family' =&gt; 'serif',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'color'=&gt;'#000000'<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'C' =&gt; array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'content' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-size' =&gt; 10,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-style' =&gt; 'B',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-family' =&gt; 'serif',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'color'=&gt;'#000000'<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'R' =&gt; array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'content' =&gt; 'My document',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-size' =&gt; 10,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-style' =&gt; 'B',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-family' =&gt; 'serif',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'color'=&gt;'#000000'<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'line' =&gt; 1,<br />
+&nbsp; ),<br />
+&nbsp; 'even' =&gt; array ()<br />
+);<br /> 
+$mpdf-&gt;SetHeader($arr);</p> 
+<h6>Variant #5 (Array)<br />
+</h6> 
+<p>Set a header/footer using an array of values. This allows greater control over styling.&nbsp; <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately using the second parameter of <a href="http://mpdf1.com/manual/index.php?tid=149">SetHeader()</a>.</p> 
+<p class="examplecode"><br />
+$arr = array (<br />
+&nbsp;&nbsp;&nbsp; 'L' =&gt; array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'content' =&gt; 'Chapter 1',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-size' =&gt; 10,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-style' =&gt; 'B',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-family' =&gt; 'serif',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'color'=&gt;'#000000'<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'C' =&gt; array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'content' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-size' =&gt; 10,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-style' =&gt; 'B',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-family' =&gt; 'serif',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'color'=&gt;'#000000'<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'R' =&gt; array (<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'content' =&gt; 'My document',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-size' =&gt; 10,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-style' =&gt; 'B',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'font-family' =&gt; 'serif',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 'color'=&gt;'#000000'<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'line' =&gt; 1,<br />
+);<br />
+<br /> 
+$mpdf-&gt;SetHeader($arr, 'O');&nbsp; // E for Even header</p> 
+<p class="manual_block"><b>Note:</b> When you are using the array form, any values that are not defined in the array use the document default values, not the defaultheader values (like the previous Simple form)&nbsp; i.e. an undefined font-size uses the document default of 10pt, not the <span class="parameter">$defaultheaderfontsize</span> of 8pt.</p> 
+<p>Although this looks complex, you could change one value easily throughout a document:</p> 
+<p class="examplecode">// following from above...<br />
+$mpdf-&gt;AddPage();<br />
+$arr['L']['content'] = 'Chapter 2';<br />
+$mpdf-&gt;SetHeader($arr, 'O');</p> 
+<h5>Changing Header/Footer during the document</h5> 
+<p>This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use, whichever of the Variants above you are using. When a new page is added to the document (e.g. using <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt;) mPDF does the following:</p> 
+<ul> 
+<li>writes the footer for the current page</li> 
+<li>starts the new page</li> 
+<li>writes the header for the new page</li> 
+</ul> 
+<p>Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:</p> 
+<ul> 
+<li>change the header before the page-break</li> 
+<li>change the footer after the page-break<br />
+</li> 
+</ul> 
+<p class="examplecode">$mpdf = new mPDF();<br />
+$mpdf-&gt;SetHeader('First section header');<br /> 
+$mpdf-&gt;SetFooter('First section footer');<br /> 
+$mpdf-&gt;WriteHTML('First section text...');<br /> 
+<br />
+// Set the new Header before you AddPage<br />
+$mpdf-&gt;SetHeader('Second section header');<br /> 
+$mpdf-&gt;AddPage();<br />
+// Set the new Footer after you AddPage<br />
+$mpdf-&gt;SetFooter('Second section footer');<br /> 
+<br />
+$mpdf-&gt;WriteHTML('Second section text...');<br />
+<br />
+$mpdf-&gt;Output();</p> 
+<p>It gets even more complicated if you are using <span class="smallblock">DOUBLE-SIDED</span> document and you want to start the new section of your book on an <span class="smallblock">ODD</span> page:</p> 
+<p class="examplecode">$mpdf = new mPDF();<br />
+$mpdf-&gt;useOddEven = true;<br />
+<br />
+$mpdf-&gt;SetHeader('First section header');<br /> 
+$mpdf-&gt;SetFooter('First section footer');<br /> 
+$mpdf-&gt;WriteHTML('First section text...');<br /> 
+<br />
+// Use a conditional page-break to ensure you are on an EVEN page before changing the Header<br />
+$mpdf-&gt;AddPage('','E');<br />
+<br />
+// Now you know that this page-break takes you to an ODD page<br /> 
+$mpdf-&gt;SetHeader('Second section header');<br />
+$mpdf-&gt;AddPage();<br />
+$mpdf-&gt;SetFooter('Second section footer');<br /> 
+<br />
+$mpdf-&gt;WriteHTML('Second section text...');<br />
+<br />
+$mpdf-&gt;Output();</p> 
+<h5>Table of Contents</h5> 
+<p>Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Contents gets so clumsy, it is recommended that you consider one of the <span class="smallblock">NAMED</span> methods. Here for the record is how you would do it:</p> 
+<p class="examplecode">$mpdf = new mPDF();<br />
+$mpdf-&gt;useOddEven = true;<br />
+<br />
+// Set header and footer arrays for section:Introduction<br />
+$intro_header_odd_array = array(...);<br />
+$intro_header_even_array = array(...);<br />
+$intro_footer_odd_array = array(...);<br />
+$intro_footer_even_array = array(...);<br />
+<br />
+// Set header and footer arrays for section:Main<br /> 
+$main_header_odd_array = array(...);<br /> 
+$main_header_even_array = array(...);<br /> 
+$main_footer_odd_array = array(...);<br /> 
+$main_footer_even_array = array(...);<br /> 
+<br />
+// Set the headers/footers for the Introduction<br />
+$mpdf-&gt;setHeader($intro_header_odd_array,'O');<br />
+$mpdf-&gt;setHeader($intro_header_even_array,'E');<br /> 
+$mpdf-&gt;setFooter($intro_footer_odd_array,'O');<br /> 
+$mpdf-&gt;setFooter($intro_footer_even_array,'E');<br />
+<br />
+$mpdf-&gt;AddPage('', '', 1, '', 'on');&nbsp;&nbsp;&nbsp; // suppress page numbering for the introduction<br /> 
+<br />
+$mpdf-&gt;WriteHTML('Introduction of document...');<br />
+<br />
+$mpdf-&gt;AddPage('','E');<br />
+<br />
+$mpdf-&gt;setHeader($main_header_odd_array,'O');<br /> 
+$mpdf-&gt;setHeader($main_header_even_array,'E');<br />
+<br /> 
+$mpdf-&gt;TOCpagebreak('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', <br /> 
+&nbsp;&nbsp; $toc-preHTML, $toc-postHTML, $toc-bookmarkText, 1, 'A', 'off');&nbsp;&nbsp;&nbsp; // sets numbering to start at A<br />
+<br />
+$mpdf-&gt;setFooter($main_footer_odd_array,'O');<br /> 
+$mpdf-&gt;setFooter($main_footer_even_array,'E');<br /> 
+<br />
+$mpdf-&gt;WriteHTML('Main part of document...');<br /> 
+<br /> 
+$mpdf-&gt;Output();</p> 
+<p>... and for historical purposes using depracated TOC functions:</p> 
+<p class="examplecode">$mpdf = new mPDF();<br />
+$mpdf-&gt;useOddEven = true;<br />
+<br />
+// Set header and footer arrays for section:Introduction<br />
+$intro_header_odd_array = array(...);<br />
+$intro_header_even_array = array(...);<br />
+$intro_footer_odd_array = array(...);<br />
+$intro_footer_even_array = array(...);<br />
+<br />
+// Set header and footer arrays for section:Main<br /> 
+$main_header_odd_array = array(...);<br /> 
+$main_header_even_array = array(...);<br /> 
+$main_footer_odd_array = array(...);<br /> 
+$main_footer_even_array = array(...);<br /> 
+<br />
+// Set the headers/footers for the Introduction<br />
+$mpdf-&gt;setHeader($intro_header_odd_array,'O');<br />
+$mpdf-&gt;setHeader($intro_header_even_array,'E');<br /> 
+$mpdf-&gt;setFooter($intro_footer_odd_array,'O');<br /> 
+$mpdf-&gt;setFooter($intro_footer_even_array,'E');<br />
+<br />
+$mpdf-&gt;AddPage('', '', 1, '', 'on');&nbsp;&nbsp;&nbsp; // suppress page numbering for the introduction<br /> 
+<br />
+$mpdf-&gt;WriteHTML('Introduction of document...');<br />
+<br />
+// Set some variables for the ToC - these are all now depracated<br />
+$mpdf-&gt;TOCheader = array();<br />
+$mpdf-&gt;TOCfooter = array();<br />
+$mpdf-&gt;TOCpreHTML = '&lt;h2&gt;Table of Contents&lt;/h2&gt;');<br />
+$mpdf-&gt;TOCpostHTML = '&lt;p&gt;Text to come after the contenst list&lt;/p&gt;';<br />
+$mpdf-&gt;TOCbookmarkText = 'Contents';<br />
+<br />
+$mpdf-&gt;AddPage('','E');<br />
+<br />
+$mpdf-&gt;setHeader($main_header_odd_array,'O');<br /> 
+$mpdf-&gt;setHeader($main_header_even_array,'E');<br /> 
+$mpdf-&gt;AddPage('', '', 1, 'i', 'off');&nbsp;&nbsp;&nbsp; // sets page numbering to start here at 1<br />
+$mpdf-&gt;setFooter($main_footer_odd_array,'O');<br /> 
+$mpdf-&gt;setFooter($main_footer_even_array,'E');<br /> 
+<br />
+$mpdf-&gt;TOC(($tocfont, $tocfontsize, $tocindent, $resetpagenum, $pagenumstyle, $suppress, $toc_orientation, $TOCusePaging, $TOCuseLinking);<br /> 
+<br />
+$mpdf-&gt;WriteHTML('Main part of document...');<br /> 
+<br /> 
+$mpdf-&gt;Output();</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=151">SetHeader()</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=151">SetFooter()</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=208">$defaultheaderfontsize</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=209">$defaultheaderfontstyle</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=210">$defaultheaderline</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=211">$defaultfooterfontsize</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=213">$defaultfooterfontstyle</a></li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=213">$defaultfooterline</a></li> 
+</ul> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 14 Feb 2009<br />
+Validated 15 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:07:02 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=310&op_target=print&id=360 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:52 GMT -->
+</html>

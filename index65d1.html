@@ -1,0 +1,99 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=303&op_target=print&id=353 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:07 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Replaceable Aliases</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p class="manual_block"><b>Note:</b> Prior to mPDF 6.0 you could include <span class="parameter">{nb​}</span> and <span class="parameter">{nbpg​}</span> anywhere in the text of the document, including headers/footers.<br />
+In mPDF v6.0+ these will only be replaced when used in headers/footers.</p> 
+<p>There are several placemarkers you can include, which will be replaced when the PDF file is ouput:</p> 
+<p class="manual_param_dt"><span class="parameter">{nb​}<br />
+</span></p> 
+<p class="manual_param_dd">Will be replaced by the total number of pages in the document. This disregards any changes you make to page numbering with <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt; and will always return the actual number of pages in the PDF document. You can change this alias (in case you wish to use the text "{nb​}" in your document) using <a href="http://mpdf1.com/manual/index.php?tid=198">AliasNbPages()</a>. The alias is case-sensitive.</p> 
+<p class="manual_param_dt"><span class="parameter">{nbpg​}</span><span class="parameter">&nbsp;</span></p> 
+<p class="manual_param_dd">Will be replaced by the total number of pages in the document or page group. If you have reset the page numbering with <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt; the total number of pages in the current page group will be used (up to where the numbering is reset) rather the total number of pages in the whole document. You can change this alias (in case you wish to use the text "{nbpg​}" in your document) using <a href="http://mpdf1.com/manual/index.php?tid=198">AliasNbPageGroups()</a>. The alias is case-sensitive. The numbering style can be changed using <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt;.</p> 
+<p class="manual_param_dt"><span class="parameter">{PAGENO}</span></p> 
+<p class="manual_param_dd">Will be replaced by the Page number - but <b>only</b> in headers/footers. If you have reset the page numbering with <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt; the calculated document page number will be used rather the physical PDF document page number. You cannot change this alias. The alias is case-sensitive. The numbering style can be changed using <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt;.</p> 
+<p class="manual_param_dt"><span class="parameter">{DATE d/m/Y}</span></p> 
+<p class="manual_param_dd">Will be replaced by today's date - but <b>only</b> in headers/footers. The alias is case-sensitive. The date format can be defined using any of the values in the PHP function <a href="http://www.php.net/manual/en/function.date.php">date()</a>. There must be a space after <span class="parameter">{DATE</span> <br />
+Example: <span class="parameter">{DATE j-m-Y H:m}</span></p> 
+<p class="manual_param_dt"><span class="parameter">{colsum} {colsum<i><b>N</b></i>}<br />
+</span></p> 
+<p class="manual_param_dd">Place in cell inside a table footer i.e. &lt;tfoot&gt;&lt;td&gt;. The total of values in the corresponding column will be output at the bottom of every page, and the end of the tale. Default output is an integer. An optional integer <i><b>N</b></i> after colsum will specify a fixed number of decimal places. (mPDF &gt;= 5.4)</p> 
+<p class="manual_param_dt"><span class="parameter">{iteration&nbsp;<b>varname</b>}<br />
+</span></p> 
+<p class="manual_param_dd">Place in cell inside table header i.e. &lt;thead&gt;&lt;td&gt;. You can use any alphanumeric string as a unique varname. (When processed by mPDF it will be replaced by "__varname_" to avoid collision with an mPDF internal variable. The length of the alhanumeric string will determine the length of the placeholder used to space the text i.e. if your counter will reach 1000 you should use a string of at least 4-5 characters in length.</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=379">pagenumPrefix</a> - Specify text to precede page numbers generated by {PAGENO}</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=380">pagenumSuffix</a> - Specify text to follow page numbers generated by {PAGENO}</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=381">nbpgPrefix</a> - Specify text to precede page total generated by {nbpg }</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=382">nbpgSuffix</a> - Specify text to follow page numbers generated by {nbpg }</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=109">Page numbering</a> - </li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=217">aliasNbPg</a> - Specify the text to be replaced by the document page total</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=219">aliasNbPgGp</a> - Specify the text to be replaced by the group page total</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 13 Feb 2009<br />
+Validated 13 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:10:37 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=303&op_target=print&id=353 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:07 GMT -->
+</html>

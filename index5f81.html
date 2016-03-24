@@ -1,0 +1,273 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=502&op_target=print&id=578 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:12 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>OpenType layout features (OTL)</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p class="manual_block">OpenType layout features were introduced in mPDF &gt;= 6.0</p> 
+<h5>Advanced Typography</h5> 
+<p>Many TrueType fonts contain OpenType Layout (OTL) tables. These Advanced Typographic tables contain additional information that extend the capabilities of the fonts to support high-quality international typography:</p> 
+<ul> 
+<li>OTL fonts support ligatures, positional forms, alternates, and other substitutions.</li> 
+<li>OTL fonts include information to support features for two-dimensional positioning and glyph attachment.</li> 
+<li>OTL fonts contain explicit script and language information, so a text-processing application can adjust its behavior accordingly.</li> 
+</ul> 
+<p>mPDF 6 introduces the power and flexibility of the OpenType Layout font model into PDF. mPDF supports GSUB, GPOS and GDEF tables for now. mPDF does <i>not </i>support BASE and JSTF at present.</p> 
+<p>Other mPDF features to enhance complex scripts:</p> 
+<ul> 
+<li>Bidirectional (Bidi) algorithm for right-to-left (RTL) text</li> 
+<li>support for Kashida for justification of arabic scripts</li> 
+<li>partial support for CSS3 optional font features e.g. font-feature-settings, font-variant</li> 
+<li>improved "autofont" capability to select fonts automatically for any script</li> 
+<li>support for CSS :lang selector</li> 
+<li>dictionary-based line-breaking for Lao, Thai and Khmer (U+200B is also supported)</li> 
+<li>separate algorithm for Tibetan line-breaking</li> 
+</ul> 
+<p class="manual_block"><b>Note:</b> There are other smart-font technologies around to deal with complex scripts, namely Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.</p> 
+<h5>What can OTL Fonts do?</h5> 
+<p>Support for OTL fonts allows the faithful display of almost all complex scripts:</p> 
+<ul> 
+<li>Arabic (<span>السلام عليكم</span>), Hebrew (<span>שלום</span>), Syriac (<span>ܐܣܛܪܢܓܠܐ</span>)</li> 
+<li>Indic - Bengali (<span>স্লামালিকুম</span>), Devanagari (<span>नमस्ते</span>), Gujarati (<span>નમસ્તે</span>), Punjabi (<span>ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ</span>),<br /> 
+Kannada (<span>ನಮಸ್ತೆ</span>), Malayalam (<span>നമസ്തെ</span>), Oriya (<span>ନମସ୍କର</span>), Tamil (<span>வணக்கம்</span>), Telugu (<span>నమస్కారం</span>)</li> 
+<li>Sinhala (<span>ආයුඛෝවන්</span>), Thai (<span>สวัสดี</span>), Lao (<span>ສະບາຍດີ</span>), Khmer (<span>ជំរាបសួរ</span>), Myanmar (<span>မဂႆလာပၝ</span>),<br /> 
+Tibetan (<span>བཀྲ་ཤིས་བདེ་ལེགས།</span>)</li> 
+</ul> 
+<p>OTL features allow:</p> 
+<ul> 
+<li>Joining and Reordering</li> 
+<li>Complex syllables</li> 
+<li>Ligatures</li> 
+<li>Language-dependent substitutions&nbsp;</li> 
+<li>Font features - Optional substitutions Stylistic Alternatives (salt)&nbsp;</li> 
+<li>CSS control of discretionary OTL features</li> 
+<li>Mark repositioning (and diacritics)</li> 
+<li>Mark repositioning (and Contextual substitution)</li> 
+<li>Complex Typography An example which utilises many different GSUB and GPOS features together - first without GSUB and GPOS:</li> 
+<li>Text Justification using Kashida</li> 
+</ul> 
+<p>A full list of feature tags is at <a href="http://www.microsoft.com/typography/otspec/featurelist.htm">http://www.microsoft.com/typography/otspec/featurelist.htm</a></p> 
+<p>In mPDF, the following features are on by default:</p> 
+<ul> 
+<li>GSUB features: <span class="code">locl ccmp pref blwf abvf pstf pres abvs blws psts haln rlig calt liga clig mset</span> (all scripts)</li> 
+<li>GSUB features: <span class="code">isol fina fin2 fin3 medi med2 init nukt akhn rphf rkrf half vatu cjct cfar</span> (for appropriate scripts e.g. Indic, Arabic)</li> 
+<li>GPOS features: <span class="code">abvm blwm mark mkmk curs cpsp dist requ</span> [<span class="code">kern</span>]</li> 
+</ul> 
+<p>NB '<span class="code">requ</span>' is not listed in the Microsoft registry of Feature tags; however it is found in the Arial Unicode MS font (it repositions the baseline for punctuation in Kannada script).</p> 
+<p><span class="code">kern</span> is used in some fonts to reposition marks etc. and is essential for correct display, so in mPDF <span class="code">kern</span> is on by default when any non-Latin script is used.</p> 
+<p>Complex scripts require a "shaping engine" to re-order glyphs and apply the OTL features by syllable. MS Word and Wordpad run on the Windows platform use "Uniscribe", whereas some browsers such as FireFox and OpenOffice use Pango/HarfBuzz. The different shaping engines (and indeed different versions of them) can produce different results.</p> 
+<p>Different applications have different defaults (on/off) for some of the features e.g. kerning.</p> 
+<p>When testing mPDF, if text does not appear as you expect, ensure that the font is installed on your computer, and view the HTML in a browser. Also try copying/pasting the text into Wordpad/Word/OpenOffice and ensure that the correct font has been applied.</p> 
+<p>Note that Wordpad sometimes substitutes a different font if it does not like the one you have chosen, and does not even indicate that the substitution has occurred.</p> 
+<h5>CSS control of font features</h5> 
+<p>See <a href="http://www.w3.org/TR/css3-fonts/#font-rend-props">http://www.w3.org/TR/css3-fonts/#font-rend-props</a> for information about CSS3 and font-features.</p> 
+<p>The following are supported in mPDF:</p> 
+<ul> 
+<li><span class="code">font-variant-position</span></li> 
+<li><span class="code">font-variant-caps</span></li> 
+<li><span class="code">font-variant-ligatures</span></li> 
+<li><span class="code">font-variant-numeric</span></li> 
+<li><span class="code">font-variant-alternates</span> - Only [<span class="code">normal | historical-forms</span>] supported (i.e. most are NOT supported)<br /> 
+e.g. <span class="code">stylistic, styleset, character-variant, swash, ornaments, annotation</span> (use <span class="code">font-feature-settings</span> for these)</li> 
+<li><span class="code">font-variant</span> - as above, and except for: <span class="code">east-asian-variant-values, east-asian-width-values, ruby</span></li> 
+<li><span class="code">font-language-override</span></li> 
+<li><span class="code">font-feature-settings</span></li> 
+</ul> 
+<p><span class="code">font-variant-east-asian</span> is NOT supported</p> 
+<p>NB <span class="code">@font-face</span> is NOT supported</p> 
+<p>NB <span class="code">@font-feature-values</span> is NOT supported</p> 
+<p><b>Note:</b> <span class="code">font-variant</span> specifies a single property in CSS2, whereas in CSS3 it has become a shorthand for all the other <span class="code">font-variant-*</span> properties. <span class="code">font-variant: small-caps</span> was the form supported in CSS2, and will work in mPDF.</p> 
+<p>See notes later about font kerning.</p> 
+<p>Examples:</p> 
+<p class="examplecode">/* use small-cap alternate glyphs */<br /> 
+.smallcaps { font-feature-settings: "smcp" on; }<br /> 
+<br /> 
+/* convert both upper and lowercase to small caps (affects punctuation also) */<br /> 
+.allsmallcaps { font-feature-settings: "c2sc", "smcp"; }<br /> 
+<br /> 
+/* enable historical forms */<br /> 
+.hist { font-feature-settings: "hist"; }<br /> 
+<br /> 
+/* disable common ligatures, usually on by default */<br /> 
+.noligs { font-feature-settings: "liga" 0; }<br /> 
+<br /> 
+/* enable tabular (monospaced) figures */<br /> 
+td.tabular { font-feature-settings: "tnum"; }<br /> 
+<br /> 
+/* enable automatic fractions */<br /> 
+.fractions { font-feature-settings: "frac"; }<br /> 
+<br /> 
+/* use the second available swash character */<br /> 
+.swash { font-feature-settings: "swsh" 2; }<br /> 
+<br /> 
+/* enable stylistic set 7 */<br /> 
+.fancystyle {<br /> 
+font-family: Gabriola; /* available on Windows 7, and on Mac OS */<br /> 
+font-feature-settings: "ss07";<br /> 
+}</p> 
+<h5>How to use OTL in mPDF</h5> 
+<p>In <span class="code">config_fonts.php</span> there are 2 variables which affect OTL features for each font family e.g.:</p> 
+<p class="examplecode">"dejavusanscondensed" =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; 'R' =&gt; "DejaVuSansCondensed.ttf",<br />
+&nbsp;&nbsp;&nbsp; 'B' =&gt; "DejaVuSansCondensed-Bold.ttf",<br />
+&nbsp;&nbsp;&nbsp; 'I' =&gt; "DejaVuSansCondensed-Oblique.ttf",<br />
+&nbsp;&nbsp;&nbsp; 'BI' =&gt; "DejaVuSansCondensed-BoldOblique.ttf",<br />
+&nbsp;&nbsp;&nbsp; <b>'useOTL' =&gt; 0xFF,<br />
+&nbsp;&nbsp;&nbsp; 'useKashida' =&gt; 75,</b><br /> 
+),</p> 
+<h6>useOTL</h6> 
+<p>useOTL should be set to an integer between 0 and 255. Each bit will enable OTL features for a different group of scripts:</p> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td>Bit</td> 
+<td>dec</td> 
+<td>hex</td> 
+<td>Enabled</td> 
+</tr> 
+<tr> 
+<td>1</td> 
+<td>1</td> 
+<td>0x01</td> 
+<td>GSUB/GPOS - Latin script</td> 
+</tr> 
+<tr> 
+<td>2</td> 
+<td>2</td> 
+<td>0x02</td> 
+<td>GSUB/GPOS - Cyrillic script</td> 
+</tr> 
+<tr> 
+<td>3</td> 
+<td>4</td> 
+<td>0x04</td> 
+<td>GSUB/GPOS - Greek script</td> 
+</tr> 
+<tr> 
+<td>4</td> 
+<td>8</td> 
+<td>0x08</td> 
+<td>GSUB/GPOS - CJK scripts (excluding Hangul-Jamo)</td> 
+</tr> 
+<tr> 
+<td>5</td> 
+<td>16</td> 
+<td>0x10</td> 
+<td>(Reserved)</td> 
+</tr> 
+<tr> 
+<td>6</td> 
+<td>32</td> 
+<td>0x20</td> 
+<td>(Reserved)</td> 
+</tr> 
+<tr> 
+<td>7</td> 
+<td>64</td> 
+<td>0x40</td> 
+<td>(Reserved)</td> 
+</tr> 
+<tr> 
+<td>8</td> 
+<td>128</td> 
+<td>0x80</td> 
+<td>GSUB/GPOS - All other scripts (including all RTL scripts, complex scripts etc)</td> 
+</tr> 
+</tbody> </table> 
+<p>Setting <span class="code">useOTL</span> to 0 (or omitting it) will disable all OTL features. Setting <span class="code">useOTL</span> to 255 or 0xFF will enable OTL for all scripts. Setting <span class="code">useOTL</span> to 0x82 will enable OTL features for Cyrillic and complex scripts.</p> 
+<p>In a font like Free Serif, it may be useful to enable OTL features for complex scripts, but disable OTL for Latin scripts (to save processing time). However, see above - this may disable kerning in Latin scripts in certain circumstances.</p> 
+<h6>useKashida</h6> 
+<p>useKashida should be set for arabic fonts if you wish to enable text justification using kashida. The value should be an integer between 0 and 100 and represents the percentage of additional space required to justify the text on a line as a ratio of kashida/inter-word spacing.</p> 
+<h5>Choosing fonts to add to mPDF 6</h5> 
+<p>Fonts with OTL need to have GDEF, GSUB and GPOS tables in the font file. Although TrueType font files are binary files, the table names and script/feature tags are written as ASCII characters; open the .ttf or .otf file in a text editor such as Windows Notepad, and you will see GDEF, GSUB and GPOS in the first few lines if they are present. You can also search the file to see if the script tags are present for your desired scripts cf. <a href="http://www.microsoft.com/typography/otspec/scripttags.htm">http://www.microsoft.com/typography/otspec/scripttags.htm</a>.</p> 
+<p>Note: The OTL specification for Indic fonts was updated in 2005 to version 2. The v2 script tag for Bengali is "bng2" whereas prior to this it was "beng". Many open-source font files are still written for the old specification. This is supported by mPDF, although v2 fonts give better results.</p> 
+<p>Note: mPDF does not support Graphite or AAT font features.</p> 
+<h6>Configuring new fonts for mPDF 6</h6> 
+<p>To add a font, first copy the font file to the <span class="filename">/ttfonts/</span> folder.</p> 
+<p>Then edit <span class="filename">config_fonts.php</span> to add. See the manual for details if you are not already familiar with this.</p> 
+<p>If you wish to use this font with <span class="code">autoLangToFont</span>, you also need to edit <span class="filename">config_lang2fonts.php</span></p> 
+<h6>Setting OTL use at runtime</h6> 
+<p>mPDF caches some font information in the <span class="filename">/ttfontdata/</span> folder to improve performance. This is regenerated if you change the value of <span class="code">useOTL</span> for a font.</p> 
+<p>There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g. for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in <span class="filename">config_fonts.php</span>:</p> 
+<p class="examplecode">"freeserif" =&gt; array(<br /> 
+'R' =&gt; "FreeSerif.ttf",<br /> 
+'B' =&gt; "FreeSerifBold.ttf",<br /> 
+'I' =&gt; "FreeSerifItalic.ttf",<br /> 
+'BI' =&gt; "FreeSerifBoldItalic.ttf",<br /> 
+'useOTL' =&gt; 0x00,<br /> 
+),<br /> 
+"freeserif2" =&gt; array(<br /> 
+'R' =&gt; "FreeSerif.ttf",<br /> 
+'B' =&gt; "FreeSerifBold.ttf",<br /> 
+'I' =&gt; "FreeSerifItalic.ttf",<br /> 
+'BI' =&gt; "FreeSerifBoldItalic.ttf",<br /> 
+'useOTL' =&gt; 0xFF, /* Uses OTL for all scripts */<br /> 
+'useKashida' =&gt; 75,<br /> 
+),</p> 
+<p>You could then either use this second font name in your stylesheets e.g.</p> 
+<p class="examplecode">&lt;p style="font-family:freeserif2;"&gt;Hallo World (in Arabic)&lt;/p&gt;</p> 
+<p>or, you could use font translation e.g.</p> 
+<p class="examplecode">$mpdf-&gt;fonttrans['freeserif'] = 'freeserif2';</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 3 Jan 2015<br />
+Validated 3 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:04:14 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=502&op_target=print&id=578 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:12 GMT -->
+</html>

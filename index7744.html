@@ -1,0 +1,127 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=515&op_target=print&id=591 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Lists</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 6.0)</p> 
+<p>Lists are handled as for other block level elements, so you can apply any CSS properties usable on blocks (e.g. border, background, padding) to UL/OL and LI tags.</p> 
+<p>There is full support for CSS properties "<span class="code">list-style</span>", "<span class="code">list-style-image</span>", "<span class="code">list-style-type</span>", and "<span class="code">list-style-position</span>".</p> 
+<h6>List Modes</h6> 
+<p>There are two modes for lists: "mpdf" mode and "browser" mode. Mode is set using the configurable variable <span class="code">list_auto_mode</span> in <span class="filename">config.php</span></p> 
+<p>1) Browser mode gives the same display as most browsers. In this mode, the default list indentation is set by <span class="code">padding "0 auto"</span> in the default CSS in <span class="filename">config.php</span>. "<span class="code">auto</span>" equates to the value of <span class="code">list_indent_default</span> in <span class="filename">config.php</span> - this is a "magic" value for padding, which is applied to either left or right depending on directionality of the list (rtl/ltr).</p> 
+<p>2) "mPDF" mode gives results compatible with versions of mPDF prior to v6.0. In this mode, the indentation is calculated differently: the outside edge of the list item is considered to be the outside edge of the bullet or number. For numbered lists, mPDF calculates the width of the largest number and this width is used to set the outside edge. The default list indentation of "<span class="code">auto</span>" in mPDF mode is set by <span class="code">list_indent_default_mpdf</span>. This value is added to the automatic calculated indentation. For backwards compatibility, <span class="code">list_indent_first_level = 0;</span> can be used to prevent any indentation of the first list level.</p> 
+<p>The automatic indentation only works for bullets or numbered lists, and is ignored if "<span class="code">list-style-position: inside</span>" is set, or images are used for markers.</p> 
+<p>Browser mode is set as the default - for backwards compatibility, change this to "mpdf".</p> 
+<h6>List top &amp; bottom margins</h6> 
+<p>The default in browsers is to add a top and bottom margin to the outermost list only. This can be defined using CSS as:</p> 
+<p class="examplecode">ul, ol { margin-top: 0.83em; margin-bottom: 0.83em; }<br /> 
+ul ul, ul ol, ol ul, ol ol { margin-top: 0; margin-bottom: 0; }</p> 
+<p>This style is included in file <span class="filename">mpdf.css</span></p> 
+<p>Versions of mPDF prior to v6.0 always added a top and bottom margin to the outermost list, (but no variation from this was possible). mPDF 6 is therefore backwards compatible re. the margins.</p> 
+<p>[NB The CSS styles are included in <span class="filename">mpdf.css</span>, because the <span class="code">defaultCSS</span> values set in <span class="filename">config.php</span> only works on basic elements, and cannot use selectors such as "<span class="code">ol ol</span>".]</p> 
+<h6>Other configurable variables</h6> 
+<p>Configurable variables are used to define size and offset for list bullets (i.e. disc, circle or square). The values can be any valid CSS size.</p> 
+<p>To specify a fixed bullet size and offset to give a similar appearance to most browsers, the default is set as:</p> 
+<ul> </ul> 
+<p class="examplecode">$this-&gt;list_marker_offset = '5.5pt';<br />
+$this-&gt;list_symbol_size = '3.6pt';</p> 
+<p>To specify size and offset proportional to the list item's font size (compatible with versions of mPDF prior to v6.0), use:</p> 
+<ul> </ul> 
+<p class="examplecode">$this-&gt;list_marker_offset = '0.45em';<br />
+$this-&gt;list_symbol_size = '0.31em';</p> 
+<h6>Notes on Lists</h6> 
+<p>The attribute <span class="code">type</span> is case sensitive (whereas it is case insensitive in CSS). This allows the use of shorthand versions e.g. <span class="code">type="A"</span> for uppercase alpha-numeric.</p> 
+<p>"<span class="code">list-style-type</span>" is only inherited to child LI (not to child UL/OL); <span class="code">list-style-image</span> and <span class="code">-position</span> are fully inherited.</p> 
+<p>Lists in tables are basic, as block-level elements are not supported inside tables.</p> 
+<p>Properties like <span class="code">text-align:justify</span> are inherited from surrounding elements, which will change the appearance of lists designed with earlier versions of mPDF.</p> 
+<p>The attribute <span class="code">start="3"</span> (integer) works for "OL"; it is an official (though depracated) HTML attribute.</p> 
+<p>List bullets (<span class="code">type = disc, circle </span>or<span class="code"> square</span>) are drawn rather than using font glyphs (from mPDF &gt;= v6.0), for better consistency.</p> 
+<p>For maximum backwards comaptibility with older versions of mPDF, change the following configurable variables in the <span class="code">config.php</span> file:</p> 
+<table class="bpmTopic"> <thead> 
+<tr> 
+<td><br />
+</td> 
+<td>mPDF 6.0 Default (Browser compatible)<br />
+</td> 
+<td>Backwards Compatible &lt;6.0<br />
+</td> 
+</tr> 
+</thead> <tbody> 
+<tr> 
+<td>Lists</td> 
+<td> 
+<p>$this-&gt;list_auto_mode = 'browser';</p> 
+$this-&gt;list_marker_offset = '5.5pt';<br />
+$this-&gt;list_symbol_size = '3.6pt';</td> 
+<td> 
+<p>$this-&gt;list_auto_mode = 'mpdf';</p> 
+<p>$this-&gt;list_marker_offset = '0.45em';<br />
+$this-&gt;list_symbol_size = '0.31em';</p> 
+</td> 
+</tr> 
+</tbody> </table>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 4 Jan 2015<br />
+Validated 4 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:09:45 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=515&op_target=print&id=591 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+</html>

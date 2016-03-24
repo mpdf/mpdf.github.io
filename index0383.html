@@ -1,0 +1,99 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=356&op_target=print&id=408 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:21 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Using the HTML attribute - lang v5.x</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>When creating a multilingual document containing Arabic, Indic, <acronym title="Chinese-Japanese-Korean languages">CJK</acronym>, Vietnamese or Thai languages, the text in these languages needs to be identified in order to correctly display them using appropriate fonts.</p> 
+<p>Marking up your HTML text using the lang attribute is one way to do this. The attribute can be used on any block or in-line tag e.g. &lt;div lang="zh-CN"&gt;....&lt;/div&gt; or &lt;span lang="ru"&gt;...&lt;/span&gt;. It is also recognised in &lt;body&gt; or &lt;html&gt; tags.</p> 
+<p class="manual_block"><b>Important:</b> Support for the attribute <span class="parameter">lang</span> is only active when the variable <a href="http://mpdf1.com/manual/index.php?tid=344">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span>).</p> 
+<p>The language codes supported are determined by <span class="filename">config_cp.php</span> :</p> 
+<ul> 
+<li>en, ca, cy, da, de, es, eu, fr, ga, fi, is, it, nl, no, pt, sv</li> 
+<li>cs, hr, hu, pl, ro, sk, sl</li> 
+<li>bg, mk, ru, sr, uk</li> 
+<li>et, kl, lt, lv</li> 
+<li>el, tr</li> 
+<li>vi, th</li> 
+<li>CJK: ja, zh, zh-CN, zh-HK, zh-TW, ko</li> 
+<li>RTL: he, ar, fa, ps, ur, sd</li> 
+<li>INDIC: as, bn, gu, hi, kn, ks, ml, ne, or, pa, sd-IN, ta, te</li> 
+</ul> 
+<p>See <a href="http://mpdf1.com/manual/index.php?tid=357">ISO 639-1 language codes</a>.</p> 
+<p>Codes such as "en-US" are supported, and interpreted as "en"</p> 
+<p>When a language is set, the following happens (determined by function <span class="function">GetCodepage()</span>):</p> 
+<ul> 
+<li>available fonts are restricted to those which contain the necessary glyphs to display this language</li> 
+<li>justification type (<a href="http://mpdf1.com/manual/index.php?tid=203">$jSpacing</a>) is set when a block tag has the property <span class="parameter">text-align:justify</span>; for span/inline elements the justification is disabled for the enclosing block element.</li> 
+</ul> 
+<p class="manual_block"><b>Note:</b> Automatic language detection using <span class="function">SetAutoFont()</span> will detect language use in the text passed to mPDF, and add <span class="filename">&lt;span lang="xx" class="lang_xx"&gt;..&lt;/span&gt;</span> tags to mark up. Using automatic language detection may add to the processing time when creating a large document.</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=344">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=347">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=343">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 22 Mar 2009<br />
+Validated 20 Dec 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:05:03 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=356&op_target=print&id=408 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:21 GMT -->
+</html>

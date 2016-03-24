@@ -1,0 +1,131 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=516&op_target=print&id=592 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Line-height</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>The line-height of text can be controlled using the CSS property <span class="code">line-height</span> (since mPDF 4). This used a fixed value for the line-height when <span class="code">normal</span> was specified (the default CSS value) -&nbsp; set by the configurable variable <span class="code">normalLineheight</span>. It also used a fixed proportion to determine the position of the text baseline (non-configurable).</p> 
+<p>Form mPDF 6, you can (optionally) use font metrics derived from each font file to:</p> 
+<ul> 
+<li>Determine the height of a line when line-height is set to 'normal'</li> 
+<li>Determine the glyph baseline (previously a fixed value)</li> 
+</ul> 
+<p>Options are set by configurable variables in the <span class="code">config.php</span> file:</p> 
+<p>Default settings in mPDF versions 6 - recommended especially for complex scripts with marks used above or below characters:</p> 
+<ul> </ul> 
+<p class="examplecode">$this-&gt;useFixedNormalLineHeight = false;<br />
+$this-&gt;useFixedTextBaseline = false;<br />
+$this-&gt;adjustFontDescLineheight = 1.14;</p> 
+<p>Settings to be backwards compatible with mPDF versions &lt; 6:</p> 
+<ul> </ul> 
+<p class="examplecode">$this-&gt;useFixedNormalLineHeight = true;<br />
+$this-&gt;useFixedTextBaseline = true;<br />
+$this-&gt;normalLineheight = 1.33;</p> 
+<h6></h6> 
+<p>Using the font metrics will give approximately the same result as the fixed value for many standard Latin script fonts e.g. DejaVu Sans Condensed:</p> 
+<p>However, for some fonts the normal line-height using font metrics will be significantly taller, to account for the design of the font glyphs e.g. Khmer font:</p> 
+<p>For more information on how complex normal lineheights are, see Eric Meyers' website: <a href="http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/">http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/</a> and <a href="http://typophile.com/node/13081">http://typophile.com/node/13081</a></p> 
+<h5>CSS control of line-height</h5> 
+<p>From mPDF v 6.0 there are new controls for line-height using draft CSS3 properties. These can be set on all block level elements (P, DIV etc) and tables (TABLE/TD/TH).</p> 
+<p><b>line-stacking-strategy</b> = <span class="code">inline-line-height | block-line-height | max-height | grid-height</span></p> 
+<ul> 
+<li><span class="code">inline-line-height</span> - [default] lineheight is initially calculated from the block-level font[-size]; the height is expanded by any inline content, including the calculated lineheight of that inline content;</li> 
+<li><span class="code">block-line-height</span> - lineheight is fixed as the lineheight of the block-level font[-size];</li> 
+<li><span class="code">max-height</span> - lineheight is initially calculated from the block-level font; the height is expanded by any inline content, EXCLUDING the calculated lineheight of that inline content;</li> 
+<li><span class="code">grid-height</span> - lineheight is initially calculated from the block-level font; the height is expanded - AS MULTIPLES OF INITIAL LINEHEIGHT - by any inline content, EXCLUDING the calculated lineheight of that inline content;</li> 
+</ul> 
+<p>Note: XSL has a similar property with the same name, which uses different but equivalent values: <span class="code">line-height</span> instead of <span class="code">inline-line-height</span>, <span class="code">font-height</span> instead of <span class="code">block-line-height</span>. It also uses <span class="code">max-height</span>. The value <span class="code">grid-height</span> is new to the CSS3 property.</p> 
+<p><b>line-stacking-shift</b> = <span class="code">consider-shifts | disregard-shifts </span></p> 
+<p>This property determines whether to include or disregard the adjusted top- and bottom-edge of any characters that have a baseline-shift (e.g. superscript) when calculating lineheight.</p> 
+<p>Note: XSL has a similar property with a different name: <span class="code">line-height-shift-adjustment</span> which uses the same values.</p> 
+<p>For more details see the <a href="http://www.w3.org/TR/css3-linebox/#InlineBoxHeight">CSS3 draft specification</a>.</p> 
+<h5>Note for Advanced users</h5> 
+<p>There are actually three possible metrics that can be used in a TrueType font file. The differences are summed up quite well in this article at <a href="http://typophile.com/node/13081">http://typophile.com/node/13081</a>. mPDF will by default use the usWinAscent and usWinDescent values to determine a 'normal' line-height, with two variations:</p> 
+<ul> 
+<li>if either the usWinAscent or usWinDescent are greater than the font bounding box (yMin yMax), then the values are reduced to equal the yMin/yMax values. NB this works as a fix with Myanmar Text (Windows 8 version) to give a line-height normal that is equivalent to that produced in browsers.</li> 
+<li>if the USE_TYPO_METRICS bit is set on fsSelection (OS/2 table), this is telling the font to use the sTypo values and not the usWinAscent values. NB this works as a fix with Cambria Math font to give a normal line-height; at present, this is the only font I have found with this bit set; although note that MS WordPad and Windows FireFox browser use the big line-height from usWinAscent, whilst MS Word 2007 observes the fSelection value.</li> 
+</ul> 
+<p>You can change the font metrics used by mPDF, by editing the defined constant (<span class="code">_FONT_DESCRIPTOR</span>) at the top of the <span>mpdf.php</span> file:</p> 
+<ul> 
+<li>'<span class="code">winTypo</span>' uses sTypoAscender etc from the OS/2 table and is the one officially recommended - BUT</li> 
+<li>'<span class="code">win</span>' use usWinAscent etc from OS/2 and in practice seems to be used most commonly in Windows environment; this is the default in mPDF;</li> 
+<li>'<span class="code">mac</span>' uses Ascender etc from hhea table, and may be used to give results consistent with a Mac/OSX environment.</li> 
+</ul> 
+<p>Finally, you can override values for Ascent, Descent and Leading for any specific font, by setting values in <span class="code">config_font.php</span> e.g.</p> 
+<p class="examplecode">"cambriamath" =&gt; array( <br />
+&nbsp;&nbsp;&nbsp; 'R' =&gt; "cambria.ttc",<br />
+&nbsp;&nbsp;&nbsp; 'useOTL' =&gt; 0xFF,<br />
+&nbsp;&nbsp;&nbsp; 'TTCfontID' =&gt; array( 'R' =&gt; 2, ),<br />
+<b>&nbsp;&nbsp;&nbsp; 'Ascent' =&gt; 950,</b><br />
+<b>&nbsp;&nbsp;&nbsp; 'Descent' =&gt; -222,</b><br />
+<b>&nbsp;&nbsp;&nbsp; 'Leading' =&gt; 0,</b><br />
+),</p> 
+<p>Note - The same values are used for all styles of the font-family. Descent values should be negative. All values should be given using a 1000 units per em scale, regardless of the UnitsPerEm used in the font design.</p> 
+<h5>Notes</h5> 
+<p>Remember that line-height for a TABLE has a default value (1.2) set in the <span class="code">config.php defaultCSS</span>. This is left in for backwards compatability. You can change this value to 'normal' for results consistent with most browsers.</p> 
+<p>Line-height in a &lt;textarea&gt; is fixed and defined in <span class="code">classes/mpdfform.php</span> (= 1.2)</p> 
+<p>Details of the font metrics can be seen by inspecting the temporary font files e.g. <span class="code">/ttfontdata/[fontname].mtx.php</span>.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 4 Jan 2015<br />
+Validated 4 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:09:28 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=516&op_target=print&id=592 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+</html>

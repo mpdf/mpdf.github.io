@@ -1,0 +1,153 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=467&op_target=print&id=536 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:27 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Real life examples</div>
+<h3>Creating a PDF file from User Input</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>These scripts allow you to present a form to the user, who can enter text and upload an image; these are displayed first in the browser, with the option to create a PDF file from the output. These scripts should only be considered the basis of a full script and will need adapting considerably. In particular, note that the uploaded image files may need to be deleted at some point.</p> 
+<p class="manual_block">example_userinput.php</p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+$html = '<br />
+&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;form action="example_userinput2.php" method="post" enctype="multipart/form-data"&gt;<br />
+Enter text:<br />
+&lt;br /&gt;<br />
+&lt;textarea name="text" id="text"&gt;&lt;/textarea&gt;<br />
+&lt;br /&gt;<br />
+&lt;label for="file"&gt;Choose Image to upload:&lt;/label&gt; &lt;input type="file" name="file" id="file" /&gt;<br />
+&lt;br /&gt;<br />
+&lt;input type="submit" name="submit" value="Submit" /&gt;<br />
+&lt;/form&gt;<br />
+<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+';<br />
+<br />
+echo $html;<br />
+<br />
+exit;<br />
+<br />
+?&gt;</p> 
+<p class="manual_block">example_userinput2.php</p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+if (($_FILES["file"]["type"] == "image/gif" || $_FILES["file"]["type"] == "image/jpeg")<br />
+&amp;&amp; $_FILES["file"]["size"] &lt; 20000)&nbsp;&nbsp; {<br />
+&nbsp;&nbsp;&nbsp; // If the destination file already exists, it will be overwritten<br />
+&nbsp;&nbsp;&nbsp; move_uploaded_file($_FILES["file"]["tmp_name"], "../tmp/" . $_FILES["file"]["name"]);<br />
+}<br />
+else {<br />
+&nbsp;&nbsp;&nbsp; echo "Invalid file";<br />
+}<br />
+<br />
+$html ='<br />
+&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;div&gt;'.$_POST['text'].'&lt;/div&gt;<br />
+&lt;img src="' ."../tmp/" . $_FILES["file"]["name"].'" /&gt;<br />
+<br />
+&lt;form action="example_userinput3.php" method="post" enctype="multipart/form-data"&gt;<br />
+&lt;textarea style="display:none" name="text" id="text"&gt;'.$_POST['text'].'&lt;/textarea&gt;<br />
+&lt;input type="hidden" name="filename" id="filename" value="'. $_FILES["file"]["name"].'" /&gt;<br />
+&lt;input type="submit" name="submit" value="Create PDF file" /&gt;<br />
+&lt;/form&gt;<br />
+<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+';<br />
+<br />
+echo $html;<br />
+<br />
+exit;<br />
+<br />
+?&gt;</p> 
+<p class="manual_block">example_userinput3.php</p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+define('_MPDF_PATH', '../');<br />
+<br />
+include("../mpdf.php");<br />
+$mpdf=new mPDF('' ); <br />
+<br />
+$html ='<br />
+&lt;html&gt;<br />
+&lt;body&gt;<br />
+&lt;div&gt;'.$_POST['text'].'&lt;/div&gt;<br />
+&lt;img src="' ."../tmp/" . $_POST['filename'].'" /&gt;<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$mpdf-&gt;Output(); <br />
+<br />
+exit;<br />
+<br />
+?&gt;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 29 Jan 2012<br />
+Validated 3 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:12:15 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=467&op_target=print&id=536 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:27 GMT -->
+</html>

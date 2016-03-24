@@ -1,0 +1,168 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=346&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:39 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Forms</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>In standard usage, mPDF will create a visual representation of any &lt;form&gt; fields it encounters.</p> 
+<p>===========================<br />
+"Active" Forms - Experimental!<br />
+===========================<br />
+At present , using active forms will prevent any internal and external links - that appear before active forms(?) - from working (why?)</p> 
+<p>Need to save the form for proper use - see example, when scroll forwards and back, the form disappears??</p> 
+<p>Need to set Userrights (see above), and</p> 
+<p>$mpdf-&gt;useActiveForms=true;</p> 
+<p>$mpdf-&gt;setUserRights();</p> 
+<p>$mpdf-&gt;SetProtection(array('copy', 'print', 'modify', 'annot-forms' ),'yourPassword','myPassword');</p> 
+<p>&nbsp;</p> 
+<p>For Output options, see:</p> 
+<ul> 
+<li class="manual_boxlist">formButtonBorderStyle - <br />
+</li> 
+<li class="manual_boxlist">formButtonHighlight - <br />
+</li> 
+<li class="manual_boxlist">formCheckboxStyle - <br />
+</li> 
+<li class="manual_boxlist">formComboEditable - <br />
+</li> 
+<li class="manual_boxlist">formInputBorderStyle - <br />
+</li> 
+<li class="manual_boxlist">formLineWidth - <br />
+</li> 
+<li class="manual_boxlist">formRadioStyle - <br />
+</li> 
+<li class="manual_boxlist">formSubmitHTTPFormat - <br />
+</li> 
+<li class="manual_boxlist">formSubmitMailFormat -&nbsp;</li> 
+<li class="manual_boxlist"><span class="manual_boxlist">formSubmitUrl - </span></li> 
+</ul> 
+<p>&nbsp;</p> 
+<p>Some rough notes:</p> 
+<p>NB InAcrobat Reader 8.0 .. Preferences .. Javascript ..&nbsp; Enable Acrobat Javascript - must be ticked<br />
+<br />
+Set using<br />
+$mpdf-&gt;useActiveForms = true;<br />
+$mpdf-&gt;setUserRights(); <br />
+<br />
+If encrypting, ensure to set annot-form as one of the options e.g.<br />
+$mpdf-&gt;SetProtection(array('copy', 'print', 'modify', 'annot-forms' ),''); <br />
+<br />
+Normal form settings will work IF:<br />
+There is a "Submit" button (must be &lt;input type="submit"&gt; to work)<br />
+Action is a valid http:/https: url AND method=POST (NB This will only work in browser - a limitation set by PDF speification)<br />
+OR<br />
+Action is a valid "mailto:emailaddress" (NB E-mail includes values of all fields on the document i.e. in more than one form, whereas POST will only send the appropriate form fields)<br />
+Otherwise Submit will be disabled<br />
+<br />
+Or you can set:<br />
+var $formSubmitUrl = '';&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // Either a http: or mailto: target for Submitting form(s)<br />
+var $formSubmitMailFormat = 'XML';&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // Format to submit data on Submit<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // FDF, XFDF NB the Url must end url with #FDF for either of these<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // HTML, XDP, XML, XFD, PDF - (NB HTML can only be used with http: not mailto:)<br />
+var $formSubmitHTTPFormat = 'HTML';<br />
+<br />
+e.g.<br />
+$mpdf-&gt;formSubmitUrl = 'mailto:Ian Back &lt;recipient@bpm1.com&gt;';<br />
+$mpdf-&gt;formSubmitMailFormat = 'XML';<br />
+<br />
+$mpdf-&gt;formSubmitUrl = 'http://www.yourdomain.com/datahandler.php';<br />
+$mpdf-&gt;formSubmitHTTPFormat = 'HTML';<br />
+<br />
+$mpdf-&gt;formSubmitUrl = 'http://www.yourdomain.com/datahandler.php#FDF';<br />
+$mpdf-&gt;formSubmitHTTPFormat = 'FDF';<br />
+<br />
+When you use Active Forms<br />
+- it disables all internal and external links - unless they come after the form (?why)<br />
+- cannot use with anything that buffers and moves content i.e. Columns, "Keep block together" i.e. page-break-inside: avoid, "Keep-with-Table" etc.<br />
+NB any form or field name/id with "-" in it will be replaced with "_" in the submitted data as PDF cannot cope with fields containing "-"<br />
+Bug Not Fixed yet::: Radio buttons will not work in RTL document/multiple forms on one document???? Crash all the fields following<br />
+<br />
+NB <br />
+INPUT type="file" not supported<br />
+LABEL not supported<br />
+OPTGROUP - not supported<br />
+&lt;BUTTON&gt; as tag not supported<br />
+<br />
+Any INPUT image/button will be automatically disabled - only those with type=reset or type=submit will be "Live"<br />
+<br />
+* Acrobat will not let you set properties for one radio button [readonly/disabled/size/color]; group properties are defined by the last button set<br />
+<br />
+A number of default properties are set at the top of the mpdf.php file. They can either be edited there, or changed using $mpdf-&gt;variable='':<br />
+<br />
+var $formCheckboxStyle = 'check';&nbsp;&nbsp;&nbsp; // check=Default, cross, diamond, circle, star, and square<br />
+var $formRadioStyle = 'circle';&nbsp;&nbsp;&nbsp; // check, cross, diamond, circle=Default, star, and square<br />
+var $formComboEditable = false;&nbsp;&nbsp;&nbsp; // Whether the user can type in a combo box - Boolean<br />
+var $formLineWidth = 1;&nbsp;&nbsp;&nbsp; // Width of border (text-input and textarea) - 0,1,2,3 (default=1)<br />
+var $formButtonHighlight = 'push';&nbsp;&nbsp;&nbsp; // Appearance of a button when pushed - none|invert|push|outline<br />
+var $formInputBorderStyle = 'solid';&nbsp;&nbsp;&nbsp; // Appearance of borders to INPUT and TEXTAREA solid|beveled|dashed|inset|underline<br />
+var $formButtonBorderStyle = 'beveled';&nbsp;&nbsp;&nbsp; // Appearance of borders to Form buttons solid|beveled|dashed|inset|underline<br />
+var $formSubmitUrl = '';&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // Either a http: or mailto: target for Submitting form(s)<br />
+var $formSubmitFormat = 'XML';&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // Format to submit data on Submit<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; //FDF, XFDF NB the Url must end url with #FDF for either of these<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; //HTML, XDP, XML, XFD, PDF - (NB HTML can only be used with http: not mailto:)<br />
+<br />
+</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 13 Feb 2009<br />
+Validated 22 Apr 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:27 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=346&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:39 GMT -->
+</html>

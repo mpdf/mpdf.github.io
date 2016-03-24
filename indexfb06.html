@@ -1,0 +1,101 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=433&op_target=print&id=492 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>StartProgressBarOutput()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 4.2)</p> 
+<p>StartProgressBarOutput – Enable progress bars to be shown during file generation</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>StartProgressBarOutput</b> ( [ string <span class="parameter">$mode</span> ] )</p> 
+<p>Enable progress bars to be shown during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation. To set this value globally you can edit the value for <span class="code">progressBar</span> in the configuration file <span class="filename">config.php</span></p> 
+<p class="manual_block"><b>Note:</b> You may need to define the constant _MPDF_URI if you use progress bars. The constant _MPDF_URI is needed to redirect the user to the PDF file (and prior to mPDF 5.0 to locate a javascript file within the progress bar script). It must be either a relative path (e.g. '../') or a full URI (e.g. 'http://www.mydomain.com/mpdf/'). If you do not define it before calling mPDF() mPDF will assign it the same value as _MPDF_PATH. This is fine if you have used a relative path. _MPDF_PATH requires either a relative path or a filesystem real path (e.g. '/homepages/27/d84233457/htdocs/')</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">mode</span></p> 
+<p class="manual_param_dd"><b>Values</b> (case-insensitive)<br /> 
+1 <i>or</i> <span class="smallblock">BLANK</span>&nbsp;or omitted: Shows 1 progress bar (simple form) = <span class="smallblock">DEFAULT</span><br /> 
+2: Shows multiple progress bars for detailed examination of progress</p> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+define('_MPDF_URI','../'); &nbsp;&nbsp;&nbsp; // must be&nbsp; a relative or absolute URI - not a file system path<br />
+<br /> 
+$mpdf=new mPDF();<br /> 
+$mpdf-&gt;StartProgressBarOutput(2);<br /> 
+$mpdf-&gt;WriteHTML('You will hardly have time to see the progress bars!');<br /> 
+$mpdf-&gt;Output();<br /> 
+<br /> 
+?&gt;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=425">progressBar</a> –Specify whether to show progress bars during file generation</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=461">progbar_heading</a> - define customised heading for progress bars</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=462">progbar_altHTML</a> - define customised HTML for progress bars<br /> 
+</li> 
+</ul> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 13 Feb 2010<br />
+Validated 13 Feb 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:17:27 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=433&op_target=print&id=492 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

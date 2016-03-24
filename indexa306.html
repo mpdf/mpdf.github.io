@@ -1,0 +1,100 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=507&op_target=print&id=583 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:21 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Automatic font selection</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p class="manual_block"><b>Note:</b> This describes automatice font selection in mPDF &gt;= v6.</p> 
+<p>mPDF has two functions which can be used together or separately:</p> 
+<p><span class="code">autoScriptToLang</span> - marks up HTML text using the lang attribute, based on the Unicode script block in question, and configurable values in <span class="code">config_script2lang.php</span>.</p> 
+<p><span class="code">autoLangToFont</span> - selects the font to use, based on the HTML lang attribute, using configurable values in <span class="code">config_lang2font.php</span>.</p> 
+<p>For automatic font selection, ideally we would choose the font based on the language in use. However it is actually impossible to determine the language used from a string of HTML text. The Unicode script block can be ascertained, and sometimes this tells us the language e.g. Telugu. However, Cyrillic script is used for example in many different languages. So the best we can do is base it on the script used. However, mPDF does this in two stages via the <span class="code">lang</span> attribute, because this allows the options of using either of the stages alone or together:</p> 
+<p class="examplecode">&lt;p&gt;English ру́сский язы́к <span>پښتو</span>&lt;/p&gt;</p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↓ <b>autoScriptToLang</b> (config_script2lang.php) ↓</p> 
+<p class="examplecode">&lt;p&gt;English &lt;span lang="und-Cyrl"&gt;ру́сский язы́к&lt;/span&gt; &lt;span lang="ps"&gt;<span>پښتو</span>&lt;/span&gt;&lt;/p&gt;</p> 
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ↓ <b>autoLangToFont</b> (config_lang2fonts.php) ↓</p> 
+<p class="examplecode">Uses "lang" to select font, and to determine OTL features applied</p> 
+<h5>autoScriptToLang</h5> 
+<p class="examplecode">$mpdf-&gt;autoScriptToLang = true;<br /> 
+$mpdf-&gt;baseScript = 1;<br /> 
+$mpdf-&gt;autoVietnamese = true;<br /> 
+$mpdf-&gt;autoArabic = true;</p> 
+<p><span class="code">$mpdf-&gt;baseScript = 1;</span> tells mPDF which Script to ignore. It is set by default to "1" which is for Latin script. In this mode, all scripts <i>except</i> Latin script are marked up with <span class="code">lang</span> attribute. To select other scripts as the base, see the file <span class="code">/classes/ucdn.php</span></p> 
+<p>Using <span class="code">autoScriptToLang</span>, mPDF detects text runs based on Unicode script block; using the values in <span class="code">config_script2lang.php</span> it then encloses the text run within a span tag with the appropriate language attribute. For many scripts, the language cannot be determined: see the example above which recognises Cyrillic script and marks it up using <span class="code">und-Cyrl</span>, which is a valid IETF tag, coding for language="undetermined", script="Cyrillic".</p> 
+<p>Two optional refinements are added: Vietnamese text can often be recognised by the presence of certain characters which do not appear in other Latin script langauges, and similarly analysis of the text can attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi. If active, the text will then be marked with a specific language tag e.g. "vi", "pa", "ur", "fa" etc.</p> 
+<p>These features can be disabled or enabled (default) using the variables <span class="code">$mpdf-&gt;autoVietnamese</span> <span class="code">$mpdf-&gt;autoArabic</span>, either in <span class="filename">config.php</span> or at runtime.</p> 
+<h5>autoLangToFont</h5> 
+<p class="examplecode">$mpdf-&gt;autoLangToFont = true;</p> 
+<p>You can edit the values in <span class="code">config_lang2font.php</span> to specify which fonts are used for which <span class="code">lang</span>.</p> 
+<p>Using text with multiple languages</p> 
+<p>Recommended ways to use multiple languages in mPDF:</p> 
+<ol> 
+<li>If you have full control over the HTML, mark-up the text with the <span class="code">lang </span>atribute and use CSS (<span class="code">:lang</span> selector preferably); this method means that the language information can also be used by OTL for language dependent substitutions.</li> 
+<li>If you have no control over (user) HTML input and want to output faithfully, use both <span class="code">autoScriptToLang</span> and <span class="code">autoLangToFont</span></li> 
+</ol> 
+<p>It is preferable not to use <span class="code">autoScriptToLang</span> and <span class="code">autoLangToFont</span> unless they are necessary: they will result in increased processing time, and OTL tables will not be able to use language dependent substitutions when undefined languages are set e.g "<span class="code">und-Cyrl</span>".</p> 
+<p class="manual_block"><b>Note:</b> As from mPDF 6.0 automatic font selection can be used within an SVG image. Control is separate from that of the rest of the document. For details, see the defined constants at the top of classes/svg.php file.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 3 Jan 2015<br />
+Validated 3 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:04:51 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=507&op_target=print&id=583 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:21 GMT -->
+</html>

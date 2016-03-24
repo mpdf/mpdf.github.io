@@ -1,0 +1,94 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=411&op_target=print&id=469 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Headers & Footers</div>
+<h3>Headers & Top margins</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 4.0)</p> 
+<p>In standard usage, mPDF sets the following:</p> 
+<ul> 
+<li>top-margin = distance in mm from top of page to start of text (ignoring any headers)</li> 
+<li>header-margin = distance in mm from top of page to start of header</li> 
+<li>bottom-margin = distance in mm from bottom of page to bottom of text (ignoring any footers)</li> 
+<li>footer-margin = distance in mm from bottom of page to bottom of footer</li> 
+</ul> 
+<p>If you specify a header that extends further down the page than the top-margin, then the header and main text will overlap.</p> 
+<h5>Alternative margin usage</h5> 
+<p>The variables <span class="parameter">$this-&gt;setAutoTopMargin</span> and <span class="parameter">$this-&gt;setAutoBottomMargin</span> can be set in the config.php file. Both default to <span class="smallblock">FALSE</span>.</p> 
+<h6>pad</h6> 
+<p>If <span class="parameter">$this-&gt;setAutoTopMargin</span> is set to '<b>pad</b>' then the value for margin-top is used to set a fixed distance in mm (padding) between the bottom of the header and top of the main text. The converse is true with <span class="parameter">$this-&gt;setAutoBottomMargin</span>.</p> 
+<h6>stretch</h6> 
+<p>If <span class="parameter">$this-&gt;setAutoTopMargin</span> is set to '<b>stretch</b>' then the margin-top sets a <b>minimum</b> distance in mm between the top of the page and the top of the main text, which expands if header is too large to fit. The value <span class="parameter">$this-&gt;autoMarginPadding</span> (default = 2, configurable in <span class="filename">config.php</span>) defines an additional distance in mm used as padding between the header and main text. This is the behaviour seen in Microsoft Word. <br />
+The converse is true with <span class="parameter">$this-&gt;setAutoBottomMargin</span>.</p> 
+<h5>Experimental!</h5> 
+<p>Use of this function is probably best considered experimental. It is incompatible with some of the other functionality in mPDF, and has some limitations:</p> 
+<p>- Using either pad or stretch, the values are set for the whole document - changes during the document will produce unpredictable results</p> 
+<p>- Incompatible with orientation changes, <span class="parameter">forceportraitheaders</span> or <span class="parameter">forceportraitmargins</span></p> 
+<p>- Does not work with "write to current page" options for Headers</p> 
+<p>- Incompatible with CSS @paged media</p> 
+<p>- Cannot set a new Footer when already further down the page than there is room needed for footer</p> 
+<p>- Potential error if using {nbpg} to define page total in an HTML header or footer. The top/bottom margin is calculated by writing the HTML header using the current page no. If when the header is finally written, a page number total of e.g. 500 causes an extra line in the header/footer, this will not be allowed for.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 17 Dec 2009<br />
+<span class="redbold">Draft (not yet validated)</span></div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:07:24 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=411&op_target=print&id=469 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+</html>

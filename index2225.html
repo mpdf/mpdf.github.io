@@ -1,0 +1,102 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=406&op_target=print&id=464 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:38:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Installation & Setup</div>
+<h3>Reducing memory usage</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>mPDF "Lite"</h5> 
+<p>The mPDF main file <span class="filename">mpdf.php</span> is over 1MB in size. Simply to parse the mPDF class requires over 10MB of memory in PHP. This may not be a problem, but if your PHP configuration does not allow you to increase memory, or you envisage multiple calls on your server at the same time, you can consider producing a 'Lite' form of the mpdf.php script.</p> 
+<p>A utility script <span class="filename">compress.php</span> is included in mPDF in the root folder. This generates a new <span class="filename">mpdf.php</span> script omitting functions which you do not require. (It does not actually compress the file)</p> 
+<p>As from mPDF 6.0.1 this file will be distribtued as compress.php.distr to avoid other users running the file unwantedly. To use compress, just rename the file compress.php (and remember to delete or rename it after you have finished using it).</p> 
+<p>As a guideline:</p> 
+<table class="bpmTopnTailC"> <thead> 
+<tr> <th>&nbsp;Version 5.1<br />
+</th> 
+<td>Size of mpdf.php file</td> 
+<td>Memory usage in PHP</td> 
+</tr> 
+</thead> <tbody> 
+<tr> <th>Full script</th> 
+<td>1170kB</td> 
+<td>12.75MB</td> 
+</tr> 
+<tr> <th>Omitting functions, but including:<br />
+Tables, lists and images</th> 
+<td>697kB</td> 
+<td>7.0MB</td> 
+</tr> 
+<tr> <th>Omitting all optional functions</th> 
+<td>496kB</td> 
+<td>5.25MB</td> 
+</tr> 
+</tbody> </table> 
+<p>Firstly, rename the <span class="filename">mpdf.php</span> file as <span class="filename">mpdf_source.php</span></p> 
+<p>Then point your broswer to <span class="filename">[path_to_mpdf]/compress.php</span></p> 
+<p>Follow the instructions on screen. This will produce (overwriting if necessary) a new <span class="filename">mpdf.php</span> file.</p> 
+<p>Do not delete the <span class="filename">mpdf_source</span> file, which will remain as your original.</p> 
+<p class="manual_block"><b>Tip:</b> Consider setting <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not need complex table borders, or <span class="parameter">$mpdf-&gt;packTableData = true;</span> if you do not mind the extra processing time.</p> 
+<p class="manual_block"><b>Note:</b> mPDF&gt;=5.0 Ensure that you have set write permissions to <a href="http://mpdf1.com/manual/index.php?tid=445">temporary folders</a></p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 17 Dec 2009<br />
+Validated 21 Apr 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:03:41 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=406&op_target=print&id=464 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:38:58 GMT -->
+</html>

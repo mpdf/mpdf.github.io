@@ -1,0 +1,134 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=549&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Arabic (RTL) text v5.x</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p class="manual_block"><b>Note:</b> Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1</p> 
+<h6>Document Directionality - RTL versus LTR</h6> 
+<p>The document has a baseline direction which is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:</p> 
+<ul> 
+<li>text alignment in blocks for which text-align has not been specifically set</li> 
+<li>layout of mirrored page-margins, columns, ToC and Indexes, headers / footers</li> 
+</ul> 
+<p>This base/document directionality is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> by default, and can be set by any of the following:</p> 
+<p class="examplecode">$mpdf-&gt;SetDirectionality('rtl');<br />
+&lt;html dir="rtl"&gt; or &lt;html style="direction: rtl;"&gt;<br />
+&lt;body dir="rtl"&gt; or &lt;body style="direction: rtl;"&gt;</p> 
+<p>Base direction is an inherited CSS property, so will affect all content, unless direction is specified elswhere.</p> 
+<h6>Block-level Directionality</h6> 
+<p>Direction can be set for any HTML block elements e.g. &lt;div&gt;&lt;p&gt;&lt;table&gt;&lt;ul&gt; etc using:</p> 
+<p class="examplecode">[HTML]<br />
+&lt;div style="direction: rtl;"&gt;<br />
+or<br />
+[CSS stylesheet]<br />
+div.right { direction: rtl; }</p> 
+<p>Block-level direction <i>may</i> affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.</p> 
+<p>Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.</p> 
+<h6>Text alignment</h6> 
+<p>The default value for text-align is "a nameless value which is dependent on direction". However, once text-align is specified, it is respected and inherited by all descendants.</p> 
+<h6>Directionality in Tables</h6> 
+<ul> 
+<li>direction can only be set on the top-level element of nested lists</li> 
+<li>direction can only be set on &lt;table&gt;, NOT on &lt;thead&gt;&lt;tbody&gt;&lt;td&gt; etc.</li> 
+<li>nested tables CAN have different directions</li> 
+</ul> 
+<h6>Text Bidirectionality</h6> 
+<p>mPDF analyses any mixed text which contains <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text. The text between HTML tags is divided into "chunks" of <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> and <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.</p> 
+<p><acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text chunks are reversed (both letter- and word-order).</p> 
+<p>If (and only if) the direction of the block is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> then the order of the chunks is reversed as well so that the sentence order is <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>.</p> 
+<p>This process when <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> arabic characters are present is fully automatic and unconfigurable. &lt;bdo&gt; etc has no effect.</p> 
+<p>However enclosing text in silent tags can sometimes help by altering the way the text is broken up into chunks to process e.g.:</p> 
+<p class="examplecode">english text &lt;span&gt;[arabic text]&lt;/span&gt; english text</p> 
+<h5>Fonts</h5> 
+<p>Arabic is a complex script requiring processing before output. However any appropriate font can be used - as long as it contains the characters in Unicode blocks 'Arabic Presentation Forms' A and B (U+FB50 - U+FDFF, U+FE70 - U+FEFE). Note that quite a large number of fonts contain the isolated characters but not the presentation forms.</p> 
+<p>2 fonts are bundled with mPDF: XB Zar and XB Riyaz. These are 2 of a number of fonts available from <a href="http://wiki.irmug.com/index.php/X_Series_2">http://wiki.irmug.com/index.php/X_Series_2</a>.</p> 
+<p class="manual_block"><b>Note:</b> The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for Pashto/Sindhi/Urdu/Kurdish, especially for joining characters and added new presentation forms.</p> 
+<h6>Non-unicode characters</h6> 
+<p>Some characters in Pashto/Sindhi/Urdu/Kurdish do not have Unicode values for the final/initial/medial forms of the characters. However, some fonts include glyphs for these characters "un-mapped" to Unicode (including XB Zar and XB Riyaz, which are bundled with mPDF).</p> 
+<p>By editing <span class="filename">config_fonts.php</span> and adding to appropriate fonts:</p> 
+<p class="examplecode">'unAGlyphs' =&gt; true,</p> 
+<p>this will force mPDF to use unmapped glyphs. It requires the font file to include a Format 2.0 POST table which references the glyphs by name as e.g. uni067C.med or uni067C.medi</p> 
+<p>XB Riyaz, XB Zar, Arabic Typesetting (MS), Arial (MS) all contain this table. NB If you want to know if a font file is suitable, you can open a .ttf file in a text editor and search for "uni067C.med" - if it exists, it may work!</p> 
+<p>Using "unAGlyphs" forces subsetting of fonts, and will not work with SIP/SMP fonts (using characters beyond the Unicode BMP Plane).</p> 
+<p>mPDF maps these characters to part of the Private Use Area allocated by Unicode U+F500-F7FF. This could interfere with correct use if the font already utilises these codes (unlikely).</p> 
+<h5>Alef Maksura</h5> 
+<p>Detailed note on the Alef Maksura for advanced users:<br />
+U+0649 Alef Maksura only normally appears at the end of a word (in Arabic)<br />
+Initial and Medial forms exist in Unicode as FBE8 and FBE9 but are not in most fonts<br />
+So the final form is set in mPDF to show as FEF0; Initial and medial forms are shown as isolated/final, so that it does at least display.<br />
+It seems that Initial and Medial forms are used in Koranic text.<br />
+I have left options encoded in <span class="function">function InitArabic()</span> if you want to alter - to make it double-joining, it also needs to be added to <span class="parameter">$arabPrevLink</span> as "\xd9\x89"</p> 
+<p class="manual_block"><b>Note:</b> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner, LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=344">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=347">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=343">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=356">lang</a> - Information on mPDF support for the HTML attribute lang</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.1</div>
+<div class="right">Created 10 Jan 2013<br />
+Validated 3 Jan 2015 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:41:01 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=549&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->
+</html>

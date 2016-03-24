@@ -1,0 +1,405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=496 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:12:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta name="keywords" content="mPDF, PDF, PHP, class, script, library, free, utf-8, unicode" />
+<meta name="Description" content="mPDF - a PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support" />
+	
+<meta http-equiv="Content-Language" content="en-GB"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<title>mPDF Manual</title>
+<link href="css_cache/988fa3_1_1.css" type="text/css" rel="stylesheet" /><link href="files/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<style type="text/css">
+div.bpmbook table { margin-left:0px; }
+</style>
+<![endif]-->
+
+<script src="js/dtree.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="favicon.png" type="image/vnd.microsoft.icon" />
+
+<!--[if IE]>
+<style type="text/css">
+    div#bpm_message {
+      top: expression( ( 0 - bpm_message.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+    }
+</style>
+<![endif]-->
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var xmlHttp;
+var ajaxdg = "1";
+var ajaxid = "568";
+var ajaxtid = "496";
+var ajaxsearchstring = "";
+// Standard Ajax Connection
+function GetXmlHttpObject() {
+  xmlHttp=null;
+  try {  // Firefox, Opera 8.0+, Safari
+	xmlHttp=new XMLHttpRequest();
+  }
+  catch (e) { // Internet Explorer
+	try { xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); }
+	catch (e) { xmlHttp=new ActiveXObject("Microsoft.XMLHTTP"); }
+  }
+  return xmlHttp;
+}
+
+
+
+
+// Ajax Response Action - Topic
+function topicStateChanged() { 
+  if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") { 
+	var str=xmlHttp.responseText;
+	document.getElementById("bpmbook").innerHTML=str;
+  }
+}
+
+function changeDisplayGroup( groupID ) {
+	var qs = "tid="+ajaxtid+"&id="+ajaxid+"&dg=" + groupID;
+	if( ajaxsearchstring != '' ) qs += '&searchstring=' + ajaxsearchstring;
+
+	xmlHttp=GetXmlHttpObject()
+	if (xmlHttp==null) { location.href = 'index.html' + qs; return; }
+	document.getElementById('tab_' + groupID).className='current';
+	document.getElementById('tab_' + ajaxdg).className='';
+	ajaxdg = groupID;
+
+	document.getElementById("bpmbook").innerHTML='<img src="images/loading-balls.gif" /> <small>Updating...</small><br /> <br />';
+	url = 'index0276.html?ajaxop=ajax&amp;ajax=topic&amp;' + qs;
+	url=url+"&bogus="+Math.random();	// prevents caching
+	xmlHttp.open("GET",url,true);
+	xmlHttp.onreadystatechange=topicStateChanged;	// Must come after open for IE
+	xmlHttp.send(null);
+	
+}
+
+
+// Ajax Response Action - RefAbstract
+function refExtraStateChanged() { 
+  if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") { 
+	var str=xmlHttp.responseText;
+	var reply = str.split("|*|");
+	var status = reply[0];
+	var pubmed_id = reply[1];
+	if (status=="COMPLETE") {
+	// Should not have got here - means a previous request has come back
+		return false;
+	}
+	else {
+		document.getElementById("refdetails").innerHTML=str;
+	}
+  }
+}
+
+// Ajax Response Action - RefAbstract
+function refStateChanged() { 
+  if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") { 
+	var str=xmlHttp.responseText;
+	var reply = str.split("|*|");
+	var status = reply[0];
+	var pubmed_id = reply[1];
+	var ref = reply[2];
+	document.getElementById("refdetails").style.display='block';
+	if (status=="PENDING") {
+		document.getElementById("refdetails").innerHTML=ref+'<div><img src="images/loading-balls.gif" /> <small>Checking for Updates...</small></div>';
+		url = 'indexab6f.html?ajaxop=ajax&amp;ajax=abstract&amp;get_pubmed_abstract=1&amp;pubmed_id=' + pubmed_id;
+		url=url+"&bogus="+Math.random();	// prevents caching
+		xmlHttp.open("GET",url,true);
+		xmlHttp.onreadystatechange=refExtraStateChanged;	// Must come after open for IE
+		xmlHttp.send(null);
+	}
+	else {
+		document.getElementById("refdetails").innerHTML=ref;
+	}
+  }
+}
+
+function showRefAbstract(source, AID, selID) {
+	// get the query string
+	var qs = "tid=496&id=568dg=1"
+	if( source==1 ) qs += '&pubmed_id=' + AID;
+	else if( source==2 ) qs += '&list=' + AID + '&selected=' + selID;
+	else qs += '&article_id=' + AID;
+	xmlHttp=GetXmlHttpObject()
+	if (xmlHttp==null) { location.href = 'indexd41d.html?' + qs + '&op=show_abstract&action=abstract'; return; }
+	var browser=navigator.appName;
+	if (browser=="Microsoft Internet Explorer") {
+	  var rslt = navigator.appVersion.match(/MSIE (\d+\.\d+)/, '');
+	  var version = Number(rslt[1]);
+	  if (version<7) {
+		scrOfY = document.documentElement.scrollTop;
+		scrOfX = document.documentElement.scrollLeft;
+		document.getElementById("refdetails").style.position='absolute';
+		document.getElementById("refdetails").style.top=scrOfY;
+		document.getElementById("refdetails").style.left=scrOfX;
+	  }
+	}
+	document.getElementById("refdetails").style.display='block';
+	document.getElementById("refdetails").innerHTML='<img src="images/loading-balls.gif" /> <small>Loading...</small><br />';
+	url = 'index1f94.html?ajaxop=ajax&amp;ajax=abstract&amp;' + qs;
+	url=url+"&bogus="+Math.random();	// prevents caching
+	xmlHttp.open("GET",url,true);
+	xmlHttp.onreadystatechange=refStateChanged;	// Must come after open for IE
+	xmlHttp.send(null);
+}
+
+
+  function bpm_close_message(msg_id) {
+	document.getElementById('bpm_message').style.display = 'none';
+	var bdate = new Date();
+	bdate.setTime(bdate.getTime()+(10000*24*60*60*1000));	// 30 years hence
+	document.cookie="last_message=" + msg_id + "; expires=" + bdate.toGMTString();
+  }
+
+function formHandler(to,ajaxdg){
+	if (to=="") return;
+	if (ajaxdg) to += "&dg="+ajaxdg;
+	location=to;
+}
+
+function openNewWindow(sURL, sName, iWidth, iHeight)
+{
+	var iTop  = (screen.height - iHeight) / 2 ;
+	var iLeft = (screen.width  - iWidth) / 2 ;
+	
+	var sOptions = "toolbar=no,menubar=no" ;
+	sOptions += ",title=Dialog"; 
+	sOptions += ",width=" + iWidth ; 
+	sOptions += ",height=" + iHeight ;
+	sOptions += ",resizable=yes";
+	sOptions += ",scrollbars=yes";
+	sOptions += ",left=" + iLeft ;
+	sOptions += ",top=" + iTop ;
+
+	var aWindow = window.open(sURL, sName, sOptions);
+
+	if (!aWindow.document) { alert("You may need to disable Pop-up blocking in your browser or Norton Internet Security etc. in order to use certain functions!"); }
+
+	aWindow.focus();
+	
+	return aWindow ;
+}
+
+
+function importPubMed(PubMedID){
+	location.href="indexaf5c.html?func=op&amp;funcpage=endnote&amp;pubmed_id="+PubMedID;
+}
+function importArticle(rid){
+	var agree=confirm("This record is not available from PubMed. Only the core record details are available to import e.g. no abstract. Are you sure you wish to continue?");
+	if (!agree) { return; }
+	location.href="indexe0d0.html?func=op&amp;funcpage=endnote&amp;article_id="+rid;
+}
+
+function showPrescribing(params)
+{
+	if (params == null) {params = "";}
+	oWindow = openNewWindow("index71eb.html?op=show_prescribing&amp;show_dialog_title=Prescribing"+params, "Prescribing", 700, 300) ;
+}
+
+/* for MC2Tabs */
+function displayTab(tab_id) {
+	var tabElm = document.getElementById(tab_id);
+	var tabContainerElm = tabElm ? tabElm.parentNode : null;
+
+	if (tabElm && tabContainerElm) {
+		var nodes = tabContainerElm.childNodes;
+
+		// Hide all other tabs
+		for (var i=0; i<nodes.length; i++) {
+			if (nodes[i].nodeName == "LI")
+				nodes[i].className = '';
+		}
+
+		// Show selected tab
+		tabElm.className = 'current';
+	}
+
+}
+
+
+function onLoaded() {
+
+}	// end of onLoaded() fn.
+/* ]]> */
+</script></head>
+<body onload="onLoaded()">
+
+	<div id="refdetails" style="position:fixed; top:0; left:0; z-index: 100; padding:10px; border:1px solid black; display:none; background-color:#FFFFD7; overflow: auto; max-height:80%"></div>
+
+<!-- START MAIN CONTAINER DIV -->
+<div id="bpmpage">
+
+<!-- START HEADER -->
+<div id="bpmheader">
+
+<div id="bpmlogo">
+<a href="http://mpdf1.com/manual"><img alt="" title="mPDF Manual" src="files/images/pmhlogo.gif" style="border: 0" /></a></div>
+
+<div id="bpmtitle">
+mPDF Book Manual</div><div id="bpmheaderright">
+<div id="bpmlinks"><!-- Links -->
+		<a href="index.html">Home</a> | <a href="http://www.mpdf1.com/forum/">Forum</a> | <a href="http://www.mpdf1.com/">mPDF website</a>
+	</div><!-- END Languages and Links -->
+</div><!-- END bpmHeaderRight -->
+<div class="clearer"></div>
+</div><!-- END bpmHeader -->
+
+
+
+<!-- SEARCH BAR -->
+    <form action="http://mpdf1.com/manual/index.php" method="post">
+<div id="bpmsearchbar">
+
+	<input type="hidden" value="15" name="show" />
+	<input type="hidden" value="op" name="func" />
+	<input type="hidden" value="search" name="funcpage" />
+      search
+      <input type="text" size="30" name="searchstring" />
+      <input type="image" alt="search" title="search" src="images/small_submit_white.gif" style="vertical-align: middle"  />	 &nbsp; &nbsp; 
+</div><!-- End bpmsearchbar -->
+	</form>
+<!-- End Header -->
+
+<div id="bpmmiddle">
+
+
+
+<div id="bpmleftcol">
+<!-- BEGIN Column Index -->
+<div class="moduletableth">Menu</div>
+<div class="moduleitem" id="pkg0_"><img alt="" src="images/box-0.gif" style="border:0; width:11px; height:7px" />&nbsp;<a class="mainlevel" href="javascript:cotree.closeAll();formHandler('index.html')">Home</a></div>
+<div class="moduleitem" id="pkg0_1"><img alt="" src="images/box-0.gif" style="border:0; width:11px; height:7px" />&nbsp;<a class="mainlevel" target="_blank" href="http://www.mpdf1.com/forum/">Forum</a></div>
+<div class="moduleitem" id="pkg0_2"><img alt="" src="images/box-0.gif" style="border:0; width:11px; height:7px" />&nbsp;<a class="mainlevel" href="index7530.html?wpage=1">Download</a></div>
+<div class="modulebottomitem" id="pkg0_3"><img alt="" src="images/box-0.gif" style="border:0; width:11px; height:7px" />&nbsp;<a class="mainlevel" href="index53a6.html?page=contact">Contact</a></div>
+<div class="moduletableth">Index</div>
+<div class="modulebottomitem" id="pkg1_1"> 
+<!-- 
+<p style="text-align: center" class="dtree"><a class="node" href="javascript:%20cotree.openAll();">Open All</a> | <a class="node" href="javascript:%20cotree.closeAll();">Close All</a></p> 
+-->
+ <script type="text/javascript"> /* 
+<![CDATA[ */ cotree = new dTree('cotree','images/mocCmenu/index.html'); cotree.config.useSelection=1; cotree.config.useLines=1; cotree.config.useIcons=1; cotree.config.useStatustext=0; cotree.config.closeSameLevel=1; cotree.add(0,-1,'','','',''); cotree.setCookie('cscotree', 596); cotree.setCookie('cocotree', 2000000.25002); cotree.add(1,0,'Introduction','','','','','',false); cotree.add(2,1,'Introduction','index32da.html?page=introduction','','','',false); cotree.add(5,1,'Acronyms','index6faa.html?page=acronyms','','','',false); cotree.add(6,1,'Symbols','indexbce7.html?page=symbols','','','',false); cotree.add(2000000,0,'User\'s Guide','','','','','',false); cotree.add(27002,2000000,'About mPDF','','','','',false); cotree.add(359,27002,'Features v5','index0f5a.html?tid=259','','','','',false); cotree.add(360,27002,'Requirements v5','index969a.html?tid=260','','','','',false); cotree.add(361,27002,'Limitations','index35dc.html?tid=261','','','','',false); cotree.add(364,27002,'Credits','index6ca7.html?tid=264','','','','',false); cotree.add(365,27002,'Licence','index1652.html?tid=265','','','','',false); cotree.add(34002,2000000,'Installation & Setup','','','','',false); cotree.add(552,34002,'Installation v5.x','index619b.html?tid=452','','','','',false); cotree.add(609,34002,'Installation v6.x','index00a1.html?tid=509','','','','',false); cotree.add(506,34002,'Reducing memory usage','indexbe43.html?tid=406','','','','',false); cotree.add(545,34002,'Folders for temporary files','indexec16.html?tid=445','','','','',false); cotree.add(5002,2000000,'Getting Started','','','','',false); cotree.add(206,5002,'Creating your first file','indexa5fa.html?tid=106','','','','',false); cotree.add(386,5002,'HTML or PHP?','indexce54.html?tid=286','','','','',false); cotree.add(24002,2000000,'Fonts & Languages','','','','',false); cotree.add(500,24002,'About PDF files','index8fa3.html?tid=400','','','','',false); cotree.add(553,24002,'Fonts in mPDF 5.x','index84a8.html?tid=453','','','','',false); cotree.add(601,24002,'Fonts in mPDF 6.x','indexa2f8.html?tid=501','','','','',false); cotree.add(602,24002,'OpenType layout (OTL)','index785f.html?tid=502','','','','',false); cotree.add(554,24002,'Font names','indexa406.html?tid=454','','','','',false); cotree.add(374,24002,'Available Fonts v5.x','index3ad8.html?tid=274','','','','',false); cotree.add(600,24002,'Available fonts v6','index3517.html?tid=500','','','','',false); cotree.add(429,24002,'Choosing a configuration v5.x','index93f4.html?tid=329','','','','',false); cotree.add(604,24002,'Choosing a configuration v6.x','index140d.html?tid=504','','','','',false); cotree.add(607,24002,'Automatic font selection','index0ee5.html?tid=507','','','','',false); cotree.add(456,24002,'lang v5.x','indexe65f.html?tid=356','','','','',false); cotree.add(605,24002,'lang 6.x','index36c6.html?tid=505','','','','',false); cotree.add(393,24002,'Input encoding','indexd870.html?tid=293','','','','',false); cotree.add(154,24002,'Fonts & Language cover v5.x','index39c1.html?tid=54','','','','',false); cotree.add(352,24002,'Arabic (RTL) text v5.x','index5202.html?tid=252','','','','',false); cotree.add(603,24002,'Bidirectional (RTL) text v6.x','indexcfab.html?tid=503','','','','',false); cotree.add(363,24002,'CJK Languages','index57bf.html?tid=263','','','','',false); cotree.add(422,24002,'Indic fonts v5.x','indexee38.html?tid=322','','','','',false); cotree.add(376,24002,'Default Font','index0d46.html?tid=276','','','','',false); cotree.add(375,24002,'Font substitution 5.x','indexf1b3.html?tid=275','','','','',false); cotree.add(606,24002,'Font substitution 6.x','indexb2f8.html?tid=506','','','','',false); cotree.add(379,24002,'Character substitution','index9a8f.html?tid=279','','','','',false); cotree.add(16002,2000000,'Configuration','','','','',false); cotree.add(499,16002,'Configuration files v5.x','index136f.html?tid=399','','','','',false); cotree.add(608,16002,'Configuration files v6.x','index40c0.html?tid=508','','','','',false); cotree.add(350,16002,'Configuration Methods','index1fee.html?tid=250','','','','',false); cotree.add(207,16002,'Configuration Variables','indexfb89.html?tid=107','','','','',false); cotree.add(26002,2000000,'HTML support','','','','',false); cotree.add(356,26002,'HTML Tags','index824d.html?tid=256','','','','',false); cotree.add(357,26002,'HTML Attributes','index2994.html?tid=257','','','','',false); cotree.add(358,26002,'Custom HTML Tags','indexac9a.html?tid=258','','','','',false); cotree.add(15002,2000000,'Tables','','','','',false); cotree.add(177,15002,'Tables','index8df7.html?tid=77','','','','',false); cotree.add(419,15002,'Table layout','indexf363.html?tid=319','','','','',false); cotree.add(392,15002,'Auto-layout algorithm','indexe48a.html?tid=292','','','','',false); cotree.add(391,15002,'Border collapse','indexb84e.html?tid=291','','','','',false); cotree.add(17002,2000000,'Paging','','','','',false); cotree.add(208,17002,'Page breaks','indexf31c.html?tid=108','','','','',false); cotree.add(380,17002,'Double-sided documents','indexcfeb.html?tid=280','','','','',false); cotree.add(406,17002,'Page size & Orientation','index8d09.html?tid=306','','','','',false); cotree.add(209,17002,'Page numbering','indexb564.html?tid=109','','','','',false); cotree.add(407,17002,'Using @page','index708d.html?tid=307','','','','',false); cotree.add(536,17002,'Different page sizes','indexcce9.html?tid=436','','','','',false); cotree.add(30002,2000000,'Headers & Footers','','','','',false); cotree.add(353,30002,'Headers & Footers','indexe12a.html?tid=253','','','','',false); cotree.add(410,30002,'Method 1','indexd017.html?tid=310','','','','',false); cotree.add(411,30002,'Method 2','index8f9d.html?tid=311','','','','',false); cotree.add(412,30002,'Method 3','index9405.html?tid=312','','','','',false); cotree.add(413,30002,'Method 4','index2fc7.html?tid=313','','','','',false); cotree.add(414,30002,'Page numbers & Date','indexfa74.html?tid=314','','','','',false); cotree.add(511,30002,'Headers & Top margins','index1320.html?tid=411','','','images/draft.gif','',false); cotree.add(415,30002,'Browser compatible HTML','index65eb.html?tid=315','','','','',false); cotree.add(418,30002,'Rotated pages','index87fe.html?tid=318','','','images/draft.gif','',false); cotree.add(23002,2000000,'CSS & Stylesheets','','','','',false); cotree.add(354,23002,'Introduction','indexc64a.html?tid=254','','','','',false); cotree.add(134,23002,'Supported CSS','index5a4b.html?tid=34','','','','',false); cotree.add(395,23002,'Default stylesheet','index740a.html?tid=295','','','','',false); cotree.add(498,23002,'Named colours','index4284.html?tid=398','','','','',false); cotree.add(31002,2000000,'Setting PDF file properties','','','','',false); cotree.add(347,31002,'Password protection','index4c9c.html?tid=247','','','','',false); cotree.add(348,31002,'Document Metadata','indexa5e5.html?tid=248','','','','',false); cotree.add(417,31002,'PDF Version','index6465.html?tid=317','','','','',false); cotree.add(25002,2000000,'What Else Can I Do?','','','','',false); cotree.add(484,25002,'Backgrounds & Borders','indexacdd.html?tid=384','','','','',false); cotree.add(501,25002,'Fixed position blocks','indexba0e.html?tid=401','','','','',false); cotree.add(485,25002,'Floating blocks','indexba16.html?tid=385','','','','',false); cotree.add(469,25002,'Hyphenation','index31fc.html?tid=369','','','','',false); cotree.add(345,25002,'Images','index3c45.html?tid=245','','','','',false); cotree.add(617,25002,'Kerning','index7c83.html?tid=517','','','','',false); cotree.add(616,25002,'Line-height','index3c0c.html?tid=516','','','','',false); cotree.add(626,25002,'Line breaking','index8efc.html?tid=526','','','','',false); cotree.add(615,25002,'Lists','indexb385.html?tid=515','','','','',false); cotree.add(362,25002,'Text Justification','index3236.html?tid=262','','','','',false); cotree.add(388,25002,'Annotations','index42b4.html?tid=288','','','images/draft.gif','',false); cotree.add(390,25002,'Barcodes','index4e74.html?tid=290','','','','',false); cotree.add(341,25002,'Bookmarks','index3470.html?tid=241','','','images/draft.gif','',false); cotree.add(346,25002,'Columns','indexa475.html?tid=246','','','images/draft.gif','',false); cotree.add(396,25002,'Forms','index567a.html?tid=296','','','','',false); cotree.add(344,25002,'Index','index7b1a.html?tid=244','','','','',false); cotree.add(599,25002,'Layers','indexc6fe.html?tid=499','','','images/draft.gif','',false); cotree.add(343,25002,'Table of Contents','indexb1da.html?tid=243','','','','',false); cotree.add(342,25002,'Watermarks','index452a.html?tid=242','','','images/draft.gif','',false); cotree.add(464,25002,'Graphs','index4d44.html?tid=364','','','images/draft.gif','',false); cotree.add(403,25002,'Replaceable Aliases','index2da5.html?tid=303','','','','',false); cotree.add(394,25002,'CMYK colours','index68e2.html?tid=294','','','','',false); cotree.add(449,25002,'Importing files & Templates','index27e4.html?tid=349','','','','',false); cotree.add(450,25002,'Overwriting existing files','indexc971.html?tid=350','','','','',false); cotree.add(460,25002,'Writing non-HTML text','index763c.html?tid=360','','','','',false); cotree.add(520,25002,'PDF/A1-b compliance','index2366.html?tid=420','','','','',false); cotree.add(581,25002,'PDF/X-1a compliance','indexac6a.html?tid=481','','','','',false); cotree.add(535,25002,'Capture HTML output','index04c8.html?tid=435','','','','',false); cotree.add(537,25002,'Saving to a database','indexdd7c.html?tid=437','','','','',false); cotree.add(594,25002,'Math Formulae with MathJax','index0d3a.html?tid=494','','','','',false); cotree.add(595,25002,'Math with MathJax 2','indexdd1e.html?tid=495','','','','',false); cotree.add(596,25002,'Combining Diacritics','indexc15c.html?tid=496','','','','',false); cotree.add(33002,2000000,'Real life examples','','','','',false); cotree.add(557,33002,'PDF from every page of website','index957c.html?tid=457','','','','',false); cotree.add(466,33002,'Invoice','index90d6.html?tid=366','','','','',false); cotree.add(467,33002,'Year Book','index004c.html?tid=367','','','','',false); cotree.add(468,33002,'Colour Charts CMYK','indexe670.html?tid=368','','','','',false); cotree.add(473,33002,'E-mail a PDF file','indexd559.html?tid=373','','','','',false); cotree.add(492,33002,'A5 Booklet','index51f0.html?tid=392','','','','',false); cotree.add(517,33002,'Reserving x blank pages','indexcb6b.html?tid=417','','','','',false); cotree.add(518,33002,'Letterhead letters','index0040.html?tid=418','','','','',false); cotree.add(567,33002,'User Input','index3a5e.html?tid=467','','','','',false); cotree.add(32002,2000000,'Write directly to document','','','','',false); cotree.add(378,32002,'Direct writing to document','index45a4.html?tid=278','','','','',false); cotree.add(18002,2000000,'Troubleshooting','','','','',false); cotree.add(132,18002,'Known Issues','index1dbe.html?tid=32','','','','',false); cotree.add(366,18002,'Slow!','index1773.html?tid=266','','','','',false); cotree.add(404,18002,'Text is replaced','index11fd.html?tid=304','','','','',false); cotree.add(377,18002,'Reserved Terms','index8690.html?tid=277','','','','',false); cotree.add(409,18002,'Browser incompatability','indexc122.html?tid=309','','','','',false); cotree.add(477,18002,'Error messages','index402a.html?tid=377','','','','',false); cotree.add(431,18002,'Blank screen','index6cc1.html?tid=331','','','','',false); cotree.add(432,18002,'Corrupt PDF file','index331d.html?tid=332','','','','',false); cotree.add(458,18002,'Notice warnings','index1d3b.html?tid=358','','','','',false); cotree.add(474,18002,'Image errors','index53a8.html?tid=374','','','','',false); cotree.add(508,18002,'Memory problems','index61da.html?tid=408','','','','',false); cotree.add(546,18002,'Resizing','indexe497.html?tid=446','','','','',false); cotree.add(574,18002,'mPDF class fails to Initialise','index1882.html?tid=474','','','','',false); cotree.add(575,18002,'Postcript printers','index42e2.html?tid=475','','','','',false); cotree.add(1000000,0,'Reference','','','','','',false); cotree.add(3001,1000000,'mPDF functions','','','','',false); cotree.add(284,3001,'mPDF()','index7d44.html?tid=184','','','','',false); cotree.add(372,3001,'Overview','indexf571.html?tid=272','','','','',false); cotree.add(401,3001,'AddColumn()','index0183.html?tid=301','','','','',false); cotree.add(129,3001,'AddPage()','indexa90a.html?tid=29','','','','',false); cotree.add(555,3001,'AddPageByArray()','indexf64f.html?tid=455','','','','',false); cotree.add(580,3001,'AddSpotColor','index37d2.html?tid=480','','','','',false); cotree.add(298,3001,'AliasNbPages()','indexe417.html?tid=198','','','','',false); cotree.add(299,3001,'AliasNbPageGroups()','indexdac9.html?tid=199','','','','',false); cotree.add(381,3001,'Annotation()','index2912.html?tid=281','','','','',false); cotree.add(290,3001,'AutosizeText()','index88d7.html?tid=190','','','images/draft.gif','',false); cotree.add(238,3001,'Bookmark()','indexba24.html?tid=138','','','','',false); cotree.add(570,3001,'CircularText()','index54c8.html?tid=470','','','images/draft.gif','',false); cotree.add(400,3001,'CreateIndex()','indexe64e.html?tid=300','','','','',false); cotree.add(244,3001,'CreateReference()','index6c47.html?tid=144','','','','',false); cotree.add(266,3001,'DefFooterByName()','index25e9.html?tid=166','','','','',false); cotree.add(265,3001,'DefHeaderByName()','index1e38.html?tid=165','','','','',false); cotree.add(270,3001,'DefHTMLFooterByName()','index80a3.html?tid=170','','','','',false); cotree.add(269,3001,'DefHTMLHeaderByName()','index688f.html?tid=169','','','','',false); cotree.add(416,3001,'Image()','index2842.html?tid=316','','','images/draft.gif','',false); cotree.add(438,3001,'ImportPage()','index5c09.html?tid=338','','','','',false); cotree.add(399,3001,'IndexEntry()','indexb94d.html?tid=299','','','','',false); cotree.add(408,3001,'IndexEntrySee()','index43fa.html?tid=308','','','','',false); cotree.add(632,3001,'InsertIndex()','index40c5.html?tid=532','','','','',false); cotree.add(402,3001,'MultiCell()','indexe2d8.html?tid=302','','','images/draft.gif','',false); cotree.add(225,3001,'Output()','index6f42.html?tid=125','','','','',false); cotree.add(451,3001,'OverWrite()','index18fc.html?tid=351','','','','',false); cotree.add(461,3001,'RestartDocTemplate()','index02d1.html?tid=361','','','','',false); cotree.add(430,3001,'RestrictUnicodeFonts()','indexdc9a.html?tid=330','','','images/draft.gif','',false); cotree.add(291,3001,'RoundedRect()','index65a2.html?tid=191','','','images/draft.gif','',false); cotree.add(465,3001,'SetAlpha()','index386f.html?tid=365','','','','',false); cotree.add(231,3001,'SetAnchor2Bookmark()','indexdb36.html?tid=131','','','','',false); cotree.add(294,3001,'SetAuthor()','index85f4.html?tid=194','','','','',false); cotree.add(447,3001,'SetAutoFont()','index2dc8.html?tid=347','','','','',false); cotree.add(230,3001,'SetBasePath()','index42a0.html?tid=130','','','','',false); cotree.add(239,3001,'SetColumns()','indexf772.html?tid=139','','','','',false); cotree.add(351,3001,'SetCompression()','index065f.html?tid=251','','','','',false); cotree.add(295,3001,'SetCreator()','indexe6a2.html?tid=195','','','','',false); cotree.add(534,3001,'SetDefaultBodyCSS()','index8a01.html?tid=434','','','','',false); cotree.add(258,3001,'SetDefaultFont()','index724d.html?tid=158','','','','',false); cotree.add(256,3001,'SetDirectionality()','index11d2.html?tid=156','','','','',false); cotree.add(259,3001,'SetDefaultFontSize()','index82cf.html?tid=159','','','','',false); cotree.add(228,3001,'SetDisplayMode()','indexba96.html?tid=128','','','','',false); cotree.add(489,3001,'SetDisplayPreferences()','index2a20.html?tid=389','','','','',false); cotree.add(441,3001,'SetDocTemplate()','indexbeab.html?tid=341','','','','',false); cotree.add(251,3001,'SetFooter()','index7582.html?tid=151','','','','',false); cotree.add(268,3001,'SetFooterByName()','indexa35e.html?tid=168','','','','',false); cotree.add(249,3001,'SetHeader()','indexda6f.html?tid=149','','','','',false); cotree.add(267,3001,'SetHeaderByName()','index7f1c.html?tid=167','','','','',false); cotree.add(252,3001,'SetHTMLFooter()','indexef45.html?tid=152','','','','',false); cotree.add(272,3001,'SetHTMLFooterByName()','index9896.html?tid=172','','','','',false); cotree.add(250,3001,'SetHTMLHeader()','index8367.html?tid=150','','','','',false); cotree.add(271,3001,'SetHTMLHeaderByName()','index9fae.html?tid=171','','','','',false); cotree.add(532,3001,'SetImportUse()','indexd693.html?tid=432','','','','',false); cotree.add(296,3001,'SetKeywords()','indexc4be.html?tid=196','','','','',false); cotree.add(440,3001,'SetPageTemplate()','indexb377.html?tid=340','','','','',false); cotree.add(229,3001,'SetProtection()','indexd466.html?tid=129','','','','',false); cotree.add(437,3001,'SetSourceFile()','indexde5d.html?tid=337','','','','',false); cotree.add(297,3001,'SetSubject()','indexae85.html?tid=197','','','','',false); cotree.add(232,3001,'SetTitle()','index4849.html?tid=132','','','','',false); cotree.add(571,3001,'SetVisibility()','index6bea.html?tid=471','','','','',false); cotree.add(369,3001,'SetWatermarkImage()','indexef28.html?tid=269','','','','',false); cotree.add(286,3001,'SetWatermarkText()','index5789.html?tid=186','','','','',false); cotree.add(292,3001,'Shaded_box()','index2363.html?tid=192','','','images/draft.gif','',false); cotree.add(533,3001,'StartProgressBarOutput()','indexc235.html?tid=433','','','','',false); cotree.add(436,3001,'Thumbnail()','index7a01.html?tid=336','','','','',false); cotree.add(283,3001,'TOCpagebreak()','index0e38.html?tid=183','','','','',false); cotree.add(556,3001,'TOCpagebreakByArray()','index227b.html?tid=456','','','','',false); cotree.add(285,3001,'TOC_Entry()','index7934.html?tid=185','','','','',false); cotree.add(439,3001,'UseTemplate()','index7247.html?tid=339','','','','',false); cotree.add(389,3001,'WriteBarcode()','index61d4.html?tid=289','','','','',false); cotree.add(288,3001,'WriteCell()','index201f.html?tid=188','','','images/draft.gif','',false); cotree.add(502,3001,'WriteFixedPosHTML()','index2064.html?tid=402','','','images/draft.gif','',false); cotree.add(221,3001,'WriteHTML()','index5d90.html?tid=121','','','','',false); cotree.add(289,3001,'WriteText()','index4093.html?tid=189','','','images/draft.gif','',false); cotree.add(349,3001,'FPDF Original Functions','index18fb.html?tid=249','','','images/draft.gif','',false); cotree.add(19001,1000000,'HTML control tags','','','','',false); cotree.add(405,19001,'Overview','index6c45.html?tid=305','','','images/draft.gif','',false); cotree.add(384,19001,'annotation','index4944.html?tid=284','','','','',false); cotree.add(507,19001,'barcode','index6dcc.html?tid=407','','','','',false); cotree.add(218,19001,'bookmark','index0a5f.html?tid=118','','','','',false); cotree.add(214,19001,'columnbreak','index34dc.html?tid=114','','','','',false); cotree.add(213,19001,'columns','indexdfc6.html?tid=113','','','','',false); cotree.add(538,19001,'dottab','index6cb6.html?tid=438','','','','',false); cotree.add(453,19001,'formfeed','index8908.html?tid=353','','','','',false); cotree.add(278,19001,'htmlpagefooter','index1ee0.html?tid=178','','','','',false); cotree.add(277,19001,'htmlpageheader','index5e97.html?tid=177','','','','',false); cotree.add(217,19001,'indexentry','indexc145.html?tid=117','','','','',false); cotree.add(486,19001,'indexinsert','indexb4be.html?tid=386','','','','',false); cotree.add(463,19001,'jpgraph','indexc08a.html?tid=363','','','','',false); cotree.add(210,19001,'pagebreak','index8cff.html?tid=110','','','','',false); cotree.add(273,19001,'pageheader','index6c43.html?tid=173','','','','',false); cotree.add(274,19001,'pagefooter','index8e18.html?tid=174','','','','',false); cotree.add(280,19001,'sethtmlpagefooter','indexfe57.html?tid=180','','','','',false); cotree.add(279,19001,'sethtmlpageheader','index8782.html?tid=179','','','','',false); cotree.add(276,19001,'setpagefooter','index8dd5.html?tid=176','','','','',false); cotree.add(275,19001,'setpageheader','index681c.html?tid=175','','','','',false); cotree.add(568,19001,'textcircle','indexb5ad.html?tid=468','','','','',false); cotree.add(219,19001,'tocentry','index05db.html?tid=119','','','','',false); cotree.add(282,19001,'tocpagebreak','index80c2.html?tid=182','','','','',false); cotree.add(488,19001,'watermarkimage','index5355.html?tid=388','','','','',false); cotree.add(487,19001,'watermarktext','indexc7db.html?tid=387','','','','',false); cotree.add(20001,1000000,'mPDF Variables','','','','',false); cotree.add(373,20001,'Overview','index3c91.html?tid=273','','','','',false); cotree.add(625,20001,'adjustFontDescLineheight','index35f2.html?tid=525','','','','',false); cotree.add(317,20001,'aliasNbPg','index490c.html?tid=217','','','images/draft.gif','',false); cotree.add(319,20001,'aliasNbPgGp','indexd96e.html?tid=219','','','images/draft.gif','',false); cotree.add(226,20001,'allow_charset_conversion','index7982.html?tid=126','','','','',false); cotree.add(235,20001,'allow_html_optional_endtags','index64f0.html?tid=135','','','','',false); cotree.add(478,20001,'allow_output_buffering','index565a.html?tid=378','','','','',false); cotree.add(578,20001,'allowCJKorphans','index13df.html?tid=478','','','images/draft.gif','',false); cotree.add(579,20001,'allowCJKoverflow','indexec50.html?tid=479','','','images/draft.gif','',false); cotree.add(307,20001,'anchor2Bookmark','indexfe96.html?tid=207','','','images/draft.gif','',false); cotree.add(382,20001,'annotMargin','index55a8.html?tid=282','','','images/draft.gif','',false); cotree.add(387,20001,'annotOpacity','index7ee3.html?tid=287','','','images/draft.gif','',false); cotree.add(614,20001,'autoArabic','indexb1ef.html?tid=514','','','','',false); cotree.add(443,20001,'autoFontGroupSize','indexbcf8.html?tid=343','','','','',false); cotree.add(610,20001,'autoLangToFont','indexe9c4.html?tid=510','','','','',false); cotree.add(514,20001,'autoMarginPadding','index0e6e.html?tid=414','','','images/draft.gif','',false); cotree.add(490,20001,'autoPageBreak','indexb3d1.html?tid=390','','','','',false); cotree.add(611,20001,'autoScriptToLang','index1435.html?tid=511','','','','',false); cotree.add(613,20001,'autoVietnamese','index4423.html?tid=513','','','','',false); cotree.add(592,20001,'backupSubsFont','index8ff7.html?tid=492','','','images/draft.gif','',false); cotree.add(593,20001,'backupSIPFont','indexd412.html?tid=493','','','images/draft.gif','',false); cotree.add(612,20001,'baseScript','index08e2.html?tid=512','','','','',false); cotree.add(257,20001,'biDirectional','indexb45a.html?tid=157','','','images/draft.gif','',false); cotree.add(587,20001,'bleedMargin','index74c1.html?tid=487','','','images/draft.gif','',false); cotree.add(572,20001,'bookmarkStyles','indexab2e.html?tid=472','','','images/draft.gif','',false); cotree.add(260,20001,'charset_in','index652a.html?tid=160','','','','',false); cotree.add(597,20001,'CJKforceend','index5cb5.html?tid=497','','','images/draft.gif','',false); cotree.add(523,20001,'collapseBlockMargins','indexb5d9.html?tid=423','','','','',false); cotree.add(590,20001,'cropMarkLength','index2733.html?tid=490','','','images/draft.gif','',false); cotree.add(589,20001,'cropMarkMargin','indexec4c.html?tid=489','','','images/draft.gif','',false); cotree.add(588,20001,'crossMarkMargin','index4e94.html?tid=488','','','images/draft.gif','',false); cotree.add(542,20001,'CSSselectMedia','index14aa.html?tid=442','','','','',false); cotree.add(598,20001,'decimal_align','index4a0e.html?tid=498','','','','',false); cotree.add(491,20001,'debug','index14de.html?tid=391','','','','',false); cotree.add(566,20001,'debugfonts','index5772.html?tid=466','','','images/draft.gif','',false); cotree.add(311,20001,'defaultfooterfontsize','indexe044.html?tid=211','','','images/draft.gif','',false); cotree.add(312,20001,'defaultfooterfontstyle','index606b.html?tid=212','','','images/draft.gif','',false); cotree.add(313,20001,'defaultfooterline','index68cf.html?tid=213','','','images/draft.gif','',false); cotree.add(308,20001,'defaultheaderfontsize','index613d.html?tid=208','','','images/draft.gif','',false); cotree.add(309,20001,'defaultheaderfontstyle','indexdf0f.html?tid=209','','','images/draft.gif','',false); cotree.add(310,20001,'defaultheaderline','index86a2.html?tid=210','','','images/draft.gif','',false); cotree.add(455,20001,'displayDefaultOrientation','index7917.html?tid=355','','','images/draft.gif','',false); cotree.add(629,20001,'defaultPageNumStyle','index8fdb.html?tid=529','','','','',false); cotree.add(549,20001,'dpi','indexb232.html?tid=449','','','','',false); cotree.add(524,20001,'enableImports','indexc3c1.html?tid=424','','','','',false); cotree.add(521,20001,'falseBoldWeight','indexa94c.html?tid=421','','','','',false); cotree.add(315,20001,'footer_line_spacing','indexdfe8.html?tid=215','','','images/draft.gif','',false); cotree.add(281,20001,'forcePortraitHeaders','indexe465.html?tid=181','','','images/draft.gif','',false); cotree.add(454,20001,'forcePortraitMargins','index8132.html?tid=354','','','images/draft.gif','',false); cotree.add(314,20001,'header_line_spacing','index231e.html?tid=214','','','images/draft.gif','',false); cotree.add(631,20001,'h2bookmarks','index1e04.html?tid=531','','','','',false); cotree.add(630,20001,'h2toc','index1d43.html?tid=530','','','','',false); cotree.add(529,20001,'ICCProfile','indexabd3.html?tid=429','','','','',false); cotree.add(302,20001,'ignore_invalid_utf8','index53f5.html?tid=202','','','images/draft.gif','',false); cotree.add(326,20001,'ignore_table_percents','index2624.html?tid=226','','','images/draft.gif','',false); cotree.add(325,20001,'ignore_table_widths','index5910.html?tid=225','','','images/draft.gif','',false); cotree.add(248,20001,'img_dpi','indexfa8c.html?tid=148','','','','',false); cotree.add(526,20001,'incrementFPR1 [1-4]','indexc297.html?tid=426','','','','',false); cotree.add(565,20001,'iterationCounter','index5274.html?tid=465','','','images/draft.gif','',false); cotree.add(305,20001,'jSmaxChar','index0ba3.html?tid=205','','','images/draft.gif','',false); cotree.add(585,20001,'jSmaxCharLast','indexeb5e.html?tid=485','','','images/draft.gif','',false); cotree.add(496,20001,'jSmaxWordLast','index4dd5.html?tid=396','','','images/draft.gif','',false); cotree.add(304,20001,'jSWord','index389e.html?tid=204','','','images/draft.gif','',false); cotree.add(541,20001,'justifyB4br','indexed5c.html?tid=441','','','images/draft.gif','',false); cotree.add(323,20001,'keepColumns','index0c96.html?tid=223','','','images/draft.gif','',false); cotree.add(324,20001,'keep_table_proportions','index5d24.html?tid=224','','','images/draft.gif','',false); cotree.add(327,20001,'list_align_style','index4d28.html?tid=227','','','images/draft.gif','',false); cotree.add(618,20001,'list_auto_mode','indexf52a.html?tid=518','','','','',false); cotree.add(619,20001,'list_indent_default','indexfbe7.html?tid=519','','','','',false); cotree.add(620,20001,'list_indent_default_mpdf','indexa467.html?tid=520','','','','',false); cotree.add(234,20001,'list_indent_first_level','index7f77.html?tid=134','','','','',false); cotree.add(621,20001,'list_marker_offset','index2bc5.html?tid=521','','','','',false); cotree.add(328,20001,'list_number_suffix','index7123.html?tid=228','','','images/draft.gif','',false); cotree.add(622,20001,'list_symbol_size','index497e.html?tid=522','','','','',false); cotree.add(576,20001,'margBuffer','index5efb.html?tid=476','','','images/draft.gif','',false); cotree.add(240,20001,'max_colH_correction','index705d.html?tid=140','','','images/draft.gif','',false); cotree.add(563,20001,'maxTTFFilesize','indexc55c.html?tid=463','','','images/draft.gif','',false); cotree.add(494,20001,'mirrorMargins','indexf719.html?tid=394','','','images/draft.gif','',false); cotree.add(481,20001,'nbpgPrefix','index4c2f.html?tid=381','','','images/draft.gif','',false); cotree.add(482,20001,'nbpgSuffix','index9e5f.html?tid=382','','','images/draft.gif','',false); cotree.add(591,20001,'nonPrintMargin','index1350.html?tid=491','','','images/draft.gif','',false); cotree.add(531,20001,'normalLineheight','index1ebb.html?tid=431','','','','',false); cotree.add(544,20001,'packTableData','index4ef1.html?tid=444','','','images/draft.gif','',false); cotree.add(479,20001,'pagenumPrefix','indexdd28.html?tid=379','','','images/draft.gif','',false); cotree.add(480,20001,'pagenumSuffix','index2b1b.html?tid=380','','','images/draft.gif','',false); cotree.add(527,20001,'PDFA','index6ff1.html?tid=427','','','','',false); cotree.add(528,20001,'PDFAauto','indexdbdf.html?tid=428','','','','',false); cotree.add(582,20001,'PDFX','index1104.html?tid=482','','','','',false); cotree.add(583,20001,'PDFXauto','index8538.html?tid=483','','','','',false); cotree.add(564,20001,'percentSubset','indexd7ff.html?tid=464','','','images/draft.gif','',false); cotree.add(586,20001,'printers_info','index3e4a.html?tid=486','','','images/draft.gif','',false); cotree.add(562,20001,'progbar_altHTML','index573d.html?tid=462','','','images/draft.gif','',false); cotree.add(561,20001,'progbar_heading','index9938.html?tid=461','','','images/draft.gif','',false); cotree.add(525,20001,'progressBar','index85c5.html?tid=425','','','','',false); cotree.add(577,20001,'repackageTTF','indexa765.html?tid=477','','','images/draft.gif','',false); cotree.add(433,20001,'restoreBlockPagebreaks','indexa4a6.html?tid=333','','','','',false); cotree.add(584,20001,'restrictColorSpace','indexe665.html?tid=484','','','','',false); cotree.add(513,20001,'setAutoBottomMargin','index415d.html?tid=413','','','images/draft.gif','',false); cotree.add(512,20001,'setAutoTopMargin','indexab8a.html?tid=412','','','images/draft.gif','',false); cotree.add(483,20001,'showImageErrors','indexed80.html?tid=383','','','images/draft.gif','',false); cotree.add(495,20001,'showStats','index2a66.html?tid=395','','','images/draft.gif','',false); cotree.add(370,20001,'showWatermarkImage','indexc65a.html?tid=270','','','','',false); cotree.add(287,20001,'showWatermarkText','index8c3e.html?tid=187','','','','',false); cotree.add(253,20001,'shrink_tables_to_fit','indexa94d.html?tid=153','','','images/draft.gif','',false); cotree.add(472,20001,'SHYlang','index2303.html?tid=372','','','images/draft.gif','',false); cotree.add(530,20001,'simpleTables','index5244.html?tid=430','','','','',false); cotree.add(559,20001,'smCapsScale','index2155.html?tid=459','','','images/draft.gif','',false); cotree.add(560,20001,'smCapsStretch','index7a4c.html?tid=460','','','images/draft.gif','',false); cotree.add(254,20001,'table_error_report','index9e30.html?tid=154','','','images/draft.gif','',false); cotree.add(255,20001,'table_error_report_param','index0be8.html?tid=155','','','images/draft.gif','',false); cotree.add(550,20001,'tableMinSizePriority','indexd18f.html?tid=450','','','images/draft.gif','',false); cotree.add(452,20001,'tabSpaces','indexc774.html?tid=352','','','','',false); cotree.add(247,20001,'text_input_as_HTML','index3609.html?tid=147','','','images/draft.gif','',false); cotree.add(383,20001,'title2annots','indexe700.html?tid=283','','','images/draft.gif','',false); cotree.add(367,20001,'use_kwt','index9773.html?tid=267','','','images/draft.gif','',false); cotree.add(558,20001,'useAdobeCJK','index3181.html?tid=458','','','','',false); cotree.add(627,20001,'useDictionaryLBR','index1d24.html?tid=527','','','','',false); cotree.add(623,20001,'useFixedNormalLineHeight','index8130.html?tid=523','','','','',false); cotree.add(624,20001,'useFixedTextBaseline','indexf22a.html?tid=524','','','','',false); cotree.add(462,20001,'useGraphs','index04e1.html?tid=362','','','','',false); cotree.add(569,20001,'useKerning','index23b3.html?tid=469','','','','',false); cotree.add(444,20001,'useLang','indexa7c5.html?tid=344','','','','',false); cotree.add(329,20001,'useSubstitutions','index61ad.html?tid=229','','','','',false); cotree.add(628,20001,'useTibetanLBR','indexf140.html?tid=528','','','','',false); cotree.add(243,20001,'watermark_font','index0d7c.html?tid=143','','','','',false); cotree.add(371,20001,'watermarkImageAlpha','index9054.html?tid=271','','','','',false); cotree.add(548,20001,'watermarkImgAlphaBlend','index18e4.html?tid=448','','','','',false); cotree.add(543,20001,'watermarkImgBehind','indexe0dc.html?tid=443','','','','',false); cotree.add(368,20001,'watermarkTextAlpha','indexb759.html?tid=268','','','','',false); cotree.add(29001,1000000,'mPDF Utilities','','','','',false); cotree.add(320,29001,'strcode2utf()','index98a9.html?tid=220','','','','',false); cotree.add(459,29001,'preparePreText()','index6fc9.html?tid=359','','','','',false); cotree.add(4001,1000000,'Codepages & Glyphs','','','','',false); cotree.add(156,4001,'Win-1252','indexb464.html?tid=56','','','','',false); cotree.add(423,4001,'ASCII characters','indexd4ad.html?tid=323','','','','',false); cotree.add(428,4001,'Win-1251','index082f.html?tid=328','','','','',false); cotree.add(424,4001,'ISO-8859-2','index673c.html?tid=324','','','','',false); cotree.add(425,4001,'ISO-8859-4','index4487.html?tid=325','','','','',false); cotree.add(426,4001,'ISO-8859-7','indexd6e9.html?tid=326','','','','',false); cotree.add(427,4001,'ISO-8859-9','index85db.html?tid=327','','','','',false); cotree.add(130,4001,'ISO-8859/win comparison chart','indexeaad.html?tid=30','','','','',false); cotree.add(170,4001,'ZapfDingbats (Adobe)','index851e.html?tid=70','','','','',false); cotree.add(171,4001,'Symbols (Adobe)','index2386.html?tid=71','','','','',false); cotree.add(493,4001,'Vietnamese','indexa3f2.html?tid=393','','','','',false); cotree.add(157,4001,'BIG-5 (Traditional Chinese)','index4fd1.html?tid=57','','','','',false); cotree.add(515,4001,'HKCS (Hong Kong Character Set)','index59ee.html?tid=415','','','','',false); cotree.add(164,4001,'GBK (Simplified Chinese)','index4641.html?tid=64','','','','',false); cotree.add(161,4001,'SHIFT_JIS (Japanese)','indexa149.html?tid=61','','','','',false); cotree.add(163,4001,'UHC (Korean)','indexf30a.html?tid=63','','','','',false); cotree.add(167,4001,'Demo - Pangrams','index2c26.html?tid=67','','','','',false); cotree.add(165,4001,'Demo - Other languages','indexe93f.html?tid=65','','','','',false); cotree.add(168,4001,'Demo - 1000 Character Classic','index2d85.html?tid=68','','','','',false); cotree.add(205,4001,'Demo - Other Unicode character','index5027.html?tid=105','','','','',false); cotree.add(150,4001,'Equivalent codepages','index2eec.html?tid=50','','','','',false); cotree.add(141,4001,'iconv','index4cd3.html?tid=41','','','','',false); cotree.add(143,4001,'mbstring','index4519.html?tid=43','','','','',false); cotree.add(420,4001,'Unicode character planes','index414e.html?tid=320','','','','',false); cotree.add(457,4001,'ISO 639-1 language codes','index5c14.html?tid=357','','','','',false); cotree.add(421,4001,'Useful links','index513d.html?tid=321','','','','',false); cotree.add(551,4001,'Unicode coverage of Free Fonts','index92b2.html?tid=451','','','','',false); cotree.add(28001,1000000,'PDF Files (Adobe)','','','','',false); cotree.add(142,28001,'PDF reference','index476d.html?tid=42','','','','',false); document.write(cotree); /* ]]> */ </script> </div> 
+<div class="moduletableth">Donate</div>
+<!-- PAYPAL DONATION -->
+ 
+<div class="modulepanel" id="pkg5_1"> <b>Support mPDF by making a small donation?</b><br />
+<br /> 
+(Note that PayPal will show the recipient as BPM Books. This is name under which I publish the <a href="http://book.pallcare.info/">Palliative Medicine Handbook</a> for which I developed mPDF): <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<div> <input type="hidden" name="cmd" value="_donations"> <input type="hidden" name="business" value="sales@bpmbooks.co.uk" /> <input type="hidden" name="item_name" value="Donation to support mPDF" /> <input type="hidden" name="no_shipping" value="0"> <input type="hidden" name="return" value="/index.php?page=donation" /> <input type="hidden" name="cancel_return" value="" /> <input type="hidden" name="no_note" value="1"> <input type="hidden" name="currency_code" value="GBP" /> <input type="hidden" name="tax" value="0"> <input type="hidden" name="lc" value="GB"> <input type="hidden" name="bn" value="PP-DonationsBF"> <br /> 
+<p style="text-align:center"> <input type="image" src="images/x-click-but04.gif" border="0" name="submit" alt="Support open access to the Palliative Medicine Handbook by making a small donation" target="_blank" width="62" height="31" /> </p> 
+</div>
+</form></div> 
+<!-- End PAYPAL DONATION -->
+<div class="moduletableth">Rate it!</div>
+<div class="modulepanel">
+<!------ www.hotscripts.com ID = 102680 ------->
+ 
+<table align="center" width="150" border="1" cellpadding="4" cellspacing="0" bordercolor="#840300" bgcolor="#D70500"><form action="http://www.hotscripts.com/rate/102680.html" method="POST"> 
+<tr> 
+<td> 
+<table align="center" style="text-align:center" width="100%" border="0" cellspacing="0" cellpadding="0"> 
+<tr> 
+<td><b><font color="#FFFFFF">If you like mPDF, please rate it at www.hotscripts.com</font></b> <input type="hidden" name="external" value="1"/></td> 
+</tr> 
+<tr> 
+<td><select name="rate" size="1"> <option value="5" selected>Excellent!</option> <option value="4">Very Good</option> <option value="3">Good</option> <option value="2">Fair</option> <option value="1">Poor</option> </select> <input name="submit" type="submit" value="Cast My Vote!"/> </td> 
+</tr> 
+</table>
+</td> 
+</tr>
+</form> </table> 
+<!------ End of HTML Code ------->
+</div> 
+</div> 
+<!-- End left.php -->
+ 
+<div id="bpmcontents">
+<!-- START CONTENTS -->
+
+<!-- START TOP GRAY BOX -->
+ 
+<div class="grayhead"> 
+<div class="left">&laquo; <a href="indexdd1e.html?tid=495">Previous</a></div> 
+<div class="right"><a href="index957c.html?tid=457">Next</a> &raquo;</div> 
+<div class="clearer"></div> 
+<hr /> 
+<div class="left"> 
+<!-- VERSIONS LANGUAGE/COUNTRY AVAILABLE (main.php) -->
+ Edition/Revision: 1.0<br /> 
+Validated 19 Jan 2013</div> 
+<div class="right"><img alt="" src="images/download_icon.gif" style="vertical-align: middle" /> <img alt="" src="images/pdf.gif" style="vertical-align: middle" /> <select onchange="javascript:formHandler(this[this.selectedIndex].value,ajaxdg);this.selectedIndex=0" name="showvers" id="showvers"> <option value="" selected="selected"> View other versions of this topic...</option><optgroup label="Print Versions"><option value="index34f8.html?tid=496&amp;op_target=print&amp;id=568">printer-friendly</option><option value="indexed63.pdf?op=pdf&amp;op_target=print&amp;id=568&amp;media=pdf&amp;pdffmt=1">PDF file (Core fonts)</option><option value="index69d1.pdf?op=pdf&amp;op_target=print&amp;id=568&amp;media=pdf&amp;pdffmt=2">PDF file (Truetype fonts)</option></optgroup></select></div> 
+<div class="clearer"></div> 
+</div> 
+<!-- END TOP GRAY BOX -->
+ 
+<div class="clear2"></div> 
+<div id="bpmtopictitlenotabs"> 
+<!-- TOPIC TITLE -->
+ 
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div> 
+<h3>Combining Diacritics</h3> 
+</div> 
+<div class="clear2"></div> 
+<!-- START BPMBOOK -->
+ 
+<div id="bpmbook" class="bpmbook" style="direction:ltr;"> 
+<div class="topic_user_field"> 
+<div id="U0"> 
+<p class="manual_block"><b>Note:</b> From mPDF v6.0, support for <a href="index785f.html?tid=502">OpenType layout (OTL)</a> makes this section redundant if you use the OTL capability available in most fonts.</p> 
+<p>In Unicode, letters with diacritics (e.g. ÁáȦȧÄä) are usually represented as a single character e.g. Unicode U+0196 is an A Umlaut. There are 4 blocks in Unicode of diacritics or 'marks' which can be used to combine with adjacent letters: Combining Diacritical Marks (U+0300 - U+036F), Combining Diacritical Marks Supplement (U+1DC0 - U+1DFF), Combining Marks for Symbols(U+20D0 - U+20FF) and Combining Half Marks (U+FE20 - U+FE2F).</p> 
+<p>Software applications use special positioning information stored in OpenType font files to resposition the diacritic/mark depending on the context. mPDF (&lt; v 6.0) does not support this repositioning and is dependent on the font design and original placement of the diacritic:</p> 
+<p>It is recommended to use precomposed characters whenever possible with mPDF. If not you could use this quick patch to automatically combine diacritics:</p> 
+<p>In <span class="filename">mpdf.php</span> file, <span class="code">function WriteHTML()</span></p> 
+<p>Just after the lines:</p> 
+<p class="examplecode">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $e = strcode2utf($e);<br /> 
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $e = $this-&gt;lesser_entity_decode($e);</p> 
+<p>Add this line:</p> 
+<p class="examplecode">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $e = strtr($e, $this-&gt;compat);</p> 
+<p>Then add the following in your script (use <span class="code">$this-&gt;compat</span> if you use it in the <span class="filename">config.php</span> file) after declaring the class <span class="code">$mpdf</span>:</p> 
+<p class="examplecode">$mpdf-&gt;compat = array ( "A\xcc\x80"=&gt;"\xc3\x80", "A\xcc\x81"=&gt;"\xc3\x81", "A\xcc\x82"=&gt;"\xc3\x82", "A\xcc\x83"=&gt;"\xc3\x83", "A\xcc\x88"=&gt;"\xc3\x84", "A\xcc\x8a"=&gt;"\xc3\x85", "C\xcc\xa7"=&gt;"\xc3\x87", "E\xcc\x80"=&gt;"\xc3\x88", "E\xcc\x81"=&gt;"\xc3\x89", "E\xcc\x82"=&gt;"\xc3\x8a", "E\xcc\x88"=&gt;"\xc3\x8b", "I\xcc\x80"=&gt;"\xc3\x8c", "I\xcc\x81"=&gt;"\xc3\x8d", "I\xcc\x82"=&gt;"\xc3\x8e", "I\xcc\x88"=&gt;"\xc3\x8f", "N\xcc\x83"=&gt;"\xc3\x91", "O\xcc\x80"=&gt;"\xc3\x92", "O\xcc\x81"=&gt;"\xc3\x93", "O\xcc\x82"=&gt;"\xc3\x94", "O\xcc\x83"=&gt;"\xc3\x95", "O\xcc\x88"=&gt;"\xc3\x96", "U\xcc\x80"=&gt;"\xc3\x99", "U\xcc\x81"=&gt;"\xc3\x9a", "U\xcc\x82"=&gt;"\xc3\x9b", "U\xcc\x88"=&gt;"\xc3\x9c", "Y\xcc\x81"=&gt;"\xc3\x9d", "a\xcc\x80"=&gt;"\xc3\xa0", "a\xcc\x81"=&gt;"\xc3\xa1", "a\xcc\x82"=&gt;"\xc3\xa2", "a\xcc\x83"=&gt;"\xc3\xa3", "a\xcc\x88"=&gt;"\xc3\xa4", "a\xcc\x8a"=&gt;"\xc3\xa5", "c\xcc\xa7"=&gt;"\xc3\xa7", "e\xcc\x80"=&gt;"\xc3\xa8", "e\xcc\x81"=&gt;"\xc3\xa9", "e\xcc\x82"=&gt;"\xc3\xaa", "e\xcc\x88"=&gt;"\xc3\xab", "i\xcc\x80"=&gt;"\xc3\xac", "i\xcc\x81"=&gt;"\xc3\xad", "i\xcc\x82"=&gt;"\xc3\xae", "i\xcc\x88"=&gt;"\xc3\xaf", "n\xcc\x83"=&gt;"\xc3\xb1", "o\xcc\x80"=&gt;"\xc3\xb2", "o\xcc\x81"=&gt;"\xc3\xb3", "o\xcc\x82"=&gt;"\xc3\xb4", "o\xcc\x83"=&gt;"\xc3\xb5", "o\xcc\x88"=&gt;"\xc3\xb6", "u\xcc\x80"=&gt;"\xc3\xb9", "u\xcc\x81"=&gt;"\xc3\xba", "u\xcc\x82"=&gt;"\xc3\xbb", "u\xcc\x88"=&gt;"\xc3\xbc", "y\xcc\x81"=&gt;"\xc3\xbd", "y\xcc\x88"=&gt;"\xc3\xbf", "A\xcc\x84"=&gt;"\xc4\x80", "a\xcc\x84"=&gt;"\xc4\x81", "A\xcc\x86"=&gt;"\xc4\x82", "a\xcc\x86"=&gt;"\xc4\x83", "A\xcc\xa8"=&gt;"\xc4\x84", "a\xcc\xa8"=&gt;"\xc4\x85", "C\xcc\x81"=&gt;"\xc4\x86", "c\xcc\x81"=&gt;"\xc4\x87", "C\xcc\x82"=&gt;"\xc4\x88", "c\xcc\x82"=&gt;"\xc4\x89", "C\xcc\x87"=&gt;"\xc4\x8a", "c\xcc\x87"=&gt;"\xc4\x8b", "C\xcc\x8c"=&gt;"\xc4\x8c", "c\xcc\x8c"=&gt;"\xc4\x8d", "D\xcc\x8c"=&gt;"\xc4\x8e", "d\xcc\x8c"=&gt;"\xc4\x8f", "E\xcc\x84"=&gt;"\xc4\x92", "e\xcc\x84"=&gt;"\xc4\x93", "E\xcc\x86"=&gt;"\xc4\x94", "e\xcc\x86"=&gt;"\xc4\x95", "E\xcc\x87"=&gt;"\xc4\x96", "e\xcc\x87"=&gt;"\xc4\x97", "E\xcc\xa8"=&gt;"\xc4\x98", "e\xcc\xa8"=&gt;"\xc4\x99", "E\xcc\x8c"=&gt;"\xc4\x9a", "e\xcc\x8c"=&gt;"\xc4\x9b", "G\xcc\x82"=&gt;"\xc4\x9c", "g\xcc\x82"=&gt;"\xc4\x9d", "G\xcc\x86"=&gt;"\xc4\x9e", "g\xcc\x86"=&gt;"\xc4\x9f", "G\xcc\x87"=&gt;"\xc4\xa0", "g\xcc\x87"=&gt;"\xc4\xa1", "G\xcc\xa7"=&gt;"\xc4\xa2", "g\xcc\xa7"=&gt;"\xc4\xa3", "H\xcc\x82"=&gt;"\xc4\xa4", "h\xcc\x82"=&gt;"\xc4\xa5", "I\xcc\x83"=&gt;"\xc4\xa8", "i\xcc\x83"=&gt;"\xc4\xa9", "I\xcc\x84"=&gt;"\xc4\xaa", "i\xcc\x84"=&gt;"\xc4\xab", "I\xcc\x86"=&gt;"\xc4\xac", "i\xcc\x86"=&gt;"\xc4\xad", "I\xcc\xa8"=&gt;"\xc4\xae", "i\xcc\xa8"=&gt;"\xc4\xaf", "I\xcc\x87"=&gt;"\xc4\xb0", "J\xcc\x82"=&gt;"\xc4\xb4", "j\xcc\x82"=&gt;"\xc4\xb5", "K\xcc\xa7"=&gt;"\xc4\xb6", "k\xcc\xa7"=&gt;"\xc4\xb7", "L\xcc\x81"=&gt;"\xc4\xb9", "l\xcc\x81"=&gt;"\xc4\xba", "L\xcc\xa7"=&gt;"\xc4\xbb", "l\xcc\xa7"=&gt;"\xc4\xbc", "L\xcc\x8c"=&gt;"\xc4\xbd", "l\xcc\x8c"=&gt;"\xc4\xbe", "N\xcc\x81"=&gt;"\xc5\x83", "n\xcc\x81"=&gt;"\xc5\x84", "N\xcc\xa7"=&gt;"\xc5\x85", "n\xcc\xa7"=&gt;"\xc5\x86", "N\xcc\x8c"=&gt;"\xc5\x87", "n\xcc\x8c"=&gt;"\xc5\x88", "O\xcc\x84"=&gt;"\xc5\x8c", "o\xcc\x84"=&gt;"\xc5\x8d", "O\xcc\x86"=&gt;"\xc5\x8e", "o\xcc\x86"=&gt;"\xc5\x8f", "O\xcc\x8b"=&gt;"\xc5\x90", "o\xcc\x8b"=&gt;"\xc5\x91", "R\xcc\x81"=&gt;"\xc5\x94", "r\xcc\x81"=&gt;"\xc5\x95", "R\xcc\xa7"=&gt;"\xc5\x96", "r\xcc\xa7"=&gt;"\xc5\x97", "R\xcc\x8c"=&gt;"\xc5\x98", "r\xcc\x8c"=&gt;"\xc5\x99", "S\xcc\x81"=&gt;"\xc5\x9a", "s\xcc\x81"=&gt;"\xc5\x9b", "S\xcc\x82"=&gt;"\xc5\x9c", "s\xcc\x82"=&gt;"\xc5\x9d", "S\xcc\xa7"=&gt;"\xc5\x9e", "s\xcc\xa7"=&gt;"\xc5\x9f", "S\xcc\x8c"=&gt;"\xc5\xa0", "s\xcc\x8c"=&gt;"\xc5\xa1", "T\xcc\xa7"=&gt;"\xc5\xa2", "t\xcc\xa7"=&gt;"\xc5\xa3", "T\xcc\x8c"=&gt;"\xc5\xa4", "t\xcc\x8c"=&gt;"\xc5\xa5", "U\xcc\x83"=&gt;"\xc5\xa8", "u\xcc\x83"=&gt;"\xc5\xa9", "U\xcc\x84"=&gt;"\xc5\xaa", "u\xcc\x84"=&gt;"\xc5\xab", "U\xcc\x86"=&gt;"\xc5\xac", "u\xcc\x86"=&gt;"\xc5\xad", "U\xcc\x8a"=&gt;"\xc5\xae", "u\xcc\x8a"=&gt;"\xc5\xaf", "U\xcc\x8b"=&gt;"\xc5\xb0", "u\xcc\x8b"=&gt;"\xc5\xb1", "U\xcc\xa8"=&gt;"\xc5\xb2", "u\xcc\xa8"=&gt;"\xc5\xb3", "W\xcc\x82"=&gt;"\xc5\xb4", "w\xcc\x82"=&gt;"\xc5\xb5", "Y\xcc\x82"=&gt;"\xc5\xb6", "y\xcc\x82"=&gt;"\xc5\xb7", "Y\xcc\x88"=&gt;"\xc5\xb8", "Z\xcc\x81"=&gt;"\xc5\xb9", "z\xcc\x81"=&gt;"\xc5\xba", "Z\xcc\x87"=&gt;"\xc5\xbb", "z\xcc\x87"=&gt;"\xc5\xbc", "Z\xcc\x8c"=&gt;"\xc5\xbd", "z\xcc\x8c"=&gt;"\xc5\xbe", "O\xcc\x9b"=&gt;"\xc6\xa0", "o\xcc\x9b"=&gt;"\xc6\xa1", "U\xcc\x9b"=&gt;"\xc6\xaf", "u\xcc\x9b"=&gt;"\xc6\xb0", "A\xcc\x8c"=&gt;"\xc7\x8d", "a\xcc\x8c"=&gt;"\xc7\x8e", "I\xcc\x8c"=&gt;"\xc7\x8f", "i\xcc\x8c"=&gt;"\xc7\x90", "O\xcc\x8c"=&gt;"\xc7\x91", "o\xcc\x8c"=&gt;"\xc7\x92", "U\xcc\x8c"=&gt;"\xc7\x93", "u\xcc\x8c"=&gt;"\xc7\x94", "\xc3\x9c\xcc\x84"=&gt;"\xc7\x95", "\xc3\xbc\xcc\x84"=&gt;"\xc7\x96", "\xc3\x9c\xcc\x81"=&gt;"\xc7\x97", "\xc3\xbc\xcc\x81"=&gt;"\xc7\x98", "\xc3\x9c\xcc\x8c"=&gt;"\xc7\x99", "\xc3\xbc\xcc\x8c"=&gt;"\xc7\x9a", "\xc3\x9c\xcc\x80"=&gt;"\xc7\x9b", "\xc3\xbc\xcc\x80"=&gt;"\xc7\x9c", "\xc3\x84\xcc\x84"=&gt;"\xc7\x9e", "\xc3\xa4\xcc\x84"=&gt;"\xc7\x9f", "\xc8\xa6\xcc\x84"=&gt;"\xc7\xa0", "\xc8\xa7\xcc\x84"=&gt;"\xc7\xa1", "\xc3\x86\xcc\x84"=&gt;"\xc7\xa2", "\xc3\xa6\xcc\x84"=&gt;"\xc7\xa3", "G\xcc\x8c"=&gt;"\xc7\xa6", "g\xcc\x8c"=&gt;"\xc7\xa7", "K\xcc\x8c"=&gt;"\xc7\xa8", "k\xcc\x8c"=&gt;"\xc7\xa9", "O\xcc\xa8"=&gt;"\xc7\xaa", "o\xcc\xa8"=&gt;"\xc7\xab", "\xc7\xaa\xcc\x84"=&gt;"\xc7\xac", "\xc7\xab\xcc\x84"=&gt;"\xc7\xad", "\xc6\xb7\xcc\x8c"=&gt;"\xc7\xae", "\xca\x92\xcc\x8c"=&gt;"\xc7\xaf", "j\xcc\x8c"=&gt;"\xc7\xb0", "G\xcc\x81"=&gt;"\xc7\xb4", "g\xcc\x81"=&gt;"\xc7\xb5", "N\xcc\x80"=&gt;"\xc7\xb8", "n\xcc\x80"=&gt;"\xc7\xb9", "\xc3\x85\xcc\x81"=&gt;"\xc7\xba", "\xc3\xa5\xcc\x81"=&gt;"\xc7\xbb", "\xc3\x86\xcc\x81"=&gt;"\xc7\xbc", "\xc3\xa6\xcc\x81"=&gt;"\xc7\xbd", "\xc3\x98\xcc\x81"=&gt;"\xc7\xbe", "\xc3\xb8\xcc\x81"=&gt;"\xc7\xbf", "A\xcc\x8f"=&gt;"\xc8\x80", "a\xcc\x8f"=&gt;"\xc8\x81", "A\xcc\x91"=&gt;"\xc8\x82", "a\xcc\x91"=&gt;"\xc8\x83", "E\xcc\x8f"=&gt;"\xc8\x84", "e\xcc\x8f"=&gt;"\xc8\x85", "E\xcc\x91"=&gt;"\xc8\x86", "e\xcc\x91"=&gt;"\xc8\x87", "I\xcc\x8f"=&gt;"\xc8\x88", "i\xcc\x8f"=&gt;"\xc8\x89", "I\xcc\x91"=&gt;"\xc8\x8a", "i\xcc\x91"=&gt;"\xc8\x8b", "O\xcc\x8f"=&gt;"\xc8\x8c", "o\xcc\x8f"=&gt;"\xc8\x8d", "O\xcc\x91"=&gt;"\xc8\x8e", "o\xcc\x91"=&gt;"\xc8\x8f", "R\xcc\x8f"=&gt;"\xc8\x90", "r\xcc\x8f"=&gt;"\xc8\x91", "R\xcc\x91"=&gt;"\xc8\x92", "r\xcc\x91"=&gt;"\xc8\x93", "U\xcc\x8f"=&gt;"\xc8\x94", "u\xcc\x8f"=&gt;"\xc8\x95", "U\xcc\x91"=&gt;"\xc8\x96", "u\xcc\x91"=&gt;"\xc8\x97", "S\xcc\xa6"=&gt;"\xc8\x98", "s\xcc\xa6"=&gt;"\xc8\x99", "T\xcc\xa6"=&gt;"\xc8\x9a", "t\xcc\xa6"=&gt;"\xc8\x9b", "H\xcc\x8c"=&gt;"\xc8\x9e", "h\xcc\x8c"=&gt;"\xc8\x9f", "A\xcc\x87"=&gt;"\xc8\xa6", "a\xcc\x87"=&gt;"\xc8\xa7", "E\xcc\xa7"=&gt;"\xc8\xa8", "e\xcc\xa7"=&gt;"\xc8\xa9", "\xc3\x96\xcc\x84"=&gt;"\xc8\xaa", "\xc3\xb6\xcc\x84"=&gt;"\xc8\xab", "\xc3\x95\xcc\x84"=&gt;"\xc8\xac", "\xc3\xb5\xcc\x84"=&gt;"\xc8\xad", "O\xcc\x87"=&gt;"\xc8\xae", "o\xcc\x87"=&gt;"\xc8\xaf", "\xc8\xae\xcc\x84"=&gt;"\xc8\xb0", "\xc8\xaf\xcc\x84"=&gt;"\xc8\xb1", "Y\xcc\x84"=&gt;"\xc8\xb2", "y\xcc\x84"=&gt;"\xc8\xb3", "\xcc\x88\xcc\x81"=&gt;"\xcd\x84", "\xc2\xa8\xcc\x81"=&gt;"\xce\x85", "\xce\x91\xcc\x81"=&gt;"\xce\x86", "\xce\x95\xcc\x81"=&gt;"\xce\x88", "\xce\x97\xcc\x81"=&gt;"\xce\x89", "\xce\x99\xcc\x81"=&gt;"\xce\x8a", "\xce\x9f\xcc\x81"=&gt;"\xce\x8c", "\xce\xa5\xcc\x81"=&gt;"\xce\x8e", "\xce\xa9\xcc\x81"=&gt;"\xce\x8f", "\xcf\x8a\xcc\x81"=&gt;"\xce\x90", "\xce\x99\xcc\x88"=&gt;"\xce\xaa", "\xce\xa5\xcc\x88"=&gt;"\xce\xab", "\xce\xb1\xcc\x81"=&gt;"\xce\xac", "\xce\xb5\xcc\x81"=&gt;"\xce\xad", "\xce\xb7\xcc\x81"=&gt;"\xce\xae", "\xce\xb9\xcc\x81"=&gt;"\xce\xaf", "\xcf\x8b\xcc\x81"=&gt;"\xce\xb0", "\xce\xb9\xcc\x88"=&gt;"\xcf\x8a", "\xcf\x85\xcc\x88"=&gt;"\xcf\x8b", "\xce\xbf\xcc\x81"=&gt;"\xcf\x8c", "\xcf\x85\xcc\x81"=&gt;"\xcf\x8d", "\xcf\x89\xcc\x81"=&gt;"\xcf\x8e", "\xcf\x92\xcc\x81"=&gt;"\xcf\x93", "\xcf\x92\xcc\x88"=&gt;"\xcf\x94", "\xd0\x95\xcc\x80"=&gt;"\xd0\x80", "\xd0\x95\xcc\x88"=&gt;"\xd0\x81", "\xd0\x93\xcc\x81"=&gt;"\xd0\x83", "\xd0\x86\xcc\x88"=&gt;"\xd0\x87", "\xd0\x9a\xcc\x81"=&gt;"\xd0\x8c", "\xd0\x98\xcc\x80"=&gt;"\xd0\x8d", "\xd0\xa3\xcc\x86"=&gt;"\xd0\x8e", "\xd0\x98\xcc\x86"=&gt;"\xd0\x99", "\xd0\xb8\xcc\x86"=&gt;"\xd0\xb9", "\xd0\xb5\xcc\x80"=&gt;"\xd1\x90", "\xd0\xb5\xcc\x88"=&gt;"\xd1\x91", "\xd0\xb3\xcc\x81"=&gt;"\xd1\x93", "\xd1\x96\xcc\x88"=&gt;"\xd1\x97", "\xd0\xba\xcc\x81"=&gt;"\xd1\x9c", "\xd0\xb8\xcc\x80"=&gt;"\xd1\x9d", "\xd1\x83\xcc\x86"=&gt;"\xd1\x9e", "\xd1\xb4\xcc\x8f"=&gt;"\xd1\xb6", "\xd1\xb5\xcc\x8f"=&gt;"\xd1\xb7", "\xd0\x96\xcc\x86"=&gt;"\xd3\x81", "\xd0\xb6\xcc\x86"=&gt;"\xd3\x82", "\xd0\x90\xcc\x86"=&gt;"\xd3\x90", "\xd0\xb0\xcc\x86"=&gt;"\xd3\x91", "\xd0\x90\xcc\x88"=&gt;"\xd3\x92", "\xd0\xb0\xcc\x88"=&gt;"\xd3\x93", "\xd0\x95\xcc\x86"=&gt;"\xd3\x96", "\xd0\xb5\xcc\x86"=&gt;"\xd3\x97", "\xd3\x98\xcc\x88"=&gt;"\xd3\x9a", "\xd3\x99\xcc\x88"=&gt;"\xd3\x9b", "\xd0\x96\xcc\x88"=&gt;"\xd3\x9c", "\xd0\xb6\xcc\x88"=&gt;"\xd3\x9d", "\xd0\x97\xcc\x88"=&gt;"\xd3\x9e", "\xd0\xb7\xcc\x88"=&gt;"\xd3\x9f", "\xd0\x98\xcc\x84"=&gt;"\xd3\xa2", "\xd0\xb8\xcc\x84"=&gt;"\xd3\xa3", "\xd0\x98\xcc\x88"=&gt;"\xd3\xa4", "\xd0\xb8\xcc\x88"=&gt;"\xd3\xa5", "\xd0\x9e\xcc\x88"=&gt;"\xd3\xa6", "\xd0\xbe\xcc\x88"=&gt;"\xd3\xa7", "\xd3\xa8\xcc\x88"=&gt;"\xd3\xaa", "\xd3\xa9\xcc\x88"=&gt;"\xd3\xab", "\xd0\xad\xcc\x88"=&gt;"\xd3\xac", "\xd1\x8d\xcc\x88"=&gt;"\xd3\xad", "\xd0\xa3\xcc\x84"=&gt;"\xd3\xae", "\xd1\x83\xcc\x84"=&gt;"\xd3\xaf", "\xd0\xa3\xcc\x88"=&gt;"\xd3\xb0", "\xd1\x83\xcc\x88"=&gt;"\xd3\xb1", "\xd0\xa3\xcc\x8b"=&gt;"\xd3\xb2", "\xd1\x83\xcc\x8b"=&gt;"\xd3\xb3", "\xd0\xa7\xcc\x88"=&gt;"\xd3\xb4", "\xd1\x87\xcc\x88"=&gt;"\xd3\xb5", "\xd0\xab\xcc\x88"=&gt;"\xd3\xb8", "\xd1\x8b\xcc\x88"=&gt;"\xd3\xb9", "A\xcc\xa5"=&gt;"\xe1\xb8\x80", "a\xcc\xa5"=&gt;"\xe1\xb8\x81", "B\xcc\x87"=&gt;"\xe1\xb8\x82", "b\xcc\x87"=&gt;"\xe1\xb8\x83", "B\xcc\xa3"=&gt;"\xe1\xb8\x84", "b\xcc\xa3"=&gt;"\xe1\xb8\x85", "B\xcc\xb1"=&gt;"\xe1\xb8\x86", "b\xcc\xb1"=&gt;"\xe1\xb8\x87", "\xc3\x87\xcc\x81"=&gt;"\xe1\xb8\x88", "\xc3\xa7\xcc\x81"=&gt;"\xe1\xb8\x89", "D\xcc\x87"=&gt;"\xe1\xb8\x8a", "d\xcc\x87"=&gt;"\xe1\xb8\x8b", "D\xcc\xa3"=&gt;"\xe1\xb8\x8c", "d\xcc\xa3"=&gt;"\xe1\xb8\x8d", "D\xcc\xb1"=&gt;"\xe1\xb8\x8e", "d\xcc\xb1"=&gt;"\xe1\xb8\x8f", "D\xcc\xa7"=&gt;"\xe1\xb8\x90", "d\xcc\xa7"=&gt;"\xe1\xb8\x91", "D\xcc\xad"=&gt;"\xe1\xb8\x92", "d\xcc\xad"=&gt;"\xe1\xb8\x93", "\xc4\x92\xcc\x80"=&gt;"\xe1\xb8\x94", "\xc4\x93\xcc\x80"=&gt;"\xe1\xb8\x95", "\xc4\x92\xcc\x81"=&gt;"\xe1\xb8\x96", "\xc4\x93\xcc\x81"=&gt;"\xe1\xb8\x97", "E\xcc\xad"=&gt;"\xe1\xb8\x98", "e\xcc\xad"=&gt;"\xe1\xb8\x99", "E\xcc\xb0"=&gt;"\xe1\xb8\x9a", "e\xcc\xb0"=&gt;"\xe1\xb8\x9b", "\xc8\xa8\xcc\x86"=&gt;"\xe1\xb8\x9c", "\xc8\xa9\xcc\x86"=&gt;"\xe1\xb8\x9d", "F\xcc\x87"=&gt;"\xe1\xb8\x9e", "f\xcc\x87"=&gt;"\xe1\xb8\x9f", "G\xcc\x84"=&gt;"\xe1\xb8\xa0", "g\xcc\x84"=&gt;"\xe1\xb8\xa1", "H\xcc\x87"=&gt;"\xe1\xb8\xa2", "h\xcc\x87"=&gt;"\xe1\xb8\xa3", "H\xcc\xa3"=&gt;"\xe1\xb8\xa4", "h\xcc\xa3"=&gt;"\xe1\xb8\xa5", "H\xcc\x88"=&gt;"\xe1\xb8\xa6", "h\xcc\x88"=&gt;"\xe1\xb8\xa7", "H\xcc\xa7"=&gt;"\xe1\xb8\xa8", "h\xcc\xa7"=&gt;"\xe1\xb8\xa9", "H\xcc\xae"=&gt;"\xe1\xb8\xaa", "h\xcc\xae"=&gt;"\xe1\xb8\xab", "I\xcc\xb0"=&gt;"\xe1\xb8\xac", "i\xcc\xb0"=&gt;"\xe1\xb8\xad", "\xc3\x8f\xcc\x81"=&gt;"\xe1\xb8\xae", "\xc3\xaf\xcc\x81"=&gt;"\xe1\xb8\xaf", "K\xcc\x81"=&gt;"\xe1\xb8\xb0", "k\xcc\x81"=&gt;"\xe1\xb8\xb1", "K\xcc\xa3"=&gt;"\xe1\xb8\xb2", "k\xcc\xa3"=&gt;"\xe1\xb8\xb3", "K\xcc\xb1"=&gt;"\xe1\xb8\xb4", "k\xcc\xb1"=&gt;"\xe1\xb8\xb5", "L\xcc\xa3"=&gt;"\xe1\xb8\xb6", "l\xcc\xa3"=&gt;"\xe1\xb8\xb7", "\xe1\xb8\xb6\xcc\x84"=&gt;"\xe1\xb8\xb8", "\xe1\xb8\xb7\xcc\x84"=&gt;"\xe1\xb8\xb9", "L\xcc\xb1"=&gt;"\xe1\xb8\xba", "l\xcc\xb1"=&gt;"\xe1\xb8\xbb", "L\xcc\xad"=&gt;"\xe1\xb8\xbc", "l\xcc\xad"=&gt;"\xe1\xb8\xbd", "M\xcc\x81"=&gt;"\xe1\xb8\xbe", "m\xcc\x81"=&gt;"\xe1\xb8\xbf", "M\xcc\x87"=&gt;"\xe1\xb9\x80", "m\xcc\x87"=&gt;"\xe1\xb9\x81", "M\xcc\xa3"=&gt;"\xe1\xb9\x82", "m\xcc\xa3"=&gt;"\xe1\xb9\x83", "N\xcc\x87"=&gt;"\xe1\xb9\x84", "n\xcc\x87"=&gt;"\xe1\xb9\x85", "N\xcc\xa3"=&gt;"\xe1\xb9\x86", "n\xcc\xa3"=&gt;"\xe1\xb9\x87", "N\xcc\xb1"=&gt;"\xe1\xb9\x88", "n\xcc\xb1"=&gt;"\xe1\xb9\x89", "N\xcc\xad"=&gt;"\xe1\xb9\x8a", "n\xcc\xad"=&gt;"\xe1\xb9\x8b", "\xc3\x95\xcc\x81"=&gt;"\xe1\xb9\x8c", "\xc3\xb5\xcc\x81"=&gt;"\xe1\xb9\x8d", "\xc3\x95\xcc\x88"=&gt;"\xe1\xb9\x8e", "\xc3\xb5\xcc\x88"=&gt;"\xe1\xb9\x8f", "\xc5\x8c\xcc\x80"=&gt;"\xe1\xb9\x90", "\xc5\x8d\xcc\x80"=&gt;"\xe1\xb9\x91", "\xc5\x8c\xcc\x81"=&gt;"\xe1\xb9\x92", "\xc5\x8d\xcc\x81"=&gt;"\xe1\xb9\x93", "P\xcc\x81"=&gt;"\xe1\xb9\x94", "p\xcc\x81"=&gt;"\xe1\xb9\x95", "P\xcc\x87"=&gt;"\xe1\xb9\x96", "p\xcc\x87"=&gt;"\xe1\xb9\x97", "R\xcc\x87"=&gt;"\xe1\xb9\x98", "r\xcc\x87"=&gt;"\xe1\xb9\x99", "R\xcc\xa3"=&gt;"\xe1\xb9\x9a", "r\xcc\xa3"=&gt;"\xe1\xb9\x9b", "\xe1\xb9\x9a\xcc\x84"=&gt;"\xe1\xb9\x9c", "\xe1\xb9\x9b\xcc\x84"=&gt;"\xe1\xb9\x9d", "R\xcc\xb1"=&gt;"\xe1\xb9\x9e", "r\xcc\xb1"=&gt;"\xe1\xb9\x9f", "S\xcc\x87"=&gt;"\xe1\xb9\xa0", "s\xcc\x87"=&gt;"\xe1\xb9\xa1", "S\xcc\xa3"=&gt;"\xe1\xb9\xa2", "s\xcc\xa3"=&gt;"\xe1\xb9\xa3", "\xc5\x9a\xcc\x87"=&gt;"\xe1\xb9\xa4", "\xc5\x9b\xcc\x87"=&gt;"\xe1\xb9\xa5", "\xc5\xa0\xcc\x87"=&gt;"\xe1\xb9\xa6", "\xc5\xa1\xcc\x87"=&gt;"\xe1\xb9\xa7", "\xe1\xb9\xa2\xcc\x87"=&gt;"\xe1\xb9\xa8", "\xe1\xb9\xa3\xcc\x87"=&gt;"\xe1\xb9\xa9", "T\xcc\x87"=&gt;"\xe1\xb9\xaa", "t\xcc\x87"=&gt;"\xe1\xb9\xab", "T\xcc\xa3"=&gt;"\xe1\xb9\xac", "t\xcc\xa3"=&gt;"\xe1\xb9\xad", "T\xcc\xb1"=&gt;"\xe1\xb9\xae", "t\xcc\xb1"=&gt;"\xe1\xb9\xaf", "T\xcc\xad"=&gt;"\xe1\xb9\xb0", "t\xcc\xad"=&gt;"\xe1\xb9\xb1", "U\xcc\xa4"=&gt;"\xe1\xb9\xb2", "u\xcc\xa4"=&gt;"\xe1\xb9\xb3", "U\xcc\xb0"=&gt;"\xe1\xb9\xb4", "u\xcc\xb0"=&gt;"\xe1\xb9\xb5", "U\xcc\xad"=&gt;"\xe1\xb9\xb6", "u\xcc\xad"=&gt;"\xe1\xb9\xb7", "\xc5\xa8\xcc\x81"=&gt;"\xe1\xb9\xb8", "\xc5\xa9\xcc\x81"=&gt;"\xe1\xb9\xb9", "\xc5\xaa\xcc\x88"=&gt;"\xe1\xb9\xba", "\xc5\xab\xcc\x88"=&gt;"\xe1\xb9\xbb", "V\xcc\x83"=&gt;"\xe1\xb9\xbc", "v\xcc\x83"=&gt;"\xe1\xb9\xbd", "V\xcc\xa3"=&gt;"\xe1\xb9\xbe", "v\xcc\xa3"=&gt;"\xe1\xb9\xbf", "W\xcc\x80"=&gt;"\xe1\xba\x80", "w\xcc\x80"=&gt;"\xe1\xba\x81", "W\xcc\x81"=&gt;"\xe1\xba\x82", "w\xcc\x81"=&gt;"\xe1\xba\x83", "W\xcc\x88"=&gt;"\xe1\xba\x84", "w\xcc\x88"=&gt;"\xe1\xba\x85", "W\xcc\x87"=&gt;"\xe1\xba\x86", "w\xcc\x87"=&gt;"\xe1\xba\x87", "W\xcc\xa3"=&gt;"\xe1\xba\x88", "w\xcc\xa3"=&gt;"\xe1\xba\x89", "X\xcc\x87"=&gt;"\xe1\xba\x8a", "x\xcc\x87"=&gt;"\xe1\xba\x8b", "X\xcc\x88"=&gt;"\xe1\xba\x8c", "x\xcc\x88"=&gt;"\xe1\xba\x8d", "Y\xcc\x87"=&gt;"\xe1\xba\x8e", "y\xcc\x87"=&gt;"\xe1\xba\x8f", "Z\xcc\x82"=&gt;"\xe1\xba\x90", "z\xcc\x82"=&gt;"\xe1\xba\x91", "Z\xcc\xa3"=&gt;"\xe1\xba\x92", "z\xcc\xa3"=&gt;"\xe1\xba\x93", "Z\xcc\xb1"=&gt;"\xe1\xba\x94", "z\xcc\xb1"=&gt;"\xe1\xba\x95", "h\xcc\xb1"=&gt;"\xe1\xba\x96", "t\xcc\x88"=&gt;"\xe1\xba\x97", "w\xcc\x8a"=&gt;"\xe1\xba\x98", "y\xcc\x8a"=&gt;"\xe1\xba\x99", "\xc5\xbf\xcc\x87"=&gt;"\xe1\xba\x9b", "A\xcc\xa3"=&gt;"\xe1\xba\xa0", "a\xcc\xa3"=&gt;"\xe1\xba\xa1", "A\xcc\x89"=&gt;"\xe1\xba\xa2", "a\xcc\x89"=&gt;"\xe1\xba\xa3", "\xc3\x82\xcc\x81"=&gt;"\xe1\xba\xa4", "\xc3\xa2\xcc\x81"=&gt;"\xe1\xba\xa5", "\xc3\x82\xcc\x80"=&gt;"\xe1\xba\xa6", "\xc3\xa2\xcc\x80"=&gt;"\xe1\xba\xa7", "\xc3\x82\xcc\x89"=&gt;"\xe1\xba\xa8", "\xc3\xa2\xcc\x89"=&gt;"\xe1\xba\xa9", "\xc3\x82\xcc\x83"=&gt;"\xe1\xba\xaa", "\xc3\xa2\xcc\x83"=&gt;"\xe1\xba\xab", "\xe1\xba\xa0\xcc\x82"=&gt;"\xe1\xba\xac", "\xe1\xba\xa1\xcc\x82"=&gt;"\xe1\xba\xad", "\xc4\x82\xcc\x81"=&gt;"\xe1\xba\xae", "\xc4\x83\xcc\x81"=&gt;"\xe1\xba\xaf", "\xc4\x82\xcc\x80"=&gt;"\xe1\xba\xb0", "\xc4\x83\xcc\x80"=&gt;"\xe1\xba\xb1", "\xc4\x82\xcc\x89"=&gt;"\xe1\xba\xb2", "\xc4\x83\xcc\x89"=&gt;"\xe1\xba\xb3", "\xc4\x82\xcc\x83"=&gt;"\xe1\xba\xb4", "\xc4\x83\xcc\x83"=&gt;"\xe1\xba\xb5", "\xe1\xba\xa0\xcc\x86"=&gt;"\xe1\xba\xb6", "\xe1\xba\xa1\xcc\x86"=&gt;"\xe1\xba\xb7", "E\xcc\xa3"=&gt;"\xe1\xba\xb8", "e\xcc\xa3"=&gt;"\xe1\xba\xb9", "E\xcc\x89"=&gt;"\xe1\xba\xba", "e\xcc\x89"=&gt;"\xe1\xba\xbb", "E\xcc\x83"=&gt;"\xe1\xba\xbc", "e\xcc\x83"=&gt;"\xe1\xba\xbd", "\xc3\x8a\xcc\x81"=&gt;"\xe1\xba\xbe", "\xc3\xaa\xcc\x81"=&gt;"\xe1\xba\xbf", "\xc3\x8a\xcc\x80"=&gt;"\xe1\xbb\x80", "\xc3\xaa\xcc\x80"=&gt;"\xe1\xbb\x81", "\xc3\x8a\xcc\x89"=&gt;"\xe1\xbb\x82", "\xc3\xaa\xcc\x89"=&gt;"\xe1\xbb\x83", "\xc3\x8a\xcc\x83"=&gt;"\xe1\xbb\x84", "\xc3\xaa\xcc\x83"=&gt;"\xe1\xbb\x85", "\xe1\xba\xb8\xcc\x82"=&gt;"\xe1\xbb\x86", "\xe1\xba\xb9\xcc\x82"=&gt;"\xe1\xbb\x87", "I\xcc\x89"=&gt;"\xe1\xbb\x88", "i\xcc\x89"=&gt;"\xe1\xbb\x89", "I\xcc\xa3"=&gt;"\xe1\xbb\x8a", "i\xcc\xa3"=&gt;"\xe1\xbb\x8b", "O\xcc\xa3"=&gt;"\xe1\xbb\x8c", "o\xcc\xa3"=&gt;"\xe1\xbb\x8d", "O\xcc\x89"=&gt;"\xe1\xbb\x8e", "o\xcc\x89"=&gt;"\xe1\xbb\x8f", "\xc3\x94\xcc\x81"=&gt;"\xe1\xbb\x90", "\xc3\xb4\xcc\x81"=&gt;"\xe1\xbb\x91", "\xc3\x94\xcc\x80"=&gt;"\xe1\xbb\x92", "\xc3\xb4\xcc\x80"=&gt;"\xe1\xbb\x93", "\xc3\x94\xcc\x89"=&gt;"\xe1\xbb\x94", "\xc3\xb4\xcc\x89"=&gt;"\xe1\xbb\x95", "\xc3\x94\xcc\x83"=&gt;"\xe1\xbb\x96", "\xc3\xb4\xcc\x83"=&gt;"\xe1\xbb\x97", "\xe1\xbb\x8c\xcc\x82"=&gt;"\xe1\xbb\x98", "\xe1\xbb\x8d\xcc\x82"=&gt;"\xe1\xbb\x99", "\xc6\xa0\xcc\x81"=&gt;"\xe1\xbb\x9a", "\xc6\xa1\xcc\x81"=&gt;"\xe1\xbb\x9b", "\xc6\xa0\xcc\x80"=&gt;"\xe1\xbb\x9c", "\xc6\xa1\xcc\x80"=&gt;"\xe1\xbb\x9d", "\xc6\xa0\xcc\x89"=&gt;"\xe1\xbb\x9e", "\xc6\xa1\xcc\x89"=&gt;"\xe1\xbb\x9f", "\xc6\xa0\xcc\x83"=&gt;"\xe1\xbb\xa0", "\xc6\xa1\xcc\x83"=&gt;"\xe1\xbb\xa1", "\xc6\xa0\xcc\xa3"=&gt;"\xe1\xbb\xa2", "\xc6\xa1\xcc\xa3"=&gt;"\xe1\xbb\xa3", "U\xcc\xa3"=&gt;"\xe1\xbb\xa4", "u\xcc\xa3"=&gt;"\xe1\xbb\xa5", "U\xcc\x89"=&gt;"\xe1\xbb\xa6", "u\xcc\x89"=&gt;"\xe1\xbb\xa7", "\xc6\xaf\xcc\x81"=&gt;"\xe1\xbb\xa8", "\xc6\xb0\xcc\x81"=&gt;"\xe1\xbb\xa9", "\xc6\xaf\xcc\x80"=&gt;"\xe1\xbb\xaa", "\xc6\xb0\xcc\x80"=&gt;"\xe1\xbb\xab", "\xc6\xaf\xcc\x89"=&gt;"\xe1\xbb\xac", "\xc6\xb0\xcc\x89"=&gt;"\xe1\xbb\xad", "\xc6\xaf\xcc\x83"=&gt;"\xe1\xbb\xae", "\xc6\xb0\xcc\x83"=&gt;"\xe1\xbb\xaf", "\xc6\xaf\xcc\xa3"=&gt;"\xe1\xbb\xb0", "\xc6\xb0\xcc\xa3"=&gt;"\xe1\xbb\xb1", "Y\xcc\x80"=&gt;"\xe1\xbb\xb2", "y\xcc\x80"=&gt;"\xe1\xbb\xb3", "Y\xcc\xa3"=&gt;"\xe1\xbb\xb4", "y\xcc\xa3"=&gt;"\xe1\xbb\xb5", "Y\xcc\x89"=&gt;"\xe1\xbb\xb6", "y\xcc\x89"=&gt;"\xe1\xbb\xb7", "Y\xcc\x83"=&gt;"\xe1\xbb\xb8", "y\xcc\x83"=&gt;"\xe1\xbb\xb9", "\xce\xb1\xcc\x93"=&gt;"\xe1\xbc\x80", "\xce\xb1\xcc\x94"=&gt;"\xe1\xbc\x81", "\xe1\xbc\x80\xcc\x80"=&gt;"\xe1\xbc\x82", "\xe1\xbc\x81\xcc\x80"=&gt;"\xe1\xbc\x83", "\xe1\xbc\x80\xcc\x81"=&gt;"\xe1\xbc\x84", "\xe1\xbc\x81\xcc\x81"=&gt;"\xe1\xbc\x85", "\xe1\xbc\x80\xcd\x82"=&gt;"\xe1\xbc\x86", "\xe1\xbc\x81\xcd\x82"=&gt;"\xe1\xbc\x87", "\xce\x91\xcc\x93"=&gt;"\xe1\xbc\x88", "\xce\x91\xcc\x94"=&gt;"\xe1\xbc\x89", "\xe1\xbc\x88\xcc\x80"=&gt;"\xe1\xbc\x8a", "\xe1\xbc\x89\xcc\x80"=&gt;"\xe1\xbc\x8b", "\xe1\xbc\x88\xcc\x81"=&gt;"\xe1\xbc\x8c", "\xe1\xbc\x89\xcc\x81"=&gt;"\xe1\xbc\x8d", "\xe1\xbc\x88\xcd\x82"=&gt;"\xe1\xbc\x8e", "\xe1\xbc\x89\xcd\x82"=&gt;"\xe1\xbc\x8f", "\xce\xb5\xcc\x93"=&gt;"\xe1\xbc\x90", "\xce\xb5\xcc\x94"=&gt;"\xe1\xbc\x91", "\xe1\xbc\x90\xcc\x80"=&gt;"\xe1\xbc\x92", "\xe1\xbc\x91\xcc\x80"=&gt;"\xe1\xbc\x93", "\xe1\xbc\x90\xcc\x81"=&gt;"\xe1\xbc\x94", "\xe1\xbc\x91\xcc\x81"=&gt;"\xe1\xbc\x95", "\xce\x95\xcc\x93"=&gt;"\xe1\xbc\x98", "\xce\x95\xcc\x94"=&gt;"\xe1\xbc\x99", "\xe1\xbc\x98\xcc\x80"=&gt;"\xe1\xbc\x9a", "\xe1\xbc\x99\xcc\x80"=&gt;"\xe1\xbc\x9b", "\xe1\xbc\x98\xcc\x81"=&gt;"\xe1\xbc\x9c", "\xe1\xbc\x99\xcc\x81"=&gt;"\xe1\xbc\x9d", "\xce\xb7\xcc\x93"=&gt;"\xe1\xbc\xa0", "\xce\xb7\xcc\x94"=&gt;"\xe1\xbc\xa1", "\xe1\xbc\xa0\xcc\x80"=&gt;"\xe1\xbc\xa2", "\xe1\xbc\xa1\xcc\x80"=&gt;"\xe1\xbc\xa3", "\xe1\xbc\xa0\xcc\x81"=&gt;"\xe1\xbc\xa4", "\xe1\xbc\xa1\xcc\x81"=&gt;"\xe1\xbc\xa5", "\xe1\xbc\xa0\xcd\x82"=&gt;"\xe1\xbc\xa6", "\xe1\xbc\xa1\xcd\x82"=&gt;"\xe1\xbc\xa7", "\xce\x97\xcc\x93"=&gt;"\xe1\xbc\xa8", "\xce\x97\xcc\x94"=&gt;"\xe1\xbc\xa9", "\xe1\xbc\xa8\xcc\x80"=&gt;"\xe1\xbc\xaa", "\xe1\xbc\xa9\xcc\x80"=&gt;"\xe1\xbc\xab", "\xe1\xbc\xa8\xcc\x81"=&gt;"\xe1\xbc\xac", "\xe1\xbc\xa9\xcc\x81"=&gt;"\xe1\xbc\xad", "\xe1\xbc\xa8\xcd\x82"=&gt;"\xe1\xbc\xae", "\xe1\xbc\xa9\xcd\x82"=&gt;"\xe1\xbc\xaf", "\xce\xb9\xcc\x93"=&gt;"\xe1\xbc\xb0", "\xce\xb9\xcc\x94"=&gt;"\xe1\xbc\xb1", "\xe1\xbc\xb0\xcc\x80"=&gt;"\xe1\xbc\xb2", "\xe1\xbc\xb1\xcc\x80"=&gt;"\xe1\xbc\xb3", "\xe1\xbc\xb0\xcc\x81"=&gt;"\xe1\xbc\xb4", "\xe1\xbc\xb1\xcc\x81"=&gt;"\xe1\xbc\xb5", "\xe1\xbc\xb0\xcd\x82"=&gt;"\xe1\xbc\xb6", "\xe1\xbc\xb1\xcd\x82"=&gt;"\xe1\xbc\xb7", "\xce\x99\xcc\x93"=&gt;"\xe1\xbc\xb8", "\xce\x99\xcc\x94"=&gt;"\xe1\xbc\xb9", "\xe1\xbc\xb8\xcc\x80"=&gt;"\xe1\xbc\xba", "\xe1\xbc\xb9\xcc\x80"=&gt;"\xe1\xbc\xbb", "\xe1\xbc\xb8\xcc\x81"=&gt;"\xe1\xbc\xbc", "\xe1\xbc\xb9\xcc\x81"=&gt;"\xe1\xbc\xbd", "\xe1\xbc\xb8\xcd\x82"=&gt;"\xe1\xbc\xbe", "\xe1\xbc\xb9\xcd\x82"=&gt;"\xe1\xbc\xbf", "\xce\xbf\xcc\x93"=&gt;"\xe1\xbd\x80", "\xce\xbf\xcc\x94"=&gt;"\xe1\xbd\x81", "\xe1\xbd\x80\xcc\x80"=&gt;"\xe1\xbd\x82", "\xe1\xbd\x81\xcc\x80"=&gt;"\xe1\xbd\x83", "\xe1\xbd\x80\xcc\x81"=&gt;"\xe1\xbd\x84", "\xe1\xbd\x81\xcc\x81"=&gt;"\xe1\xbd\x85", "\xce\x9f\xcc\x93"=&gt;"\xe1\xbd\x88", "\xce\x9f\xcc\x94"=&gt;"\xe1\xbd\x89", "\xe1\xbd\x88\xcc\x80"=&gt;"\xe1\xbd\x8a", "\xe1\xbd\x89\xcc\x80"=&gt;"\xe1\xbd\x8b", "\xe1\xbd\x88\xcc\x81"=&gt;"\xe1\xbd\x8c", "\xe1\xbd\x89\xcc\x81"=&gt;"\xe1\xbd\x8d", "\xcf\x85\xcc\x93"=&gt;"\xe1\xbd\x90", "\xcf\x85\xcc\x94"=&gt;"\xe1\xbd\x91", "\xe1\xbd\x90\xcc\x80"=&gt;"\xe1\xbd\x92", "\xe1\xbd\x91\xcc\x80"=&gt;"\xe1\xbd\x93", "\xe1\xbd\x90\xcc\x81"=&gt;"\xe1\xbd\x94", "\xe1\xbd\x91\xcc\x81"=&gt;"\xe1\xbd\x95", "\xe1\xbd\x90\xcd\x82"=&gt;"\xe1\xbd\x96", "\xe1\xbd\x91\xcd\x82"=&gt;"\xe1\xbd\x97", "\xce\xa5\xcc\x94"=&gt;"\xe1\xbd\x99", "\xe1\xbd\x99\xcc\x80"=&gt;"\xe1\xbd\x9b", "\xe1\xbd\x99\xcc\x81"=&gt;"\xe1\xbd\x9d", "\xe1\xbd\x99\xcd\x82"=&gt;"\xe1\xbd\x9f", "\xcf\x89\xcc\x93"=&gt;"\xe1\xbd\xa0", "\xcf\x89\xcc\x94"=&gt;"\xe1\xbd\xa1", "\xe1\xbd\xa0\xcc\x80"=&gt;"\xe1\xbd\xa2", "\xe1\xbd\xa1\xcc\x80"=&gt;"\xe1\xbd\xa3", "\xe1\xbd\xa0\xcc\x81"=&gt;"\xe1\xbd\xa4", "\xe1\xbd\xa1\xcc\x81"=&gt;"\xe1\xbd\xa5", "\xe1\xbd\xa0\xcd\x82"=&gt;"\xe1\xbd\xa6", "\xe1\xbd\xa1\xcd\x82"=&gt;"\xe1\xbd\xa7", "\xce\xa9\xcc\x93"=&gt;"\xe1\xbd\xa8", "\xce\xa9\xcc\x94"=&gt;"\xe1\xbd\xa9", "\xe1\xbd\xa8\xcc\x80"=&gt;"\xe1\xbd\xaa", "\xe1\xbd\xa9\xcc\x80"=&gt;"\xe1\xbd\xab", "\xe1\xbd\xa8\xcc\x81"=&gt;"\xe1\xbd\xac", "\xe1\xbd\xa9\xcc\x81"=&gt;"\xe1\xbd\xad", "\xe1\xbd\xa8\xcd\x82"=&gt;"\xe1\xbd\xae", "\xe1\xbd\xa9\xcd\x82"=&gt;"\xe1\xbd\xaf", "\xce\xb1\xcc\x80"=&gt;"\xe1\xbd\xb0", "\xce\xb5\xcc\x80"=&gt;"\xe1\xbd\xb2", "\xce\xb7\xcc\x80"=&gt;"\xe1\xbd\xb4", "\xce\xb9\xcc\x80"=&gt;"\xe1\xbd\xb6", "\xce\xbf\xcc\x80"=&gt;"\xe1\xbd\xb8", "\xcf\x85\xcc\x80"=&gt;"\xe1\xbd\xba", "\xcf\x89\xcc\x80"=&gt;"\xe1\xbd\xbc", "\xe1\xbc\x80\xcd\x85"=&gt;"\xe1\xbe\x80", "\xe1\xbc\x81\xcd\x85"=&gt;"\xe1\xbe\x81", "\xe1\xbc\x82\xcd\x85"=&gt;"\xe1\xbe\x82", "\xe1\xbc\x83\xcd\x85"=&gt;"\xe1\xbe\x83", "\xe1\xbc\x84\xcd\x85"=&gt;"\xe1\xbe\x84", "\xe1\xbc\x85\xcd\x85"=&gt;"\xe1\xbe\x85", "\xe1\xbc\x86\xcd\x85"=&gt;"\xe1\xbe\x86", "\xe1\xbc\x87\xcd\x85"=&gt;"\xe1\xbe\x87", "\xe1\xbc\x88\xcd\x85"=&gt;"\xe1\xbe\x88", "\xe1\xbc\x89\xcd\x85"=&gt;"\xe1\xbe\x89", "\xe1\xbc\x8a\xcd\x85"=&gt;"\xe1\xbe\x8a", "\xe1\xbc\x8b\xcd\x85"=&gt;"\xe1\xbe\x8b", "\xe1\xbc\x8c\xcd\x85"=&gt;"\xe1\xbe\x8c", "\xe1\xbc\x8d\xcd\x85"=&gt;"\xe1\xbe\x8d", "\xe1\xbc\x8e\xcd\x85"=&gt;"\xe1\xbe\x8e", "\xe1\xbc\x8f\xcd\x85"=&gt;"\xe1\xbe\x8f", "\xe1\xbc\xa0\xcd\x85"=&gt;"\xe1\xbe\x90", "\xe1\xbc\xa1\xcd\x85"=&gt;"\xe1\xbe\x91", "\xe1\xbc\xa2\xcd\x85"=&gt;"\xe1\xbe\x92", "\xe1\xbc\xa3\xcd\x85"=&gt;"\xe1\xbe\x93", "\xe1\xbc\xa4\xcd\x85"=&gt;"\xe1\xbe\x94", "\xe1\xbc\xa5\xcd\x85"=&gt;"\xe1\xbe\x95", "\xe1\xbc\xa6\xcd\x85"=&gt;"\xe1\xbe\x96", "\xe1\xbc\xa7\xcd\x85"=&gt;"\xe1\xbe\x97", "\xe1\xbc\xa8\xcd\x85"=&gt;"\xe1\xbe\x98", "\xe1\xbc\xa9\xcd\x85"=&gt;"\xe1\xbe\x99", "\xe1\xbc\xaa\xcd\x85"=&gt;"\xe1\xbe\x9a", "\xe1\xbc\xab\xcd\x85"=&gt;"\xe1\xbe\x9b", "\xe1\xbc\xac\xcd\x85"=&gt;"\xe1\xbe\x9c", "\xe1\xbc\xad\xcd\x85"=&gt;"\xe1\xbe\x9d", "\xe1\xbc\xae\xcd\x85"=&gt;"\xe1\xbe\x9e", "\xe1\xbc\xaf\xcd\x85"=&gt;"\xe1\xbe\x9f", "\xe1\xbd\xa0\xcd\x85"=&gt;"\xe1\xbe\xa0", "\xe1\xbd\xa1\xcd\x85"=&gt;"\xe1\xbe\xa1", "\xe1\xbd\xa2\xcd\x85"=&gt;"\xe1\xbe\xa2", "\xe1\xbd\xa3\xcd\x85"=&gt;"\xe1\xbe\xa3", "\xe1\xbd\xa4\xcd\x85"=&gt;"\xe1\xbe\xa4", "\xe1\xbd\xa5\xcd\x85"=&gt;"\xe1\xbe\xa5", "\xe1\xbd\xa6\xcd\x85"=&gt;"\xe1\xbe\xa6", "\xe1\xbd\xa7\xcd\x85"=&gt;"\xe1\xbe\xa7", "\xe1\xbd\xa8\xcd\x85"=&gt;"\xe1\xbe\xa8", "\xe1\xbd\xa9\xcd\x85"=&gt;"\xe1\xbe\xa9", "\xe1\xbd\xaa\xcd\x85"=&gt;"\xe1\xbe\xaa", "\xe1\xbd\xab\xcd\x85"=&gt;"\xe1\xbe\xab", "\xe1\xbd\xac\xcd\x85"=&gt;"\xe1\xbe\xac", "\xe1\xbd\xad\xcd\x85"=&gt;"\xe1\xbe\xad", "\xe1\xbd\xae\xcd\x85"=&gt;"\xe1\xbe\xae", "\xe1\xbd\xaf\xcd\x85"=&gt;"\xe1\xbe\xaf", "\xce\xb1\xcc\x86"=&gt;"\xe1\xbe\xb0", "\xce\xb1\xcc\x84"=&gt;"\xe1\xbe\xb1", "\xe1\xbd\xb0\xcd\x85"=&gt;"\xe1\xbe\xb2", "\xce\xb1\xcd\x85"=&gt;"\xe1\xbe\xb3", "\xce\xac\xcd\x85"=&gt;"\xe1\xbe\xb4", "\xce\xb1\xcd\x82"=&gt;"\xe1\xbe\xb6", "\xe1\xbe\xb6\xcd\x85"=&gt;"\xe1\xbe\xb7", "\xce\x91\xcc\x86"=&gt;"\xe1\xbe\xb8", "\xce\x91\xcc\x84"=&gt;"\xe1\xbe\xb9", "\xce\x91\xcc\x80"=&gt;"\xe1\xbe\xba", "\xce\x91\xcd\x85"=&gt;"\xe1\xbe\xbc", "\xc2\xa8\xcd\x82"=&gt;"\xe1\xbf\x81", "\xe1\xbd\xb4\xcd\x85"=&gt;"\xe1\xbf\x82", "\xce\xb7\xcd\x85"=&gt;"\xe1\xbf\x83", "\xce\xae\xcd\x85"=&gt;"\xe1\xbf\x84", "\xce\xb7\xcd\x82"=&gt;"\xe1\xbf\x86", "\xe1\xbf\x86\xcd\x85"=&gt;"\xe1\xbf\x87", "\xce\x95\xcc\x80"=&gt;"\xe1\xbf\x88", "\xce\x97\xcc\x80"=&gt;"\xe1\xbf\x8a", "\xce\x97\xcd\x85"=&gt;"\xe1\xbf\x8c", "\xe1\xbe\xbf\xcc\x80"=&gt;"\xe1\xbf\x8d", "\xe1\xbe\xbf\xcc\x81"=&gt;"\xe1\xbf\x8e", "\xe1\xbe\xbf\xcd\x82"=&gt;"\xe1\xbf\x8f", "\xce\xb9\xcc\x86"=&gt;"\xe1\xbf\x90", "\xce\xb9\xcc\x84"=&gt;"\xe1\xbf\x91", "\xcf\x8a\xcc\x80"=&gt;"\xe1\xbf\x92", "\xce\xb9\xcd\x82"=&gt;"\xe1\xbf\x96", "\xcf\x8a\xcd\x82"=&gt;"\xe1\xbf\x97", "\xce\x99\xcc\x86"=&gt;"\xe1\xbf\x98", "\xce\x99\xcc\x84"=&gt;"\xe1\xbf\x99", "\xce\x99\xcc\x80"=&gt;"\xe1\xbf\x9a", "\xe1\xbf\xbe\xcc\x80"=&gt;"\xe1\xbf\x9d", "\xe1\xbf\xbe\xcc\x81"=&gt;"\xe1\xbf\x9e", "\xe1\xbf\xbe\xcd\x82"=&gt;"\xe1\xbf\x9f", "\xcf\x85\xcc\x86"=&gt;"\xe1\xbf\xa0", "\xcf\x85\xcc\x84"=&gt;"\xe1\xbf\xa1", "\xcf\x8b\xcc\x80"=&gt;"\xe1\xbf\xa2", "\xcf\x81\xcc\x93"=&gt;"\xe1\xbf\xa4", "\xcf\x81\xcc\x94"=&gt;"\xe1\xbf\xa5", "\xcf\x85\xcd\x82"=&gt;"\xe1\xbf\xa6", "\xcf\x8b\xcd\x82"=&gt;"\xe1\xbf\xa7", "\xce\xa5\xcc\x86"=&gt;"\xe1\xbf\xa8", "\xce\xa5\xcc\x84"=&gt;"\xe1\xbf\xa9", "\xce\xa5\xcc\x80"=&gt;"\xe1\xbf\xaa", "\xce\xa1\xcc\x94"=&gt;"\xe1\xbf\xac", "\xc2\xa8\xcc\x80"=&gt;"\xe1\xbf\xad", "\xe1\xbd\xbc\xcd\x85"=&gt;"\xe1\xbf\xb2", "\xcf\x89\xcd\x85"=&gt;"\xe1\xbf\xb3", "\xcf\x8e\xcd\x85"=&gt;"\xe1\xbf\xb4", "\xcf\x89\xcd\x82"=&gt;"\xe1\xbf\xb6", "\xe1\xbf\xb6\xcd\x85"=&gt;"\xe1\xbf\xb7", "\xce\x9f\xcc\x80"=&gt;"\xe1\xbf\xb8", "\xce\xa9\xcc\x80"=&gt;"\xe1\xbf\xba", "\xce\xa9\xcd\x85"=&gt;"\xe1\xbf\xbc");</p> 
+</div> 
+</div> 
+<!-- TOPIC ENDS -->
+ 
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+ 
+<div class="graybottom"> 
+<div class="grayhead"> 
+<div class="left"> 
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+ Edition/Revision: 1.0</div> 
+<div class="right">Created 17 Jan 2013<br /> 
+Validated 19 Jan 2013 by Ian Back<br /> 
+Last modified 5 Aug 2015</div> 
+<div class="clearer"></div> 
+<hr /> 
+<div class="left">&laquo; <a href="indexdd1e.html?tid=495">Previous</a></div> 
+<div class="right"><a href="index957c.html?tid=457">Next</a> &raquo;</div> 
+<div class="clearer"></div> 
+</div> 
+</div> 
+<!-- END BOTTOM GRAY BOX -->
+ 
+ </div><!-- END CONTENTS -->
+ 
+<!-- BEGIN FOOTER -->
+<div id="bpmfooter1">
+    <a href="index.html">Home</a> | <a href="indexa821.html?page=hits">Hits</a> | <a href="index53a6.html?page=contact">Contact</a></div><div id="bpmfooter2">
+    <div class="left"><a href="index4574.html?page=copyright">Copyright &copy; 2005 - 2015</a><br /><a href="login.html">Admin login</a></div><div class="right">Wed 05 Aug 2015 12:00:23 GMT +0100 (DST) <a href="indexcdf8.html?page=help/en/help_1" title="Help..."><img src="images/help3.gif" alt="" style="border:0; vertical-align:middle" /></a><br /><a href="http://www.mpdf1.com/">mPDF website</a></div><div class="clearer"></div><div style="text-align:center; font-size:0.95em;">Last modified  5 Aug 2015</div></div>
+<!-- END footer -->
+
+</div>
+<!-- END container -->
+
+</body>
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=496 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:13:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,88 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=293&op_target=print&id=343 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:24 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Input encoding</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF accepts UTF-8 encoded text by default for all functions.</p> 
+<p>You can use the following to allow you to write html code encoded in other than utf-8 (in functions like <a href="http://mpdf1.com/manual/index.php?tid=121">WriteHTML()</a>):</p> 
+<p class="examplecode">$mpdf-&gt;allow_charset_conversion=true;&nbsp; // Set by default to <span class="smallblock">TRUE</span><br />
+$mpdf-&gt;charset_in='windows-1252';</p> 
+<p class="manual_block"><b>Note:</b> <span class="parameter">charset_in</span> requires codes recognised by the PHP function <a href="http://mpdf1.com/manual/index.php?tid=41">iconv</a> i.e. windows-1252 not win-1252</p> 
+<p>If <span class="parameter">allow_charset_conversion</span> is <span class="smallblock">TRUE</span> mPDF will also read the charset from the HTML header if present e.g.</p> 
+<p class="examplecode">&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;</p> 
+<p>Alternatively, you could convert the html to utf-8 encoding before passing it to mPDF, using any one of the PHP functions:</p> 
+<ul> 
+<li><span class="code">utf8_encode($ansi_encoded_html)</span> // only converts <span class="dc-title">ISO-8859-1 to UTF-8</span></li> 
+<li><span class="code">iconv('windows-1252', 'UTF-8', $ansi_encoded_html)</span></li> 
+<li><span class="code">mb_convert_encoding($ansi_encoded_html, 'UTF-8', 'windows-1252') </span></li> 
+</ul> 
+<p>Note the different order of the parameters, and the different codepage names used by the different functions. The codepage names recongnised vary from platform to platform, and your PHP configuration.</p> 
+<p>A list of codepages recognised by iconv() can be found at http://www.gnu.org/software/libiconv/</p> 
+<p>In PHP5 you can list the codepages recognised by mb_ functions using mb_list_encodings().</p> 
+<p>Also note that each function has different ways of failing if illegal characters are encountered.</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 13 Feb 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:05:12 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=293&op_target=print&id=343 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:24 GMT -->
+</html>

@@ -1,0 +1,105 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=385&op_target=print&id=439 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Floating blocks</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF &gt;= 3.0</p> 
+<h5>Float</h5> 
+<p>The CSS property "float" is <b>partially</b> supported in mPDF, allowing block elements (p, div etc.) to be placed alongside one another. They can also be used to create "columns" that span more than one page.</p> 
+<p class="examplecode">float: right|left</p> 
+<p>Limitations:</p> 
+<ul> 
+<li>Float only works properly if a width is set for the float</li> 
+<li>If no width is set, the width is set to the maximum available (full width, or less if floats already set)</li> 
+<li>A block element next to a float has the padding adjusted so that content fits in the remaining width.</li> 
+<li>Text next to float should wrap correctly, but backgrounds and borders will overlap and/or lie under the floats in a mess</li> 
+<li>Does not work if Columns are being used.</li> 
+<li>You cannot change the page margins/orientation etc. in middle of using floats</li> 
+<li>Float is only supported on block elements (i.e. not SPAN etc.)</li> 
+</ul> 
+<p>Margin-right can still be set for a float:right and vice-versa.</p> 
+<p class="manual_block"><b>Note:</b> The width that is set defines the width of the content-box. So if you have two floats with width=50% and either of them has padding, margin or border, they will not fit together on the page.</p> 
+<h5>Clear</h5> 
+<p>The CSS property "clear" can be set on any block element (p, div etc.), and also &lt;hr&gt; or &lt;br&gt; elements.</p> 
+<p class="examplecode">clear: right|left|both</p> 
+<h5>Example</h5> 
+<p class="examplecode">&lt;h4&gt;CSS Float&lt;/h4&gt;<br />
+&lt;div&gt;<br />
+Some text to start with<br />
+<br />
+&lt;div style="float: right; width: 28%;"&gt;<br />
+This is text that is set to float:right.<br />
+&lt;/div&gt;<br />
+&lt;div style="float: left; width: 54%;"&gt;<br />
+This is text that is set to float:left.<br />
+&lt;/div&gt;<br />
+<br />
+&lt;div style="clear: both; margin: 0pt; padding: 0pt; "&gt;&lt;/div&gt;<br />
+This is text that follows the clear:both.<br />
+<br />
+&lt;/div&gt;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 14 Jun 2009<br />
+Validated 4 Jun 2011 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:08:31 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=385&op_target=print&id=439 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+</html>

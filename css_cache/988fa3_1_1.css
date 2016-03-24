@@ -1,0 +1,1637 @@
+
+
+/* Will affect WYSIWYG editor - set same as div.bpmbook below */
+html, body {
+	background-color:#FFFFFF;
+	font-size:14px; font-family:Verdana, Geneva, sans-serif;
+	color:#000000; 
+	padding:0; 
+	margin:0px 0px 0px 0px;
+	}
+
+p {
+	font-size:14px; font-family: Verdana, Geneva, sans-serif;
+	margin:0;  text-indent:0cm;  line-height:130%;  margin-bottom: 5pt; 
+}
+
+table { empty-cells:show; border-collapse: collapse; margin-bottom:7pt; }
+
+table p {  text-indent:0cm;  line-height: normal;  margin-top: 0pt;  }
+
+td, td p {	font-size:13px; font-family: Arial, Helvetica, sans-serif;
+	vertical-align: top; margin-top:0; margin-bottom:0; }
+
+ul { 	margin-bottom:7pt; margin-top:0;  line-height: 130% }
+
+ol { 	margin-bottom:7pt; margin-top:0;  line-height: 130% }
+
+li { 	margin-bottom:0; margin-top:0; }
+
+sup, sub { font-size: 85%; }
+
+/* 1 and 2 not used in books so define for system in case */
+h1 {	margin:10px 0px 8px 0px; font-weight:bold; font-size:20px; color: #000066; font-family: Verdana, Geneva, sans-serif; }
+
+h2 { 	margin:8px 0px 6px 0px; font-weight:bold; font-size:18px; color: #000066; font-family: Verdana, Geneva, sans-serif; }
+
+h3 {	margin:6px 0px 4px 0px; font-weight:bold; font-size:18px; color: #220066; font-family: Arial, Helvetica, sans-serif;}
+
+h4 {	margin:6px 0px 4px 0px; font-weight:bold; font-size:16px; color: #000066; font-family: Verdana, Geneva, sans-serif; } 
+
+h5 {	margin:5px 0px 4px 0px; font-weight:bold; font-size:15px; color:#000066; font-family: Verdana, Geneva, sans-serif; }
+
+h6 {	margin:4px 0px 3px 0px; font-weight:bold; font-size:14px; color:#000033; font-family: Arial, Helvetica, sans-serif; }
+
+h5.sub_heading {	font-weight:bold; font-variant: small-caps; font-size:14px; color:#333366; font-family: Verdana, Geneva, sans-serif; }
+
+h6.sub_heading {	font-weight:bold; font-style: italic; font-size:12px; color:#000000; font-family: Arial, Helvetica, sans-serif; }
+
+a	{ color:#000099; text-decoration: none; }
+a:link	{ color:#000099; text-decoration: none; }
+a:visited  { color:#000099; text-decoration: none; }
+a:hover	{ color:#0000ff; text-decoration: none; }
+span.jslink	{ color:#000099; text-decoration: none; cursor: pointer; }
+
+#tinymce a	{ color:#000099; text-decoration: none; }
+#tinymce a:link	{ color:#000099; text-decoration: none; }
+#tinymce a:visited  { color:#000099; text-decoration: none; }
+#tinymce a:hover	{ color:#0000ff; text-decoration: none; }
+
+
+/* override above - used functional part of on-line page when not sepcifically stated */
+div {
+	font-size:12px; font-family: Tahoma,Geneva,sans-serif;
+}
+
+div p {
+	font-size:12px; font-family: Tahoma,Geneva,sans-serif;
+	margin:0;  text-indent:0cm;  line-height: normal;  margin-top: 0pt; 
+}
+
+div table { empty-cells:show; border-collapse: collapse; }
+
+div td {	
+	font-size:12px; font-family: Tahoma,Geneva,sans-serif;
+	vertical-align: top; margin-top:0; margin-bottom:0; }
+
+div ul { 	margin-bottom:2pt; margin-top:0; font-family: Tahoma,Geneva,sans-serif; line-height:normal; }
+
+div ol { 	margin-bottom:2pt; margin-top:0; font-family: Tahoma,Geneva,sans-serif; line-height:normal; }
+
+div li { 	margin-bottom:0; margin-top:0; font-family: Tahoma,Geneva,sans-serif; }
+
+/* h1 section title */
+/* h2 chapter title */
+/* h3 topic title + general heading */
+/* h4 topic section heading */
+/* h5,6  and 7 within topic */
+div h1 {	margin:10px 0px 8px 0px; font-weight:bold; font-size:20px; color: #000066; font-family: Verdana, Geneva, sans-serif; }
+
+div h2 { 	margin:8px 0px 6px 0px; font-weight:bold; font-size:18px; color: #000066; font-family: Verdana, Geneva, sans-serif; }
+
+div h3 {	margin:6px 0px 4px 0px; font-weight:bold; font-size:18px; color: #220066; font-family: Arial, Helvetica, sans-serif;}
+
+div h4 {	margin:6px 0px 4px 0px; font-weight:bold; font-size:16px; color: #000066; font-family: Verdana, Geneva, sans-serif; } 
+
+div h5 {	margin:5px 0px 4px 0px; font-weight:bold; font-size:15px; color:#000066; font-family: Verdana, Geneva, sans-serif; }
+
+div h6 {	margin:5px 0px 3px 0px; font-weight:bold; font-size:14px; color:#000033; font-family: Arial, Helvetica, sans-serif; }
+
+
+
+
+div a	{ color:#4c4852; text-decoration: underline; }
+div a:link	{ color:#4c4852; text-decoration: underline; }
+div a:visited  { color:#4c4852; text-decoration: underline; }
+div a:hover	{ 	color:#993333; text-decoration: underline; }
+
+hr	{ height: 0px; border: 0px solid #c1ccd7; border-top-width: 1px;}
+
+em {		font-style: italic; }
+strong {	font-weight: bold; }
+.boldtext {	font-weight: bold; }
+
+
+
+a.admin { 	font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #555555; text-decoration: none; }
+a.admin:link { 	font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #555555; text-decoration: none; }
+a.admin:visited { font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #555555; text-decoration: none; }
+a.admin:hover { font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #555555; background-color: #ccccdd; text-decoration: none; }
+
+span.jslink_admin { font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #555555; text-decoration: none; cursor: pointer; }
+
+input { font-size:12px; font-family: Tahoma,Geneva,sans-serif; }
+input.login {
+	font-size:12px; font-family: Tahoma,Geneva,sans-serif;
+	/* these 2 required for IE7 */
+	position: relative;
+	z-index: 9999;
+}
+
+textarea { font-size:12px; font-family: Tahoma,Geneva,sans-serif }
+
+select { font-size:12px; font-family: Tahoma,Geneva,sans-serif }
+
+form { margin-top: 0; margin-bottom: 0 }
+
+.redbold { color:#880000; font-weight:bold; }	/* used in headers etc */
+.error { color: #cc0000 }
+
+/* ? not used
+.sidebar { font-size:12px; padding-right: 5px; padding-left: 5px; padding-bottom: 5px; 
+	padding-top: 5px }
+*/
+
+img { border:0px; }
+
+.inlineimg { vertical-align: middle; border:0px; }
+
+
+
+
+/* Layout DIVS */
+div.clearer {
+	clear: both;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	line-height:0;
+	height:1px;
+	font-size:0px;
+	background-color:#e5e3e8;
+
+}
+div.clear2 {
+}
+
+
+#bpmpage {
+	background-color:#f5f4f6;
+	border-collapse: collapse; 
+	width:100%;
+	margin:0px;
+	border:0px;
+	padding:0px;
+}
+
+#bpmheader {
+	clear:both;
+	background-color: #4c4852;
+}
+		
+#bpmlogo {
+	display: none;
+}
+
+#bpmtitle {
+	float:left;
+/*
+	font-size:18px;
+	font-family: Arial, Helvetica, sans-serif;
+*/
+	color:white;
+	font-family:tahoma,arial,helvetica,sans-serif;
+	font-size:16px;
+	font-weight:normal;
+	height:24px;
+	margin:0pt;
+	padding:6px 0px 3px 10px;
+
+
+}
+#bpmheaderright {	/* contains languages and links */
+}
+#bpmlanguages {
+	float:right;
+	margin:0px;
+	padding:6px 0px 3px 10px;
+}
+#bpmlanguages img {
+	vertical-align:middle;
+}
+
+#bpmlinks {
+	font-size:11px;
+	font-family: Tahoma,Geneva,sans-serif;
+	clear:both;
+
+background-color: #ccc8d2 ;
+border-color:#b2abba;
+border-style:solid;
+border-width:0pt 0pt 1px 0px;
+display:block;
+padding:1px 4px 1px 4px;
+text-align: center;
+position:relative;
+
+}
+
+#bpmlinks br {
+	display: none;
+}
+
+
+#bpmlinks a {
+	color:#4c4852;
+	text-decoration: none;
+}
+#bpmlinks a:hover {
+
+	color:#993333;
+}
+
+#bpmsearchbar {
+	font-size:11px;
+	font-family: Tahoma,Geneva,sans-serif;
+	clear:both;
+	margin:0px;
+	padding:0px;
+	color:#4c4852;
+	text-align:right;
+	font-size: 11px; 
+	font-family: Tahoma,Geneva,sans-serif;
+
+background-color: #ccc8d2 ;
+border-color: #b2abba ;
+border-style:solid;
+border-width:0pt 0pt 1px 0px;
+display:block;
+padding:2px;
+position:relative;
+
+}
+
+#bpmsearchbar input, #bpmsearchbar select, #bpmleftcol input, #bpmleftcol select, #vers {
+	font-size:11px; 
+	font-family: Tahoma,Geneva,sans-serif;
+	color:#4c4852;
+}
+
+
+#bpmmiddle {
+	margin-top: 5px;
+	min-width: 980px;
+}
+
+#bpmleftcol {
+	clear:both;
+	float:left;
+	width:234px;
+	overflow:hidden;
+	height:1%;
+	margin:5px;
+	margin-top: 0px;
+	padding:0px;
+	border:1px solid #b2abba ;
+	border-top: 0px;
+}
+#bpmcontents {
+	padding:0em;
+	margin:0.5em;
+	margin-left: 250px;
+
+/*   _property only shows to IE6 
+	_margin: 0em;	
+	_float: left;
+*/
+/*	overflow:hidden; */	/* screws it up for Chrome, Safari - necessary for Firefox, Opera */
+	border:3px double #b2abba ;
+}
+
+
+#bpminnercontents {	/* wrapper for any page other than topic */
+	display: block;
+	position: relative;
+	padding:1.0em;
+	margin:0em;
+/*	overflow:hidden; */
+	background-color: #FFFFFF;
+}
+
+/* Adverts */
+.adcontainer, .adcontainerbottom {
+	margin-left: 250px;
+	margin-top: 8px; 
+	margin-right: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.adcontainerleft {
+	margin-top: 5px; 
+	margin-bottom: 8px;
+	text-align: center;
+}
+.adcontainertop {
+	padding:5px;
+	text-align: center;
+	overflow: auto;
+}
+.adcontainerright {
+	float: right; 
+	width 140px; 
+	padding:0px 10px 10px 10px;
+	text-align: center;
+}
+.adcontainerrightinner {
+	padding:0px 0px 10px 0px;
+}
+.modulepanelad { 
+	padding:0;
+	margin:0;
+}
+
+
+#bpmfooter1 {
+	padding-right:10px;
+	height:16px; 
+	color: #4c4852;
+	text-align: right;
+	vertical-align: bottom;
+
+	font-size:11px;
+	font-family: Tahoma,Geneva,sans-serif;
+	clear:both;
+	margin:0px;
+	text-align:right;
+	font-size: 11px; 
+	font-family: Tahoma,Geneva,sans-serif;
+
+background-color: #ccc8d2 ;
+border-color: #b2abba ;
+border-style:solid;
+border-width:1px 0pt 1px 0pt;
+display:block;
+padding:2px;
+position:relative;
+
+
+
+
+}
+#bpmfooter1 a { 
+	text-decoration: none;
+}
+
+
+#bpmfooter2 {
+	clear:both;
+	margin:0px;
+	padding: 1em;
+	color: #4c4852;
+	font-size:11px; 
+	font-family: Tahoma,Geneva,sans-serif;
+	background-color: #e5e3e8;
+}
+#bpmfooter2 a, #bpmfooter2 .right { 
+	font-size:11px; 
+	font-family: Tahoma,Geneva,sans-serif; 
+}
+
+div.grayhead {
+	height:1%;
+	margin: 0px; 
+	background-color: #e5e3e8;
+	font-size:11px; 
+	font-family: Tahoma,Geneva,sans-serif;
+	padding: 0.1em 0.4em 0.1em 0.4em; 
+	color:#4c4852;
+overflow:hidden; 
+}
+
+div.grayhead hr {
+	border-color: #e5e3e8;
+	color: #e5e3e8;
+	border-style:none;
+	border-width:0px;
+	height:1px;
+	padding-top: 3px;
+	padding-bottom: 0px;
+	margin: 0;
+}
+
+div.grayhead select {
+	font-size:11px; 
+	color:#4c4852;
+}
+div.grayhead .left, div.grayhead .right {
+	font-size:11px; 
+	font-family: Tahoma,Geneva,sans-serif;
+}
+
+div.graybottom  {
+	border-top:1px solid #b2abba ;
+}
+
+/* left and right used in grayhead boxes and footer2 */
+div.left { 
+	float:left;
+	height:1%;
+}
+div.right { 
+	float:right;
+	height:1%;
+	text-align:right;
+}
+
+#bpm_message {
+  position: absolute;
+  left: 2% ;
+  bottom: 10px;
+  border: solid 1px #929292;
+  background-color: #f7f294;
+  text-align: center;
+  padding: 1px;
+  width: 96%;
+  z-index: 99;
+}
+
+body > div#bpm_message { position: fixed; }
+
+#bpmtopictitle, #bpmtopictitlenotabs {
+	border-top:1px solid #b2abba ;
+	color:#4c4852;
+	padding-top:0.6em;
+	margin-bottom: 0.6em;
+}
+#bpmtopictitlenotabs {
+	border-bottom:1px solid #b2abba ;
+	padding-bottom:0.6em;
+	margin-bottom: 0;
+}
+#bpmtopictitle h3, #bpmtopictitlenotabs h3 {
+	padding-left:0.5em;
+	color:#1E4176;
+	font-family:tahoma,arial,helvetica,sans-serif;
+	font-size:16px;
+	font-weight:bold;
+	vertical-align: middle;
+}
+div.breadcrumb {
+	font-family: tahoma,arial, sans-serif; font-size:11px; color: #666666; 
+	float:right; 
+	text-align:right;
+	height:1%;
+	padding-right: 0.5em;
+	padding-top: 0.5em;
+}
+div.orgvalidation {
+	float:right; padding-left:10px; 
+	height:1%;
+	margin-right: 0.3em;
+}
+
+div.orgvalidation img {
+	vertical-align:middle;
+	height: 20px;
+}
+
+div.field_info {
+	color: #882222;
+	padding:5px;
+	margin-bottom: 10px;
+	border: 1px solid #988fa3;
+	background-color: #f5f4f6;
+
+
+	background: -moz-linear-gradient(top, #f5f4f6 20%, #a7a0b1); 
+	background: -webkit-gradient(linear, left 20%, left bottom, from(#f5f4f6), to(#a7a0b1));
+/*
+	filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr="#f5f4f6", endColorstr="#a7a0b1");
+	filter: progid:DXImageTransform.Microsoft.DropShadow(offX=3, offY=3, color="#BBBBBB")
+*/
+
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+
+	-webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+	-moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+	box-shadow: 3px 3px 5px rgba(0, 0, 0, .3);
+}
+
+div.bpmadminlinks {
+	margin:0em;
+	padding:0.2em 0.5em;
+	color:#4c4852;
+}
+div.bpmadminlinksnotabs {
+	border-bottom:1px solid #b2abba ;
+}
+.bpmadminlinks a, div.bpmbook .bpmadminlinks a { font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #555555; text-decoration: none; }
+.bpmadminlinks a:link, div.bpmbook .bpmadminlinks a:link { 	color: #555555; text-decoration: none;  }
+.bpmadminlinks a:visited, div.bpmbook .bpmadminlinks a:visited { color: #555555; text-decoration: none;  }
+.bpmadminlinks a:hover, div.bpmbook .bpmadminlinks a:hover { color: #555555; background-color: #ccccdd; text-decoration: none;  }
+
+div.bpmadminlinks img {
+	vertical-align:middle;
+}
+
+img.userSymbol {
+	float: left; margin: 0.2em 1.5em 0.2em 0.2em;
+}
+
+
+
+/* BPM Book TOPIC */
+/* BPM Book Fields (tables with class defined are specified separately further below) NB Should be as for initial * p definitions in order to match wysiwyg */
+div.bpmbook {
+	position:relative;
+	font-size:14px; font-family: Verdana, Geneva, sans-serif;
+	color:#000000; background-color:#ffffff; 
+	padding:0.5em; 
+	margin:0;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em; 
+	border:0;
+	background-color: #FFFFFF;
+}
+
+div.bpmbook p {
+	font-size:14px; font-family: Verdana, Geneva, sans-serif;
+	margin:0;  
+}
+
+div.bpmbook table { empty-cells:show; margin-left:1px; border-collapse: collapse; margin-bottom:7pt; }
+
+
+
+
+div.bpmbook td, div.bpmbook td p {	
+	font-size:13px; font-family: Arial, Helvetica, sans-serif;
+	vertical-align: top; margin-top:0; margin-bottom:0; }
+
+div.bpmbook ul { 	margin-bottom:7pt; margin-top:0; font-size:14px; font-family: Verdana, Geneva, sans-serif; 
+	 line-height: 130% }
+
+div.bpmbook ol { 	margin-bottom:7pt; margin-top:0; font-size:14px; font-family: Verdana, Geneva, sans-serif; 
+	 line-height: 130% }
+
+div.bpmbook li { 	margin-bottom:0; margin-top:0; font-size:14px; font-family: Verdana, Geneva, sans-serif; }
+
+/* h1 section title */
+/* h2 chapter title */
+/* h3 topic title + general heading */
+/* h4 topic section heading */
+/* h5,6  and 7 within topic */
+div.bpmbook h3 {	margin:6px 0px 4px 0px; font-weight:bold; font-size:18px; color: #220066; font-family: Arial, Helvetica, sans-serif;}
+
+div.bpmbook h4 {	margin:6px 0px 4px 0px; font-weight:bold; font-size:16px; color: #000066; font-family: Verdana, Geneva, sans-serif; } 
+
+div.bpmbook h5 {	margin:5px 0px 4px 0px; font-weight:bold; font-size:15px; color:#000066; font-family: Verdana, Geneva, sans-serif; }
+
+div.bpmbook h6 {	margin:5px 0px 3px 0px; font-weight:bold; font-size:14px; color:#000033; font-family: Arial, Helvetica, sans-serif; }
+
+div.bpmbook h5.sub_heading {	font-weight:bold; font-variant: small-caps; font-size:14px; color:#333366; font-family: Verdana, Geneva, sans-serif; }
+
+div.bpmbook h6.sub_heading {	font-weight:bold; font-style: italic; font-size:12px; color:#000000; font-family: Arial, Helvetica, sans-serif; }
+
+
+
+
+div.bpmbook a	{ color:#000099; text-decoration: none; }
+div.bpmbook a:link	{ color:#000099; text-decoration: none; }
+div.bpmbook a:visited  { color:#000099; text-decoration: none; }
+div.bpmbook a:hover	{ color:#0000ff; text-decoration: none; }
+
+
+
+div.bpmbook p.pmhCenter { text-align: center; }
+
+div.bpmbook p.pmhCenterNoWrap { white-space: nowrap; text-align: center; }
+
+
+
+/* Drug Information */
+div.bpmbook p.DrugGroup { margin-top:6pt; margin-bottom:0; font-size:13px; font-family:Arial, Helvetica, sans-serif;
+	text-transform:uppercase; font-weight:bold; color: #0070c8;  } 
+
+div.bpmbook p.DrugGroup a	{ color:#0070c8;  text-decoration: none; }
+div.bpmbook p.DrugGroup a:link	{ color:#0070c8;  text-decoration: none; }
+div.bpmbook p.DrugGroup a:visited  { color:#0070c8;  text-decoration: none; }
+div.bpmbook p.DrugGroup a:hover	{ color:#0070c8;  text-decoration: none; }
+
+
+div.bpmbook p.DrugGroupInteractions { margin:0; font-size:14px; font-family:Arial, Helvetica, sans-serif; font-weight:bold;
+	font-style:italic; }
+
+div.bpmbook p.DrugGroupComments { margin:0; margin-bottom:0; font-size:14px; font-family:Arial, Helvetica, sans-serif; }
+
+
+
+div.bpmbook p.DrugName { margin-top:8px; margin-bottom:0; font-size:13px; font-family:Arial, Helvetica, sans-serif; 
+	text-transform:uppercase;
+	font-weight:bold;}
+
+div.bpmbook p.DrugName a	{ color:#000000; text-decoration: none; }
+div.bpmbook p.DrugName a:link	{ color:#000000; text-decoration: none; }
+div.bpmbook p.DrugName a:visited  { color:#000000; text-decoration: none; }
+div.bpmbook p.DrugName a:hover	{ color:#000000; text-decoration: none; }
+
+div.bpmbook p.DrugNotes { margin-top:0; margin-bottom:0; margin-left:16pt; margin-bottom:0; 
+	text-indent:-9pt; font-size:14px; font-family:Arial, Helvetica, sans-serif; }
+
+div.bpmbook p.DrugPrepLine { margin-top:0; margin-bottom:0; margin-left:16pt; margin-bottom:0;
+	text-indent:-9pt; font-size:13px; font-family:Arial, Helvetica, sans-serif; }
+
+div.bpmbook p.DrugPrepNotes { margin-top:0; margin-bottom:0; margin-left:16pt; margin-bottom:0;
+	text-indent:-9pt; font-size:14px; font-family:Arial, Helvetica, sans-serif; }
+
+div.bpmbook p.DrugUsualDose {margin-top:0; margin-bottom:0; margin-left:20pt; margin-bottom:0; 
+	text-indent:-9pt; font-size:13px; font-family:Arial, Helvetica, sans-serif; font-style:italic; }
+
+div.bpmbook p.DrugComments { margin-top:0; margin-bottom:0; margin-left:16pt; margin-bottom:0;
+	text-indent:-9pt; font-size:14px; font-family:Arial, Helvetica, sans-serif; }
+
+div.bpmbook p.DrugInteractions { margin-top:0; margin-bottom:0; margin-left:16pt; margin-bottom:0;
+	text-indent:-9pt; font-size:13px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; font-style:italic;}
+
+
+
+
+/* citation marks in text e.g. [2] in text on-line */
+div.bpmbook span.citation { font-size: 85%; vertical-align: baseline; } 
+div.bpmbook span.citation a { text-decoration: none; }
+div.bpmbook span.citation a:visited { text-decoration: none; }
+div.bpmbook span.citation a:hover { color: #993333; text-decoration: none; }
+
+div.bpmbook span.citation a.keyref { color: #501414; font-weight: bold; text-decoration: none; }
+div.bpmbook span.citation a.keyref:visited { color: #501414; font-weight: bold; text-decoration: none; }
+div.bpmbook span.citation a.keyref:hover { color: #993333; font-weight: bold; text-decoration: none; }
+
+
+/* References in lists */
+div.bpmbook .reflist {	/* ul and ol */
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+} 
+
+div.bpmbook li.refline {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+ 	margin-bottom:3pt; margin-top:0; 
+}
+
+div.bpmbook li.footnote, div.bpmbook li.footnote p {
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+div.abstract {
+	margin: 15px 0px;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: 150%;
+}
+
+span.fulltextref {
+	font-size: 80%;
+}
+span.abstract_link {
+	font-size: 80%;
+}
+span.free {
+	color: #008800;
+	font-size: 90%;
+}
+span.subscription {
+	font-size: 90%;
+}
+
+
+
+/* BPM Book Fields - specific to particular types of subsection */
+div.topic_user_field {
+}
+
+div.topic_user_field p {
+	 text-indent:0cm;  line-height:130%;  margin-bottom: 5pt; 
+}
+div.topic_user_field table p {
+	 text-indent:0cm;  line-height: normal;  margin-top: 0pt; 
+}
+div.topic_user_ref_field {
+}
+
+/* BPM Book Fields - specific to particular subsections - ONLY available when viewing single topic (not publishing) */
+
+#U0 {
+}
+
+div.prescribing_status {
+	font-size:12px; 
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+div.clind_list {
+	margin-bottom:15px;
+}
+
+div.admininfo {
+	margin-bottom:15px;
+	font-size: 12px; 
+}
+
+div.bpmreferences {
+	margin-bottom:15px;
+}
+
+div.seealso {
+	margin-bottom:15px;
+}
+
+div.bpmfootnotes {
+	margin-bottom:15px;
+}
+
+div.disclaimer { font-weight: normal; font-size: 14px; margin: 2px; width: 100%; 
+	color: #AA0000; font-family: Verdana, Geneva, sans-serif; background-color: #f7f294; 
+	text-align: center; }
+
+div.prescribingalert {
+	color: #882222;
+	background-color: #f7f294;
+	margin-top:20px;
+	padding:5px;
+	border: 1px solid #c1ccd7;
+	margin-bottom:20px;
+}
+div.prescribingalert a { 	font-family: Verdana, Geneva, sans-serif; font-size: 14px; color: #992222; background-color: #f7f294; text-decoration: none }
+div.prescribingalert a:link { 	font-family: Verdana, Geneva, sans-serif; font-weight: bold; color: #555555; background-color: #f7f294; }
+div.prescribingalert a:visited { font-family: Verdana, Geneva, sans-serif; font-weight: bold; color: #555555; background-color: #f7f294; }
+div.prescribingalert a:hover { font-family: Verdana, Geneva, sans-serif; font-weight: bold; color: #555555; background-color: #eee428; }
+
+
+/* Left menu items */
+div.moduletableth {
+	font-weight: bold; 
+	font-size: 16px; 
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	color: #4c4852;
+	font-family:tahoma,arial,verdana,sans-serif;
+	font-size:11px;
+	font-weight:bold;
+
+
+
+	BACKGROUND-IMAGE: url("../images/cache/searchbarF5F4F6.png"); BACKGROUND-REPEAT: repeat-x;
+
+
+
+
+	border-color:#b2abba ;
+	border-style:solid none;
+	border-width:1px 0px;
+	color:#4c4852;
+	margin:0px;
+	padding:4px 0px 3px;
+	text-align:left;
+	text-indent:6px;
+	vertical-align:middle;
+	width:100%;
+}
+
+div.moduletableth img {
+	vertical-align: bottom;
+}
+
+div.moduleitem {
+	font-weight: normal; font-size: 12px; 
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	padding:0.1em 0.4em 0em 0.5em;
+/*	border-bottom:1px solid #ffffff;	*/
+	color: #333333;
+}
+
+div.modulebottomitem {
+	font-weight: normal; font-size: 12px; 
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	padding:0em 0.4em 0em 0.5em;
+	margin-bottom: 0.8em;
+	color: #333333;
+}
+
+div.modulepanel {
+	font-weight: normal; font-size: 12px; 
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	padding-left: 8px; padding-right: 8px; padding-top: 5px;
+	margin-bottom: 0.8em;
+	color: #333333;
+}
+
+/* Collapsible Left column menu */
+#bpmleftcol div.moduletableth span.tup {
+	background: url("../images/cc_minus.gif") 0 50% no-repeat;
+	padding: 0 0 0 17px; z-index: 2; cursor:pointer;	
+
+}
+
+#bpmleftcol div.moduletableth span.tdwn {
+	background: url("../images/cc_plus.gif") 0 50% no-repeat;
+	padding: 0 0 0 17px; z-index: 1; cursor:pointer;	
+
+}
+
+
+
+/* Left menu items */
+a.mainlevel {
+	font-size: 12px; 
+	width: 100%; color: #501414; line-height: 1.1em; 
+	text-decoration: none; 
+}
+a.mainlevel:link {
+	font-size: 12px; 
+	width: 100%; color: #501414; line-height: 1.1em; 
+	text-decoration: none; 
+}
+a.mainlevel:visited {
+	font-size: 12px; 
+	width: 100%; color: #501414; line-height: 1.1em; 
+	text-decoration: none; 
+}
+a.mainlevel:hover {
+	color: #993333; text-decoration: none
+}
+
+a.sublevel {
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	font-weight: normal; font-size: 12px; 
+	color: #501414; text-decoration: none; 
+}
+a.sublevel:link {
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	font-weight: normal; font-size: 12px; 
+	color: #501414; text-decoration: none; 
+}
+a.sublevel:visited {
+	font-weight: normal; font-size: 12px; 
+	color: #501414; text-decoration: none; 
+}
+a.sublevel:hover {
+	color: #993333; text-decoration: none
+}
+
+/* Collapsible menu mocCmenuTree*/
+div .dtree {
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #666666;
+	white-space: nowrap;
+}
+div .dTreeNode {
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #666666;
+}
+div .dtree img {
+	border: 0px;
+	vertical-align: middle;
+}
+div .dtree a {
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	font-size: 11px; 
+	color: #501414; 
+	text-decoration: none;
+}
+div .dtree a:visited {
+	color: #501414; 
+	text-decoration: none;
+}
+div .dtree a.node, .dtree a.nodeSel {
+	white-space: nowrap;
+	padding: 1px 2px 1px 2px;
+}
+div .dtree a.linknode, .dtree a.linknode:visited {
+	white-space: nowrap;
+	color: #000044;
+	text-decoration: none;
+	padding: 1px 2px 1px 2px;
+}
+div .dtree a.node:hover, .dtree a.nodeSel:hover, .dtree a.linknode:hover  {
+	color: #993333; 
+	text-decoration: none;
+}
+div .dtree a.nodeSel {
+	background-color: #ccc8d2;
+}
+div .dtree .clip {
+	overflow: hidden;
+}
+
+
+/* mc2Tabs classes (derived from TinyMCE) */
+div.mcTabsSpacer {
+	clear: both;
+	height: 0px;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	line-height:0;
+	font-size:0px;
+}
+div.mcTabsSpacer2 {
+}
+#mc2tabswrapper {
+	margin-bottom:0em;
+	padding: 0;
+	height:1%;
+	border-bottom:0px;
+	overflow:hidden; 
+}
+
+.mc2tabs {
+	display: block;
+	font-family: Trebuchet MS, Helvetica, sans-serif; 
+	font-size: 11px;
+	float: left;
+	width: 100%;
+	line-height: normal;
+	margin-top: 0.3em;
+	background: url("../images/tabs/tabs_bg.gif");
+}
+.mc2tabs ul {
+	margin: 0;
+	margin-left:5px;
+	padding: 0px 0px 0;
+	list-style: none;
+}
+.mc2tabs li {
+	float: left;
+	background: url("../images/tabs/tab_bg.gif") no-repeat left top;
+	margin: 0;
+	margin-left: 0px;
+	margin-right: 2px;
+	padding: 0 0 0 10px;
+	line-height: 18px;
+	white-space:nowrap;
+}
+.mc2tabs li.current {
+	background: url("../images/tabs/tab_sel_bg.gif") no-repeat left top;
+	margin-right: 2px;
+	white-space:nowrap;
+}
+.mc2tabs span {
+	float: left;
+	display: block;
+	background: url("../images/tabs/tab_end.gif") no-repeat right top;
+	padding: 0px 10px 0px 0px;
+	white-space:nowrap;
+}
+.mc2tabs .current span {
+	background: url("../images/tabs/tab_sel_end.gif") no-repeat right top;
+	font-weight: bold;
+}
+.mc2tabs a {
+	text-decoration: none;
+	font-family: Trebuchet MS, Helvetica, sans-serif;
+	font-size: 11px;
+	color:#4c4852;
+}
+.mc2tabs a:link, .mc2tabs a:visited {
+	text-decoration: none;
+	color:#4c4852;
+}
+.mc2tabs a.empty, .mc2tabs a.empty:link, .mc2tabs a.empty:visited {
+	text-decoration: none;
+	color: #888888;
+}
+.mc2tabs a:hover, .mc2tabs a.empty:hover {
+	color: #880000;
+}
+
+
+
+
+/* Can be used in topic text or in admin/list functions. If these need to be different must add under e.g.
+* acronym {}  div acronym {}  div.bpmbook acronym {}
+*/
+acronym { 	cursor: help; border-bottom:1px dashed #00cc00 ; 
+		font-size: 85%; font-weight: bold; 
+	 	font-family: arial,helvetica,sans-serif; }
+
+pre, code {	font-size:14px; font-family: "Courier New",Courier,monospace; }
+
+.code {	font-size:14px; font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console",Monaco,"Courier New",monospace; }
+
+
+/* cite only seen in wysiwyg editor */
+cite	{ background-color:#ccffcc; text-decoration: none; font-size:85%;  }
+cite.key { background-color:#ffcccc; text-decoration: none; font-size:85%; }
+
+
+a.maplink, a.maplink:link, a.maplink:hover, a.maplink:visited { 	
+		cursor: pointer; border-bottom:1px dotted #0044aa; 
+		font-size: 90%; font-weight: bold; 
+	 	font-family: arial,helvetica,sans-serif; }
+
+
+.trans { cursor: url("../images/redcursor.cur"),help; }
+
+
+.study_type {	cursor: help; border-bottom:1px dashed #00cc00 ; 
+		font-size: 85%; font-weight: bold; }
+
+/* also used in credits.php */
+.index	{ border-bottom:1px dashed #aa8888 ; }
+
+.abbrev { border-bottom:1px dashed #00cc00 ;  }
+
+
+
+/* Tables of main Topic text */
+/* Table Headers - General */
+table th {
+ 			vertical-align: top; 
+}
+table th, table th p, div.bpmbook th, div.bpmbook th p {
+ 			font-family: Arial, Helvetica, sans-serif; font-size:13px; margin-bottom:0; 
+}
+th, th p, thead th, thead th p  {
+			text-align:left; /* TH (left column) always align L */
+}
+thead th, thead td, div.bpmbook thead td {
+ 			vertical-align: bottom; 
+}
+thead, thead p, div.bpmbook thead, div.bpmbook thead p {
+			font-weight: bold; font-style: normal; margin-bottom:0; 
+}
+
+/* Lists in tables */
+div.bpmbook th li , div.bpmbook td li{
+ 			font-family: Arial, Helvetica, sans-serif; font-size:13px; margin-bottom:0; margin-left:0; 
+			padding-left: 0px;
+}
+div.bpmbook td ol , div.bpmbook td ul {
+ 			margin-bottom:0; margin-left:0.5em; padding-left: 1em; line-height: 1.3;
+}
+
+/* ALL classes Table */
+table.bpmTopic, table.bpmTopicC, table.bpmClear, table.bpmTopicC,
+table.bpmNoLines, table.bpmNoLinesC, table.bpmTopnTail, table.bpmTopnTailC, table.bpmTopnTailClear, table.bpmTopnTailClearC, table.bpmTheadUClear, table.bpmTheadUClearC, table.bpmLined, table.bpmLinedC, table.bpmOutlined, table.bpmOutlinedC 
+{ 	
+			font-family: Arial, Helvetica, sans-serif; font-size:13px; 
+}
+table.bpmTopic thead td, table.bpmTopic thead td p, table.bpmTopicC thead td, table.bpmTopicC thead td p,
+table.bpmClear thead td, table.bpmClear thead td p, table.bpmClearC thead td, table.bpmClearC thead td p,
+table.bpmNoLines thead td, table.bpmNoLines thead td p, table.bpmNoLinesC thead td, table.bpmNoLinesC thead td p,
+table.bpmLined thead td, table.bpmLined thead td p, table.bpmLinedC thead td, table.bpmLinedC thead td p,
+table.bpmOutlined thead td, table.bpmOutlined thead td p, table.bpmOutlinedC thead td, table.bpmOutlinedC thead td p,
+table.bpmTopnTail thead td, table.bpmTopnTail thead td p, table.bpmTopnTailC thead td, table.bpmTopnTailC thead td p, 
+table.bpmTopnTailClear thead td, table.bpmTopnTailClear thead td p, table.bpmTopnTailClearC thead td, table.bpmTopnTailClearC thead td p, table.bpmTheadUClear thead td, table.bpmTheadUClear thead td p, table.bpmTheadUClearC thead td, table.bpmTheadUClearC thead td p 
+{	
+			text-align:center; 	/* (Header row always align center) */
+}
+table.bpmTopic p, table.bpmTopicC p, table.bpmClear p, table.bpmClearC p,
+table.bpmNoLines p, table.bpmNoLinesC p, table.bpmLined p, table.bpmLinedC p, table.bpmOutlined p, table.bpmOutlinedC p, table.bpmTopnTail p, table.bpmTopnTailC p, table.bpmTopnTailClear p, table.bpmTopnTailClearC p, table.bpmTheadUClear p, table.bpmTheadUClearC p 
+{	
+			margin-bottom:0; 
+}
+table.bpmTopic td, table.bpmTopic th, table.bpmTopicC td, table.bpmTopicC th,
+table.bpmNoLines td, table.bpmNoLines th, table.bpmNoLinesC td, table.bpmNoLinesC th,
+table.bpmLined td, table.bpmLined th, table.bpmLinedC td, table.bpmLinedC th,
+table.bpmClear td, table.bpmClear th, table.bpmClearC td, table.bpmClearC th,
+table.bpmTopnTail td, table.bpmTopnTail th, table.bpmTopnTailC td, table.bpmTopnTailC th, 
+table.bpmTopnTailClear td, table.bpmTopnTailClear th, table.bpmTopnTailClearC td, table.bpmTopnTailClearC th, table.bpmTheadUClear td, table.bpmTheadUClear th, table.bpmTheadUClearC td, table.bpmTheadUClearC th
+{	
+			padding-right:6px; padding-left:6px; 
+			padding-top:3px; padding-bottom:3px; 
+}
+table.bpmTopic td, table.bpmTopic td p, table.bpmTopicC td, table.bpmTopicC td p,
+table.bpmNoLines td, table.bpmNoLines td p, table.bpmNoLinesC td, table.bpmNoLinesC td p,
+table.bpmLined td, table.bpmLined td p, table.bpmLinedC td, table.bpmLinedC td p,
+table.bpmOutlined td, table.bpmOutlined td p, table.bpmOutlinedC td, table.bpmOutlinedC td p,
+table.bpmClear td, table.bpmClear td p, table.bpmClearC td, table.bpmClearC td p,
+table.bpmTopnTail td, table.bpmTopnTail td p, table.bpmTopnTailC td, table.bpmTopnTailC td p,
+table.bpmTopnTailClear td, table.bpmTopnTailClear td p, table.bpmTopnTailClearC td, table.bpmTopnTailClearC td p, table.bpmTheadUClear td, table.bpmTheadUClear td p, table.bpmTheadUClearC td, table.bpmTheadUClearC td p
+{
+			font-family: Arial, Helvetica, sans-serif; font-size:13px;  
+}
+table.bpmTopic th, table.bpmTopicC th, table.bpmNoLines th, table.bpmNoLinesC th, 
+table.bpmLined th, table.bpmLinedC th, table.bpmOutlined th, table.bpmOutlinedC th, 
+table.bpmClear th, table.bpmClearC th, table.bpmTopnTail th, table.bpmTopnTailC th, 
+table.bpmTopnTailClear th, table.bpmTopnTailClearC th, table.bpmTheadUClear th, table.bpmTheadUClearC th,
+table.bpmTopic th p, table.bpmTopicC th p, table.bpmNoLines th p, table.bpmNoLinesC th p, 
+table.bpmLined th p, table.bpmLinedC th p, table.bpmOutlined th p, table.bpmOutlinedC th p, 
+table.bpmClear th p, table.bpmClearC th p, table.bpmTopnTail th p, table.bpmTopnTailC th p, 
+table.bpmTopnTailClear th p, table.bpmTopnTailClearC th p, table.bpmTheadUClear th p, table.bpmTheadUClearC th p
+{
+			font-family: Arial, Helvetica, sans-serif; font-size:13px; 
+			font-weight: bold; font-style: normal; 
+}
+
+
+table.bpmTopic thead td, table.bpmTopicC thead td, table.bpmNoLines thead td, table.bpmNoLinesC thead td, 
+table.bpmLined thead td, table.bpmLinedC thead td, table.bpmOutlined thead td, table.bpmOutlinedC thead td, 
+table.bpmClear thead td, table.bpmClearC thead td, table.bpmTopnTail thead td, table.bpmTopnTailC thead td, 
+table.bpmTopnTailClear thead td, table.bpmTopnTailClearC thead td, table.bpmTheadUClear thead td, table.bpmTheadUClearC thead td,
+
+table.bpmTopic thead td p, table.bpmTopicC thead td p, table.bpmNoLines thead td p, table.bpmNoLinesC thead td p, 
+table.bpmLined thead td p, table.bpmLinedC thead td p, table.bpmOutlined thead td p, table.bpmOutlinedC thead td p, 
+table.bpmClear thead td p, table.bpmClearC thead td p, table.bpmTopnTail thead td p, table.bpmTopnTailC thead td p, 
+table.bpmTopnTailClear thead td p, table.bpmTopnTailClearC thead td p, table.bpmTheadUClear thead td p, table.bpmTheadUClearC thead td p,
+
+table.bpmTopic thead th, table.bpmTopicC thead th, table.bpmNoLines thead th, table.bpmNoLinesC thead th, 
+table.bpmLined thead th, table.bpmLinedC thead th, table.bpmOutlined thead th, table.bpmOutlinedC thead th, 
+table.bpmClear thead th, table.bpmClearC thead th, table.bpmTopnTail thead th, table.bpmTopnTailC thead th, 
+table.bpmTopnTailClear thead th, table.bpmTopnTailClearC thead th, table.bpmTheadUClear thead th, table.bpmTheadUClearC thead th,
+
+table.bpmTopic thead th p, table.bpmTopicC thead th p, table.bpmNoLines thead th p, table.bpmNoLinesC thead th p, 
+table.bpmLined thead th p, table.bpmLinedC thead th p, table.bpmOutlined thead th p, table.bpmOutlinedC thead th p, 
+table.bpmClear thead th p, table.bpmClearC thead th p, table.bpmTopnTail thead th p, table.bpmTopnTailC thead th p, 
+table.bpmTopnTailClear thead th p, table.bpmTopnTailClearC thead th p, table.bpmTheadUClear thead th p, table.bpmTheadUClearC thead th p
+{	
+			font-weight: bold; font-style: normal; 
+}
+
+
+/* ZEBRA STRIPES TABLES even without marked up as odd/even 
+		table.bpmTopic tbody tr:nth-child(even) td, table.bpmTopic tbody tr:nth-child(even) th { background-color: #f5f4f6; } 
+		table.bpmTopicC tbody tr:nth-child(even) td, table.bpmTopicC tbody tr:nth-child(even) th { background-color: #f5f4f6; } 
+		table.bpmNoLines tbody tr:nth-child(even) td, table.bpmNoLines tbody tr:nth-child(even) th { background-color: #f5f4f6; } 
+		table.bpmNoLinesC tbody tr:nth-child(even) td, table.bpmNoLinesC tbody tr:nth-child(even) th { background-color: #f5f4f6; } 
+		table.bpmTopnTail tbody tr:nth-child(even) td, table.bpmTopnTail tbody tr:nth-child(even) th { background-color: #f5f4f6; } 
+		table.bpmTopnTailC tbody tr:nth-child(even) td, table.bpmTopnTailC tbody tr:nth-child(even) th { background-color: #f5f4f6; } 
+
+*/
+
+
+/* bpmTopic Class TABLE */
+table.bpmTopic, table.bpmTopicC { 	
+		background-color: #e5e3e8; 
+}
+table.bpmTopic thead td, table.bpmTopic thead th, table.bpmTopicC thead td, table.bpmTopicC thead th { 	
+		background-color: #ccc8d2; 
+}
+table.bpmTopic td, table.bpmTopicC tbody td {	
+		background-color: #e5e3e8; 
+		border-bottom: 1px solid #ffffff; border-top: 1px solid #ffffff; 
+}
+table.bpmTopic th, table.bpmTopicC th {	
+		background-color: #e5e3e8; 
+		border-bottom: 1px solid #ffffff; border-top: 1px solid #ffffff; 
+}
+table.bpmTopic thead td, table.bpmTopic thead th, table.bpmTopicC thead td, table.bpmTopicC thead th { 	
+		background-color: #ccc8d2; 
+		border-bottom: 1px solid #ffffff; border-top: 1px solid #ffffff; 
+}
+table.bpmTopic tr.oddrow td, table.bpmTopic tr.oddrow th, table.bpmTopicC tr.oddrow td, table.bpmTopicC tr.oddrow th { 
+		background-color: #e5e3e8; }
+table.bpmTopic tr.evenrow td, table.bpmTopic tr.evenrow th, table.bpmTopicC tr.evenrow td, table.bpmTopicC tr.evenrow th {
+	 	background-color: #f5f4f6; }
+
+table.bpmTopic td , table.bpmTopic td p {	text-align:left; }
+
+/* bpmTopicC Class TABLE */
+table.bpmTopicC td, table.bpmTopicC td p { text-align:center; }
+
+/* bpmLined Class TABLE */
+table.bpmLined, table.bpmLinedC { 	
+		background-color: #FFFFFF; 
+}
+table.bpmLined thead td, table.bpmLined thead th, table.bpmLinedC thead td, table.bpmLinedC thead th { 	
+		background-color: #ccc8d2; 
+}
+table.bpmLined td, table.bpmLinedC tbody td {	
+		background-color: #FFFFFF; 
+		border: 1px solid #333333; 
+}
+table.bpmLined th, table.bpmLinedC th {	
+		background-color: #FFFFFF; 
+		border: 1px solid #333333; 
+}
+table.bpmLined thead td, table.bpmLined thead th, table.bpmLinedC thead td, table.bpmLinedC thead th { 	
+		background-color: #ccc8d2; 
+		border: 1px solid #333333; 
+}
+
+table.bpmLined td, table.bpmLined td p {	text-align:left; }
+
+/* bpmLinedC Class TABLE */
+table.bpmLinedC td, table.bpmLinedC td p { text-align:center; }
+
+
+
+
+/* bpmTopnTail Class TABLE */
+table.bpmTopnTail, table.bpmTopnTailC { 	
+		background-color: #e5e3e8; 
+		border-bottom: 1px solid #880000; border-top: 1px solid #880000; 
+}
+table.bpmTopnTail thead td, table.bpmTopnTail thead th, table.bpmTopnTailC thead td, table.bpmTopnTailC thead th { 	
+		background-color: #ccc8d2; 
+		border-bottom: 1px solid #880000; border-top: 1px solid #880000; 
+}
+
+table.bpmTopnTail tr.oddrow td, table.bpmTopnTail tr.oddrow th, table.bpmTopnTailC tr.oddrow td, table.bpmTopnTailC tr.oddrow th { 	
+		background-color: #e5e3e8; }
+table.bpmTopnTail tr.evenrow td, table.bpmTopnTail tr.evenrow th, table.bpmTopnTailC tr.evenrow td, table.bpmTopnTailC tr.evenrow th { 
+		background-color: #f5f4f6; }
+
+
+table.bpmTopnTail, table.bpmTopnTail td p {	text-align:left; }	/* align all TABLE CELLS except TH (left col) CHANGE++ */
+/* bpmTopnTailC Class TABLE */
+table.bpmTopnTailC, table.bpmTopnTailC td p {	text-align:center; }	/* align all TABLE CELLS except TH (left col) CHANGE++ */
+
+
+
+/* bpmTopnTailClear Class TABLE */
+table.bpmTopnTailClear, table.bpmTopnTailClearC { 	
+		border-bottom: 1px solid #880000; border-top: 1px solid #880000; 
+}
+table.bpmTopnTailClear thead td, table.bpmTopnTailClear thead th, table.bpmTopnTailClearC thead td, table.bpmTopnTailClearC thead th { 	
+		border-bottom: 1px solid #880000; border-top: 1px solid #880000; 
+}
+
+table.bpmTopnTailClear td , table.bpmTopnTailClear td p {	text-align:left; }
+/* bpmTopnTailClearC Class TABLE */
+table.bpmTopnTailClearC td, table.bpmTopnTailClearC td p { text-align:center; }
+
+
+/* bpmTheadUClear Class TABLE */
+table.bpmTheadUClear thead td, table.bpmTheadUClear thead th, table.bpmTheadUClearC thead td, table.bpmTheadUClearC thead th { 	
+		border-bottom: 1px solid #880000; 
+}
+
+table.bpmTheadUClear td , table.bpmTheadUClear td p {	text-align:left; }
+/* TheadUClear Class TABLE */
+table.bpmTheadUClearC td, table.bpmTheadUClearC td p { text-align:center; }
+
+
+/* bpmOutlined/C Class TABLE */
+table.bpmOutlined, table.bpmOutlinedC { 	
+		border: 1px solid #000000; 
+}
+table.bpmOutlined thead td, table.bpmOutlined thead th, table.bpmOutlinedC thead td, table.bpmOutlinedC thead th { 	
+		border-bottom: 1px solid #000000; 
+}
+table.bpmOutlined td , table.bpmOutlined td p {	text-align:left; }
+table.bpmOutlinedC td, table.bpmOutlinedC td p { text-align:center; }
+table.bpmOutlined td, table.bpmOutlined th, table.bpmOutlinedC td, table.bpmOutlinedC th {
+		padding: 0.5em 0.7em; 
+}
+table.bpmOutlined thead td, table.bpmOutlined thead th, table.bpmOutlinedC thead td, table.bpmOutlinedC thead th {	
+		padding: 0.5em 0.7em; 
+}
+
+
+
+
+
+
+/* bpmNoLines Class TABLE */
+table.bpmNoLines, table.bpmNoLinesC { 	background-color: #e5e3e8; 
+		border: 0px; 
+}
+table.bpmNoLines td, table.bpmNoLines th, table.bpmNoLinesC td, table.bpmNoLinesC th {	
+		border: 0px; 
+}
+table.bpmNoLines td, table.bpmNoLinesC td {	background-color: #e5e3e8; }
+table.bpmNoLines thead td, table.bpmNoLines thead th, table.bpmNoLinesC thead td, table.bpmNoLinesC thead th { 	
+		background-color: #ccc8d2; 
+}
+table.bpmNoLines tr.oddrow td, table.bpmNoLines tr.oddrow th, table.bpmNoLinesC tr.oddrow td, table.bpmNoLinesC tr.oddrow th { 
+		background-color: #e5e3e8; }
+table.bpmNoLines tr.evenrow td, table.bpmNoLines tr.evenrow th, table.bpmNoLinesC tr.evenrow td, table.bpmNoLinesC tr.evenrow th {
+	 	background-color: #f5f4f6; }
+
+table.bpmNoLines td , table.bpmNoLines td p {	text-align:left; }
+
+/* bpmNoLinesC Class TABLE */
+table.bpmNoLinesC td, table.bpmNoLinesC td p { text-align:center; }
+
+
+
+/* bpmClear Class TABLE */
+table.bpmClear, table.bpmClearC { 	
+			border: 0px; 
+}
+table.bpmClear td, table.bpmClear th, table.bpmClearC td, table.bpmClearC th {	
+			border: 0px; 
+}
+
+table.bpmClear td , table.bpmClear td p {	text-align:left; }
+
+/* bpmClearC Class TABLE */
+table.bpmClearC td, table.bpmClearC td p { text-align:center; }
+
+
+
+/* CLIND tables */
+table.clind  {	font-family: Arial, Helvetica, sans-serif; 
+			font-size:13px; background-color: #e5e3e8; border: 0px; }
+table.clind td {	font-size:13px; padding-right:6px; padding-left:6px; 
+			padding-top:3px; padding-bottom:3px; 
+			background-color: #ffffff; border: 1px solid #888888; }
+table.clind p {		margin-bottom:0; }
+table.clind td p {	font-size:13px;  }
+div.bpmbook table.clind td li  {	font-family: Arial, Helvetica, sans-serif;  font-size:13px;  }
+
+
+/* Table Cells - alignment */
+table tr td.pmhMiddleCenter, table tr td.pmhMiddleCenter p, div.bpmbook table tr td.pmhMiddleCenter { text-align: center; vertical-align: middle; }
+table tr td.pmhMiddleRight, table tr td.pmhMiddleRight p, div.bpmbook table tr td.pmhMiddleRight { text-align: right; vertical-align: middle; }
+table tr td.pmhBottomCenter, table tr td.pmhBottomCenter p, div.bpmbook table tr td.pmhBottomCenter { text-align: center; vertical-align: bottom; }
+table tr td.pmhBottomRight, table tr td.pmhBottomRight p, div.bpmbook table tr td.pmhBottomRight { text-align: right; vertical-align: bottom; }
+table tr td.pmhTopLeft, table tr td.pmhTopLeft p { text-align: left; vertical-align: top; }
+table tr td.pmhTopCenter, table tr td.pmhTopCenter p { text-align: center; vertical-align: top; }
+table tr td.pmhTopRight, table tr td.pmhTopRight p { text-align: right; vertical-align: top; }
+table tr td.pmhBottomLeft, table tr td.pmhBottomLeft p, div.bpmbook table tr td.pmhBottomLeft { vertical-align: bottom; text-align: left; }
+table tr td.pmhMiddleLeft, table tr td.pmhMiddleLeft p, div.bpmbook table tr td.pmhMiddleLeft { vertical-align: middle; text-align: left; }
+
+/* HEADER CELL alignment */
+table tr th.pmhMiddleCenter, table tr th.pmhMiddleCenter p, div.bpmbook table tr th.pmhMiddleCenter { text-align: center; vertical-align: middle; }
+table tr th.pmhMiddleRight, table tr th.pmhMiddleRight p, div.bpmbook table tr th.pmhMiddleRight { text-align: right; vertical-align: middle; }
+table tr th.pmhBottomCenter, table tr th.pmhBottomCenter p, div.bpmbook table tr th.pmhBottomCenter { text-align: center; vertical-align: bottom; }
+table tr th.pmhBottomRight, table tr th.pmhBottomRight p, div.bpmbook table tr th.pmhBottomRight { text-align: right; vertical-align: bottom; }
+table tr th.pmhTopLeft, table tr th.pmhTopLeft p { text-align: left; vertical-align: top; }
+table tr th.pmhTopCenter, table tr th.pmhTopCenter p { text-align: center; vertical-align: top; }
+table tr th.pmhTopRight, table tr th.pmhTopRight p { text-align: right; vertical-align: top; }
+table tr th.pmhBottomLeft, table tr th.pmhBottomLeft p, div.bpmbook table tr th.pmhBottomLeft { vertical-align: bottom; text-align: left; }
+table tr th.pmhMiddleLeft, table tr th.pmhMiddleLeft p, div.bpmbook table tr th.pmhMiddleLeft { vertical-align: middle; text-align: left; }
+
+
+/* Gradient THEAD */
+.bpmLined thead th,
+.bpmLined thead td,
+.bpmLinedC thead th,
+.bpmLinedC thead td,
+
+.bpmTopnTail thead th,
+.bpmTopnTail thead td,
+.bpmTopnTailC thead th,
+.bpmTopnTailC thead td,
+
+.bpmTopic thead th,
+.bpmTopic thead td,
+.bpmTopicC thead th,
+.bpmTopicC thead td,
+
+.bpmNoLines thead th,
+.bpmNoLines thead td,
+.bpmNoLinesC thead th,
+.bpmNoLinesC thead td 
+{ 
+	background: -moz-linear-gradient(top, #f5f4f6 20%, #a7a0b1); 
+	background: -webkit-gradient(linear, left top, left bottom, from(#f5f4f6), to(#a7a0b1));
+}
+/* IE Gradient Covers border in IE8 & 9  */
+
+.bpmTopic thead th,
+.bpmTopic thead td,
+.bpmTopicC thead th,
+.bpmTopicC thead td,
+
+.bpmNoLines thead th,
+.bpmNoLines thead td,
+.bpmNoLinesC thead th,
+.bpmNoLinesC thead td 
+{ 
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,startColorstr="#f5f4f6", endColorstr="#a7a0b1");
+}
+   
+
+
+
+/* Boxed and Shaded Containers */
+div.bpmBoxedCont {
+	padding: 0.5em;
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+	border: 1px solid #333333;
+}
+div.bpmShadedCont {
+	background-color: #e5e3e8; 
+	padding: 0.5em;
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+}
+
+div.bpmBoxShadedCont {
+	border: 1px solid #333333;
+	background-color: #e5e3e8; 
+	padding: 0.5em;
+	margin-top: 0.6em;
+	margin-bottom: 0.6em;
+}
+div.bpmBoxedCont p, div.bpmShadedCont p, div.bpmBoxShadedCont p, div.bpmBoxedCont li, div.bpmShadedCont li, div.bpmBoxShadedCont li, div.bpmBoxedCont ul, div.bpmShadedCont ul, div.bpmBoxShadedCont ul, div.bpmBoxedCont ol, div.bpmShadedCont ol, div.bpmBoxShadedCont ol  {
+	font-size:14px; font-family: Arial, Helvetica, sans-serif; margin-bottom:0; 
+}
+
+/* "Boxes" items */
+
+p.bpmShaded, div.bpmbook p.bpmShaded {
+	background-color: #ccc8d2; 
+	padding: 0 0.3em;
+	margin: 4pt 0;
+}
+
+span.bpmBoxLabel {
+	font-weight: bold;
+	font-style: normal;
+}
+span.bpmBoxXref {
+	font-weight: normal;
+	font-style: italic;
+}
+
+div.bpmBox {
+	margin: 2em 0;
+}
+
+div.bpmBox div.bpmBoxTitle {
+	border: 1px solid  #880000; 
+	border-bottom: 0; 
+	background-color: #ccc8d2; 
+	padding: 0.6em;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+div.bpmBox div.bpmBoxTitle p {
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: normal;
+	margin-bottom: 0;
+	text-indent: 0;
+}
+div.bpmBox div.bpmBoxContents {
+	border: 1px solid  #880000; 
+	padding: 0.6em;
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+div.bpmBox div.bpmBoxContents p, div.bpmBox div.bpmBoxContents li, div.bpmBox div.bpmBoxContents td, div.bpmBox div.bpmBoxContents td p, div.bpmBox div.bpmBoxContents th, div.bpmBox div.bpmBoxContents th p  {
+	font-size: 13px;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height: normal;
+	margin-bottom: 0;
+	text-indent: 0;
+}
+div.bpmBox div.bpmBoxContents table {
+	width: 100%;
+}
+div.bpmBox div.bpmBoxNotes {
+	padding: 0 0.6em;
+	font-size: 12px;
+	line-height: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+div.bpmBox div.bpmBoxNotes p {
+	font-size: 12px;
+	line-height: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-bottom: 0;
+	text-indent: 0;
+}
+
+/* ORGANISATION NOTES BOXES - RED */
+.orgnotesouter { 	border-collapse:collapse; font-size:11px; 
+	color: #2e100f; border:1px solid #8c190b ; background-color: #edcfce;
+	margin: 15px 0px 15px 0px; padding:1px; }
+.orgnotesthead { background-color: #5b201d; color: #ffffff; 
+	font-weight:bold; font-size:11px; 
+	font-family:Tahoma,Geneva,sans-serif; 
+	padding:4px; }
+.orgnotesthead span  { position: relative; }
+.orgnoteslowertd { font-family:Arial, Helvetica, sans-serif; 
+	border-top:1px solid #5b201d ;
+	color: #2e100f; background-color: #edcfce; padding:6px; font-size:13px; }
+.orgnotestd { color: #5b201d; background-color: #f8ecec; border: 2px groove; 
+	margin: 6px 0px 6px 0px; padding:6px; font-size:13px; font-style:italic; }
+
+/* ADMIN REVISION NOTES BOXES - GREEN */
+.revnotesouter { border-collapse:collapse; font-size:11px; 
+	color: #1a291c; border:1px solid #408060 ; background-color: #d9e8db;
+	margin: 15px 0px 15px 0px; padding:1px; }
+.revnotesthead { background-color: #345338; color: #ffffff; 
+	font-weight:bold; font-size:11px; 
+	font-family:Tahoma,Geneva,sans-serif; 
+	padding:4px; }
+.revnotesthead span  { position: relative; }
+.revnoteslowertd { font-family:Arial, Helvetica, sans-serif; 
+	border-top:1px solid #345338 ;
+	color: #1a291c; background-color: #d9e8db; padding:6px; font-size:13px; }
+.revnotestd { color: #345338; background-color: #f0f7f1; border: 2px groove; 
+	margin: 6px 0px 6px 0px; padding:6px; font-size:13px; font-style:italic; }
+
+
+/* USERS NOTES BOXES - BLUE */
+.usernotesouter { border-collapse:collapse; font-size:11px; 
+	color: #0f1b22; border:1px solid #0b198c ; background-color: #cedae1;
+	margin: 15px 0px 15px 0px; padding:1px; }
+.usernotesthead { background-color: #1f3643; color: #ffffff; 
+	font-weight:bold; font-size:11px; 
+	font-family:Tahoma,Geneva,sans-serif; 
+	padding:4px; }
+.usernotesthead span  { position: relative; }
+.usernoteslowertd { font-family:Arial, Helvetica, sans-serif; 
+	border-top:1px solid #1f3643 ;
+	color: #0f1b22; background-color: #cedae1; padding:6px; font-size:13px; }
+.usernotestd { color: #1f3643; background-color: #ecf1f3; border: 2px groove; 
+	margin: 6px 0px 6px 0px; padding:6px; font-size:13px; font-style:italic; }
+
+/* REVIEWER NOTES BOXES -  */
+.reviewernotesouter { border-collapse:collapse; font-size:11px; 
+	color: #201458; border:1px solid #0b198c ; background-color: #cfc9eb;
+	margin: 15px 0px 15px 0px; padding:1px; }
+.reviewernotesthead { background-color: #1f3643; color: #cfc9eb; 
+	font-weight:bold; font-size:11px; 
+	font-family:Tahoma,Geneva,sans-serif; 
+	padding:4px; }
+.reviewernotesthead span  { position: relative; }
+.reviewernoteslowertd { font-family:Arial, Helvetica, sans-serif; 
+	border-top:1px solid #201458 ;
+	color: #201458; background-color: #cfc9eb; padding:6px; font-size:13px; }
+.reviewernotestd { color: #2f1e84; background-color: #eceaf8; border: 2px groove; 
+	margin: 6px 0px 6px 0px; padding:6px; font-size:13px; font-style:italic; }
+
+
+
+
+/* TinyMCE WYSIWYG Editor */
+#tinymce { margin: 8px; }
+
+.mceItemTable, .mceItemTable td, .mceItemTable th, .mceItemTable caption, .mceVisualAid {
+	border-collapse: separate;
+}
+#tinymce div.bpmBoxNotes {
+	border: 1px dashed #BBBBBB;
+}
+
+
+
+
+
+/* ADMIN DIALOG BOXES */
+table.ad_dialog  {
+	border:0px; padding:5px; margin:5px; width:95%; font-size:12px; 
+}
+table.ad_dialog_inner  {
+	margin:0px; width:95%; font-size: 12px; 
+}
+table.ad_dialog_inner td  {
+	padding:2px; border:1px solid #DDDDDD;  font-size: 12px; 
+}
+table.ad_dialog td, table.ad_dialog p  {font-size: 12px; }
+
+table.ad_dialog_nolines td  {
+	padding:2px; border:0px;  font-size: 12px; 
+}
+table.ad_dialog_nolines td, table.ad_dialog_nolines p  {font-size: 12px; }
+
+
+
+/* ADDED REFERENCES - GRAY BOX */
+div.outerref {
+	margin: 15px 0px 15px 0px; padding:1px; border:0px; background-color:#aaaaaa;
+}
+div.topref {
+	border:0px; margin:0px; background-color:#d0d0d0;
+	padding:5px;
+	padding-left:10px;
+	font-weight:bold;
+	font-size:11px; 
+	font-family:Tahoma,Geneva,sans-serif;
+}
+div.topref span  { position: relative; }
+div.innerref {
+	padding:5px; background-color:#f0f0f0;
+}
+
+
+
+
+/* Context menu Script- © Dynamic Drive (www.dynamicdrive.com) */
+#ie6menu.skin0 { position:absolute; width:220px; border:1px solid black; background-color:menu; 
+	font-family:Tahoma,Geneva,sans-serif; padding-top:4px; padding-bottom:4px; line-height:15px; cursor:default; font-size:11px;
+	z-index:100; visibility:hidden; }
+#ie6menu div.menuitems, #ie6menu div.editinplace { padding-left:4px; padding-right:4px; font-family:Tahoma,Geneva,sans-serif; font-size:11px; } 
+
+
+
+#wrong_country p, #wrong_country li, #wrong_country td, #wrong_country h3, #wrong_country h4, #wrong_country h5, #wrong_country h6, #wrong_country a { 
+	color:#666688; }
+
+/* checks for old styles - ORANGE */
+.gray { color: #FF6600; }
+a.gray:link	{ color:#FF6600; }
+a.gray:visited  { color:#FF6600; }
+.small {color: #FF6600; }
+.smallgray	{ color: #FF6600; }
+a.small { color: #FF6600; }
+.smallest { color: #FF6600; }
+
+/* FLOWCHART (heading margin as for H5) */
+.flowchart_heading { margin:5px 0px 4px 0px; 	
+	font-family: Verdana, Geneva, sans-serif; font-size:15px; 
+	font-weight:bold; color: #000066; 
+}
+.flowchart_caption { 	
+	font-family: Verdana, Geneva, sans-serif; font-size:13px; 
+	font-style:italic; 
+}
+
+input#un_title, textarea#note {
+	width: 40em;
+}
+
+

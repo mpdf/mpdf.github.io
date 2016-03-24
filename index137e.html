@@ -1,0 +1,93 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=499&op_target=print&id=571 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:03 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Layers</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 5.7)</p> 
+<p>CSS "z-index" can be used to utilise layers in the PDF document.</p> 
+<p>CSS can set the z-index for any block element or image (default = 0). This does not work on block elements with fixed or absolute position.</p> 
+<h6>Set the Initial state for each layer</h6> 
+<p>You can set initial state="hidden" for a specific z-index (z), and/or specify a display name for the Layer e.g.</p> 
+<p class="examplecode">$mpdf-&gt;layerDetails[z]['state']='hidden';&nbsp;&nbsp;&nbsp; // Set initial state of layer - "hidden" or nothing</p> 
+<p class="examplecode">$mpdf-&gt;layerDetails[z]['name']='Correct Answers';</p> 
+<p>- where z= the z-index (set by CSS)</p> 
+<p>Note:</p> 
+<ul> 
+<li>Using layers automatically changes the resulting PDF document to PDF 1.5 version (which is incompatible with PDFA and PDFX in mPDF).</li> 
+<li>You cannot nest layers - inner values will be ignored</li> 
+</ul> 
+<h6>Display the Layers pane in PDF document viewer</h6> 
+<p><span class="code">$mpdf-&gt;open_layer_pane</span> (set by default as <span class="code">$this-&gt;open_layer_pane=false</span> in <span class="filename">config.php</span>) can be set to open the layers pane in the browser when the document is opened.</p> 
+<p class="examplecode">$mpdf-&gt;open_layer_pane = true;</p> 
+<h6>Set Programatically</h6> 
+<p>If you are writing the PDF document using functions other than WriteHTML(), you can set the layers as follows:</p> 
+<p class="examplecode">$mpdf-&gt;BeginLayer($z-index);<br />
+...<br />
+$mpdf-&gt;EndLayer();</p> 
+<h6>Reserved Layer Names</h6> 
+<p>mPDF automatically adds layer names for visibility: "Print only", "Screen only", and "Hidden"; these only show when utilised.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 14 Jul 2013<br />
+<span class="redbold">Draft (not yet validated)</span></div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:10:24 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=499&op_target=print&id=571 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:03 GMT -->
+</html>

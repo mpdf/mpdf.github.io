@@ -1,0 +1,88 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=246&op_target=print&id=296 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:59 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Columns</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>Columns</p> 
+<p>Multiple columns can be used on a page. This can started and stopped anywhere in the document, by either:</p> 
+<p>$mPDF-&gt;SetColumns(nCols[, vAlign [, gap ]]); or<br /> 
+&lt;columns&nbsp; column-count="n" vAlign="justify" column-gap="n" /&gt;</p> 
+<p>nCols = Number of columns. Anything less than 2 sets columns off. (Required)<br /> 
+vAlign = Automatically adjusts height of columns to be equal if set to J or justify. Default Off. (Optional)<br /> 
+gap = gap in mm between columns. Default 5. (Optional)</p> 
+<p>&lt;columnbreak /&gt; &lt;column_break /&gt; or &lt;newcolumn /&gt; (synonymous) can be included to force a new column. (This will automatically disable any justification or readjustment of column heights.)</p> 
+<p>The maximum ratio to adjust column height when justifying is defined at the top of the mpdf.php file - too large a value can give ugly results:<br /> 
+var $max_colH_correction = 1.15; (default value)</p> 
+<p>You can keep columns as they are i.e. 1st column will finish page then start on second, by setting</p> 
+<p class="examplecode">$mpdf-&gt;KeepColumns = true;</p> 
+<p><b>Limitations</b></p> 
+<p>Columns are incompatible with (and automatically disable): justification if a table is included, table rotation, collapsible margins for blocks e.g. top and bottom margins for a DIV will not collapse (default) at the top/bottom of a column. Support for block-level borders (DIV, P etc) was added in mPDF 3.0</p> 
+<p class="manual_block"><b>Note:</b> Block element borders (P,DIV etc) in columns may appear as disjointed lines. This is because they are written to the document line by line to allow repositioning when the columns are adjusted. The borders should appear correctly when "zoomed in" and when printing. Table cell borders may be similarly affected. Also note that the horizontal borders between table cells will only appear half width if a background color is used in the cell below, because the cell background may write over the bottom half of the border.</p> 
+<p>&nbsp;</p> 
+<p class="manual_block"><b>Note:</b> To create columns that span more than one page, use <a href="http://mpdf1.com/manual/index.php?tid=385">Floating blocks</a>.</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 9 Feb 2009<br />
+<span class="redbold">Draft (not yet validated)</span></div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:10:06 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=246&op_target=print&id=296 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:59 GMT -->
+</html>

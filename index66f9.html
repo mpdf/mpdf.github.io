@@ -1,0 +1,104 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=390&op_target=print&id=444 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF Variables</div>
+<h3>autoPageBreak</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 3.1)</p> 
+<p>autoPageBreak – Specify whether to allow automatic page breaks</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>autoPageBreak</b></p> 
+<p>Specify whether to allow automatic page breaks. By default, mPDF creates page breaks when required in the document. Setting the value to FALSE allows an oversized object (image etc.) to overwrite the footer and/or the bottom margin of the page.</p> 
+<h5>Values</h5> 
+<p class="manual_param_dt"><span class="parameter">autoPageBreak</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p> 
+<p class="manual_param_dd"><b>Values</b><br /> 
+<span class="smallblock">TRUE </span>: enables automatic page breaks<br /> 
+<span class="smallblock">FALSE</span>: disable automatic page breaks<br /> 
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>3.1</td> 
+<td>Variable was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1<br /> 
+</b></p> 
+<p class="examplecode">&lt;?php<br />
+include("../mpdf.php");<br />
+$mpdf=new mPDF();<br />
+$html = '&lt;img src="largeimage.jpg" height="290mm" /&gt; ';<br />
+$mpdf-&gt;autoPageBreak = false;<br />
+$mpdf-&gt;AddPage();<br />
+$mpdf-&gt;WriteHTML($html);<br />
+$mpdf-&gt;Output();<br /> 
+?&gt;</p> 
+<p class="manual_block"><b>Note: </b>This variable existed in the script before v3.1 but did not allow paging to be turned off. The variable was altered in mPDF 3.1 by making the first letter of the variable lowercase.</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 30 Aug 2009<br />
+Validated 30 Aug 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:21:30 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=390&op_target=print&id=444 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:27 GMT -->
+</html>

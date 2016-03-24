@@ -1,0 +1,175 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=253&op_target=print&id=303 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:52 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Headers & Footers</div>
+<h3>Headers & Footers</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>Page headers and page footers can be set for mPDF documents in a number of different ways. As mPDF has evolved, new methods have been added.</p> 
+<p class="manual_block"><b>Note:</b> As from mPDF v6.0 Headers and Footers are all now written internally as HTMLheaders/footers. The use of non-HTML headers and footers (methods 1 &amp; 3) is depracated, but remains supported. Non-HTML headers and footers are converted in mPDF to HTML equivalents. Default non-HTML headers will not clash with HTML headers, but named non-HTML headers WILL clash with (and overwrite) HTML headers of the same (equivalent) name e.g. html_MyFooter == MyFooter (non-HTML).</p> 
+<h5>Types</h5> 
+<p><b>RUNTIME</b> - <span class="smallblock">RUNTIME</span> headers/footers are set as they are required throughout the document.</p> 
+<p><b>NAMED</b> - <span class="smallblock">NAMED</span> headers/footers are defined at any time (before they are used) and given a 'name'; they can then be used/re-used by reference to that name at any time. They can be defined by either PHP script or custom HTML tags.</p> 
+<p><b>Non-HTML</b> - <span class="smallblock">NON-HTML</span> headers/footers are set by text strings with no HTML mark up to define styles. Style changes (font-size, font-family, color) can be defined by changing mPDF variables.</p> 
+<p><b>HTML</b> - <span class="smallblock">HTML</span> headers/footers are written in standard HTML code. They can only be defined outside HTML block tags (except &lt;body&gt;).</p> 
+<p class="manual_block"><b>Note:</b>&nbsp; <b>HTML</b> headers/footers are more intensive of processing time and memory. This probably makes little difference for an average/short document, but may be important for long/complex documents.</p> 
+<h5>Methods</h5> 
+<table class="bpmTopic"> <tbody> 
+<tr> 
+<td>&nbsp;</td> 
+<td>&nbsp;</td> 
+<td><span class="smallblock">NON-HTML</span></td> 
+<td><span class="smallblock">HTML</span></td> 
+</tr> 
+<tr> 
+<td><span class="smallblock">RUNTIME</span></td> 
+<td><br />
+</td> 
+<td> 
+<p><b><a href="http://mpdf1.com/manual/index.php?tid=310">Method 1</a></b></p> 
+<p><i>This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control over styling.</i></p> 
+<p>&nbsp;</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=149">SetHeader()</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=151">SetFooter()</a></p> 
+<p>&nbsp;</p> 
+<p>There are several variants of this method, using string or array. The simplest form does not allow different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.</p> 
+<p>&nbsp;</p> 
+<p>Style can be defined by variables:</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=208">$defaultheaderfontsize</a><br />
+<a href="http://mpdf1.com/manual/index.php?tid=209">$defaultheaderfontstyle</a><br />
+<a href="http://mpdf1.com/manual/index.php?tid=210">$defaultheaderline</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=211">$defaultfooterfontsize</a><br />
+<a href="http://mpdf1.com/manual/index.php?tid=212">$defaultfooterfontstyle</a><br />
+<a href="http://mpdf1.com/manual/index.php?tid=213">$defaultfooterline</a></p> 
+</td> 
+<td> 
+<p><b><a href="http://mpdf1.com/manual/index.php?tid=311">Method 2</a></b></p> 
+<p><i>T</i><i>he simplest &amp; quickest way to program a header/footer once for the whole document that includes images or uses more complex layout styles.</i></p> 
+<p>&nbsp;</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=150">SetHTMLHeader() </a><br />
+<a href="http://mpdf1.com/manual/index.php?tid=152">SetHTMLFooter()</a></p> 
+</td> 
+</tr> 
+<tr> 
+<td rowspan="3"><span class="smallblock">NAMED</span></td> 
+<td>Define</td> 
+<td> 
+<p><b><a href="http://mpdf1.com/manual/index.php?tid=312">Method 3</a></b></p> 
+<p><i>This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers throughout the document</i><i>.</i></p> 
+<p>&nbsp;</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=165">DefHeaderByName()</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=166">DefFooterByName()</a></p> 
+<p>&nbsp;</p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=173">pageheader</a>&gt;</p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=174">pagefooter</a>&gt;</p> 
+</td> 
+<td> 
+<p><b><a href="http://mpdf1.com/manual/index.php?tid=313">Method 4</a></b></p> 
+<p><i>This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the headers/footers at any time during the document.</i></p> 
+<p>&nbsp;</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=169">DefHTMLHeaderByName()</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=170">DefHTMLFooterByName()</a></p> 
+<br /> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=177">htmlpageheader</a>&gt;</p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=178">htmlpagefooter</a>&gt;</p> 
+</td> 
+</tr> 
+<tr> 
+<td rowspan="2">Reference<br />
+</td> 
+<td> 
+<p><i>These methods are recommended when setting the header/footer at the start of a document.<br />
+</i></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=167">SetHeaderByName()</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=168">SetFooterByName()</a></p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=175">setpageheader</a>&gt;</p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=176">setpagefooter</a>&gt;<br />
+<a href="http://mpdf1.com/manual/index.php?tid=307">@page</a></p> 
+</td> 
+<td> 
+<p><i>These methods are recommended when setting the header/footer at the start of a document.</i></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=171">SetHTMLHeaderByName()</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=172">SetHTMLFooterByName()</a></p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=179">sethtmlpageheader</a>&gt;</p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=180">sethtmlpagefooter</a>&gt;<br />
+<a href="http://mpdf1.com/manual/index.php?tid=307">@page</a></p> 
+</td> 
+</tr> 
+<tr> 
+<td colspan="2" class="pmhTopCenter"> 
+<p><i>Recommended when you wish to change the headers/footers during the document.</i></p> 
+<p>These methods can reference any <span class="smallblock">NAMED</span> header or footer (<span class="smallblock">NON-HTML</span> or <span class="smallblock">HTML</span>)</p> 
+<p>&nbsp;</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a></p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a></p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebrea</a>k&gt;</p> 
+<p>&lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt;</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=307">@page</a></p> 
+</td> 
+</tr> 
+</tbody> </table> 
+<p>In any of the options, {PAGENO} or {DATE j-m-Y} can be used - which will be replaced by the page number or current date. j-m-Y can be replaced by any of the valid formats used in the php <a href="http://www.php.net/manual/en/function.date.php" target="_blank">date()</a> function.</p> 
+<p>See also: <a href="http://mpdf1.com/manual/index.php?tid=181">forcePortraitHeaders</a></p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 9 Feb 2009<br />
+Validated 15 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:06:58 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=253&op_target=print&id=303 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:52 GMT -->
+</html>

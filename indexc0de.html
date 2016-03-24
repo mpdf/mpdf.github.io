@@ -1,0 +1,129 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=523&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Table of Contents</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>You can insert one or more tables of contents in the document using HTML or PHP code - see:</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; will insert a Table of Contents (ToC) at the current position.</p> 
+<p><a href="http://mpdf1.com/manual/index.php?tid=185">TOC_Entry()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=119">tocentry</a>&gt; can be used to mark entries for the <acronym title="Table of Contents">ToC</acronym> .</p> 
+<p>From mPDF &gt;= 5.7, CSS styles can be used to control layout of the ToC.</p> 
+<p>At the end of the document, the ToC is generated, creating HTML code (internally) which looks like this:</p> 
+<p class="examplecode">&lt;div class="mpdf_toc" id="mpdf_toc_0"&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;div class="mpdf_toc_level_0"&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a class="mpdf_toc_a" href="#__mpdfinternallink_1"&gt;&lt;span class="mpdf_toc_t_level_0"&gt;Section 1&lt;/span&gt;&lt;/a&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;dottab outdent="2em" /&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a class="mpdf_toc_a" href="#__mpdfinternallink_1"&gt;&lt;span class="mpdf_toc_p_level_0"&gt;5&lt;/span&gt;&lt;/a&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;div class="mpdf_toc_level_1"&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a class="mpdf_toc_a" href="#__mpdfinternallink_2"&gt;&lt;span class="mpdf_toc_t_level_1"&gt;Chapter 1&lt;/span&gt;&lt;/a&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;dottab outdent="2em" /&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a class="mpdf_toc_a" href="#__mpdfinternallink_2"&gt;&lt;span class="mpdf_toc_p_level_1"&gt;5&lt;/span&gt;&lt;/a&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;div class="mpdf_toc_level_2"&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a class="mpdf_toc_a" href="#__mpdfinternallink_3"&gt;&lt;span class="mpdf_toc_t_level_2"&gt;Topic 1&lt;/span&gt;&lt;/a&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;dottab outdent="2em" /&gt;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &lt;a class="mpdf_toc_a" href="#__mpdfinternallink_3"&gt;&lt;span class="mpdf_toc_p_level_2"&gt;5&lt;/span&gt;&lt;/a&gt;<br />
+&nbsp;&nbsp;&nbsp; &lt;/div&gt;<br />
+&lt;/div&gt;</p> 
+<p>The id is "0" for root/un-named ToC; otherwise it is lowercase of the name="" used for the ToC</p> 
+<p>An example CSS stylesheet for this:</p> 
+<p class="manual_block"><b>Note:</b> From mPDF v 6.0 this example stylesheet for ToCs was added to the file <span class="filename">mpdf.css</span> which is read by default as a secondary default CSS stylesheet</p> 
+<p class="examplecode">div.mpdf_toc {font-family: sans-serif; font-size: 11pt;}<br />
+a.mpdf_toc_a&nbsp; {text-decoration: none; color: black;}<br />
+/* Whole line level 0 */<br />
+div.mpdf_toc_level_0 {line-height: 1.5; margin-left: 0; padding-right: 2em;}<br />
+/* padding-right should match e.g &lt;dottab outdent="2em" /&gt; 0 is default */<br />
+/* Title level 0 - may be inside &lt;a&gt; */<br />
+span.mpdf_toc_t_level_0 {font-weight: bold;}<br />
+/* Page no. level 0 - may be inside &lt;a&gt; */<br />
+span.mpdf_toc_p_level_0 {}<br />
+/* Whole line level 1 */<br />
+div.mpdf_toc_level_1 {margin-left: 2em; text-indent: -2em; padding-right: 2em;}<br />
+/* padding-right should match &lt;dottab outdent="2em" /&gt; 2em is default */<br />
+/* Title level 1 */<br />
+span.mpdf_toc_t_level_1 {font-style: italic; font-weight: bold;}<br />
+/* Page no. level 1 - may be inside &lt;a&gt; */<br />
+span.mpdf_toc_p_level_1&nbsp; {}<br />
+/* Whole line level 2 */<br />
+div.mpdf_toc_level_2 {margin-left: 4em; text-indent: -2em; padding-right: 2em;}<br />
+/* padding-right should match &lt;dottab outdent="2em" /&gt; 2em is default */<br />
+/* Title level 2 */<br />
+span.mpdf_toc_t_level_2 {}<br />
+/* Page no. level 2 - may be inside &lt;a&gt; */<br />
+span.mpdf_toc_p_level_2 {}</p> 
+<p>For additional ToCs, these will have &lt;toc name=""&gt; attribute. Use the lowercase e.g. for name="Figures"</p> 
+<p class="examplecode">#mpdf_toc_figures {font-family:Calibri; font-size: 10pt;}<br />
+#mpdf_toc_figures span.mpdf_toc_t_level_0 {color: red; }</p> 
+<p class="manual_block"><b>Note:</b> If you have 2 ToCs immediately following each other, and wish to use pagenumstyle or suppress to control the following text, then you need to set those values on both of the &lt;tocpagebreak&gt; elements.</p> 
+<h6>Automatically Generated ToC entries</h6> 
+<p>You can automatically generate ToC entries from h1 - h6 tags, by setting the variable <a href="http://mpdf1.com/manual/index.php?tid=530"><span class="code">h2toc</span></a>.</p> 
+<p>Only the default ToC will be used if more than 1 ToCs are defined for the document.</p> 
+<p>H1 - H6 must be written with uppercase when defining the array.</p> 
+<p>Example:</p> 
+<p class="examplecode">$mpdf-&gt;h2toc = array('H1'=&gt;0, 'H2'=&gt;1, 'H3'=&gt;2);</p> 
+<p>NB This will ignores calls from inside ToC e.g. if &lt;tocpagebreak toc-prehtml="&lt;h3&gt;Table of Contents&lt;/h3&gt;" and H3 is set to auto-generate a ToC entry - these will be ignored.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.1</div>
+<div class="right">Created 27 Sep 2010<br />
+Validated 27 Sep 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:41:08 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=523&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->
+</html>

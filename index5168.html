@@ -1,0 +1,131 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=128&op_target=print&id=159 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF functions</div>
+<h3>SetDisplayMode()</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 1.0)</p> 
+<p>SetDisplayMode – Specify the initial Display Mode when the PDF file is opened in Adobe Reader</p> 
+<h5>Description</h5> 
+<p class="manual_block">void <b>SetDisplayMode</b> ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])</p> 
+<p>Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p> 
+<h5>Parameters</h5> 
+<p class="manual_param_dt"><span class="parameter">zoom</span></p> 
+<p class="manual_param_dd">This parameter specifies the magnification (zoom) of the display when the document is opened.</p> 
+<p class="manual_param_dd"><b>Values</b> (case-sensitive)<br />
+fullpage: Fit a whole page in the screen<br />
+fullwidth: Fit the width of the page in the screen<br />
+real: Display at real size<br />
+default: User's default setting in Adobe Reader<br />
+<span class="smallblock">INTEGER</span> : Display at a percentage zoom (e.g. 90 will display at 90% zoom)</p> 
+<p class="manual_param_dt"><span class="parameter">layout</span></p> 
+<p class="manual_param_dd">Specify the page layout to be used when the document is opened.<br />
+<span class="smallblock">DEFAULT</span>: "continuous"</p> 
+<p class="manual_param_dd"><b>Values</b> (case-sensitive)<br />
+single: Display one page at a time<br />
+continuous: Display the pages in one column<br />
+two: Display the pages in two columns (first page determined by document direction (e.g. RTL))<br />
+twoleft: Display the pages in two columns, with the first page displayed on the left side (mPDF &gt;= 5.2)<br />
+tworight: Display the pages in two columns, with the first page displayed on the right side (mPDF &gt;= 5.2)<br />
+default: User's default setting in Adobe Reader</p> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+$mpdf=new mPDF();<br />
+$mpdf-&gt;SetDisplayMode('fullwidth');<br />
+$mpdf-&gt;WriteHTML('&lt;p&gt;Hallo World&lt;/p&gt;');<br />
+$mpdf-&gt;Output('filename.pdf');<br />
+<br />
+?&gt;</p> 
+<p class="examplecode"><b>Example #2</b></p> 
+<p class="examplecode"><br />
+// Display at 90% zoom - note the 90 is a number not a string<br />
+$mpdf-&gt;SetDisplayMode(90);<br />
+<br /> 
+// Display two pages side by side (book style)<br />
+$mpdf-&gt;SetDisplayMode('fullpage','two');</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>1.0</td> 
+<td> 
+<p>Function was added.</p> 
+</td> 
+</tr> 
+<tr> 
+<td>5.2</td> 
+<td>2 options for layout parameter added (twoleft and tworight)<br />
+</td> 
+</tr> 
+</tbody> </table> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=389">SetDisplayPreferences()</a> - Defines the way the document shall be presented on the screen</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 6 Feb 2009<br />
+Validated 8 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:16:02 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=128&op_target=print&id=159 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->
+</html>

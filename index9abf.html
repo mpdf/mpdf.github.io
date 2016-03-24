@@ -1,0 +1,183 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=407&op_target=print&id=465 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; HTML control tags</div>
+<h3>barcode</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 4.0)</p> 
+<p>barcode – Add a Barcode to the document</p> 
+<h5>Description</h5> 
+<p class="manual_block">&lt;<b>barcode</b>&nbsp; <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;</p> 
+<p>Add a Barcode to the document.</p> 
+<p class="manual_block"><b>Note:</b> See <a href="http://mpdf1.com/manual/index.php?tid=290">barcodes</a> and the example file for further information.</p> 
+<h5>Attributes</h5> 
+<p class="manual_param_dt"><span class="parameter">code</span></p> 
+<p class="manual_param_dd">Specifies the code to translate to a barcode.<br /> 
+<span class="parameter">code</span> for EAN13 / ISBN / ISSN / UPCA / UPCE can contain hyphens '-' but no other characters are allowed.<br />
+Check-digits can be optionally included for EAN13 / ISBN / ISSN / UPCA / UPCE<br />
+<span class="smallblock">REQUIRED</span></p> 
+<p class="manual_param_dt"><span class="parameter">type</span></p> 
+<p class="manual_param_dd"><span class="parameter">type</span> specifies the type of barcode required.<br /> 
+<span class="smallblock">DEFAULT</span>: EAN13</p> 
+<p class="manual_param_dd"><b>Values</b><br />
+EAN13, ISBN, ISSN, UPCA, UPCE, EAN8<br />
+EAN13P2, ISBNP2, ISSNP2, UPCAP2, UPCEP2, EAN8P2 (with EAN-2 supplement code i.e. 01-99 )<br />
+EAN13P5, ISBNP5, ISSNP5, UPCAP5, UPCEP5, EAN8P5&nbsp; (with EAN-5 supplement code e.g. 90000 )<br />
+(UPCE needs the UPCA <span class="parameter">code</span> entered)<br />
+IMB, RM4SCC, KIX, POSTNET, PLANET<br />
+C128A, C128B, C128C<br />
+EAN128A, EAN128B, EAN128C<br />
+C39, C39+, C39E, C39E+<br />
+S25, S25+, I25, I25+, I25B, I25B+<br />
+C93<br />
+MSI, MSI+<br />
+CODABAR<br />
+CODE11</p> 
+<p class="manual_param_dd">Note: Type with a + at the end includes check-digits.</p> 
+<p class="manual_param_dt"><span class="parameter">text</span></p> 
+<p class="manual_param_dd"><b>EAN13 only</b><br /> 
+Specifies whether to show the the code at the top of an EAN13 barcode.<br /> 
+Note that ISBN and ISSN always show the text, prefixed with ISBN or ISSN.<br />
+Values: 1 or 0<br /> 
+<span class="smallblock">DEFAULT</span>: 0</p> 
+<p class="manual_param_dt"><span class="parameter">size</span></p> 
+<p class="manual_param_dd">Specifies the size of the barcode.<br />
+<span class="parameter">size (float)</span> will scale the nominal size of the barcode as a factor of 1<br />
+<span class="parameter">size="1.5"</span> will generate a barcode one and half times the height and width of the nominal size set in mPDF<br />
+NB Sizes between 0.8 and 2.0 are recommended for EAN13 and similar barcodes.<br /> 
+<span class="smallblock">DEFAULT</span>: 1</p> 
+<p class="manual_param_dt"><span class="parameter">height</span></p> 
+<p class="manual_param_dd">Specifies the height of the barcode.<br /> 
+<span class="parameter">height (float)</span> will determine the relative height of the barcode as a factor of 1<br /> 
+The height factor is applied after the <span class="parameter">size </span> <br /> 
+<span class="parameter">size="2" height="0.5"</span> will generate a barcode of twice the nominal width, but with the nominal height.<br /> 
+NB Ignored for Postcode barcodes<br /> 
+<span class="smallblock">DEFAULT</span>: 1<span class="smallblock"></span></p> 
+<p class="manual_param_dt"><span class="parameter">pr</span></p> 
+<p class="manual_param_dd">Specifies the print ratio i.e. narrow:wide bar width for some types of barcode.<br />
+Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODABAR and CODE11<br /> 
+<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see <a href="http://mpdf1.com/manual/index.php?tid=290">barcodes</a>)</p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>4.0</td> 
+<td>The function was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Examples</b></p> 
+<p class="examplecode">&lt;barcode code="978-0-9542246-0" type="ISBN" height="0.66" text="1" /&gt;</p> 
+<p class="examplecode">&lt;barcode code="04210000526" type="UPCE" /&gt;<br />
+// Note the UPC-A code is required which is converted to UPCE</p> 
+<p class="examplecode">&lt;barcode code="978-0-9542246-0-8 07" type="ISSNP2" text="1" /&gt;</p> 
+<p class="examplecode">&lt;barcode code="01234567094987654321-01234567891" type="IMB" /&gt;</p> 
+<p class="examplecode">&lt;barcode code="SN34RD1A" type="RM4SCC" /&gt;</p> 
+<p class="examplecode">&lt;barcode code="54321068" type="I25" /&gt;</p> 
+<p class="examplecode">&lt;barcode code="A34698735B" type="CODABAR" /&gt;</p> 
+<h5>Notes</h5> 
+<p class="manual_block"><b>Note</b>: The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:<br />
+vertical-align&nbsp; (default: middle)<br />
+border*<br />
+margin*<br />
+padding* (default 2mm for EAN13)<br />
+color (default black)<br />
+background-color (default white)<br />
+NB padding has defaults as 0(mm) if not specified<br />
+Padding is in addition to any specified quiet zones/light margins.</p> 
+<p class="examplecode"><b>Example with CSS<br />
+</b></p> 
+<p class="examplecode">&lt;style&gt;<br />
+.barcode {<br />
+&nbsp;&nbsp;&nbsp; padding: 1.5mm;<br />
+&nbsp;&nbsp;&nbsp; margin: 0;<br />
+&nbsp;&nbsp;&nbsp; vertical-align: top;<br />
+&nbsp;&nbsp;&nbsp; color: #000044;<br />
+}<br />
+.barcodecell {<br />
+&nbsp;&nbsp;&nbsp; text-align: center;<br />
+&nbsp;&nbsp;&nbsp; vertical-align: middle;<br />
+}<br />
+&lt;/style&gt;<br />
+<br />
+&lt;div class="barcodecell"&gt;&lt;barcode code="54321068" type="I25" class="barcode" /&gt;&lt;/div&gt;</p> 
+<p class="manual_block"><b>Note:</b> mPDF will generate a Checkdigit for most barcodes if required, which is added to the barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:</p> 
+<p class="examplecode"><b>Example - Generating a checkdigit<br />
+</b></p> 
+<p class="examplecode">// Must not contain any - or spaces<br /> 
+include('../classes/barcode.php');<br /> 
+$bc = new PDFBarcode();<br /> 
+echo $bc-&gt;getChecksum('9344543204454', 'C93'); <br /> 
+exit;</p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=290">Barcodes</a> - More information on types of barcode<br /> 
+</li> 
+</ul> 
+<p><span class="jslink"><br />
+</span></p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 17 Dec 2009<br />
+Validated 17 Dec 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:18:35 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=407&op_target=print&id=465 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:41:11 GMT -->
+</html>

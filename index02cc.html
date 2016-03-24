@@ -1,0 +1,131 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=401&op_target=print&id=455 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Fixed position blocks</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF &gt;= 4.0</p> 
+<h5>Position<br />
+</h5> 
+<p>The CSS property "position" is <b>partially</b> supported in mPDF, allowing a block element (div etc.) to be placed at a fixed position on the page.</p> 
+<p class="examplecode">position: fixed|absolute</p> 
+<p><span class="parameter">absolute</span> - treats the whole physical page as the containing element<br />
+<span class="parameter">fixed</span> - treats the 'printable page' (inside the margins) as the containing element</p> 
+<p class="examplecode">top|left|bottom|right: <span class="smallblock">LENGTH</span> (any valid length unit: em, mm, px, % etc.) <span class="smallblock">DEFAULT</span> = auto</p> 
+<p><span class="parameter">rotate</span> - (introduced mPDF 5.0) rotates the block element 90 degrees clockwise or anticlockwise</p> 
+<p>top|left|bottom|right|width|height are all used to set the size of the block element BEFORE rotation i.e. if the width is not specified, the lft and right margins will be used to calculate the width. After rotation, left|top are used to position the top left corner of the (rotated) element. There is an exception if bottom or right are specified without the respective top or left values; in this case these values are used to position the bottom or right edge of the (rotated) element.</p> 
+<p class="examplecode">90|-90 <span class="smallblock">DEFAULT</span> = <span class="smallblock">BLANK</span></p> 
+<p>Limitations:</p> 
+<ul> 
+<li>There is no equivalent concept of the viewport as in the browser (in CSS)</li> 
+<li>All positioning is relative to the current page of the document being written<br />
+</li> 
+<li>Position is overridden if it would be off the page, so that the element displays within the containing element<br />
+</li> 
+<li>Overflow:auto causes text to autofit within the block size (additionally constrained if necessary to page edges). <br />
+</li> 
+<li>Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported</li> 
+<li>Probably INCOMPATIBLE with keep-with-table, columns etc.</li> 
+<li>Annotations were disabled prior to mPDF 5.0<br />
+</li> 
+</ul> 
+<p class="manual_block"><b>Note:</b> width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left -right -top -bottom, are all supported.</p> 
+<p class="manual_block"><b>Note:</b> Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML reiteratively until it finds a reasonable fit to the available size.</p> 
+<h6>Overflow</h6> 
+<p>The CSS property "overflow" determines how text is displayed if the block element size is too small for the text.</p> 
+<p class="examplecode">overflow: visible|hidden|auto&nbsp; <span class="smallblock">DEFAULT</span> = visible</p> 
+<p><span class="parameter">visible</span> - all text will show, even if it lies outside the defined block element</p> 
+<p><span class="parameter">hidden</span> - text will be 'clipped' so that overflowing text is not visible</p> 
+<p><span class="parameter">auto</span> - text will be automatically reduced in size if required to fit inside the block element</p> 
+<h5>Example</h5> 
+<p class="examplecode"><b>Example #1</b></p> 
+<p class="examplecode">&lt;div style="position: absolute; top: 50mm; left: 50mm; width: 100mm;"&gt;<br /> 
+This is text in a fixed position block element.<br /> 
+&lt;/div&gt;</p> 
+<p class="examplecode"><b>Example #2 - Centres a block in the middle of the page<br />
+</b></p> 
+<p class="examplecode">&lt;style&gt;<br />
+.myfixed { <br />
+&nbsp;&nbsp;&nbsp; position: absolute; <br />
+&nbsp;&nbsp;&nbsp; overflow: visible; <br />
+&nbsp;&nbsp;&nbsp; left: 0;<br />
+&nbsp;&nbsp;&nbsp; right: 0;<br />
+&nbsp;&nbsp;&nbsp; width: 100mm;&nbsp;&nbsp; /* you must specify a width */<br />
+&nbsp;&nbsp;&nbsp; margin-top: auto; <br />
+&nbsp;&nbsp;&nbsp; margin-bottom: auto; <br />
+&nbsp;&nbsp;&nbsp; margin-left: auto; <br />
+&nbsp;&nbsp;&nbsp; margin-right: auto; <br />
+&nbsp;&nbsp;&nbsp; border: 1px solid #000088; <br />
+&nbsp;&nbsp;&nbsp; background-color: #EEDDFF; <br />
+}<br />
+&lt;/style&gt;<br />
+&lt;div class="myfixed"&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec mattis lacus ac purus feugiat semper. Donec aliquet nunc odio, vitae pellentesque diam. Pellentesque sed velit lacus. Duis quis dui quis sem consectetur sollicitudin. Cras dolor quam, dapibus et pretium sit amet, elementum vel arcu.&lt;/div&gt;</p> 
+<p class="examplecode"><b>Example #3</b> - Rotated barcode at the bottom right corner of the page</p> 
+<p class="examplecode">&lt;div style="position: fixed; right: 0mm; bottom: 0mm; rotate: -90;"&gt;<br />
+&lt;barcode code="978-0-9542246-0" class="barcode" /&gt;<br />
+&lt;/div&gt;</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 21 Nov 2009<br />
+Validated 18 Oct 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:08:28 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=401&op_target=print&id=455 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+</html>

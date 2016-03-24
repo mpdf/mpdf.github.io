@@ -1,0 +1,112 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=292&op_target=print&id=342 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:47 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Tables</div>
+<h3>Auto-layout algorithm</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>Algorithm used for autosizing tables</h5> 
+<h6>For non-rotated tables</h6> 
+<ol> 
+<li>If the minimum width of the table is greater than the page width, the table is resized to fit the minimum width = page width.*<br />
+(Minimum width is calculated when each cell accommodates longest word (allowing for nowrap / &amp;nbsp;))<br />
+This disregards the value of autosize.<br />
+</li> 
+<li>If the height of the highest row is greater than a full page height, the table is resized to fit the highest row &lt; page height.<br />
+(This is an approximation, as it scales the table size by a factor of less than sqrt(maxrow / pageheight) ).<br />
+This disregards the value of autosize.<br />
+</li> 
+<li>The table is now printed - allowing it to break across pages - unless page-break-inside: avoid is set.<br />
+</li> 
+<li>If page-break-inside: avoid is set: 
+<ul> 
+<li>if table height is greater than a full page, the size is reduced to fit the table on a full page, and printed.<br />
+&nbsp;&nbsp;&nbsp; (This is an approximation, as it scales the table size by a factor of less than sqrt(tableheight / pageheight) ).<br />
+&nbsp;&nbsp;&nbsp; This disregards the value of autosize.</li> 
+<li>if table height is greater than the remaining space on the page (but less than a full page): 
+<ul> 
+<li>if the table size can be reduced to fit in the remaining space, AND respect the autosize value (i.e. maximum scaling factor), it is scaled and printed in the remaining page space;</li> 
+<li>if not, a new page is started and the table is printed using the scaling factor set by 1 or 2.</li> 
+</ul> 
+</li> 
+</ul> 
+</li> 
+</ol> 
+<p>If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="http://mpdf1.com/manual/index.php?tid=450">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v&gt;=4.6)</p> 
+<h6>For rotated tables<br />
+</h6> 
+<ol> 
+<li>If the whole table fits into the remaining height left on the page, print as it is.<br />
+</li> 
+<li>If the minimum width of the table is greater than the page height remaining, the table is resized to fit the minimum width = page height remaining, as long as the whole table fits, and the scaling factor is within the value of autosize.<br />
+(Minimum width is calculated when each cell accommodates longest word - allowing for nowrap,&nbsp; &amp;nbsp; etc.)<br />
+</li> 
+<li>Else a new page is started, and the algorithm above followed (obviously containing size width becomes height etc.)</li> 
+</ol> 
+<p>* From mPDF 4.3, this can be overridden using CSS property overflow:</p> 
+<p>&lt;table style="overflow: auto | hidden | visible | wrap"&gt;</p> 
+<p>auto is the default, described above.</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 13 Feb 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:06:30 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=292&op_target=print&id=342 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:47 GMT -->
+</html>

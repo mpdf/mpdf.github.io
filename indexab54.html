@@ -1,0 +1,124 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=346&op_target=print&id=396 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:34 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">Reference &raquo; mPDF Variables</div>
+<h3>disableMultilingualJustify - <span class="redbold">Archived</span></h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 2.3)</p> 
+<p>disableMultilingualJustify – Specify whether to disable full text justification using multiple languages</p> 
+<h5>Description</h5> 
+<p class="manual_block"><b>Note:</b> This was removed in mPDF v5.1</p> 
+<p class="manual_block">void <b>disableMultilingualJustify</b></p> 
+<p>Specify whether to disable full text justification using multiple languages.</p> 
+<p>Different languages require different forms of spacing to achive full text-justification to the width of the page. Texts with joined letters (RTL and Indic languages) need to be word-spaced; texts which may contain no word spaces (CKJ languages) need to be character-spaced. In mPDF, this property is set for each block tag (e.g. &lt;p&gt; &lt;div&gt; etc).</p> 
+<p>If multiple languages are contained in the same block tags, text-justification needs to be disabled or there would be odd results. This is the default setting.</p> 
+<p>Setting the value to FALSE allows text-justification to proceed as normal; this should be specified if you are sure that RTL or CJK texts are not mixed in the same paragraphs/blocks.</p> 
+<h5>Values</h5> 
+<p class="manual_param_dt"><span class="parameter">disableMultilingualJustify</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p> 
+<p class="manual_param_dd"><b>Values</b><br /> 
+<span class="smallblock">TRUE </span>: disables full text justification when multiple languages occur in one paragraph/block<br />
+<span class="smallblock">FALSE</span>: permit normal full text justification even when multiple languages occur in one paragraph/block<br /> 
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p> 
+<h5>Changelog</h5> 
+<table class="bpmTopic"> <thead> 
+<tr> <th>Version</th><th>Description</th> </tr> 
+</thead> <tbody> 
+<tr> 
+<td>2.3</td> 
+<td>Variable was added.</td> 
+</tr> 
+</tbody> </table> 
+<h5>Examples</h5> 
+<p class="examplecode"><b>Example #1<br /> 
+</b></p> 
+<p class="examplecode">&lt;?php<br /> 
+<br /> 
+include("../mpdf.php");<br /> 
+$mpdf=new mPDF('utf-8'); <br />
+<br /> 
+$html = '<br /> 
+&lt;p style="text-align: justify;"&gt;This text is in English .....<br />
+.... and the only other language is Vietnamese: Một khảo sát mới cho biết.&lt;/p&gt;<br /> 
+';<br />
+<br />
+$mpdf-&gt;SetAutoFont();<br />
+<br />
+$mpdf-&gt;disableMultilingualJustify = false;<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br />
+<br />
+$mpdf-&gt;Output();<br /> 
+<br /> 
+?&gt;<a href="http://mpdf1.com/manual/files/docs/example_autofontgroupsize.pdf"><br />
+</a></p> 
+<h5>See Also</h5> 
+<ul> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=344">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=343">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=343">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li> 
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=356">lang</a> - Information on mPDF support for the HTML attribute lang</li> 
+</ul>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 4 Mar 2009 - <span class="redbold">Archived</span><br />
+Validated 22 Mar 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:37:57 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=346&op_target=print&id=396 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:34 GMT -->
+</html>

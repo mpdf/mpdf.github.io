@@ -1,0 +1,184 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=567&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:45 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Math with MathJax 2</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p class="manual_block"><b>Note:</b> This is an alternative method to the one in <a href="http://mpdf1.com/manual/index.php?tid=494">Math Formulae with MathJax</a></p> 
+<p><br />
+1) Adapt the page in which you are testing/writing the Math formulae</p> 
+<ul> 
+<li>Ideally set the default output to SVG. Otherwise the user will need to select this from: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG</li> 
+<li>Add code for a button to send the processed SVG to your PHP script</li> 
+</ul> 
+<p class="examplecode"><b>Example of MathJax page</b></p> 
+<p class="examplecode">&lt;!DOCTYPE html&gt;<br />
+&lt;html&gt;<br />
+&lt;head&gt;<br />
+<br />
+&lt;!-- This line adds MathJax to the page with default SVG output --&gt;<br />
+&lt;script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_SVG"&gt;&lt;/script&gt;<br />
+<br />
+&lt;/head&gt;<br />
+&lt;body&gt;<br />
+<br />
+&lt;h3&gt;The Cauchy-Schwarz Inequality (TeX)&lt;/h3&gt;<br />
+\[ \left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right) \]<br />
+<br />
+&lt;h3&gt;Standard Deviation (MathML)&lt;/h3&gt;<br />
+&lt;math display="block"&gt;&lt;mrow&gt;&lt;mi&gt;&amp;#x03c3;&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msqrt&gt;&lt;mrow&gt;&lt;mfrac&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mstyle displaystyle="true"&gt;&lt;mrow&gt;&lt;munderover&gt;&lt;mrow&gt;&lt;mo&gt;&amp;#x2211;&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;N&lt;/mi&gt;&lt;/mrow&gt;&lt;/munderover&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mrow&gt;&lt;mo stretchy="false"&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mrow&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;&amp;#x03bc;&lt;/mi&gt;&lt;mo stretchy="false"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;/mstyle&gt;&lt;/mrow&gt;&lt;/msqrt&gt;&lt;mo&gt;.&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;<br />
+<br />
+&lt;h3&gt;Inline equation (TeX)&lt;/h3&gt;<br />
+&lt;p&gt;Finally, while display equations look good for a page of samples, the ability to mix math and text in a paragraph is also important. This expression \(\sqrt{3x-1}+(1+x)^2\) is an example of an inline equation.&nbsp; As you see, MathJax equations can be used this way as well, without unduly disturbing the spacing between lines.&lt;/p&gt;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br />
+<br />
+&lt;!-- This block of code adds a button to send the processed HTML code to your script: example_test.php --&gt;<br />
+&lt;div id="mpdf-create"&gt;<br />
+&lt;form autocomplete="off" action="example_test.php" method="POST" id="pdfform" onSubmit="document.getElementById('bodydata').value=encodeURIComponent(document.body.innerHTML);"&gt;<br />
+&lt;input type="submit" value="PDF" name="submit"/&gt;<br />
+&lt;input type="hidden" value="" id="bodydata" name="bodydata" /&gt;<br />
+&lt;/form&gt;<br />
+&lt;/div&gt;<br />
+<br />
+&lt;/body&gt;<br />
+&lt;/html&gt;</p> 
+<p>2) Now you need a PHP script (in this example: <span class="filename">example_test.php</span>) which processes the output code from MathJax so that it is readable by mPDF:</p> 
+<p class="examplecode"><b>Example of 1st part of example_test.php</b></p> 
+<p class="examplecode">// You should include a check for unwanted external referrers to prevent<br />
+// calls on this script from external websites!<br />
+<br />
+$mpdf=new mPDF(''); <br />
+<br />
+$html = $_POST['bodydata'];<br />
+$html = urldecode($html);<br />
+<br />
+preg_match_all('/&lt;svg([^&gt;]*)style="(.*?)"/',$html,$m);<br />
+for ($i=0;$i&lt;count($m[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $style=$m[2][$i];<br />
+&nbsp;&nbsp;&nbsp; preg_match('/width: (.*?);/',$style, $wr);<br />
+&nbsp;&nbsp;&nbsp; $w = $mpdf-&gt;ConvertSize($wr[1],0,$mpdf-&gt;FontSize) * $mpdf-&gt;dpi/25.4;<br />
+&nbsp;&nbsp;&nbsp; preg_match('/height: (.*?);/',$style, $hr);<br />
+&nbsp;&nbsp;&nbsp; $h = $mpdf-&gt;ConvertSize($hr[1],0,$mpdf-&gt;FontSize) * $mpdf-&gt;dpi/25.4;<br />
+&nbsp;&nbsp;&nbsp; $replace = '&lt;svg'.$m[1][$i].' width="'.$w.'" height="'.$h.'" style="'.$m[2][$i].'"';<br />
+&nbsp;&nbsp;&nbsp; $html = str_replace($m[0][$i],$replace,$html);<br />
+}<br />
+preg_match_all('/&lt;path d="(.*?)" stroke-width="(.*?)" id="(.*?)"&gt;&lt;\/path&gt;/',$html, $d);<br />
+$defs = array();<br />
+for ($i=0;$i&lt;count($d[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $defs[$d[3][$i]]['sw'] = 0;<br />
+&nbsp;&nbsp;&nbsp; $defs[$d[3][$i]]['path'] = $d[1][$i];<br />
+}<br />
+$html = preg_replace('/&lt;defs.*?&lt;\/defs&gt;/','',$html);<br />
+$html = preg_replace('/&lt;svg&gt;.*?&lt;\/svg&gt;/','',$html);&nbsp;&nbsp;&nbsp; // get rid of the &lt;defs&gt; SVG<br />
+<br />
+preg_match_all('/&lt;use xlink:href="#([a-zA-Z0-9\-]+)"([^&gt;]*)&gt;&lt;\/use&gt;/',$html,$m);<br />
+for ($i=0;$i&lt;count($m[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $replace = '&lt;path d="'.$defs[$m[1][$i]]['path'].'" stroke-width="'.$defs[$m[1][$i]]['sw'].'"'.$m[2][$i].'&gt;&lt;/path&gt;';<br />
+&nbsp;&nbsp;&nbsp; $html = str_replace($m[0][$i],$replace,$html);<br />
+}<br />
+<br />
+preg_match_all('/&lt;use y="([-]{0,1}[0-9]+)" x="([-]{0,1}[0-9]+)" xlink:href="#([a-zA-Z0-9\-]+)"([^&gt;]*)&gt;&lt;\/use&gt;/',$html,$m);<br />
+for ($i=0;$i&lt;count($m[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $replace = '&lt;g'.$m[4][$i].'&gt;&lt;g transform="translate('.$m[2][$i].','.$m[1][$i].')"&gt;&lt;path d="'.$defs[$m[3][$i]]['path'].'" stroke-width="'.$defs[$m[3][$i]]['sw'].'"&gt;&lt;/path&gt;&lt;/g&gt;&lt;/g&gt;';<br />
+&nbsp;&nbsp;&nbsp; $html = str_replace($m[0][$i],$replace,$html);<br />
+}<br />
+<br />
+</p> 
+<p>3a) Finally you can create a PDF document directly based on the MathJax web page submitted:</p> 
+<p class="examplecode"><b>Example of 2nd part of example_test.php creating a PDF document</b></p> 
+<p class="examplecode">// ADD a stylesheet<br />
+$stylesheet = '<br />
+/* This helps alignment for inline equations */<br />
+img { vertical-align: middle; }<br />
+/* This sets padding for display equations (but not in-line ones) */<br />
+.MathJax_SVG_Display { padding: 1em 0; }<br />
+/* This prevents the Create PDF button being reproduced in the PDF document */<br />
+/* Use this method to suppress other parts of the web-page from displaying */<br />
+#mpdf-create { display: none; }<br />
+/* Add any other CSS styling here for the rest of the document */<br />
+/* The CSS/stylesheet information from the original page is not accessible here */<br />
+';<br />
+<br />
+$mpdf-&gt;WriteHTML($stylesheet,1);<br />
+<br />
+$mpdf-&gt;WriteHTML($html);<br />
+$mpdf-&gt;Output(); <br />
+exit;<br />
+<br />
+</p> 
+<p>3b) Or you could output the prepared SVG code suitable for including directly in your PDF documents:</p> 
+<p class="examplecode"><b>Example of 2nd part of example_test.php to output the code to a browser</b></p> 
+<p class="examplecode">...<br />
+// To output SVG files (one for each formula) readable by mPDF as text output<br />
+header('Content-type: text/plain');<br />
+preg_match_all('/&lt;svg(.*?)&lt;\/svg&gt;/',$html,$m);<br />
+for ($i=0;$i&lt;count($m[0]);$i++) {<br />
+&nbsp;&nbsp;&nbsp; $svg = $m[0][$i];<br />
+&nbsp;&nbsp;&nbsp; $svg = preg_replace('/&gt;/',"&gt;\n",$svg);&nbsp;&nbsp;&nbsp; // Just add some new lines<br />
+&nbsp;&nbsp;&nbsp; echo $svg."\n\n";<br />
+}<br />
+exit;</p> 
+<p>See an example: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a></p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 17 Jan 2013<br />
+Validated 17 Jan 2013 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:48 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=567&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:45 GMT -->
+</html>

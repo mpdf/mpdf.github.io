@@ -1,0 +1,165 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=295&op_target=print&id=345 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; CSS & Stylesheets</div>
+<h3>Default stylesheet</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>mPDF uses a default "stylesheet" for default settings of style and layout; this is in <span class="filename">config.php</span> as a variable <span class="parameter">$defaultCSS</span>.</p> 
+<p>mPDF ( &gt;= 2.2) will load an optional file <span class="filename">mpdf.css</span> (located in the same directory as <span class="filename">mpdf.php</span>) which can be edited to change your default styles for PDF files.</p> 
+<p class="manual_block"><b>mPDF &gt;= 6.0</b> A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following text describes behaviour prior to mPDF v6.0)</p> 
+<p>The file should be a valid CSS stylesheet, but will only support changing properties at element level i.e. P, DIV, TABLE, TD and not P.classname.</p> 
+<p>The mpdf.css file supplied is inactive as it has all the entries commented out by /* ... */</p> 
+<p>The following values will restore behaviour of pre-4.2 versions to 4.2:</p> 
+<p class="examplecode"><br />
+&nbsp;&nbsp;&nbsp; img { margin: 0.83em 0; vertical-align: bottom; }<br />
+&nbsp;&nbsp;&nbsp; table { margin: 0.5em; }<br />
+&nbsp;&nbsp;&nbsp; textarea { vertical-align: top; }</p> 
+<p>The following values will restore behaviour of 2.2 versions:</p> 
+<p class="examplecode"><br />
+&nbsp;&nbsp;&nbsp; body {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; font-family: sans-serif;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; a {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; color: #000066;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; text-decoration: none;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; table {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; border-collapse: collapse;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; thead {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; vertical-align: bottom;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; text-align: center;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; font-weight: bold;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; tfoot {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; text-align: center;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; font-weight: bold;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; th {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; text-align: left;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-left: 0.35em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-right: 0.35em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-top: 0.35em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-bottom: 0.35em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; vertical-align: top;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; td {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-left: 0.35em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-right: 0.35em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-top: 0.35em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; padding-bottom: 0.35em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; vertical-align: top;<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; img {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; margin: 0.2em;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; vertical-align: middle;<br />
+&nbsp;&nbsp;&nbsp; }</p> 
+<h6>Prior to mPDF 2.2</h6> 
+<p>The original default styles (mPDF &lt;=2.0) were extensively changed with improvements in CSS handling in mPDF 2.0 (this particularly changed table borders, and table cell alignment, as well as a serif default font-family).</p> 
+<p>In order to allow backwards compatibilty, a secondary "stylesheet" - a variable $defaultCSS2 was introduced in mPDF 2.0 - and the option to load this on intiating mPDF:</p> 
+<p class="examplecode">$mpdf-&gt;useDefaultCSS2 = true;</p> 
+<h6>Secondary default CSS values used mPDF 2.0 - 2.1</h6> 
+<p class="examplecode">var $defaultCSS2 = array(<br />
+&nbsp;&nbsp;&nbsp; 'BODY' =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'FONT-FAMILY' =&gt; 'sans-serif',<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'A' =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'COLOR' =&gt; '#000066',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'TEXT-DECORATION' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'TABLE' =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'BORDER-COLLAPSE' =&gt; 'collapse',<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'THEAD' =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'VERTICAL-ALIGN' =&gt; 'bottom',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'TEXT-ALIGN' =&gt; 'center',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'FONT-WEIGHT' =&gt; 'bold',<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'TFOOT' =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'TEXT-ALIGN' =&gt; 'center',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'FONT-WEIGHT' =&gt; 'bold',<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'TH' =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'TEXT-ALIGN' =&gt; '',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'PADDING-LEFT' =&gt; '0.35em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'PADDING-RIGHT' =&gt; '0.35em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'PADDING-TOP' =&gt; '0.35em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'PADDING-BOTTOM' =&gt; '0.35em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'VERTICAL-ALIGN' =&gt; 'top',<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'TD' =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'PADDING-LEFT' =&gt; '0.35em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'PADDING-RIGHT' =&gt; '0.35em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'PADDING-TOP' =&gt; '0.35em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'PADDING-BOTTOM' =&gt; '0.35em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'VERTICAL-ALIGN' =&gt; 'top',<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+&nbsp;&nbsp;&nbsp; 'IMG' =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'MARGIN' =&gt; '0.2em',<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'VERTICAL-ALIGN' =&gt; 'middle',<br />
+&nbsp;&nbsp;&nbsp; ),<br />
+);</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 13 Feb 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:08:00 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=295&op_target=print&id=345 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:55 GMT -->
+</html>

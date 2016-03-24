@@ -1,0 +1,96 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=312&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:38 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; What Else Can I Do?</div>
+<h3>Text Justification</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h5>Justifying text &amp; Spacing</h5> 
+<h6>Character and Word spacing</h6> 
+<p>When text-alignment is set to Justify (i.e. aligning to both right and left margins), word spacing and character spacing are normally used to justify text.</p> 
+<p>The PDF file definition does not enable word-spacing when using multibyte encoding e.g. Unicode fonts or CJK languages. However, mPDF creates word-spacing in these formats by altering the character spacing for the spaces between words.</p> 
+<p>Thus both character and word spacing can be used in all modes, including Unicode and CJK.</p> 
+<p>The default is to use a mix of character and word spacing. The ratio is set by variables defined at the top of the mpdf.php file:</p> 
+<p class="examplecode">var $jSpacing = ''; // Spacing method when Justifying [ C, W or blank (for mixed e.g. 40/60) ]<br /> 
+var $jSWord = 0.4;&nbsp; // Percentage(/100) of spacing to allocate to Word vs. Character<br /> 
+var $jSmaxChar = 2; // Maximum spacing to allocate to character spacing. (0 = no maximum)</p> 
+<p>The maximum (<span class="parameter">$jSmaxChar</span>) will prevent excessive, ugly and difficult-to-read character spacing.</p> 
+<p>CJK characters usually need to be character-spaced (as each character is like a word), and cursive scripts like Arabic need to be word-spaced. These are predefined in htmltoolkit.php, which sets <span class="parameter">jSpacing</span> to C or W which overrides the default, and is determined by the language/country code (en-GB).</p> 
+<h6>"Orphans"</h6> 
+<p>HTML2FPDF used spaces to determine where to cut lines, but assumes that the end of a block of text within tags is a suitable place to wrap the line. This not always the case e.g.:<br /> 
+... the end of a sentence ends in &lt;b&gt;bold&lt;/b&gt;.<br /> 
+... the end of a sentence ends with a reference&lt;sup&gt;32&lt;/sup&gt;</p> 
+<p>mPDF will prevent these "orphans" (. in first case and <sup>32</sup> in second) being moved to a next line and separated from the preceding text. This works for .,:;?!’”)›‚»„ and sup and sub text. The maximum number of characters is set at the top of the mpdf.php file as var <span class="parameter">$orphansAllowed</span> (default value 5 e.g <sup>34-36</sup>).</p> 
+<h6>Non-breaking space (NBSP)</h6> 
+<p>The non-breaking space character is supported when using all codepages other than CJK - unless the font chosen does not have a glyph/character representing the nbsp (? only FreeSerif); in these cases the nbsp is converted to a normal space. When supported, it prevents word wrapping and prevents collapse of white space as expected with HTML.</p> 
+<h6>The last line (mPDF &gt;= 4.0)</h6> 
+<p>The last line of justified text is left-aligned, but when the penultimate line has been stretched to fit the page width it appears best if the last line also has increased spacing . This was introduced in mPDF 4.0.</p> 
+<p>If the penultimate line was stretched considerably, the last line may look odd using the same spacing, so maximum values for the character-spacing (<span class="parameter">$jSmaxCharLast</span>) and word-spacing (<span class="parameter">$jSmaxWordLast</span>) can be set in the configuration file.</p> 
+<h6>Justification before line-breaks</h6> 
+<p>In a justified text block, an inline &lt;img&gt;, &lt;textarea&gt;, &lt;input&gt;, or &lt;select&gt; element which causes a new line, force the previous line to be justified. However, a &lt;hr&gt; or &lt;br&gt; do not force justification of the preceeding text.</p> 
+<p>This behaviour matches most browsers. To allow optional compliance with the bahaviour of MS Word, which also justifies text before a &lt;br&gt; you can set the configurable variable <a href="http://mpdf1.com/manual/index.php?tid=441">justifyB4br</a> to true.</p> 
+<p>&nbsp;</p> 
+<p>NB - Comment on Vertical justification for Columns</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 9 Feb 2009<br />
+Validated 4 Mar 2011 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:38:23 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?id=312&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:38 GMT -->
+</html>

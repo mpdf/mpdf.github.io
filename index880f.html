@@ -1,0 +1,222 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=367&op_target=print&id=421 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:23 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Real life examples</div>
+<h3>Year Book</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>This script was written to create a YearBook, where each entry must fit on a quarter page. See the <a href="http://mpdf1.com/manual/files/docs/example_yearbook.pdf">result</a>.</p> 
+<p class="examplecode">&lt;?php<br />
+<br />
+// First write all your entries to a PDF file, forcing each entry to fit on one page<br />
+include("../mpdf.php");<br />
+<br />
+// Define the maximum containing box width &amp; height for each text box as it will appear on the final page (no padding or margin here)<br />
+$pw = 80;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // Width<br />
+$ph = 110;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; // Height<br />
+$minK = 0.7;&nbsp;&nbsp;&nbsp;&nbsp; // Maximum scaling factor 0.7 = 70%<br />
+$inc = 0.01;&nbsp;&nbsp;&nbsp;&nbsp; // Increment to change scaling factor 0.05 = 5%<br />
+$spacing = 10;&nbsp;&nbsp; // millimetres (vertically and horizonatlly between boxes in output) shrinks if boxes too big<br />
+$border = 3;&nbsp;&nbsp;&nbsp;&nbsp; // millimetres round final boxes (-1 for no border)<br />
+$align = 'T';&nbsp;&nbsp;&nbsp; // T(op) or M(iddle) for content of final output boxes<br />
+<br />
+// Only change the first parameter of the next line if required e.g. utf-8<br />
+$mpdf = new mPDF('', array(($pw*(1/$minK)),($ph*(1/$minK))), '','', 0,($pw*(1/$minK))-$pw,0,($ph*(1/$minK))-$ph,0,0);<br />
+<br />
+$pph = array();<br />
+<br />
+<br />
+// FOR EACH ENTRY FOR YOUR YEARBOOK saving the page height in $pph (where $html is the HTML code for the entry):<br />
+//&nbsp;&nbsp;&nbsp; $pph[$i] = SinglePage($html, $pw, $ph, $minK);<br />
+<br />
+//==============================================================<br />
+// .. but we will use this for an example<br />
+<br />
+$html1 = '<br />
+&lt;style&gt;<br />
+div { text-align: justify; }<br />
+&lt;/style&gt;<br />
+&lt;h2&gt;Joanne Smith 2002-2007&lt;/h2&gt;&lt;div&gt;This is the normal text in the div: Nulla felis erat, imperdiet eu, ullamcorper non, nonummy quis, elit. Suspendisse potenti. Ut a eros orci. Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque, &lt;img src="tiger.wmf" width="100" style="float: right; margin: 4px; " /&gt; risus at eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus tincidunt turpis, vel aliquam quam odio et sapien. Mauris ante pede, auctor ac, suscipit quis, malesuada sed,&lt;img src="tiger.jpg" width="100" style="float: left; margin: 4px; " /&gt; nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci. &lt;/div&gt;<br />
+';<br />
+<br />
+$html2 = '<br />
+&lt;style&gt;<br />
+div { text-align: justify; }<br />
+&lt;/style&gt;<br />
+&lt;h2&gt;Tim Another 2001-2007&lt;/h2&gt;&lt;div&gt;This is the normal text in the div: Nulla felis erat, imperdiet eu, ullamcorper non, nonummy quis, elit. Suspendisse potenti. Ut a eros at ligula vehicula pretium. Maecenas feugiat pede vel risus. et lectus. Fusce eleifend neque sit amet erat. Integer consectetuer nulla non orci. Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque, &lt;img src="tiger.jpg" width="100" style="float: right; margin: 4px; " /&gt; risus at eleifend lacus sapien et risus. Phasellus metus, suscipit quis, malesuada sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci.&nbsp; &lt;br /&gt;<br />
+Morbi feugiat pulvinar dolor. Cras odio. Donec mattis, nisi id euismod auctor, neque metus pellentesque risus, at eleifend lacus sapien et risus. Phasellus metus. Phasellus feugiat, lectus ac aliquam molestie, leo lacus tincidunt turpis, vel aliquam quam odio et sapien. Mauris ante pede, auctor ac, suscipit quis, malesuada sed, nulla. Integer sit amet odio sit amet lectus luctus euismod. Donec et nulla. Sed quis orci. &lt;/div&gt;<br />
+';<br />
+<br />
+for($i=1; $i&lt;=10; $i++) {<br />
+&nbsp;&nbsp;&nbsp; // $html = $html;<br />
+&nbsp;&nbsp;&nbsp; if ($i % 3 == 1) { $html = $html2; }<br />
+&nbsp;&nbsp;&nbsp; else { $html = $html1; }<br />
+&nbsp;&nbsp;&nbsp; $pph[$i] = SinglePage($html, $pw, $ph, $minK) ;&nbsp;&nbsp;&nbsp; // $pph saves the actual height of each page<br />
+}<br />
+//==============================================================<br />
+// Save the pages to a file<br />
+$mpdf-&gt;Output('test.pdf','F');<br />
+<br />
+// Now collate those pages using mPDFI - 4 pages to one page<br />
+include("../mpdfi/mpdfi.php");<br />
+<br />
+$mpdf=new mPDFI(); <br />
+$mpdf-&gt;SetDisplayMode('fullpage');<br />
+<br />
+$mpdf-&gt;SetHeader('{DATE j-m-Y}|My Yearbook 2005|{PAGENO}');<br />
+$mpdf-&gt;SetFooter('|Printed using mPDF|');<br />
+<br />
+$pagecount = $mpdf-&gt;SetSourceFile('test.pdf');<br />
+for($i=1; $i&lt;=$pagecount; $i++) {<br />
+&nbsp;&nbsp;&nbsp; if ($i % 4 == 1) { $mpdf-&gt;AddPage(); }<br />
+&nbsp;&nbsp;&nbsp; $pgheight = $mpdf-&gt;h - $mpdf-&gt;tMargin - $mpdf-&gt;bMargin;<br />
+&nbsp;&nbsp;&nbsp; $hspacing = min($spacing,($mpdf-&gt;pgwidth - $pw*2) );<br />
+&nbsp;&nbsp;&nbsp; $vspacing = min($spacing,($pgheight - $ph*2) );<br />
+&nbsp;&nbsp;&nbsp; $x1 = $mpdf-&gt;lMargin + ($mpdf-&gt;pgwidth/2 - $hspacing/2 - $pw)/2;<br />
+&nbsp;&nbsp;&nbsp; $x2 = $mpdf-&gt;lMargin + $mpdf-&gt;pgwidth/2 + $hspacing/2 + ($mpdf-&gt;pgwidth/2 - $hspacing/2 - $pw)/2;<br />
+&nbsp;&nbsp;&nbsp; $y1 = $mpdf-&gt;tMargin + ($pgheight /2 - $vspacing/2 - $ph)/2;<br />
+&nbsp;&nbsp;&nbsp; $y2 = $mpdf-&gt;tMargin + $pgheight /2 + $vspacing/2 + ($pgheight /2 - $vspacing/2 - $ph)/2;<br />
+&nbsp;&nbsp;&nbsp; if ($i % 4 == 1) { $x = $x1; $y = $y1; }<br />
+&nbsp;&nbsp;&nbsp; else if ($i % 4 == 2) { $x = $x2; $y = $y1; }<br />
+&nbsp;&nbsp;&nbsp; else if ($i % 4 == 3) { $x = $x1; $y = $y2; }<br />
+&nbsp;&nbsp;&nbsp; else if ($i % 4 == 0) { $x = $x2; $y = $y2; }<br />
+&nbsp;&nbsp;&nbsp; $tplIdx = $mpdf-&gt;ImportPage($i, 0,0,$pw,$pph[$i]);<br />
+<br />
+&nbsp;&nbsp;&nbsp; if ($align=='T') { $mpdf-&gt;UseTemplate($tplIdx, $x, $y, $pw, $pph[$i]); }<br />
+&nbsp;&nbsp;&nbsp; else { $mpdf-&gt;UseTemplate($tplIdx, $x, ($y + (($ph - $pph[$i])/2)), $pw, $pph[$i]); }<br />
+<br />
+&nbsp;&nbsp;&nbsp; if ($border &gt;= 0) { $mpdf-&gt;Rect($x-$border, $y-$border, $pw+2*$border, $ph+2*$border); }<br />
+}<br />
+<br />
+$mpdf-&gt;Output();<br />
+<br />
+exit;<br />
+<br />
+//==============================================================<br />
+function SinglePage($html, $pw, $ph, $minK=1, $inc=0.1) {<br />
+// returns height of page<br />
+global $mpdf;<br />
+&nbsp;&nbsp;&nbsp; $mpdf-&gt;AddPage('','','','','','',($mpdf-&gt;w - $pw),'',($mpdf-&gt;h - $ph),0,0);<br />
+&nbsp;&nbsp;&nbsp; $k = 1;<br />
+<br />
+&nbsp;&nbsp;&nbsp; $currpage = $mpdf-&gt;page;<br />
+&nbsp;&nbsp;&nbsp; $mpdf-&gt;WriteHTML($html);<br />
+<br />
+&nbsp;&nbsp;&nbsp; $newpage = $mpdf-&gt;page;<br />
+&nbsp;&nbsp;&nbsp; while($currpage != $newpage) {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; for($u=0;$u&lt;=($newpage-$currpage);$u++) {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // DELETE PAGE - the added page<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; unset($mpdf-&gt;pages[$mpdf-&gt;page]);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($mpdf-&gt;ktAnnots[$mpdf-&gt;page]) { unset( $mpdf-&gt;ktAnnots[$mpdf-&gt;page] ); }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($mpdf-&gt;tbrot_Annots[$mpdf-&gt;page]) { unset( $mpdf-&gt;tbrot_Annots[$mpdf-&gt;page] ); }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($mpdf-&gt;kwt_Annots[$mpdf-&gt;page]) { unset( $mpdf-&gt;kwt_Annots[$mpdf-&gt;page] ); }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($mpdf-&gt;PageAnnots[$mpdf-&gt;page]) { unset( $mpdf-&gt;PageAnnots[$mpdf-&gt;page] ); }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($mpdf-&gt;ktBlock[$mpdf-&gt;page]) { unset( $mpdf-&gt;ktBlock[$mpdf-&gt;page] ); }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($mpdf-&gt;PageLinks[$mpdf-&gt;page]) { unset( $mpdf-&gt;PageLinks[$mpdf-&gt;page] ); }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ($mpdf-&gt;pageoutput[$mpdf-&gt;page]) { unset( $mpdf-&gt;pageoutput[$mpdf-&gt;page] ); }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // Go to page before&nbsp; - so can addpage<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;page--;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // mPDF 2.4 Float Images<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if (count($mpdf-&gt;floatbuffer)) {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;objectbuffer[] = $mpdf-&gt;floatbuffer['objattr'];<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;printobjectbuffer(false);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;objectbuffer = array();<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;floatbuffer = array();<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;float = false;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; }<br />
+<br />
+<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $k += $inc;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if ((1/$k) &lt; $minK) { die("Page no. ".$mpdf-&gt;page." is too large to fit"); }<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $w = $pw * $k;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $h = $ph * $k;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;_beginpage('','',($mpdf-&gt;w - $w),'',($mpdf-&gt;h - $h));<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $currpage = $mpdf-&gt;page;<br />
+<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;_out('2 J');<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;_out(sprintf('%.2f w',0.1*$mpdf-&gt;k));<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;SetFont($mpdf-&gt;default_font,'',$mpdf-&gt;default_font_size ,true,true);&nbsp;&nbsp;&nbsp; // forces write<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;SetDrawColor(0);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;SetFillColor(255);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;SetTextColor(0);<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;ColorFlag=false;<br />
+<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; // Start Transformation<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;StartTransform();<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;transformScale((100/$k), (100/$k), 0, 0);<br />
+<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;WriteHTML($html);<br />
+<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $newpage = $mpdf-&gt;page;<br />
+<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; //Stop Transformation<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; $mpdf-&gt;StopTransform();<br />
+&nbsp;&nbsp;&nbsp; }<br />
+&nbsp;&nbsp;&nbsp; return ($mpdf-&gt;y / $k);<br />
+}<br />
+?&gt;</p> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 23 Apr 2009<br />
+Validated 20 Sep 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:11:43 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=367&op_target=print&id=421 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:23 GMT -->
+</html>

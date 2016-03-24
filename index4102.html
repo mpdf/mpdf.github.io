@@ -1,0 +1,108 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=454&op_target=print&id=518 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:12 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Font names</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<h6>CSS font-family name</h6> 
+<p>Every font family has a name which is defined in the font file. This is the name by which your computer OS registers and recognises the font family.</p> 
+<p>This is also the name used in CSS e.g.</p> 
+<p class="examplecode">&nbsp;&nbsp;&nbsp; &lt;p style="font-family: 'Trebuchet MS';"&gt;</p> 
+<h6>mPDF font-family name</h6> 
+<p>This is the name used by mPDF internally to process fonts. This could be anything you like, but by default mPDF will convert CSS font-family names by removing any spaces and changing to lowercase. Reading the CSS name above, mPDF will look for a "mPDF font-family name" of 'trebuchetms'.</p> 
+<p>This means that this will also work:</p> 
+<p class="examplecode">&nbsp;&nbsp;&nbsp; &lt;p style="font-family: trebuchetms;"&gt;</p> 
+<p>Next it will look for a translation in <span class="code">$this-&gt;fonttrans</span> in the <span class="filename">config_fonts.php</span> file. Imagine that we also wished to recognise 'Trebuchet', we would add:</p> 
+<p class="examplecode">$this-&gt;fonttrans = array(<br />
+...<br />
+&nbsp;&nbsp;&nbsp; 'trebuchet' =&gt; 'trebuchetms',<br />
+...<br />
+)</p> 
+<p>mPDF font-family names should therefore always be lower-case and contain no spaces. When mPDF needs to refer to a specific variant (bold, italic etc.) it will use the mPDF font-family name (lowercase) followed by 'B', 'I', or 'BI' (uppercase). The regular/normal Trebuchet MS will be 'trebuchetms', and the bold variant will be referred to as 'trebuchetmsB'.</p> 
+<p>These mPDF font names are used in other places:</p> 
+<ul> 
+<li>all the other configurable variables in the <span class="filename">config_fonts.php</span> use the mPDF font-family name</li> 
+<li>use the mPDF font name in the <span class="filename">config_cp.php</span> file to make it selectively available in certain languages.</li> 
+<li>if used in the PHP script e.g. $mpdf = new mPDF('','','','trebuchetms');</li> 
+</ul> 
+<h6>Font file name</h6> 
+<p>To make a font available to mPDF, you need to specify the Truetype .ttf font files for each variant.</p> 
+<p>These should be defined in <span class="filename">config_fonts.php</span> in the array:</p> 
+<p class="examplecode">$this-&gt;fontdata = array(<br />
+...<br />
+&nbsp;&nbsp;&nbsp; "trebuchetms" =&gt; array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'R' =&gt; "trebuc.ttf",<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'B' =&gt; "trebucbd.ttf",<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'I' =&gt; "trebucit.ttf",<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'BI' =&gt; "trebucbi.ttf",<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ),<br />
+...<br />
+)</p> 
+<p>Each font-family must have a Regular ['R'] file defined - the others (['B']old, ['I']talic, ['BI']bold-italic) are optional.</p> 
+<p>mPDF will try to locate the font-file. If you have defined <span class="code">_MPDF_SYSTEM_TTFONTS</span> at the top of the <span class="filename">config_fonts.php</span> file, it will first look for the font-file there. This is useful if you are running mPDF on a computer which already has a folder with TTF fonts in (e.g. on Windows)</p> 
+<p>If the font-file is not there, or <span class="code">_MPDF_SYSTEM_TTFONTS</span> is not defined, mPDF will look in the folder <span class="filename">/[your_path_to_mpdf]/ttfonts/</span></p> 
+<p>Note that the font-file names are case-sensitive and can contain capitals.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 22 Sep 2010<br />
+Validated 22 Sep 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:04:22 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=454&op_target=print&id=518 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:12 GMT -->
+</html>

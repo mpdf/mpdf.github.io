@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=212 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:24:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta name="keywords" content="mPDF, PDF, PHP, class, script, library, free, utf-8, unicode" />
+<meta name="Description" content="mPDF - a PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support" />
+	
+<meta http-equiv="Content-Language" content="en-GB"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<title>mPDF Manual</title>
+<link href="css_cache/988fa3_1_1.css" type="text/css" rel="stylesheet" /><link href="files/style.css" type="text/css" rel="stylesheet" />
+<!--[if IE]>
+<style type="text/css">
+div.bpmbook table { margin-left:0px; }
+</style>
+<![endif]-->
+
+<script src="js/dtree.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="favicon.png" type="image/vnd.microsoft.icon" />
+
+<!--[if IE]>
+<style type="text/css">
+    div#bpm_message {
+      top: expression( ( 0 - bpm_message.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+    }
+</style>
+<![endif]-->
+
+
+<script type="text/javascript">
+/* <![CDATA[ */
+var xmlHttp;
+var ajaxdg = "1";
+var ajaxid = "262";
+var ajaxtid = "212";
+var ajaxsearchstring = "";
+// Standard Ajax Connection
+function GetXmlHttpObject() {
+  xmlHttp=null;
+  try {  // Firefox, Opera 8.0+, Safari
+	xmlHttp=new XMLHttpRequest();
+  }
+  catch (e) { // Internet Explorer
+	try { xmlHttp=new ActiveXObject("Msxml2.XMLHTTP"); }
+	catch (e) { xmlHttp=new ActiveXObject("Microsoft.XMLHTTP"); }
+  }
+  return xmlHttp;
+}
+
+
+
+
+// Ajax Response Action - Topic
+function topicStateChanged() { 
+  if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") { 
+	var str=xmlHttp.responseText;
+	document.getElementById("bpmbook").innerHTML=str;
+  }
+}
+
+function changeDisplayGroup( groupID ) {
+	var qs = "tid="+ajaxtid+"&id="+ajaxid+"&dg=" + groupID;
+	if( ajaxsearchstring != '' ) qs += '&searchstring=' + ajaxsearchstring;
+
+	xmlHttp=GetXmlHttpObject()
+	if (xmlHttp==null) { location.href = 'index.html' + qs; return; }
+	document.getElementById('tab_' + groupID).className='current';
+	document.getElementById('tab_' + ajaxdg).className='';
+	ajaxdg = groupID;
+
+	document.getElementById("bpmbook").innerHTML='<img src="images/loading-balls.gif" /> <small>Updating...</small><br /> <br />';
+	url = 'index0276.html?ajaxop=ajax&amp;ajax=topic&amp;' + qs;
+	url=url+"&bogus="+Math.random();	// prevents caching
+	xmlHttp.open("GET",url,true);
+	xmlHttp.onreadystatechange=topicStateChanged;	// Must come after open for IE
+	xmlHttp.send(null);
+	
+}
+
+
+// Ajax Response Action - RefAbstract
+function refExtraStateChanged() { 
+  if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") { 
+	var str=xmlHttp.responseText;
+	var reply = str.split("|*|");
+	var status = reply[0];
+	var pubmed_id = reply[1];
+	if (status=="COMPLETE") {
+	// Should not have got here - means a previous request has come back
+		return false;
+	}
+	else {
+		document.getElementById("refdetails").innerHTML=str;
+	}
+  }
+}
+
+// Ajax Response Action - RefAbstract
+function refStateChanged() { 
+  if (xmlHttp.readyState==4 || xmlHttp.readyState=="complete") { 
+	var str=xmlHttp.responseText;
+	var reply = str.split("|*|");
+	var status = reply[0];
+	var pubmed_id = reply[1];
+	var ref = reply[2];
+	document.getElementById("refdetails").style.display='block';
+	if (status=="PENDING") {
+		document.getElementById("refdetails").innerHTML=ref+'<div><img src="images/loading-balls.gif" /> <small>Checking for Updates...</small></div>';
+		url = 'indexab6f.html?ajaxop=ajax&amp;ajax=abstract&amp;get_pubmed_abstract=1&amp;pubmed_id=' + pubmed_id;
+		url=url+"&bogus="+Math.random();	// prevents caching
+		xmlHttp.open("GET",url,true);
+		xmlHttp.onreadystatechange=refExtraStateChanged;	// Must come after open for IE
+		xmlHttp.send(null);
+	}
+	else {
+		document.getElementById("refdetails").innerHTML=ref;
+	}
+  }
+}
+
+function showRefAbstract(source, AID, selID) {
+	// get the query string
+	var qs = "tid=212&id=262dg=1"
+	if( source==1 ) qs += '&pubmed_id=' + AID;
+	else if( source==2 ) qs += '&list=' + AID + '&selected=' + selID;
+	else qs += '&article_id=' + AID;
+	xmlHttp=GetXmlHttpObject()
+	if (xmlHttp==null) { location.href = 'indexd41d.html?' + qs + '&op=show_abstract&action=abstract'; return; }
+	var browser=navigator.appName;
+	if (browser=="Microsoft Internet Explorer") {
+	  var rslt = navigator.appVersion.match(/MSIE (\d+\.\d+)/, '');
+	  var version = Number(rslt[1]);
+	  if (version<7) {
+		scrOfY = document.documentElement.scrollTop;
+		scrOfX = document.documentElement.scrollLeft;
+		document.getElementById("refdetails").style.position='absolute';
+		document.getElementById("refdetails").style.top=scrOfY;
+		document.getElementById("refdetails").style.left=scrOfX;
+	  }
+	}
+	document.getElementById("refdetails").style.display='block';
+	document.getElementById("refdetails").innerHTML='<img src="images/loading-balls.gif" /> <small>Loading...</small><br />';
+	url = 'index1f94.html?ajaxop=ajax&amp;ajax=abstract&amp;' + qs;
+	url=url+"&bogus="+Math.random();	// prevents caching
+	xmlHttp.open("GET",url,true);
+	xmlHttp.onreadystatechange=refStateChanged;	// Must come after open for IE
+	xmlHttp.send(null);
+}
+
+
+  function bpm_close_message(msg_id) {
+	document.getElementById('bpm_message').style.display = 'none';
+	var bdate = new Date();
+	bdate.setTime(bdate.getTime()+(10000*24*60*60*1000));	// 30 years hence
+	document.cookie="last_message=" + msg_id + "; expires=" + bdate.toGMTString();
+  }
+
+function formHandler(to,ajaxdg){
+	if (to=="") return;
+	if (ajaxdg) to += "&dg="+ajaxdg;
+	location=to;
+}
+
+function openNewWindow(sURL, sName, iWidth, iHeight)
+{
+	var iTop  = (screen.height - iHeight) / 2 ;
+	var iLeft = (screen.width  - iWidth) / 2 ;
+	
+	var sOptions = "toolbar=no,menubar=no" ;
+	sOptions += ",title=Dialog"; 
+	sOptions += ",width=" + iWidth ; 
+	sOptions += ",height=" + iHeight ;
+	sOptions += ",resizable=yes";
+	sOptions += ",scrollbars=yes";
+	sOptions += ",left=" + iLeft ;
+	sOptions += ",top=" + iTop ;
+
+	var aWindow = window.open(sURL, sName, sOptions);
+
+	if (!aWindow.document) { alert("You may need to disable Pop-up blocking in your browser or Norton Internet Security etc. in order to use certain functions!"); }
+
+	aWindow.focus();
+	
+	return aWindow ;
+}
+
+
+function importPubMed(PubMedID){
+	location.href="indexaf5c.html?func=op&amp;funcpage=endnote&amp;pubmed_id="+PubMedID;
+}
+function importArticle(rid){
+	var agree=confirm("This record is not available from PubMed. Only the core record details are available to import e.g. no abstract. Are you sure you wish to continue?");
+	if (!agree) { return; }
+	location.href="indexe0d0.html?func=op&amp;funcpage=endnote&amp;article_id="+rid;
+}
+
+function showPrescribing(params)
+{
+	if (params == null) {params = "";}
+	oWindow = openNewWindow("index71eb.html?op=show_prescribing&amp;show_dialog_title=Prescribing"+params, "Prescribing", 700, 300) ;
+}
+
+/* for MC2Tabs */
+function displayTab(tab_id) {
+	var tabElm = document.getElementById(tab_id);
+	var tabContainerElm = tabElm ? tabElm.parentNode : null;
+
+	if (tabElm && tabContainerElm) {
+		var nodes = tabContainerElm.childNodes;
+
+		// Hide all other tabs
+		for (var i=0; i<nodes.length; i++) {
+			if (nodes[i].nodeName == "LI")
+				nodes[i].className = '';
+		}
+
+		// Show selected tab
+		tabElm.className = 'current';
+	}
+
+}
+
+
+function onLoaded() {
+
+}	// end of onLoaded() fn.
+/* ]]> */
+</script></head>
+<body onload="onLoaded()">
+
+	<div id="refdetails" style="position:fixed; top:0; left:0; z-index: 100; padding:10px; border:1px solid black; display:none; background-color:#FFFFD7; overflow: auto; max-height:80%"></div>
+
+<!-- START MAIN CONTAINER DIV -->
+<div id="bpmpage">
+
+<!-- START HEADER -->
+<div id="bpmheader">
+
+<div id="bpmlogo">
+<a href="http://mpdf1.com/manual"><img alt="" title="mPDF Manual" src="files/images/pmhlogo.gif" style="border: 0" /></a></div>
+
+<div id="bpmtitle">
+mPDF Book Manual</div><div id="bpmheaderright">
+<div id="bpmlinks"><!-- Links -->
+		<a href="index.html">Home</a> | <a href="http://www.mpdf1.com/forum/">Forum</a> | <a href="http://www.mpdf1.com/">mPDF website</a>
+	</div><!-- END Languages and Links -->
+</div><!-- END bpmHeaderRight -->
+<div class="clearer"></div>
+</div><!-- END bpmHeader -->
+
+
+
+<!-- SEARCH BAR -->
+    <form action="http://mpdf1.com/manual/index.php" method="post">
+<div id="bpmsearchbar">
+
+	<input type="hidden" value="15" name="show" />
+	<input type="hidden" value="op" name="func" />
+	<input type="hidden" value="search" name="funcpage" />
+      search
+      <input type="text" size="30" name="searchstring" />
+      <input type="image" alt="search" title="search" src="images/small_submit_white.gif" style="vertical-align: middle"  />	 &nbsp; &nbsp; 
+</div><!-- End bpmsearchbar -->
+	</form>
+<!-- End Header -->
+
+<div id="bpmmiddle">
+
+
+
+<div id="bpmleftcol">
+<!-- BEGIN Column Index -->
+<div class="moduletableth">Menu</div>
+<div class="moduleitem" id="pkg0_"><img alt="" src="images/box-0.gif" style="border:0; width:11px; height:7px" />&nbsp;<a class="mainlevel" href="javascript:cotree.closeAll();formHandler('index.html')">Home</a></div>
+<div class="moduleitem" id="pkg0_1"><img alt="" src="images/box-0.gif" style="border:0; width:11px; height:7px" />&nbsp;<a class="mainlevel" target="_blank" href="http://www.mpdf1.com/forum/">Forum</a></div>
+<div class="moduleitem" id="pkg0_2"><img alt="" src="images/box-0.gif" style="border:0; width:11px; height:7px" />&nbsp;<a class="mainlevel" href="index7530.html?wpage=1">Download</a></div>
+<div class="modulebottomitem" id="pkg0_3"><img alt="" src="images/box-0.gif" style="border:0; width:11px; height:7px" />&nbsp;<a class="mainlevel" href="index53a6.html?page=contact">Contact</a></div>
+<div class="moduletableth">Index</div>
+<div class="modulebottomitem" id="pkg1_1"> 
+<!-- 
+<p style="text-align: center" class="dtree"><a class="node" href="javascript:%20cotree.openAll();">Open All</a> | <a class="node" href="javascript:%20cotree.closeAll();">Close All</a></p> 
+-->
+ <script type="text/javascript"> /* 
+<![CDATA[ */ cotree = new dTree('cotree','images/mocCmenu/index.html'); cotree.config.useSelection=1; cotree.config.useLines=1; cotree.config.useIcons=1; cotree.config.useStatustext=0; cotree.config.closeSameLevel=1; cotree.add(0,-1,'','','',''); cotree.setCookie('cscotree', 312); cotree.setCookie('cocotree', 1000000.20001); cotree.add(1,0,'Introduction','','','','','',false); cotree.add(2,1,'Introduction','index32da.html?page=introduction','','','',false); cotree.add(5,1,'Acronyms','index6faa.html?page=acronyms','','','',false); cotree.add(6,1,'Symbols','indexbce7.html?page=symbols','','','',false); cotree.add(2000000,0,'User\'s Guide','','','','','',false); cotree.add(27002,2000000,'About mPDF','','','','',false); cotree.add(359,27002,'Features v5','index0f5a.html?tid=259','','','','',false); cotree.add(360,27002,'Requirements v5','index969a.html?tid=260','','','','',false); cotree.add(361,27002,'Limitations','index35dc.html?tid=261','','','','',false); cotree.add(364,27002,'Credits','index6ca7.html?tid=264','','','','',false); cotree.add(365,27002,'Licence','index1652.html?tid=265','','','','',false); cotree.add(34002,2000000,'Installation & Setup','','','','',false); cotree.add(552,34002,'Installation v5.x','index619b.html?tid=452','','','','',false); cotree.add(609,34002,'Installation v6.x','index00a1.html?tid=509','','','','',false); cotree.add(506,34002,'Reducing memory usage','indexbe43.html?tid=406','','','','',false); cotree.add(545,34002,'Folders for temporary files','indexec16.html?tid=445','','','','',false); cotree.add(5002,2000000,'Getting Started','','','','',false); cotree.add(206,5002,'Creating your first file','indexa5fa.html?tid=106','','','','',false); cotree.add(386,5002,'HTML or PHP?','indexce54.html?tid=286','','','','',false); cotree.add(24002,2000000,'Fonts & Languages','','','','',false); cotree.add(500,24002,'About PDF files','index8fa3.html?tid=400','','','','',false); cotree.add(553,24002,'Fonts in mPDF 5.x','index84a8.html?tid=453','','','','',false); cotree.add(601,24002,'Fonts in mPDF 6.x','indexa2f8.html?tid=501','','','','',false); cotree.add(602,24002,'OpenType layout (OTL)','index785f.html?tid=502','','','','',false); cotree.add(554,24002,'Font names','indexa406.html?tid=454','','','','',false); cotree.add(374,24002,'Available Fonts v5.x','index3ad8.html?tid=274','','','','',false); cotree.add(600,24002,'Available fonts v6','index3517.html?tid=500','','','','',false); cotree.add(429,24002,'Choosing a configuration v5.x','index93f4.html?tid=329','','','','',false); cotree.add(604,24002,'Choosing a configuration v6.x','index140d.html?tid=504','','','','',false); cotree.add(607,24002,'Automatic font selection','index0ee5.html?tid=507','','','','',false); cotree.add(456,24002,'lang v5.x','indexe65f.html?tid=356','','','','',false); cotree.add(605,24002,'lang 6.x','index36c6.html?tid=505','','','','',false); cotree.add(393,24002,'Input encoding','indexd870.html?tid=293','','','','',false); cotree.add(154,24002,'Fonts & Language cover v5.x','index39c1.html?tid=54','','','','',false); cotree.add(352,24002,'Arabic (RTL) text v5.x','index5202.html?tid=252','','','','',false); cotree.add(603,24002,'Bidirectional (RTL) text v6.x','indexcfab.html?tid=503','','','','',false); cotree.add(363,24002,'CJK Languages','index57bf.html?tid=263','','','','',false); cotree.add(422,24002,'Indic fonts v5.x','indexee38.html?tid=322','','','','',false); cotree.add(376,24002,'Default Font','index0d46.html?tid=276','','','','',false); cotree.add(375,24002,'Font substitution 5.x','indexf1b3.html?tid=275','','','','',false); cotree.add(606,24002,'Font substitution 6.x','indexb2f8.html?tid=506','','','','',false); cotree.add(379,24002,'Character substitution','index9a8f.html?tid=279','','','','',false); cotree.add(16002,2000000,'Configuration','','','','',false); cotree.add(499,16002,'Configuration files v5.x','index136f.html?tid=399','','','','',false); cotree.add(608,16002,'Configuration files v6.x','index40c0.html?tid=508','','','','',false); cotree.add(350,16002,'Configuration Methods','index1fee.html?tid=250','','','','',false); cotree.add(207,16002,'Configuration Variables','indexfb89.html?tid=107','','','','',false); cotree.add(26002,2000000,'HTML support','','','','',false); cotree.add(356,26002,'HTML Tags','index824d.html?tid=256','','','','',false); cotree.add(357,26002,'HTML Attributes','index2994.html?tid=257','','','','',false); cotree.add(358,26002,'Custom HTML Tags','indexac9a.html?tid=258','','','','',false); cotree.add(15002,2000000,'Tables','','','','',false); cotree.add(177,15002,'Tables','index8df7.html?tid=77','','','','',false); cotree.add(419,15002,'Table layout','indexf363.html?tid=319','','','','',false); cotree.add(392,15002,'Auto-layout algorithm','indexe48a.html?tid=292','','','','',false); cotree.add(391,15002,'Border collapse','indexb84e.html?tid=291','','','','',false); cotree.add(17002,2000000,'Paging','','','','',false); cotree.add(208,17002,'Page breaks','indexf31c.html?tid=108','','','','',false); cotree.add(380,17002,'Double-sided documents','indexcfeb.html?tid=280','','','','',false); cotree.add(406,17002,'Page size & Orientation','index8d09.html?tid=306','','','','',false); cotree.add(209,17002,'Page numbering','indexb564.html?tid=109','','','','',false); cotree.add(407,17002,'Using @page','index708d.html?tid=307','','','','',false); cotree.add(536,17002,'Different page sizes','indexcce9.html?tid=436','','','','',false); cotree.add(30002,2000000,'Headers & Footers','','','','',false); cotree.add(353,30002,'Headers & Footers','indexe12a.html?tid=253','','','','',false); cotree.add(410,30002,'Method 1','indexd017.html?tid=310','','','','',false); cotree.add(411,30002,'Method 2','index8f9d.html?tid=311','','','','',false); cotree.add(412,30002,'Method 3','index9405.html?tid=312','','','','',false); cotree.add(413,30002,'Method 4','index2fc7.html?tid=313','','','','',false); cotree.add(414,30002,'Page numbers & Date','indexfa74.html?tid=314','','','','',false); cotree.add(511,30002,'Headers & Top margins','index1320.html?tid=411','','','images/draft.gif','',false); cotree.add(415,30002,'Browser compatible HTML','index65eb.html?tid=315','','','','',false); cotree.add(418,30002,'Rotated pages','index87fe.html?tid=318','','','images/draft.gif','',false); cotree.add(23002,2000000,'CSS & Stylesheets','','','','',false); cotree.add(354,23002,'Introduction','indexc64a.html?tid=254','','','','',false); cotree.add(134,23002,'Supported CSS','index5a4b.html?tid=34','','','','',false); cotree.add(395,23002,'Default stylesheet','index740a.html?tid=295','','','','',false); cotree.add(498,23002,'Named colours','index4284.html?tid=398','','','','',false); cotree.add(31002,2000000,'Setting PDF file properties','','','','',false); cotree.add(347,31002,'Password protection','index4c9c.html?tid=247','','','','',false); cotree.add(348,31002,'Document Metadata','indexa5e5.html?tid=248','','','','',false); cotree.add(417,31002,'PDF Version','index6465.html?tid=317','','','','',false); cotree.add(25002,2000000,'What Else Can I Do?','','','','',false); cotree.add(484,25002,'Backgrounds & Borders','indexacdd.html?tid=384','','','','',false); cotree.add(501,25002,'Fixed position blocks','indexba0e.html?tid=401','','','','',false); cotree.add(485,25002,'Floating blocks','indexba16.html?tid=385','','','','',false); cotree.add(469,25002,'Hyphenation','index31fc.html?tid=369','','','','',false); cotree.add(345,25002,'Images','index3c45.html?tid=245','','','','',false); cotree.add(617,25002,'Kerning','index7c83.html?tid=517','','','','',false); cotree.add(616,25002,'Line-height','index3c0c.html?tid=516','','','','',false); cotree.add(626,25002,'Line breaking','index8efc.html?tid=526','','','','',false); cotree.add(615,25002,'Lists','indexb385.html?tid=515','','','','',false); cotree.add(362,25002,'Text Justification','index3236.html?tid=262','','','','',false); cotree.add(388,25002,'Annotations','index42b4.html?tid=288','','','images/draft.gif','',false); cotree.add(390,25002,'Barcodes','index4e74.html?tid=290','','','','',false); cotree.add(341,25002,'Bookmarks','index3470.html?tid=241','','','images/draft.gif','',false); cotree.add(346,25002,'Columns','indexa475.html?tid=246','','','images/draft.gif','',false); cotree.add(396,25002,'Forms','index567a.html?tid=296','','','','',false); cotree.add(344,25002,'Index','index7b1a.html?tid=244','','','','',false); cotree.add(599,25002,'Layers','indexc6fe.html?tid=499','','','images/draft.gif','',false); cotree.add(343,25002,'Table of Contents','indexb1da.html?tid=243','','','','',false); cotree.add(342,25002,'Watermarks','index452a.html?tid=242','','','images/draft.gif','',false); cotree.add(464,25002,'Graphs','index4d44.html?tid=364','','','images/draft.gif','',false); cotree.add(403,25002,'Replaceable Aliases','index2da5.html?tid=303','','','','',false); cotree.add(394,25002,'CMYK colours','index68e2.html?tid=294','','','','',false); cotree.add(449,25002,'Importing files & Templates','index27e4.html?tid=349','','','','',false); cotree.add(450,25002,'Overwriting existing files','indexc971.html?tid=350','','','','',false); cotree.add(460,25002,'Writing non-HTML text','index763c.html?tid=360','','','','',false); cotree.add(520,25002,'PDF/A1-b compliance','index2366.html?tid=420','','','','',false); cotree.add(581,25002,'PDF/X-1a compliance','indexac6a.html?tid=481','','','','',false); cotree.add(535,25002,'Capture HTML output','index04c8.html?tid=435','','','','',false); cotree.add(537,25002,'Saving to a database','indexdd7c.html?tid=437','','','','',false); cotree.add(594,25002,'Math Formulae with MathJax','index0d3a.html?tid=494','','','','',false); cotree.add(595,25002,'Math with MathJax 2','indexdd1e.html?tid=495','','','','',false); cotree.add(596,25002,'Combining Diacritics','indexc15c.html?tid=496','','','','',false); cotree.add(33002,2000000,'Real life examples','','','','',false); cotree.add(557,33002,'PDF from every page of website','index957c.html?tid=457','','','','',false); cotree.add(466,33002,'Invoice','index90d6.html?tid=366','','','','',false); cotree.add(467,33002,'Year Book','index004c.html?tid=367','','','','',false); cotree.add(468,33002,'Colour Charts CMYK','indexe670.html?tid=368','','','','',false); cotree.add(473,33002,'E-mail a PDF file','indexd559.html?tid=373','','','','',false); cotree.add(492,33002,'A5 Booklet','index51f0.html?tid=392','','','','',false); cotree.add(517,33002,'Reserving x blank pages','indexcb6b.html?tid=417','','','','',false); cotree.add(518,33002,'Letterhead letters','index0040.html?tid=418','','','','',false); cotree.add(567,33002,'User Input','index3a5e.html?tid=467','','','','',false); cotree.add(32002,2000000,'Write directly to document','','','','',false); cotree.add(378,32002,'Direct writing to document','index45a4.html?tid=278','','','','',false); cotree.add(18002,2000000,'Troubleshooting','','','','',false); cotree.add(132,18002,'Known Issues','index1dbe.html?tid=32','','','','',false); cotree.add(366,18002,'Slow!','index1773.html?tid=266','','','','',false); cotree.add(404,18002,'Text is replaced','index11fd.html?tid=304','','','','',false); cotree.add(377,18002,'Reserved Terms','index8690.html?tid=277','','','','',false); cotree.add(409,18002,'Browser incompatability','indexc122.html?tid=309','','','','',false); cotree.add(477,18002,'Error messages','index402a.html?tid=377','','','','',false); cotree.add(431,18002,'Blank screen','index6cc1.html?tid=331','','','','',false); cotree.add(432,18002,'Corrupt PDF file','index331d.html?tid=332','','','','',false); cotree.add(458,18002,'Notice warnings','index1d3b.html?tid=358','','','','',false); cotree.add(474,18002,'Image errors','index53a8.html?tid=374','','','','',false); cotree.add(508,18002,'Memory problems','index61da.html?tid=408','','','','',false); cotree.add(546,18002,'Resizing','indexe497.html?tid=446','','','','',false); cotree.add(574,18002,'mPDF class fails to Initialise','index1882.html?tid=474','','','','',false); cotree.add(575,18002,'Postcript printers','index42e2.html?tid=475','','','','',false); cotree.add(1000000,0,'Reference','','','','','',false); cotree.add(3001,1000000,'mPDF functions','','','','',false); cotree.add(284,3001,'mPDF()','index7d44.html?tid=184','','','','',false); cotree.add(372,3001,'Overview','indexf571.html?tid=272','','','','',false); cotree.add(401,3001,'AddColumn()','index0183.html?tid=301','','','','',false); cotree.add(129,3001,'AddPage()','indexa90a.html?tid=29','','','','',false); cotree.add(555,3001,'AddPageByArray()','indexf64f.html?tid=455','','','','',false); cotree.add(580,3001,'AddSpotColor','index37d2.html?tid=480','','','','',false); cotree.add(298,3001,'AliasNbPages()','indexe417.html?tid=198','','','','',false); cotree.add(299,3001,'AliasNbPageGroups()','indexdac9.html?tid=199','','','','',false); cotree.add(381,3001,'Annotation()','index2912.html?tid=281','','','','',false); cotree.add(290,3001,'AutosizeText()','index88d7.html?tid=190','','','images/draft.gif','',false); cotree.add(238,3001,'Bookmark()','indexba24.html?tid=138','','','','',false); cotree.add(570,3001,'CircularText()','index54c8.html?tid=470','','','images/draft.gif','',false); cotree.add(400,3001,'CreateIndex()','indexe64e.html?tid=300','','','','',false); cotree.add(244,3001,'CreateReference()','index6c47.html?tid=144','','','','',false); cotree.add(266,3001,'DefFooterByName()','index25e9.html?tid=166','','','','',false); cotree.add(265,3001,'DefHeaderByName()','index1e38.html?tid=165','','','','',false); cotree.add(270,3001,'DefHTMLFooterByName()','index80a3.html?tid=170','','','','',false); cotree.add(269,3001,'DefHTMLHeaderByName()','index688f.html?tid=169','','','','',false); cotree.add(416,3001,'Image()','index2842.html?tid=316','','','images/draft.gif','',false); cotree.add(438,3001,'ImportPage()','index5c09.html?tid=338','','','','',false); cotree.add(399,3001,'IndexEntry()','indexb94d.html?tid=299','','','','',false); cotree.add(408,3001,'IndexEntrySee()','index43fa.html?tid=308','','','','',false); cotree.add(632,3001,'InsertIndex()','index40c5.html?tid=532','','','','',false); cotree.add(402,3001,'MultiCell()','indexe2d8.html?tid=302','','','images/draft.gif','',false); cotree.add(225,3001,'Output()','index6f42.html?tid=125','','','','',false); cotree.add(451,3001,'OverWrite()','index18fc.html?tid=351','','','','',false); cotree.add(461,3001,'RestartDocTemplate()','index02d1.html?tid=361','','','','',false); cotree.add(430,3001,'RestrictUnicodeFonts()','indexdc9a.html?tid=330','','','images/draft.gif','',false); cotree.add(291,3001,'RoundedRect()','index65a2.html?tid=191','','','images/draft.gif','',false); cotree.add(465,3001,'SetAlpha()','index386f.html?tid=365','','','','',false); cotree.add(231,3001,'SetAnchor2Bookmark()','indexdb36.html?tid=131','','','','',false); cotree.add(294,3001,'SetAuthor()','index85f4.html?tid=194','','','','',false); cotree.add(447,3001,'SetAutoFont()','index2dc8.html?tid=347','','','','',false); cotree.add(230,3001,'SetBasePath()','index42a0.html?tid=130','','','','',false); cotree.add(239,3001,'SetColumns()','indexf772.html?tid=139','','','','',false); cotree.add(351,3001,'SetCompression()','index065f.html?tid=251','','','','',false); cotree.add(295,3001,'SetCreator()','indexe6a2.html?tid=195','','','','',false); cotree.add(534,3001,'SetDefaultBodyCSS()','index8a01.html?tid=434','','','','',false); cotree.add(258,3001,'SetDefaultFont()','index724d.html?tid=158','','','','',false); cotree.add(256,3001,'SetDirectionality()','index11d2.html?tid=156','','','','',false); cotree.add(259,3001,'SetDefaultFontSize()','index82cf.html?tid=159','','','','',false); cotree.add(228,3001,'SetDisplayMode()','indexba96.html?tid=128','','','','',false); cotree.add(489,3001,'SetDisplayPreferences()','index2a20.html?tid=389','','','','',false); cotree.add(441,3001,'SetDocTemplate()','indexbeab.html?tid=341','','','','',false); cotree.add(251,3001,'SetFooter()','index7582.html?tid=151','','','','',false); cotree.add(268,3001,'SetFooterByName()','indexa35e.html?tid=168','','','','',false); cotree.add(249,3001,'SetHeader()','indexda6f.html?tid=149','','','','',false); cotree.add(267,3001,'SetHeaderByName()','index7f1c.html?tid=167','','','','',false); cotree.add(252,3001,'SetHTMLFooter()','indexef45.html?tid=152','','','','',false); cotree.add(272,3001,'SetHTMLFooterByName()','index9896.html?tid=172','','','','',false); cotree.add(250,3001,'SetHTMLHeader()','index8367.html?tid=150','','','','',false); cotree.add(271,3001,'SetHTMLHeaderByName()','index9fae.html?tid=171','','','','',false); cotree.add(532,3001,'SetImportUse()','indexd693.html?tid=432','','','','',false); cotree.add(296,3001,'SetKeywords()','indexc4be.html?tid=196','','','','',false); cotree.add(440,3001,'SetPageTemplate()','indexb377.html?tid=340','','','','',false); cotree.add(229,3001,'SetProtection()','indexd466.html?tid=129','','','','',false); cotree.add(437,3001,'SetSourceFile()','indexde5d.html?tid=337','','','','',false); cotree.add(297,3001,'SetSubject()','indexae85.html?tid=197','','','','',false); cotree.add(232,3001,'SetTitle()','index4849.html?tid=132','','','','',false); cotree.add(571,3001,'SetVisibility()','index6bea.html?tid=471','','','','',false); cotree.add(369,3001,'SetWatermarkImage()','indexef28.html?tid=269','','','','',false); cotree.add(286,3001,'SetWatermarkText()','index5789.html?tid=186','','','','',false); cotree.add(292,3001,'Shaded_box()','index2363.html?tid=192','','','images/draft.gif','',false); cotree.add(533,3001,'StartProgressBarOutput()','indexc235.html?tid=433','','','','',false); cotree.add(436,3001,'Thumbnail()','index7a01.html?tid=336','','','','',false); cotree.add(283,3001,'TOCpagebreak()','index0e38.html?tid=183','','','','',false); cotree.add(556,3001,'TOCpagebreakByArray()','index227b.html?tid=456','','','','',false); cotree.add(285,3001,'TOC_Entry()','index7934.html?tid=185','','','','',false); cotree.add(439,3001,'UseTemplate()','index7247.html?tid=339','','','','',false); cotree.add(389,3001,'WriteBarcode()','index61d4.html?tid=289','','','','',false); cotree.add(288,3001,'WriteCell()','index201f.html?tid=188','','','images/draft.gif','',false); cotree.add(502,3001,'WriteFixedPosHTML()','index2064.html?tid=402','','','images/draft.gif','',false); cotree.add(221,3001,'WriteHTML()','index5d90.html?tid=121','','','','',false); cotree.add(289,3001,'WriteText()','index4093.html?tid=189','','','images/draft.gif','',false); cotree.add(349,3001,'FPDF Original Functions','index18fb.html?tid=249','','','images/draft.gif','',false); cotree.add(19001,1000000,'HTML control tags','','','','',false); cotree.add(405,19001,'Overview','index6c45.html?tid=305','','','images/draft.gif','',false); cotree.add(384,19001,'annotation','index4944.html?tid=284','','','','',false); cotree.add(507,19001,'barcode','index6dcc.html?tid=407','','','','',false); cotree.add(218,19001,'bookmark','index0a5f.html?tid=118','','','','',false); cotree.add(214,19001,'columnbreak','index34dc.html?tid=114','','','','',false); cotree.add(213,19001,'columns','indexdfc6.html?tid=113','','','','',false); cotree.add(538,19001,'dottab','index6cb6.html?tid=438','','','','',false); cotree.add(453,19001,'formfeed','index8908.html?tid=353','','','','',false); cotree.add(278,19001,'htmlpagefooter','index1ee0.html?tid=178','','','','',false); cotree.add(277,19001,'htmlpageheader','index5e97.html?tid=177','','','','',false); cotree.add(217,19001,'indexentry','indexc145.html?tid=117','','','','',false); cotree.add(486,19001,'indexinsert','indexb4be.html?tid=386','','','','',false); cotree.add(463,19001,'jpgraph','indexc08a.html?tid=363','','','','',false); cotree.add(210,19001,'pagebreak','index8cff.html?tid=110','','','','',false); cotree.add(273,19001,'pageheader','index6c43.html?tid=173','','','','',false); cotree.add(274,19001,'pagefooter','index8e18.html?tid=174','','','','',false); cotree.add(280,19001,'sethtmlpagefooter','indexfe57.html?tid=180','','','','',false); cotree.add(279,19001,'sethtmlpageheader','index8782.html?tid=179','','','','',false); cotree.add(276,19001,'setpagefooter','index8dd5.html?tid=176','','','','',false); cotree.add(275,19001,'setpageheader','index681c.html?tid=175','','','','',false); cotree.add(568,19001,'textcircle','indexb5ad.html?tid=468','','','','',false); cotree.add(219,19001,'tocentry','index05db.html?tid=119','','','','',false); cotree.add(282,19001,'tocpagebreak','index80c2.html?tid=182','','','','',false); cotree.add(488,19001,'watermarkimage','index5355.html?tid=388','','','','',false); cotree.add(487,19001,'watermarktext','indexc7db.html?tid=387','','','','',false); cotree.add(20001,1000000,'mPDF Variables','','','','',false); cotree.add(373,20001,'Overview','index3c91.html?tid=273','','','','',false); cotree.add(625,20001,'adjustFontDescLineheight','index35f2.html?tid=525','','','','',false); cotree.add(317,20001,'aliasNbPg','index490c.html?tid=217','','','images/draft.gif','',false); cotree.add(319,20001,'aliasNbPgGp','indexd96e.html?tid=219','','','images/draft.gif','',false); cotree.add(226,20001,'allow_charset_conversion','index7982.html?tid=126','','','','',false); cotree.add(235,20001,'allow_html_optional_endtags','index64f0.html?tid=135','','','','',false); cotree.add(478,20001,'allow_output_buffering','index565a.html?tid=378','','','','',false); cotree.add(578,20001,'allowCJKorphans','index13df.html?tid=478','','','images/draft.gif','',false); cotree.add(579,20001,'allowCJKoverflow','indexec50.html?tid=479','','','images/draft.gif','',false); cotree.add(307,20001,'anchor2Bookmark','indexfe96.html?tid=207','','','images/draft.gif','',false); cotree.add(382,20001,'annotMargin','index55a8.html?tid=282','','','images/draft.gif','',false); cotree.add(387,20001,'annotOpacity','index7ee3.html?tid=287','','','images/draft.gif','',false); cotree.add(614,20001,'autoArabic','indexb1ef.html?tid=514','','','','',false); cotree.add(443,20001,'autoFontGroupSize','indexbcf8.html?tid=343','','','','',false); cotree.add(610,20001,'autoLangToFont','indexe9c4.html?tid=510','','','','',false); cotree.add(514,20001,'autoMarginPadding','index0e6e.html?tid=414','','','images/draft.gif','',false); cotree.add(490,20001,'autoPageBreak','indexb3d1.html?tid=390','','','','',false); cotree.add(611,20001,'autoScriptToLang','index1435.html?tid=511','','','','',false); cotree.add(613,20001,'autoVietnamese','index4423.html?tid=513','','','','',false); cotree.add(592,20001,'backupSubsFont','index8ff7.html?tid=492','','','images/draft.gif','',false); cotree.add(593,20001,'backupSIPFont','indexd412.html?tid=493','','','images/draft.gif','',false); cotree.add(612,20001,'baseScript','index08e2.html?tid=512','','','','',false); cotree.add(257,20001,'biDirectional','indexb45a.html?tid=157','','','images/draft.gif','',false); cotree.add(587,20001,'bleedMargin','index74c1.html?tid=487','','','images/draft.gif','',false); cotree.add(572,20001,'bookmarkStyles','indexab2e.html?tid=472','','','images/draft.gif','',false); cotree.add(260,20001,'charset_in','index652a.html?tid=160','','','','',false); cotree.add(597,20001,'CJKforceend','index5cb5.html?tid=497','','','images/draft.gif','',false); cotree.add(523,20001,'collapseBlockMargins','indexb5d9.html?tid=423','','','','',false); cotree.add(590,20001,'cropMarkLength','index2733.html?tid=490','','','images/draft.gif','',false); cotree.add(589,20001,'cropMarkMargin','indexec4c.html?tid=489','','','images/draft.gif','',false); cotree.add(588,20001,'crossMarkMargin','index4e94.html?tid=488','','','images/draft.gif','',false); cotree.add(542,20001,'CSSselectMedia','index14aa.html?tid=442','','','','',false); cotree.add(598,20001,'decimal_align','index4a0e.html?tid=498','','','','',false); cotree.add(491,20001,'debug','index14de.html?tid=391','','','','',false); cotree.add(566,20001,'debugfonts','index5772.html?tid=466','','','images/draft.gif','',false); cotree.add(311,20001,'defaultfooterfontsize','indexe044.html?tid=211','','','images/draft.gif','',false); cotree.add(312,20001,'defaultfooterfontstyle','index606b.html?tid=212','','','images/draft.gif','',false); cotree.add(313,20001,'defaultfooterline','index68cf.html?tid=213','','','images/draft.gif','',false); cotree.add(308,20001,'defaultheaderfontsize','index613d.html?tid=208','','','images/draft.gif','',false); cotree.add(309,20001,'defaultheaderfontstyle','indexdf0f.html?tid=209','','','images/draft.gif','',false); cotree.add(310,20001,'defaultheaderline','index86a2.html?tid=210','','','images/draft.gif','',false); cotree.add(455,20001,'displayDefaultOrientation','index7917.html?tid=355','','','images/draft.gif','',false); cotree.add(629,20001,'defaultPageNumStyle','index8fdb.html?tid=529','','','','',false); cotree.add(549,20001,'dpi','indexb232.html?tid=449','','','','',false); cotree.add(524,20001,'enableImports','indexc3c1.html?tid=424','','','','',false); cotree.add(521,20001,'falseBoldWeight','indexa94c.html?tid=421','','','','',false); cotree.add(315,20001,'footer_line_spacing','indexdfe8.html?tid=215','','','images/draft.gif','',false); cotree.add(281,20001,'forcePortraitHeaders','indexe465.html?tid=181','','','images/draft.gif','',false); cotree.add(454,20001,'forcePortraitMargins','index8132.html?tid=354','','','images/draft.gif','',false); cotree.add(314,20001,'header_line_spacing','index231e.html?tid=214','','','images/draft.gif','',false); cotree.add(631,20001,'h2bookmarks','index1e04.html?tid=531','','','','',false); cotree.add(630,20001,'h2toc','index1d43.html?tid=530','','','','',false); cotree.add(529,20001,'ICCProfile','indexabd3.html?tid=429','','','','',false); cotree.add(302,20001,'ignore_invalid_utf8','index53f5.html?tid=202','','','images/draft.gif','',false); cotree.add(326,20001,'ignore_table_percents','index2624.html?tid=226','','','images/draft.gif','',false); cotree.add(325,20001,'ignore_table_widths','index5910.html?tid=225','','','images/draft.gif','',false); cotree.add(248,20001,'img_dpi','indexfa8c.html?tid=148','','','','',false); cotree.add(526,20001,'incrementFPR1 [1-4]','indexc297.html?tid=426','','','','',false); cotree.add(565,20001,'iterationCounter','index5274.html?tid=465','','','images/draft.gif','',false); cotree.add(305,20001,'jSmaxChar','index0ba3.html?tid=205','','','images/draft.gif','',false); cotree.add(585,20001,'jSmaxCharLast','indexeb5e.html?tid=485','','','images/draft.gif','',false); cotree.add(496,20001,'jSmaxWordLast','index4dd5.html?tid=396','','','images/draft.gif','',false); cotree.add(304,20001,'jSWord','index389e.html?tid=204','','','images/draft.gif','',false); cotree.add(541,20001,'justifyB4br','indexed5c.html?tid=441','','','images/draft.gif','',false); cotree.add(323,20001,'keepColumns','index0c96.html?tid=223','','','images/draft.gif','',false); cotree.add(324,20001,'keep_table_proportions','index5d24.html?tid=224','','','images/draft.gif','',false); cotree.add(327,20001,'list_align_style','index4d28.html?tid=227','','','images/draft.gif','',false); cotree.add(618,20001,'list_auto_mode','indexf52a.html?tid=518','','','','',false); cotree.add(619,20001,'list_indent_default','indexfbe7.html?tid=519','','','','',false); cotree.add(620,20001,'list_indent_default_mpdf','indexa467.html?tid=520','','','','',false); cotree.add(234,20001,'list_indent_first_level','index7f77.html?tid=134','','','','',false); cotree.add(621,20001,'list_marker_offset','index2bc5.html?tid=521','','','','',false); cotree.add(328,20001,'list_number_suffix','index7123.html?tid=228','','','images/draft.gif','',false); cotree.add(622,20001,'list_symbol_size','index497e.html?tid=522','','','','',false); cotree.add(576,20001,'margBuffer','index5efb.html?tid=476','','','images/draft.gif','',false); cotree.add(240,20001,'max_colH_correction','index705d.html?tid=140','','','images/draft.gif','',false); cotree.add(563,20001,'maxTTFFilesize','indexc55c.html?tid=463','','','images/draft.gif','',false); cotree.add(494,20001,'mirrorMargins','indexf719.html?tid=394','','','images/draft.gif','',false); cotree.add(481,20001,'nbpgPrefix','index4c2f.html?tid=381','','','images/draft.gif','',false); cotree.add(482,20001,'nbpgSuffix','index9e5f.html?tid=382','','','images/draft.gif','',false); cotree.add(591,20001,'nonPrintMargin','index1350.html?tid=491','','','images/draft.gif','',false); cotree.add(531,20001,'normalLineheight','index1ebb.html?tid=431','','','','',false); cotree.add(544,20001,'packTableData','index4ef1.html?tid=444','','','images/draft.gif','',false); cotree.add(479,20001,'pagenumPrefix','indexdd28.html?tid=379','','','images/draft.gif','',false); cotree.add(480,20001,'pagenumSuffix','index2b1b.html?tid=380','','','images/draft.gif','',false); cotree.add(527,20001,'PDFA','index6ff1.html?tid=427','','','','',false); cotree.add(528,20001,'PDFAauto','indexdbdf.html?tid=428','','','','',false); cotree.add(582,20001,'PDFX','index1104.html?tid=482','','','','',false); cotree.add(583,20001,'PDFXauto','index8538.html?tid=483','','','','',false); cotree.add(564,20001,'percentSubset','indexd7ff.html?tid=464','','','images/draft.gif','',false); cotree.add(586,20001,'printers_info','index3e4a.html?tid=486','','','images/draft.gif','',false); cotree.add(562,20001,'progbar_altHTML','index573d.html?tid=462','','','images/draft.gif','',false); cotree.add(561,20001,'progbar_heading','index9938.html?tid=461','','','images/draft.gif','',false); cotree.add(525,20001,'progressBar','index85c5.html?tid=425','','','','',false); cotree.add(577,20001,'repackageTTF','indexa765.html?tid=477','','','images/draft.gif','',false); cotree.add(433,20001,'restoreBlockPagebreaks','indexa4a6.html?tid=333','','','','',false); cotree.add(584,20001,'restrictColorSpace','indexe665.html?tid=484','','','','',false); cotree.add(513,20001,'setAutoBottomMargin','index415d.html?tid=413','','','images/draft.gif','',false); cotree.add(512,20001,'setAutoTopMargin','indexab8a.html?tid=412','','','images/draft.gif','',false); cotree.add(483,20001,'showImageErrors','indexed80.html?tid=383','','','images/draft.gif','',false); cotree.add(495,20001,'showStats','index2a66.html?tid=395','','','images/draft.gif','',false); cotree.add(370,20001,'showWatermarkImage','indexc65a.html?tid=270','','','','',false); cotree.add(287,20001,'showWatermarkText','index8c3e.html?tid=187','','','','',false); cotree.add(253,20001,'shrink_tables_to_fit','indexa94d.html?tid=153','','','images/draft.gif','',false); cotree.add(472,20001,'SHYlang','index2303.html?tid=372','','','images/draft.gif','',false); cotree.add(530,20001,'simpleTables','index5244.html?tid=430','','','','',false); cotree.add(559,20001,'smCapsScale','index2155.html?tid=459','','','images/draft.gif','',false); cotree.add(560,20001,'smCapsStretch','index7a4c.html?tid=460','','','images/draft.gif','',false); cotree.add(254,20001,'table_error_report','index9e30.html?tid=154','','','images/draft.gif','',false); cotree.add(255,20001,'table_error_report_param','index0be8.html?tid=155','','','images/draft.gif','',false); cotree.add(550,20001,'tableMinSizePriority','indexd18f.html?tid=450','','','images/draft.gif','',false); cotree.add(452,20001,'tabSpaces','indexc774.html?tid=352','','','','',false); cotree.add(247,20001,'text_input_as_HTML','index3609.html?tid=147','','','images/draft.gif','',false); cotree.add(383,20001,'title2annots','indexe700.html?tid=283','','','images/draft.gif','',false); cotree.add(367,20001,'use_kwt','index9773.html?tid=267','','','images/draft.gif','',false); cotree.add(558,20001,'useAdobeCJK','index3181.html?tid=458','','','','',false); cotree.add(627,20001,'useDictionaryLBR','index1d24.html?tid=527','','','','',false); cotree.add(623,20001,'useFixedNormalLineHeight','index8130.html?tid=523','','','','',false); cotree.add(624,20001,'useFixedTextBaseline','indexf22a.html?tid=524','','','','',false); cotree.add(462,20001,'useGraphs','index04e1.html?tid=362','','','','',false); cotree.add(569,20001,'useKerning','index23b3.html?tid=469','','','','',false); cotree.add(444,20001,'useLang','indexa7c5.html?tid=344','','','','',false); cotree.add(329,20001,'useSubstitutions','index61ad.html?tid=229','','','','',false); cotree.add(628,20001,'useTibetanLBR','indexf140.html?tid=528','','','','',false); cotree.add(243,20001,'watermark_font','index0d7c.html?tid=143','','','','',false); cotree.add(371,20001,'watermarkImageAlpha','index9054.html?tid=271','','','','',false); cotree.add(548,20001,'watermarkImgAlphaBlend','index18e4.html?tid=448','','','','',false); cotree.add(543,20001,'watermarkImgBehind','indexe0dc.html?tid=443','','','','',false); cotree.add(368,20001,'watermarkTextAlpha','indexb759.html?tid=268','','','','',false); cotree.add(29001,1000000,'mPDF Utilities','','','','',false); cotree.add(320,29001,'strcode2utf()','index98a9.html?tid=220','','','','',false); cotree.add(459,29001,'preparePreText()','index6fc9.html?tid=359','','','','',false); cotree.add(4001,1000000,'Codepages & Glyphs','','','','',false); cotree.add(156,4001,'Win-1252','indexb464.html?tid=56','','','','',false); cotree.add(423,4001,'ASCII characters','indexd4ad.html?tid=323','','','','',false); cotree.add(428,4001,'Win-1251','index082f.html?tid=328','','','','',false); cotree.add(424,4001,'ISO-8859-2','index673c.html?tid=324','','','','',false); cotree.add(425,4001,'ISO-8859-4','index4487.html?tid=325','','','','',false); cotree.add(426,4001,'ISO-8859-7','indexd6e9.html?tid=326','','','','',false); cotree.add(427,4001,'ISO-8859-9','index85db.html?tid=327','','','','',false); cotree.add(130,4001,'ISO-8859/win comparison chart','indexeaad.html?tid=30','','','','',false); cotree.add(170,4001,'ZapfDingbats (Adobe)','index851e.html?tid=70','','','','',false); cotree.add(171,4001,'Symbols (Adobe)','index2386.html?tid=71','','','','',false); cotree.add(493,4001,'Vietnamese','indexa3f2.html?tid=393','','','','',false); cotree.add(157,4001,'BIG-5 (Traditional Chinese)','index4fd1.html?tid=57','','','','',false); cotree.add(515,4001,'HKCS (Hong Kong Character Set)','index59ee.html?tid=415','','','','',false); cotree.add(164,4001,'GBK (Simplified Chinese)','index4641.html?tid=64','','','','',false); cotree.add(161,4001,'SHIFT_JIS (Japanese)','indexa149.html?tid=61','','','','',false); cotree.add(163,4001,'UHC (Korean)','indexf30a.html?tid=63','','','','',false); cotree.add(167,4001,'Demo - Pangrams','index2c26.html?tid=67','','','','',false); cotree.add(165,4001,'Demo - Other languages','indexe93f.html?tid=65','','','','',false); cotree.add(168,4001,'Demo - 1000 Character Classic','index2d85.html?tid=68','','','','',false); cotree.add(205,4001,'Demo - Other Unicode character','index5027.html?tid=105','','','','',false); cotree.add(150,4001,'Equivalent codepages','index2eec.html?tid=50','','','','',false); cotree.add(141,4001,'iconv','index4cd3.html?tid=41','','','','',false); cotree.add(143,4001,'mbstring','index4519.html?tid=43','','','','',false); cotree.add(420,4001,'Unicode character planes','index414e.html?tid=320','','','','',false); cotree.add(457,4001,'ISO 639-1 language codes','index5c14.html?tid=357','','','','',false); cotree.add(421,4001,'Useful links','index513d.html?tid=321','','','','',false); cotree.add(551,4001,'Unicode coverage of Free Fonts','index92b2.html?tid=451','','','','',false); cotree.add(28001,1000000,'PDF Files (Adobe)','','','','',false); cotree.add(142,28001,'PDF reference','index476d.html?tid=42','','','','',false); document.write(cotree); /* ]]> */ </script> </div> 
+<div class="moduletableth">Archived Topics</div>
+<div class="modulepanel">
+<div class="modulebottomitem"><a class="mainlevel" href="index8ff2.html?tid=473">cacheTables</a><br />
+<a class="mainlevel" href="index0c23.html?tid=346">disableMultilingualJustify</a><br />
+<a class="mainlevel" href="index14c2.html?tid=334">formBgColor</a><br />
+<a class="mainlevel" href="index38b3.html?tid=335">formBgColorSmall</a><br />
+<a class="mainlevel" href="index6a2d.html?tid=237">formButtonBorderStyle</a><br />
+<a class="mainlevel" href="index98b7.html?tid=235">formButtonHighlight</a><br />
+<a class="mainlevel" href="index0700.html?tid=231">formCheckboxStyle</a><br />
+<a class="mainlevel" href="indexf8e5.html?tid=233">formComboEditable</a><br />
+<a class="mainlevel" href="indexe624.html?tid=236">formInputBorderStyle</a><br />
+<a class="mainlevel" href="index99c2.html?tid=234">formLineWidth</a><br />
+<a class="mainlevel" href="indexe85a.html?tid=232">formRadioStyle</a><br />
+<a class="mainlevel" href="index01b8.html?tid=240">formSubmitHTTPFormat</a><br />
+<a class="mainlevel" href="index59a2.html?tid=239">formSubmitMailFormat</a><br />
+<a class="mainlevel" href="index441e.html?tid=238">formSubmitUrl</a><br />
+<a class="mainlevel" href="index1b21.html?tid=370">hyphenate</a><br />
+<a class="mainlevel" href="index5627.html?tid=371">hyphenateTables</a><br />
+<a class="mainlevel" href="index9a03.html?tid=203">jSpacing</a><br />
+<a class="mainlevel" href="index220f.html?tid=206">orphansAllowed</a><br />
+<a class="mainlevel" href="index28ea.html?tid=345">rtlAsArabicFarsi</a><br />
+<a class="mainlevel" href="index8c98.html?tid=127">rtlCSS</a><br />
+<a class="mainlevel" href="index30da.html?tid=216">showdefaultpagenos</a><br />
+<a class="mainlevel" href="index876c.html?tid=133">useOddEven</a><br />
+<a class="mainlevel" href="indexac48.html?tid=222">useActiveForms</a><br />
+<a class="mainlevel" href="index2bae.html?tid=221">useDefaultCSS2</a><br />
+<a class="mainlevel" href="index8184.html?tid=142">TopicIsUnvalidated</a><br />
+<a class="mainlevel" href="index385c.html?tid=123">use_embeddedfonts_1252</a><br />
+<a class="mainlevel" href="index6334.html?tid=124">use_CJK_only</a><br />
+<a class="mainlevel" href="indexdb1f.html?tid=375">useOnlyCoreFonts</a><br />
+<a class="mainlevel" href="indexfb5b.html?tid=422">useSubstitutionsMB</a><br />
+</div>
+</div>
+<div class="moduletableth">Donate</div>
+<!-- PAYPAL DONATION -->
+ 
+<div class="modulepanel" id="pkg5_1"> <b>Support mPDF by making a small donation?</b><br />
+<br /> 
+(Note that PayPal will show the recipient as BPM Books. This is name under which I publish the <a href="http://book.pallcare.info/">Palliative Medicine Handbook</a> for which I developed mPDF): <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<div> <input type="hidden" name="cmd" value="_donations"> <input type="hidden" name="business" value="sales@bpmbooks.co.uk" /> <input type="hidden" name="item_name" value="Donation to support mPDF" /> <input type="hidden" name="no_shipping" value="0"> <input type="hidden" name="return" value="/index.php?page=donation" /> <input type="hidden" name="cancel_return" value="" /> <input type="hidden" name="no_note" value="1"> <input type="hidden" name="currency_code" value="GBP" /> <input type="hidden" name="tax" value="0"> <input type="hidden" name="lc" value="GB"> <input type="hidden" name="bn" value="PP-DonationsBF"> <br /> 
+<p style="text-align:center"> <input type="image" src="images/x-click-but04.gif" border="0" name="submit" alt="Support open access to the Palliative Medicine Handbook by making a small donation" target="_blank" width="62" height="31" /> </p> 
+</div>
+</form></div> 
+<!-- End PAYPAL DONATION -->
+<div class="moduletableth">Rate it!</div>
+<div class="modulepanel">
+<!------ www.hotscripts.com ID = 102680 ------->
+ 
+<table align="center" width="150" border="1" cellpadding="4" cellspacing="0" bordercolor="#840300" bgcolor="#D70500"><form action="http://www.hotscripts.com/rate/102680.html" method="POST"> 
+<tr> 
+<td> 
+<table align="center" style="text-align:center" width="100%" border="0" cellspacing="0" cellpadding="0"> 
+<tr> 
+<td><b><font color="#FFFFFF">If you like mPDF, please rate it at www.hotscripts.com</font></b> <input type="hidden" name="external" value="1"/></td> 
+</tr> 
+<tr> 
+<td><select name="rate" size="1"> <option value="5" selected>Excellent!</option> <option value="4">Very Good</option> <option value="3">Good</option> <option value="2">Fair</option> <option value="1">Poor</option> </select> <input name="submit" type="submit" value="Cast My Vote!"/> </td> 
+</tr> 
+</table>
+</td> 
+</tr>
+</form> </table> 
+<!------ End of HTML Code ------->
+</div> 
+</div> 
+<!-- End left.php -->
+ 
+<div id="bpmcontents">
+<!-- START CONTENTS -->
+<style type="text/css"> .bpmbook { background-image: url("files/images/draft-bg.gif"); background-repeat: repeat-y; background-position: top center; } </style> 
+<!-- START TOP GRAY BOX -->
+ 
+<div class="grayhead"> 
+<div class="left">&laquo; <a href="indexe044.html?tid=211">Previous</a></div> 
+<div class="right"><a href="index68cf.html?tid=213">Next</a> &raquo;</div> 
+<div class="clearer"></div> 
+<hr /> 
+<div class="left"> 
+<!-- VERSIONS LANGUAGE/COUNTRY AVAILABLE (main.php) -->
+ Edition/Revision: 1.0<br /> 
+<span class="redbold">Draft (not yet validated)</span></div> 
+<div class="right"><img alt="" src="images/download_icon.gif" style="vertical-align: middle" /> <img alt="" src="images/pdf.gif" style="vertical-align: middle" /> <select onchange="javascript:formHandler(this[this.selectedIndex].value,ajaxdg);this.selectedIndex=0" name="showvers" id="showvers"> <option value="" selected="selected"> View other versions of this topic...</option><optgroup label="Print Versions"><option value="indexbedb.html?tid=212&amp;op_target=print&amp;id=262">printer-friendly</option><option value="indexcb4b.pdf?op=pdf&amp;op_target=print&amp;id=262&amp;media=pdf&amp;pdffmt=1">PDF file (Core fonts)</option><option value="index005b.pdf?op=pdf&amp;op_target=print&amp;id=262&amp;media=pdf&amp;pdffmt=2">PDF file (Truetype fonts)</option></optgroup></select></div> 
+<div class="clearer"></div> 
+</div> 
+<!-- END TOP GRAY BOX -->
+ 
+<div class="clear2"></div> 
+<div id="bpmtopictitlenotabs"> 
+<!-- TOPIC TITLE -->
+ 
+<div class="breadcrumb">Reference &raquo; mPDF Variables</div> 
+<h3>defaultfooterfontstyle</h3> 
+</div> 
+<div class="clear2"></div> 
+<!-- START BPMBOOK -->
+ 
+<div id="bpmbook" class="bpmbook" style="direction:ltr;"> 
+<!-- TOPIC ENDS -->
+ 
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+ 
+<div class="graybottom"> 
+<div class="grayhead"> 
+<div class="left"> 
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+ Edition/Revision: 1.0</div> 
+<div class="right">Created 8 Feb 2009<br /> 
+<span class="redbold">Draft (not yet validated)</span><br /> 
+Last modified 5 Aug 2015</div> 
+<div class="clearer"></div> 
+<hr /> 
+<div class="left">&laquo; <a href="indexe044.html?tid=211">Previous</a></div> 
+<div class="right"><a href="index68cf.html?tid=213">Next</a> &raquo;</div> 
+<div class="clearer"></div> 
+</div> 
+</div> 
+<!-- END BOTTOM GRAY BOX -->
+ 
+ </div><!-- END CONTENTS -->
+ 
+<!-- BEGIN FOOTER -->
+<div id="bpmfooter1">
+    <a href="index.html">Home</a> | <a href="indexa821.html?page=hits">Hits</a> | <a href="index53a6.html?page=contact">Contact</a></div><div id="bpmfooter2">
+    <div class="left"><a href="index4574.html?page=copyright">Copyright &copy; 2005 - 2015</a><br /><a href="login.html">Admin login</a></div><div class="right">Wed 05 Aug 2015 12:01:51 GMT +0100 (DST) <a href="indexcdf8.html?page=help/en/help_1" title="Help..."><img src="images/help3.gif" alt="" style="border:0; vertical-align:middle" /></a><br /><a href="http://www.mpdf1.com/">mPDF website</a></div><div class="clearer"></div><div style="text-align:center; font-size:0.95em;">Last modified  5 Aug 2015</div></div>
+<!-- END footer -->
+
+</div>
+<!-- END container -->
+
+</body>
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=212 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:24:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+</html>

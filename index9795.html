@@ -1,0 +1,220 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=285&op_target=print&id=335 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:32 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Fonts & Languages</div>
+<h3>Adding new fonts to mPDF (&lt;=v3.2) - <span class="redbold">Archived</span></h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p class="manual_block"><b>Note:</b> A <a href="http://mpdf1.com/manual/index.php?tid=409">new utility</a> is included with mPDF &gt;= 4.0 to generate new fonts on a Windows platform.</p> 
+<p>Only Open Source or GPL fonts have been included with mPDF for copyright reasons. You can add your own fonts to use in mPDF, but you have to create appropriate files. These instructions are for a Windows XP PC. If you need versions for Linux, please see <a href="http://ttf2pt1.sourceforge.net/">TTF2PT1</a> and the modified version for unicode fonts by Steven Wittens at <a href="http://acko.net/node/56">UFPDF</a>.</p> 
+<p><b>On your (Windows) PC</b></p> 
+<p>1)&nbsp; From the <span class="parameter">downloaded_mpdf/makefonts/</span> directory, copy <span class="parameter">ttf2pt1.exe</span> and <span class="parameter">ttf2ufm.exe</span> to <span class="parameter">C:\windows</span> (or somewhere on your PC which is included in the configured PATH).</p> 
+<p>2) Select the font you want to use for mPDF - usually in <span class="parameter">C:\windows\fonts</span>. Find the actual file names for each variant (normal, <b>bold</b>, <i>italic</i> and <i><b>bold-italic</b></i>). Note that if you view Fonts via the Windows Control panel, it shows the Font Name for display; you need to look for the actual file names e.g. for Times, the files are <span class="parameter">times.ttf</span>, <span class="parameter">timesbd.ttf</span>, <span class="parameter">timesi.ttf</span>, <span class="parameter">timesbi.ttf</span></p> 
+<p>Note: The size of the font file will give you some indication of the likely coverage of different codepages; a font file size of 50kB or so will probably have limited coverage beyond win-1252; files between 150kB and 300kB are most likely to give useful coverage.</p> 
+<p>3) Edit the file <span class="parameter">downloaded_mpdf/makefonts/font/mpdffont.bat</span> using Notepad or other plain-text editor. <b>Note:</b> Windows PCs will run/execute a .bat file if you double-click the filename. Use right-click and Edit - not "Open" which executes the file.</p> 
+<p>Choose a new font name to use in mPDF. If possible use the first word of the Display Name of the file i.e. the font "Lucida Sans" is in <span class="parameter">lsans.ttf</span>; use "lucida" as the new font name for mPDF.</p> 
+<p>New font names should be all lowercase, with bold, italic and bold-italic forms followed by "b", "i", and "bi".</p> 
+<p>Edit the file as appropriate to look like below.</p> 
+<p>The original font file names should be as they are.</p> 
+<p>Note that the newfontname for the default win-1252 mapping does not have any extension.</p> 
+<p class="examplecode">ttf2pt1 -b -L win-1252.map c:\windows\fonts\OriginalFontName.ttf newfont <br />
+ttf2pt1 -b -L win-1252.map c:\windows\fonts\OriginalFontName-Bold.ttf newfontb <br />
+ttf2pt1 -b -L win-1252.map c:\windows\fonts\OriginalFontName-Oblique.ttf newfonti <br />
+ttf2pt1 -b -L win-1252.map c:\windows\fonts\OriginalFontName-Bold-Italic.ttf newfontbi <br />
+<br />
+ttf2pt1 -b -L iso-8859-2.map c:\windows\fonts\OriginalFontName.ttf newfont-iso-8859-2 <br />
+ttf2pt1 -b -L iso-8859-2.map c:\windows\fonts\OriginalFontName-Bold.ttf newfontb-iso-8859-2 <br />
+ttf2pt1 -b -L iso-8859-2.map c:\windows\fonts\OriginalFontName-Oblique.ttf newfonti-iso-8859-2 <br />
+ttf2pt1 -b -L iso-8859-2.map c:\windows\fonts\OriginalFontName-Bold-Italic.ttf newfontbi-iso-8859-2 <br />
+<br />
+ttf2pt1 -b -L win-1251.map c:\windows\fonts\OriginalFontName.ttf newfont-win-1251 <br />
+ttf2pt1 -b -L win-1251.map c:\windows\fonts\OriginalFontName-Bold.ttf newfontb-win-1251 <br />
+ttf2pt1 -b -L win-1251.map c:\windows\fonts\OriginalFontName-Oblique.ttf newfonti-win-1251 <br />
+ttf2pt1 -b -L win-1251.map c:\windows\fonts\OriginalFontName-Bold-Italic.ttf newfontbi-win-1251 <br />
+<br />
+ttf2pt1 -b -L iso-8859-4.map c:\windows\fonts\OriginalFontName.ttf newfont-iso-8859-4 <br />
+ttf2pt1 -b -L iso-8859-4.map c:\windows\fonts\OriginalFontName-Bold.ttf newfontb-iso-8859-4 <br />
+ttf2pt1 -b -L iso-8859-4.map c:\windows\fonts\OriginalFontName-Oblique.ttf newfonti-iso-8859-4 <br />
+ttf2pt1 -b -L iso-8859-4.map c:\windows\fonts\OriginalFontName-Bold-Italic.ttf newfontbi-iso-8859-4 <br />
+<br />
+ttf2pt1 -b -L iso-8859-7.map c:\windows\fonts\OriginalFontName.ttf newfont-iso-8859-7 <br />
+ttf2pt1 -b -L iso-8859-7.map c:\windows\fonts\OriginalFontName-Bold.ttf newfontb-iso-8859-7 <br />
+ttf2pt1 -b -L iso-8859-7.map c:\windows\fonts\OriginalFontName-Oblique.ttf newfonti-iso-8859-7 <br />
+ttf2pt1 -b -L iso-8859-7.map c:\windows\fonts\OriginalFontName-Bold-Italic.ttf newfontbi-iso-8859-7 <br />
+<br />
+ttf2pt1 -b -L iso-8859-9.map c:\windows\fonts\OriginalFontName.ttf newfont-iso-8859-9 <br />
+ttf2pt1 -b -L iso-8859-9.map c:\windows\fonts\OriginalFontName-Bold.ttf newfontb-iso-8859-9 <br />
+ttf2pt1 -b -L iso-8859-9.map c:\windows\fonts\OriginalFontName-Oblique.ttf newfonti-iso-8859-9 <br />
+ttf2pt1 -b -L iso-8859-9.map c:\windows\fonts\OriginalFontName-Bold-Italic.ttf newfontbi-iso-8859-9</p> 
+<p>Save, then run/execute the .bat file by double-clicking (the option "Open" will execute the file).</p> 
+<p>4) Check - You should find the following files in&nbsp; <span class="parameter">downloaded_mpdf/makefonts/font/</span> directory:</p> 
+<p class="examplecode">newfont.afm<br />
+newfont.pfb<br />
+newfontb.afm<br />
+newfontb.pfb<br />
+newfonti.afm<br />
+newfonti.pfb<br />
+newfontbi.afm<br />
+newfonti.pfb<br />
+<br />
+newfont-iso-8859-2.afm<br />
+newfont-iso-8859-2.pfb<br />
+<br />
+.. and so on for each codepage, and for each variant.</p> 
+<p>5) Now change directory and edit the file <span class="parameter">downloaded_mpdf/makefonts/unifont/mpdffontuni.bat</span></p> 
+<p>Edit the file as appropriate to look like below.</p> 
+<p class="examplecode">ttf2ufm -a c:\windows\fonts\OriginalFontName.ttf newfont<br />
+ttf2ufm -a c:\windows\fonts\OriginalFontName-Bold.ttf newfontb<br />
+ttf2ufm -a c:\windows\fonts\OriginalFontName-Oblique.ttf newfonti<br />
+ttf2ufm -a c:\windows\fonts\OriginalFontName-Bold-Italic.ttf newfontbi</p> 
+<p>Save, then run/execute the .bat file by double-clicking (the option "Open" will execute the file).</p> 
+<p>6) Check - You should find the following files in&nbsp; <span class="parameter">downloaded_mpdf/makefonts/unifont/</span> directory:</p> 
+<p class="examplecode">newfont.afm<br /> 
+newfont.t1a<br />
+newfont.ufm<br /> 
+<br />
+newfontb.afm<br /> 
+newfontb.t1a<br />
+newfontb.ufm<br />
+<br />
+newfonti.afm<br /> 
+newfonti.t1a<br />
+newfonti.ufm<br /> 
+<br />
+newfontbi.afm<br /> 
+newfontbi.t1a<br />
+newfontbi.ufm</p> 
+<p>7) Edit the file&nbsp;&nbsp;<span class="parameter">downloaded_mpdf</span><span class="parameter">/makefonts/font/mpdffont.php</span> adding the new font name.</p> 
+<p>8) Edit the file&nbsp;&nbsp;<span class="parameter">downloaded_mpdf</span><span class="parameter">/makefonts/unifont/mpdffontuni.php</span> adding the new font name, and original filenames.</p> 
+<p>9) Now Upload to your server all contents of folders&nbsp; <span class="parameter">downloaded_mpdf/makefonts/unifont/</span>&nbsp; and&nbsp; <span class="parameter">downloaded_mpdf/makefonts/font/</span></p> 
+<p>10) Upload copies of the original .ttf font files to&nbsp;<span class="parameter">path_to_mpdf/makefonts/unifont/</span> (only)</p> 
+<p><b>On your website</b> (or local PHP host):</p> 
+<p>11) Execute the files:</p> 
+<p class="examplecode">http://www.yourdomain.com/path_to_mpdf/makefonts/font/mpdffont.php</p> 
+<p class="examplecode">http://www.yourdomain.com/path_to_mpdf/makefonts/unifont/mpdffontuni.php</p> 
+<p>12) Check in folder&nbsp; <span class="parameter">path_to_mpdf/makefonts/font/</span> There should be 2 new files for each codepage and each variant i.e.</p> 
+<p class="examplecode">newfont.z<br />
+newfont.php<br />
+newfontb.z<br />
+newfontb.php<br />
+newfonti.z<br />
+newfonti.php<br />
+newfontbi.z<br />
+newfonti.php<br />
+<br />
+newfont-iso-8859-2.z<br />
+newfont-iso-8859-2.php<br />
+<br />
+.. and so on for each codepage, and for each variant.</p> 
+<p>Move all the font files with <span class="parameter">.z</span> or <span class="parameter">.php</span> extensions to the folder&nbsp; <span class="parameter">path_to_mpdf/font/</span> &nbsp;</p> 
+<p>13) (Optionally) Tidy up folder <span class="parameter">path_to_mpdf/makefonts/font/</span> by deleting <span class="parameter">.afm</span> and <span class="parameter">.pfb</span> files - take care not to delete <span class="parameter">.map</span>,&nbsp; <span class="parameter">mpdffont</span><span class="parameter">.bat</span>,&nbsp; <span class="parameter">makefont.php</span> or&nbsp; <span class="parameter">mpdffont.php</span> files.</p> 
+<p>14) Check in folder&nbsp; <span class="parameter">path_to_mpdf/makefonts/unifont/</span> There should be 3 new files for each font variant i.e.</p> 
+<p class="examplecode">newfont.ctg.z<br />
+newfont.z<br />
+newfont.php<br /> 
+<br />
+newfontb.ctg.z<br />
+newfontb.z<br />
+newfontb.php<br /> 
+<br />
+newfonti.ctg.z<br />
+newfonti.z<br />
+newfonti.php<br /> 
+<br />
+newfontbi.ctg.z<br />
+newfontbi.z<br />
+newfonti.php</p> 
+<p>Move all the font files with <span class="parameter">.ctg.z</span> <span class="parameter">.z</span> or <span class="parameter">.php</span> extensions to the folder&nbsp; <span class="parameter">path_to_mpdf/unifont/</span> &nbsp;</p> 
+<p>15) (Optionally) Tidy up folder <span class="parameter">path_to_mpdf/makefonts/unifont/</span> by deleting <span class="parameter">.afm</span> , <span class="parameter">.t1a</span> and <span class="parameter">.ufm</span> files, and the&nbsp; <span class="parameter">.ttf</span> font files - take care not to delete&nbsp; <span class="parameter">mpdffontuni.</span><span class="parameter">bat</span>,&nbsp; <span class="parameter">makefontuni.php</span> or&nbsp; <span class="parameter">mpdffontuni.php</span></p> 
+<p>16) Finally you need to edit&nbsp; <span class="parameter">path_to_mpdf/mpdf_config.php</span></p> 
+<ul> 
+<li>Add to <span class="parameter">$available_fonts</span> (note this time the I, B and BI are capitalised) e.g.<br />
+</li> 
+</ul> 
+<p class="examplecode">$this-&gt;available_fonts = array(<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'newfontname','newfontnameB','newfontnameI','newfontnameBI',<br />
+...</p> 
+<ul> 
+<li>Add to <span class="parameter">$available_unifonts</span> (note this time the I, B and BI are capitalised) e.g.<br /> 
+</li> 
+</ul> 
+<p class="examplecode">$this-&gt;available_unifonts = array(<br /> 
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'newfontname','newfontnameB','newfontnameI','newfontnameBI',<br /> 
+...</p> 
+<ul> 
+<li>Add to one of: <span class="parameter">$sans_fonts</span> <span class="parameter">$serif_fonts</span> or <span class="parameter">$mono_fonts</span> depending what type of font-face it is. You do not need to add the variants here. Add it first in the array if you want it to become your default font; otherwise the order/positioning is not important.<br />
+</li> 
+</ul> 
+<p class="examplecode">$this-&gt;sans_fonts = array(.... 'newfontname');</p> 
+<p>You have now finished, and mPDF should recognise the font when named (case-insensitive).</p> 
+<p>If you called your font e.g. "trebuchet", it will recognise:</p> 
+<p class="examplecode">$mpdf-&gt;WriteHTML('&lt;p style="font-family:trebuchet"&gt;Hallo World&lt;/p&gt;');<br /> 
+<br />
+$mpdf-&gt;WriteHTML('&lt;p style="font-family:Trebuchet"&gt;Hallo World&lt;/p&gt;');<br /> 
+<br />
+// In CSS it will recognise the first word of a font name:<br /> 
+$mpdf-&gt;WriteHTML('&lt;p style="font-family:Trebuchet MS"&gt;Hallo World&lt;/p&gt;');</p> 
+<p class="manual_block"><b>Note:</b> If you are following these (old) instructions, and want to use embedded font subsets, you now have to produce [fontname].uni2gn.php files for all Unicode fonts, as well as optionally updating MySQL database. See the <a href="http://mpdf1.com/manual/index.php?tid=409">newer utility</a> included with mPDF v4.0.</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 12 Feb 2009 - <span class="redbold">Archived</span><br />
+Validated 19 Feb 2009 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:37:33 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=285&op_target=print&id=335 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:32 GMT -->
+</html>

@@ -1,0 +1,118 @@
+
+
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=436&op_target=print&id=495 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:52 GMT -->
+<head>
+<meta name="ROBOTS" content="noindex,nofollow">
+<title>mPDF Manual</title>
+<meta http-equiv="Content-Language" content="en-gb"  />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"  />
+<link type="text/css" href="http://mpdf1.com/common/book/print.css" rel="stylesheet" />
+
+<link href="http://mpdf1.com/manual/files/styleprint.css" type="text/css" rel="stylesheet" />
+
+<script type="text/javascript" src="http://mpdf1.com/common/book/js/wz_jsgraphics.js"></script>
+</head>
+
+<body>
+
+<h1>mPDF Manual</h1>
+<h2>http://mpdf1.com/manual</h2>
+
+
+
+<div id="bpmtopictitlenotabs">
+<!-- TOPIC TITLE -->
+<div class="breadcrumb">User's Guide &raquo; Paging</div>
+<h3>Using different page sizes in document</h3>
+</div>
+<!-- START BPMBOOK -->
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 4.3)</p> 
+<p>The page (sheet) size can be reset within the document.</p> 
+<p class="manual_block"><b>Note:</b> The @page model used by CSS and supported by mPDF allows the size of a "page-box" to be set,&nbsp;assuming a constant size of the "sheet" on which it is being printed. To avoid confusion, the term "sheet size" is preferred for the physical dimensions of the page of the document.</p> 
+<p>There are different ways to change sheet size:</p> 
+<h6>1) Using CSS @page</h6> 
+<p class="examplecode">&lt;style&gt;<br />
+@page { sheet-size: A3-L; }<br />
+@page bigger { sheet-size: 420mm 370mm; }<br />
+@page toc { sheet-size: A4; }<br />
+<br />
+h1.bigsection {<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; page-break-before: always;<br />
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; page: bigger;<br />
+}<br />
+&lt;/style&gt;</p> 
+<p>You can reference the @page selectors using other CSS as above (and see <a href="http://mpdf1.com/manual/index.php?tid=307">Using @page</a>) or setting attributes in:</p> 
+<ul> 
+<li>&lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt;&nbsp; e.g. &lt;tocpagebreak ... page-selector="bigger" toc-page-selector="toc" ... /&gt;</li> 
+<li>&lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt;&nbsp; e.g. &lt;pagebreak ... page-selector="bigger" ... /&gt;</li> 
+</ul> 
+<p>The functions <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> and <a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> both have parameters which allow you to select a @page</p> 
+<h6>2) Specify the sheet size when forcing a new page (HTML tags)<br />
+</h6> 
+<ul> 
+<li>&lt;<a href="http://mpdf1.com/manual/index.php?tid=110">pagebreak</a>&gt; e.g. &lt;pagebreak ... sheet-size="A3-L" ... /&gt;</li> 
+<li>&lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt; e.g. &lt;tocpagebreak ... sheet-size="420mm 370mm" toc-sheet-size="A4" ... /&gt;</li> 
+</ul> 
+<p>Accepted values are:</p> 
+<ul> 
+<li>"A4", "A3", "Letter" etc</li> 
+<li>"A4-L", "A3-L", "Letter-L" etc. for landscape</li> 
+<li>a string of 2 dimensions e.g. "21cm 29.7cm" Can be px, pt, in, mm, cm: but not em, ex, or %</li> 
+</ul> 
+<h6>3) Specify the sheet size when forcing a new page (functions)</h6> 
+<p>The functions <a href="http://mpdf1.com/manual/index.php?tid=29">AddPage()</a> and <a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> both have parameters to select sheet size.</p> 
+<p>Accepted values - same options as the original <a href="http://mpdf1.com/manual/index.php?tid=184">mPDF()</a> - are:</p> 
+<ul> 
+<li>"A4", "A3", "Letter" etc</li> 
+<li>"A4-L", "A3-L", "Letter-L" etc. for landscape</li> 
+<li>an array of 2 numbers which are the width then height in mm e.g. array(210,297)</li> 
+</ul> 
+<h6>Limitations</h6> 
+<ul> 
+<li>mPDF will not carry over block-style elements across page-breaks.</li> 
+<li>Does not work with &lt;<a href="http://mpdf1.com/manual/index.php?tid=353">formfeed</a>&gt;, and disabled if using $this-&gt;restoreBlockPageBreaks</li> 
+<li>Cannot use @page { size: portrait | landscape; } at the same time as defining the sheet-size</li> 
+</ul> 
+<p>&nbsp;</p>
+</div>
+</div>
+<!-- TOPIC ENDS -->
+<!-- END BPMBOOK -->
+ </div> 
+<!-- START BOTTOM GRAY BOX -->
+<div class="graybottom">
+<div class="grayhead">
+<div class="left">
+<!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
+Edition/Revision: 1.0</div>
+<div class="right">Created 18 Feb 2010<br />
+Validated 22 Sep 2010 by Ian Back</div> 
+<div class="clearer"></div> 
+</div>
+</div>
+<!-- END BOTTOM GRAY BOX -->
+
+<!-- BEGIN FOOTER -->
+<div id="printfooter"> 
+<table cellspacing="0" cellpadding="6" width="100%" border="0">
+  <tr valign="top" bgColor="#ffffff">
+    <td>Copyright &copy; 2015 
+    Ian N Back<br />
+	</td>
+    <td align="right">Printed: Wed 05 Aug 2015 12:06:56 GMT +0100 (DST)<br />
+   </td>
+  </tr>
+</table>
+</div>
+</body>
+
+
+<!-- Mirrored from mpdf1.com/manual/index.php?tid=436&op_target=print&id=495 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:52 GMT -->
+</html>
