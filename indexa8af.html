@@ -33,46 +33,46 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>(mPDF &gt;= 1.0)</p> 
-<p>SetAnchor2Bookmark – Specifies whether PDF Bookmarks are created automatically from HTML anchors</p> 
-<h5>Description</h5> 
-<p class="manual_block">void <b>SetAnchor2Bookmark</b> ( int <span class="parameter">$mode</span> )</p> 
-<p>Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="Introduction" /&gt;) . This function simply sets the variable <span class="parameter">$anchor2Bookmark</span></p> 
-<p class="manual_block"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</p> 
-<h5>Parameters</h5> 
-<p class="manual_param_dt"><span class="parameter">mode</span></p> 
+<p>(mPDF &gt;= 1.0)</p>
+<p>SetAnchor2Bookmark – Specifies whether PDF Bookmarks are created automatically from HTML anchors</p>
+<h5>Description</h5>
+<p class="manual_block">void <b>SetAnchor2Bookmark</b> ( int <span class="parameter">$mode</span> )</p>
+<p>Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="Introduction" /&gt;) . This function simply sets the variable <span class="parameter">$anchor2Bookmark</span></p>
+<p class="manual_block"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</p>
+<h5>Parameters</h5>
+<p class="manual_param_dt"><span class="parameter">mode</span></p>
 <p class="manual_param_dd"><b>Values</b><br />
 0 - does not generate a bookmark<br />
-1 - generate a bookmark using the text value of the <span class="parameter">name</span> attribute<br /> 
-<span class="smallblock">DEFAULT</span>: 0<span class="smallblock"> </span></p> 
-<h5>Changelog</h5> 
-<table class="bpmTopic"> <thead> 
-<tr> <th>Version</th><th>Description</th> </tr> 
-</thead> <tbody> 
-<tr> 
-<td>3.0</td> 
-<td><span class="parameter">mode</span> = 2 removed</td> 
-</tr> 
-</tbody> </table> 
-<h5>Examples</h5> 
-<p class="examplecode"><b>Example #1</b></p> 
-<p class="examplecode">&lt;?php<br /> 
-<br /> 
+1 - generate a bookmark using the text value of the <span class="parameter">name</span> attribute<br />
+<span class="smallblock">DEFAULT</span>: 0<span class="smallblock"> </span></p>
+<h5>Changelog</h5>
+<table class="bpmTopic"> <thead>
+<tr> <th>Version</th><th>Description</th> </tr>
+</thead> <tbody>
+<tr>
+<td>3.0</td>
+<td><span class="parameter">mode</span> = 2 removed</td>
+</tr>
+</tbody> </table>
+<h5>Examples</h5>
+<p class="examplecode"><b>Example #1</b></p>
+<p class="examplecode">&lt;?php<br />
+<br />
 $mpdf=new mPDF();<br />
-$mpdf-&gt;SetAnchor2Bookmark(1);<br /> 
-$mpdf-&gt;WriteHTML('&lt;h1&gt;&lt;a name="Section 1" /&gt;The title&lt;/h1&gt;);<br /> 
-$mpdf-&gt;Output();<br /> 
-<br /> 
+$mpdf-&gt;SetAnchor2Bookmark(1);<br />
+$mpdf-&gt;WriteHTML('&lt;h1&gt;&lt;a name="Section 1" /&gt;The title&lt;/h1&gt;);<br />
+$mpdf-&gt;Output();<br />
+<br />
 ?&gt;<br />
 <br />
-This will create a Bookmark in the PDF document: "Section 1"</p> 
-<h5>Notes</h5> 
+This will create a Bookmark in the PDF document: "Section 1"</p>
+<h5>Notes</h5>
 <p class="manual_block"><b>Note</b>: Prior to mPDF 3.0 you could specify <span class="parameter">mode</span> = 2 which added the page number to the bookmark e.g. Introduction (p.32). This was removed as it did not accurately handle pagebreaks etc.</p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -80,17 +80,17 @@ This will create a Bookmark in the PDF document: "Section 1"</p>
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 6 Feb 2009<br />
-Validated 13 Feb 2009 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 13 Feb 2009 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:15:10 GMT +0100 (DST)<br />
@@ -98,7 +98,7 @@ Validated 13 Feb 2009 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?tid=131&op_target=print&id=162 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->

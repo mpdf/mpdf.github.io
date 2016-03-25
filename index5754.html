@@ -33,67 +33,67 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>(mPDFI &gt;= 2.4)</p> 
-<p>RestartDocTemplate – Re-start the use of a Document template from the next page</p> 
-<h5>Description</h5> 
-<p class="manual_block">void <b>RestartDocTemplate</b> ( )</p> 
-<p>Restart the use of a document template (set by <a href="http://mpdf1.com/manual/index.php?tid=341">SetDocTemplate()</a>) from the next page.</p> 
-<h5>Parameters</h5> 
-<p class="manual_param_dt"><span class="parameter">none</span></p> 
-<h5>Changelog</h5> 
-<table class="bpmTopic"> <thead> 
-<tr> <th>Version</th><th>Description</th> </tr> 
-</thead> <tbody> 
-<tr> 
-<td>2.4</td> 
-<td>Function was added.</td> 
-</tr> 
-</tbody> </table> 
-<h5>Examples</h5> 
-<p class="examplecode"><b>Example #1</b></p> 
-<p class="examplecode">&lt;?php<br /> 
-<br /> 
-include("../mpdf.php");<br /> 
-<br /> 
-$mpdf=new mPDF(); <br /> 
-$mpdf-&gt;SetImportUse(); <br /> 
+<p>(mPDFI &gt;= 2.4)</p>
+<p>RestartDocTemplate – Re-start the use of a Document template from the next page</p>
+<h5>Description</h5>
+<p class="manual_block">void <b>RestartDocTemplate</b> ( )</p>
+<p>Restart the use of a document template (set by <a href="http://mpdf1.com/manual/index.php?tid=341">SetDocTemplate()</a>) from the next page.</p>
+<h5>Parameters</h5>
+<p class="manual_param_dt"><span class="parameter">none</span></p>
+<h5>Changelog</h5>
+<table class="bpmTopic"> <thead>
+<tr> <th>Version</th><th>Description</th> </tr>
+</thead> <tbody>
+<tr>
+<td>2.4</td>
+<td>Function was added.</td>
+</tr>
+</tbody> </table>
+<h5>Examples</h5>
+<p class="examplecode"><b>Example #1</b></p>
+<p class="examplecode">&lt;?php<br />
 <br />
-// Document template consisting of 2 pages, first with logo and addresses, 2nd with a simple header<br /> 
-$mpdf-&gt;SetDocTemplate('logoheader.pdf',true); <br /> 
-<br /> 
-$mpdf-&gt;AddPage();<br /> 
-<br /> 
-$mpdf-&gt;WriteHTML($firstletter);<br /> 
-<br /> 
+include("../mpdf.php");<br />
+<br />
+$mpdf=new mPDF(); <br />
+$mpdf-&gt;SetImportUse(); <br />
+<br />
+// Document template consisting of 2 pages, first with logo and addresses, 2nd with a simple header<br />
+$mpdf-&gt;SetDocTemplate('logoheader.pdf',true); <br />
+<br />
+$mpdf-&gt;AddPage();<br />
+<br />
+$mpdf-&gt;WriteHTML($firstletter);<br />
+<br />
 $mpdf-&gt;RestartDocTemplate();<br />
 $mpdf-&gt;AddPage();<br />
 $mpdf-&gt;WriteHTML($secondletter);<br />
-<br /> 
-$mpdf-&gt;RestartDocTemplate();<br /> 
-$mpdf-&gt;AddPage();<br /> 
-$mpdf-&gt;WriteHTML($thirdletter);<br /> 
 <br />
-$mpdf-&gt;Output();<br /> 
-<br /> 
-?&gt;</p> 
-<h5>See Also</h5> 
-<ul> 
-<li><a href="http://mpdf1.com/manual/index.php?tid=432">SetImportUse()</a> - Enable the use of imported PDF files or templates</li> 
-<li><a href="http://mpdf1.com/manual/index.php?tid=341">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li> 
-<li><a href="http://mpdf1.com/manual/index.php?tid=336">Thumbnail()</a> - Print thumbnails of an external PDF file<br /> 
-</li> 
-<li><a href="http://mpdf1.com/manual/index.php?tid=337">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document<br /> 
-</li> 
-<li><a href="http://mpdf1.com/manual/index.php?tid=339">UseTemplate()</a> - Insert an imported page from an external PDF file</li> 
-<li><a href="http://mpdf1.com/manual/index.php?tid=340">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template<br /> 
-</li> 
-</ul> 
+$mpdf-&gt;RestartDocTemplate();<br />
+$mpdf-&gt;AddPage();<br />
+$mpdf-&gt;WriteHTML($thirdletter);<br />
+<br />
+$mpdf-&gt;Output();<br />
+<br />
+?&gt;</p>
+<h5>See Also</h5>
+<ul>
+<li><a href="http://mpdf1.com/manual/index.php?tid=432">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
+<li><a href="http://mpdf1.com/manual/index.php?tid=341">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li>
+<li><a href="http://mpdf1.com/manual/index.php?tid=336">Thumbnail()</a> - Print thumbnails of an external PDF file<br />
+</li>
+<li><a href="http://mpdf1.com/manual/index.php?tid=337">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document<br />
+</li>
+<li><a href="http://mpdf1.com/manual/index.php?tid=339">UseTemplate()</a> - Insert an imported page from an external PDF file</li>
+<li><a href="http://mpdf1.com/manual/index.php?tid=340">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template<br />
+</li>
+</ul>
 <p>&nbsp;</p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -101,17 +101,17 @@ $mpdf-&gt;Output();<br />
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 22 Apr 2009<br />
-Validated 22 Apr 2009 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 22 Apr 2009 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:14:55 GMT +0100 (DST)<br />
@@ -119,7 +119,7 @@ Validated 22 Apr 2009 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?tid=361&op_target=print&id=414 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->

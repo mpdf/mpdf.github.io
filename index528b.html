@@ -33,12 +33,12 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>The Notes below were for mPDF &lt;2.0</p> 
-<p>It is now recommended that you use new functions :</p> 
-<p><a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt;</p> 
-<p><a href="http://mpdf1.com/manual/index.php?tid=185">TOC_Entry()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=119">tocentry</a>&gt;</p> 
-<p>From mPDF 2.3 you can use more than one ToC in a document. See the functions as above for details.</p> 
-<p>From mPDF 3.0 long entries in the ToC will wrap to the line</p> 
+<p>The Notes below were for mPDF &lt;2.0</p>
+<p>It is now recommended that you use new functions :</p>
+<p><a href="http://mpdf1.com/manual/index.php?tid=183">TOCpagebreak()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=182">tocpagebreak</a>&gt;</p>
+<p><a href="http://mpdf1.com/manual/index.php?tid=185">TOC_Entry()</a> or &lt;<a href="http://mpdf1.com/manual/index.php?tid=119">tocentry</a>&gt;</p>
+<p>From mPDF 2.3 you can use more than one ToC in a document. See the functions as above for details.</p>
+<p>From mPDF 3.0 long entries in the ToC will wrap to the line</p>
 <p>=======================<br />
 Table of Contents (TOC) - Rough Notes<br />
 =======================<br />
@@ -76,92 +76,92 @@ The same variables are also added as attributes to the &lt;toc&gt; html tagL<br 
 /&gt;<br />
 <br />
 <br />
-NB Remember that the function insertToC() which had to be called at the end of the document in early versions of mPDF is now called automatically when the file is Output() - it doesn't need to be specifically called (in fact should not be)</p> 
-<p>Old Notes:</p> 
-<p>&nbsp;mPDF can generate&nbsp;a Table of Contents (ToC). Although this is usually placed at the start of a document, it needs to be defined/generated at the end of the document (after an Index, if one is used) just before calling Output().</p> 
-<ol> 
-<li>Mark the position you would eventually like the ToC positioned, by including on the appropriate page:<br /> 
-&lt;toc font="sans-serif" font-size="9" indent="5"&nbsp;/&gt; or<br /> 
-$mpdf-&gt;TOC('sans-serif', 9, 5);<br /> 
-NB You do not need to call&nbsp;$mpdf-&gt;startPageNums(); this is now depracated as of v1.3</li> 
-<li>Mark&nbsp;ToC entries at the appropriate place in the HTML text; this can be done using e.g.:<br /> 
-&lt;tocentry content="Buffalo" level="0"&nbsp;/&gt; or<br /> 
-$mpdf-&gt;TOC_Entry("Buffalo",0); // Level starts at 0</li> 
-<li>At any time before generating the ToC, set some (optional) values for the ToC page(s):<br /> 
-$mpdf-&gt;TOCheader = array(); // uses same format as SetHeader() - cf. Headers and Footers - must use the array form<br /> 
-$mpdf-&gt;TOCfooter = array();<br /> 
-$mpdf-&gt;TOCpreHTML = '&lt;h3&gt;Contents List&lt;/h3&gt;'; // Placed above the ToC<br /> 
-$mpdf-&gt;TOCpostHTML = ''; // Placed below the ToC<br /> 
-$mpdf-&gt;TOCbookmarkText = 'Contents'; // Text to use for PDF Bookmark (blank for no bookmark)</li> 
-<li>At the end of document, just before calling Output():<br /> 
-$mpdf-&gt;insertTOC();</li> 
-</ol> 
-<p><b>TOC</b>([<b>string</b> font[, <b>float</b> fontsize[, <b>float</b> indent[, <b>string</b> resetpagenum[, <b>mixed</b> pagenumstyle[, <b>integer</b> suppress]]]]]])</p> 
-<ul> 
-<li>font<br /> 
-Font used for the ToC<br /> 
-Default = '' i.e. default document font</li> 
-<li>fontsize<br /> 
-Fontsize used for the ToC in points (pt)<br /> 
-Default =&nbsp;8</li> 
-<li>indent<br /> 
-Amount to indent each level in millimeters<br /> 
-Default =&nbsp;5</li> 
-<li>The next parameters (added in version 1.3) determine the page numbering from this point in the document onwards - not for the ToC itself (the ToC is not generated until the end and will have no page numbers). They will normally be set by AddPage() or &lt;pagebreak /&gt;, but you can do it here if required.</li> 
-<li>resetpagenum<br /> 
-resetpagenum=1 will reset the document page number to one starting on the next page</li> 
-<li>pagenumstyle<br /> 
-paranumstyle (as for Lists) - 1=decimal; A=alpha uppercase; a=alpha lowercase; I=Roman uppercase; i=Roman lowercase</li> 
-<li>suppress<br /> 
-suppress=on will suppress document page numbers from the new page onwards (until suppress=off is used)</li> 
-</ul> 
-<p><b>TOC_Entry</b>(<b>string</b> content[, <b>integer</b> level])</p> 
-<ul> 
-<li>content<br /> 
-Text string (utf-8 encoded)</li> 
-<li>level<br /> 
-Specify the level of this entry i.e. like heading1,2,3 ;but starts at level 0<br /> 
-Default = 0</li> 
-</ul> 
-<p>NB A ToC must start on an Odd page if using Odd/Even pages. TOC() will automatically add a blank page if required.</p> 
-<p><b>Example of use</b><br /> 
-$mpdf=new mPDF();<br /> 
-$mpdf-&gt;useOddEven = 1;</p> 
-<p>// ToC details can be set at any time before outputting the document, but lets do it at the start:<br /> 
-// Set blank header &amp; footer for the ToC pages when they are generated<br /> 
-$mpdf-&gt;TOCheader = array();<br /> 
-$mpdf-&gt;TOCfooter = array();<br /> 
-$mpdf-&gt;TOCpreHTML = '&lt;h2&gt;Contents List&lt;/h2&gt;';<br /> 
-$mpdf-&gt;TOCpostHTML = '- End of Contents List -';<br /> 
-$mpdf-&gt;TOCbookmarkText = 'Contents';</p> 
-<p>// Set headers and footers for the title pages without page numbers<br /> 
-$mpdf-&gt;setHeader('Header for Title Page(s)');<br /> 
-$mpdf-&gt;setFooter('Footer for Title Page(s)');<br /> 
-$mpdf-&gt;WriteHTML('Your Front Cover Pages',2);</p> 
-<p>// This where the ToC is going to go, but now you need to set the headers/footers and page numbering for what follows the TOC, as though it did not exist in the document.<br /> 
-// ToC must start on a new page (an Odd page if using Odd &amp; Even)</p> 
-<p>// Ensure we are now on an Even page (before changing headers/footers/page numbers)<br /> 
-$mpdf-&gt;AddPage('','E');</p> 
-<p>// Header needs to be set before AddPage<br /> 
-$mpdf-&gt;setHeader('Header for Main Text including {PAGENO}');</p> 
-<p>// Now add the new Odd page, and Start showing page numbers from this point on as Roman lowercase - resetting the numbering to start at #1<br /> 
-$mpdf-&gt;AddPage('','','1','i');</p> 
-<p>// Reset the Footer after adding the page<br /> 
-$mpdf-&gt;setFooter('Footer for Main text including {PAGENO}');</p> 
-<p>// Set this page as where the ToC will be inserted later<br /> 
-$mpdf-&gt;TOC('sans-serif', 9, 5 );</p> 
-<p>// Now write the main text of your document<br /> 
-$mpdf-&gt;WriteHTML('Your Book text',2);<br /> 
-// ... which will include ToC entries e.g.<br /> 
-&lt;tocentry content="Buffalo" level="0"&nbsp;/&gt;</p> 
-<p>// Generate the ToC and insert it back after the title page<br /> 
-$mpdf-&gt;insertTOC();<br /> 
+NB Remember that the function insertToC() which had to be called at the end of the document in early versions of mPDF is now called automatically when the file is Output() - it doesn't need to be specifically called (in fact should not be)</p>
+<p>Old Notes:</p>
+<p>&nbsp;mPDF can generate&nbsp;a Table of Contents (ToC). Although this is usually placed at the start of a document, it needs to be defined/generated at the end of the document (after an Index, if one is used) just before calling Output().</p>
+<ol>
+<li>Mark the position you would eventually like the ToC positioned, by including on the appropriate page:<br />
+&lt;toc font="sans-serif" font-size="9" indent="5"&nbsp;/&gt; or<br />
+$mpdf-&gt;TOC('sans-serif', 9, 5);<br />
+NB You do not need to call&nbsp;$mpdf-&gt;startPageNums(); this is now depracated as of v1.3</li>
+<li>Mark&nbsp;ToC entries at the appropriate place in the HTML text; this can be done using e.g.:<br />
+&lt;tocentry content="Buffalo" level="0"&nbsp;/&gt; or<br />
+$mpdf-&gt;TOC_Entry("Buffalo",0); // Level starts at 0</li>
+<li>At any time before generating the ToC, set some (optional) values for the ToC page(s):<br />
+$mpdf-&gt;TOCheader = array(); // uses same format as SetHeader() - cf. Headers and Footers - must use the array form<br />
+$mpdf-&gt;TOCfooter = array();<br />
+$mpdf-&gt;TOCpreHTML = '&lt;h3&gt;Contents List&lt;/h3&gt;'; // Placed above the ToC<br />
+$mpdf-&gt;TOCpostHTML = ''; // Placed below the ToC<br />
+$mpdf-&gt;TOCbookmarkText = 'Contents'; // Text to use for PDF Bookmark (blank for no bookmark)</li>
+<li>At the end of document, just before calling Output():<br />
+$mpdf-&gt;insertTOC();</li>
+</ol>
+<p><b>TOC</b>([<b>string</b> font[, <b>float</b> fontsize[, <b>float</b> indent[, <b>string</b> resetpagenum[, <b>mixed</b> pagenumstyle[, <b>integer</b> suppress]]]]]])</p>
+<ul>
+<li>font<br />
+Font used for the ToC<br />
+Default = '' i.e. default document font</li>
+<li>fontsize<br />
+Fontsize used for the ToC in points (pt)<br />
+Default =&nbsp;8</li>
+<li>indent<br />
+Amount to indent each level in millimeters<br />
+Default =&nbsp;5</li>
+<li>The next parameters (added in version 1.3) determine the page numbering from this point in the document onwards - not for the ToC itself (the ToC is not generated until the end and will have no page numbers). They will normally be set by AddPage() or &lt;pagebreak /&gt;, but you can do it here if required.</li>
+<li>resetpagenum<br />
+resetpagenum=1 will reset the document page number to one starting on the next page</li>
+<li>pagenumstyle<br />
+paranumstyle (as for Lists) - 1=decimal; A=alpha uppercase; a=alpha lowercase; I=Roman uppercase; i=Roman lowercase</li>
+<li>suppress<br />
+suppress=on will suppress document page numbers from the new page onwards (until suppress=off is used)</li>
+</ul>
+<p><b>TOC_Entry</b>(<b>string</b> content[, <b>integer</b> level])</p>
+<ul>
+<li>content<br />
+Text string (utf-8 encoded)</li>
+<li>level<br />
+Specify the level of this entry i.e. like heading1,2,3 ;but starts at level 0<br />
+Default = 0</li>
+</ul>
+<p>NB A ToC must start on an Odd page if using Odd/Even pages. TOC() will automatically add a blank page if required.</p>
+<p><b>Example of use</b><br />
+$mpdf=new mPDF();<br />
+$mpdf-&gt;useOddEven = 1;</p>
+<p>// ToC details can be set at any time before outputting the document, but lets do it at the start:<br />
+// Set blank header &amp; footer for the ToC pages when they are generated<br />
+$mpdf-&gt;TOCheader = array();<br />
+$mpdf-&gt;TOCfooter = array();<br />
+$mpdf-&gt;TOCpreHTML = '&lt;h2&gt;Contents List&lt;/h2&gt;';<br />
+$mpdf-&gt;TOCpostHTML = '- End of Contents List -';<br />
+$mpdf-&gt;TOCbookmarkText = 'Contents';</p>
+<p>// Set headers and footers for the title pages without page numbers<br />
+$mpdf-&gt;setHeader('Header for Title Page(s)');<br />
+$mpdf-&gt;setFooter('Footer for Title Page(s)');<br />
+$mpdf-&gt;WriteHTML('Your Front Cover Pages',2);</p>
+<p>// This where the ToC is going to go, but now you need to set the headers/footers and page numbering for what follows the TOC, as though it did not exist in the document.<br />
+// ToC must start on a new page (an Odd page if using Odd &amp; Even)</p>
+<p>// Ensure we are now on an Even page (before changing headers/footers/page numbers)<br />
+$mpdf-&gt;AddPage('','E');</p>
+<p>// Header needs to be set before AddPage<br />
+$mpdf-&gt;setHeader('Header for Main Text including {PAGENO}');</p>
+<p>// Now add the new Odd page, and Start showing page numbers from this point on as Roman lowercase - resetting the numbering to start at #1<br />
+$mpdf-&gt;AddPage('','','1','i');</p>
+<p>// Reset the Footer after adding the page<br />
+$mpdf-&gt;setFooter('Footer for Main text including {PAGENO}');</p>
+<p>// Set this page as where the ToC will be inserted later<br />
+$mpdf-&gt;TOC('sans-serif', 9, 5 );</p>
+<p>// Now write the main text of your document<br />
+$mpdf-&gt;WriteHTML('Your Book text',2);<br />
+// ... which will include ToC entries e.g.<br />
+&lt;tocentry content="Buffalo" level="0"&nbsp;/&gt;</p>
+<p>// Generate the ToC and insert it back after the title page<br />
+$mpdf-&gt;insertTOC();<br />
 $mpdf-&gt;Output('',I');</p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -169,17 +169,17 @@ $mpdf-&gt;Output('',I');</p>
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 9 Feb 2009<br />
-Validated 27 Sep 2010 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 27 Sep 2010 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:38:31 GMT +0100 (DST)<br />
@@ -187,7 +187,7 @@ Validated 27 Sep 2010 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?id=293&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:40 GMT -->

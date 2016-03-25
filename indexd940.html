@@ -33,12 +33,12 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p class="manual_block"><b>@page was updated in mPDF 4.2 - see the later entry for this topic.</b></p> 
-<p class="manual_block"><b>Note:</b> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</p> 
-<p>&nbsp;</p> 
-<p>CSS PAGED MEDIA</p> 
-<p>=============</p> 
-<p>The paged media model of CSS (http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html) is used as a basis</p> 
+<p class="manual_block"><b>@page was updated in mPDF 4.2 - see the later entry for this topic.</b></p>
+<p class="manual_block"><b>Note:</b> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</p>
+<p>&nbsp;</p>
+<p>CSS PAGED MEDIA</p>
+<p>=============</p>
+<p>The paged media model of CSS (http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html) is used as a basis</p>
 <p class="examplecode">&nbsp;&nbsp; _____________________________<br />
 &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&lt;- sheet<br />
 &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&lt;--+-- crop marks<br />
@@ -56,13 +56,13 @@
 &nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp; B: margin-right<br />
 &nbsp; |&nbsp; |______________________|&nbsp;&nbsp; |&nbsp;&nbsp; C: margin-bottom<br />
 &nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; D: margin-left<br />
-&nbsp; |_____________________________|</p> 
-<p>The dimensions set when calling a new mPDF() set the Sheet size.</p> 
-<p>The Page-box size is assumed to be the same as the sheet size by default.</p> 
-<p>The page-box margins are therefore by default the left/right/top and bottom margins.</p> 
-<p>NB Page-box margins are INSIDE the page-box (unlike block elements in CSS).</p> 
-<p>Supported CSS</p> 
-<p>=============</p> 
+&nbsp; |_____________________________|</p>
+<p>The dimensions set when calling a new mPDF() set the Sheet size.</p>
+<p>The Page-box size is assumed to be the same as the sheet size by default.</p>
+<p>The page-box margins are therefore by default the left/right/top and bottom margins.</p>
+<p>NB Page-box margins are INSIDE the page-box (unlike block elements in CSS).</p>
+<p>Supported CSS</p>
+<p>=============</p>
 <p class="examplecode">@page {<br />
 &nbsp; size: 8.5in 11in;&nbsp; &lt;length&gt;{1,2} | auto | portrait | landscape&nbsp; ('em' 'ex' and % are not allowed; length values are width height<br />
 &nbsp; margin: 10%; &lt;any of the usual CSS values for margins&gt; (% of page-box width for LR, of height for TB)<br />
@@ -73,38 +73,38 @@
 &nbsp; even-header-name: html_myHTMLHeaderEven;<br />
 &nbsp; odd-footer-name: html_myHTMLFooterOdd;<br />
 &nbsp; even-footer-name: html_myHTMLFooterEven;<br />
-}</p> 
-<p>&nbsp;</p> 
-<p>All properties except size are optional.</p> 
-<p>Three values for the 'size' property set the page box to the same size as the sheet:</p> 
+}</p>
+<p>&nbsp;</p>
+<p>All properties except size are optional.</p>
+<p>Three values for the 'size' property set the page box to the same size as the sheet:</p>
 <p>auto<br />
-&nbsp;&nbsp;&nbsp; The page box will be set to the size and orientation of the target sheet.</p> 
+&nbsp;&nbsp;&nbsp; The page box will be set to the size and orientation of the target sheet.</p>
 <p>landscape<br />
-&nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the longer sides are horizontal.</p> 
+&nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the longer sides are horizontal.</p>
 <p>portrait<br />
-&nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the shorter sides are horizontal.</p> 
-<p>&nbsp;</p> 
-<p>The header and footer names refer to named headers/footers set in your document - see PAGING notes.</p> 
-<p>NB The prefix "html_" used before the name is used to denote a header/footer defined as HTML code.</p> 
-<p>If a header/Footer name is set as _blank (or any name that hasn't been defined) it will turn off Headers/Footers)</p> 
-<p>Crop marks indicate where the page should be cut. Cross marks (also known as register marks or registration marks) are used to align sheets.</p> 
-<p>If you have defined @page {} in the CSS, then the values for the margins will override the ones set calling a new mPDF().</p> 
-<p>&nbsp;</p> 
-<p>IMPORTANT - if you define a @page {} but don't specifiy margins, they will be set to the initial margin values of mPDF.</p> 
-<p>&nbsp;</p> 
-<p>If you set a page(-box) smaller than the sheet size, the margins are increased by the difference between the page-box and sheet size - automatically centering the page-box inside the sheet.</p> 
-<p>&nbsp;</p> 
-<p>If you change page-box orientation, the sheet orientation will follow.</p> 
-<p>&nbsp;</p> 
-<p>page-break-before: always|left|right</p> 
-<p>can be used with any block element</p> 
-<p>NB Block elements - and any styling associated will be terminated at a page-break</p> 
-<p>&nbsp;</p> 
-<p>NB Haven't tested Paged media with ToC or Index yet??? (Appears OK with columns)</p> 
-<p>&nbsp;</p> 
-<p>PSEUDO-SELECTORS</p> 
-<p>================</p> 
-<p>Pseudo-selectors :left :right and :first are recognised by mPDF but have limited effect e.g.</p> 
+&nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the shorter sides are horizontal.</p>
+<p>&nbsp;</p>
+<p>The header and footer names refer to named headers/footers set in your document - see PAGING notes.</p>
+<p>NB The prefix "html_" used before the name is used to denote a header/footer defined as HTML code.</p>
+<p>If a header/Footer name is set as _blank (or any name that hasn't been defined) it will turn off Headers/Footers)</p>
+<p>Crop marks indicate where the page should be cut. Cross marks (also known as register marks or registration marks) are used to align sheets.</p>
+<p>If you have defined @page {} in the CSS, then the values for the margins will override the ones set calling a new mPDF().</p>
+<p>&nbsp;</p>
+<p>IMPORTANT - if you define a @page {} but don't specifiy margins, they will be set to the initial margin values of mPDF.</p>
+<p>&nbsp;</p>
+<p>If you set a page(-box) smaller than the sheet size, the margins are increased by the difference between the page-box and sheet size - automatically centering the page-box inside the sheet.</p>
+<p>&nbsp;</p>
+<p>If you change page-box orientation, the sheet orientation will follow.</p>
+<p>&nbsp;</p>
+<p>page-break-before: always|left|right</p>
+<p>can be used with any block element</p>
+<p>NB Block elements - and any styling associated will be terminated at a page-break</p>
+<p>&nbsp;</p>
+<p>NB Haven't tested Paged media with ToC or Index yet??? (Appears OK with columns)</p>
+<p>&nbsp;</p>
+<p>PSEUDO-SELECTORS</p>
+<p>================</p>
+<p>Pseudo-selectors :left :right and :first are recognised by mPDF but have limited effect e.g.</p>
 <p class="examplecode">@page :right {<br />
 &nbsp; margin-left: 3cm;<br />
 &nbsp; margin-right: 4cm;<br />
@@ -115,43 +115,43 @@
 &nbsp; margin-right: 1.5cm;<br />
 }<br />
 <br />
-<span class="examplecode">@page :first {<br /> 
-&nbsp; margin-top: 10cm;<br /> 
-&nbsp; margin-bottom: 4cm;&nbsp;&nbsp;&nbsp; <br /> 
-}</span></p> 
-<p>&nbsp;</p> 
-<p>Pseudo-selectors for page can change margins but mPDF can only cope with one set of (optionally mirrored) margins therefore:</p> 
-<p>If @page { margin } is set; it depends on <span class="code">$mpdf-&gt;mirrorMargins</span> whether it mirrors values or not</p> 
-<p>If @page :right is set - automatically turns on <span class="code">$mpdf-&gt;mirrorMargins</span> i.e. mirrors using Right as base</p> 
-<p>If @page :left is set - automatically turns on <span class="code">$mpdf-&gt;mirrorMargins</span> and OVERRIDES :right i.e. mirrors using a mirror of Left as the base for L/Odd pages</p> 
-<p>&nbsp;</p> 
-<p>For the setting above, an Odd/Right page will have left-margin=1.5cm and right-margin=8cm; Even/Left pages will have left-margin=8cm and right-margin=1.5cm</p> 
-<p>&nbsp;</p> 
-<p>Properties specified in a :first @page rule override those specified in :right (or :left) @page rules for the first page only</p> 
-<p>&nbsp;</p> 
-<p>ONLY top and bottom margins work for :first</p> 
-<p>&nbsp;</p> 
-<p>NAMED PAGES</p> 
-<p>===========</p> 
-<p>Named pages are also supported e.g.:</p> 
-<p>@page rotated { size: landscape; }</p> 
-<p>You can then refer to the named page in other CSS style sheets:</p> 
-<p>div.onitsside { page: rotated; page-break-before: right; }</p> 
-<p>&lt;div class="onitsside"&gt; will thus start a new right/odd page which will be in landscape.</p> 
-<p>===================================</p> 
-<p>ADDITIONAL CSS PROPERTIES SUPPORTED</p> 
-<p>===================================</p> 
-<p>The CSS property 'page-break-before' is now supported for all block elements. As above, this can be used in conjunction with a named page definition.</p> 
+<span class="examplecode">@page :first {<br />
+&nbsp; margin-top: 10cm;<br />
+&nbsp; margin-bottom: 4cm;&nbsp;&nbsp;&nbsp; <br />
+}</span></p>
+<p>&nbsp;</p>
+<p>Pseudo-selectors for page can change margins but mPDF can only cope with one set of (optionally mirrored) margins therefore:</p>
+<p>If @page { margin } is set; it depends on <span class="code">$mpdf-&gt;mirrorMargins</span> whether it mirrors values or not</p>
+<p>If @page :right is set - automatically turns on <span class="code">$mpdf-&gt;mirrorMargins</span> i.e. mirrors using Right as base</p>
+<p>If @page :left is set - automatically turns on <span class="code">$mpdf-&gt;mirrorMargins</span> and OVERRIDES :right i.e. mirrors using a mirror of Left as the base for L/Odd pages</p>
+<p>&nbsp;</p>
+<p>For the setting above, an Odd/Right page will have left-margin=1.5cm and right-margin=8cm; Even/Left pages will have left-margin=8cm and right-margin=1.5cm</p>
+<p>&nbsp;</p>
+<p>Properties specified in a :first @page rule override those specified in :right (or :left) @page rules for the first page only</p>
+<p>&nbsp;</p>
+<p>ONLY top and bottom margins work for :first</p>
+<p>&nbsp;</p>
+<p>NAMED PAGES</p>
+<p>===========</p>
+<p>Named pages are also supported e.g.:</p>
+<p>@page rotated { size: landscape; }</p>
+<p>You can then refer to the named page in other CSS style sheets:</p>
+<p>div.onitsside { page: rotated; page-break-before: right; }</p>
+<p>&lt;div class="onitsside"&gt; will thus start a new right/odd page which will be in landscape.</p>
+<p>===================================</p>
+<p>ADDITIONAL CSS PROPERTIES SUPPORTED</p>
+<p>===================================</p>
+<p>The CSS property 'page-break-before' is now supported for all block elements. As above, this can be used in conjunction with a named page definition.</p>
 <p>'page-break-before'<br />
-&nbsp;&nbsp;&nbsp; Supported values:&nbsp; &nbsp;&nbsp;&nbsp; always | left | right</p> 
+&nbsp;&nbsp;&nbsp; Supported values:&nbsp; &nbsp;&nbsp;&nbsp; always | left | right</p>
 <p>always<br />
-&nbsp;&nbsp;&nbsp; Always force a page break before the generated block element.</p> 
+&nbsp;&nbsp;&nbsp; Always force a page break before the generated block element.</p>
 <p>left<br />
-&nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a left/even page.</p> 
+&nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a left/even page.</p>
 <p>right<br />
-&nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a right/odd page.</p> 
-<p>page-break-before: right is equivalent of AddPage(... 'NEXT-ODD'...)</p> 
-<h6>Example using Headers and Footers</h6> 
+&nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a right/odd page.</p>
+<p>page-break-before: right is equivalent of AddPage(... 'NEXT-ODD'...)</p>
+<h6>Example using Headers and Footers</h6>
 <p class="examplecode">$mpdf=new mPDF(); <br />
 $mpdf-&gt;useOddEven = 1;<br />
 $html = '<br />
@@ -240,7 +240,7 @@ $mpdf-&gt;Output();</p>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -248,17 +248,17 @@ $mpdf-&gt;Output();</p>
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 13 Feb 2009<br />
-Validated 10 Feb 2010 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 10 Feb 2010 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:38:15 GMT +0100 (DST)<br />
@@ -266,7 +266,7 @@ Validated 10 Feb 2010 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?id=357&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:37 GMT -->

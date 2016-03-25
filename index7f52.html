@@ -33,10 +33,10 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>This script was written to create a new PDF file based on a pre-existing PDF document, converting an A4 document into an A5 booklet ready for duplex printing. Page order is adjusted, and page orientation is rotated so that it prints a landscape booklet.</p> 
-<p class="examplecode">&lt;?php<br /> 
-<br /> 
-include("../mpdf.php");<br /> 
+<p>This script was written to create a new PDF file based on a pre-existing PDF document, converting an A4 document into an A5 booklet ready for duplex printing. Page order is adjusted, and page orientation is rotated so that it prints a landscape booklet.</p>
+<p class="examplecode">&lt;?php<br />
+<br />
+include("../mpdf.php");<br />
 <br />
 $mpdf=new mPDF('','A4-L','','',0,0,0,0,0,0); <br />
 $mpdf-&gt;SetImportUse();&nbsp;&nbsp;&nbsp; <br />
@@ -65,7 +65,7 @@ foreach($pp AS $v) {<br />
 $mpdf-&gt;Output();<br />
 <br />
 exit;<br />
-<br /> 
+<br />
 function GetBookletPages($np, $backcover=true) {<br />
 &nbsp;&nbsp;&nbsp; $lastpage = $np;<br />
 &nbsp;&nbsp;&nbsp; $np = 4*ceil($np/4);<br />
@@ -85,13 +85,13 @@ function GetBookletPages($np, $backcover=true) {<br />
 &nbsp;&nbsp;&nbsp; }<br />
 &nbsp;&nbsp;&nbsp; return $pp;<br />
 }<br />
-<br /> 
+<br />
 ?&gt;</p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -99,17 +99,17 @@ function GetBookletPages($np, $backcover=true) {<br />
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 18 Sep 2009<br />
-Validated 20 Sep 2009 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 20 Sep 2009 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:12:01 GMT +0100 (DST)<br />
@@ -117,7 +117,7 @@ Validated 20 Sep 2009 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?tid=392&op_target=print&id=446 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:27 GMT -->

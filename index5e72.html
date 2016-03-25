@@ -95,7 +95,7 @@ Miscellaneous Symbols (DejaVuSansCondensed)<br />
 ജ + ൌ = ജൌ</p>
 <p>Consonant conjuncts are where two adjacent characters are written as a single 'conjunct' form e.g.</p>
 <p class="manual_block">प + ॡ = पॣ</p>
-<p>mPDF can support some of these languages, but requires specially prepared font files that are unique to mPDF. These are distributed with the mPDF package.<br /> 
+<p>mPDF can support some of these languages, but requires specially prepared font files that are unique to mPDF. These are distributed with the mPDF package.<br />
 Supported languages: Bengali, Devanāgarī, Gujarāti, Gurmukhi, Kannada, Malayalam, Oriya, Tamil, Telugu</p>
 <p class="manual_block">আসসালামু আলাইকুম નમસ્તે നമസ്കാരം नमस्ते வணக்கம்!</p>
 <p>Complex scripts <b>not</b> supported: Khmer, Sinhala, Tibetan, Myanmar (Burmese), Balinese</p>
@@ -140,69 +140,69 @@ Á á Ȧ ȧ Ä ä ï (Using diacritics)</p>
 <h5>TrueType Collections</h5>
 <p>TrueType Collections (.ttc files) contain more than one font. mPDF treats each font separately by defining the <span class="code">TTCfontID</span> array in the <span class="filename">config_fonts.php</span> configuration file.</p>
 <p>This example uses the Windows MingLiU fonts, which consist of 2 files containing 6 fonts (note that mingliub is not a Bold variant):</p>
-<p>Font collection file (<span class="filename">mingliu.ttc</span>) contains the following fonts:<br /> 
-[1] MingLiU (mingliu) Regular<br /> 
-[2] PMingLiU (pmingliu) Regular (Proportional)<br /> 
+<p>Font collection file (<span class="filename">mingliu.ttc</span>) contains the following fonts:<br />
+[1] MingLiU (mingliu) Regular<br />
+[2] PMingLiU (pmingliu) Regular (Proportional)<br />
 [3] MingLiU_HKSCS (mingliu_hkscs) Regular</p>
-<p>Font collection file (<span class="filename">mingliub.ttc</span>) contains the following fonts:<br /> 
-[1] MingLiU-ExtB (mingliu-extb) Regular<br /> 
-[2] PMingLiU-ExtB (pmingliu-extb) Regular (Proportional)<br /> 
+<p>Font collection file (<span class="filename">mingliub.ttc</span>) contains the following fonts:<br />
+[1] MingLiU-ExtB (mingliu-extb) Regular<br />
+[2] PMingLiU-ExtB (pmingliu-extb) Regular (Proportional)<br />
 [3] MingLiU_HKSCS-ExtB (mingliu_hkscs-extb) Regular</p>
 <p>&nbsp;</p>
 <p>This is the entry in the config_fonts.php configuration file:</p>
-<p class="examplecode">$this-&gt;fontdata = array(<br /> 
-...<br /> 
-&nbsp; &nbsp; &nbsp; "mingliu" =&gt; array(<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliu.ttc",<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 1,<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'sip-ext' =&gt; 'mingliu-extb',<br /> 
-&nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; "pmingliu" =&gt; array(<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliu.ttc",<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 2,<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'sip-ext' =&gt; 'pmingliu-extb',<br /> 
-&nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; "mingliu_hkscs" =&gt; array(<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliu.ttc",<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 3,<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'sip-ext' =&gt; 'mingliu_hkscs-extb',<br /> 
-&nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; "mingliu-extb" =&gt; array(<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliub.ttc",<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 1,<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; "pmingliu-extb" =&gt; array(<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliub.ttc",<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 2,<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; "mingliu_hkscs-extb" =&gt; array(<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliub.ttc",<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 3,<br /> 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br /> 
-&nbsp; &nbsp; &nbsp; ),<br /> 
-<br /> 
-...<br /> 
+<p class="examplecode">$this-&gt;fontdata = array(<br />
+...<br />
+&nbsp; &nbsp; &nbsp; "mingliu" =&gt; array(<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliu.ttc",<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 1,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'sip-ext' =&gt; 'mingliu-extb',<br />
+&nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; "pmingliu" =&gt; array(<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliu.ttc",<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 2,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'sip-ext' =&gt; 'pmingliu-extb',<br />
+&nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; "mingliu_hkscs" =&gt; array(<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliu.ttc",<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 3,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'sip-ext' =&gt; 'mingliu_hkscs-extb',<br />
+&nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; "mingliu-extb" =&gt; array(<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliub.ttc",<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 1,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; "pmingliu-extb" =&gt; array(<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliub.ttc",<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 2,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; "mingliu_hkscs-extb" =&gt; array(<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; "mingliub.ttc",<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'TTCfontID' =&gt; array (<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 'R' =&gt; 3,<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ),<br />
+&nbsp; &nbsp; &nbsp; ),<br />
+<br />
+...<br />
 );</p>
 <p>This is an example of HTML code containing CJK characters from both BMP and SIP, and selecting the different fonts:</p>
-<p class="examplecode">&lt;div style="font-family:mingliu;"&gt; &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; &lt;/div&gt; <br /> 
-&lt;div style="font-family:mingliu_hkscs;"&gt; &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; &lt;/div&gt; <br /> 
+<p class="examplecode">&lt;div style="font-family:mingliu;"&gt; &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; &lt;/div&gt; <br />
+&lt;div style="font-family:mingliu_hkscs;"&gt; &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; &lt;/div&gt; <br />
 &lt;div style="font-family:pmingliu;"&gt; &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; &lt;/div&gt;</p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -210,17 +210,17 @@ Á á Ȧ ȧ Ä ä ï (Using diacritics)</p>
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 22 Sep 2010<br />
-Validated 22 Sep 2010 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 22 Sep 2010 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:04:01 GMT +0100 (DST)<br />
@@ -228,7 +228,7 @@ Validated 22 Sep 2010 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?tid=453&op_target=print&id=517 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:12 GMT -->

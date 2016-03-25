@@ -33,15 +33,15 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p class="manual_block"><b>Note:</b> This is an alternative method to the one in <a href="http://mpdf1.com/manual/index.php?tid=494">Math Formulae with MathJax</a></p> 
-<p class="manual_block"><b>Note:</b> This version has an updated script which should work in all browsers.</p> 
+<p class="manual_block"><b>Note:</b> This is an alternative method to the one in <a href="http://mpdf1.com/manual/index.php?tid=494">Math Formulae with MathJax</a></p>
+<p class="manual_block"><b>Note:</b> This version has an updated script which should work in all browsers.</p>
 <p><br />
-1) Adapt the page in which you are testing/writing the Math formulae</p> 
-<ul> 
-<li>Ideally set the default output to SVG. Otherwise the user will need to select this from: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG</li> 
-<li>Add code for a button to send the processed SVG to your PHP script</li> 
-</ul> 
-<p class="examplecode"><b>Example of MathJax page</b></p> 
+1) Adapt the page in which you are testing/writing the Math formulae</p>
+<ul>
+<li>Ideally set the default output to SVG. Otherwise the user will need to select this from: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG</li>
+<li>Add code for a button to send the processed SVG to your PHP script</li>
+</ul>
+<p class="examplecode"><b>Example of MathJax page</b></p>
 <p class="examplecode">&lt;!DOCTYPE html&gt;<br />
 &lt;html&gt;<br />
 &lt;head&gt;<br />
@@ -70,9 +70,9 @@
 &lt;/div&gt;<br />
 <br />
 &lt;/body&gt;<br />
-&lt;/html&gt;</p> 
-<p>2) Now you need a PHP script (in this example: <span class="filename">example_test.php</span>) which processes the output code from MathJax so that it is readable by mPDF:</p> 
-<p class="examplecode"><b>Example of 1st part of example_test.php</b></p> 
+&lt;/html&gt;</p>
+<p>2) Now you need a PHP script (in this example: <span class="filename">example_test.php</span>) which processes the output code from MathJax so that it is readable by mPDF:</p>
+<p class="examplecode"><b>Example of 1st part of example_test.php</b></p>
 <p class="examplecode">// You should include a check for unwanted external referrers to prevent<br />
 // calls on this script from external websites!<br />
 <br />
@@ -100,9 +100,9 @@ for ($i=0;$i&lt;count($m[0]);$i++) {<br />
 }<br />
 <br />
 <br />
-</p> 
-<p>3a) Finally you can create a PDF document directly based on the MathJax web page submitted:</p> 
-<p class="examplecode"><b>Example of 2nd part of example_test.php creating a PDF document</b></p> 
+</p>
+<p>3a) Finally you can create a PDF document directly based on the MathJax web page submitted:</p>
+<p class="examplecode"><b>Example of 2nd part of example_test.php creating a PDF document</b></p>
 <p class="examplecode">// ADD a stylesheet<br />
 $stylesheet = '<br />
 /* This helps alignment for inline equations */<br />
@@ -122,9 +122,9 @@ $mpdf-&gt;WriteHTML($html);<br />
 $mpdf-&gt;Output(); <br />
 exit;<br />
 <br />
-</p> 
-<p>3b) Or you could output the prepared SVG code suitable for including directly in your PDF documents:</p> 
-<p class="examplecode"><b>Example of 2nd part of example_test.php to output the code to a browser</b></p> 
+</p>
+<p>3b) Or you could output the prepared SVG code suitable for including directly in your PDF documents:</p>
+<p class="examplecode"><b>Example of 2nd part of example_test.php to output the code to a browser</b></p>
 <p class="examplecode">...<br />
 // To output SVG files (one for each formula) readable by mPDF as text output<br />
 header('Content-type: text/plain');<br />
@@ -134,13 +134,13 @@ for ($i=0;$i&lt;count($m[0]);$i++) {<br />
 &nbsp;&nbsp;&nbsp; $svg = preg_replace('/&gt;/',"&gt;\n",$svg);&nbsp;&nbsp;&nbsp; // Just add some new lines<br />
 &nbsp;&nbsp;&nbsp; echo $svg."\n\n";<br />
 }<br />
-exit;</p> 
+exit;</p>
 <p>See an example: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a></p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -148,17 +148,17 @@ exit;</p>
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.1</div>
 <div class="right">Created 25 Nov 2014<br />
-Validated 25 Nov 2014 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 25 Nov 2014 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:41:13 GMT +0100 (DST)<br />
@@ -166,7 +166,7 @@ Validated 25 Nov 2014 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?id=575&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:54 GMT -->

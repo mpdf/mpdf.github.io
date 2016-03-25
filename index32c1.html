@@ -33,40 +33,40 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>Most of the functions of mPDF can be achieved two ways: using PHP commands, or using custom HTML tags. Use whichever suits your purpose better, and you can always combine a mxture of the two.</p> 
-<p class="manual_block">If you are new to mPDF, I would recommend using HTML/CSS for everything - you can test most things out in a browser this way as you are writing it.</p> 
-<p>Example:</p> 
-<p class="examplecode"><b>Example #1</b></p> 
-<p class="examplecode">&lt;?php<br /> 
-<br /> 
-$mpdf=new mPDF();<br /> 
-$mpdf-&gt;Bookmark('Start of the document');<br /> 
-$mpdf-&gt;WriteHTML('&lt;div&gt;Section 1 text&lt;/div&gt;');<br /> 
-$mpdf-&gt;Output();<br /> 
-<br /> 
-?&gt;</p> 
-<p class="examplecode"><b>Example #2</b></p> 
-<p class="examplecode">&lt;?php<br /> 
+<p>Most of the functions of mPDF can be achieved two ways: using PHP commands, or using custom HTML tags. Use whichever suits your purpose better, and you can always combine a mxture of the two.</p>
+<p class="manual_block">If you are new to mPDF, I would recommend using HTML/CSS for everything - you can test most things out in a browser this way as you are writing it.</p>
+<p>Example:</p>
+<p class="examplecode"><b>Example #1</b></p>
+<p class="examplecode">&lt;?php<br />
+<br />
+$mpdf=new mPDF();<br />
+$mpdf-&gt;Bookmark('Start of the document');<br />
+$mpdf-&gt;WriteHTML('&lt;div&gt;Section 1 text&lt;/div&gt;');<br />
+$mpdf-&gt;Output();<br />
+<br />
+?&gt;</p>
+<p class="examplecode"><b>Example #2</b></p>
+<p class="examplecode">&lt;?php<br />
 <br />
 $html = '&lt;bookmark content="Start of the Document" /&gt;&lt;div&gt;Section 1 text&lt;/div&gt;';<br />
-<br /> 
-$mpdf=new mPDF();<br /> 
-$mpdf-&gt;WriteHTML($html);<br /> 
-$mpdf-&gt;Output();<br /> 
-<br /> 
-?&gt;</p> 
-<h5>Invalid HTML?</h5> 
-<p>If you want to hide mPDF custom tags from a browser, enclose any mPDF code within:</p> 
-<p class="examplecode">&lt;!--mpdf&nbsp; ..&nbsp; anything you want to write ...&nbsp; mpdf--&gt;</p> 
-<p>mPDF will strip away the <span class="parameter">&lt;!--mpdf</span> tag and any following spaces, and the <span class="parameter">mpdf--&gt;</span> tag and any preceeding spaces, and process all enclosed code e.g.</p> 
-<p class="examplecode">&lt;!--mpdf&nbsp; &lt;htmlheader id="header1"&gt;&lt;h2&gt;Section 2&lt;/h2&gt;&lt;/htmlheader&gt;&nbsp; mpdf--&gt;</p> 
-<h5>See Also</h5> 
+<br />
+$mpdf=new mPDF();<br />
+$mpdf-&gt;WriteHTML($html);<br />
+$mpdf-&gt;Output();<br />
+<br />
+?&gt;</p>
+<h5>Invalid HTML?</h5>
+<p>If you want to hide mPDF custom tags from a browser, enclose any mPDF code within:</p>
+<p class="examplecode">&lt;!--mpdf&nbsp; ..&nbsp; anything you want to write ...&nbsp; mpdf--&gt;</p>
+<p>mPDF will strip away the <span class="parameter">&lt;!--mpdf</span> tag and any following spaces, and the <span class="parameter">mpdf--&gt;</span> tag and any preceeding spaces, and process all enclosed code e.g.</p>
+<p class="examplecode">&lt;!--mpdf&nbsp; &lt;htmlheader id="header1"&gt;&lt;h2&gt;Section 2&lt;/h2&gt;&lt;/htmlheader&gt;&nbsp; mpdf--&gt;</p>
+<h5>See Also</h5>
 <p><a href="http://mpdf1.com/manual/index.php?tid=435">Capturing HTML</a></p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -74,17 +74,17 @@ $mpdf-&gt;Output();<br />
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 12 Feb 2009<br />
-Validated 20 Sep 2009 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 20 Sep 2009 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:03:52 GMT +0100 (DST)<br />
@@ -92,7 +92,7 @@ Validated 20 Sep 2009 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?tid=286&op_target=print&id=336 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:39:02 GMT -->

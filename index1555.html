@@ -33,14 +33,14 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>(mPDF &gt;= 3.0)</p> 
-<p>SetDisplayPreferences – Defines the way the document shall be presented on the screen</p> 
-<h5>Description</h5> 
-<p class="manual_block">void <b>SetDisplayPreferences</b> ( string <span class="parameter">$prefs</span> )</p> 
-<p>Specify the way the document shall be presented on the screen when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p> 
-<h5>Parameters</h5> 
-<p class="manual_param_dt"><span class="parameter">prefs</span></p> 
-<p class="manual_param_dd">This parameter takes a string containing any one or more of the possible values separated by any characters (e.g. comma, forward slash or space). All the options start as <span class="smallblock">FALSE</span>, and can only be set <span class="smallblock">TRUE</span> by this command. Each setting is added to those previously set.</p> 
+<p>(mPDF &gt;= 3.0)</p>
+<p>SetDisplayPreferences – Defines the way the document shall be presented on the screen</p>
+<h5>Description</h5>
+<p class="manual_block">void <b>SetDisplayPreferences</b> ( string <span class="parameter">$prefs</span> )</p>
+<p>Specify the way the document shall be presented on the screen when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p>
+<h5>Parameters</h5>
+<p class="manual_param_dt"><span class="parameter">prefs</span></p>
+<p class="manual_param_dd">This parameter takes a string containing any one or more of the possible values separated by any characters (e.g. comma, forward slash or space). All the options start as <span class="smallblock">FALSE</span>, and can only be set <span class="smallblock">TRUE</span> by this command. Each setting is added to those previously set.</p>
 <p class="manual_param_dd"><b>Values</b> (case-sensitive)<br />
 FullScreen: Full-screen mode, with no menu bar, window controls, or any other window visible<br />
 HideMenubar: whether to hide the conforming reader’s menu bar when the document is active<br />
@@ -49,9 +49,9 @@ HideWindowUI: whether to hide user interface elements in the document’s window
 DisplayDocTitle: whether the window’s title bar should display the document title taken from the Title entry of the document information dictionary. If false, the title bar will instead display the name of the PDF file containing the document<br />
 CenterWindow: whether to position the document’s window in the center of the screen<br />
 FitWindow: whether to resize the document’s window to fit the size of the first displayed page<br />
-NoPrintScaling: overrides the user's default setting to scale the printing size (mPDF &gt;= 5.1)</p> 
-<h5>Examples</h5> 
-<p class="examplecode"><b>Example #1</b></p> 
+NoPrintScaling: overrides the user's default setting to scale the printing size (mPDF &gt;= 5.1)</p>
+<h5>Examples</h5>
+<p class="examplecode"><b>Example #1</b></p>
 <p class="examplecode">&lt;?php<br />
 <br />
 $mpdf=new mPDF();<br />
@@ -59,18 +59,18 @@ $mpdf-&gt;SetDisplayPreferences('/HideMenubar/HideToolbar/DisplayDocTitle');<br 
 $mpdf-&gt;WriteHTML('&lt;p&gt;Hallo World&lt;/p&gt;');<br />
 $mpdf-&gt;Output('filename.pdf');<br />
 <br />
-?&gt;</p> 
+?&gt;</p>
 <h5>See Also<br />
-</h5> 
-<ul> 
-<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=128">SetDisplayMode()</a> - Specify the initial Display Mode when the PDF file is opened in Adobe Reader</li> 
-</ul> 
+</h5>
+<ul>
+<li class="manual_boxlist"><a href="http://mpdf1.com/manual/index.php?tid=128">SetDisplayMode()</a> - Specify the initial Display Mode when the PDF file is opened in Adobe Reader</li>
+</ul>
 <p>&nbsp;</p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -78,17 +78,17 @@ $mpdf-&gt;Output('filename.pdf');<br />
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 21 Jun 2009<br />
-Validated 21 Jun 2009 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 21 Jun 2009 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:16:06 GMT +0100 (DST)<br />
@@ -96,7 +96,7 @@ Validated 21 Jun 2009 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?tid=389&op_target=print&id=443 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:58 GMT -->

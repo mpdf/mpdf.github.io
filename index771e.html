@@ -33,11 +33,11 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>This example shows how to create a PDF file and e-mail it:</p> 
-<p class="examplecode">&lt;?php<br /> 
-<br /> 
-include("../mpdf.php");<br /> 
-<br /> 
+<p>This example shows how to create a PDF file and e-mail it:</p>
+<p class="examplecode">&lt;?php<br />
+<br />
+include("../mpdf.php");<br />
+<br />
 $mpdf=new mPDF(); <br />
 <br />
 // $html must be defined<br />
@@ -53,7 +53,7 @@ $replyto = 'sender@domain.com';<br />
 $uid = md5(uniqid(time())); <br />
 $subject = 'Your e-mail subject here';<br />
 $message = 'Your e-mail message here';<br />
-$filename = 'filename.pdf';<br /> 
+$filename = 'filename.pdf';<br />
 <br />
 $header = "From: ".$from_name." &lt;".$from_mail."&gt;\r\n";<br />
 $header .= "Reply-To: ".$replyto."\r\n";<br />
@@ -76,14 +76,14 @@ $is_sent = @mail($mailto, $subject, "", $header);<br />
 $mpdf-&gt;Output();<br />
 exit;<br />
 <br />
-?&gt;</p> 
-<p class="manual_block"><b>Note:</b> If you have problems with this example, try using \n instead of \r\n. See the note in <a href="http://uk3.php.net/manual/en/function.mail.php">PHP mail</a>.</p> 
+?&gt;</p>
+<p class="manual_block"><b>Note:</b> If you have problems with this example, try using \n instead of \r\n. See the note in <a href="http://uk3.php.net/manual/en/function.mail.php">PHP mail</a>.</p>
 <p class="manual_block"><b>Note:</b> Also see the <a href="http://www.mpdf1.com/mpdf/forum/comments.php?DiscussionID=663&amp;page=1#Item_1">message thread</a> in the Forum</p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -91,17 +91,17 @@ exit;<br />
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 5 May 2009<br />
-Validated 20 Sep 2009 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 20 Sep 2009 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:38:52 GMT +0100 (DST)<br />
@@ -109,7 +109,7 @@ Validated 20 Sep 2009 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?id=427&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:47 GMT -->

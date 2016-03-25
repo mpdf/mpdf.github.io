@@ -33,14 +33,14 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>mPDF does not support MathML or LaTeX math formulae directly. However you can include math in a PDF document making use of <a href="http://www.mathjax.org/">MathJax</a> following the steps below.</p> 
-<p class="manual_block"><b>Note:</b> See alternative method to this in <a href="http://mpdf1.com/manual/index.php?tid=495">Math with MathJax 2</a></p> 
-<p>MathJax is a Javascript program which renders math equations in a browser from either MathML or LaTeX sources. You need to use MathJax first to render the equation, and MathJax needs to be configured to offer SVG as an output option. To demonstrate, start with a sample page such as <a href="http://www.mathjax.org/demos/tex-samples/">http://www.mathjax.org/demos/tex-samples/ </a></p> 
-<p>1) Open the HTML page in your browser (allowing MathJax to render the equations).</p> 
-<p>2) Right click over one of the equations and select: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG (This re-renders all the equations n the page in SVG format),</p> 
-<p>3) Save the page including the javascript-processed code. In Firefox, select File &gt;&gt; Save Page As... (This doesn't work in IE which only saves the original HTML code prior to processing).</p> 
-<p>4) Edit the file to make any necessary changes e.g. CSS stylesheets.</p> 
-<p>5) Run the following script to produce your PDF document (assumes you saved the file as TeXSample.htm). This adjusts the SVG code produced to allow mPDF to display it:</p> 
+<p>mPDF does not support MathML or LaTeX math formulae directly. However you can include math in a PDF document making use of <a href="http://www.mathjax.org/">MathJax</a> following the steps below.</p>
+<p class="manual_block"><b>Note:</b> See alternative method to this in <a href="http://mpdf1.com/manual/index.php?tid=495">Math with MathJax 2</a></p>
+<p>MathJax is a Javascript program which renders math equations in a browser from either MathML or LaTeX sources. You need to use MathJax first to render the equation, and MathJax needs to be configured to offer SVG as an output option. To demonstrate, start with a sample page such as <a href="http://www.mathjax.org/demos/tex-samples/">http://www.mathjax.org/demos/tex-samples/ </a></p>
+<p>1) Open the HTML page in your browser (allowing MathJax to render the equations).</p>
+<p>2) Right click over one of the equations and select: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG (This re-renders all the equations n the page in SVG format),</p>
+<p>3) Save the page including the javascript-processed code. In Firefox, select File &gt;&gt; Save Page As... (This doesn't work in IE which only saves the original HTML code prior to processing).</p>
+<p>4) Edit the file to make any necessary changes e.g. CSS stylesheets.</p>
+<p>5) Run the following script to produce your PDF document (assumes you saved the file as TeXSample.htm). This adjusts the SVG code produced to allow mPDF to display it:</p>
 <p class="examplecode">$mpdf=new mPDF(''); <br />
 <br />
 $html = file_get_contents('TeXSample.htm');<br />
@@ -78,13 +78,13 @@ $mpdf-&gt;WriteHTML($html);<br />
 $mpdf-&gt;Output(); <br />
 exit;<br />
 <br />
-</p> 
+</p>
 <p>See an example of output: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a></p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -92,17 +92,17 @@ exit;<br />
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 14 Jan 2013<br />
-Validated 14 Jan 2013 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 14 Jan 2013 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:38:44 GMT +0100 (DST)<br />
@@ -110,7 +110,7 @@ Validated 14 Jan 2013 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?id=566&op_target=print by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:42:44 GMT -->

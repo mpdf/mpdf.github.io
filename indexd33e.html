@@ -33,11 +33,11 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>If you want to save the created file to a database (not necessarily recommended), one user has suggested the following:</p> 
+<p>If you want to save the created file to a database (not necessarily recommended), one user has suggested the following:</p>
 <p class="examplecode">$s = $mpdf-&gt;Output('','S');<br />
 $data = bin2hex($s);<br />
-$query = "INSERT INTO aaa SET content=0x".$data." ";</p> 
-<p>When you want to output the PDf file:</p> 
+$query = "INSERT INTO aaa SET content=0x".$data." ";</p>
+<p>When you want to output the PDf file:</p>
 <p class="examplecode">// Get the database content into the variable $data<br />
 $pdf = pack("H*" , $data ); <br />
 header('Content-Type: application/pdf');<br />
@@ -48,13 +48,13 @@ header('Pragma: public');<br />
 header('Expires: Sat, 26 Jul 1997 05:00:00 GMT'); <br />
 header('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT');<br />
 echo $pdf;<br />
-exit;</p> 
+exit;</p>
 <p>&nbsp;</p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -62,17 +62,17 @@ exit;</p>
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 23 Feb 2010<br />
-Validated 4 Jun 2011 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 4 Jun 2011 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:11:06 GMT +0100 (DST)<br />
@@ -80,7 +80,7 @@ Validated 4 Jun 2011 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?tid=437&op_target=print&id=496 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:16 GMT -->

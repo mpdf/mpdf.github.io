@@ -33,8 +33,8 @@
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>Using the CSS @page selector, these are a couple of similar methods for producing multiple letters into 1 PDF file, where each letter uses a letterhead for page one then plain paper for the remaining pages.</p> 
-<h6>Method 1</h6> 
+<p>Using the CSS @page selector, these are a couple of similar methods for producing multiple letters into 1 PDF file, where each letter uses a letterhead for page one then plain paper for the remaining pages.</p>
+<h6>Method 1</h6>
 <p class="examplecode">$header = '<br />
 &lt;!--mpdf<br />
 &lt;htmlpageheader name="letterheader"&gt;<br />
@@ -54,38 +54,38 @@ Page {PAGENO} of {nbpg}<br />
 mpdf--&gt;<br />
 <br />
 &lt;style&gt;<br />
-@page {<br /> 
-margin-top: 2.5cm;<br /> 
-margin-bottom: 2.5cm;<br /> 
-margin-left: 2cm;<br /> 
-margin-right: 2cm;<br /> 
-footer: html_letterfooter2;<br /> 
+@page {<br />
+margin-top: 2.5cm;<br />
+margin-bottom: 2.5cm;<br />
+margin-left: 2cm;<br />
+margin-right: 2cm;<br />
+footer: html_letterfooter2;<br />
 background-color: pink;<br />
 }<br />
 <br />
-@page :first {<br /> 
-margin-top: 8cm;<br /> 
-margin-bottom: 4cm;&nbsp; <br /> 
-header: html_letterheader;<br /> 
-footer: _blank;<br /> 
-resetpagenum: 1; <br /> 
+@page :first {<br />
+margin-top: 8cm;<br />
+margin-bottom: 4cm;&nbsp; <br />
+header: html_letterheader;<br />
+footer: _blank;<br />
+resetpagenum: 1; <br />
 background-color: lightblue;<br />
 }<br />
-@page letterhead {<br /> 
-margin-top: 2.5cm;<br /> 
-margin-bottom: 2.5cm;<br /> 
-margin-left: 2cm;<br /> 
-margin-right: 2cm;<br /> 
-footer: html_letterfooter2;<br /> 
+@page letterhead {<br />
+margin-top: 2.5cm;<br />
+margin-bottom: 2.5cm;<br />
+margin-left: 2cm;<br />
+margin-right: 2cm;<br />
+footer: html_letterfooter2;<br />
 background-color: pink;<br />
 }<br />
 <br />
-@page letterhead :first {<br /> 
-margin-top: 8cm;<br /> 
-margin-bottom: 4cm;&nbsp; <br /> 
-header: html_letterheader;<br /> 
-footer: _blank;<br /> 
-resetpagenum: 1; <br /> 
+@page letterhead :first {<br />
+margin-top: 8cm;<br />
+margin-bottom: 4cm;&nbsp; <br />
+header: html_letterheader;<br />
+footer: _blank;<br />
+resetpagenum: 1; <br />
 background-color: lightblue;<br />
 }<br />
 &lt;/style&gt;<br />
@@ -108,8 +108,8 @@ $mpdf-&gt;WriteHTML($letter);<br />
 $mpdf-&gt;WriteHTML('&lt;pagebreak page-selector="letterhead" /&gt;');<br />
 $mpdf-&gt;WriteHTML($letter);<br />
 <br />
-$mpdf-&gt;Output();</p> 
-<h6>Method 2</h6> 
+$mpdf-&gt;Output();</p>
+<h6>Method 2</h6>
 <p class="examplecode">$header = '<br />
 &lt;!--mpdf<br />
 &lt;htmlpageheader name="letterheader"&gt;<br />
@@ -129,33 +129,33 @@ Page {PAGENO} of {nbpg}<br />
 mpdf--&gt;<br />
 <br />
 &lt;style&gt;<br />
-@page {<br /> 
-margin-top: 2.5cm;<br /> 
-margin-bottom: 2.5cm;<br /> 
-margin-left: 2cm;<br /> 
-margin-right: 2cm;<br /> 
-footer: html_letterfooter2;<br /> 
+@page {<br />
+margin-top: 2.5cm;<br />
+margin-bottom: 2.5cm;<br />
+margin-left: 2cm;<br />
+margin-right: 2cm;<br />
+footer: html_letterfooter2;<br />
 background-color: pink;<br />
 }<br />
 <br />
-@page :first {<br /> 
-margin-top: 8cm;<br /> 
-margin-bottom: 4cm;<br /> 
-header: html_letterheader;<br /> 
-footer: _blank;<br /> 
-resetpagenum: 1; <br /> 
+@page :first {<br />
+margin-top: 8cm;<br />
+margin-bottom: 4cm;<br />
+header: html_letterheader;<br />
+footer: _blank;<br />
+resetpagenum: 1; <br />
 background-color: yellow;<br />
 }<br />
-@page letterhead :first {<br /> 
-margin-top: 8cm;<br /> 
-margin-bottom: 4cm;&nbsp; <br /> 
-header: html_letterheader;<br /> 
-footer: _blank;<br /> 
-resetpagenum: 1; <br /> 
+@page letterhead :first {<br />
+margin-top: 8cm;<br />
+margin-bottom: 4cm;&nbsp; <br />
+header: html_letterheader;<br />
+footer: _blank;<br />
+resetpagenum: 1; <br />
 background-color: lightblue;<br />
 }<br />
-.letter { &nbsp;&nbsp;&nbsp; <br /> 
-page-break-before: always; <br /> 
+.letter { &nbsp;&nbsp;&nbsp; <br />
+page-break-before: always; <br />
 page: letterhead;<br />
 }<br />
 &lt;/style&gt;<br />
@@ -185,14 +185,14 @@ $mpdf-&gt;WriteHTML($firstletter);<br />
 $mpdf-&gt;WriteHTML($letter);<br />
 $mpdf-&gt;WriteHTML($letter);<br />
 <br />
-$mpdf-&gt;Output();</p> 
+$mpdf-&gt;Output();</p>
 <p><br />
 </p>
 </div>
 </div>
 <!-- TOPIC ENDS -->
 <!-- END BPMBOOK -->
- </div> 
+ </div>
 <!-- START BOTTOM GRAY BOX -->
 <div class="graybottom">
 <div class="grayhead">
@@ -200,17 +200,17 @@ $mpdf-&gt;Output();</p>
 <!-- VERSIONS LANGUAGE/COUNTRY INFORMATION -->
 Edition/Revision: 1.0</div>
 <div class="right">Created 28 Jan 2010<br />
-Validated 3 Oct 2010 by Ian Back</div> 
-<div class="clearer"></div> 
+Validated 3 Oct 2010 by Ian Back</div>
+<div class="clearer"></div>
 </div>
 </div>
 <!-- END BOTTOM GRAY BOX -->
 
 <!-- BEGIN FOOTER -->
-<div id="printfooter"> 
+<div id="printfooter">
 <table cellspacing="0" cellpadding="6" width="100%" border="0">
   <tr valign="top" bgColor="#ffffff">
-    <td>Copyright &copy; 2015 
+    <td>Copyright &copy; 2015
     Ian N Back<br />
 	</td>
     <td align="right">Printed: Wed 05 Aug 2015 12:12:09 GMT +0100 (DST)<br />
@@ -218,7 +218,7 @@ Validated 3 Oct 2010 by Ian Back</div>
   </tr>
 </table>
 </div>
-</body>
+<div class="warning">Notice: This is a temporary mirror of the original mPDF manual. URLs of pages are subject to change.</div></body>
 
 
 <!-- Mirrored from mpdf1.com/manual/index.php?tid=418&op_target=print&id=476 by HTTrack Website Copier/3.x [XR&CO'2010], Wed, 05 Aug 2015 11:40:27 GMT -->

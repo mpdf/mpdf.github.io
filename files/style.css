@@ -7,6 +7,19 @@ html, body {
 	margin:0px 0px 0px 0px;
 	}
 
+body {
+	padding-top: 44px;
+}
+
+.warning {
+    background: yellow none repeat scroll 0 0;
+    left: 0;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
 p {
 	font-size:14px; font-family: Verdana, Geneva, sans-serif;
 	margin:0;  text-indent:0cm;  line-height:130%;  margin-bottom: 5pt;
