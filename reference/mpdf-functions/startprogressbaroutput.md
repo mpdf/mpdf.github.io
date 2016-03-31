@@ -34,8 +34,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 define('_MPDF_URI','../');     // must be  a relative or absolute URI - not a file system path
 
 $mpdf=new mPDF();

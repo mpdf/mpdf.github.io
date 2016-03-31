@@ -85,8 +85,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 ...
 
 $mpdf->WriteHTML('<textcircle r="30mm" space-width="120" char-width="150" 

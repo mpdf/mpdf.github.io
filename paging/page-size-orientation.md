@@ -19,8 +19,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF('', 'Legal');
 
 $mpdf->WriteHTML('<p>Hallo World</p>');

@@ -48,8 +48,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $mpdf->max_colH_correction = 1.3;

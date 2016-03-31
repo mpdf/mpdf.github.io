@@ -26,8 +26,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php");
 
 // This must be defined before including mpdf.php file

@@ -31,8 +31,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $mpdf->SetTitle('My Title');
@@ -51,11 +49,7 @@ Example #2
 {% highlight php %}
 <?php
 
-// htmltoolkit contains a function strcode2utf() to convert htmlentities to UTF-8 encoded text 
-
-<?php
-
-$mpdf=new mPDF();
+// htmltoolkit contains a function strcode2utf() to convert htmlentities to UTF-8 encoded text$mpdf=new mPDF();
 
 $md = strcode2utf("&amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575; &amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575;");
 

@@ -11,8 +11,6 @@ modification_time: 2015-08-05T12:00:32+00:00
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php");
 
 $mpdf=new mPDF();

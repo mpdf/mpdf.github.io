@@ -216,8 +216,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php");
 
 define("_JPGRAPH_PATH", '../../jpgraph_5/src/'); // must define this before including mpdf.php file

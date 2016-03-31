@@ -138,8 +138,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $html = '<p>This is a paragraph about violas<annotation content="Violas are like big violins" /> about which I know very little.</p>';

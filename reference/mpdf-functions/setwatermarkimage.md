@@ -71,8 +71,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $mpdf->SetWatermarkImage('../images/background.jpg');
@@ -90,8 +88,6 @@ Example #2 - Using a Watermark as a Header
 {% endhighlight %}
 
 {% highlight php %}
-<?php
-
 <?php
 
 $mpdf=new mPDF('','A4','','',20,20,50,10);

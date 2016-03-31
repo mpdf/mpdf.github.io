@@ -31,8 +31,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $html = '
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -71,8 +69,6 @@ Example #2
 {% endhighlight %}
 
 {% highlight php %}
-<?php
-
 <?php
 
 $html = '... the body of the document encoded in ISO-8859-4 ...';

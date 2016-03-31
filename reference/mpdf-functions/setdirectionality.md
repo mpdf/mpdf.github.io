@@ -37,8 +37,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF('utf-8');
 
 $mpdf->SetDirectionality('rtl');

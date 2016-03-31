@@ -110,8 +110,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $mpdf->WriteHTML('<p>Beginning bit of document...</p>');

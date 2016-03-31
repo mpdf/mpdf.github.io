@@ -29,8 +29,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $mPDF->SetColumns(2);

@@ -49,8 +49,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php");
 
 $text = file_get_contents('scriptfile.php');

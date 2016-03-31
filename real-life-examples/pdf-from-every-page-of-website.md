@@ -43,8 +43,6 @@ span.abstract_link { display: none; }
 {% highlight php %}
 <?php
 
-<?php
-
 // Define relative path from this script to mPDF
 
 define('_MPDF_PATH','../../common/mpdf/');

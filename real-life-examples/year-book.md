@@ -11,8 +11,6 @@ modification_time: 2015-08-05T12:00:25+00:00
 {% highlight php %}
 <?php
 
-<?php
-
 // First write all your entries to a PDF file, forcing each entry to fit on one page
 
 include("../mpdf.php");

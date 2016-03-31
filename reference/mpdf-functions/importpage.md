@@ -65,8 +65,6 @@ Example #1 - Using a full page
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php");
 
 $mpdf=new mPDF(); 
@@ -92,8 +90,6 @@ Example #2 - Using a 'cropped' page
 {% endhighlight %}
 
 {% highlight php %}
-<?php
-
 <?php
 
 include("../mpdf.php");

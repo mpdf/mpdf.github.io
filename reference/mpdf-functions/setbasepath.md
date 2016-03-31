@@ -40,8 +40,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $url = "http://www.php.net/manual/en/function.iconv.php";

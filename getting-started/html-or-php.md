@@ -17,8 +17,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $mpdf->Bookmark('Start of the document');
@@ -35,8 +33,6 @@ Example #2
 {% endhighlight %}
 
 {% highlight php %}
-<?php
-
 <?php
 
 $html = '<bookmark content="Start of the Document" /><div>Section 1 text</div>';

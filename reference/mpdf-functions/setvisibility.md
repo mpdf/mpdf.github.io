@@ -54,8 +54,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 ...
 
 $mpdf->SetVisibility('printonly'); 

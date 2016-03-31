@@ -43,8 +43,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 // Sends output inline to browser
 
 $mpdf=new mPDF();
@@ -61,8 +59,6 @@ Example #2
 {% endhighlight %}
 
 {% highlight php %}
-<?php
-
 <?php
 
 // Saves file on the server as 'filename.pdf'

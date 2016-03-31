@@ -33,8 +33,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $mpdf->allow_html_optional_endtags = true;

@@ -11,8 +11,6 @@ modification_time: 2015-08-05T12:00:24+00:00
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php");
 
 $mpdf=new mPDF('win-1252','A4','','',20,15,48,25,10,10); 

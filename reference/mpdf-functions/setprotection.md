@@ -93,8 +93,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 // Encrypt the file and grant no permissions to the user to copy, print etc.

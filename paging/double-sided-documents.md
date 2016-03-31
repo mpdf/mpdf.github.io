@@ -21,8 +21,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 // Define a document with default left-margin=30 and right-margin=10
 
 $mpdf=new mPDF('','', 0, '', 30, 10);

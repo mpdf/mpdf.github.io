@@ -77,8 +77,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php");
 
 // Must set codepage (e.g. UTF-8 or Core fonts) the same as for original document
@@ -120,8 +118,6 @@ Example #2  Using encryption
 {% endhighlight %}
 
 {% highlight php %}
-<?php
-
 <?php
 
 include("../mpdf.php");

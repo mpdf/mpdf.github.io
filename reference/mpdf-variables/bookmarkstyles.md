@@ -19,8 +19,6 @@ Example #1 - In config.php file
 {% highlight php %}
 <?php
 
-<?php
-
 $this->bookmarkStyles = array(
 
 0 => array('color'=> array(0,64,128), 'style'=>'B'),

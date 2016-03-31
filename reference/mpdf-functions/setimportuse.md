@@ -38,8 +38,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php");
 
 $mpdf=new mPDF(); 

@@ -12,8 +12,6 @@ modification_time: 2015-08-05T12:00:28+00:00
 {% highlight php %}
 <?php
 
-<?php
-
 $html = '
 
 <html>
@@ -54,8 +52,6 @@ exit;
 <p class="manual_block">example_userinput2.php</p>
 
 {% highlight php %}
-<?php
-
 <?php
 
 if (($_FILES["file"]["type"] == "image/gif" 
@@ -112,8 +108,6 @@ exit;
 <p class="manual_block">example_userinput3.php</p>
 
 {% highlight php %}
-<?php
-
 <?php
 
 define('_MPDF_PATH', '../');

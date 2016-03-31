@@ -34,8 +34,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf->AddSpotColor('PANTONE 534 EC',85,65,47,9);
 
 ?>

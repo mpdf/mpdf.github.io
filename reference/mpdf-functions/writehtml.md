@@ -117,8 +117,6 @@ Example #1
 {% highlight php %}
 <?php
 
-<?php
-
 $mpdf=new mPDF();
 
 $stylesheet = file_get_contents('style.css');

@@ -11,8 +11,6 @@ modification_time: 2015-08-05T12:00:26+00:00
 {% highlight php %}
 <?php
 
-<?php
-
 include("../mpdf.php"); //Include mPDF Class 
 
 $mpdf=new mPDF(); // Create new mPDF Document
