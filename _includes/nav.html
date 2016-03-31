@@ -1,0 +1,6 @@
+<ul class="list-group list-group-root">
+{% for nav in site.data.nav %}
+    <li class="list-group-item">{{ nav.title }} <ul class="list-group">{% include nav-items.html items=nav.items %}</ul></li>
+{% endfor %}
+</ul>
+

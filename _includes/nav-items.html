@@ -1,0 +1,7 @@
+{% for nav in include.items %}
+  {% if nav.items != null %}
+    <li class="list-group-item">{{ nav.title }} <ul class="list-group">{% include nav-items.html items = nav.items %}</ul></li>
+  {% else %}
+    <li class="list-group-item"><a href="{{ nav.permalink }}">{{ nav.title }}</a></li>
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,59 @@
+---
+layout: page
+title: restrictColorSpace
+parent_title: mPDF Variables
+permalink: /reference/mpdf-variables/restrictcolorspace.html
+---
+
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<div>
+<div>
+<p>(mPDF &gt;= 5.1)</p>
+<p>restrictColorSpace – Specify whether to automatically limit the colorspaces used</p>
+<h2>Description</h2>
+
+<div class="alert alert-info" role="alert">void <b>PDFAauto</b></div>
+<p>Specify whether to automatically limit the colorspaces used when creating PDF/A1-b or PDF/X-1a compliant documents. PDF files can contain objects using different colorSpaces e.g. Grayscale, RGB and CMYK. By default, mPDF creates PDF files using the colours as they are specified: font colour may be set (e.g. #880000) as an RGB colour, and the file may contain JPG images in RGB or CMYK format.</p>
+<p>
+
+In some circumstances, you may wish to create a PDF file with restricted colorSpaces e.g. printers will often want files which contain only CMYK, spot colours, or grayscale, but not RGB. Using restrictColorSpace will attempt to convert every colour value used in the document to the permitted colorSpace(s). Almost everything including images will be converted (except BMP images), and the conversion of images may take significant time.</p>
+<h2>Values</h2>
+<p class="manual_param_dt"><span class="parameter">restrictColorSpace</span> =&nbsp; 1|2|3</p>
+<p class="manual_param_dd"><b>Values</b>
+
+1: allow GRAYSCALE only [convert CMYK/RGB-&gt;gray]
+
+2: allow RGB / SPOT COLOR / Grayscale [convert CMYK-&gt;RGB]
+
+3: allow CMYK / SPOT COLOR / Grayscale [convert RGB-&gt;CMYK]
+
+0 or any other value: no restriction is made on colorspace used
+
+<span class="smallblock">DEFAULT</span>: 0</p>
+<h2>Changelog</h2>
+<table class="bpmTopic"> <thead>
+<tr> <th>Version</th><th>Description</th> </tr>
+</thead> <tbody>
+<tr>
+<td>5.1</td>
+<td>Variable was added.</td>
+</tr>
+</tbody> </table>
+<h2>See Also</h2>
+<ul>
+<li class="manual_boxlist"><a href="/what-else-can-i-do/pdf-a1-b-compliance.html">PDF/A1-b compliance</a></li>
+<li class="manual_boxlist"><a href="/what-else-can-i-do/pdf-x-1a-compliance.html">PDF/X-1a compliance</a></li>
+<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfa.html">PDFA</a> - Create PDF/A1-b compliant document</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfx.html">PDFX</a> - Create PDF/X-1a compliant document</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfaauto.html">PDFAauto</a> - Specify whether to automatically fix issues to create PDF/A1-b compliant document</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfxauto.html">PDFXauto</a> - Specify whether to automatically fix issues to create PDF/X-1a compliant document</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-variables/iccprofile.html">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
+</ul>
+<p>&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+

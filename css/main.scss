@@ -1,0 +1,43 @@
+---
+---
+
+@import "../_sass/variables";
+
+@import "../_sass/bootstrap/mixins/gradients";
+@import "../_sass/_syntax-highlighting";
+
+#content {
+	order: 2;
+}
+
+header, footer {
+	margin: 1rem;
+}
+
+nav {
+	order: 1;
+}
+
+.filename {
+  font-size: $font-size-root * 0.8;
+  color: $code-color;
+  background-color: $code-bg;
+  font-family: $font-family-monospace;
+}
+
+pre {
+	background-color: $code-bg;
+}
+
+nav > .list-group .list-group-item:first-child {border-top-right-radius: 0;border-top-left-radius: 0;}
+nav > .list-group .list-group-item {border-width: 1px 0;}
+nav > .list-group {margin-bottom: 0;}
+nav .list-group-item {border-radius:0;}
+
+nav .list-group .list-group {margin: 0;margin-top: 10px;}
+nav .list-group-item li.list-group-item {margin: 0 -15px;border-top: 1px solid #ddd !important;border-bottom: 0;padding-left: 30px;}
+nav .list-group-item li.list-group-item:last-child {padding-bottom: 0;}
+
+nav div.list-group div.list-group{margin: 0;}
+nav div.list-group .list-group a.list-group-item {border-top: 1px solid #ddd !important;border-bottom: 0;padding-left: 30px;}
+nav .list-group-item li.list-group-item {border-top: 1px solid #DDD !important; padding-top: 0; padding-bottom: 0;}

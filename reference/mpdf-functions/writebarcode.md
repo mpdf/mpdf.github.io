@@ -1,0 +1,107 @@
+---
+layout: page
+title: WriteBarcode()
+parent_title: mPDF functions
+permalink: /reference/mpdf-functions/writebarcode.html
+---
+
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(mPDF &gt;= 2.0)</p>
+<p>mPDF – Write an EAN-13 (ISBN-13) barcode</p>
+<h2>Description</h2>
+
+<div class="alert alert-info" role="alert">void <b>writeBarcode</b> ( string <span class="parameter">$code</span> [, int <span class="parameter">$showisbn</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$size</span> [, float <span class="parameter">$border</span> [, float <span class="parameter">$padding_left</span> , float <span class="parameter">$padding_right</span> , float <span class="parameter">$padding_top</span> , float <span class="parameter">$padding_bottom</span> ]]]]]])</div>
+<p>Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specification can be found at <a href="http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf">http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf</a></p>
+
+<div class="alert alert-info" role="alert"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<h2>Parameters</h2>
+<p class="manual_param_dt"><span class="parameter">code</span></p>
+<p class="manual_param_dd">This parameter specifies the EAN-13 (ISBN-13) code. Accepts 12 or 13 digits (i.e. with or without the check digit) and may optionally contain hyphens e.g. 978-09542-2461-5&nbsp; or&nbsp; 978095422461</p>
+<p class="manual_param_dt"><span class="parameter">showisbn</span></p>
+<p class="manual_param_dd">Specif whether to show the EAN-13 (ISBN-13) code <b>above</b> the barcode. NB The numbers will always appear below the bars, but the code abive the bars is optional.</p>
+<p class="manual_param_dd"><b>Values</b>
+
+1 (or any positive value): show the EAN-13 code
+
+0 zero: Hide the EAN-13 code
+
+<span class="smallblock">BLANK</span> or omitted: 1</p>
+<p class="manual_param_dt"><span class="parameter">x</span></p>
+<p class="manual_param_dd">Sets the <span class="parameter">x</span> (horizontal) position for the barcode.
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses the current writing position in the document.</p>
+<p><span class="parameter">y</span></p>
+<p class="manual_param_dd">Sets the <span class="parameter">y</span> (vertical) position for the barcode.
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses the current writing position in the document.</p>
+<p class="manual_param_dt"><span class="parameter">size</span></p>
+<p class="manual_param_dd">This parameter specifies the size of the barcode relative to the standard. Values between 0.8 and 2.0 (80% to 200%) are accepted.
+
+<span class="smallblock">DEFAULT</span>: 1</p>
+<p class="manual_param_dt"><span class="parameter">border</span></p>
+<p class="manual_param_dd">This parameter specifies whether or not to show a border around the barcode.</p>
+<p class="manual_param_dd"><b>Values</b>
+
+1 or <span class="smallblock">TRUE</span> (or any positive value) will set a border
+
+0 or <span class="smallblock">FALSE</span> or <span class="smallblock">BLANK</span> will omit the border
+
+<span class="smallblock">DEFAULT</span>: "0" i.e. No border</p>
+<p class="manual_param_dt"><span class="parameter">padding_left</span>
+
+<span class="parameter">padding</span><span class="parameter">_right</span>
+
+<span class="parameter">padding</span><span class="parameter">_top</span>
+
+<span class="parameter">padding</span><span class="parameter">_bottom</span><span class="parameter">
+
+</span></p>
+<p class="manual_param_dd">Sets the padding around the barcode.
+
+All values should be specified as <span class="smallblock">LENGTH</span> in millimetres
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses the default values.</p>
+<p class="manual_param_dd"><span class="smallblock">DEFAULT</span> <b>Values</b>
+
+<span class="parameter">padding</span><span class="parameter">_left</span> 1
+
+<span class="parameter">padding</span><span class="parameter">_right</span> 1
+
+<span class="parameter">padding</span><span class="parameter">_top</span> 2
+
+<span class="parameter">padding</span><span class="parameter">_bottom</span> 2</p>
+<h2>Changelog</h2>
+<table class="bpmTopic"> <thead>
+<tr> <th>Version</th><th>Description</th> </tr>
+</thead> <tbody>
+<tr>
+<td>2.0</td>
+<td>The function was added.</td>
+</tr>
+</tbody> </table>
+<h2>Examples</h2>
+
+{% highlight php %}
+Example #1
+{% endhighlight %}
+
+{% highlight php %}
+<?php
+
+<?php
+
+$mpdf=new mPDF();
+
+$mpdf->writeBarcode('978-1234-567-890'); 
+
+$mpdf->Output();
+
+?>
+{% endhighlight %}
+
+<p>&nbsp;</p>
+</div>
+</div>
+

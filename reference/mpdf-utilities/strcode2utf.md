@@ -1,0 +1,72 @@
+---
+layout: page
+title: strcode2utf()
+parent_title: mPDF Utilities
+permalink: /reference/mpdf-utilities/strcode2utf.html
+---
+
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>(htmltoolkit &gt;=1.0)</p>
+<p>strcode2utf – Convert HTML numerical entities to UTF-8 encoded string</p>
+<h2>Description</h2>
+
+<div class="alert alert-info" role="alert">string <b>strcode2utf</b> ( string <span class="parameter">$text</span> [, boolean <span class="parameter">$low</span> ])</div>
+<p>Returns a UTF-8 encoded string.</p>
+
+<div class="alert alert-info" role="alert"><b>Note: </b>This function is not part of the mPDF class, and is located in the htmltoolkit.php file. It is called without the class prefix e.g. $mpd-&gt;</div>
+
+<div class="alert alert-info" role="alert"><b>Note:</b> <b>strcode2utf</b> is useful for preparing text to be used as a Watermark, or for the metadata properties of Title, Author, Creator and Keywords - which require UTF-8 encoded strings with no entities.</div>
+<h2>Parameters</h2>
+<p class="manual_param_dt"><span class="parameter">text</span></p>
+<p class="manual_param_dd">The input string, containing HTML numerical entities e.g. &amp;#8123; or &amp;#x2022;</p>
+<p class="manual_param_dt"><span class="parameter">low</span></p>
+<p class="manual_param_dd">Specifies whether to convert HTML numerical entities of ASCII characters (&lt;128).
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
+<p class="manual_param_dd"><b>Values</b>
+
+<span class="smallblock">TRUE</span>: Convert all HTML numerical entities to UTF-8 characters
+
+<span class="smallblock">FALSE</span>: Only convert characters above codepoint 127</p>
+
+<div class="alert alert-info" role="alert"><b>Note:</b> This function does not convert named character entities like &amp;amp; &amp;quot; or &amp;raquo;</div>
+<h2>Return value</h2>
+<p>Returns a UTF-8 encoded string.</p>
+<h2>Examples</h2>
+
+{% highlight php %}
+Example #1
+{% endhighlight %}
+
+{% highlight php %}
+<?php
+
+<?php
+
+$mpdf=new mPDF();
+
+$wm = strcode2utf("&amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575; &amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575;");
+
+$mpdf->SetWatermarkText($wm);
+
+$mpdf->showWatermark = true;
+
+$mpdf->WriteHTML('<p>Hallo World</p>');
+
+?>
+{% endhighlight %}
+
+<h2>See Also</h2>
+<ul>
+<li class="manual_boxlist"><a href="/reference/mpdf-functions/setwatermarktext.html">SetWatermarkText()</a> - Sets the text to use for a Watermark</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-functions/settitle.html">SetTitle()</a> - Set document Title in metadata</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-functions/setauthor.html">SetAuthor()</a> - Set document Author in metadata</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-functions/setcreator.html">SetCreator()</a> - Set document Creator in metadata</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-functions/setsubject.html">SetSubject()</a> - Set document Subject in metadata</li>
+<li class="manual_boxlist"><a href="/reference/mpdf-functions/setkeywords.html">SetKeywords()</a> - Set document Keywords in metadata</li>
+</ul>
+</div>
+</div>
+

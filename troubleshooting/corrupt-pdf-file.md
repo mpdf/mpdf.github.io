@@ -1,0 +1,35 @@
+---
+layout: page
+title: Corrupt PDF file
+parent_title: Troubleshooting
+permalink: /troubleshooting/corrupt-pdf-file.html
+---
+
+<div id="bpmbook" class="bpmbook" style="direction:ltr;">
+<div class="topic_user_field">
+<div id="U0">
+<p>If you get a message saying "Corrupt PDF file: does not start with %PDF", it may be because your script - either mPDF or an error in your PHP code - has output an error message. The browser is expecting a file in PDF format, which should start with "%PDF" and instead it gets some text like an error message.</p>
+<p>To show error message(s):</p>
+
+{% highlight php %}
+<?php
+
+<?
+
+$mpdf=new mPDF(); 
+
+$mpdf->debug = true;
+
+...
+
+$mpdf->Output();
+
+?>
+{% endhighlight %}
+
+<h3>Adding exit</h3>
+<p>A number of errors can be caused by not explicitly ending your script with <span class="parameter">exit;</span></p>
+<p>&nbsp;</p>
+</div>
+</div>
+
