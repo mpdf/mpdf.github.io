@@ -6,8 +6,6 @@ permalink: /reference/mpdf-variables/nonprintmargin.html
 modification_time: 2015-08-05T12:02:15+00:00
 ---
 
-
-
 <p>mPDF &gt;= 5.1
 
 Non-printable border at edge of paper sheet in mm

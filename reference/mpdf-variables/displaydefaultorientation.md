@@ -6,8 +6,6 @@ permalink: /reference/mpdf-variables/displaydefaultorientation.html
 modification_time: 2015-08-05T12:01:54+00:00
 ---
 
-
-
 <p>
 
 $mpdf-&gt;displayDefaultOrientation = true; (default false)

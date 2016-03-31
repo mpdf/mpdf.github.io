@@ -6,16 +6,18 @@ permalink: /reference/mpdf-functions/setheader.html
 modification_time: 2015-08-05T12:01:02+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetHeader – Sets a page header</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetHeader</b> ([ mixed <span class="parameter">$header</span> [, string <span class="parameter">$side</span> [, boolean <span class="parameter">$write</span> ]]])</p>
 <p>Set a page header.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">header</span></p>
 <p class="manual_param_dd">This parameter specifies the content of the page header. It can accept a string or array. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> or array() is passed, this will clear the page header.
 
@@ -169,7 +171,9 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="parameter">write</span> forces the appropriate header to be written. If you have just defined an <span class="smallblock">ODD</span>-sided header and the document is currently writing to an <span class="smallblock">EVEN</span>-sided page, the <span class="smallblock">EVEN</span> header will be output.</div>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -178,13 +182,17 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 <td>The <span class="parameter">side</span> and <span class="parameter">write</span> parameters were added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
+
 <p>For examples and further information please see:</p>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 1</a></li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultheaderfontsize.html" | prepend: site.baseurl }}">$defaultheaderfontsize</a></li>
@@ -193,4 +201,4 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 </ul>
 <ul> </li>
 </ul>
-<p>&nbsp;</p>
+

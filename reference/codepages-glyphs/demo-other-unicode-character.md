@@ -6,24 +6,32 @@ permalink: /reference/codepages-glyphs/demo-other-unicode-character.html
 modification_time: 2015-08-05T12:02:57+00:00
 ---
 
-
-
 <p>Most of the following is from <a href="http://www.w3.org/2001/06/utf-8-test/UTF-8-demo.html">http://www.w3.org/2001/06/utf-8-test/UTF-8-demo.html </a>:</p>
-<h2>Olde English long 's'</h2>
+
+# Olde English long 's'
+
 <p>Paradiſe Loſt</p>
-<h2>Mathematics and Sciences</h2>
+
+# Mathematics and Sciences
+
 <p>∮ E⋅da = Q, n → ∞, ∑ f(i) = ∏ g(i), ∀x∈ℝ: ⌈x⌉ = −⌊−x⌋, α ∧ ¬β = ¬(¬α ∨ β),
 
 ℕ ⊆ ℕ₀ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ, ⊥ &lt; a ≠ b ≡ c ≤ d ≪ ⊤ ⇒ (A ⇔ B),
 
 2H₂ + O₂ ⇌ 2H₂O, R = 4.7 kΩ, ⌀ 200 mm</p>
-<h2>Linguistics and dictionaries</h2>
+
+# Linguistics and dictionaries
+
 <p>ði ıntəˈnæʃənəl fəˈnɛtık əsoʊsiˈeıʃn
 
 Y [ˈʏpsilɔn], Yen [jɛn], Yoga [ˈjoːgɑ]</p>
-<h2>APL</h2>
+
+# APL
+
 <p>((V⍳V)=⍳⍴V)/V←,V ⌷←⍳→⍴∆∇⊃‾⍎⍕⌈</p>
-<h2>Typography</h2>
+
+# Typography
+
 <ul>
 <li>‘single’ and “double” quotes </li>
 <li>Curly apostrophes: “We’ve been here” </li>
@@ -33,8 +41,11 @@ Y [ˈʏpsilɔn], Yen [jɛn], Yoga [ˈjoːgɑ]</p>
 <li>ASCII safety test: 1lI|, 0OD, 8B </li>
 <li>the euro symbol: 14.95 € </li>
 </ul>
-<h2>Greek (in Polytonic)</h2>
-<h3>The Greek anthem</h3>
+
+# Greek (in Polytonic)
+
+## The Greek anthem
+
 <p>Σὲ γνωρίζω ἀπὸ τὴν κόψη
 
 τοῦ σπαθιοῦ τὴν τρομερή,
@@ -50,7 +61,9 @@ Y [ˈʏpsilɔn], Yen [jɛn], Yoga [ˈjoːgɑ]</p>
 καὶ σὰν πρῶτα ἀνδρειωμένη
 
 χαῖρε, ὦ χαῖρε, ᾿Ελευθεριά!</p>
-<h3>From a speech of Demosthenes in the 4th century BC</h3>
+
+## From a speech of Demosthenes in the 4th century BC
+
 <p>Οὐχὶ ταὐτὰ παρίσταταί μοι γιγνώσκειν, ὦ ἄνδρες ᾿Αθηναῖοι,
 
 ὅταν τ᾿ εἰς τὰ πράγματα ἀποβλέψω καὶ ὅταν πρὸς τοὺς
@@ -84,8 +97,11 @@ Y [ˈʏpsilɔn], Yen [jɛn], Yoga [ˈjoːgɑ]</p>
 τελευτῆς ὁντινοῦν ποιεῖσθαι λόγον.
 
 Δημοσθένους, Γ´ ᾿Ολυνθιακὸς</p>
-<h2>Georgian</h2>
-<h3>From a Unicode conference invitation</h3>
+
+# Georgian
+
+## From a Unicode conference invitation
+
 <p>გთხოვთ ახლავე გაიაროთ რეგისტრაცია Unicode-ის მეათე საერთაშორისო
 
 კონფერენციაზე დასასწრებად, რომელიც გაიმართება 10-12 მარტს,
@@ -99,8 +115,11 @@ Y [ˈʏpsilɔn], Yen [jɛn], Yoga [ˈjoːgɑ]</p>
 ოპერაციულ სისტემებსა, და გამოყენებით პროგრამებში, შრიფტებში,
 
 ტექსტების დამუშავებასა და მრავალენოვან კომპიუტერულ სისტემებში.</p>
-<h2>Russian</h2>
-<h3>From a Unicode conference invitation</h3>
+
+# Russian
+
+## From a Unicode conference invitation
+
 <p>Зарегистрируйтесь сейчас на Десятую Международную Конференцию по
 
 Unicode, которая состоится 10-12 марта 1997 года в Майнце в Германии.
@@ -112,8 +131,11 @@ Unicode, которая состоится 10-12 марта 1997 года в М�
 применению Unicode в различных операционных системах и программных
 
 приложениях, шрифтах, верстке и многоязычных компьютерных системах.</p>
-<h2>Thai (UCS Level 2)</h2>
-<h3>Excerpt from a poetry on The Romance of The Three Kingdoms (a Chinese classic 'San Gua')</h3>
+
+# Thai (UCS Level 2)
+
+## Excerpt from a poetry on The Romance of The Three Kingdoms (a Chinese classic 'San Gua')
+
 <p>๏ แผ่นดินฮั่นเสื่อมโทรมแสนสังเวช พระปกเกศกองบู๊กู้ขึ้นใหม่
 
 สิบสองกษัตริย์ก่อนหน้าแลถัดไป สององค์ไซร้โง่เขลาเบาปัญญา
@@ -129,8 +151,11 @@ Unicode, которая состоится 10-12 марта 1997 года в М�
 พลันลิฉุยกุยกีกลับก่อเหตุ ช่างอาเพศจริงหนาฟ้าร้องไห้
 
 ต้องรบราฆ่าฟันจนบรรลัย ฤๅหาใครค้ำชูกู้บรรลังก์ ฯ</p>
-<h2>Ethiopian</h2>
-<h3>Proverbs in the Amharic language</h3>
+
+# Ethiopian
+
+## Proverbs in the Amharic language
+
 <p>ሰማይ አይታረስ ንጉሥ አይከሰስ።
 
 ብላ ካለኝ እንደአባቴ በቆመጠኝ።
@@ -166,7 +191,9 @@ Unicode, которая состоится 10-12 марта 1997 года в М�
 ወዳጅህ ማር ቢሆን ጨርስህ አትላሰው።
 
 እግርህን በፍራሽህ ልክ ዘርጋ።</p>
-<h2>Runes</h2>
+
+# Runes
+
 <p>ᚻᛖ ᚳᚹᚫᚦ ᚦᚫᛏ ᚻᛖ ᛒᚢᛞᛖ ᚩᚾ ᚦᚫᛗ ᛚᚪᚾᛞᛖ ᚾᚩᚱᚦᚹᛖᚪᚱᛞᚢᛗ ᚹᛁᚦ ᚦᚪ ᚹᛖᛥᚫ
 
 (Old English, which transcribed into Latin reads 'He cwaeth that he
@@ -174,7 +201,9 @@ Unicode, которая состоится 10-12 марта 1997 года в М�
 bude thaem lande northweardum with tha Westsae.' and means 'He said
 
 that he lived in the northern land near the Western Sea.')</p>
-<h2>Braille</h2>
+
+# Braille
+
 <p>⡌⠁⠧⠑ ⠼⠁⠒ ⡍⠜⠇⠑⠹⠰⠎ ⡣⠕⠌
 
 ⡍⠜⠇⠑⠹ ⠺⠁⠎ ⠙⠑⠁⠙⠒ ⠞⠕ ⠃⠑⠛⠔ ⠺⠊⠹⠲ ⡹⠻⠑ ⠊⠎ ⠝⠕ ⠙⠳⠃⠞
@@ -210,7 +239,9 @@ that he lived in the northern land near the Western Sea.')</p>
 ⡍⠜⠇⠑⠹ ⠺⠁⠎ ⠁⠎ ⠙⠑⠁⠙ ⠁⠎ ⠁ ⠙⠕⠕⠗⠤⠝⠁⠊⠇⠲
 
 (The first couple of paragraphs of "A Christmas Carol" by Dickens)</p>
-<h2>Compact font selection example text</h2>
+
+# Compact font selection example text
+
 <p>ABCDEFGHIJKLMNOPQRSTUVWXYZ /0123456789
 
 abcdefghijklmnopqrstuvwxyz £©µÀÆÖÞßéöÿ
@@ -218,5 +249,7 @@ abcdefghijklmnopqrstuvwxyz £©µÀÆÖÞßéöÿ
 –—‘“”„†•…‰™œŠŸž€ ΑΒΓΔΩαβγδω АБВГДабвгд
 
 ∀∂∈ℝ∧∪≡∞ ↑↗↨↻⇣ ┐┼╔╘░►☺♀ ﬁ�⑀₂ἠḂӥẄɐː⍎אԱა</p>
-<h2>Greetings in various languages</h2>
+
+# Greetings in various languages
+
 <p>Hello world, Καλημέρα κόσμε, コンニチハ</p>

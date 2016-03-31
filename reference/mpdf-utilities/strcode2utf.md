@@ -6,18 +6,20 @@ permalink: /reference/mpdf-utilities/strcode2utf.html
 modification_time: 2015-08-05T12:02:42+00:00
 ---
 
-
-
 <p>(htmltoolkit &gt;=1.0)</p>
 <p>strcode2utf – Convert HTML numerical entities to UTF-8 encoded string</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">string <b>strcode2utf</b> ( string <span class="parameter">$text</span> [, boolean <span class="parameter">$low</span> ])</p>
 <p>Returns a UTF-8 encoded string.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function is not part of the mPDF class, and is located in the htmltoolkit.php file. It is called without the class prefix e.g. $mpd-&gt;</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <b>strcode2utf</b> is useful for preparing text to be used as a Watermark, or for the metadata properties of Title, Author, Creator and Keywords - which require UTF-8 encoded strings with no entities.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">text</span></p>
 <p class="manual_param_dd">The input string, containing HTML numerical entities e.g. &amp;#8123; or &amp;#x2022;</p>
 <p class="manual_param_dt"><span class="parameter">low</span></p>
@@ -31,9 +33,12 @@ modification_time: 2015-08-05T12:02:42+00:00
 <span class="smallblock">FALSE</span>: Only convert characters above codepoint 127</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function does not convert named character entities like &amp;amp; &amp;quot; or &amp;raquo;</div>
-<h2>Return value</h2>
+
+# Return value
+
 <p>Returns a UTF-8 encoded string.</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -57,7 +62,8 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Sets the text to use for a Watermark</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/settitle.html" | prepend: site.baseurl }}">SetTitle()</a> - Set document Title in metadata</li>

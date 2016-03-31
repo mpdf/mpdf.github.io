@@ -6,10 +6,10 @@ permalink: /fonts-languages/opentype-layout-otl.html
 modification_time: 2015-08-05T11:59:27+00:00
 ---
 
-
-
 <p class="manual_block">OpenType layout features were introduced in mPDF &gt;= 6.0</p>
-<h2>Advanced Typography</h2>
+
+# Advanced Typography
+
 <p>Many TrueType fonts contain OpenType Layout (OTL) tables. These Advanced Typographic tables contain additional information that extend the capabilities of the fonts to support high-quality international typography:</p>
 <ul>
 <li>OTL fonts support ligatures, positional forms, alternates, and other substitutions.</li>
@@ -29,7 +29,9 @@ modification_time: 2015-08-05T11:59:27+00:00
 </ul>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> There are other smart-font technologies around to deal with complex scripts, namely Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.</div>
-<h2>What can OTL Fonts do?</h2>
+
+# What can OTL Fonts do?
+
 <p>Support for OTL fonts allows the faithful display of almost all complex scripts:</p>
 <ul>
 <li>Arabic (<span>السلام عليكم</span>), Hebrew (<span>שלום</span>), Syriac (<span>ܐܣܛܪܢܓܠܐ</span>)</li>
@@ -66,7 +68,9 @@ Tibetan (<span>བཀྲ་ཤིས་བདེ་ལེགས།</span>)</li>
 <p>Different applications have different defaults (on/off) for some of the features e.g. kerning.</p>
 <p>When testing mPDF, if text does not appear as you expect, ensure that the font is installed on your computer, and view the HTML in a browser. Also try copying/pasting the text into Wordpad/Word/OpenOffice and ensure that the correct font has been applied.</p>
 <p>Note that Wordpad sometimes substitutes a different font if it does not like the one you have chosen, and does not even indicate that the substitution has occurred.</p>
-<h2>CSS control of font features</h2>
+
+# CSS control of font features
+
 <p>See <a href="http://www.w3.org/TR/css3-fonts/#font-rend-props">http://www.w3.org/TR/css3-fonts/#font-rend-props</a> for information about CSS3 and font-features.</p>
 <p>The following are supported in mPDF:</p>
 <ul>
@@ -128,7 +132,8 @@ font-feature-settings: "ss07";
 }
 {% endhighlight %}
 
-<h2>How to use OTL in mPDF</h2>
+# How to use OTL in mPDF
+
 <p>In <code>config_fonts.php</code> there are 2 variables which affect OTL features for each font family e.g.:</p>
 
 {% highlight php %}
@@ -149,7 +154,8 @@ font-feature-settings: "ss07";
 ),
 {% endhighlight %}
 
-<h3>useOTL</h3>
+## useOTL
+
 <p>useOTL should be set to an integer between 0 and 255. Each bit will enable OTL features for a different group of scripts:</p>
 <table class="table"> <tbody>
 <tr>
@@ -209,17 +215,25 @@ font-feature-settings: "ss07";
 </tbody> </table>
 <p>Setting <code>useOTL</code> to 0 (or omitting it) will disable all OTL features. Setting <code>useOTL</code> to 255 or 0xFF will enable OTL for all scripts. Setting <code>useOTL</code> to 0x82 will enable OTL features for Cyrillic and complex scripts.</p>
 <p>In a font like Free Serif, it may be useful to enable OTL features for complex scripts, but disable OTL for Latin scripts (to save processing time). However, see above - this may disable kerning in Latin scripts in certain circumstances.</p>
-<h3>useKashida</h3>
+
+## useKashida
+
 <p>useKashida should be set for arabic fonts if you wish to enable text justification using kashida. The value should be an integer between 0 and 100 and represents the percentage of additional space required to justify the text on a line as a ratio of kashida/inter-word spacing.</p>
-<h2>Choosing fonts to add to mPDF 6</h2>
+
+# Choosing fonts to add to mPDF 6
+
 <p>Fonts with OTL need to have GDEF, GSUB and GPOS tables in the font file. Although TrueType font files are binary files, the table names and script/feature tags are written as ASCII characters; open the .ttf or .otf file in a text editor such as Windows Notepad, and you will see GDEF, GSUB and GPOS in the first few lines if they are present. You can also search the file to see if the script tags are present for your desired scripts cf. <a href="http://www.microsoft.com/typography/otspec/scripttags.htm">http://www.microsoft.com/typography/otspec/scripttags.htm</a>.</p>
 <p>Note: The OTL specification for Indic fonts was updated in 2005 to version 2. The v2 script tag for Bengali is "bng2" whereas prior to this it was "beng". Many open-source font files are still written for the old specification. This is supported by mPDF, although v2 fonts give better results.</p>
 <p>Note: mPDF does not support Graphite or AAT font features.</p>
-<h3>Configuring new fonts for mPDF 6</h3>
+
+## Configuring new fonts for mPDF 6
+
 <p>To add a font, first copy the font file to the <span class="filename">/ttfonts/</span> folder.</p>
 <p>Then edit <span class="filename">config_fonts.php</span> to add. See the manual for details if you are not already familiar with this.</p>
 <p>If you wish to use this font with <code>autoLangToFont</code>, you also need to edit <span class="filename">config_lang2fonts.php</span></p>
-<h3>Setting OTL use at runtime</h3>
+
+## Setting OTL use at runtime
+
 <p>mPDF caches some font information in the <span class="filename">/ttfontdata/</span> folder to improve performance. This is regenerated if you change the value of <code>useOTL</code> for a font.</p>
 <p>There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g. for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in <span class="filename">config_fonts.php</span>:</p>
 

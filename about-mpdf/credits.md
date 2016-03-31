@@ -6,8 +6,6 @@ permalink: /about-mpdf/credits.html
 modification_time: 2015-08-05T11:59:21+00:00
 ---
 
-
-
 <p>All credit is due to the following:</p>
 <ul>
 <li>Olivier Plathey for the original FPDF class [<a href="http://www.fpdf.org/">http://www.fpdf.org</a>]</li>
@@ -35,4 +33,4 @@ modification_time: 2015-08-05T11:59:21+00:00
 <li>Seb for the _SetTextRendering() and SetTextOutline() functions</li>
 <li>Klemen VODOPIVEC for FPDF_Protection</li>
 </ul>
-<p>&nbsp;</p>
+

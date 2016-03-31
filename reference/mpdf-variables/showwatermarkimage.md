@@ -6,13 +6,15 @@ permalink: /reference/mpdf-variables/showwatermarkimage.html
 modification_time: 2015-08-05T12:02:27+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.2)</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">boolean <b>showWatermarkImage</b></p>
 <p>Specifies whether or not to show/print the watermark image on each page. The file for the watermark must be defined using <a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a>. The watermark is added to the document at the end of each page.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">showWatermarkImage</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span></p>
 <p class="manual_param_dd">If <span class="parameter">showWatermarkImage</span> is <span class="smallblock">TRUE</span> or 1 the watermark image will be added to each page of the document.
 
@@ -24,7 +26,9 @@ The value can be changed during the document to turn the watermark on and off on
 <span class="smallblock"><i>FALSE</i></span>: <span class="smallblock">DEFAULT</span> Do not show/print the watermark image
 
 Values of 1 or 0 can also be used</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th> <th>Description</th> </tr>
 </thead> <tbody>
@@ -33,7 +37,8 @@ Values of 1 or 0 can also be used</p>
 <td>The variable was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -65,7 +70,8 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Set the text to use as a Watermark</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkImage()</a> - Set an image to use as a Watermark</li>

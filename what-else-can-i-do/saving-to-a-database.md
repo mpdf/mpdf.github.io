@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/saving-to-a-database.html
 modification_time: 2015-08-05T12:00:21+00:00
 ---
 
-
-
 <p>If you want to save the created file to a database (not necessarily recommended), one user has suggested the following:</p>
 
 {% highlight php %}
@@ -48,4 +46,3 @@ echo $pdf;
 exit;
 {% endhighlight %}
 
-<p>&nbsp;</p>

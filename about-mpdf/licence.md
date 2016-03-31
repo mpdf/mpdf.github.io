@@ -6,8 +6,6 @@ permalink: /about-mpdf/licence.html
 modification_time: 2015-08-05T11:59:22+00:00
 ---
 
-
-
 <p>License: GPL</p>
 <p>A PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support</p>
 <p>Copyright (C) 2010 Ian Back</p>

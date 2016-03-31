@@ -6,26 +6,30 @@ permalink: /reference/mpdf-variables/autolangtofont.html
 modification_time: 2015-08-05T12:01:39+00:00
 ---
 
-
-
 <div>
 <div>
 <p>(mPDF &gt;= 6.0)</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">boolean <b>autoLangToFont</b></p>
 <p>When <span class="smallblock">TRUE</span>, selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code></p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">autoLangToFont</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span></p>
 <p class="manual_param_dd"><b>Values</b>
 
 <i><span class="smallblock">TRUE</span></i>: <span class="smallblock">DEFAULT</span> selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code>
 
 <span class="smallblock">FALSE</span>: Font selection unaffected.</p>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">autoScriptToLang</a> - marks up HTML text using the lang attribute, based on the Unicode script block</li>
 <li class="manual_boxlist"><a href="{{ "/fonts-languages/automatic-font-selection.html" | prepend: site.baseurl }}">Automatic Font selection</a> </li>
 </ul>
-<p>&nbsp;</p>
+
 </div>
 </div>

@@ -6,11 +6,11 @@ permalink: /reference/mpdf-functions/annotation.html
 modification_time: 2015-08-05T12:00:41+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.2)</p>
 <p>Annotation – Add an Annotation to the document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>Annotation</b> ( string <span class="parameter">$text</span> [, float <span class="parameter">$x</span> , float <span class="parameter">$y</span> [, string <span class="parameter">$icon</span> [, string <span class="parameter">$author</span> [, string <span class="parameter">$subject</span> [, float <span class="parameter">$opacity</span> [, array <span class="parameter">$colarray</span> [, mixed <span class="parameter">$popup</span> ]]]]]]])</p>
 <p>Adds an Annotation to the document. An annotation is like a Tooltip on a webpage. The Annotation marker, like those of "Sticky Notes" in Adobe Reader. When the reader passes the cursor over, it will display a popup text box.</p>
 <p>The exact position on the page can be specified using <span class="parameter">x</span> and <span class="parameter">y</span>, or left to position automatically. If <span class="parameter">x</span> and <span class="parameter">y</span> are not specified, the Annotation will be inserted at the current position of writing in the document. The <span class="parameter">x</span> position (horizontal) can be overridden by the variable <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a>, which can be used to force the Annotation marker to display in the right margin.</p>
@@ -19,7 +19,9 @@ modification_time: 2015-08-05T12:00:41+00:00
 <p class="manual_block"><b>** SetUserRights was removed in mPDF 2.4 **</b>
 
 Annotations cannot be moved or deleted by the reader</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">text</span></p>
 <p class="manual_param_dd">This parameter specifies the text to appear in the popup text box</p>
 <p class="manual_param_dt"><span class="parameter">x</span></p>
@@ -80,8 +82,9 @@ Any other value forces the popup box to appear when the document is opened.</p>
 An array of 4 numbers will set the X and Y position and also the width and height in mm e.g. <span class="parameter">popup=</span>array(30, 30, 80, 50) will show a popup box with the top left corner 30mm from the top of the page and 30mm from the left of the page, a width of 80mm and a height of 50mm.
 
 Note that the PDF Reader (e.g. Adobe Reader) may reposition the popup box as it pleases.</p>
-<p>&nbsp;</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -98,7 +101,8 @@ Note that the PDF Reader (e.g. Adobe Reader) may reposition the popup box as it 
 <td>Parameter <span class="parameter">popup</span> was added</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -148,7 +152,8 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 $mpdf->Output('filename.pdf');
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="http://uk3.php.net/manual/en/function.explode.php"> </a><a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a> - Specify the x (horizontal) placement of Annotation markers</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a> - Specifiy the default opacity used for Annotation markers</li>

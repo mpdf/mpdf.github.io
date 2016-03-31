@@ -6,8 +6,6 @@ permalink: /reference/codepages-glyphs/iso-8859-win-comparison-chart.html
 modification_time: 2015-08-05T12:02:48+00:00
 ---
 
-
-
 <p>ISO-8859 codepages</p>
 <table class="table"><tbody>
 <tr><th>Dec</th><th>Hex</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>13</th><th>14</th><th>15</th><th>16</th></tr>
@@ -1614,7 +1612,9 @@ modification_time: 2015-08-05T12:02:48+00:00
 <td>ÿ</td>
 </tr>
 </tbody></table>
-<h2>Additional characters in win-1252</h2>
+
+# Additional characters in win-1252
+
 <table class="table"><tbody>
 <tr><th>8−
 
@@ -1767,7 +1767,9 @@ modification_time: 2015-08-05T12:02:48+00:00
 <i><b>159</b></i></td>
 </tr>
 </tbody></table>
-<h2>Win-1251</h2>
+
+# Win-1251
+
 <table class="table"><tbody>
 <tr><th>8−
 
@@ -2454,7 +2456,9 @@ F−
 <i><b>255</b></i></td>
 </tr>
 </tbody></table>
-<h2>See Also</h2>
+
+# See Also
+
 <p>UNICODE Full list characters</p>
 <p><a href="http://www.unicode.org/Public/UNIDATA/UnicodeData.txt">http://www.unicode.org/Public/UNIDATA/UnicodeData.txt</a></p>
 <p>Mappings - sources</p>

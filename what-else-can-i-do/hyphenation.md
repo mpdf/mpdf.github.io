@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/hyphenation.html
 modification_time: 2015-08-05T12:00:01+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.5)</p>
 <p class="manual_block">Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)</p>
 <p>The CSS property <span class="parameter">hyphens</span> is supported on block elements (e.g. &lt;div&gt;), inline elements (e.g. &lt;span&gt;) and &lt;td/th&gt;.
@@ -29,9 +27,13 @@ hyphens: manual
 <p class="manual_param_dd">Words can be broken at appropriate hyphenation points, as determined by characters inside the word, resources.
 
 SHY inside the word take priority over hyphenation points determined by other resources.</p>
-<h3>Soft hyphens</h3>
+
+## Soft hyphens
+
 <p>The soft-hyphen character (U+00AD or &amp;shy;) and the &lt;wbr&gt; tag (from mPDF 5.7) are supported in <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.</p>
-<h3>Automatic hyphenation</h3>
+
+## Automatic hyphenation
+
 <p>Automatic hyphenation is set using CSS:</p>
 
 {% highlight php %}
@@ -141,9 +143,12 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h3>Hyphenation Dictionary</h3>
+## Hyphenation Dictionary
+
 <p>If automatic hyphenation does not recognise a particular word, you can add words to a dictionary file with your own hyphenation. Edit the file "pathtoyourmpdf/patterns/dictionary.txt" and add a new line for each word, marking the possible hyphenations with a forward slash. You can mark more than one place for each word e.g. "dis/es/tab/lish/men/tar/i/an/ism"</p>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/shylang.html" | prepend: site.baseurl }}">SHYlang</a> - Specify the language to use for automatic hyphenation</li>
 </ul>

@@ -6,8 +6,6 @@ permalink: /reference/codepages-glyphs/iso-639-1-language-codes.html
 modification_time: 2015-08-05T12:03:02+00:00
 ---
 
-
-
 <p>The language/country codes recognised by mPDF are configurable in the <span class="filename">config_cp.php</span> file.</p>
 <table class="table"> <thead>
 <tr class="oddrow">
@@ -1988,4 +1986,4 @@ modification_time: 2015-08-05T12:03:02+00:00
 <td>&nbsp;</td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
+

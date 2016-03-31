@@ -6,9 +6,8 @@ permalink: /reference/mpdf-variables/overview.html
 modification_time: 2015-08-05T12:01:32+00:00
 ---
 
+# mPDF Variables by Category
 
-
-<h2>mPDF Variables by Category</h2>
 <p>Most of the following variables are set as defaults in the configuration file config.php&nbsp; When set there, they are written as e.g.:</p>
 
 {% highlight php %}

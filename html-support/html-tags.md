@@ -6,11 +6,10 @@ permalink: /html-support/html-tags.html
 modification_time: 2015-08-05T11:59:41+00:00
 ---
 
+# HTML tags supported
 
-
-<h2>HTML tags supported</h2>
 <p>The following HTML tags/elements are recognised and supported (to some extent) by mPDF. All HTML elements are hard-coded in mPDF to be treated as block or in-line elements (e.g. equivalent to CSS display:block or display:in-line). This cannot be changed using CSS.</p>
-<p>&nbsp;</p>
+
 <table class="table"> <tbody>
 <tr> <th>Tag</th><th>mPDF</th><th>Display type</th><th>CSS</th> <th>Description</th> </tr>
 <tr>
@@ -866,7 +865,7 @@ modification_time: 2015-08-05T11:59:41+00:00
 </td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
+
 <ul> </li>
 </ul>
 <p>XHTML compatible forms are recognised e.g. &lt;br /&gt;</p>

@@ -6,8 +6,6 @@ permalink: /fonts-languages/lang-v5-x.html
 modification_time: 2015-08-05T11:59:32+00:00
 ---
 
-
-
 <p>When creating a multilingual document containing Arabic, Indic, <acronym title="Chinese-Japanese-Korean languages">CJK</acronym>, Vietnamese or Thai languages, the text in these languages needs to be identified in order to correctly display them using appropriate fonts.</p>
 <p>Marking up your HTML text using the lang attribute is one way to do this. The attribute can be used on any block or in-line tag e.g. &lt;div lang="zh-CN"&gt;....&lt;/div&gt; or &lt;span lang="ru"&gt;...&lt;/span&gt;. It is also recognised in &lt;body&gt; or &lt;html&gt; tags.</p>
 <p class="manual_block"><b>Important:</b> Support for the attribute <span class="parameter">lang</span> is only active when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span>).</p>
@@ -32,7 +30,9 @@ modification_time: 2015-08-05T11:59:32+00:00
 </ul>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Automatic language detection using <span class="function">SetAutoFont()</span> will detect language use in the text passed to mPDF, and add <span class="filename">&lt;span lang="xx" class="lang_xx"&gt;..&lt;/span&gt;</span> tags to mark up. Using automatic language detection may add to the processing time when creating a large document.</div>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>

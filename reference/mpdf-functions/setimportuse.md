@@ -6,16 +6,18 @@ permalink: /reference/mpdf-functions/setimportuse.html
 modification_time: 2015-08-05T12:01:06+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 4.3)</p>
 <p>SetImportUse – Enable the use of imported PDF files or templates</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetImportUse</b> ( )</p>
 <p>Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several functions allowing you to import PDF files into the document you are writing, and using templates.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use SetImportUse() to enable them.</div>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -26,7 +28,8 @@ modification_time: 2015-08-05T12:01:06+00:00
 </td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -50,7 +53,8 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document</li>
@@ -60,4 +64,4 @@ $mpdf->Output();
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li>
 </ul>
-<p>&nbsp;</p>
+

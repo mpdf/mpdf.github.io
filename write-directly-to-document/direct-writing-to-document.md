@@ -6,13 +6,14 @@ permalink: /write-directly-to-document/direct-writing-to-document.html
 modification_time: 2015-08-05T12:00:29+00:00
 ---
 
+# Other Methods
 
-
-<h2>Other Methods</h2>
 <p>mPDF is optimised to accept HTML code and CSS styles. Apart from WriteHTML() there are other methods that can be used to write to the PDF document, but these do not always have full functionality. These are methods available in the original FPDF and successors, and if these are all you are using you may find that you do not need to use mPDF with its extra functions that slow the program down - see FPDF and UFPDF for further details.</p>
 <p>The methods Cell() and Text() from FPDF are still present, but should not be used directly as they will not cope with UTF-8 encoded text. Use the WriteCell() and WriteText() methods instead.</p>
 <p>All the methods described below handle UTF-8 encoded text, and all but AutosizeText() and watermark() will reverse RTL (right-to-left) text when appropriate.</p>
-<h3>Direct writing methods and OTL (updated: mPDF &gt;= 6.0)</h3>
+
+## Direct writing methods and OTL (updated: mPDF &gt;= 6.0)
+
 <ul>
 <li>WriteText() WriteCell() Watermark() AutoSizeText() and ShadedBox() DO support complex scripts and right-to-left text (RTL).</li>
 <li>Write() does NOT support complex scripts or RTL (NB this is a change - Write() used to support RTL).</li>
@@ -188,7 +189,9 @@ Padding between text and box border, in millimeters
 
 Default = 2</li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><span class="manual_boxlist"><a href="{{ "/reference/mpdf-utilities/preparepretext.html" | prepend: site.baseurl }}">preparePreText()</a> - </span>Prepares text to be output ignoring the HTML markup</li>
 </ul>

@@ -6,16 +6,18 @@ permalink: /reference/mpdf-functions/sethtmlheaderbyname.html
 modification_time: 2015-08-05T12:01:05+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.0)</p>
 <p>SetHTMLHeaderByName – Sets an HTML page header by a given name</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetHTMLHeaderByName</b> ( string <span class="parameter">$name</span> [, string <span class="parameter">$side</span> [, boolean <span class="parameter">$write</span> ]])</p>
 <p>Sets an HTML page header that has previously been defined by name.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">name</span></p>
 <p class="manual_param_dd">This parameter specifies the name of a previously defined HTML page header. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page header exists.</p>
 <p class="manual_param_dt"><span class="parameter">side</span></p>
@@ -33,7 +35,9 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 <p class="manual_param_dd">If <span class="smallblock">TRUE</span> it forces the Header to be written immediately to the current page. Use if the header is being set after the new page has been added.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -42,17 +46,21 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 <td>The function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
+
 <p>For examples and further information please see:</p>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 4</a></li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a></li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooterbyname.html" | prepend: site.baseurl }}">SetHTMLFooterByName()</a></li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/sethtmlpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt;</li>
 </ul>
-<p>&nbsp;</p>
+

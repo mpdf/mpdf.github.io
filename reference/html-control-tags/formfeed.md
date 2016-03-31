@@ -6,11 +6,11 @@ permalink: /reference/html-control-tags/formfeed.html
 modification_time: 2015-08-05T12:01:22+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3)</p>
 <p>formfeed — Add a new page keeping current HTML tags/CSS styles active</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>formfeed</b> [&nbsp;<span class="parameter">orientation</span> ] [&nbsp;<span class="parameter">type</span> ] [&nbsp;<span class="parameter">resetpagenum</span> ] [&nbsp;<span class="parameter">pagenumstyle</span> ] [&nbsp;<span class="parameter">suppress</span> ] 
 
 [ <span class="parameter">margin-left</span> ] [ <span class="parameter">margin-right</span> ] [ <span class="parameter">margin-top</span> ] [ <span class="parameter">margin-bottom</span> ] [ <span class="parameter">margin-header</span> ] [ <span class="parameter">margin-footer</span> ]
@@ -72,7 +72,9 @@ modification_time: 2015-08-05T12:01:22+00:00
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
-<h2>Attributes</h2>
+
+# Attributes
+
 <p class="manual_param_dt"><span class="parameter">orientation</span> = L|P|landscape|portrait</p>
 <p class="manual_param_dd">This attribute specifies the orientation of the new page.
 
@@ -175,15 +177,18 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 -1 <i>or</i> off: Start the selected header from the new page onwards.</p>
 <p><span class="parameter">pageselector</span></p>
-<h2></h2>
+
+# 
+
 <p class="manual_param_dd">Select a named CSS @page.
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p>
 <p class="manual_param_dd">See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information</p>
-<h2>
 
-</h2>
-<h2>Changelog</h2>
+# 
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -202,7 +207,8 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 <td>Parameter <span class="parameter">page-selector</span> was added</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -220,10 +226,12 @@ This text will start on a new page, and will also have a blue border etc...</div
 </html>
 {% endhighlight %}
 
-<h2>Notes</h2>
+# Notes
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for further examples using the attributes. There is no PHP equivalent of &lt;formfeed&gt; but you can use <a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}"><span class="parameter">$restoreBlockPagebreaks</span></a></div>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add one or more (conditional) pages to the document</li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Forces a new page</li>

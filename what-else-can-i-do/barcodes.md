@@ -6,13 +6,11 @@ permalink: /what-else-can-i-do/barcodes.html
 modification_time: 2015-08-05T12:00:12+00:00
 ---
 
-
-
 <p>(mPDF &gt;=4.0)</p>
 <p>A variety of barcodes can be produced with mPDF. Please see the example file for more information.</p>
-<h3>Specifications in mPDF
 
-</h3>
+## Specifications in mPDF
+
 <table class="table"> <tbody>
 <tr> <th rowspan="2" class="pmhBottomCenter" style="font-weight: bold;">Barcode type</th>
 <td rowspan="2" class="pmhBottomCenter" style="font-weight: bold;"><span class="parameter">code</span></td>

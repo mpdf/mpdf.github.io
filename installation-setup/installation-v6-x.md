@@ -6,9 +6,8 @@ permalink: /installation-setup/installation-v6-x.html
 modification_time: 2015-08-05T11:59:23+00:00
 ---
 
+# First-time users
 
-
-<h2>First-time users</h2>
 <p>Installation:</p>
 <ul>
 <li>Download the .zip file and unzip it</li>
@@ -26,9 +25,9 @@ modification_time: 2015-08-05T11:59:23+00:00
 <p>If you wish to install additional fonts please see the notes in <a href="{{ "/fonts-languages/fonts-in-mpdf-5-x.html" | prepend: site.baseurl }}">Fonts &amp; Languages</a> for further instructions.</p>
 <p>If you wish to define a different folder for temporary files rather than <span class="filename">/tmp/</span> see the note on '<a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">Folder for temporary files</a>'.</p>
 <p>If you have problems, please read the section on <a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">troubleshooting</a> in the manual.</p>
-<h2>
 
-Upgrading from version mPDF 5.x</h2>
+# Upgrading from version mPDF 5.x
+
 <p>mPDF 6 has changed significantly from earlier version and it is recommended that a fresh install is used. You may wish to copy your previous config_* files and use them to update the new config files.</p>
 <p><b>config_fonts.php</b> - values of "indic" and "unAglyphs" from previous versions are now redundant.</p>
 <p><b>config_lang2fonts.php</b> - this is similar to the previous config_cp.php file; note however that $unifont (NOT $unifonts) must be only one font (not a comma-separated list as before).</p>
@@ -58,16 +57,22 @@ Upgrading from version mPDF 5.x</h2>
 <li>startPageNums</li>
 <li>CreateReference and CreateIndex - cf. Index section above</li>
 </ul>
-<h3>Default style sheet</h3>
+
+## Default style sheet
+
 <p>A new mpdf.css file includes defaults for LISTS top/bottom margins, and also examples for Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing.</p>
-<h3>Direct writing methods and OTL</h3>
+
+## Direct writing methods and OTL
+
 <p>WriteText() WriteCell() Watermark() AutoSizeText() and ShadedBox() DO support complex scripts and right-to-left text (RTL).</p>
 <p>Write() does NOT support complex scripts or RTL (NB this is a change - Write() used to support RTL).</p>
 <p>CircularText() does NOT support complex scripts or RTL.</p>
 <p>MultiCell() DOES support complex scripts and RTL, but complex-script line-breaking MAY NOT be accurate.</p>
 <p>MultiCell() does not support kerning and justification. NB This includes &lt;textarea&gt; in forms which uses MultiCell() internally.</p>
 <p>&lt;select&gt; form objects also do NOT support kerning.</p>
-<h3>Page numbering</h3>
+
+## Page numbering
+
 <p>Page numbering i.e. by including {PAGENO} or {‌nbpg} in a header/footer, can use any of the number types as used for list-style e.g.</p>
 <p>&lt;pagebreak pagenumstyle="arabic-indic"&gt;</p>
 <p>Short codes are recognised for the 5 most common:</p>
@@ -84,7 +89,9 @@ Upgrading from version mPDF 5.x</h2>
 <p>$this-&gt;defaultPageNumStyle = "arabic-indic"; // in config.php
 
 $mpdf-&gt;defaultPageNumStyle = "arabic-indic"; // at runtime</p>
-<h3>Other Minor changes in mPDF 6</h3>
+
+## Other Minor changes in mPDF 6
+
 <p>'hebrew', 'khmer', 'cambodian', 'lao', and 'cjk-decimal' are recognised as values for "list-style-type" in numbered lists.</p>
 <p>CSS "text-outline" is now supported on TD/TH tags</p>
 <p>Text wrapping in tables has been improved when using CJK scripts (chinese-japanese-korean).</p>

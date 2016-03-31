@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/setdisplaypreferences.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 3.0)</p>
 <p>SetDisplayPreferences – Defines the way the document shall be presented on the screen</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetDisplayPreferences</b> ( string <span class="parameter">$prefs</span> )</p>
 <p>Specify the way the document shall be presented on the screen when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">prefs</span></p>
 <p class="manual_param_dd">This parameter takes a string containing any one or more of the possible values separated by any characters (e.g. comma, forward slash or space). All the options start as <span class="smallblock">FALSE</span>, and can only be set <span class="smallblock">TRUE</span> by this command. Each setting is added to those previously set.</p>
 <p class="manual_param_dd"><b>Values</b> (case-sensitive)
@@ -33,7 +35,8 @@ CenterWindow: whether to position the document’s window in the center of the s
 FitWindow: whether to resize the document’s window to fit the size of the first displayed page
 
 NoPrintScaling: overrides the user's default setting to scale the printing size (mPDF &gt;= 5.1)</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -55,10 +58,9 @@ $mpdf->Output('filename.pdf');
 ?>
 {% endhighlight %}
 
-<h2>See Also
+# See Also
 
-</h2>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setdisplaymode.html" | prepend: site.baseurl }}">SetDisplayMode()</a> - Specify the initial Display Mode when the PDF file is opened in Adobe Reader</li>
 </ul>
-<p>&nbsp;</p>
+

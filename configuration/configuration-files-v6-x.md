@@ -6,8 +6,6 @@ permalink: /configuration/configuration-files-v6-x.html
 modification_time: 2015-08-05T11:59:39+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 6.0)</p>
 <p>Four configuration files are included in the root folder of mPDF:</p>
 <table class="table"> <thead>
@@ -42,4 +40,4 @@ modification_time: 2015-08-05T11:59:39+00:00
 </td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
+

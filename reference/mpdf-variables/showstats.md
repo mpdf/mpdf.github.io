@@ -6,14 +6,16 @@ permalink: /reference/mpdf-variables/showstats.html
 modification_time: 2015-08-05T12:02:26+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 4.0)</p>
 <p>showStats – Display performance data for the generated PDF file</p>
-<h2>Value</h2>
+
+# Value
+
 <p class="manual_block">void <b>showStats</b></p>
 <p>Specify whether to show performance data. Useful if you are developing with mPDF, and want to test different configurations.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">showStats</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
 <p class="manual_param_dd"><b>Values</b>
 
@@ -22,7 +24,9 @@ modification_time: 2015-08-05T12:02:26+00:00
 <span class="smallblock">FALSE</span>: disabled
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -31,7 +35,8 @@ modification_time: 2015-08-05T12:02:26+00:00
 <td>Variable was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -72,7 +77,8 @@ PDF file size 37kB
 Number of fonts 6
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/debug.html" | prepend: site.baseurl }}">debug</a> - specify whether to show errors</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images</li>

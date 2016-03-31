@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/watermarks.html
 modification_time: 2015-08-05T12:00:16+00:00
 ---
 
-
-
 <p>You can add a watermark to the page(s) either text (e.g. DRAFT) and/or a background image.</p>
 <p>Set the following before writing the HTML code. NB The watermark is added when writing the footer at the end of a page, so it can be set anytime before ending the page/document.</p>
 <p>$mpdf-&gt;SetWatermarkText('DRAFT'); // Will cope with UTF-8 encoded text</p>
@@ -28,7 +26,9 @@ $mpdf->watermarkImageAlpha = 0.5;
 <p>Set the watermark(s) to show using: <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkText</a> or <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a></p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;=3.0 you can alternatively use the CSS style for background-image on the &lt;body&gt; tag to create a sort of watermark, although this does not support opacity. The difference is that text, tables etc are written over the top of a background-image; a watermark is actually printed over the top of everything else, but is semi-transparent.</div>
-<h2>See</h2>
+
+# See
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Set the text to use as a Watermark</li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/watermarktext.html" | prepend: site.baseurl }}">watermarktext</a>&gt; - HTML equivalent to SetWatermarkText()</li>
@@ -43,4 +43,4 @@ $mpdf->watermarkImageAlpha = 0.5;
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermark-font.html" | prepend: site.baseurl }}">watermark_font</a> - Specifies the font to use for Watermark text</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermarkimgbehind.html" | prepend: site.baseurl }}">watermarkImgBehind</a> - Specify whether to show the watermark image behind the page contents</li>
 </ul>
-<p>&nbsp;</p>
+

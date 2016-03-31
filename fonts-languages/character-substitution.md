@@ -6,18 +6,16 @@ permalink: /fonts-languages/character-substitution.html
 modification_time: 2015-08-05T11:59:38+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 5.0)</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 5.0 there were 2 configurable variables, <code>$this-&gt;useSubstitutions</code> and <code>$this-&gt;useSubstitutionsMB</code>. controlling behaviour of core fonts and unicode fonts respectively. From mPDF 5.0, character substitution using core fonts is always ON and cannot be disabled by configurable variables. <code>$this-&gt;useSubstitutionsMB</code> is depracated but it is recognised as an alias for <code>$this-&gt;useSubstitutions</code>. <code>$this-&gt;useSubstitutions</code> controls behaviour in Unicode font documents.</div>
-<h3>Core fonts
 
-</h3>
+## Core fonts
+
 <p>In documents using core fonts only, only characters included in the <a href="{{ "/reference/codepages-glyphs/win-1252.html" | prepend: site.baseurl }}">win-1252</a> codepage are available in the Arial/Helvetica, Times or Courier fonts. If the document includes characters which are included in the other core Adobe fonts - <a href="{{ "/reference/codepages-glyphs/symbols-adobe.html" | prepend: site.baseurl }}">Symbols</a>, or&nbsp; <a href="{{ "/reference/codepages-glyphs/zapfdingbats-adobe.html" | prepend: site.baseurl }}">Dingbats</a> - these will be substituted. Because they are displayed using a different font they may appear 'odd'.</p>
-<h3>Unicode fonts
 
-</h3>
+## Unicode fonts
+
 <p>In Unicode Truetype files, the limitation is whether the font file contains a "glyph" for each character in the document. Character substitution (i.e. substituting a different font solely to display that character) can be enabled by setting the configuration variable in <span class="filename">config.php</span>:</p>
 
 {% highlight php %}

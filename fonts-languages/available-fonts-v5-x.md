@@ -6,13 +6,13 @@ permalink: /fonts-languages/available-fonts-v5-x.html
 modification_time: 2015-08-05T11:59:29+00:00
 ---
 
-
-
 <p>The following fonts are distributed with mPDF 5.x</p>
 <table class="table"> <tbody>
 <tr>
 <td colspan="2">
-<h3>General</h3>
+
+## General
+
 </td>
 </tr>
 <tr>
@@ -29,7 +29,9 @@ modification_time: 2015-08-05T11:59:29+00:00
 </tr>
 <tr>
 <td colspan="2">
-<h3>Thai</h3>
+
+## Thai
+
 </td>
 </tr>
 <tr>
@@ -44,7 +46,9 @@ modification_time: 2015-08-05T11:59:29+00:00
 </tr>
 <tr>
 <td colspan="2">
-<h3>Indic languages</h3>
+
+## Indic languages
+
 </td>
 </tr>
 <tr>
@@ -88,7 +92,9 @@ modification_time: 2015-08-05T11:59:29+00:00
 <table class="table"> <tbody>
 <tr>
 <td colspan="2">
-<h3>Adobe Asian font-pack</h3>
+
+## Adobe Asian font-pack
+
 </td>
 </tr>
 <tr>
@@ -111,7 +117,9 @@ modification_time: 2015-08-05T11:59:29+00:00
 </tr>
 <tr>
 <td colspan="2">
-<h3>Generic font-family</h3>
+
+## Generic font-family
+
 </td>
 </tr>
 <tr>

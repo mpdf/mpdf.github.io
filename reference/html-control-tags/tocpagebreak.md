@@ -6,11 +6,11 @@ permalink: /reference/html-control-tags/tocpagebreak.html
 modification_time: 2015-08-05T12:01:30+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.0)</p>
 <p>tocpagebreak — Insert a table of contents</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>tocpagebreak</b> [ <span class="parameter">paging</span> ] [ <span class="parameter">links</span> ] [ <span class="parameter">toc-orientation</span> ] [ <span class="parameter">toc-margin-left</span> ] [ <span class="parameter">toc-margin-right</span> ] [ <span class="parameter">toc-margin-top</span> ] [ <span class="parameter">toc-margin-bottom</span> ] [ <span class="parameter">toc-margin-header</span> ] [ <span class="parameter">toc-margin-footer</span> ] [ <span class="parameter">toc-odd-header-name</span> ] [ <span class="parameter">toc-even-header-name</span> ] [ <span class="parameter">toc-odd-footer-name</span> ] [ <span class="parameter">toc-even-footer-name</span> ] [ <span class="parameter">toc-odd-header-value</span> ] [ <span class="parameter">toc-even-header-value</span> ] [ <span class="parameter">toc-odd-footer-value</span> ] [ <span class="parameter">toc-even-footer-value</span> ] [ <span class="parameter">toc-preHTML</span> ] [ <span class="parameter">toc-postHTML</span> ] [ <span class="parameter">toc-bookmarkText</span> ] [ <span class="parameter">name</span> ] [ <span class="parameter">toc-page-selector</span> ] [ <span class="parameter">toc-sheet-size</span> ] [ <span class="parameter">toc-resetpagenum</span> ] [ <span class="parameter">toc-pagenumstyle</span> ] [ <span class="parameter">toc-suppress</span> ]
 
 [&nbsp;<span class="parameter">orientation</span> ] [&nbsp;<span class="parameter">resetpagenum</span> ] [&nbsp;<span class="parameter">pagenumstyle</span> ] [&nbsp;<span class="parameter">suppress</span> ] 
@@ -31,7 +31,9 @@ modification_time: 2015-08-05T12:01:30+00:00
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF 2.3 you can include more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">name</span>.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If <b>&lt;tocpagebreak&gt;</b> occurs at the start of a blank (<span class="smallblock">ODD</span>) page, no new page(s) will be added. This was added in mPDF 2.3 to allow a <acronym title="Table of Contents">ToC</acronym> to be placed on the first page, or to allow a <acronym title="Table of Contents">ToC</acronym> to follow another <acronym title="Table of Contents">ToC</acronym>. In this case, any properties for the continuing document are ignored. If you define several <acronym title="Table of Contents">ToC</acronym>s following immediately on from one another, set the properties in the first <acronym title="Table of Contents">ToC</acronym> you define (including the <span class="parameter">resetpagenum</span>).</div>
-<h2>Attributes</h2>
+
+# Attributes
+
 <p class="manual_block">The first set of attributes specify characteristics for the <acronym title="Table of Contents">ToC</acronym>, which is generated automatically at the end of the document when <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</p>
 <p><span class="parameter">paging</span> = 1|on|0|off</p>
 <p class="manual_param_dd">Specify whether to show page numbers in the <acronym title="Table of Contents">ToC</acronym>.
@@ -148,7 +150,7 @@ It is recommended that you use htmlspecialchars('Your bookmark text', ENT_QUOTES
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p>
 <p class="manual_param_dd">See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information</p>
-<p>&nbsp;</p>
+
 <p class="manual_param_dt"><span class="parameter">toc-sheet-size</span></p>
 <p class="manual_param_dd"><span class="parameter">toc-sheet-size</span> can be specified either as a pre-defined page size, or as two <span class="smallblock">LENGTH</span> values separated by a space, representing width and height e.g. '210mm 297mm'. em, ex and % are not accepted. Note that this is different from the 'size' property of the page-box used with the CSS @page selector.
 
@@ -200,7 +202,9 @@ i: Roman lowercase - i, ii, iii, iv...</p>
 <p class="manual_block">The rest of the attributes are defined exactly as for &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;. Note that these attributes define page numbering, margins, headers/footers for the document as it continues from this point on; in the final document this will be the part of the document immediately after the <acronym title="Table of Contents">ToC</acronym>.
 
 Please refer to &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for further details.</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -241,7 +245,8 @@ Please refer to &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | 
 </td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -259,7 +264,8 @@ Example #1
 </html>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">&lt;tocentry</a>&gt;- Add an entry for Table of Contents</li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Add a new page</li>

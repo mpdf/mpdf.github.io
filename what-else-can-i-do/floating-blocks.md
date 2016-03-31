@@ -6,10 +6,10 @@ permalink: /what-else-can-i-do/floating-blocks.html
 modification_time: 2015-08-05T12:00:01+00:00
 ---
 
-
-
 <p>mPDF &gt;= 3.0</p>
-<h2>Float</h2>
+
+# Float
+
 <p>The CSS property "float" is <b>partially</b> supported in mPDF, allowing block elements (p, div etc.) to be placed alongside one another. They can also be used to create "columns" that span more than one page.</p>
 
 {% highlight php %}
@@ -29,14 +29,16 @@ float: right|left
 <p>Margin-right can still be set for a float:right and vice-versa.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The width that is set defines the width of the content-box. So if you have two floats with width=50% and either of them has padding, margin or border, they will not fit together on the page.</div>
-<h2>Clear</h2>
+
+# Clear
+
 <p>The CSS property "clear" can be set on any block element (p, div etc.), and also &lt;hr&gt; or &lt;br&gt; elements.</p>
 
 {% highlight php %}
 clear: right|left|both
 {% endhighlight %}
 
-<h2>Example</h2>
+# Example
 
 {% highlight php %}
 <h4>CSS Float</h4>

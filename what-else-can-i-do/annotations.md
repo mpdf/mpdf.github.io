@@ -6,9 +6,8 @@ permalink: /what-else-can-i-do/annotations.html
 modification_time: 2015-08-05T12:00:11+00:00
 ---
 
+# See
 
-
-<h2>See</h2>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">Annotation()</a> - Insert an annotation in the document</li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/annotation.html" | prepend: site.baseurl }}">annotation</a>&gt; - Custom HTML tag - equivalent to <b>Annotation</b></li>

@@ -6,8 +6,6 @@ permalink: /troubleshooting/resizing.html
 modification_time: 2015-08-05T12:00:35+00:00
 ---
 
-
-
 <p>mPDF automatically resizes content in some circumstances. Using the default settings and CSS properties, the following are resized:</p>
 <ul>
 <li>tables will resize so that the tallest row (cell) will fit on a page [this is the only one that cannot be overridden]</li>

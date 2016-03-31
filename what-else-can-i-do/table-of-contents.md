@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/table-of-contents.html
 modification_time: 2015-08-05T12:00:15+00:00
 ---
 
-
-
 <p>You can insert one or more tables of contents in the document using HTML or PHP code - see:</p>
 <p><a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; will insert a Table of Contents (ToC) at the current position.</p>
 <p><a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">tocentry</a>&gt; can be used to mark entries for the <acronym title="Table of Contents">ToC</acronym> .</p>
@@ -112,7 +110,9 @@ span.mpdf_toc_p_level_2 {}
 {% endhighlight %}
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If you have 2 ToCs immediately following each other, and wish to use pagenumstyle or suppress to control the following text, then you need to set those values on both of the &lt;tocpagebreak&gt; elements.</div>
-<h3>Automatically Generated ToC entries</h3>
+
+## Automatically Generated ToC entries
+
 <p>You can automatically generate ToC entries from h1 - h6 tags, by setting the variable <a href="{{ "/reference/mpdf-variables/h2toc.html" | prepend: site.baseurl }}"><code>h2toc</code></a>.</p>
 <p>Only the default ToC will be used if more than 1 ToCs are defined for the document.</p>
 <p>H1 - H6 must be written with uppercase when defining the array.</p>

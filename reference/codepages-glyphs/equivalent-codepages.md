@@ -6,8 +6,6 @@ permalink: /reference/codepages-glyphs/equivalent-codepages.html
 modification_time: 2015-08-05T12:02:59+00:00
 ---
 
-
-
 <table class="table"> <thead>
 <tr>
 <td>'Codepage'</td>
@@ -72,7 +70,9 @@ modification_time: 2015-08-05T12:02:59+00:00
 </tr>
 </tbody> </table>
 <table class="table"> </table>
-<h2>Equivalent encodings</h2>
+
+# Equivalent encodings
+
 <p>The following list gives equivalent encodings (different names for the same encoding), one per line.</p>
 <ul>
 <li>US-ASCII, ASCII, ISO646-US, ISO_646.IRV:1991, ISO-IR-6, ANSI_X3.4-1968, ANSI_X3.4-1986, CP367, IBM367, US, csASCII</li>
@@ -139,6 +139,6 @@ modification_time: 2015-08-05T12:02:59+00:00
 <li>JOHAB, CP1361</li>
 <li>ISO-2022-KR, csISO2022KR</li>
 </ul>
-<p>&nbsp;</p>
+
 <p>From : <a href="http://www.datamystic.com/textpipe/htmlhelp/conversion%20filters/fromUnicode.htm">http://www.datamystic.com/textpipe/htmlhelp/conversion%20filters/fromUnicode.htm</a></p>
-<p>&nbsp;</p>
+

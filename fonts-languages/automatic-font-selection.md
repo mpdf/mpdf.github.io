@@ -6,8 +6,6 @@ permalink: /fonts-languages/automatic-font-selection.html
 modification_time: 2015-08-05T11:59:31+00:00
 ---
 
-
-
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This describes automatic font selection in mPDF &gt;= v6.</div>
 <p>mPDF has two functions which can be used together or separately:</p>
 <p><code>autoScriptToLang</code> - marks up HTML text using the lang attribute, based on the Unicode script block in question, and configurable values in <code>config_script2lang.php</code>.</p>
@@ -30,7 +28,7 @@ modification_time: 2015-08-05T11:59:31+00:00
 Uses "lang" to select font, and to determine OTL features applied
 {% endhighlight %}
 
-<h2>autoScriptToLang</h2>
+# autoScriptToLang
 
 {% highlight php %}
 <?php
@@ -48,7 +46,8 @@ $mpdf->autoArabic = true;
 <p>Using <code>autoScriptToLang</code>, mPDF detects text runs based on Unicode script block; using the values in <code>config_script2lang.php</code> it then encloses the text run within a span tag with the appropriate language attribute. For many scripts, the language cannot be determined: see the example above which recognises Cyrillic script and marks it up using <code>und-Cyrl</code>, which is a valid IETF tag, coding for language="undetermined", script="Cyrillic".</p>
 <p>Two optional refinements are added: Vietnamese text can often be recognised by the presence of certain characters which do not appear in other Latin script langauges, and similarly analysis of the text can attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi. If active, the text will then be marked with a specific language tag e.g. "vi", "pa", "ur", "fa" etc.</p>
 <p>These features can be disabled or enabled (default) using the variables <code>$mpdf-&gt;autoVietnamese</code> <code>$mpdf-&gt;autoArabic</code>, either in <span class="filename">config.php</span> or at runtime.</p>
-<h2>autoLangToFont</h2>
+
+# autoLangToFont
 
 {% highlight php %}
 <?php

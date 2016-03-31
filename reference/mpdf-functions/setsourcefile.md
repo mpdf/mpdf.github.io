@@ -6,20 +6,25 @@ permalink: /reference/mpdf-functions/setsourcefile.html
 modification_time: 2015-08-05T12:01:08+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3)</p>
 <p>SetSourceFile – Specify the source PDF file used to import pages into the document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">int <b>SetSourceFile</b> ( string <span class="parameter">$file</span> )</p>
 <p>Specify the source PDF file used to import pages into the document.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">file</span></p>
 <p class="manual_param_dd">This parameter specifies the source PDF file used to import pages into the document. <b>Note:&nbsp; <span class="parameter">file</span> should be a relative path to a local file.</b></p>
-<h2>Return Value</h2>
+
+# Return Value
+
 <p class="manual_param_dd"><b>SetSourceFile()</b> returns the number of pages in the source file.</p>
-<p>&nbsp;</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -28,7 +33,8 @@ modification_time: 2015-08-05T12:01:08+00:00
 <td>Function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -60,8 +66,8 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
-<p>&nbsp;</p>
+# See Also
+
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
 <li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file</li>

@@ -5,6 +5,7 @@
 
 @import "../_sass/bootstrap/mixins/gradients";
 @import "../_sass/_syntax-highlighting";
+@import "../_sass/header-links";
 
 #content {
 	order: 2;
@@ -19,16 +20,14 @@ nav {
 }
 
 .filename {
-  font-size: $font-size-root * 0.7;
-  font-weight: bold;
+  font-size: $font-size-root * 0.8;
   color: #870000;
   background-color: $code-bg;
   font-family: $font-family-monospace;
 }
 
 .parameter {
-  font-size: $font-size-root * 0.9;
-  font-weight: bold;
+  font-size: $font-size-root * 0.8;
   color: #000088;
   background-color: $code-bg;
   font-family: $font-family-monospace;
@@ -36,6 +35,15 @@ nav {
 
 pre {
 	background-color: $code-bg;
+}
+
+#content {
+  a {
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 nav > .list-group .list-group-item:first-child {border-top-right-radius: 0;border-top-left-radius: 0;}

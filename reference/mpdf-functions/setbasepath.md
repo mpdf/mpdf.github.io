@@ -6,18 +6,20 @@ permalink: /reference/mpdf-functions/setbasepath.html
 modification_time: 2015-08-05T12:00:55+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetBasePath – Specifies a base URL for mPDF to interpret relative URLs</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetBasePath</b> ( string <span class="parameter">$url</span> )</p>
 <p>Specifies that mPDF should interpret any URLs in the HTML code relative to this <span class="parameter">url</span>. Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, and images.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">url</span></p>
 <p class="manual_param_dd">A full URL should be provided, but the following will all work:
 
@@ -28,7 +30,8 @@ http://www.mydomain.com/index.php
 http://www.mydomain.com/path/<span class="smallblock">
 
 </span></p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1

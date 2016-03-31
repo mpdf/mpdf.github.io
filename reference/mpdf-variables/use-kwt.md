@@ -6,8 +6,6 @@ permalink: /reference/mpdf-variables/use-kwt.html
 modification_time: 2015-08-05T12:02:34+00:00
 ---
 
-
-
 <p>mPDF &gt;= 2.0</p>
 <p>Keep with table</p>
 <p>Default false</p>

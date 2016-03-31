@@ -6,9 +6,8 @@ permalink: /about-mpdf/features-v5.html
 modification_time: 2015-08-05T11:59:20+00:00
 ---
 
+# Main features
 
-
-<h2>Main features</h2>
 <ul>
 <li>Accepts UTF-8 encoded HTML</li>
 <li>Supports almost all languages including <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (arabic and hebrew), and <acronym title="Chinese-Japanese-Korean languages">CJK</acronym> - (chinese-japanese-korean)</li>
@@ -36,8 +35,9 @@ modification_time: 2015-08-05T11:59:20+00:00
 <li>PDF/A-1b support (ISO 19005-1:2005)</li>
 <li>PDF/X-1a support</li>
 </ul>
-<p>&nbsp;</p>
-<h2>More Information</h2>
+
+# More Information
+
 <p>mPDF has a number of enhancements over the original FPDF, HTML2FPDF and UPDF scripts:</p>
 <p><b>UTF-8 encoded</b> HTML is accepted as the standard input.</p>
 <p><a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">Right-to-left languages</a> are supported, with automatic detection of RTL characters within a document. Transposes: tables, lists, text justification and table cell alignment, as well as full text reversal for RTL characters. Automatically detects non-RTL characters and displays these in original order.</p>

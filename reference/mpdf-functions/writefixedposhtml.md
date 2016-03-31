@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/writefixedposhtml.html
 modification_time: 2015-08-05T12:01:16+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 4.0)</p>
 <p>WriteFixedPosHTML — Write HTML to a fixed position on the current page</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>WriteFixedPosHTML</b> ( string <span class="parameter">$html</span> , float <span class="parameter">$x</span> , float <span class="parameter">$y</span> , float <span class="parameter">$w</span> , float <span class="parameter">$h</span> [, string <span class="parameter">$overflow</span> ])</p>
 <p>Write HTML to a fixed position on the current page.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">html</span></p>
 <p class="manual_param_dd">This parameter specifies the text to write to the document - parsed as HTML code</p>
 <p class="manual_param_dt"><span class="parameter">x</span></p>
@@ -45,9 +47,9 @@ hidden: hide any text (clip) which spills over outside the dimensions of the blo
 auto: force text to be reduced in size if required to fit inside the dimensions of the block element
 
 <span class="smallblock">BLANK</span> uses the default value of 'visible'</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -58,7 +60,8 @@ auto: force text to be reduced in size if required to fit inside the dimensions 
 </td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -80,7 +83,8 @@ $mpdf=Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML</a> - Add an Index entry in the document </li>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/fixed-position-blocks.html" | prepend: site.baseurl }}">Fixed position elements</a> - About fixed-position elements (using CSS)

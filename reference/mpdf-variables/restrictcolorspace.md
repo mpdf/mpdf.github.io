@@ -6,19 +6,21 @@ permalink: /reference/mpdf-variables/restrictcolorspace.html
 modification_time: 2015-08-05T12:02:24+00:00
 ---
 
-
-
 <div>
 <div>
 <p>(mPDF &gt;= 5.1)</p>
 <p>restrictColorSpace – Specify whether to automatically limit the colorspaces used</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>PDFAauto</b></p>
 <p>Specify whether to automatically limit the colorspaces used when creating PDF/A1-b or PDF/X-1a compliant documents. PDF files can contain objects using different colorSpaces e.g. Grayscale, RGB and CMYK. By default, mPDF creates PDF files using the colours as they are specified: font colour may be set (e.g. #880000) as an RGB colour, and the file may contain JPG images in RGB or CMYK format.</p>
 <p>
 
 In some circumstances, you may wish to create a PDF file with restricted colorSpaces e.g. printers will often want files which contain only CMYK, spot colours, or grayscale, but not RGB. Using restrictColorSpace will attempt to convert every colour value used in the document to the permitted colorSpace(s). Almost everything including images will be converted (except BMP images), and the conversion of images may take significant time.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">restrictColorSpace</span> =&nbsp; 1|2|3</p>
 <p class="manual_param_dd"><b>Values</b>
 
@@ -31,7 +33,9 @@ In some circumstances, you may wish to create a PDF file with restricted colorSp
 0 or any other value: no restriction is made on colorspace used
 
 <span class="smallblock">DEFAULT</span>: 0</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -40,7 +44,9 @@ In some circumstances, you may wish to create a PDF file with restricted colorSp
 <td>Variable was added.</td>
 </tr>
 </tbody> </table>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-a1-b-compliance.html" | prepend: site.baseurl }}">PDF/A1-b compliance</a></li>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-x-1a-compliance.html" | prepend: site.baseurl }}">PDF/X-1a compliance</a></li>
@@ -50,6 +56,6 @@ In some circumstances, you may wish to create a PDF file with restricted colorSp
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfxauto.html" | prepend: site.baseurl }}">PDFXauto</a> - Specify whether to automatically fix issues to create PDF/X-1a compliant document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
 </ul>
-<p>&nbsp;</p>
+
 </div>
 </div>

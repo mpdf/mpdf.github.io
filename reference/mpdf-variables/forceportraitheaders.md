@@ -6,8 +6,6 @@ permalink: /reference/mpdf-variables/forceportraitheaders.html
 modification_time: 2015-08-05T12:01:57+00:00
 ---
 
-
-
 <p>==========================================================
 
 Special case - rotated Portrait headers on Landscape pages

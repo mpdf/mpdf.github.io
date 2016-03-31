@@ -6,26 +6,32 @@ permalink: /reference/html-control-tags/htmlpagefooter.html
 modification_time: 2015-08-05T12:01:23+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.0)</p>
 <p>htmlpagefooter – Define an HTML page footer with a given name</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>htmlpagefooter</b>&nbsp; <span class="parameter">name</span>&nbsp; &gt; <span class="parameter">html</span> &lt;/htmlpagefooter&gt;</p>
 <p>Define an HTML page footer with a given name. Named footer can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Remember that, unlike most mPDF custom tags which are self-closing with /&gt;, htmlpageheader and htmlpagefooter require end tags. If you wish to make the HTML code compatible with browsers, see <a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a></div>
-<h2>Attributes</h2>
+
+# Attributes
+
 <p class="manual_param_dt"><span class="parameter">name</span></p>
 <p class="manual_param_dd">This attribute is a text string to use as the name for this footer.
 
 If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_default'.</p>
-<h2>Content</h2>
+
+# Content
+
 <p class="manual_param_dt"><span class="parameter">html</span></p>
 <p class="manual_param_dd">Any valid HTML code can be enclosed between the tags, and will be parsed by mPDF as for any other content.</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -34,13 +40,17 @@ If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_defa
 <td>The tag was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
+
 <p>For examples and further information please see:</p>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 4</a></li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a> </li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt; </li>

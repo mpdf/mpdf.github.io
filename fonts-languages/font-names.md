@@ -6,9 +6,8 @@ permalink: /fonts-languages/font-names.html
 modification_time: 2015-08-05T11:59:28+00:00
 ---
 
+## CSS font-family name
 
-
-<h3>CSS font-family name</h3>
 <p>Every font family has a name which is defined in the font file. This is the name by which your computer OS registers and recognises the font family.</p>
 <p>This is also the name used in CSS e.g.</p>
 
@@ -16,7 +15,8 @@ modification_time: 2015-08-05T11:59:28+00:00
     <p style="font-family: 'Trebuchet MS';">
 {% endhighlight %}
 
-<h3>mPDF font-family name</h3>
+## mPDF font-family name
+
 <p>This is the name used by mPDF internally to process fonts. This could be anything you like, but by default mPDF will convert CSS font-family names by removing any spaces and changing to lowercase. Reading the CSS name above, mPDF will look for a "mPDF font-family name" of 'trebuchetms'.</p>
 <p>This means that this will also work:</p>
 
@@ -47,7 +47,9 @@ $this->fonttrans = array(
 <li>use the mPDF font name in the <span class="filename">config_cp.php</span> file to make it selectively available in certain languages.</li>
 <li>if used in the PHP script e.g. $mpdf = new mPDF('','','','trebuchetms');</li>
 </ul>
-<h3>Font file name</h3>
+
+## Font file name
+
 <p>To make a font available to mPDF, you need to specify the Truetype .ttf font files for each variant.</p>
 <p>These should be defined in <span class="filename">config_fonts.php</span> in the array:</p>
 

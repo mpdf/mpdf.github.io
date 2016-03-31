@@ -6,14 +6,16 @@ permalink: /reference/mpdf-variables/defaultpagenumstyle.html
 modification_time: 2015-08-05T12:01:54+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 6.0)</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>defaultPageNumStyle</b></p>
 <p>Specifies a default page number style to use from the start of the document.</p>
 <p>For more information, see <a href="{{ "/paging/page-numbering.html" | prepend: site.baseurl }}">page numbering</a>.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">defaultPageNumStyle</span></p>
 <p class="manual_param_dd"><b>Values</b>
 
@@ -34,7 +36,9 @@ arabic-indic | bengali | cambodian | cjk-decimal | devanagari | gujarati | gurmu
 "i" = lower-roman<span class="smallblock">
 
 DEFAULT</span>: "1"</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -43,7 +47,9 @@ DEFAULT</span>: "1"</p>
 <td>Variable was added.</td>
 </tr>
 </tbody> </table>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/paging/page-numbering.html" | prepend: site.baseurl }}">Page numbering</a></li>
 </ul>

@@ -6,11 +6,11 @@ permalink: /reference/mpdf-variables/autofontgroupsize.html
 modification_time: 2015-08-05T12:01:39+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3&nbsp; &lt;6.0)</p>
 <p>autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont</p>
-<h2>Value</h2>
+
+# Value
+
 <p class="manual_block">void <b>autoFontGroupSize</b></p>
 <p>Specify the chunk size of text to group when auto-detecting languages using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a>.</p>
 
@@ -18,7 +18,9 @@ modification_time: 2015-08-05T12:01:39+00:00
 <p>Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage is that it may include bits of other languages either side, forcing them in the font used for the "foreign" language.
 
 Smaller chunks (1) - analysing word by word - takes more processing time, and cannot reverse RTL sentences. In text with CJK language, it makes it harder for mPDF to correctly identify between e.g. Korean and Chinese which share some characters. Thus words may be identified alternately as Korean or Chinese.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">autoFontGroupSize</span></p>
 <p class="manual_param_dd"><b>Values</b>
 
@@ -29,7 +31,9 @@ Smaller chunks (1) - analysing word by word - takes more processing time, and ca
 3: as big chunks as possible are grouped, including ASCII characters and punctuation
 
 <span class="smallblock">DEFAULT</span>: 2</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -38,7 +42,8 @@ Smaller chunks (1) - analysing word by word - takes more processing time, and ca
 <td>Variable was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -99,7 +104,8 @@ $mpdf->Output();
 See the result of this as a PDF file
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>

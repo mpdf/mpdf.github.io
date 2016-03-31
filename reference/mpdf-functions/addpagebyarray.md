@@ -6,11 +6,11 @@ permalink: /reference/mpdf-functions/addpagebyarray.html
 modification_time: 2015-08-05T12:00:39+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 5.0)</p>
 <p>AddPageByArray — Add a new page using an array of parameters</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>AddPageByArray</b> ([ array <span class="parameter">$arr</span> ])</p>
 <p>Add a new page to the document using an array of parameters which are all optional. The parameter <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional page-break (<span class="parameter">type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a page-break with <span class="parameter">type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).</p>
 <p>Number of pages added:</p>
@@ -63,14 +63,15 @@ modification_time: 2015-08-05T12:00:39+00:00
 <td>2</td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The description below uses the same parameter names as used in AddPage(), but these were not recognised in mPDF &lt; 5.4&nbsp; The examples use different parameter names. From mPDF &gt;=5.4 both are supported. See below for a list of alternatives.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">orientation</span> = L|P</p>
 <p class="manual_param_dd">This attribute specifies the orientation of the new page.
 
@@ -204,8 +205,9 @@ B (Type B paperback 128x198mm)</p>
 - explicitly define the <span class="parameter">orientation</span> as L or P</p>
 <ul> </li>
 </ul>
-<p>&nbsp;</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -220,7 +222,9 @@ B (Type B paperback 128x198mm)</p>
 <td>Alternative parameter names added</td>
 </tr>
 </tbody> </table>
-<h2>Alternative parameter names</h2>
+
+# Alternative parameter names
+
 <table class="table"> <tbody>
 <tr>
 <td>type</td>
@@ -291,7 +295,8 @@ B (Type B paperback 128x198mm)</p>
 <td>newformat</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -515,10 +520,12 @@ $mpdf=Output();
 ?>
 {% endhighlight %}
 
-<h2>Notes</h2>
+# Notes
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Unlike FPDF <b>AddPage()</b> or <b>AddPageByArray()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to <b>AddPage()</b> or <b>AddPageByArray()</b></li>
 </ul>

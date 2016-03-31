@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/setwatermarkimage.html
 modification_time: 2015-08-05T12:01:10+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.2)</p>
 <p>SetWatermarkImage – Set an image to use as a Watermark</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetWatermarkImage</b> ( string <span class="parameter">$src</span> [, float <span class="parameter">$alpha</span> [, mixed <span class="parameter">$size</span> [, mixed <span class="parameter">$position</span> ]]])</p>
 <p>Set an image to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text such as "DRAFT" or a background image. The watermark will be added to each page when the Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> is set to 1 or <span class="smallblock">TRUE</span>.&nbsp;</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">src</span></p>
 <p class="manual_param_dd">This parameter specifies the image file to use for the watermark. This can be a full URI or use a relative path<span class="smallblock">
 
@@ -48,7 +50,9 @@ F: Centred on the page print-area (frame) respecting page margins
 array(<span class="parameter">$x</span>, <span class="parameter">$y</span>): Specify a position; units in millimeters
 
 <span class="smallblock">DEFAULT</span>: "P"</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -57,7 +61,8 @@ array(<span class="parameter">$x</span>, <span class="parameter">$y</span>): Spe
 <td>The function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -104,7 +109,8 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Set the text to use as a Watermark</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}"></a></li>

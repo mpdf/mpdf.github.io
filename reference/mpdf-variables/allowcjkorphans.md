@@ -6,8 +6,6 @@ permalink: /reference/mpdf-variables/allowcjkorphans.html
 modification_time: 2015-08-05T12:01:36+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 5.7)</p>
 <p>CJK line-breaking is implemented in mPDF roughly according to accepted rules.</p>
 <p>Configurable variables allow fine control of behaviour (except in tables):</p>

@@ -6,13 +6,13 @@ permalink: /reference/mpdf-functions/addpage.html
 modification_time: 2015-08-05T12:00:38+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>AddPage — Add a new page</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> A new function <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a> was added in mPDF 5.0 which is recommended as much simpler to use.</div>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>AddPage</b> ([ string <span class="parameter">$orientation</span> [, string <span class="parameter">$type</span> [, string <span class="parameter">$resetpagenum</span> [, string <span class="parameter">$pagenumstyle</span> [, string <span class="parameter">$suppress</span> [, float <span class="parameter">$margin-left</span> [, float <span class="parameter">$margin-right</span> [, float $<span class="parameter">margin-top</span> [, float $<span class="parameter">margin-bottom</span> [, float $<span class="parameter">margin-header</span> [, float <span class="parameter">$margin-footer</span> [, string <span class="parameter">$odd-header-name</span> [, string <span class="parameter">$even-header-name</span> [, string $<span class="parameter">odd-footer-name</span> [, string $<span class="parameter">even-footer-name</span> [, mixed $<span class="parameter">odd-header-value</span> [, mixed <span class="parameter">$even-header-value</span> [, mixed <span class="parameter">$odd-footer-value</span> [, mixed $<span class="parameter">even-footer-value</span> [, string <span class="parameter">$pageselector</span> [, mixed <span class="parameter">$sheet-size</span> ]]]]]]]]]]]]]]]]]]]]])</p>
 <p>Add a new page to the document. The parameter <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional page-break (<span class="parameter">type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a page-break with <span class="parameter">type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).</p>
 <p>Number of pages added:</p>
@@ -65,12 +65,13 @@ modification_time: 2015-08-05T12:00:38+00:00
 <td>2</td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">orientation</span> = L|P</p>
 <ul> </li>
 </ul>
@@ -210,8 +211,9 @@ B (Type B paperback 128x198mm)</p>
 - specify the width less than the height i.e. the dimensions of the page in portrait orientation; and
 
 - explicitly define the <span class="parameter">orientation</span> as L or P</p>
-<p>&nbsp;</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -248,7 +250,8 @@ B (Type B paperback 128x198mm)</p>
 <td>Parameter <span class="parameter">sheet-size</span> was added</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -356,12 +359,14 @@ $mpdf->WriteHTML('End section of book with no headers');
 ?>
 {% endhighlight %}
 
-<h2>Notes</h2>
+# Notes
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Unlike FPDF <b>AddPage()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of both <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to <b>AddPage()</b> </li>
 </ul>

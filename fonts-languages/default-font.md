@@ -6,8 +6,6 @@ permalink: /fonts-languages/default-font.html
 modification_time: 2015-08-05T11:59:36+00:00
 ---
 
-
-
 <p><b>Default font &amp; font-size</b></p>
 <p>A default font and font-size are required for mPDF to function. These are determined by:</p>
 <p>Declared when instantiating the mPDF class (see Getting Started). These "provisional" default values will be active if you are using functions to write directly to the PDF file e.g.</p>
@@ -26,7 +24,7 @@ $mpdf->WriteCell(110,5,'Hallo World');
 <li>Otherwise the default font is set by the value in the default stylesheet <code>$default_CSS</code> in <span class="filename">config.php</span> </li>
 <li>NB The default font-<i>size</i> is also set by the value in the default stylesheet <code>$default_CSS</code></li>
 </ul>
-<p>&nbsp;</p>
+
 <p>If the secondary default CSS stylesheet <span class="filename">mpdf.css</span> contains values to define the BODY tag, these values will override the above e.g.</p>
 
 {% highlight php %}

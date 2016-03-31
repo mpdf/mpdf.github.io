@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/mpdf.html
 modification_time: 2015-08-05T12:00:37+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 5.0)</p>
 <p>mPDF – Initialise an instance of mPDF class</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">class <b>mPDF</b> ([ string <span class="parameter">$mode</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])</p>
 <p>Initialise an instance of mPDF class.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">mode</span></p>
 <p class="manual_param_dd">This parameter specifies the mode of the new document.
 
@@ -124,7 +126,9 @@ If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the
 <i>P:</i> <span class="smallblock">DEFAULT</span> Portrait
 
 L: Landscape</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -137,7 +141,8 @@ L: Landscape</p>
 <td>The <span class="parameter">mode</span> parameter renamed (from <span class="parameter">codepage</span>), and recognised values changed</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -189,10 +194,12 @@ $mpdf=new mPDF('utf-8', array(190,236));
 $mpdf=new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
 {% endhighlight %}
 
-<h2>Notes</h2>
+# Notes
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML to the document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> - Finalise and output the document</li>

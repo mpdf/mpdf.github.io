@@ -6,11 +6,11 @@ permalink: /reference/mpdf-variables/uselang.html
 modification_time: 2015-08-05T12:02:38+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3&nbsp; &lt;= 5.7)</p>
 <p>useLang – Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span></p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>useLang</b></p>
 <p>Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span>.</p>
 <p>See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for more details.</p>
@@ -19,7 +19,9 @@ modification_time: 2015-08-05T12:02:38+00:00
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The default value was changed to <span class="smallblock">TRUE </span>in version 4.0</div>
 <p><b>Note:</b> <span class="parameter">lang</span> is a useful way to select appropriate fonts for some languages. Automatic font selection using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the HTML with the <span class="parameter">lang</span> attribute, so useLang is required. Using automatic font selection adds considerable processing time when creating a large document. Automatic font selection is only valid when using UTF-8 as the codepage for the document.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">useLang</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
 <p class="manual_param_dd"><b>Values</b>
 
@@ -28,7 +30,9 @@ modification_time: 2015-08-05T12:02:38+00:00
 <span class="smallblock">FALSE</span>: does not recognise/support the HTML attribute <span class="parameter">lang</span>.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -41,7 +45,8 @@ modification_time: 2015-08-05T12:02:38+00:00
 <td>Default value changed to <span class="smallblock">TRUE</span></td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -77,7 +82,8 @@ $mpdf->Output();
 
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li>

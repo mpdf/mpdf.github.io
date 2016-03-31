@@ -6,16 +6,18 @@ permalink: /reference/html-control-tags/bookmark.html
 modification_time: 2015-08-05T12:01:20+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>bookmark – Add a Bookmark to the document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>bookmark</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">level</span> ] /&gt;</p>
 <p>Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
-<h2>Attributes</h2>
+
+# Attributes
+
 <p class="manual_param_dt"><span class="parameter">content</span></p>
 <p class="manual_param_dd">Specifies the text to appear as a Bookmark.
 
@@ -26,7 +28,8 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 <p class="manual_param_dd"><span class="parameter">level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 below. Accepts an integer from 0 to the maximum depth you wish.
 
 <span class="smallblock">DEFAULT</span>: 0</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -85,10 +88,12 @@ This will produce a Bookmark tree in Adobe Reader:
   + Chapter 3
 {% endhighlight %}
 
-<h2>Notes</h2>
+# Notes
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</div>
-<h3>Recommended placement</h3>
+
+## Recommended placement
+
 <p>Recommended placement of Bookmarks is just after the first word following the opening tag of the block element:</p>
 
 {% highlight php %}
@@ -107,7 +112,8 @@ This will produce a Bookmark tree in Adobe Reader:
 ... this is a word<bookmark... /> in the middle of text to be marked ...
 {% endhighlight %}
 
-<h3>Automatically Generated Bookmarks</h3>
+## Automatically Generated Bookmarks
+
 <p>You can automatically generate bookmarks from h1 - h6 tags, by setting the variable <code><span class="parameter">$h2bookmarks</code></span>.</p>
 <p>Define arrays with e.g. the tag =&gt; Bookmark level</p>
 <p>Remember bookmark levels start at 0.</p>
@@ -120,7 +126,8 @@ This will produce a Bookmark tree in Adobe Reader:
 $mpdf->h2bookmarks = array('H1'=>0, 'H2'=>1, 'H3'=>2);
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/bookmark.html" | prepend: site.baseurl }}">Bookmark()</a> - PHP equivalent to &lt;bookmark&gt;</li>
 </ul>

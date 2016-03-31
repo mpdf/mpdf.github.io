@@ -6,15 +6,12 @@ permalink: /paging/using-page.html
 modification_time: 2015-08-05T11:59:48+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 4.2)</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</div>
-<p>&nbsp;</p>
-<h2>About CSS Paged Media
 
-</h2>
+# About CSS Paged Media
+
 <p>The paged media model of CSS (http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html) is used as a basis</p>
 
 {% highlight php %}
@@ -60,9 +57,9 @@ modification_time: 2015-08-05T11:59:48+00:00
 <p>The Page-box size is assumed to be the same as the sheet size by default.</p>
 <p>The page-box margins are therefore by default the left/right/top and bottom margins.</p>
 <p>NB Page-box margins are INSIDE the page-box (unlike block elements in CSS).</p>
-<h2>Supported CSS selectors
 
-</h2>
+# Supported CSS selectors
+
 <p>The CSS <code>@page</code> selector is partially supported in mPDF with the following properties:</p>
 
 {% highlight php %}
@@ -97,9 +94,8 @@ modification_time: 2015-08-05T11:59:48+00:00
 }
 {% endhighlight %}
 
-<h3>Notes
+## Notes
 
-</h3>
 <p>All properties except size are optional.</p>
 <p>Three values for the <span class="parameter">size</span> property set the page box to the same size as the sheet:</p>
 <p><code>auto</code>
@@ -111,7 +107,7 @@ modification_time: 2015-08-05T11:59:48+00:00
 <p><code>portrait</code>
 
 &nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the shorter sides are horizontal.</p>
-<p>&nbsp;</p>
+
 <p>The header and footer names refer to named headers/footers set in your document.</p>
 <p>NB The prefix "html_" used before the name is used to denote a header/footer defined as HTML code.</p>
 <p>If a header/Footer name is set as _blank (or any name that hasn't been defined) it will turn off Headers/Footers.</p>
@@ -121,9 +117,9 @@ modification_time: 2015-08-05T11:59:48+00:00
 <p>If you set a page(-box) smaller than the sheet size, the margins are increased by the difference between the page-box and sheet size - automatically centering the page-box inside the sheet.</p>
 <p>If you change page-box orientation, the sheet orientation will follow.</p>
 <p>Note that block-style elements - and any styling associated with it - will be terminated at a page-break.</p>
-<h2>Pseudo-selectors
 
-</h2>
+# Pseudo-selectors
+
 <p>CSS pseudo-selectors :left :right and :first are recognised by mPDF and support the same properties as @page except:</p>
 <ul>
 <li>size</li>
@@ -150,12 +146,11 @@ modification_time: 2015-08-05T11:59:48+00:00
 }
 {% endhighlight %}
 
-<p>&nbsp;</p>
 <p>Pseudo-selectors for page can change top, bottom, header and footer margins, but not left and right margins. mPDF can only cope with one set of (optionally mirrored) left/right margins.</p>
 <p>Properties specified in a :first @page rule override those specified in :right (or :left) @page rules for the first page only</p>
-<h2>Named @page selectors
 
-</h2>
+# Named @page selectors
+
 <p>Named pages are also supported e.g.:</p>
 
 {% highlight php %}
@@ -169,15 +164,17 @@ div.onitsside { page: rotated; page-break-before: right; }
 {% endhighlight %}
 
 <p><code>&lt;div class="onitsside"&gt;</code> will thus start a new right/odd page which will be in landscape.</p>
-<h2>Setting a named page</h2>
+
+# Setting a named page
+
 <p>You can also set the page using parameters in:</p>
 <ul>
 <li>functions: <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a></li>
 <li>html tags: &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; and &lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">formfeed</a>&gt;</li>
 </ul>
-<h3>page-break-before
 
-</h3>
+## page-break-before
+
 <p>The CSS property 'page-break-before' is useful in conjunction with a named page definition.</p>
 <p class="code">page-break-before: always|left|right;</p>
 <p><code>always</code>
@@ -190,7 +187,8 @@ div.onitsside { page: rotated; page-break-before: right; }
 
 &nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a right/odd page.</p>
 <p>So, for example, <code>page-break-before: right</code> is equivalent of <code>AddPage(... 'NEXT-ODD'...)</code></p>
-<h3>Example using Headers and Footers</h3>
+
+## Example using Headers and Footers
 
 {% highlight php %}
 <?php

@@ -6,8 +6,6 @@ permalink: /fonts-languages/lang-6-x.html
 modification_time: 2015-08-05T11:59:32+00:00
 ---
 
-
-
 <p>The HTML lang attribute has a number of uses:</p>
 <ul>
 <li>when OTL tables are being used for a font, the language from the lang attribute is used to select which OTL features are applied;</li>
@@ -35,7 +33,9 @@ modification_time: 2015-08-05T11:59:32+00:00
 
 <p>should be of equal specificity, and thus apply whichever comes later in the CSS stylesheet. mPDF however gives <code>:lang</code> priority over <code>.class</code></p>
 <p class="manual_block"><b>The use of the lang attribute and CSS selector is the recommended method for handling multi-lingual documents</b></p>
-<h3>Language tags</h3>
+
+## Language tags
+
 <p>IETF tags should be used for lang which comply with the following:</p>
 <ul>
 <li>a 2 or 3 letter Language code, followed optionally by</li>

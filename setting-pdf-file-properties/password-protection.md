@@ -6,8 +6,6 @@ permalink: /setting-pdf-file-properties/password-protection.html
 modification_time: 2015-08-05T11:59:58+00:00
 ---
 
-
-
 <p>The security settings for the PDF file can be set in mPDF:</p>
 <ul>
 <li>determine whether the document is encrypted</li>
@@ -17,8 +15,10 @@ modification_time: 2015-08-05T11:59:58+00:00
 
 </li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setprotection.html" | prepend: site.baseurl }}">SetProtection()</a> - Encrypts and sets the PDF document permissions</li>
 </ul>
-<p>&nbsp;</p>
+

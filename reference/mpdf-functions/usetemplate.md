@@ -6,11 +6,11 @@ permalink: /reference/mpdf-functions/usetemplate.html
 modification_time: 2015-08-05T12:01:14+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3)</p>
 <p>UseTemplate – Insert an imported page from an external PDF file</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">array <b>UseTemplate</b> ( int <span class="parameter">$templateID</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$width</span> [, float <span class="parameter">$height</span> ]]]])</p>
 <p>Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the imported page as it is printed (see Example #1).</p>
 
@@ -31,7 +31,9 @@ $tplIdx = $mpdf-&gt;ImportPage($pagecount);
 $mpdf-&gt;UseTemplate($tplIdx);
 
 $mpdf-&gt;WriteHTML($html);</code></div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">templateID</span></p>
 <p class="manual_param_dd">This parameter specifies the ID of the page template to insert.</p>
 <p class="manual_param_dt"><span class="parameter">x</span></p>
@@ -58,11 +60,13 @@ $mpdf-&gt;WriteHTML($html);</code></div>
 <p class="manual_param_dd">Specifies the height for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
 <span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">width</span> nor <span class="parameter">height</span> are set) or if <span class="parameter">width</span> is set, the <span class="parameter">height</span> is automatically set to ouput the template in proportion to the original.</p>
-<h2>Return Value
 
-</h2>
+# Return Value
+
 <p class="manual_param_dd"><b>UseTemplate()</b> returns an array of the calculated <span class="parameter">width</span> and <span class="parameter">height</span>.</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -71,7 +75,8 @@ $mpdf-&gt;WriteHTML($html);</code></div>
 <td>Function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -136,7 +141,8 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
 <li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
@@ -154,4 +160,4 @@ $mpdf->Output();
 <li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li>
 <li><a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li>
 </ul>
-<p>&nbsp;</p>
+

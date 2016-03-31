@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/line-breaking.html
 modification_time: 2015-08-05T12:00:06+00:00
 ---
 
-
-
 <p>The algorithm for determining automatic line breaks was completely rewritten in mPDF v6.0 - the following notes apply to mPDF &gt;= 6.0</p>
 <p>Line breaks will be allowed at:</p>
 <ul>

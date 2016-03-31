@@ -6,8 +6,6 @@ permalink: /fonts-languages/fonts-language-cover-v5-x.html
 modification_time: 2015-08-05T11:59:34+00:00
 ---
 
-
-
 <p>The following Open Source fonts are included with mPDF 5:</p>
 <ul>
 <li><i>DejaVuSans, DejaVuSansCondensed, DejaVuSansMono, DejaVuSerif, DejaVuSerifCondensed</i></li>
@@ -15,9 +13,9 @@ modification_time: 2015-08-05T11:59:34+00:00
 <li><i>Norasi</i> - Thai (serif)</li>
 <li><i>XBZar, XBRiyaz</i> - Arabic</li>
 </ul>
-<h3>Coverage of included fonts
 
-</h3>
+## Coverage of included fonts
+
 <table class="table"> <thead>
 <tr> <th>&nbsp;</th><th>&nbsp;</th>
 <td>
@@ -144,4 +142,4 @@ modification_time: 2015-08-05T11:59:34+00:00
 <td>-</td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
+

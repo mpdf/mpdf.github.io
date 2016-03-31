@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/output.html
 modification_time: 2015-08-05T12:00:50+00:00
 ---
 
-
-
 <p>(FPDF)</p>
 <p>Output – Finalise the document and send it to specified destination</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">string <b>Output</b> ([ string <span class="parameter">$filename</span> , string <span class="parameter">$dest</span> ])</p>
 <p>Send the document to a given destination: browser, file or string. In the case of browser, the plug-in may be used (if present) or a download ("Save as" dialog box) may be forced.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">filename</span></p>
 <p class="manual_param_dd">The name of the file. If not specified, the document will be sent to the browser (destination I).
 
@@ -31,7 +33,8 @@ F: save to a local file with the name given by <span class="parameter">filename<
 S: return the document as a string. <span class="parameter">filename</span> is ignored.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> You can use the 'S' option to e-mail a PDF file - see example under&nbsp;<a href="{{ "/real-life-examples/e-mail-a-pdf-file.html" | prepend: site.baseurl }}">E-mail a PDF file</a>.</div>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1

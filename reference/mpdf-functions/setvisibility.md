@@ -6,16 +6,18 @@ permalink: /reference/mpdf-functions/setvisibility.html
 modification_time: 2015-08-05T12:01:09+00:00
 ---
 
-
-
 <div>
 <div>
 <p>(mPDF &gt;= 5.4)</p>
 <p>SetVisibility – Set the visibility of subsequent objects</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetVisibility</b> ( string <span class="parameter">$visibility</span> )</p>
 <p>Set the visibility of subsequent objects</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <span class="parameter">visibility</span>
 <p class="manual_param_dd">This parameter specifies the visibility.</p>
 <p class="manual_param_dd"><b>Values</b>
@@ -31,7 +33,9 @@ printonly
 screenonly
 
 <span class="smallblock">DEFAULT</span>: visible</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -40,7 +44,8 @@ screenonly
 <td>Function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -66,10 +71,11 @@ $mpdf->WriteHTML('<p>This text will only be visible on screen, and will not be i
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> - 'visibility'</li>
 </ul>
-<p>&nbsp;</p>
+
 </div>
 </div>

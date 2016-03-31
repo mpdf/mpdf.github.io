@@ -6,10 +6,9 @@ permalink: /real-life-examples/letterhead-letters.html
 modification_time: 2015-08-05T12:00:28+00:00
 ---
 
-
-
 <p>Using the CSS @page selector, these are a couple of similar methods for producing multiple letters into 1 PDF file, where each letter uses a letterhead for page one then plain paper for the remaining pages.</p>
-<h3>Method 1</h3>
+
+## Method 1
 
 {% highlight php %}
 <?php
@@ -143,7 +142,7 @@ $mpdf->WriteHTML($letter);
 $mpdf->Output();
 {% endhighlight %}
 
-<h3>Method 2</h3>
+## Method 2
 
 {% highlight php %}
 <?php

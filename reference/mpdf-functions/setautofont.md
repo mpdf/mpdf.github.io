@@ -6,11 +6,11 @@ permalink: /reference/mpdf-functions/setautofont.html
 modification_time: 2015-08-05T12:00:55+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3&nbsp;&nbsp; &lt;= 5.7)</p>
 <p>SetAutoFont – Automatically detect language in the input HTML text and use appropriate fonts</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetAutoFont</b> ( int <span class="parameter">$flag</span> )</p>
 <p>Turns on the AutoFont function, which automatically detects language in the input HTML text and uses appropriate fonts.</p>
 
@@ -33,7 +33,9 @@ modification_time: 2015-08-05T12:00:55+00:00
 The font actually used for default chinese is determined by the settings in function <span class="function">GetCodepage()</span> in <span class="filename">config_cp.php</span>; by default this is Chinese Simplified (GB, GBK).</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> SetAutoFont is only valid when using UTF-8 as the codepage for the document.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">flag</span></p>
 <p class="manual_param_dd">This parameter specifies which languages are auto-detected. Either an integer or one of the defined constants can be used.
 
@@ -53,7 +55,9 @@ AUTOFONT_INDIC = 8 = Indic languages such as Devanagari
 AUTOFONT_ALL = 15 = All of the above
 
 <span class="smallblock">DEFAULT</span>: AUTOFONT_ALL (15)</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -74,7 +78,8 @@ AUTOFONT_ALL = 15 = All of the above
 <td>Removed in favour of autoLangToFont</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -109,7 +114,8 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li>

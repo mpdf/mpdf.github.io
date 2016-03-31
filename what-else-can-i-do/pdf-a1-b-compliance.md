@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/pdf-a1-b-compliance.html
 modification_time: 2015-08-05T12:00:20+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 4.3)</p>
 <p>PDF/A1-b is a file format for the long-term archiving of electronic documents. It is based on the PDF Reference Version 1.4 from Adobe Systems Inc. and is defined by ISO 19005-1:2005</p>
 <p>A key element to this reproducibility is the requirement for PDF/A documents to be 100% self-contained. All of the information necessary for displaying the document in the same manner every time is embedded in the file. This includes, but is not limited to, all content (text, raster images and vector graphics), fonts, and color information. A PDF/A document is not permitted to be reliant on information from external sources (e.g. font programs and hyperlinks).</p>
@@ -27,7 +25,9 @@ modification_time: 2015-08-05T12:00:20+00:00
 <p>PDF/A-1b has the objective of ensuring reliable reproduction of the visual appearance of the document. PDF/A-1a includes all the requirements of PDF/A-1b and additionally requires that document structure be included (also known as being "tagged"), with the objective of ensuring that document content can be searched and repurposed.</p>
 <p>A PDF/A document can be identified as such through PDF/A-specific metadata located in the "http://www.aiim.org/pdfa/ns/id/" namespace. However, claiming to be PDF/A and being so are not necessarily the same.</p>
 <p class="manual_block"><b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/A1-b compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.</p>
-<h2>mPDF and PDF/A1-b compliance</h2>
+
+# mPDF and PDF/A1-b compliance
+
 <p>You can make mPDF produce mPDF/A1-b compliant files by setting:</p>
 
 {% highlight php %}
@@ -44,7 +44,9 @@ $this->PDFA = true; // Edit in config.php or set at runtime
 <li>a binary file marker&nbsp; (consisting of a comment line with 4 characters &gt; 127 ASCII) is added just after the first line (recommended n PDF-1.4 spec.)</li>
 </ul>
 <p>* <i>The PDF file version was changed to 1.5 in previous versions when 'active forms were introduced as an experiment'. These are no longer viable, and the rest of mPDF generated files meet 1.4 specification.</i></p>
-<h3>Colorspaces and ICC Profiles</h3>
+
+## Colorspaces and ICC Profiles
+
 <p>PDF files handle colours internally in a number of different colorspaces. PDFA files must have one defined (and embedded) colour profile for one colorspace.</p>
 <p>The 3 colour RGB colorspace is used most commonly in PDF/A documents, although you could select a 4-colour CMYK colorspace - but you cannot use both together, and SPOT colours are not permitted. RGB colorpsace is the default in mPDF for a PDF/A1-b document.</p>
 <p>It is likely that most content in a PDF file will be RGB unless you have specifically defined otherwise e.g. a CMYK JPG image file, or colours defined as CMYK() etc.</p>
@@ -66,7 +68,8 @@ $this->PDFA = true; // Edit in config.php or set at runtime
 $this->ICCProfile = 'eciRGB_v2';
 {% endhighlight %}
 
-<h3>Fonts</h3>
+## Fonts
+
 <p>All fonts must be embedded in a PDF/A file. mPDF normally uses the core Adobe fonts (Helvetica, Times, Courier, Symbol and Zapfdingbats) in a number of situations, and these font files are not available to embed. This affects:</p>
 <ul>
 <li><span class="parameter">$useCoreFontsOnly</span> is not permitted</li>
@@ -75,14 +78,18 @@ $this->ICCProfile = 'eciRGB_v2';
 <li>ISBN/ISSN barcode cannot use Helvetica for the ISBN number (above the bar)</li>
 </ul>
 <p>Also, the fonts GB, BIG5, UHC and SJIS which reference the free CJK font pack from Adobe cannot be used</p>
-<h3>Transparency and Annotations</h3>
+
+## Transparency and Annotations
+
 <p>Because PDF/A-1b has the objective of ensuring reliable reproduction of the visual appearance of the document, no objects may be transparent or semi-transparent. This affects:</p>
 <ul>
 <li>watermarks text or images</li>
 <li>images with the CSS property <span class="parameter">opacity</span> set</li>
 <li>annotation markers</li>
 </ul>
-<h2>Making it happen!</h2>
+
+# Making it happen!
+
 <p>When <code>$this-&gt;PDFA</code> is set to true, the following changes will automatically and silently happen:</p>
 <ul>
 <li>list bullets will use the characters from the current font (if available) e.g. • ⚬ ▪ </li>
@@ -93,7 +100,9 @@ $this->ICCProfile = 'eciRGB_v2';
 <li>an ICC sRGB Color Profile is added as /OuputIntent</li>
 </ul>
 <p>Only the first change may make a discernible change to the displayed document. All other changes are to the file structure.</p>
-<h3>Warnings</h3>
+
+## Warnings
+
 <p>Some problems can be fixed by mPDF, but will cause a change to the appearance of your document. By default they will generate warning messages. Once you have assessed the warnings, you can direct mPDF to make these changes automatically by setting in your script:</p>
 
 {% highlight php %}
@@ -153,7 +162,9 @@ $mpdf->PDFAauto = true; // Overrides warnings making changes when possible to fo
 <td>An equal sign "=" will be substituted if ▼ is not available in the default sans-serif font.</td>
 </tr>
 </tbody> </table>
-<h3>Fatal Errors</h3>
+
+## Fatal Errors
+
 <p>Some issues cannot be fixed automatically by mPDF and will generate fatal errors:</p>
 <ul>
 <li><span class="parameter">$useCoreFontsOnly</span> is set as <span class="smallblock">TRUE</span> (cannot embed core fonts)</li>
@@ -163,7 +174,9 @@ $mpdf->PDFAauto = true; // Overrides warnings making changes when possible to fo
 <li>PNG images with alpha channel transparency ('masks' not allowed)</li>
 <li>encryption is enabled</li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-x-1a-compliance.html" | prepend: site.baseurl }}">PDF/X-1a compliance</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfa.html" | prepend: site.baseurl }}">PDFA</a> - Create PDF/A1-b compliant document</li>
@@ -173,6 +186,8 @@ $mpdf->PDFAauto = true; // Overrides warnings making changes when possible to fo
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
 </ul>
-<h2>Useful resources</h2>
+
+# Useful resources
+
 <p>On-line PDFA Validator: <a href="http://www.validatepdfa.com/online.htm">http://www.validatepdfa.com/online.htm</a></p>
 <p>Useful info on PDFA: <a href="http://www.pdfa.org/doku.php?id=pdfa:en:techdoc">http://www.pdfa.org/doku.php?id=pdfa:en:techdoc</a></p>

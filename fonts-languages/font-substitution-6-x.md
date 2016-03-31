@@ -6,10 +6,10 @@ permalink: /fonts-languages/font-substitution-6-x.html
 modification_time: 2015-08-05T11:59:38+00:00
 ---
 
-
-
 <p>If a font or default font is declared in HTML or CSS, the font that is actually set is determined by:</p>
-<h3>Standard use</h3>
+
+## Standard use
+
 <p>If called in HTML/CSS the font-family name is converted to an mPDF font-family name (see <a href="{{ "/fonts-languages/font-names.html" | prepend: site.baseurl }}">Font names</a>) e.g.</p>
 
 {% highlight php %}
@@ -24,7 +24,11 @@ modification_time: 2015-08-05T11:59:38+00:00
 <li>If no font has yet been selected, the first font in the array <code>$</code><code>available_unifonts</code>* is selected</li>
 </ol>
 <p>* The array&nbsp; <code>$available_unifonts</code> is initially derived from <code>$this-&gt;fontdata</code> in the <span class="filename">config_fonts.php</span> file. (<code>trebuchetms['B']</code> will be converted to '<code>trebuchetmsB')</code></p>
-<h3>Core fonts</h3>
+
+## Core fonts
+
 <p>If core fonts only are specified by using <code>$mpdf = new mPDF('c')</code>, then all font requests will be substituted by Arial/Helvetica, Times or Courier i.e. the core PDF fonts. mPDF determines whether the requested font is a sans-serif, serif or monospace font (as above), and substitutes accordingly.&nbsp;</p>
-<h3>Character (font) substitution</h3>
+
+## Character (font) substitution
+
 <p>If some circumstances, individual characters are replaced by glyphs from another font - see <a href="{{ "/fonts-languages/character-substitution.html" | prepend: site.baseurl }}">character (font) substitution</a>.</p>

@@ -6,8 +6,6 @@ permalink: /reference/codepages-glyphs/useful-links.html
 modification_time: 2015-08-05T12:03:02+00:00
 ---
 
-
-
 <p>Fonts frequency (browsers)</p>
 <ul>
 <li><a href="http://www.codestyle.org/css/font-family/sampler-CombinedResults.shtml">http://www.codestyle.org/css/font-family/sampler-CombinedResults.shtml</a></li>

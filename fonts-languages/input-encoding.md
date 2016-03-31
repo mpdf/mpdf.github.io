@@ -6,8 +6,6 @@ permalink: /fonts-languages/input-encoding.html
 modification_time: 2015-08-05T11:59:33+00:00
 ---
 
-
-
 <p>mPDF accepts UTF-8 encoded text by default for all functions.</p>
 <p>You can use the following to allow you to write html code encoded in other than utf-8 (in functions like <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>):</p>
 
@@ -36,4 +34,4 @@ $mpdf->charset_in='windows-1252';
 <p>A list of codepages recognised by iconv() can be found at http://www.gnu.org/software/libiconv/</p>
 <p>In PHP5 you can list the codepages recognised by mb_ functions using mb_list_encodings().</p>
 <p>Also note that each function has different ways of failing if illegal characters are encountered.</p>
-<p>&nbsp;</p>
+

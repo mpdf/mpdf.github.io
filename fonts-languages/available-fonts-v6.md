@@ -6,8 +6,6 @@ permalink: /fonts-languages/available-fonts-v6.html
 modification_time: 2015-08-05T11:59:29+00:00
 ---
 
-
-
 <p>The following fonts are included with mPDF 6:</p>
 <table class="table"> <thead>
 <tr>
@@ -273,7 +271,7 @@ No licence information available</td>
 </td>
 <td>
 <p>GNU GPL 3</p>
-<p>&nbsp;</p>
+
 </td>
 <td>
 <p>Cree</p>
@@ -341,7 +339,9 @@ No licence information available</td>
 <table class="table"> <tbody>
 <tr>
 <td colspan="2">
-<h3>Adobe Asian font-pack</h3>
+
+## Adobe Asian font-pack
+
 </td>
 </tr>
 <tr>
@@ -364,7 +364,9 @@ No licence information available</td>
 </tr>
 <tr>
 <td colspan="2">
-<h3>Generic font-family</h3>
+
+## Generic font-family
+
 </td>
 </tr>
 <tr>

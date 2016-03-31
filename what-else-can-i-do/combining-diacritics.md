@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/combining-diacritics.html
 modification_time: 2015-08-05T12:00:23+00:00
 ---
 
-
-
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF v6.0, support for <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> makes this section redundant if you use the OTL capability available in most fonts.</div>
 <p>In Unicode, letters with diacritics (e.g. ÁáȦȧÄä) are usually represented as a single character e.g. Unicode U+0196 is an A Umlaut. There are 4 blocks in Unicode of diacritics or 'marks' which can be used to combine with adjacent letters: Combining Diacritical Marks (U+0300 - U+036F), Combining Diacritical Marks Supplement (U+1DC0 - U+1DFF), Combining Marks for Symbols(U+20D0 - U+20FF) and Combining Half Marks (U+FE20 - U+FE2F).</p>
 <p>Software applications use special positioning information stored in OpenType font files to resposition the diacritic/mark depending on the context. mPDF (&lt; v 6.0) does not support this repositioning and is dependent on the font design and original placement of the diacritic:</p>

@@ -6,8 +6,6 @@ permalink: /tables/table-layout.html
 modification_time: 2015-08-05T11:59:44+00:00
 ---
 
-
-
 <p>mPDF will atempt to layout tables using the same algorithm recommended by the HTML specifications (see <a href="{{ "/tables/auto-layout-algorithm.html" | prepend: site.baseurl }}">Auto-layout algorithm</a>). However, the constraints of fitting content to the page size means that the recommended algorithm has to be altered.</p>
 <p>In general, mPDF places more priority on producing a pleasing, efficiently laid out table than it does on respecting defined values e.g. &lt;table width="300px"&gt; or &lt;td width="30%"&gt;</p>
 <p>If the result is not what you want, consider using some of the following to control the layout:</p>
@@ -23,7 +21,9 @@ modification_time: 2015-08-05T11:59:44+00:00
 <li>&lt;table style="page-break-inside:avoid"&gt; to force the table onto one page.</li>
 <li>&lt;table style="overflow: visible|hidden|wrap"&gt; to control wide tables or tables with specific widths specified</li>
 </ul>
-<h3>Overriding the Auto- Layout</h3>
+
+## Overriding the Auto- Layout
+
 <p>Other methods to override the default layout algorithm.</p>
 <p><span class="parameter">$keep_table_proportions </span></p>
 <p>If the table width is set greater than the page width allows, mPDF will by default ignore any defined sizes and attempt to auto-layout the table to the page width. This will result in relative column widths etc. being lost.</p>

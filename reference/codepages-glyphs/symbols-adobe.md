@@ -6,10 +6,8 @@ permalink: /reference/codepages-glyphs/symbols-adobe.html
 modification_time: 2015-08-05T12:02:49+00:00
 ---
 
+# Symbols
 
-
-<h2>Symbols</h2>
-<p>&nbsp;</p>
 <table class="table"><tbody>
 <tr>
 <td>&nbsp;</td>
@@ -212,5 +210,4 @@ modification_time: 2015-08-05T12:02:49+00:00
 <td></td>
 </tr>
 </tbody></table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+

@@ -6,8 +6,6 @@ permalink: /reference/mpdf-functions/circulartext.html
 modification_time: 2015-08-05T12:00:43+00:00
 ---
 
-
-
 <p>mPDF &gt;= 5.4</p>
 <p>function CircularText($x, $y, $r, $text, $align='top|bottom', fontfamily='', fontsize=0, fontstyle='', $kerning=120, $fontwidth=100, $divider='') {</p>
 <p>x: abscissa of center

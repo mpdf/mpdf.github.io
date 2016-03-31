@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/setdoctemplate.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3)</p>
 <p>SetDocTemplate – Specify an external PDF file to use as a template</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetDocTemplate</b> ( [ string <span class="parameter">$file</span> [, boolean <span class="parameter">$continue</span> ]])</p>
 <p>Specify an external PDF file to use as a template. Each page of the external source PDF file will be used as a template for the corresponding page in your new document. If the current mPDF document has more pages than the external PDF source document, the last page will (optionally) continue to be used for any remaining pages.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">file</span></p>
 <p class="manual_param_dd">This parameter specifies the source PDF file used as the template document.&nbsp; <span class="parameter">file</span> should be a relative path to a local file.
 
@@ -24,7 +26,9 @@ modification_time: 2015-08-05T12:01:00+00:00
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If you want to turn the template off, just use <code>$mpdf-&gt;SetDocTemplate()</code> with no parameters.</div>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -33,7 +37,8 @@ modification_time: 2015-08-05T12:01:00+00:00
 <td>Function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -65,7 +70,8 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
 <li><a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li>
@@ -80,4 +86,4 @@ $mpdf->Output();
 
 </li>
 </ul>
-<p>&nbsp;</p>
+

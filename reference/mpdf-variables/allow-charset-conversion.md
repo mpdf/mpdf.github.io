@@ -6,20 +6,23 @@ permalink: /reference/mpdf-variables/allow-charset-conversion.html
 modification_time: 2015-08-05T12:01:34+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">boolean <b>allow_charset_conversion</b></p>
 <p>When <span class="smallblock">TRUE</span>, mPDF will attempt to parse the character set of any input HTML. You can also use it together with <span class="parameter">charset_in</span> to manually set an input encoding.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">allow_charset_conversion</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span></p>
 <p class="manual_param_dd"><b>Values</b>
 
 <i><span class="smallblock">TRUE</span></i>: <span class="smallblock">DEFAULT</span> Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">charset_in</span> 
 
 <span class="smallblock">FALSE</span>: Expect all text input as UTF-8 encoding.</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -88,9 +91,11 @@ $mpdf->Output();
 {% endhighlight %}
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> mPDF will convert pages with character sets which work with the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv()</a></div>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML code to document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/charset-in.html" | prepend: site.baseurl }}">charset_in</a> - character encoding of input text</li>
 </ul>
-<p>&nbsp;</p>
+

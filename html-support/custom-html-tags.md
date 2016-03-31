@@ -6,13 +6,11 @@ permalink: /html-support/custom-html-tags.html
 modification_time: 2015-08-05T11:59:42+00:00
 ---
 
-
-
 <p>mPDF uses a number of custom HTML tags (see <a href="{{ "/reference/html-control-tags/overview.html" | prepend: site.baseurl }}">HTML Control Tags - Overview</a>).</p>
 <p>In addition to those, the custom tags &lt;ttz&gt; &lt;tts&gt; and &lt;tta&gt; are reserved for use internally within the mPDF program to denote the core symbol, dingbat and arial characters.</p>
-<h2>Invalid HTML?
 
-</h2>
+# Invalid HTML?
+
 <p>(mPDF &gt;= 2.2)</p>
 <p>If you want to hide mPDF custom tags from a browser, enclose any mPDF code within:</p>
 

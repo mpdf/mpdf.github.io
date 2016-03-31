@@ -6,8 +6,6 @@ permalink: /headers-footers/rotated-pages.html
 modification_time: 2015-08-05T11:59:55+00:00
 ---
 
-
-
 <p>Special case - rotated Portrait headers on Landscape pages
 
 ==========================================================</p>

@@ -6,16 +6,18 @@ permalink: /reference/mpdf-functions/setfooter.html
 modification_time: 2015-08-05T12:01:01+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetFooter – Sets a page header</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetFooter</b> ([ mixed <span class="parameter">$footer</span> [, string <span class="parameter">$side</span> ]])</p>
 <p>Set a page footer.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">footer</span></p>
 <p class="manual_param_dd">This parameter specifies the content of the page footer. It can accept a string or array. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> or array() is passed, this will clear the page footer.
 
@@ -163,7 +165,9 @@ O - set the footer for <span class="smallblock">ODD</span> pages
 E - set the footer for <span class="smallblock">EVEN</span> pages
 
 <span class="smallblock">BLANK</span> - sets both <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> page footers</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -172,17 +176,21 @@ E - set the footer for <span class="smallblock">EVEN</span> pages
 <td>The <span class="parameter">side</span> parameter was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
+
 <p>For examples and further information please see:</p>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 1</a></li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterfontsize.html" | prepend: site.baseurl }}">$defaultfooterfontsize</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">$defaultfooterfontstyle</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">$defaultfooterline</a></li>
 </ul>
-<p>&nbsp;</p>
+

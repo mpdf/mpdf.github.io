@@ -6,8 +6,6 @@ permalink: /about-mpdf/requirements-v5.html
 modification_time: 2015-08-05T11:59:20+00:00
 ---
 
-
-
 <p>mPDF requires a minimum of PHP 4.3.10 or PHP 5.0.3</p>
 <p>mPDF v5.7.1 minimum is required for PHP&gt;=5.5</p>
 <p>(Since version 1, mPDF has been developed on PHP5 only, but should still be compatible with PHP4&gt;=4.3.10)</p>

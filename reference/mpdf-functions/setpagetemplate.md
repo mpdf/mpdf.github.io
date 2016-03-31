@@ -6,19 +6,23 @@ permalink: /reference/mpdf-functions/setpagetemplate.html
 modification_time: 2015-08-05T12:01:07+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3)</p>
 <p>SetPageTemplate – Specify a page from an external PDF file to use as a template</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetPageTemplate</b> ([ int <span class="parameter">$templateID</span> ])</p>
 <p>Specify a page from an external PDF file to use as a template. The page must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. Once a 'page template' has been set, the template is inserted on every subsequent page of the document. The template is added to the page at the same time as a new page is started (in the Header).</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">templateID</span></p>
 <p class="manual_param_dd">This parameter specifies the ID of the page template to use. Value must be a valid template ID from <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>.
 
 <span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> will clear the template, so subsequent pages will not have the template added.</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -27,7 +31,8 @@ modification_time: 2015-08-05T12:01:07+00:00
 <td>Function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -65,7 +70,8 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
 <li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
@@ -81,4 +87,4 @@ $mpdf->Output();
 
 </li>
 </ul>
-<p>&nbsp;</p>
+

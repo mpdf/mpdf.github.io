@@ -6,11 +6,11 @@ permalink: /reference/html-control-tags/textcircle.html
 modification_time: 2015-08-05T12:01:29+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 5.4)</p>
 <p>textcircle – Draw a circle using specified text</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>textcircle</b>&nbsp; <span class="parameter">r</span>&nbsp; <span class="parameter">top-text</span>&nbsp; <span class="parameter">bottom-text</span> [ <span class="parameter">divider</span> ][ <span class="parameter">space-width</span> ] [ <span class="parameter">char-width</span> ] [ <span class="parameter">href</span> ] /&gt;</p>
 <p>Draw a circle using specified text. One or both of top-text and/or bottom-text must be defined. The radius and font-size are user-defined, whilst the width and height of the generated object will be calculated from these values. Font-size should be set for &lt;textcircle&gt; using in-line CSS or specified in a CSS stylesheet as for any standard HTML tag. Other CSS styles supported on Circular Text are: border, margin, padding, color, background-color, font-family, font-size, font-weight, font-style, display, visibility, and opacity.</p>
 
@@ -19,7 +19,9 @@ modification_time: 2015-08-05T12:01:29+00:00
 <p>Circular Text is displayed as though an in-line element. Automatic kerning will be applied to the text if <a href="{{ "/reference/mpdf-variables/usekerning.html" | prepend: site.baseurl }}">useKerning</a> is <span class="smallblock">TRUE</span>.&nbsp;</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 5.6 the textcircle was displayed with a white background. in &gt;= 5.6 the background has been changed to transparent by default.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">r</span></p>
 <p class="manual_param_dd">Radius of circle. Any valid <span class="smallblock">LENGTH</span> can be entered<span class="smallblock">
 
@@ -54,7 +56,9 @@ Either top-text or bottom-text (or both) must be defined.
 <p class="manual_param_dd">This parameter should be specified as an integer defining the width of each character as a percentage of normal.
 
 <span class="smallblock">DEFAULT</span>: 100</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -71,7 +75,8 @@ Either top-text or bottom-text (or both) must be defined.
 </td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -95,8 +100,8 @@ style="background-color: #FFAAAA; border:1px solid red; padding: 0.3em; margin: 
 ?>
 {% endhighlight %}
 
-<p>&nbsp;</p>
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/circulartext.html" | prepend: site.baseurl }}">CircularText()</a> - PHP equivalent to &lt;textcircle&gt;</li>
 </ul>

@@ -6,8 +6,6 @@ permalink: /reference/mpdf-variables/smcapsscale.html
 modification_time: 2015-08-05T12:02:29+00:00
 ---
 
-
-
 <p>mPDF &gt;= 5.0
 
 Control SmallCaps appearance

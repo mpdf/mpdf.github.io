@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/images.html
 modification_time: 2015-08-05T12:00:04+00:00
 ---
 
-
-
 <p>Images are supported by mPDF: GIF, PNG, JPG, WMF, SVG, BMP and generated images from <acronym title="PHP: Hypertext Preprocessor">PHP </acronym> scripts.</p>
 <p>Transparent GIF images are supported, and so are interlaced and transparent PNG files, including transparency using alpha channel.</p>
 <table class="table"> <tbody>
@@ -72,7 +70,9 @@ $this->img_dpi = 96;
 <li>Watermarks</li>
 <li>CSS background-image</li>
 </ul>
-<h3>Size constraint</h3>
+
+## Size constraint
+
 <p>When writing HTML, image size is automatically constrained to current margins and page position. An extra parameter added to end of the Image() function allows you to override this:</p>
 
 {% highlight php %}
@@ -94,7 +94,8 @@ $mpdf->Image('files/images/frontcover.jpg',0,0,210,297,'jpg','',true, false);
 </div>
 {% endhighlight %}
 
-<h3>Float and Text wrapping</h3>
+## Float and Text wrapping
+
 <p>mPDF partially supports the CSS style <code>float</code> with IMG elements. Text will wrap around these images, with certain limitations:</p>
 <ul>
 <li>only 1 float:right and 1 float:left image are allowed at a time i.e. you cannot overlap 2 right or 2 left</li>
@@ -103,21 +104,26 @@ $mpdf->Image('files/images/frontcover.jpg',0,0,210,297,'jpg','',true, false);
 <li>disabled when columns are being used</li>
 </ul>
 <p>If ignored, the image is output as a normal in-line element.</p>
-<h3>Performance</h3>
+
+## Performance
+
 <p>JPG images are quickest and most efficient.</p>
 <p>PNG images with no alpha channel and not interlaced are next best.</p>
 <p>GIF images are extremely slow if you do not have the appropriate GD library installed (above 2.0.8).</p>
 <p>GIF images with GD library installed are quite fast.</p>
 <p>PNG images which are interlaced or have alpha channel transparency, and GIF images use the GD library if it is installed.</p>
 <p>Any process that requires the GD library uses a large amount of memory - to create a GD image in memory can use up to 10 x the file size (e.g. a 690K GIF file read into imagecreatefromstring() used about 5MB of PHP memory).</p>
-<h3>Dynamically generated Images</h3>
+
+## Dynamically generated Images
+
 <p>You can define a script which generates an image just as you can in HTML:</p>
 
 {% highlight php %}
 <img src="files/my_file_generating_script.php?color=red" />
 {% endhighlight %}
 
-<h3>Embedded Image data</h3>
+## Embedded Image data
+
 <p>Embedded image data can be used either in &lt;img&gt; elements or in CSS:background. gif, png and jpeg are supported.</p>
 
 {% highlight php %}
@@ -130,7 +136,8 @@ $mpdf->Image('files/images/frontcover.jpg',0,0,210,297,'jpg','',true, false);
 div { background: url(data:image/gif;base64,....) no-repeat 4px center; }
 {% endhighlight %}
 
-<h3>Image data as a Variable</h3>
+## Image data as a Variable
+
 <p>A PHP variable containing image data can be passed directly to mPDF. You need to allocate the data to a class variable
 
 (you can make any name up) e.g.</p>
@@ -157,7 +164,8 @@ $mpdf->WriteHTML($html);
 $mpdf->Image('var: myvariable',0,0);
 {% endhighlight %}
 
-<h2>SVG images</h2>
+# SVG images
+
 <p>mPDF partially supports SVG images, including as embedded HTML e.g.:</p>
 
 {% highlight php %}
@@ -167,12 +175,16 @@ $mpdf->Image('var: myvariable',0,0);
 {% endhighlight %}
 
 <p>All units with no dimension are taken as pixels.</p>
-<h3>Size of SVG image</h3>
+
+## Size of SVG image
+
 <p>The viewBox attribute of the &lt;svg&gt; element is used (if present) to determine the intrinsic size of the image.</p>
 <p>If viewBox is not present, a width and/or height be specified e.g. width="400" height="200"</p>
 <p>NB preserveAspectRatio is not supported.</p>
 <p>If none of these are present, the intrinsic size will be set as the width of containing block (height = width).</p>
-<h3>Partially supported</h3>
+
+## Partially supported
+
 <ul>
 <li>embedded images (but not embedded SVG/WMF [vector] images)</li>
 <li>tspan, tref</li>
@@ -183,7 +195,9 @@ $mpdf->Image('var: myvariable',0,0);
 <li>automatic font selection for text*</li>
 </ul>
 <p>* As from mPDF 6.0 there is limited support for CSS classes and for automatic font selection (see the defined constants at the top of classes/svg.php file).</p>
-<h3>Not supported</h3>
+
+## Not supported
+
 <ul>
 <li>filters</li>
 <li>&lt;marker&gt;</li>
@@ -236,6 +250,5 @@ $mpdf->Image('var: myvariable',0,0);
 </body>
 {% endhighlight %}
 
-<p>&nbsp;</p>
 <ul> </li>
 </ul>

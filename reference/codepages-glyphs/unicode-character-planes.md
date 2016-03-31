@@ -6,9 +6,6 @@ permalink: /reference/codepages-glyphs/unicode-character-planes.html
 modification_time: 2015-08-05T12:03:01+00:00
 ---
 
-
-
-<p>&nbsp;</p>
 <p>As of Unicode 5.1, The BMP includes the following scripts:</p>
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/Basic_Latin">Basic Latin</a> (0000–007F)</li>
@@ -161,7 +158,7 @@ modification_time: 2015-08-05T12:03:01+00:00
 <li><a href="http://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms">Halfwidth and Fullwidth Forms</a> (FF00–FFEF)</li>
 <li><a href="http://en.wikipedia.org/wiki/Unicode_Specials">Specials</a> (FFF0–FFFF)</li>
 </ul>
-<p>&nbsp;</p>
+
 <table class="table"> <tbody>
 <tr> <th>&nbsp; </th> <th> 0</th> <th> 1</th> <th> 2</th> <th> 3</th> <th> 4</th> <th> 5</th> <th> 6</th> <th> 7</th> <th> 8</th> <th> 9</th> <th> A</th> <th> B</th> <th> C</th> <th> D</th> <th> E</th> <th> F</th> </tr>
 <tr> <th> 00 </th>

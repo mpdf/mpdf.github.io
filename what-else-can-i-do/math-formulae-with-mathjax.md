@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/math-formulae-with-mathjax.html
 modification_time: 2015-08-05T12:00:22+00:00
 ---
 
-
-
 <p>mPDF does not support MathML or LaTeX math formulae directly. However you can include math in a PDF document making use of <a href="http://www.mathjax.org/">MathJax</a> following the steps below.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> See alternative method to this in <a href="{{ "/what-else-can-i-do/math-with-mathjax-2.html" | prepend: site.baseurl }}">Math with MathJax 2</a></div>

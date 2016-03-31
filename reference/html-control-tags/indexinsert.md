@@ -6,16 +6,18 @@ permalink: /reference/html-control-tags/indexinsert.html
 modification_time: 2015-08-05T12:01:24+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 3.0)</p>
 <p>indexinsert&nbsp; — Generate an Index for the document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>indexinsert</b> [ <span class="parameter">font</span> ] [ <span class="parameter">font-size</span> ] [ <span class="parameter">line-spacing</span> ] [ <span class="parameter">cols</span> ] [ <span class="parameter">gap</span> ] [ <span class="parameter">offset</span> ] [ <span class="parameter">links</span> ] [ <span class="parameter">usedivletters</span> ] [ <span class="parameter">div-font</span> ] [ <span class="parameter">div-font-size</span> ] /&gt;</p>
 <p>From mPDF v 6.0 onwards, the attributes have changed. See <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a> for more information. The following is for mPDF &gt;= v6.0:</p>
 <p class="manual_block">&lt;<b>indexinsert</b> [ <span class="parameter">links</span> ] [ <span class="parameter">usedivletters</span> ] [ <span class="parameter">collation</span> ] [ <span class="parameter">collation-group</span> ] /&gt;</p>
 <p>Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>.</p>
-<h2>Attributes</h2>
+
+# Attributes
+
 <p class="manual_param_dt"><span class="parameter">font </span></p>
 <p class="manual_param_dd">Set the font-family for the Index.
 
@@ -88,7 +90,9 @@ NB Will always appear in <span class="smallblock">BOLD</span> style.
 NB This will not affect the overall order of entries, which is determined by the value above.
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted - grouping occurs under the first letter of the index entries.</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -103,7 +107,8 @@ NB This will not affect the overall order of entries, which is determined by the
 Parameters added: <span class="parameter">collation</span> | <span class="parameter">collation-group</span></td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1 (mPDF >= 6.0)
@@ -128,7 +133,8 @@ Example #1 (mPDF >= 6.0)
 </html>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a></li>
 </ul>

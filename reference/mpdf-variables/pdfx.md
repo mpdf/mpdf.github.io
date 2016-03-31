@@ -6,16 +6,18 @@ permalink: /reference/mpdf-variables/pdfx.html
 modification_time: 2015-08-05T12:02:19+00:00
 ---
 
-
-
 <div>
 <div>
 <p>(mPDF &gt;= 5.1)</p>
 <p>PDFX – Create PDF/X-1a compliant document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>PDFX</b></p>
 <p>Specify whether to create a PDF/X-1a compliant document.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">PDFX</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
 <p class="manual_param_dd"><b>Values</b>
 
@@ -24,7 +26,9 @@ modification_time: 2015-08-05T12:02:19+00:00
 <span class="smallblock">FALSE</span>: normal PDF document
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -33,7 +37,9 @@ modification_time: 2015-08-05T12:02:19+00:00
 <td>Variable was added.</td>
 </tr>
 </tbody> </table>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-a1-b-compliance.html" | prepend: site.baseurl }}">PDF/A1-b compliance</a></li>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-x-1a-compliance.html" | prepend: site.baseurl }}">PDF/X-1a compliance</a></li>
@@ -43,6 +49,6 @@ modification_time: 2015-08-05T12:02:19+00:00
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
 </ul>
-<p>&nbsp;</p>
+
 </div>
 </div>

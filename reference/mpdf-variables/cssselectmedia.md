@@ -6,16 +6,18 @@ permalink: /reference/mpdf-variables/cssselectmedia.html
 modification_time: 2015-08-05T12:01:49+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 4.4)</p>
 <p>CSSselectMedia – Selects which media-dependent CSS stylesheets to use</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>CSSselectMedia</b></p>
 <p>Selects which media-dependent CSS stylesheets to use. mPDF supports internal and external CSS stylesheets, if the media property is set to "all", or matches the value of <span class="parameter">CSSselectMedia</span>. The <span class="parameter">@media</span> selector within stylesheets is also supported.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This variable can be changed either in the configuration file <span class="filename">config.php</span>&nbsp; or at runtime</div>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">CSSselectMedia</span>&nbsp;&nbsp;</p>
 <p class="manual_param_dd"><b>Values</b>
 
@@ -26,7 +28,9 @@ modification_time: 2015-08-05T12:01:49+00:00
 [any other valid CSS @media selector, except "all"]
 
 <span class="smallblock">DEFAULT</span>: "print"</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -35,4 +39,4 @@ modification_time: 2015-08-05T12:01:49+00:00
 <td>Variable was added.</td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
+

@@ -6,20 +6,22 @@ permalink: /reference/mpdf-functions/createindex.html
 modification_time: 2015-08-05T12:00:43+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.2)</p>
 <p>CreateIndex — Generate an Index for the document</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function is removed in mPDF v6.0 and replaced by <a href="{{ "/reference/mpdf-functions/insertindex.html" | prepend: site.baseurl }}">InsertIndex</a>()</div>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>CreateIndex</b> ([ int <span class="parameter">$numberofcolumns</span> [, float <span class="parameter">$fontsize</span> [, float <span class="parameter">$linespacing</span> [, float <span class="parameter">$offset</span> [, int <span class="parameter">$usedivletters</span> [, float <span class="parameter">$divlettersfontsize</span> [, float <span class="parameter">$columngap</span> [, string <span class="parameter">$font</span> [, string <span class="parameter">$divletterfont</span> [, boolean <span class="parameter">$uselinking</span> ]]]]]]]]])</p>
 <p>Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 2.2 the function CreateReference() was used. CreateIndex() is now the preferred form.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="parameter">uselinking</span> was added in mPDF 3.0</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">numberofcolumns</span></p>
 <p class="manual_param_dd">Set the number of (vertical) columns to use for the Index
 
@@ -77,8 +79,9 @@ modification_time: 2015-08-05T12:00:43+00:00
 <span class="smallblock">BLANK</span>&nbsp;or omitted, 0 or <span class="smallblock">FALSE</span>: do not add links to the Index
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
-<p>&nbsp;</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -97,7 +100,8 @@ modification_time: 2015-08-05T12:00:43+00:00
 <td>Default value for <span class="parameter">linespacing</span> changed to 1.2</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -128,7 +132,9 @@ $mpdf=Output();
 {% endhighlight %}
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> There is no HTML equivalent of CreateIndex()</div>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a> - Add an Index entry in the document </li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; - Mark an Index entry in the document </li>

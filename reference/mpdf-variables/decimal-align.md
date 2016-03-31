@@ -6,9 +6,8 @@ permalink: /reference/mpdf-variables/decimal-align.html
 modification_time: 2015-08-05T12:01:49+00:00
 ---
 
+# Decimal Mark alignment in table columns
 
-
-<h2>Decimal Mark alignment in table columns</h2>
 <p>CSS text-align supports decimal mark characters in table cells (TD and TH). HTML attributes "align" and "char" can also be used.</p>
 <p>Characters to be used for alignment must be defined in the array <code>$this-&gt;decimal_align</code> in <span class="filename">config.php</span></p>
 <p>By default these are : period "."&nbsp; comma&nbsp; ","&nbsp; middot "\B7" and arabic decimal mark "\66B"</p>

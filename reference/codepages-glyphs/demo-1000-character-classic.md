@@ -6,8 +6,6 @@ permalink: /reference/codepages-glyphs/demo-1000-character-classic.html
 modification_time: 2015-08-05T12:02:56+00:00
 ---
 
-
-
 <p>南朝梁敕员外散骑侍郎 周兴嗣 撰</p>
 <p>天地玄黄，宇宙洪荒，日月盈昃，辰宿列张，
 

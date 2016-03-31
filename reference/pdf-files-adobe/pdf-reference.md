@@ -6,8 +6,6 @@ permalink: /reference/pdf-files-adobe/pdf-reference.html
 modification_time: 2015-08-05T12:03:04+00:00
 ---
 
-
-
 <p>'PDF Reference' provides a description of the Portable Document Format, and can be downloaded from Adobe at <a href="http://www.adobe.com/devnet/pdf/pdf_reference.html">http://www.adobe.com/devnet/pdf/pdf_reference.html</a> and <a href="http://www.adobe.com/devnet/pdf/pdf_reference_archive.html">http://www.adobe.com/devnet/pdf/pdf_reference_archive.html</a></p>
 <p>PDF files produced from this program are marked as %PDF1.4</p>
 <table class="table"> <thead>
@@ -54,4 +52,4 @@ Version
 <td>9.x</td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
+

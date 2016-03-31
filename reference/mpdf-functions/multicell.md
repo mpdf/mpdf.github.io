@@ -6,8 +6,6 @@ permalink: /reference/mpdf-functions/multicell.html
 modification_time: 2015-08-05T12:00:49+00:00
 ---
 
-
-
 <p><code><b>MultiCell</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text[, <b>mixed</b> border[, <b>string</b> align[, <b>integer</b> fill[, <b>mixed</b> link[, <b>string</b> directionality[, <b>boolean</b> encoded]]]]]])</code></p>
 <p>Writes a block of text directly to the PDF document at the current position. Lines are wrapped at the margins.
 

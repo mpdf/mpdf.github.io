@@ -6,16 +6,18 @@ permalink: /reference/html-control-tags/barcode.html
 modification_time: 2015-08-05T12:01:19+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 4.0)</p>
 <p>barcode – Add a Barcode to the document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>barcode</b>&nbsp; <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;</p>
 <p>Add a Barcode to the document.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> and the example file for further information.</div>
-<h2>Attributes</h2>
+
+# Attributes
+
 <p class="manual_param_dt"><span class="parameter">code</span></p>
 <p class="manual_param_dd">Specifies the code to translate to a barcode.
 
@@ -94,7 +96,9 @@ NB Ignored for Postcode barcodes
 Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODABAR and CODE11
 
 <span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>)</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -103,7 +107,8 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 <td>The function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Examples
@@ -139,7 +144,7 @@ Examples
 <barcode code="A34698735B" type="CODABAR" />
 {% endhighlight %}
 
-<h2>Notes</h2>
+# Notes
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
 
@@ -213,7 +218,8 @@ echo $bc->getChecksum('9344543204454', 'C93');
 exit;
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">Barcodes</a> - More information on types of barcode
 

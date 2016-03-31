@@ -6,15 +6,17 @@ permalink: /what-else-can-i-do/graphs.html
 modification_time: 2015-08-05T12:00:16+00:00
 ---
 
-
-
 <p>mPDF can generate graphs from table data. This requires the <b>JPGraph</b> program, which is an open-source PHP library available from <a href="http://www.aditus.nu/jpgraph/" target="_blank">http://www.aditus.nu/jpgraph/</a></p>
 <p>Graphs have only been tested with the PHP5 version of JPGraph.</p>
-<h3>Installation</h3>
+
+## Installation
+
 <p>JPGraph needs to be installed on your server. Follow the instructions for installing JPGraph, including configuring the script to access the TTF fonts necessary to produce JPGraphs.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Check that you have a subfolder in your /mpdf/ folder named /graph_cache/ and make sure it is writeable.</div>
-<h3>Using Graphs in mPDF</h3>
+
+## Using Graphs in mPDF
+
 <p>See the example below. The table containing data must precede the graph. Nested tables will be ignored.</p>
 
 {% highlight php %}
@@ -81,12 +83,10 @@ exit;
 ?>
 {% endhighlight %}
 
-<p>&nbsp;</p>
-<h3>Result
+## Result
 
-</h3>
 <p>This should produce a PDF file like this:</p>
-<p>&nbsp;</p>
+
 <table class="table"> <tbody>
 <tr>
 <td>&nbsp;</td>
@@ -135,5 +135,5 @@ exit;
 </tr>
 </tbody> </table>
 <p><img src="files/images/example_graph.png" alt="example_graph.png" /></p>
-<p>&nbsp;</p>
+
 <p>Note that graphs can be rotated as with images using&lt;jpgraph rotate="90" ... (see <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)</p>

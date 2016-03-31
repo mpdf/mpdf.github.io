@@ -6,12 +6,10 @@ permalink: /what-else-can-i-do/fixed-position-blocks.html
 modification_time: 2015-08-05T12:00:00+00:00
 ---
 
-
-
 <p>mPDF &gt;= 4.0</p>
-<h2>Position
 
-</h2>
+# Position
+
 <p>The CSS property "position" is <b>partially</b> supported in mPDF, allowing a block element (div etc.) to be placed at a fixed position on the page.</p>
 
 {% highlight php %}
@@ -55,7 +53,9 @@ top|left|bottom|right: LENGTH (any valid length unit: em, mm, px, % etc.) DEFAUL
 <div class="alert alert-info" role="alert"><strong>Note:</strong> width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left -right -top -bottom, are all supported.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML reiteratively until it finds a reasonable fit to the available size.</div>
-<h3>Overflow</h3>
+
+## Overflow
+
 <p>The CSS property "overflow" determines how text is displayed if the block element size is too small for the text.</p>
 
 {% highlight php %}
@@ -65,7 +65,8 @@ overflow: visible|hidden|auto  DEFAULT = visible
 <p><span class="parameter">visible</span> - all text will show, even if it lies outside the defined block element</p>
 <p><span class="parameter">hidden</span> - text will be 'clipped' so that overflowing text is not visible</p>
 <p><span class="parameter">auto</span> - text will be automatically reduced in size if required to fit inside the block element</p>
-<h2>Example</h2>
+
+# Example
 
 {% highlight php %}
 Example #1
@@ -130,4 +131,3 @@ Example #3 - Rotated barcode at the bottom right corner of the page
 </div>
 {% endhighlight %}
 
-<p>&nbsp;</p>

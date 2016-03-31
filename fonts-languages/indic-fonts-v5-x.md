@@ -6,8 +6,6 @@ permalink: /fonts-languages/indic-fonts-v5-x.html
 modification_time: 2015-08-05T11:59:36+00:00
 ---
 
-
-
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 6.0 this has been superseded by the use of <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>.</div>
 <p>Special fonts are provided for several Indic languages.</p>
 <table class="table"> <thead>

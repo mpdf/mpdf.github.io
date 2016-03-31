@@ -6,13 +6,12 @@ permalink: /headers-footers/method-1.html
 modification_time: 2015-08-05T11:59:50+00:00
 ---
 
-
-
 <p>This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control over styling. There are several variants of this method, using string or array. The simplest form does not allow different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.</p>
-<h2>Setting a Header/Footer at the start of a document
 
-</h2>
-<h3>Variant #1 (Simplest form)</h3>
+# Setting a Header/Footer at the start of a document
+
+## Variant #1 (Simplest form)
+
 <p>Use a single command with a string as parameter, to set a header/footer at the right margin of the page on <span class="smallblock">ODD</span> pages, and left margin for <span class="smallblock">EVEN</span> pages (if <span class="smallblock">DOUBLE-SIDED</span> document), or right margin for all pages.</p>
 
 {% highlight php %}
@@ -27,7 +26,8 @@ $mpdf->WriteHTML('Document text');
 $mpdf->Output();
 {% endhighlight %}
 
-<h3>Variant #2 (Split string)</h3>
+## Variant #2 (Split string)
+
 <p>Set a header/footer in three parts. The text string defines three strings divided by '|' which will set a header at the left/centre/right margin of the page on <span class="smallblock">ODD</span> pages and right/centre/left margin for <span class="smallblock">EVEN</span> pages (if&nbsp; <span class="smallblock">DOUBLE-SIDED</span> document), or left/centre/right margin for all pages. Note the use of {PAGENO} which can be used in any type of header or footer.</p>
 
 {% highlight php %}
@@ -44,7 +44,8 @@ $mpdf->WriteHTML('Document text');
 $mpdf->Output();
 {% endhighlight %}
 
-<h3>Variant #3 (Controlling style with variables)</h3>
+## Variant #3 (Controlling style with variables)
+
 <p>This is the same as Variant #2, but you can control some aspects of style for the headers/footers by altering certain mPDF variables.</p>
 
 {% highlight php %}
@@ -73,9 +74,8 @@ $mpdf->WriteHTML('Document text');
 $mpdf->Output();
 {% endhighlight %}
 
-<h3>Variant #4 (Array) - DEPRACATED
+## Variant #4 (Array) - DEPRACATED
 
-</h3>
 <p>Set a header/footer using an array of values. This allows greater control over styling. Recommended to use Variant #5, which is very similar, but specifies <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> forms separately.</p>
 
 {% highlight php %}
@@ -138,9 +138,8 @@ $arr = array (
 $mpdf->SetHeader($arr);
 {% endhighlight %}
 
-<h3>Variant #5 (Array)
+## Variant #5 (Array)
 
-</h3>
 <p>Set a header/footer using an array of values. This allows greater control over styling.&nbsp; <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately using the second parameter of <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>.</p>
 
 {% highlight php %}
@@ -212,7 +211,8 @@ $arr['L']['content'] = 'Chapter 2';
 $mpdf->SetHeader($arr, 'O');
 {% endhighlight %}
 
-<h2>Changing Header/Footer during the document</h2>
+# Changing Header/Footer during the document
+
 <p>This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use, whichever of the Variants above you are using. When a new page is added to the document (e.g. using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;) mPDF does the following:</p>
 <ul>
 <li>writes the footer for the current page</li>
@@ -285,7 +285,8 @@ $mpdf->WriteHTML('Second section text...');
 $mpdf->Output();
 {% endhighlight %}
 
-<h2>Table of Contents</h2>
+# Table of Contents
+
 <p>Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Contents gets so clumsy, it is recommended that you consider one of the <span class="smallblock">NAMED</span> methods. Here for the record is how you would do it:</p>
 
 {% highlight php %}
@@ -422,7 +423,8 @@ $mpdf->WriteHTML('Main part of document...');
 $mpdf->Output();
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetHeader()</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a></li>
@@ -433,4 +435,4 @@ $mpdf->Output();
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">$defaultfooterfontstyle</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">$defaultfooterline</a></li>
 </ul>
-<p>&nbsp;</p>
+

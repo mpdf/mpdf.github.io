@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/index.html
 modification_time: 2015-08-05T12:00:14+00:00
 ---
 
-
-
 <p>mPDF can generate an index at the end of document using:</p>
 <ul>
 <li>&lt;indexentry content="Buffalo" /&gt; to make index entries at the appropriate place in the HTML text</li>
@@ -88,7 +86,9 @@ a.mpdf_index_link {
 {% endhighlight %}
 
 <p>A default stylesheet for Indexes is included in <span class="filename">mpdf.css</span></p>
-<h3>Index Collation</h3>
+
+## Index Collation
+
 <p>In order to generate an Index with non-ASCII characters, entries need to be sorted accordingly (collation), and non-ASCII characters should map to the appropriate Dividing letter e.g.:</p>
 <p class="manual_block"><b>A</b>
 
@@ -136,9 +136,13 @@ $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
 <p>Note: This will not affect the overall order of entries, which is determined by the value of "collation".</p>
 <p>Note: The groupings do not always match the order set by locale. This is because the data for collations has come from different sources. The files in /collations/ can be edited.</p>
 <p>The array consists of [index]: unicode decimal value of character =&gt; unicode decimal value of character to group under: e.g. Ã [A tilde] (U+00C3) (decimal 195) =&gt; a (U+0061) (decimal 97). The target character should always be the lowercase form.</p>
-<h3>Non-ASCII chcracters in Index entries</h3>
+
+## Non-ASCII chcracters in Index entries
+
 <p>Note: htmlspecials_encode should be used to encode the text of content in &lt;indexentry&gt; - although not when using IndexEntry().</p>
-<h3>Columns</h3>
+
+## Columns
+
 <p>From mPDF 6.0, columns are not specified as part of the &lt;indexinsert&gt;, so a typical 2-column index might be produced by:</p>
 
 {% highlight php %}
@@ -153,7 +157,8 @@ $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
 <columns column-count="1" />
 {% endhighlight %}
 
-<h3>Index Sub-entries</h3>
+## Index Sub-entries
+
 <p>Index entries can contain sub-entries, separated by colons e.g.</p>
 
 {% highlight php %}
@@ -195,5 +200,7 @@ Mammals, humans 173
 Marsupials, kangaroos 75
 
 Marsupials, wombats 86</p>
-<h3>Customised appearance (advanced)</h3>
+
+## Customised appearance (advanced)
+
 <p>Several variables set at beginning of function InsertIndex() in mpdf.php which could be changed to alter appearance of Index. e.g. spacer, and joiner characters.</p>

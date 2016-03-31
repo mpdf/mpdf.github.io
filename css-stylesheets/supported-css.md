@@ -6,9 +6,8 @@ permalink: /css-stylesheets/supported-css.html
 modification_time: 2015-08-05T11:59:56+00:00
 ---
 
+# Supported CSS attributes - stylesheets or in-line
 
-
-<h2>Supported CSS attributes - stylesheets or in-line</h2>
 <p>Unless otherwise stated, the following values are supported:</p>
 <p><span class="smallblock">LENGTH</span>: px, pc, pt, cm, mm, in, em, rem, ex and % (where appropriate) are supported. Default if no unit given is px.</p>
 <p><span class="smallblock">FONT-SIZE</span>: px, pc, pt, em, rem, ex, %, small, medium, large, x-small, x-large&nbsp; are supported. Default if no unit given is px.</p>
@@ -143,7 +142,7 @@ Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)</td>
 <td>padding*, padding-right, padding-left, padding-top, padding-bottom</td>
 <td>
 <p><span class="smallblock">LENGTH</span></p>
-<p>&nbsp;</p>
+
 </td>
 </tr>
 <tr>
@@ -1347,7 +1346,7 @@ Length values are width and height e.g. size: 8.5in 11in; or one value for a squ
 <p>@page :left</p>
 <p>@page :first</p>
 <p>@page &lt;named&gt;</p>
-<p>&nbsp;</p>
+
 </th>
 <td>margin-top, margin-bottom</td>
 <td>
@@ -1644,9 +1643,13 @@ As per CSS3
 <p>margin:1pt 2pt 3pt; will set top to 1pt, left and right to 2pt, and bottom to 3pt (mPDF &gt;= 4.0)</p>
 <p>margin:1pt 2pt 3pt 4pt; will set all values in order: top&gt;right&gt;bottom&gt;left</p>
 <p>NB Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</p>
-<h3>Border</h3>
+
+## Border
+
 <p>medium|thin|thick are accepted for size - converted to 1px, 3px, 5px</p>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; Borders (including Gradients)</a></li>
 <li class="manual_boxlist"><a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML supported attributes</a> </li>

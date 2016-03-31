@@ -6,23 +6,26 @@ permalink: /reference/mpdf-functions/addspotcolor.html
 modification_time: 2015-08-05T12:00:39+00:00
 ---
 
-
-
 <div>
 <div>
 <p>(mPDF &gt;= 5.1)</p>
 <p>AddSpotColor – Define a Spot colour</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>AddSpotColor</b> ( string <span class="parameter">$name</span> , int <span class="parameter">$c</span> , int <span class="parameter">$m</span>, int <span class="parameter">$y</span> , int <span class="parameter">$k</span> )</p>
 <p>Define a Spot colour which can be used in the document. Spot colours need to be defined at the start of the script.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">name</span></p>
 <p class="manual_param_dd">Specifies the name used for the spot colour.</p>
 <p class="manual_param_dt"><span class="parameter">c, m, y, k</span></p>
 <p class="manual_param_dd"><span class="parameter">S</span>pecifies the CMYK values to be used to display in the document or if the spot colour is not available.
 
 <span class="smallblock">DEFAULT</span>: 0</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1

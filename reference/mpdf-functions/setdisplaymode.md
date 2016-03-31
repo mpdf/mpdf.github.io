@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/setdisplaymode.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetDisplayMode – Specify the initial Display Mode when the PDF file is opened in Adobe Reader</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetDisplayMode</b> ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])</p>
 <p>Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">zoom</span></p>
 <p class="manual_param_dd">This parameter specifies the magnification (zoom) of the display when the document is opened.</p>
 <p class="manual_param_dd"><b>Values</b> (case-sensitive)
@@ -44,7 +46,8 @@ twoleft: Display the pages in two columns, with the first page displayed on the 
 tworight: Display the pages in two columns, with the first page displayed on the right side (mPDF &gt;= 5.2)
 
 default: User's default setting in Adobe Reader</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -82,7 +85,8 @@ $mpdf->SetDisplayMode(90);
 $mpdf->SetDisplayMode('fullpage','two');
 {% endhighlight %}
 
-<h2>Changelog</h2>
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -99,7 +103,9 @@ $mpdf->SetDisplayMode('fullpage','two');
 </td>
 </tr>
 </tbody> </table>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setdisplaypreferences.html" | prepend: site.baseurl }}">SetDisplayPreferences()</a> - Defines the way the document shall be presented on the screen</li>
 </ul>

@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/importing-files-templates.html
 modification_time: 2015-08-05T12:00:18+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3)</p>
 <p>Using an extension of mPDF, pages from external PDF files can be imported into 'templates' and used throughout the current document. This can be used for:</p>
 <ul>
@@ -22,7 +20,9 @@ modification_time: 2015-08-05T12:00:18+00:00
 <div class="alert alert-success" role="alert"><strong>Tip:</strong> mPDF imports all embedded fonts required for the document, even if they are the same as the ones used in the document being written. Try to keep the file size of the external source PDF file down to a minimum.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> to enable them.</div>
-<h2>See</h2>
+
+# See
+
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
 <li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file

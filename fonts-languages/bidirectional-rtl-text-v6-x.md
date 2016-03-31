@@ -6,9 +6,8 @@ permalink: /fonts-languages/bidirectional-rtl-text-v6-x.html
 modification_time: 2015-08-05T11:59:35+00:00
 ---
 
+## Document Directionality - RTL versus LTR
 
-
-<h3>Document Directionality - RTL versus LTR</h3>
 <p>The document has a baseline direction which is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:</p>
 <ul>
 <li>text alignment in blocks for which text-align has not been specifically set</li>
@@ -27,7 +26,9 @@ $mpdf->SetDirectionality('rtl');
 {% endhighlight %}
 
 <p>Base direction is an inherited CSS property, so will affect all content, unless direction is specified elswhere.</p>
-<h3>Block-level Directionality</h3>
+
+## Block-level Directionality
+
 <p>Direction can be set for any HTML block elements e.g. &lt;div&gt;&lt;p&gt;&lt;table&gt;&lt;ul&gt; etc using:</p>
 
 {% highlight php %}
@@ -44,9 +45,12 @@ div.right { direction: rtl; }
 
 <p>Block-level direction <i>may</i> affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.</p>
 <p>Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.</p>
-<h3>Text alignment</h3>
+
+## Text alignment
+
 <p>The default value for text-align is "a nameless value which is dependent on direction". However, once text-align is specified, it is respected and inherited by all descendants.</p>
-<h3>Text Bidirectionality</h3>
+
+## Text Bidirectionality
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</div>
 <p>Bi-directional text is supported in mPDF.</p>
@@ -164,7 +168,9 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 </ul>
 <p>NB dir="auto" is not supported generally, but it is supported for &lt;bdi&gt; (has the same effect as if omitted) to use First Strong Isolate (FSI).</p>
 <p>Directionality can now be set on individual table cells &lt;td style="direction:rtl;unicode-bidi:embed;"&gt; or &lt;td dir="rtl"&gt;</p>
-<h3>Equivalent methods</h3>
+
+## Equivalent methods
+
 <p>The following are equivalent methods:</p>
 <p>EMBED</p>
 
@@ -214,7 +220,8 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 <span style="direction: rtl; unicode-bidi: plaintext">...</span>
 {% endhighlight %}
 
-<h3>First strong isolate (FSI)</h3>
+## First strong isolate (FSI)
+
 <p>FSI is useful when including text within a paragraph where the directionality of the text is unknown. For example, if you are printing out a catalogue from a database of book titles and the number of readers, when some book titles are in right-to-left script, you may use this template:</p>
 
 {% highlight php %}
@@ -236,7 +243,9 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 <li>Title: Alice in Wonderland - 12390 readers</li>
 <li>Title: עליסה בארץ הפלאות, סיפור-ילדים מאת לואיס קרול ‭- 1790 readers‬</li>
 </ul>
-<h3>See Also</h3>
+
+## See Also
+
 <ul>
 <li class="manual_boxlist">
 <p><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</p>

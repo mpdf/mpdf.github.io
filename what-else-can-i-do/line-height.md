@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/line-height.html
 modification_time: 2015-08-05T12:00:05+00:00
 ---
 
-
-
 <p>The line-height of text can be controlled using the CSS property <code>line-height</code> (since mPDF 4). This used a fixed value for the line-height when <code>normal</code> was specified (the default CSS value) -&nbsp; set by the configurable variable <code>normalLineheight</code>. It also used a fixed proportion to determine the position of the text baseline (non-configurable).</p>
 <p>Form mPDF 6, you can (optionally) use font metrics derived from each font file to:</p>
 <ul>
@@ -43,11 +41,14 @@ $this->useFixedTextBaseline = true;
 $this->normalLineheight = 1.33;
 {% endhighlight %}
 
-<h3></h3>
+## 
+
 <p>Using the font metrics will give approximately the same result as the fixed value for many standard Latin script fonts e.g. DejaVu Sans Condensed:</p>
 <p>However, for some fonts the normal line-height using font metrics will be significantly taller, to account for the design of the font glyphs e.g. Khmer font:</p>
 <p>For more information on how complex normal lineheights are, see Eric Meyers' website: <a href="http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/">http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/</a> and <a href="http://typophile.com/node/13081">http://typophile.com/node/13081</a></p>
-<h2>CSS control of line-height</h2>
+
+# CSS control of line-height
+
 <p>From mPDF v 6.0 there are new controls for line-height using draft CSS3 properties. These can be set on all block level elements (P, DIV etc) and tables (TABLE/TD/TH).</p>
 <p><b>line-stacking-strategy</b> = <code>inline-line-height | block-line-height | max-height | grid-height</code></p>
 <ul>
@@ -61,7 +62,9 @@ $this->normalLineheight = 1.33;
 <p>This property determines whether to include or disregard the adjusted top- and bottom-edge of any characters that have a baseline-shift (e.g. superscript) when calculating lineheight.</p>
 <p>Note: XSL has a similar property with a different name: <code>line-height-shift-adjustment</code> which uses the same values.</p>
 <p>For more details see the <a href="http://www.w3.org/TR/css3-linebox/#InlineBoxHeight">CSS3 draft specification</a>.</p>
-<h2>Note for Advanced users</h2>
+
+# Note for Advanced users
+
 <p>There are actually three possible metrics that can be used in a TrueType font file. The differences are summed up quite well in this article at <a href="http://typophile.com/node/13081">http://typophile.com/node/13081</a>. mPDF will by default use the usWinAscent and usWinDescent values to determine a 'normal' line-height, with two variations:</p>
 <ul>
 <li>if either the usWinAscent or usWinDescent are greater than the font bounding box (yMin yMax), then the values are reduced to equal the yMin/yMax values. NB this works as a fix with Myanmar Text (Windows 8 version) to give a line-height normal that is equivalent to that produced in browsers.</li>
@@ -94,7 +97,9 @@ $this->normalLineheight = 1.33;
 {% endhighlight %}
 
 <p>Note - The same values are used for all styles of the font-family. Descent values should be negative. All values should be given using a 1000 units per em scale, regardless of the UnitsPerEm used in the font design.</p>
-<h2>Notes</h2>
+
+# Notes
+
 <p>Remember that line-height for a TABLE has a default value (1.2) set in the <code>config.php defaultCSS</code>. This is left in for backwards compatability. You can change this value to 'normal' for results consistent with most browsers.</p>
 <p>Line-height in a &lt;textarea&gt; is fixed and defined in <code>classes/mpdfform.php</code> (= 1.2)</p>
 <p>Details of the font metrics can be seen by inspecting the temporary font files e.g. <code>/ttfontdata/[fontname].mtx.php</code>.</p>

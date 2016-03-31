@@ -6,8 +6,6 @@ permalink: /setting-pdf-file-properties/document-metadata.html
 modification_time: 2015-08-05T11:59:59+00:00
 ---
 
-
-
 <p>A PDF file contains metadata about the title, author, subject, creation date, keywords. The title is usually shown in the top of the screen when a user views the file; the rest of the metadata can be accessed by viewing Document properties in Adobe Reader.</p>
 <p>You can set the metadata directly using:</p>
 <ul>
@@ -49,7 +47,8 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/settitle.html" | prepend: site.baseurl }}">SetTitle()</a> - Set document Title in metadata</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setauthor.html" | prepend: site.baseurl }}">SetAuthor()</a> - Set document Author in metadata</li>

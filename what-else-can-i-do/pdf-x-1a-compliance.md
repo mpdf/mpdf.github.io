@@ -6,14 +6,14 @@ permalink: /what-else-can-i-do/pdf-x-1a-compliance.html
 modification_time: 2015-08-05T12:00:20+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 5.1)</p>
 <p>PDF/X-1a is a file format to facilitate printing of electronic documents.</p>
 <p>Two key elements to this function are the requirement for PDF/X documents to be 100% self-contained, and all images need to be CMYK or spot colors.</p>
 <p>A PDF/X document can be identified as such through PDF/X-specific metadata located in the document. However, claiming to be PDF/X compliant and being so are not necessarily the same.</p>
 <p class="manual_block"><b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/X-1a compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.</p>
-<h2>mPDF and PDF/X-1a compliance</h2>
+
+# mPDF and PDF/X-1a compliance
+
 <p>You can make mPDF produce mPDF/X-1a:2003 compliant files by setting:</p>
 
 {% highlight php %}
@@ -22,7 +22,8 @@ modification_time: 2015-08-05T12:00:20+00:00
 $this->PDFX = true; // Edit in config.php or set at runtime
 {% endhighlight %}
 
-<h3>Colorspaces and ICC Profiles</h3>
+## Colorspaces and ICC Profiles
+
 <p>PDF files handle colours internally in a number of different colorspaces. PDFX files can only use CMYK and spot colurs, and a colorspace profile must be embedded in the document.</p>
 <p>It is likely that most content in a PDF file will be RGB unless you have specifically defined otherwise e.g. a CMYK JPG image file, or colours defined as CMYK() etc.</p>
 <p>Colorspaces can be altered using <a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a>.</p>
@@ -43,7 +44,8 @@ $this->PDFX = true; // Edit in config.php or set at runtime
 $this->ICCProfile = 'SWOP2006_Coated5v2';
 {% endhighlight %}
 
-<h3>Fonts</h3>
+## Fonts
+
 <p>All fonts must be embedded in a PDF/X file. mPDF normally uses the core Adobe fonts (Helvetica, Times, Courier, Symbol and Zapfdingbats) in a number of situations, and these font files are not available to embed. This affects:</p>
 <ul>
 <li><span class="parameter">$useCoreFontsOnly</span> is not permitted</li>
@@ -52,14 +54,18 @@ $this->ICCProfile = 'SWOP2006_Coated5v2';
 <li>ISBN/ISSN barcode cannot use Helvetica for the ISBN number (above the bar)</li>
 </ul>
 <p>Also, the fonts GB, BIG5, UHC and SJIS which reference the free CJK font pack from Adobe cannot be used</p>
-<h3>Transparency and Annotations</h3>
+
+## Transparency and Annotations
+
 <p>Because PDF/X-1a has the objective of ensuring reliable reproduction of the document, no objects may be transparent or semi-transparent. This affects:</p>
 <ul>
 <li>watermarks text or images</li>
 <li>images with the CSS property <span class="parameter">opacity</span> set</li>
 <li>annotation markers</li>
 </ul>
-<h2>Making it happen!</h2>
+
+# Making it happen!
+
 <p>When <code>$this-&gt;PDFX</code> is set to true, the following changes will automatically and silently happen:</p>
 <ul>
 <li>list bullets will use the characters from the current font (if available) e.g. • ⚬ ▪ </li>
@@ -70,7 +76,9 @@ $this->ICCProfile = 'SWOP2006_Coated5v2';
 <li>an ICC Color Profile is added as /OuputIntent</li>
 </ul>
 <p>Only the first change may make a discernible change to the displayed document. All other changes are to the file structure.</p>
-<h3>Warnings</h3>
+
+## Warnings
+
 <p>Some problems can be fixed by mPDF, but will cause a change to the appearance of your document. By default they will generate warning messages. Once you have assessed the warnings, you can direct mPDF to make these changes automatically by setting in your script:</p>
 
 {% highlight php %}
@@ -79,7 +87,6 @@ $this->ICCProfile = 'SWOP2006_Coated5v2';
 $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to force PDFX-1a compliance
 {% endhighlight %}
 
-<p>&nbsp;</p>
 <p>The following issues will cause a warning message when you try to generate a PDFX file:</p>
 <table class="table"> <thead>
 <tr>
@@ -124,7 +131,9 @@ $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to fo
 <td>An equal sign "=" will be substituted if ▼ is not available in the default sans-serif font.</td>
 </tr>
 </tbody> </table>
-<h3>Fatal Errors</h3>
+
+## Fatal Errors
+
 <p>Some issues cannot be fixed automatically by mPDF and will generate fatal errors:</p>
 <ul>
 <li><span class="parameter">$useCoreFontsOnly</span> is set as <span class="smallblock">TRUE</span> (cannot embed core fonts)</li>
@@ -133,7 +142,9 @@ $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to fo
 <li>PNG images with alpha channel transparency ('masks' not allowed)</li>
 <li>encryption is enabled</li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-a1-b-compliance.html" | prepend: site.baseurl }}">PDF/A1-b compliance</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfa.html" | prepend: site.baseurl }}">PDFA</a> - Create PDF/A1-b compliant document</li>

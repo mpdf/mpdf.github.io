@@ -6,8 +6,6 @@ permalink: /css-stylesheets/introduction.html
 modification_time: 2015-08-05T11:59:56+00:00
 ---
 
-
-
 <p>Default CSS styles are defined in <span class="filename">config.php</span> file (as <code>var $default_CSS</code>) which is based on the recommended default values for HTML4 - <a href="http://www.w3.org/TR/CSS21/sample.html">http://www.w3.org/TR/CSS21/sample.html</a> The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.</p>
 <p>The following are supported (in order of ascending priority - lower ones in list overwrite higher):</p>
 <ul>
@@ -38,7 +36,9 @@ modification_time: 2015-08-05T11:59:56+00:00
 <p>Note the OUTLINE style (which is not supported in most browsers) does work in mPDF e.g.
 
 &lt;span style="outline-width:thin|medium|thick; outline-color:#rrggbb|invert"&gt;</p>
-<h2>Using a stylesheet</h2>
+
+# Using a stylesheet
+
 <p>The WriteHTML() method takes second parameter i.e. <span class="parameter">mode</span>. See <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> for details of this and other parameters.</p>
 <p><span class="parameter">mode</span>
 
@@ -62,7 +62,8 @@ $mpdf->WriteHTML($stylesheet,1);
 $mpdf->WriteHTML($html,2);
 {% endhighlight %}
 
-<h2>Media selectors</h2>
+# Media selectors
+
 <p>mPDF supports media-dependent CSS styles as:</p>
 
 {% highlight php %}

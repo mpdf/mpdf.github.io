@@ -6,8 +6,6 @@ permalink: /reference/codepages-glyphs/unicode-coverage-of-free-fonts.html
 modification_time: 2015-08-05T12:03:03+00:00
 ---
 
-
-
 <p>Fonts with full coverage of Unicode Ranges</p>
 <table class="table"> <thead>
 <tr>
@@ -835,8 +833,7 @@ Special positioning required</td>
 <td>hannomb, sun-extb</td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+
 <table class="table"> <thead>
 <tr>
 <td>&nbsp;Font name

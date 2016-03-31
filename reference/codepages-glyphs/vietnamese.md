@@ -6,8 +6,6 @@ permalink: /reference/codepages-glyphs/vietnamese.html
 modification_time: 2015-08-05T12:02:50+00:00
 ---
 
-
-
 <p><span>The Vietnamese alphabets are listed in several noncontiguous Unicode ranges: Basic Latin {U+0000..U+007F}, Latin-1 Supplement {U+0080..U+00FF}, Latin Extended-A, -B {U+0100..U+024F}, Latin Extended Additional {U+1E00..U+1EFF}, and Combining Diacritical Marks {U+0300.. U+036F}. </span></p>
 <p><span>Latin-1 Supplement</span></p>
 <p>À Á Â Ã È É Ê Ì Í Ò Ó Ô Õ Ù Ú Ý</p>

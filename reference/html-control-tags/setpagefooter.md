@@ -6,16 +6,18 @@ permalink: /reference/html-control-tags/setpagefooter.html
 modification_time: 2015-08-05T12:01:28+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.0)</p>
 <p>setpagefooter – Set a page footer by a given name</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt; <b>setpagefooter</b> [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] /&gt;</p>
 <p>Sets a page footer that has previously been defined by name.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">name</span></p>
 <p class="manual_param_dd">This parameter specifies the name of a previously defined page footer. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page footer exists.
 
@@ -48,7 +50,9 @@ If the <span class="parameter">page</span> value is <span class="smallblock">BLA
 -1 or OFF - stop using a footer
 
 <span class="smallblock">DEFAULT</span> -&nbsp; <span class="smallblock">BLANK</span> is ignored, making no changes to the current state</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -57,13 +61,17 @@ If the <span class="parameter">page</span> value is <span class="smallblock">BLA
 <td>The function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
+
 <p>For examples and further information please see:</p>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a></li>
 </ul>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a></li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;</li>
@@ -71,4 +79,4 @@ If the <span class="parameter">page</span> value is <span class="smallblock">BLA
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt;</li>
 <li class="manual_boxlist"><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a></li>
 </ul>
-<p>&nbsp;</p>
+

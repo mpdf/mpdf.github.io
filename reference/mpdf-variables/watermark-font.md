@@ -6,18 +6,21 @@ permalink: /reference/mpdf-variables/watermark-font.html
 modification_time: 2015-08-05T12:02:40+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">string <b>watermark_font</b></p>
 <p>Specifies the font to use for the watermark on each page. The BOLD style of the font is used by default.</p>
-<h2>Values</h2>
+
+# Values
+
 <p class="manual_param_dt"><span class="parameter">watermark_font</span></p>
 <p class="manual_param_dd">Define as any of the available font-families.
 
 <span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> uses the default font-family for the document.</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -41,7 +44,8 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Set the text to use as a Watermark</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkImage()</a> - Set an image to use as a Watermark</li>

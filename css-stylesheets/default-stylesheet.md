@@ -6,8 +6,6 @@ permalink: /css-stylesheets/default-stylesheet.html
 modification_time: 2015-08-05T11:59:57+00:00
 ---
 
-
-
 <p>mPDF uses a default "stylesheet" for default settings of style and layout; this is in <span class="filename">config.php</span> as a variable <span class="parameter">$defaultCSS</span>.</p>
 <p>mPDF ( &gt;= 2.2) will load an optional file <span class="filename">mpdf.css</span> (located in the same directory as <span class="filename">mpdf.php</span>) which can be edited to change your default styles for PDF files.</p>
 <p class="manual_block"><b>mPDF &gt;= 6.0</b> A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following text describes behaviour prior to mPDF v6.0)</p>
@@ -105,7 +103,8 @@ modification_time: 2015-08-05T11:59:57+00:00
     }
 {% endhighlight %}
 
-<h3>Prior to mPDF 2.2</h3>
+## Prior to mPDF 2.2
+
 <p>The original default styles (mPDF &lt;=2.0) were extensively changed with improvements in CSS handling in mPDF 2.0 (this particularly changed table borders, and table cell alignment, as well as a serif default font-family).</p>
 <p>In order to allow backwards compatibilty, a secondary "stylesheet" - a variable $defaultCSS2 was introduced in mPDF 2.0 - and the option to load this on intiating mPDF:</p>
 
@@ -115,7 +114,7 @@ modification_time: 2015-08-05T11:59:57+00:00
 $mpdf->useDefaultCSS2 = true;
 {% endhighlight %}
 
-<h3>Secondary default CSS values used mPDF 2.0 - 2.1</h3>
+## Secondary default CSS values used mPDF 2.0 - 2.1
 
 {% highlight php %}
 <?php

@@ -6,8 +6,6 @@ permalink: /reference/mpdf-variables/progbar-althtml.html
 modification_time: 2015-08-05T12:02:21+00:00
 ---
 
-
-
 <p>mPDF &gt;= 5.0
 
 Customisable Progress bar
@@ -20,9 +18,9 @@ Default value: ''</p>
 &nbsp;&nbsp;&nbsp; // Should include &lt;html&gt; and &lt;body&gt; but NOT end tags
 
 &nbsp;&nbsp;&nbsp; // Can incude &lt;head&gt; and link to stylesheet etc.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a> - show progress bars during file generation</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progressbar.html" | prepend: site.baseurl }}">progressBar</a> –Specify whether to show progress bars during file generation</li>

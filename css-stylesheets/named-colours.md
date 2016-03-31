@@ -6,11 +6,8 @@ permalink: /css-stylesheets/named-colours.html
 modification_time: 2015-08-05T11:59:58+00:00
 ---
 
+# Named colours supported by mPDF in CSS
 
-
-<h2>Named colours supported by mPDF in CSS
-
-</h2>
 <p>The table below provides a list of the named colours supported by mPDF when used in CSS contexts. The list is precisely the same as the <a href="http://www.w3.org/TR/SVG/types.html#ColorKeywords">SVG 1.0 color keyword names</a>. The two color swatches on the left illustrate setting the background color of a table cell in two ways: The first column uses the named color value, and the second column uses the respective numeric color value.</p>
 <table class="table"><thead>
 <tr><th>&nbsp; Named &nbsp; </th><th>&nbsp; Numeric &nbsp; </th><th>&nbsp; Color&nbsp;name &nbsp; </th><th>&nbsp; Hex&nbsp;rgb &nbsp; </th><th>&nbsp; Decimal &nbsp; </th></tr>
@@ -1045,6 +1042,4 @@ modification_time: 2015-08-05T11:59:58+00:00
 <td>154,205,50</td>
 </tr>
 </tbody></table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+

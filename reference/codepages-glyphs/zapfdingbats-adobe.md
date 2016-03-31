@@ -6,10 +6,8 @@ permalink: /reference/codepages-glyphs/zapfdingbats-adobe.html
 modification_time: 2015-08-05T12:02:48+00:00
 ---
 
+# Zapf Dingbats
 
-
-<h2>Zapf Dingbats</h2>
-<p>&nbsp;</p>
 <table class="table"><tbody>
 <tr>
 <td>➾</td>
@@ -221,5 +219,4 @@ modification_time: 2015-08-05T12:02:48+00:00
 <td>➽</td>
 </tr>
 </tbody></table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+

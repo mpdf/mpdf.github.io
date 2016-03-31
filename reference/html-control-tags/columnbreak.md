@@ -6,18 +6,21 @@ permalink: /reference/html-control-tags/columnbreak.html
 modification_time: 2015-08-05T12:01:20+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>columnbreak – Start a new Column</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>columnbreak</b> /&gt;</p>
 <p>Start a new Column in the document. Columns must be set using <a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a> or &lt;<a href="{{ "/reference/html-control-tags/columns.html" | prepend: site.baseurl }}">columns</a>&gt;. Height justification for the Columns is disabled when column breaks are set explicitly.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Columns are incompatible with (and automatically disable): borders for block-level elements (DIV, P etc), table rotation, and collapsible margins for blocks e.g. top and bottom margins for a DIV will not collapse (default) at the top/bottom of a column.</div>
-<h2>Attributes</h2>
+
+# Attributes
+
 <p class="manual_param_dd">No attributes</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -39,7 +42,8 @@ $mpdf=Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/bookmark.html" | prepend: site.baseurl }}">AddColumn()</a> - PHP equivalent to &lt;columnbreak&gt;</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a> - Control the use of multiple columns on the page</li>

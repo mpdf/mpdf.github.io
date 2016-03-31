@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/insertindex.html
 modification_time: 2015-08-05T12:00:49+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 6.0)</p>
 <p>InsertIndex — Generate an Index for the document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>InsertIndex</b> ([ int <span class="parameter">$usedivletters</span> [,&nbsp;boolean <span class="parameter">$uselinking</span> [, string <span class="parameter">$indexCollationLocale</span> [, string <span class="parameter">$indexCollationGroup</span> ]]]])</p>
 <p>Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p><span class="parameter">usedivletters</span></p>
 <p class="manual_param_dd">Defines whether to divide index entries starting with the same letter, using a (large) letter as a heading.
 
@@ -43,7 +45,9 @@ modification_time: 2015-08-05T12:00:49+00:00
 NB This will not affect the overall order of entries, which is determined by the value above.
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted - grouping occurs under the first letter of the index entries.</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -54,7 +58,9 @@ NB This will not affect the overall order of entries, which is determined by the
 </td>
 </tr>
 </tbody> </table>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a></li>
 </ul>

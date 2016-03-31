@@ -6,13 +6,13 @@ permalink: /reference/mpdf-functions/tocpagebreak.html
 modification_time: 2015-08-05T12:01:12+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.0)</p>
 <p>TOCpagebreak — Insert a table of contents in the document</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> A new function <a href="{{ "/reference/mpdf-functions/tocpagebreakbyarray.html" | prepend: site.baseurl }}">TOCpagebreakByArray()</a> was added in mPDF 5.0 which is recommended as much simpler to use.</div>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>TOCpagebreak</b> ([ string <span class="parameter">$font</span> [, float <span class="parameter">$font-size</span> [, int <span class="parameter">$indent</span> [, mixed <span class="parameter">$paging</span> [, mixed <span class="parameter">$links</span> [, string <span class="parameter">$toc-orientation</span> [, float <span class="parameter">$toc-margin-left</span> [, float <span class="parameter">$toc-margin-right</span> [, float <span class="parameter">$toc-margin-top</span> [, float <span class="parameter">$toc-margin-bottom</span> [, float <span class="parameter">$toc-margin-header</span> [, float <span class="parameter">$toc-margin-footer</span> [, string <span class="parameter">$toc-odd-header-name</span> [, string <span class="parameter">$toc-even-header-name</span> [, string <span class="parameter">$toc-odd-footer-name</span> [, string <span class="parameter">$toc-even-footer-name</span> [, int <span class="parameter">$toc-odd-header-value</span> [, int <span class="parameter">$toc-even-header-value</span> [, int <span class="parameter">$toc-odd-footer-value</span> [, int <span class="parameter">$toc-even-footer-value</span> [, string <span class="parameter">$toc-preHTML</span> [, string <span class="parameter">$toc-postHTML</span> [, string <span class="parameter">$toc-bookmarkText</span> [, string <span class="parameter">$resetpagenum</span> [, string <span class="parameter">$pagenumstyle</span> [, string <span class="parameter">$suppress</span> [, string <span class="parameter">$orientation </span>[, float <span class="parameter">$margin-left</span> [, float <span class="parameter">$margin-right</span> [, float $<span class="parameter">margin-top</span> [, float $<span class="parameter">margin-bottom</span> [, float $<span class="parameter">margin-header</span> [, float <span class="parameter">$margin-footer</span> [, string <span class="parameter">$odd-header-name</span> [, string <span class="parameter">$even-header-name</span> [, string $<span class="parameter">odd-footer-name</span> [, string $<span class="parameter">even-footer-name</span> [, mixed $<span class="parameter">odd-header-value</span> [, mixed <span class="parameter">$even-header-value</span> [, mixed <span class="parameter">$odd-footer-value</span> [, mixed $<span class="parameter">even-footer-value</span> [, string <span class="parameter">$name</span> [, string <span class="parameter">$pageselector</span> [, string <span class="parameter">$toc-pageselector</span> [, string <span class="parameter">$sheet-size</span> [, string <span class="parameter">$toc-sheet-size</span> [, string <span class="parameter">$outdent </span>[, int <span class="parameter">$<span class="parameter">toc-resetpagenum</span></span> [, string <span class="parameter">$</span><span class="parameter">toc-pagenumstyle</span> [, mixed <span class="parameter">$<span class="parameter">toc-suppress</span> </span>]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]])</p>
 <p>Add a new page to the document, marking the point at which a Table of Contents (<acronym title="Table of Contents">ToC</acronym>) will be inserted in the document at the end of writing. The numerous parameters specify both paging details for the continuing document, and for the <acronym title="Table of Contents">ToC</acronym> when it is generated.</p>
 
@@ -27,7 +27,9 @@ modification_time: 2015-08-05T12:01:12+00:00
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF 2.3 you can include more than one <acronym title="Table of Contents">ToC</acronym> in the document using the parameter <span class="parameter">name</span>.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If <b>TOCpagebreak()</b> is used at the start of a blank (<span class="smallblock">ODD</span>) page, no new page(s) will be added. This was added in mPDF 2.3 to allow a <acronym title="Table of Contents">ToC</acronym> to be placed on the first page, or to allow a <acronym title="Table of Contents">ToC</acronym> to follow another <acronym title="Table of Contents">ToC</acronym>. In this case, any properties for the continuing document are ignored. If you define several <acronym title="Table of Contents">ToC</acronym>s following immediately on from one another, set the properties in the first <acronym title="Table of Contents">ToC</acronym> you define.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_block">The initial parameters specify characteristics for the <acronym title="Table of Contents">ToC</acronym>, which is generated automatically at the end of the document when <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</p>
 <p class="manual_param_dt"><span class="parameter">font </span></p>
 <p class="manual_param_dd">From mPDF &gt;= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any value set for this is ignored.</p>
@@ -204,7 +206,9 @@ i: Roman lowercase - i, ii, iii, iv...</p>
 <p class="manual_block">The rest of the parameters are defined exactly as for <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>. Note that these parameters define page numbering, margins, headers/footers for the document as it continues from this point on; in the final document this will be the part of the document immediately after the <acronym title="Table of Contents">ToC</acronym>.
 
 Please refer to <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> for further details. But <b>note</b> there are differences in the order of the parameters especially take care with <span class="parameter">$orientation</span></p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -241,7 +245,8 @@ Please refer to <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: 
 <td>Parameters added:&nbsp; <span class="parameter">toc-resetpagenum</span> | <span class="parameter">toc-pagenumstyle</span> | <span class="parameter">toc-suppress</span></td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -267,7 +272,8 @@ $mpdf=Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> - Add an entry for Table of Contents</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page</li>

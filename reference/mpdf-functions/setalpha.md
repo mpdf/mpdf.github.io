@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/setalpha.html
 modification_time: 2015-08-05T12:00:53+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetAlpha – Set the opacity for Images</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>SetAlpha</b> ( float <span class="parameter">$alpha</span> [, integer <span class="parameter">$blend</span> ])</p>
 <p>Set the opacity and blend mode for Images</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">alpha</span></p>
 <p class="manual_param_dd">This parameter specifies the opacity for any subsequent images written to the current document.</p>
 <p class="manual_param_dd"><b>Values</b>
@@ -58,7 +60,9 @@ Color
 Luminosity
 
 <span class="smallblock">DEFAULT</span>: Normal</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -67,7 +71,8 @@ Luminosity
 <td>Function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -99,8 +104,9 @@ exit;
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/image.html" | prepend: site.baseurl }}">Image()</a> - Write an image to the current document</li>
 </ul>
-<p>&nbsp;</p>
+

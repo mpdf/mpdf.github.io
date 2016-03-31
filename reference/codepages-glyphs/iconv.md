@@ -6,8 +6,6 @@ permalink: /reference/codepages-glyphs/iconv.html
 modification_time: 2015-08-05T12:02:59+00:00
 ---
 
-
-
 <p>The following codepages are supported by the iconv function:</p>
 <p>European languages</p>
 <ul>
@@ -76,6 +74,6 @@ modification_time: 2015-08-05T12:02:59+00:00
 <li>UTF-32, UTF-32BE, UTF-32LE</li>
 <li>UTF-7</li>
 </ul>
-<p>&nbsp;</p>
+
 <p>See <a href="http://www.gnu.org/software/libiconv/">http://www.gnu.org/software/libiconv/</a></p>
-<p>&nbsp;</p>
+

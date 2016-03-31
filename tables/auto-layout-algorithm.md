@@ -6,10 +6,10 @@ permalink: /tables/auto-layout-algorithm.html
 modification_time: 2015-08-05T11:59:44+00:00
 ---
 
+# Algorithm used for autosizing tables
 
+## For non-rotated tables
 
-<h2>Algorithm used for autosizing tables</h2>
-<h3>For non-rotated tables</h3>
 <ol>
 <li>If the minimum width of the table is greater than the page width, the table is resized to fit the minimum width = page width.*
 
@@ -45,9 +45,9 @@ This disregards the value of autosize.
 </li>
 </ol>
 <p>If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v&gt;=4.6)</p>
-<h3>For rotated tables
 
-</h3>
+## For rotated tables
+
 <ol>
 <li>If the whole table fits into the remaining height left on the page, print as it is.
 
@@ -62,4 +62,4 @@ This disregards the value of autosize.
 <p>* From mPDF 4.3, this can be overridden using CSS property overflow:</p>
 <p>&lt;table style="overflow: auto | hidden | visible | wrap"&gt;</p>
 <p>auto is the default, described above.</p>
-<p>&nbsp;</p>
+

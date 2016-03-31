@@ -6,16 +6,13 @@ permalink: /headers-footers/method-3.html
 modification_time: 2015-08-05T11:59:51+00:00
 ---
 
-
-
 <p>This uses <span class="smallblock">NAMED</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers throughout the document.</p>
 <p>These use the same array values as <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a> Variant #5.</p>
 <p>Note that named headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name a header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer.</div>
-<h2>Defining NAMED Headers/Footers
 
-</h2>
+# Defining NAMED Headers/Footers
 
 {% highlight php %}
 Example #1 - Using PHP
@@ -99,9 +96,8 @@ $html = '
 $mpdf->WriteHTML($html);
 {% endhighlight %}
 
-<h2>Referencing a Header/Footer by NAME
+# Referencing a Header/Footer by NAME
 
-</h2>
 <p>Once you have defined <span class="smallblock">NAMED</span> headers/footers for your document, you can reference them using:</p>
 <ul>
 <li>Methods for <span class="smallblock">NON-HTML</span> headers/footers only - <b>Recommended</b> when setting the first page header/footer at the start of a document (although they can also be used to change headers/footers during the document).
@@ -139,7 +135,9 @@ $mpdf->WriteHTML($html);
 </ul>
 </li>
 </ul>
-<h2>Setting a named header at the start of a document</h2>
+
+# Setting a named header at the start of a document
+
 <p>When using a <span class="smallblock">NAMED</span> header on the first page, remember that mPDF writes the header as the first page is started. This is usually when you first use WriteHTML() which automatically triggers an AddPage().</p>
 
 {% highlight php %}
@@ -189,8 +187,6 @@ $mpdf->WriteHTML($html);
 
 $mpdf->Output();
 {% endhighlight %}
-
-<p>&nbsp;</p>
 
 {% highlight php %}
 Example #5 - @page
@@ -280,7 +276,7 @@ $mpdf->WriteHTML($html);
 $mpdf->Output();
 {% endhighlight %}
 
-<h2>Selecting a named header during the document</h2>
+# Selecting a named header during the document
 
 {% highlight php %}
 Example #6 - AddPage()
@@ -330,7 +326,7 @@ $html = '
 $mpdf->WriteHTML($html);
 {% endhighlight %}
 
-<h2>Table of Contents</h2>
+# Table of Contents
 
 {% highlight php %}
 Example #8 - TOCpagebreak()
@@ -376,7 +372,8 @@ $html = '
 $mpdf->WriteHTML($html);
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a></li>
@@ -392,4 +389,4 @@ $mpdf->WriteHTML($html);
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;</li>
 <li class="manual_boxlist"><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a></li>
 </ul>
-<p>&nbsp;</p>
+

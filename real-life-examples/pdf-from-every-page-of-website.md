@@ -6,8 +6,6 @@ permalink: /real-life-examples/pdf-from-every-page-of-website.html
 modification_time: 2015-08-05T12:00:24+00:00
 ---
 
-
-
 <p>If you want to add a link to pages on your website to create a PDF version of the page, here is one way to do it.</p>
 <p>(If you have already set up a CSS stylesheet for media="print" which works for mPDF, you can omit the first 2 steps.)</p>
 <p>Write a stylesheet suitable for presenting your webpage in mPDF. Most webpages have a header and menu on the left or right which you will not want to appear in the PDF document. You can use display: none to omit these elements. From mPDF &gt;= 5.0 this will also work for inline elements. You may have something like this:</p>

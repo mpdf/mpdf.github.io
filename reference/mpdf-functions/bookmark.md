@@ -6,16 +6,18 @@ permalink: /reference/mpdf-functions/bookmark.html
 modification_time: 2015-08-05T12:00:42+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>Bookmark – Add a Bookmark to the document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>Bookmark</b> ( string <span class="parameter">$content</span> [, int <span class="parameter">$level</span> [, float <span class="parameter">$y</span> ]])</p>
 <p>Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">content</span></p>
 <p class="manual_param_dd">Specifies the text to appear as a Bookmark.
 
@@ -30,8 +32,10 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 <p class="manual_param_dd"><span class="parameter">y</span> specifies the y-coordinate on the page for the Bookmark. The top of the page is 0. The default is the current writing position on the page.
 
 <span class="smallblock"></span></p>
-<h2></h2>
-<h2>Examples</h2>
+
+# 
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -97,10 +101,12 @@ This will produce a Bookmark tree in Adobe Reader:
   + Chapter 3
 {% endhighlight %}
 
-<h2>Notes</h2>
+# Notes
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>.</div>
-<h2>See Also</h2>
+
+# See Also
+
 <ul>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/bookmark.html" | prepend: site.baseurl }}">bookmark</a>&gt; - Custom HTML tag - equivalent to Bookmark()
 

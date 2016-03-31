@@ -6,16 +6,18 @@ permalink: /reference/mpdf-functions/writehtml.html
 modification_time: 2015-08-05T12:01:16+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>WriteHTML — Write HTML code to the document</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>WriteHTML</b> ( string <span class="parameter">$html</span> [, int <span class="parameter">$mode</span> [, boolean <span class="parameter">$initialise</span> [, boolean <span class="parameter">$close</span> ]]])</p>
 <p>Write <span class="parameter">html</span> code to the document.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.2 a fatal error was caused if <span class="parameter">html</span> was passed as a <span class="smallblock">NULL</span> value, <span class="smallblock">FALSE</span> or an undefined variable.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">html</span></p>
 <p class="manual_param_dd">UTF-8 encoded HTML code to write to the document.</p>
 <p class="manual_param_dt"><span class="parameter">mode</span></p>
@@ -82,10 +84,11 @@ Prior to mPDF 4.2 the default CSS was not parsed when using <span class="paramet
 <p class="manual_param_dd">Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span> to specify whether all HTML elements are closed, and buffers cleared. See example 2 for use. You must end with a WriteHTML() that calls <span class="parameter">close</span>=<span class="smallblock">TRUE</span>
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
-<h2>
 
-</h2>
-<h2>Changelog</h2>
+# 
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th> <th>Description</th> </tr>
 </thead> <tbody>
@@ -104,7 +107,8 @@ Prior to mPDF 4.2 the default CSS was not parsed when using <span class="paramet
 Parses default CSS when using <span class="parameter">mode</span> as 2</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -144,7 +148,8 @@ $mpdf->WriteHTML('...this is the middle...', 2, false, false);
 $mpdf->WriteHTML('...and this is the end</p>', 2, false, true);
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">allow_charset_conversion</a> - attempts to read any charset declaration in the HTML code</li>
 <li class="manual_boxlist"><a href="indexb1bd.html?tid=230">disablePrintCSS</a> - prevents stylesheets set for print media being parsed</li>

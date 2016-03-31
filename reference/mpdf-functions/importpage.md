@@ -6,14 +6,16 @@ permalink: /reference/mpdf-functions/importpage.html
 modification_time: 2015-08-05T12:00:47+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 2.3)</p>
 <p>ImportPage – Import a page from an external PDF file</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">int <b>ImportPage</b> ( int <span class="parameter">$pageno</span> [, float <span class="parameter">$crop_x</span> [, float <span class="parameter">$crop_y</span> [, float <span class="parameter">$crop_w</span> [, float <span class="parameter">$crop_h</span> [, string <span class="parameter">$boxname</span> ]]]]])</p>
 <p>Import a page, or part of a page, from an external PDF file. The external source file must first be set with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template' is created in mPDF which stores the image of this page, ready to insert into the document.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">pageno</span></p>
 <p class="manual_param_dd">This parameter specifies the page number from the source PDF file to import.&nbsp; <span class="parameter">pageno</span> should be a positive integer value.
 
@@ -30,18 +32,20 @@ modification_time: 2015-08-05T12:00:47+00:00
 <p class="manual_param_dd">Specifies the width in millimetres when importing a 'cropped' page into the template.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page width from the source file</p>
-<p>&nbsp;</p>
+
 <p class="manual_param_dt"><span class="parameter">crop_h</span></p>
 <p class="manual_param_dd">Specifies the height in millimetres when importing a 'cropped' page into the template.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page height from the source file</p>
 <p class="manual_param_dt"><span class="parameter">boxname</span></p>
 <p class="manual_param_dd"><span class="parameter">boxname</span> is currently not used.</p>
-<h2>Return Value
 
-</h2>
+# Return Value
+
 <p class="manual_param_dd"><b>ImportPage()</b> returns an ID for the template which it has created. This ID can be used at any time to insert the template into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a></p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -50,7 +54,8 @@ modification_time: 2015-08-05T12:00:47+00:00
 <td>Function was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1 - Using a full page
@@ -108,7 +113,8 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
 <li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
@@ -127,4 +133,4 @@ $mpdf->Output();
 
 </li>
 </ul>
-<p>&nbsp;</p>
+

@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/kerning.html
 modification_time: 2015-08-05T12:00:05+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 6.0)</p>
 <p>The control of Kerning is complicated! CSS3 allows for 2 methods of specifying kerning. In mPDF 6, these 2 methods have exactly the same effect:</p>
 <ul>

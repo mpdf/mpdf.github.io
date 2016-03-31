@@ -6,16 +6,18 @@ permalink: /reference/mpdf-variables/max-colh-correction.html
 modification_time: 2015-08-05T12:02:12+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>max_colH_correction – Sets maximum ratio to allow when adjusting column heights</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block"><b>max_colH_correction</b> ( <i>1.15</i> | float )</p>
 <p>The maximum ratio to adjust column height when justifying - too large a value can give ugly results</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The <span class="parameter">vAlign</span> parameter of &lt;<a href="{{ "/reference/html-control-tags/columnbreak.html" | prepend: site.baseurl }}">columnbreak</a>&gt; or <a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a> must be set to J or justify</div>
-<h2>Values</h2>
+
+# Values
+
 <table class="table"> <thead>
 <tr>
 <td>value</td>
@@ -55,4 +57,3 @@ $mpdf->max_colH_correction = 1.3;
 ?>
 {% endhighlight %}
 
-<p>&nbsp;</p>

@@ -6,9 +6,8 @@ permalink: /installation-setup/installation-v5-x.html
 modification_time: 2015-08-05T11:59:23+00:00
 ---
 
+## First-time users
 
-
-<h3>First-time users</h3>
 <p>Installation:</p>
 <ul>
 <li>Download the .zip file and unzip it</li>
@@ -30,14 +29,14 @@ modification_time: 2015-08-05T11:59:23+00:00
 <p>If you wish to install additional fonts please see the notes in <a href="{{ "/fonts-languages/fonts-in-mpdf-5-x.html" | prepend: site.baseurl }}">Fonts &amp; Languages</a> for further instructions.</p>
 <p>If you wish to define a different folder for temporary files rather than <span class="filename">/tmp/</span> see the note on '<a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">Folder for temporary files</a>'.</p>
 <p>If you have problems, please read the section on <a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">troubleshooting</a> in the manual.</p>
-<h3>
 
-Upgrading from version mPDF 5.0 Beta
+## Upgrading from version mPDF 5.0 Beta
 
-</h3>
 <p>There is no upgrade package from v5 beta because so many of the files have had at least minor changes. You can overwrite most of the files, taking care to keep a note of your 3 configuration files.</p>
 <p class="manual_block"><b>Important:</b> You must delete all temporary files in the <span class="filename">/ttfontdata/</span> folder.</p>
-<h3>Changes from 5.0 Beta</h3>
+
+## Changes from 5.0 Beta
+
 <ul>
 <li>config.php file has been changed (extra CJK characters to recognise CJK blocks)</li>
 <li><code>$this-&gt;backupSubsFont</code> (in <span class="filename">config_fonts.php</span>) optionally now takes an array</li>
@@ -47,7 +46,9 @@ Upgrading from version mPDF 5.0 Beta
 <li>added initial parameter <code>new mPDF('+aCJK')</code> or <code>'-aCJK'</code> to override default useAdobeCJK at runtime</li>
 <li>QRCode is not included in main download (but as an extra package)</li>
 </ul>
-<h3>Earlier versions</h3>
+
+## Earlier versions
+
 <p>If you have been using earlier versions of mPDF, most scripts should work as before. But note:
 
 - Arial, Helvetica, Times and Courier are now treated like any other font
@@ -62,4 +63,4 @@ and not 'lucida'</p>
 <li><code>$this-&gt;use_CJK_only</code> is now depracated and is ignored. See <code>$this-&gt;useAdobeCJK</code> and <code>new mPDF('+aCJK')</code> or <code>'-aCJK'</code></li>
 </ul>
 <p>The initial parameters e.g. <code>new mPDF('utf-8')</code> have all changed. Old ones may be recognised, or will be ignored.</p>
-<p>&nbsp;</p>
+

@@ -6,14 +6,16 @@ permalink: /reference/html-control-tags/watermarkimage.html
 modification_time: 2015-08-05T12:01:31+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 3.0)</p>
 <p>watermarkimage – Set an image to use as a Watermark</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>watermarkimage</b>&nbsp; <span class="parameter">src</span> [ <span class="parameter">alpha</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">position</span> ] /&gt;</p>
 <p>Set an image to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text such as "DRAFT" or a background image. The watermark will be added to each page when the Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> is set to 1 or <span class="smallblock">TRUE</span>.</p>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">src</span></p>
 <p class="manual_param_dd">This parameter specifies the image file to use for the watermark. This can be a full URI or use a relative path<span class="smallblock">
 
@@ -48,7 +50,9 @@ F: Centred on the page print-area (frame) respecting page margins
 2 comma-separated numbers (<span class="parameter">$x</span>, <span class="parameter">$y</span>): Specify a position; units in millimeters
 
 <span class="smallblock">DEFAULT</span>: "P"</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -57,7 +61,8 @@ F: Centred on the page print-area (frame) respecting page margins
 <td>The tag was added.</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -79,8 +84,8 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 ?>
 {% endhighlight %}
 
-<p>&nbsp;</p>
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a> - PHP equivalent to &lt;watermarkimage&gt;</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermarkimagealpha.html" | prepend: site.baseurl }}">watermarkImageAlpha</a> - Specifies the transparency (alpha value) for the watermark image</li>
@@ -91,4 +96,4 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> - Specifies whether or not to show/print the watermark image</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermark-font.html" | prepend: site.baseurl }}">watermark_font</a> - Specifies the font to use for Watermark text</li>
 </ul>
-<p>&nbsp;</p>
+

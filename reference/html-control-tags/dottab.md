@@ -6,22 +6,26 @@ permalink: /reference/html-control-tags/dottab.html
 modification_time: 2015-08-05T12:01:21+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 4.3)</p>
 <p>dottab – Insert dots to following (right-aligned) text</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>dottab</b> [ <span class="parameter">outdent</span> ] /&gt;</p>
 <p>Insert a string of dots to fill the space to the text which follows &lt;dottab /&gt;, which is right-aligned. This gives the appearance seen in e.g. a table of contents, or a menu with prices. A minimum of 3 dots (with spaces either side) is inserted. If the text which follows the &lt;dottab /&gt; will not fit on a single line, the default tab of ' ... ' is added, and text is not right-aligned.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If a space is required after the &lt;dottab&gt; use a non-breaking space &amp;nbsp;</div>
 <p class="manual_block">From mPDF 5.7+ CSS styles can be applied to &lt;dottab&gt; as for an inline element.</p>
-<h2>Attributes</h2>
+
+# Attributes
+
 <p class="manual_param_dt"><span class="parameter">outdent</span></p>
 <p class="manual_param_dd">Takes any valid CSS <span class="smallblock">LENGTH</span>&nbsp; e.g. "2em"
 
 <span class="smallblock">DEFAULT</span>: 0</p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -34,7 +38,8 @@ modification_time: 2015-08-05T12:01:21+00:00
 <td><span class="parameter">outdent</span> was added</td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1

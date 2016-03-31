@@ -6,9 +6,8 @@ permalink: /html-support/html-attributes.html
 modification_time: 2015-08-05T11:59:42+00:00
 ---
 
+# HTML tag Attributes (in-line) supported
 
-
-<h2>HTML tag Attributes (in-line) supported</h2>
 <p>Example of an HTML attribute: &lt;div <span class="parameter">align</span>="center"&gt;</p>
 <p>mPDF supports attribute values in single or double quotes e.g. &lt;div align="center"&gt; or &lt;div align='center'&gt;</p>
 <p>Minimised attributes are not supported e.g. &lt;input type="checkbox" <i>disabled</i> /&gt;</p>
@@ -420,7 +419,9 @@ Only if also editable and size=1</td>
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in their formal/long form i.e. selected="selected"</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.</div>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>

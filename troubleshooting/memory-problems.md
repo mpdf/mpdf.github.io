@@ -6,8 +6,6 @@ permalink: /troubleshooting/memory-problems.html
 modification_time: 2015-08-05T12:00:35+00:00
 ---
 
-
-
 <p>mPDF uses a lot of memory on the server. If you get an error message that you have exceeded your memory limits, try the following:</p>
 <ul>
 <li>it is more efficient in very long documents to process the HTML code in small chunks rather than as one large HTML string</li>
@@ -19,7 +17,9 @@ modification_time: 2015-08-05T12:00:35+00:00
 <li>setting <a href="index8ff2.html?tid=473">cacheTables</a> = <span class="smallblock">TRUE</span> makes the most efficient use of memory, but requires temporary data written to files (which may be resource intensive) and will add significantly to processing time</li>
 <li>use a limited number of fonts, avoiding large font file sizes</li>
 </ul>
-<h2>PHP 5.3.x on Windows</h2>
+
+# PHP 5.3.x on Windows
+
 <p>Memory can become exhausted rapidly when running PHP 5.3.x on Windows. I believe this may be a bug in the Windows version of PHP. A script that exhausts 256Mb memory on Windows may only use 18Mb when run on Linux. It appears to happen most often (or exclusively) when using tables.</p>
 <p>So if you are only using Windows in a test environment and use Linux for production, you should consider setting the memory limit to maximum on Windows e.g. <span class="filename">ini_set("memory_limit","-1")</span>.</p>
 <p>Small changes to your code e.g. the CSS applied to table elements can have dramatic, but unpredictable effects on the memory usage. For example changing an attribute on a table cell to a css style.</p>

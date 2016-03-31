@@ -6,11 +6,11 @@ permalink: /reference/mpdf-functions/tocpagebreakbyarray.html
 modification_time: 2015-08-05T12:01:13+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 5.0)</p>
 <p>TOCpagebreakByArray — Insert a table of contents in the document using an array of parameters</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">void <b>TOCpagebreakByArray</b> ([ array <span class="parameter">$arr</span> ])</p>
 <p>Add a new page to the document using an array of (optional) parameters, marking the point at which a Table of Contents (<acronym title="Table of Contents">ToC</acronym>) will be inserted in the document at the end of writing. The numerous parameters specify both paging details for the continuing document, and for the <acronym title="Table of Contents">ToC</acronym> when it is generated.</p>
 
@@ -25,7 +25,9 @@ modification_time: 2015-08-05T12:01:13+00:00
 <div class="alert alert-info" role="alert"><strong>Note:</strong> You can include more than one <acronym title="Table of Contents">ToC</acronym> in the document using the parameter <span class="parameter">name</span>.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If <b>TOCpagebreakByArray()</b> is used at the start of a blank (<span class="smallblock">ODD</span>) page, no new page(s) will be added. This was added in mPDF 2.3 to allow a <acronym title="Table of Contents">ToC</acronym> to be placed on the first page, or to allow a <acronym title="Table of Contents">ToC</acronym> to follow another <acronym title="Table of Contents">ToC</acronym>. In this case, any properties for the continuing document are ignored. If you define several <acronym title="Table of Contents">ToC</acronym>s following immediately on from one another, set the properties in the first <acronym title="Table of Contents">ToC</acronym> you define.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_block">The initial parameters specify characteristics for the <acronym title="Table of Contents">ToC</acronym>, which is generated automatically at the end of the document when <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</p>
 <p><span class="parameter">paging</span> = <span class="smallblock">TRUE</span>|1|<span class="smallblock">FALSE</span>|0</p>
 <p class="manual_param_dd">Specify whether to show page numbers in the <acronym title="Table of Contents">ToC</acronym>.
@@ -156,11 +158,13 @@ A (Type A paperback 111x178mm)
 
 B (Type B paperback 128x198mm)</p>
 <p class="manual_param_dd">All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L"</p>
-<p>&nbsp;</p>
+
 <p class="manual_block">The rest of the parameters are defined exactly as for <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a>. Note that these parameters define page numbering, margins, headers/footers for the document as it continues from this point on; in the final document this will be the part of the document immediately after the <acronym title="Table of Contents">ToC</acronym>.
 
 Please refer to <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a> for further details.<span class="parameter">&nbsp;</span></p>
-<h2>Changelog</h2>
+
+# Changelog
+
 <table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
@@ -178,7 +182,8 @@ Please refer to <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | pr
 </td>
 </tr>
 </tbody> </table>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -322,7 +327,8 @@ $mpdf=Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> - Add an entry for Table of Contents</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page</li>

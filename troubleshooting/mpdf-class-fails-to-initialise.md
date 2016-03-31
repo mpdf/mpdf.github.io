@@ -6,8 +6,6 @@ permalink: /troubleshooting/mpdf-class-fails-to-initialise.html
 modification_time: 2015-08-05T12:00:36+00:00
 ---
 
-
-
 <p>mPDF still retains use of a constructor function with the same name as the class i.e.</p>
 
 {% highlight php %}

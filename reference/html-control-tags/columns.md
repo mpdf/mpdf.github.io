@@ -6,18 +6,20 @@ permalink: /reference/html-control-tags/columns.html
 modification_time: 2015-08-05T12:01:21+00:00
 ---
 
-
-
 <p>(mPDF &gt;= 1.0)</p>
 <p>columns – Control use of Columns on the page</p>
-<h2>Description</h2>
+
+# Description
+
 <p class="manual_block">&lt;<b>columns</b>&nbsp; <span class="parameter">column-count</span> [ <span class="parameter">vAlign</span> ] [ <span class="parameter">column-gap</span> ]&nbsp; /&gt;</p>
 <p>Define, start or stop Columns in the document.</p>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The maximum ratio to adjust column height when justifying is set by <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - too large a value can give ugly results</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() or use &lt;columns&gt; after commands like <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.</div>
-<h2>Parameters</h2>
+
+# Parameters
+
 <p class="manual_param_dt"><span class="parameter">column-count</span></p>
 <p class="manual_param_dd">Set the number of (vertical) columns to use on a page
 
@@ -39,7 +41,8 @@ J or justify
 <span class="smallblock">BLANK</span>&nbsp;or omitted uses default value.
 
 <span class="smallblock">DEFAULT</span>: 5 (mm)</p>
-<h2>Examples</h2>
+
+# Examples
 
 {% highlight php %}
 Example #1
@@ -65,7 +68,8 @@ $mpdf=Output();
 ?>
 {% endhighlight %}
 
-<h2>See Also</h2>
+# See Also
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addcolumn.html" | prepend: site.baseurl }}">AddColumn()</a> - Start a new Column</li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/columnbreak.html" | prepend: site.baseurl }}">columnbreak</a>&gt; - Start a new Column</li>
