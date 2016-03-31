@@ -5,7 +5,6 @@
 
 @import "../_sass/bootstrap/mixins/gradients";
 @import "../_sass/_syntax-highlighting";
-@import "../_sass/header-links";
 
 #content {
 	order: 2;
@@ -58,3 +57,5 @@ nav .list-group-item li.list-group-item:last-child {padding-bottom: 0;}
 nav div.list-group div.list-group{margin: 0;}
 nav div.list-group .list-group a.list-group-item {border-top: 1px solid #ddd !important;border-bottom: 0;padding-left: 30px;}
 nav .list-group-item li.list-group-item {border-top: 1px solid #DDD !important; padding-top: 0; padding-bottom: 0;}
+
+@import "../_sass/header-links";
