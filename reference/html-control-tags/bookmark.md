@@ -86,7 +86,8 @@ This will produce a Bookmark tree in Adobe Reader:
 {% endhighlight %}
 
 <h2>Notes</h2>
-<p class="manual_block"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</div>
 <h3>Recommended placement</h3>
 <p>Recommended placement of Bookmarks is just after the first word following the opening tag of the block element:</p>
 

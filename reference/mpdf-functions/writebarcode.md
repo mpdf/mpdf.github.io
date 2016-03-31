@@ -13,7 +13,8 @@ modification_time: 2015-08-05T12:01:15+00:00
 <h2>Description</h2>
 <p class="manual_block">void <b>writeBarcode</b> ( string <span class="parameter">$code</span> [, int <span class="parameter">$showisbn</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$size</span> [, float <span class="parameter">$border</span> [, float <span class="parameter">$padding_left</span> , float <span class="parameter">$padding_right</span> , float <span class="parameter">$padding_top</span> , float <span class="parameter">$padding_bottom</span> ]]]]]])</p>
 <p>Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specification can be found at <a href="http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf">http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf</a></p>
-<p class="manual_block"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">code</span></p>
 <p class="manual_param_dd">This parameter specifies the EAN-13 (ISBN-13) code. Accepts 12 or 13 digits (i.e. with or without the check digit) and may optionally contain hyphens e.g. 978-09542-2461-5&nbsp; or&nbsp; 978095422461</p>

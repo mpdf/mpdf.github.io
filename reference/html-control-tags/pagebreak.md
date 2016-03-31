@@ -68,8 +68,10 @@ modification_time: 2015-08-05T12:01:25+00:00
 <td>2</td>
 </tr>
 </tbody> </table>
-<p class="manual_block"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</p>
-<p class="manual_block"><b>Note</b>: &lt;newpage&gt; and &lt;page_break&gt; are synonymous. &lt;pagebreak&gt; is the preferred form.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> &lt;newpage&gt; and &lt;page_break&gt; are synonymous. &lt;pagebreak&gt; is the preferred form.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 <h2>Attributes</h2>
@@ -306,7 +308,8 @@ Example #3 - Changing headers/footers
 {% endhighlight %}
 
 <h2>Notes</h2>
-<p class="manual_block"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add one or more (conditional) pages to the document</li>

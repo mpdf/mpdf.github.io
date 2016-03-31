@@ -13,7 +13,8 @@ modification_time: 2015-08-05T12:01:24+00:00
 <h2>Description</h2>
 <p class="manual_block">&lt;<b>indexentry</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">xref</span> ] /&gt;</p>
 <p>Insert an Index entry for the document Index, referencing the current writing position in the document. If <span class="parameter">xref</span> is set, it will appear as a cross-referencing entry in the index as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.</p>
-<p class="manual_block"><b>Note: </b>The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">content</span></p>
 <p class="manual_param_dd">This attribute sets the text as it will appear in the Index entry. Text should be UTF-8 encoded.
@@ -85,7 +86,8 @@ Dromedary - see Camel, types
 {% endhighlight %}
 
 <h2>Notes</h2>
-<p class="manual_block"><b>Note</b>: &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; may be a preferred form to <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>, as it will allow more precise identification of the position and page - the &lt;indexentry&gt; can be placed just next to the appropriate word.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; may be a preferred form to <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>, as it will allow more precise identification of the position and page - the &lt;indexentry&gt; can be placed just next to the appropriate word.</div>
 <h3>Recommended placement</h3>
 <p>Recommended placement of Index Entries is just after the first word following the opening tag of the block element:</p>
 

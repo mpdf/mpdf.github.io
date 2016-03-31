@@ -13,7 +13,8 @@ modification_time: 2015-08-05T12:01:04+00:00
 <h2>Description</h2>
 <p class="manual_block">void <b>SetHTMLFooterByName</b> ( string <span class="parameter">$name</span> [, string <span class="parameter">$side</span> ])</p>
 <p>Sets an HTML page footer that has previously been defined by name.</p>
-<p class="manual_block"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">name</span></p>
 <p class="manual_param_dd">This parameter specifies the name of a previously defined HTML page footer. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page footer exists.</p>

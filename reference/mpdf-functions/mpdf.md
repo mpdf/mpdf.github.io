@@ -190,7 +190,8 @@ $mpdf=new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
 {% endhighlight %}
 
 <h2>Notes</h2>
-<p class="manual_block"><b>Note</b>: <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML to the document</li>

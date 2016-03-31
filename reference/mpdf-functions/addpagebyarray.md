@@ -64,7 +64,8 @@ modification_time: 2015-08-05T12:00:39+00:00
 </tr>
 </tbody> </table>
 <p>&nbsp;</p>
-<p class="manual_block"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 

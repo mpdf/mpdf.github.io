@@ -66,7 +66,8 @@ modification_time: 2015-08-05T12:00:38+00:00
 </tr>
 </tbody> </table>
 <p>&nbsp;</p>
-<p class="manual_block"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 <h2>Parameters</h2>
@@ -358,7 +359,8 @@ $mpdf->WriteHTML('End section of book with no headers');
 <h2>Notes</h2>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Unlike FPDF <b>AddPage()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
-<p class="manual_block"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of both <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of both <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to <b>AddPage()</b> </li>

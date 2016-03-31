@@ -13,7 +13,8 @@ modification_time: 2015-08-05T12:01:02+00:00
 <h2>Description</h2>
 <p class="manual_block">void <b>SetHeader</b> ([ mixed <span class="parameter">$header</span> [, string <span class="parameter">$side</span> [, boolean <span class="parameter">$write</span> ]]])</p>
 <p>Set a page header.</p>
-<p class="manual_block"><b>Note: </b>This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">header</span></p>
 <p class="manual_param_dd">This parameter specifies the content of the page header. It can accept a string or array. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> or array() is passed, this will clear the page header.

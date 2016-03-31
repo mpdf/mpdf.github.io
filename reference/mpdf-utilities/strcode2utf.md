@@ -13,7 +13,8 @@ modification_time: 2015-08-05T12:02:42+00:00
 <h2>Description</h2>
 <p class="manual_block">string <b>strcode2utf</b> ( string <span class="parameter">$text</span> [, boolean <span class="parameter">$low</span> ])</p>
 <p>Returns a UTF-8 encoded string.</p>
-<p class="manual_block"><b>Note: </b>This function is not part of the mPDF class, and is located in the htmltoolkit.php file. It is called without the class prefix e.g. $mpd-&gt;</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This function is not part of the mPDF class, and is located in the htmltoolkit.php file. It is called without the class prefix e.g. $mpd-&gt;</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <b>strcode2utf</b> is useful for preparing text to be used as a Watermark, or for the metadata properties of Title, Author, Creator and Keywords - which require UTF-8 encoded strings with no entities.</div>
 <h2>Parameters</h2>

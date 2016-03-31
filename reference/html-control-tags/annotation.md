@@ -15,7 +15,8 @@ modification_time: 2015-08-05T12:01:19+00:00
 <p>Adds an Annotation to the document. An annotation is like a Tooltip on a webpage. The Annotation marker, like those of "Sticky Notes" in Adobe Reader. When the reader passes the cursor over, it will display a popup text box.</p>
 <p>The exact position on the page can be specified using <span class="parameter">x</span> and <span class="parameter">y</span>, or left to position automatically. If <span class="parameter">x</span> and <span class="parameter">y</span> are not specified, the Annotation will be inserted at the current position of writing in the document. The <span class="parameter">x</span> position (horizontal) can be overridden by the variable <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a>, which can be used to force the Annotation marker to display in the right margin.</p>
 <p>The attribute <span class="parameter">file</span> can be used to specify a file (any type) which is to be embedded inside the PDF document.</p>
-<p class="manual_block"><b>Note: </b>All text to do with an annotation (text, author, subject) is rendered with the system font and can therefore contain any Unicode character even if the document font restricts to a specific codepage.</p>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> All text to do with an annotation (text, author, subject) is rendered with the system font and can therefore contain any Unicode character even if the document font restricts to a specific codepage.</div>
 <p class="manual_block">Annotations cannot be moved or deleted by the reader.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">content</span></p>

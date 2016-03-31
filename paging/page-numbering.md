@@ -122,4 +122,4 @@ $mpdf->PageNumSubstitutions[] = array('from'=>1, 'reset'=> 0, 'type'=>'I', 'supp
 </ul>
 <p>Please also see <a href="http://mpdf1.com/documentation/table-of-contents">Table of Contents</a> for this special case.</p>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong>&nbsp; startPageNums() and <span class="parameter">$showdefaultpagenos</span> are now depracated and will do nothing (used prior to v1.3)</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> &nbsp; startPageNums() and <span class="parameter">$showdefaultpagenos</span> are now depracated and will do nothing (used prior to v1.3)</div>

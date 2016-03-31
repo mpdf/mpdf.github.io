@@ -17,7 +17,7 @@ modification_time: 2015-08-05T11:59:49+00:00
 <p><b>Non-HTML</b> - <span class="smallblock">NON-HTML</span> headers/footers are set by text strings with no HTML mark up to define styles. Style changes (font-size, font-family, color) can be defined by changing mPDF variables.</p>
 <p><b>HTML</b> - <span class="smallblock">HTML</span> headers/footers are written in standard HTML code. They can only be defined outside HTML block tags (except &lt;body&gt;).</p>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong>&nbsp; <b>HTML</b> headers/footers are more intensive of processing time and memory. This probably makes little difference for an average/short document, but may be important for long/complex documents.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> &nbsp; <b>HTML</b> headers/footers are more intensive of processing time and memory. This probably makes little difference for an average/short document, but may be important for long/complex documents.</div>
 <h2>Methods</h2>
 <table class="table"> <tbody>
 <tr>

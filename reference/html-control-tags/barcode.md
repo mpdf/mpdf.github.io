@@ -140,7 +140,8 @@ Examples
 {% endhighlight %}
 
 <h2>Notes</h2>
-<p class="manual_block"><b>Note</b>: The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
 
 vertical-align&nbsp; (default: middle)
 
@@ -156,7 +157,7 @@ background-color (default white)
 
 NB padding has defaults as 0(mm) if not specified
 
-Padding is in addition to any specified quiet zones/light margins.</p>
+Padding is in addition to any specified quiet zones/light margins.</div>
 
 {% highlight php %}
 Example with CSS
