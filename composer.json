@@ -1,0 +1,7 @@
+{
+    "require": {
+        "nette/utils": "^2.3",
+        "tracy/tracy": "^2.3",
+        "symfony/yaml": "^3.0"
+    }
+}
