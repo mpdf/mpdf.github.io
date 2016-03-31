@@ -2,11 +2,11 @@ title: mPDF Manual
 
 description: mPDF is a PHP class which generates PDF files from UTF-8 encoded HTML. It is based on FPDF and HTML2FPDF, with a number of enhancements.
 
-baseurl: '/test-pages' # the subpath of your site, e.g. /blog
+baseurl: '' # the subpath of your site, e.g. /blog
 
 url: 'https://mpdf.github.io' # the base hostname & protocol for your site
 
-github_username:  mpdf
+github_username: mpdf
 
 # Build settings
 markdown: kramdown
