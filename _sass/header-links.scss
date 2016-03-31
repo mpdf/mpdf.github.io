@@ -4,10 +4,10 @@
  */
 .header-link {
   position: relative;
-  left: 0.5em;
+  left: 0.3em;
   opacity: 0;
-  font-size: 0.8em;
-  text-decoration: none;
+  font-size: 0.7em;
+  text-decoration: none !important;
 
   -webkit-transition: opacity 0.2s ease-in-out 0.1s;
   -moz-transition: opacity 0.2s ease-in-out 0.1s;
