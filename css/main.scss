@@ -19,8 +19,17 @@ nav {
 }
 
 .filename {
-  font-size: $font-size-root * 0.8;
-  color: $code-color;
+  font-size: $font-size-root * 0.7;
+  font-weight: bold;
+  color: #870000;
+  background-color: $code-bg;
+  font-family: $font-family-monospace;
+}
+
+.parameter {
+  font-size: $font-size-root * 0.9;
+  font-weight: bold;
+  color: #000088;
   background-color: $code-bg;
   font-family: $font-family-monospace;
 }

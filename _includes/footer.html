@@ -1,3 +1,11 @@
 <footer class="container">
 
+<div class="row">
+	<div class="col-xs-12">
+		{% if page.modification_time %}
+			<small>Page last modified at {{ page.modification_time | date_to_rfc822 }}</small>
+		{% endif %}
+	</div>
+</div>
+
 </footer>
