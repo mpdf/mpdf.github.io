@@ -14,15 +14,15 @@ permalink: /
 <h2>Useful manual pages</h2>
 
 - <a href="{{ "/about-mpdf/features-v5.html" | prepend: site.baseurl }}">Main features</a>
-- <a href="about-mpdf/requirements-v5.html">Requirements</a>
-- <a href="about-mpdf/limitations.html">Known limitations</a>
-- <a href="about-mpdf/credits.html">Credits</a>
-- <a href="about-mpdf/licence.html">Licence</a>
+- <a href="{{ "/about-mpdf/requirements-v5.html" | prepend: site.baseurl }}">Requirements</a>
+- <a href="{{ "/about-mpdf/limitations.html" | prepend: site.baseurl }}">Known limitations</a>
+- <a href="{{ "/about-mpdf/credits.html" | prepend: site.baseurl }}">Credits</a>
+- <a href="{{ "/about-mpdf/licence.html" | prepend: site.baseurl }}">Licence</a>
 
 - <a href="https://github.com/mpdf/mpdf">GitHub repository</a>
-- <a href="installation-setup/installation-v6-x.html">Installing</a>
+- <a href="{{ "/installation-setup/installation-v6-x.html" | prepend: site.baseurl }}">Installation</a>
 
-- <a href="getting-started/creating-your-first-file.html">Creating your first document</a>
+- <a href="{{ "/getting-started/creating-your-first-file.html" | prepend: site.baseurl }}">Creating your first document</a>
 
 <h2>Acronyms</h2>
 
