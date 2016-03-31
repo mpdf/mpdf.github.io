@@ -3,16 +3,15 @@ layout: page
 title: SetDocTemplate()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setdoctemplate.html
+modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3)</p>
 <p>SetDocTemplate – Specify an external PDF file to use as a template</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetDocTemplate</b> ( [ string <span class="parameter">$file</span> [, boolean <span class="parameter">$continue</span> ]])</div>
+<p class="manual_block">void <b>SetDocTemplate</b> ( [ string <span class="parameter">$file</span> [, boolean <span class="parameter">$continue</span> ]])</p>
 <p>Specify an external PDF file to use as a template. Each page of the external source PDF file will be used as a template for the corresponding page in your new document. If the current mPDF document has more pages than the external PDF source document, the last page will (optionally) continue to be used for any remaining pages.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">file</span></p>
@@ -24,9 +23,9 @@ permalink: /reference/mpdf-functions/setdoctemplate.html
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> If you want to turn the template off, just use <code>$mpdf-&gt;SetDocTemplate()</code> with no parameters.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If you want to turn the template off, just use <code>$mpdf-&gt;SetDocTemplate()</code> with no parameters.</div>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -82,6 +81,3 @@ $mpdf->Output();
 </li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

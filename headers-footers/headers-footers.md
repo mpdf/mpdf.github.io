@@ -3,23 +3,23 @@ layout: page
 title: Headers & Footers
 parent_title: Headers & Footers
 permalink: /headers-footers/headers-footers.html
+modification_time: 2015-08-05T11:59:49+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Page headers and page footers can be set for mPDF documents in a number of different ways. As mPDF has evolved, new methods have been added.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> As from mPDF v6.0 Headers and Footers are all now written internally as HTMLheaders/footers. The use of non-HTML headers and footers (methods 1 &amp; 3) is depracated, but remains supported. Non-HTML headers and footers are converted in mPDF to HTML equivalents. Default non-HTML headers will not clash with HTML headers, but named non-HTML headers WILL clash with (and overwrite) HTML headers of the same (equivalent) name e.g. html_MyFooter == MyFooter (non-HTML).</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> As from mPDF v6.0 Headers and Footers are all now written internally as HTMLheaders/footers. The use of non-HTML headers and footers (methods 1 &amp; 3) is depracated, but remains supported. Non-HTML headers and footers are converted in mPDF to HTML equivalents. Default non-HTML headers will not clash with HTML headers, but named non-HTML headers WILL clash with (and overwrite) HTML headers of the same (equivalent) name e.g. html_MyFooter == MyFooter (non-HTML).</div>
 <h2>Types</h2>
 <p><b>RUNTIME</b> - <span class="smallblock">RUNTIME</span> headers/footers are set as they are required throughout the document.</p>
 <p><b>NAMED</b> - <span class="smallblock">NAMED</span> headers/footers are defined at any time (before they are used) and given a 'name'; they can then be used/re-used by reference to that name at any time. They can be defined by either PHP script or custom HTML tags.</p>
 <p><b>Non-HTML</b> - <span class="smallblock">NON-HTML</span> headers/footers are set by text strings with no HTML mark up to define styles. Style changes (font-size, font-family, color) can be defined by changing mPDF variables.</p>
 <p><b>HTML</b> - <span class="smallblock">HTML</span> headers/footers are written in standard HTML code. They can only be defined outside HTML block tags (except &lt;body&gt;).</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b>&nbsp; <b>HTML</b> headers/footers are more intensive of processing time and memory. This probably makes little difference for an average/short document, but may be important for long/complex documents.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong>&nbsp; <b>HTML</b> headers/footers are more intensive of processing time and memory. This probably makes little difference for an average/short document, but may be important for long/complex documents.</div>
 <h2>Methods</h2>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -125,6 +125,3 @@ permalink: /headers-footers/headers-footers.html
 </tbody> </table>
 <p>In any of the options, {PAGENO} or {DATE j-m-Y} can be used - which will be replaced by the page number or current date. j-m-Y can be replaced by any of the valid formats used in the php <a href="http://www.php.net/manual/en/function.date.php" target="_blank">date()</a> function.</p>
 <p>See also: <a href="{{ "/reference/mpdf-variables/forceportraitheaders.html" | prepend: site.baseurl }}">forcePortraitHeaders</a></p>
-</div>
-</div>
-

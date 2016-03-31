@@ -3,11 +3,11 @@ layout: page
 title: RoundedRect()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/roundedrect.html
+modification_time: 2015-08-05T12:00:52+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p><code><b>RoundedRect</b>(<b>float</b> x, <b>float</b> y, <b>float</b> w, <b>float</b> h, <b>float</b> radius[, <b>string</b> style])
 
 </code> Draws a rectangle with rounded corners directly to the PDF document at the specified position.</p>
@@ -33,6 +33,3 @@ Box style: D or empty string - draw border (default); F - fill; DF or FD - draw 
 
 Default = '' i.e. border, no fill</li>
 </ul>
-</div>
-</div>
-

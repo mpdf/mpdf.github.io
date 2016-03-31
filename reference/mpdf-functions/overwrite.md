@@ -3,24 +3,23 @@ layout: page
 title: OverWrite()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/overwrite.html
+modification_time: 2015-08-05T12:00:50+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDFI &gt;= 2.3)</p>
 <p>OverWrite – Replace specified text strings in an existing PDF file</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">mixed <b>OverWrite</b> ( string <span class="parameter">$sourcefile</span> , mixed <span class="parameter">$search</span> , mixed <span class="parameter">$replacement</span> [, string <span class="parameter">$dest</span> [, string <span class="parameter">$file_out</span> ]])</div>
+<p class="manual_block">mixed <b>OverWrite</b> ( string <span class="parameter">$sourcefile</span> , mixed <span class="parameter">$search</span> , mixed <span class="parameter">$replacement</span> [, string <span class="parameter">$dest</span> [, string <span class="parameter">$file_out</span> ]])</p>
 <p>Using the class extension mPDFI, an existing PDF file can be overwritten, replacing specified text with alternatives. For example you may have created a long complex PDF file, and you wish to produce copies with an individual number on each copy without having to re-generate the whole document each time.</p>
 <p>Overwrite() does not re-flow the text from the source file. If the <span class="parameter">replacement</span> string is longer than the <span class="parameter">search</span> string, it may overlap the following text.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> <b>OverWrite()</b> has only been tested to work on PDF files produced by mPDF. It will work with encrpyted files, as long as the same encryption properties are used for the new document.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> <b>OverWrite()</b> has only been tested to work on PDF files produced by mPDF. It will work with encrpyted files, as long as the same encryption properties are used for the new document.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> If you want the final PDF file to be encrypted, you need to encrypt the original source file. Make sure that you specify a password otherwise mPDF uses a random password and <b>OverWrite()</b> will not be able to access the text.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If you want the final PDF file to be encrypted, you need to encrypt the original source file. Make sure that you specify a password otherwise mPDF uses a random password and <b>OverWrite()</b> will not be able to access the text.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF &gt;= 5.3 a unique encryption key is generated each time you create a PDF file. So to use encryption you need to save variables when you create the original file. See Example 2.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 5.3 a unique encryption key is generated each time you create a PDF file. So to use encryption you need to save variables when you create the original file. See Example 2.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">sourcefile</span></p>
 <p class="manual_param_dd">This parameter specifies the source PDF file to use.&nbsp; <span class="parameter">sourcefile</span> should be a relative path to a local file.</p>
@@ -54,7 +53,7 @@ F: save as file <span class="parameter">file_out
 <h2>Return Value</h2>
 <p class="manual_param_dd"><b>OverWrite()</b> returns the PDF file as a string if <span class="parameter">dest</span> is set to "S".</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -198,6 +197,3 @@ exit;
 <li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li>
 <li><a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li>
 </ul>
-</div>
-</div>
-

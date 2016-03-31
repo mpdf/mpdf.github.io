@@ -3,11 +3,11 @@ layout: page
 title: Lists
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/lists.html
+modification_time: 2015-08-05T12:00:07+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 6.0)</p>
 <p>Lists are handled as for other block level elements, so you can apply any CSS properties usable on blocks (e.g. border, background, padding) to UL/OL and LI tags.</p>
 <p>There is full support for CSS properties "<code>list-style</code>", "<code>list-style-image</code>", "<code>list-style-type</code>", and "<code>list-style-position</code>".</p>
@@ -63,7 +63,7 @@ $this->list_symbol_size = '0.31em';
 <p>The attribute <code>start="3"</code> (integer) works for "OL"; it is an official (though depracated) HTML attribute.</p>
 <p>List bullets (<code>type = disc, circle </code>or<code> square</code>) are drawn rather than using font glyphs (from mPDF &gt;= v6.0), for better consistency.</p>
 <p>For maximum backwards comaptibility with older versions of mPDF, change the following configurable variables in the <code>config.php</code> file:</p>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr>
 <td>
 
@@ -91,6 +91,3 @@ $this-&gt;list_symbol_size = '0.31em';</p>
 </td>
 </tr>
 </tbody> </table>
-</div>
-</div>
-

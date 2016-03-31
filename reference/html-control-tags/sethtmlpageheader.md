@@ -3,16 +3,15 @@ layout: page
 title: sethtmlpageheader
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/sethtmlpageheader.html
+modification_time: 2015-08-05T12:01:28+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.0)</p>
 <p>sethtmlpageheader – Set an HTML page header by a given name</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt; <b>sethtmlpageheader</b> [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] [ <span class="parameter">show-this-page</span> ] /&gt;</div>
+<p class="manual_block">&lt; <b>sethtmlpageheader</b> [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] [ <span class="parameter">show-this-page</span> ] /&gt;</p>
 <p>Sets an HTML page header that has previously been defined by name.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">name</span></p>
@@ -52,7 +51,7 @@ If the <span class="parameter">page</span> value is <span class="smallblock">BLA
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -74,6 +73,3 @@ If the <span class="parameter">page</span> value is <span class="smallblock">BLA
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/sethtmlpageheader.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

@@ -3,16 +3,16 @@ layout: page
 title: Math Formulae with MathJax
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/math-formulae-with-mathjax.html
+modification_time: 2015-08-05T12:00:22+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF does not support MathML or LaTeX math formulae directly. However you can include math in a PDF document making use of <a href="http://www.mathjax.org/">MathJax</a> following the steps below.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> See alternative method to this in <a href="{{ "/what-else-can-i-do/math-with-mathjax-2.html" | prepend: site.baseurl }}">Math with MathJax 2</a></div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> See alternative method to this in <a href="{{ "/what-else-can-i-do/math-with-mathjax-2.html" | prepend: site.baseurl }}">Math with MathJax 2</a></div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This version has an updated script.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This version has an updated script.</div>
 <p>MathJax is a Javascript program which renders math equations in a browser from either MathML or LaTeX sources. You need to use MathJax first to render the equation, and MathJax needs to be configured to offer SVG as an output option. To demonstrate, start with a sample page such as <a href="http://www.mathjax.org/demos/tex-samples/">http://www.mathjax.org/demos/tex-samples/ </a></p>
 <p>1) Open the HTML page in your browser (allowing MathJax to render the equations).</p>
 <p>2) Right click over one of the equations and select: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG (This re-renders all the equations n the page in SVG format),</p>
@@ -64,6 +64,3 @@ exit;
 {% endhighlight %}
 
 <p>See an example of output: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a></p>
-</div>
-</div>
-

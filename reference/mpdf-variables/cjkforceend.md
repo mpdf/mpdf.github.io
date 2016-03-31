@@ -3,11 +3,11 @@ layout: page
 title: CJKforceend
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/cjkforceend.html
+modification_time: 2015-08-05T12:01:46+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.7)</p>
 <p>CJK line-breaking is implemented in mPDF roughly according to accepted rules.</p>
 <p>Configurable variables allow fine control of behaviour:</p>
@@ -22,6 +22,3 @@ permalink: /reference/mpdf-variables/cjkforceend.html
 will force hanging punctuation to hang outside right margin.</p>
 <p>&nbsp;</p>
 <p>See also <a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a> and <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a></p>
-</div>
-</div>
-

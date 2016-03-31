@@ -3,11 +3,11 @@ layout: page
 title: mPDF class fails to Initialise
 parent_title: Troubleshooting
 permalink: /troubleshooting/mpdf-class-fails-to-initialise.html
+modification_time: 2015-08-05T12:00:36+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF still retains use of a constructor function with the same name as the class i.e.</p>
 
 {% highlight php %}
@@ -30,7 +30,4 @@ function mPDF(...) {
 {% highlight php %}
 __construct(...) {
 {% endhighlight %}
-
-</div>
-</div>
 

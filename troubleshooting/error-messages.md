@@ -3,11 +3,11 @@ layout: page
 title: Error messages
 parent_title: Troubleshooting
 permalink: /troubleshooting/error-messages.html
+modification_time: 2015-08-05T12:00:32+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p><b>"Output has already been sent from the script - PDF file generation aborted."</b></p>
 <p>If you see this message it means that the script has sent output to the browser before starting to generate the PDF file.</p>
 <p>Most likely causes are:</p>
@@ -33,7 +33,4 @@ $mpdf->debug = true;
 
 $mpdf->allow_output_buffering = true;
 {% endhighlight %}
-
-</div>
-</div>
 

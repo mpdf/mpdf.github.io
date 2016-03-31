@@ -3,11 +3,11 @@ layout: page
 title: allowCJKoverflow
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/allowcjkoverflow.html
+modification_time: 2015-08-05T12:01:36+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.7)</p>
 <p>CJK line-breaking is implemented in mPDF roughly according to accepted rules.</p>
 <p>Configurable variables allow fine control of behaviour (except in tables):</p>
@@ -15,6 +15,3 @@ permalink: /reference/mpdf-variables/allowcjkoverflow.html
 
 &nbsp;&nbsp;&nbsp; $this-&gt;allowCJKoverflow = false; // FALSE=squeeze; TRUE=overflow (only selected)</p>
 <p>See also <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a> and <a href="{{ "/reference/mpdf-variables/cjkforceend.html" | prepend: site.baseurl }}">CJKforceend </a></p>
-</div>
-</div>
-

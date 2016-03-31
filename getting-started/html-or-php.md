@@ -3,14 +3,13 @@ layout: page
 title: HTML or PHP?
 parent_title: Getting Started
 permalink: /getting-started/html-or-php.html
+modification_time: 2015-08-05T11:59:25+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
-<p>Most of the functions of mPDF can be achieved two ways: using PHP commands, or using custom HTML tags. Use whichever suits your purpose better, and you can always combine a mxture of the two.</p>
 
-<div class="alert alert-info" role="alert">If you are new to mPDF, I would recommend using HTML/CSS for everything - you can test most things out in a browser this way as you are writing it.</div>
+
+<p>Most of the functions of mPDF can be achieved two ways: using PHP commands, or using custom HTML tags. Use whichever suits your purpose better, and you can always combine a mxture of the two.</p>
+<p class="manual_block">If you are new to mPDF, I would recommend using HTML/CSS for everything - you can test most things out in a browser this way as you are writing it.</p>
 <p>Example:</p>
 
 {% highlight php %}
@@ -68,6 +67,3 @@ $mpdf->Output();
 
 <h2>See Also</h2>
 <p><a href="{{ "/what-else-can-i-do/capture-html-output.html" | prepend: site.baseurl }}">Capturing HTML</a></p>
-</div>
-</div>
-

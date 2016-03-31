@@ -3,13 +3,12 @@ layout: page
 title: Arabic (RTL) text v5.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/arabic-rtl-text-v5-x.html
+modification_time: 2015-08-05T11:59:34+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1</div>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1</div>
 <h3>Document Directionality - RTL versus LTR</h3>
 <p>The document has a baseline direction which is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:</p>
 <ul>
@@ -69,7 +68,7 @@ english text <span>[arabic text]</span> english text
 <p>Arabic is a complex script requiring processing before output. However any appropriate font can be used - as long as it contains the characters in Unicode blocks 'Arabic Presentation Forms' A and B (U+FB50 - U+FDFF, U+FE70 - U+FEFE). Note that quite a large number of fonts contain the isolated characters but not the presentation forms.</p>
 <p>2 fonts are bundled with mPDF: XB Zar and XB Riyaz. These are 2 of a number of fonts available from <a href="http://wiki.irmug.com/index.php/X_Series_2">http://wiki.irmug.com/index.php/X_Series_2</a>.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for Pashto/Sindhi/Urdu/Kurdish, especially for joining characters and added new presentation forms.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for Pashto/Sindhi/Urdu/Kurdish, especially for joining characters and added new presentation forms.</div>
 <h3>Non-unicode characters</h3>
 <p>Some characters in Pashto/Sindhi/Urdu/Kurdish do not have Unicode values for the final/initial/medial forms of the characters. However, some fonts include glyphs for these characters "un-mapped" to Unicode (including XB Zar and XB Riyaz, which are bundled with mPDF).</p>
 <p>By editing <span class="filename">config_fonts.php</span> and adding to appropriate fonts:</p>
@@ -95,7 +94,7 @@ It seems that Initial and Medial forms are used in Koranic text.
 
 I have left options encoded in <span class="function">function InitArabic()</span> if you want to alter - to make it double-joining, it also needs to be added to <span class="parameter">$arabPrevLink</span> as "\xd9\x89"</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner, LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner, LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.</div>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
@@ -104,6 +103,3 @@ I have left options encoded in <span class="function">function InitArabic()</spa
 <li class="manual_boxlist"><a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li>
 <li class="manual_boxlist"><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
 </ul>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: CircularText()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/circulartext.html
+modification_time: 2015-08-05T12:00:43+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF &gt;= 5.4</p>
 <p>function CircularText($x, $y, $r, $text, $align='top|bottom', fontfamily='', fontsize=0, fontstyle='', $kerning=120, $fontwidth=100, $divider='') {</p>
 <p>x: abscissa of center
@@ -29,6 +29,3 @@ fontwidth: width of letters in percentage. Default value: 100. Zero is not allow
 
 - uses automatic Kerning between letters if useKerning == true</p>
 <p>See &lt;<a href="{{ "/reference/html-control-tags/textcircle.html" | prepend: site.baseurl }}">textcircle</a>&gt; for more details</p>
-</div>
-</div>
-

@@ -3,15 +3,14 @@ layout: page
 title: useFixedTextBaseline
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/usefixedtextbaseline.html
+modification_time: 2015-08-05T12:02:36+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 6.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">boolean <b>useFixedTextBaseline</b></div>
+<p class="manual_block">boolean <b>useFixedTextBaseline</b></p>
 <p>Specify whether to use a fixed value to set the position of the text baseline.</p>
 <p>For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a>.</p>
 <h2>Values</h2>
@@ -22,7 +21,7 @@ permalink: /reference/mpdf-variables/usefixedtextbaseline.html
 
 <span class="smallblock">TRUE</span>: use a fixed value to set the position of the text baseline.</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -32,6 +31,3 @@ permalink: /reference/mpdf-variables/usefixedtextbaseline.html
 </tbody> </table>
 <h2>See Also</h2>
 <p><a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a></p>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: FPDF Original Functions
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/fpdf-original-functions.html
+modification_time: 2015-08-05T12:01:17+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF is based on <a href="http://www.fpdf.org/">FDPF</a> and has developed to support HTML input. However you can still use the original functions to write directly to the document. The links below take you straight to the FPDF Reference Manual pages:</p>
 <p>
 
@@ -44,6 +44,3 @@ permalink: /reference/mpdf-functions/fpdf-original-functions.html
 <a href="http://www.fpdf.org/en/doc/write.htm">Write</a> - print flowing text*</p>
 <p>&nbsp;</p>
 <p>*Note that these functions require text to be encoded if required, and do not automatically reverse RTL text, or convert HTML entities to characters. See the mPDF functions <a href="{{ "/reference/mpdf-functions/writecell.html" | prepend: site.baseurl }}">WriteCell()</a> and <a href="{{ "/reference/mpdf-functions/writetext.html" | prepend: site.baseurl }}">WriteText()</a> which do much the same thing, but support UTF-8 input regardless of the output encoding of your PDF file.</p>
-</div>
-</div>
-

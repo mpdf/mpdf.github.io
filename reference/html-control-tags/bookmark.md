@@ -3,19 +3,18 @@ layout: page
 title: bookmark
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/bookmark.html
+modification_time: 2015-08-05T12:01:20+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>bookmark – Add a Bookmark to the document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt;<b>bookmark</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">level</span> ] /&gt;</div>
+<p class="manual_block">&lt;<b>bookmark</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">level</span> ] /&gt;</p>
 <p>Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">content</span></p>
 <p class="manual_param_dd">Specifies the text to appear as a Bookmark.
@@ -87,8 +86,7 @@ This will produce a Bookmark tree in Adobe Reader:
 {% endhighlight %}
 
 <h2>Notes</h2>
-
-<div class="alert alert-info" role="alert"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</div>
+<p class="manual_block"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</p>
 <h3>Recommended placement</h3>
 <p>Recommended placement of Bookmarks is just after the first word following the opening tag of the block element:</p>
 
@@ -125,6 +123,3 @@ $mpdf->h2bookmarks = array('H1'=>0, 'H2'=>1, 'H3'=>2);
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/bookmark.html" | prepend: site.baseurl }}">Bookmark()</a> - PHP equivalent to &lt;bookmark&gt;</li>
 </ul>
-</div>
-</div>
-

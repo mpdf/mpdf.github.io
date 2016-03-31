@@ -3,11 +3,11 @@ layout: page
 title: Choosing a configuration v5.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/choosing-a-configuration-v5-x.html
+modification_time: 2015-08-05T11:59:30+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.0)</p>
 <p>In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at least in some form).</p>
 <p>Some of the things you can change are:</p>
@@ -219,6 +219,3 @@ $mpdf = new mPDF('ru-x');     // behaves as though ('ru') called (Russian)
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Automatically detect language in the input HTML text and use appropriate fonts</li>
 </ul>
 <p>There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a>.</p>
-</div>
-</div>
-

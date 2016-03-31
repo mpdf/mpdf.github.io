@@ -3,16 +3,15 @@ layout: page
 title: SetSourceFile()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setsourcefile.html
+modification_time: 2015-08-05T12:01:08+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3)</p>
 <p>SetSourceFile – Specify the source PDF file used to import pages into the document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">int <b>SetSourceFile</b> ( string <span class="parameter">$file</span> )</div>
+<p class="manual_block">int <b>SetSourceFile</b> ( string <span class="parameter">$file</span> )</p>
 <p>Specify the source PDF file used to import pages into the document.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">file</span></p>
@@ -21,7 +20,7 @@ permalink: /reference/mpdf-functions/setsourcefile.html
 <p class="manual_param_dd"><b>SetSourceFile()</b> returns the number of pages in the source file.</p>
 <p>&nbsp;</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -71,6 +70,3 @@ $mpdf->Output();
 <li><a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template</li>
 <li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li>
 </ul>
-</div>
-</div>
-

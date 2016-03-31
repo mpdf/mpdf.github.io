@@ -3,11 +3,11 @@ layout: page
 title: Page size & Orientation
 parent_title: Paging
 permalink: /paging/page-size-orientation.html
+modification_time: 2015-08-05T11:59:47+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>Page sizes supported</h2>
 <p>When declaring an instance of <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF</a> class, you can specify the (default) page size and orientation for the document. The margins and orientation can be redefined throughout the document whenever you add a new page using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;. It can also be set by CSS using <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>.</p>
 <h2>Examples</h2>
@@ -60,6 +60,3 @@ $mpdf=new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

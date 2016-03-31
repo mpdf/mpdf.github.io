@@ -3,11 +3,11 @@ layout: page
 title: Choosing a configuration v6.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/choosing-a-configuration-v6-x.html
+modification_time: 2015-08-05T11:59:30+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 6.0)</p>
 <p>In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at least in some form).</p>
 <p>Some of the things you can change are:</p>
@@ -151,6 +151,3 @@ $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a></li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

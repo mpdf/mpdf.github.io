@@ -3,15 +3,14 @@ layout: page
 title: useDictionaryLBR
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/usedictionarylbr.html
+modification_time: 2015-08-05T12:02:35+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 6.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">boolean <b>useDictionaryLBR</b></div>
+<p class="manual_block">boolean <b>useDictionaryLBR</b></p>
 <p>Specify whether to use mPDF word dictionaries to determine appropriate places for line breaks when using Lao, Thai or Khmer text.</p>
 <p>For more information, see <a href="{{ "/what-else-can-i-do/line-breaking.html" | prepend: site.baseurl }}">Line breaking</a>.</p>
 <h2>Values</h2>
@@ -22,7 +21,7 @@ permalink: /reference/mpdf-variables/usedictionarylbr.html
 
 <span class="smallblock">FALSE</span>: word dictionaries not used. Line breaks will only be allowed according to usual line-breaking rules.</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -34,6 +33,3 @@ permalink: /reference/mpdf-variables/usedictionarylbr.html
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/line-breaking.html" | prepend: site.baseurl }}">Line breaking</a></li>
 </ul>
-</div>
-</div>
-

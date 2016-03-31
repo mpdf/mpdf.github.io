@@ -3,18 +3,17 @@ layout: page
 title: SetVisibility()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setvisibility.html
+modification_time: 2015-08-05T12:01:09+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <div>
 <div>
 <p>(mPDF &gt;= 5.4)</p>
 <p>SetVisibility – Set the visibility of subsequent objects</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetVisibility</b> ( string <span class="parameter">$visibility</span> )</div>
+<p class="manual_block">void <b>SetVisibility</b> ( string <span class="parameter">$visibility</span> )</p>
 <p>Set the visibility of subsequent objects</p>
 <h2>Parameters</h2>
 <span class="parameter">visibility</span>
@@ -33,7 +32,7 @@ screenonly
 
 <span class="smallblock">DEFAULT</span>: visible</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -74,6 +73,3 @@ $mpdf->WriteHTML('<p>This text will only be visible on screen, and will not be i
 <p>&nbsp;</p>
 </div>
 </div>
-</div>
-</div>
-

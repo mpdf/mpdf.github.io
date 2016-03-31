@@ -3,16 +3,15 @@ layout: page
 title: PDFA
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/pdfa.html
+modification_time: 2015-08-05T12:02:17+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.3)</p>
 <p>PDFA – Create PDF/A1-b compliant document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>PDFA</b></div>
+<p class="manual_block">void <b>PDFA</b></p>
 <p>Specify whether to create a PDF/A1-b compliant document.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">PDFA</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
@@ -24,7 +23,7 @@ permalink: /reference/mpdf-variables/pdfa.html
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -43,6 +42,3 @@ permalink: /reference/mpdf-variables/pdfa.html
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

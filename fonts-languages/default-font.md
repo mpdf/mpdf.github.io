@@ -3,11 +3,11 @@ layout: page
 title: Default Font
 parent_title: Fonts & Languages
 permalink: /fonts-languages/default-font.html
+modification_time: 2015-08-05T11:59:36+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p><b>Default font &amp; font-size</b></p>
 <p>A default font and font-size are required for mPDF to function. These are determined by:</p>
 <p>Declared when instantiating the mPDF class (see Getting Started). These "provisional" default values will be active if you are using functions to write directly to the PDF file e.g.</p>
@@ -39,7 +39,4 @@ body { font-family: serif; font-size: 10pt; }
 {% highlight php %}
 <body style="font-family: serif; font-size: 10pt;">
 {% endhighlight %}
-
-</div>
-</div>
 

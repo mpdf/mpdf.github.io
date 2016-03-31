@@ -3,19 +3,18 @@ layout: page
 title: SetWatermarkText()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setwatermarktext.html
+modification_time: 2015-08-05T12:01:10+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.2)</p>
 <p>SetWatermarkText – Set the text to use as a Watermark</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetWatermarkText</b> ( [ string <span class="parameter">$text</span> [, float <span class="parameter">$alpha</span> ]])</div>
+<p class="manual_block">void <b>SetWatermarkText</b> ( [ string <span class="parameter">$text</span> [, float <span class="parameter">$alpha</span> ]])</p>
 <p>Set the text to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text such as "DRAFT". The watermark will be added to each page when the Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermark</a> is set to 1 or <span class="smallblock">TRUE</span>.&nbsp;</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Prior to mPDF 2.2 the function setUnvalidatedText() was used. SetWatermarkText() is now the preferred form.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 2.2 the function setUnvalidatedText() was used. SetWatermarkText() is now the preferred form.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">text</span></p>
 <p class="manual_param_dd">This parameter defines the text to use for the watermark. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. If the text is blank, it will clear the watermark text, so nothing appears.
@@ -26,7 +25,7 @@ permalink: /reference/mpdf-functions/setwatermarktext.html
 
 <span class="smallblock">DEFAULT</span>: 0.2</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -110,6 +109,3 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> - Specifies whether or not to show/print the watermark image</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermark-font.html" | prepend: site.baseurl }}">watermark_font</a> - Specifies the font to use for Watermark text</li>
 </ul>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: Credits
 parent_title: About mPDF
 permalink: /about-mpdf/credits.html
+modification_time: 2015-08-05T11:59:21+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>All credit is due to the following:</p>
 <ul>
 <li>Olivier Plathey for the original FPDF class [<a href="http://www.fpdf.org/">http://www.fpdf.org</a>]</li>
@@ -36,6 +36,3 @@ permalink: /about-mpdf/credits.html
 <li>Klemen VODOPIVEC for FPDF_Protection</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

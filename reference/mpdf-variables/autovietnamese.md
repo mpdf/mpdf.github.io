@@ -3,15 +3,14 @@ layout: page
 title: autoVietnamese
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/autovietnamese.html
+modification_time: 2015-08-05T12:01:42+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 6.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">boolean <b>autoVietnamese</b></div>
+<p class="manual_block">boolean <b>autoVietnamese</b></p>
 <p>Tells mPDF whether to try and distinguish the Vietnamese language when using <code>autoScriptToLang</code>.</p>
 <p>Vietnamese is written using mainly Latin script, and cannot therefore be distinguished for certain from other languages using Latin script. However there are a few characters which are unique to Vietnamese and may enable mPDF to distinguish text in a Vietnamese language.</p>
 <p>Because a number of fonts do not contain these unique characters, you may wish mPDF to try and detect Vietnamese so a special font can be selected.</p>
@@ -30,6 +29,3 @@ permalink: /reference/mpdf-variables/autovietnamese.html
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">autoScriptToLang</a> - <code><span class="code">marks up HTML text using the lang attribute, based on the Unicode script block in question</code></span></li>
 <li class="manual_boxlist"><a href="{{ "/fonts-languages/automatic-font-selection.html" | prepend: site.baseurl }}">Automatic Font selection</a> </li>
 </ul>
-</div>
-</div>
-

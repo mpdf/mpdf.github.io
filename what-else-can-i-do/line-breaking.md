@@ -3,11 +3,11 @@ layout: page
 title: Line breaking
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/line-breaking.html
+modification_time: 2015-08-05T12:00:06+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The algorithm for determining automatic line breaks was completely rewritten in mPDF v6.0 - the following notes apply to mPDF &gt;= 6.0</p>
 <p>Line breaks will be allowed at:</p>
 <ul>
@@ -22,6 +22,3 @@ permalink: /what-else-can-i-do/line-breaking.html
 <p>Lao, Thai and Khmer text does not have space between words. By default, mPDF uses word dictionaries to determine appropriate opportunites for line-breaks. Users may turn this function off using the configurable variable <code>useDictionaryLBR</code>.</p>
 <p>Alternatively users can insert the character U+200B (zero-width space) in the text to mark line-breaking opportunities manually.</p>
 <p>Similarly for Tibetan script, mPDF 6 uses a simple algorithm to identify line-breaking opportunities after the characters U+0F0B (Tsheg) or U+0F0D. This can be overriden using the configurable variable <code>useTibetanLBR</code>.</p>
-</div>
-</div>
-

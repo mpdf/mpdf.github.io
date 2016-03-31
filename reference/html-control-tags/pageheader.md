@@ -3,19 +3,18 @@ layout: page
 title: pageheader
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/pageheader.html
+modification_time: 2015-08-05T12:01:26+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.0)</p>
 <p>pageheader – Define a page header with a given name</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt;<b>pageheader</b> [ <span class="parameter">name</span> ] [ <span class="parameter">content-left</span> ] [ <span class="parameter">content-center</span> ] [ <span class="parameter">content-right</span> ] [ <span class="parameter">header-style</span> ] [ <span class="parameter">header-style-left</span> ] [ <span class="parameter">header-style-center</span> ] [ <span class="parameter">header-style-right</span> ] [ <span class="parameter">line</span> ] /&gt;</div>
+<p class="manual_block">&lt;<b>pageheader</b> [ <span class="parameter">name</span> ] [ <span class="parameter">content-left</span> ] [ <span class="parameter">content-center</span> ] [ <span class="parameter">content-right</span> ] [ <span class="parameter">header-style</span> ] [ <span class="parameter">header-style-left</span> ] [ <span class="parameter">header-style-center</span> ] [ <span class="parameter">header-style-right</span> ] [ <span class="parameter">line</span> ] /&gt;</p>
 <p>Define a page header with a given name. Named headers can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt;</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">name</span></p>
 <p class="manual_param_dd">This attribute is a text string to use as the name for this header.
@@ -64,7 +63,7 @@ color
 <p class="manual_param_dt"><span class="parameter">line</span></p>
 <p class="manual_param_dd">If set to "1" or any positive value, a line will be drawn below the header<b>.</b></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -86,6 +85,3 @@ color
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt;</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

@@ -3,16 +3,15 @@ layout: page
 title: falseBoldWeight
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/falseboldweight.html
+modification_time: 2015-08-05T12:01:56+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.2)</p>
 <p>falseBoldWeight – Specify weight used for bold text when using an artificial (outline) bold</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>falseBoldWeight</b></div>
+<p class="manual_block">void <b>falseBoldWeight</b></p>
 <p>Specify weight used for bold text when using an artificial (outline) bold. If bold text is set by &lt;b&gt; and the current font does not have a font file for the bold variant, an artificial bold is created by stroking the outline of the characters. This variable sets the width of the line and thus the "weight" of the bold text. Values between 0 and 10 are recommended.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">falseBoldWeight</span><span class="smallblock"></span></p>
@@ -22,7 +21,7 @@ permalink: /reference/mpdf-variables/falseboldweight.html
 
 <span class="smallblock"></span><span class="smallblock">DEFAULT</span>: 5</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -55,8 +54,5 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><b>Note:</b> False bold text has the same character widths as the normal text.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> False bold text has the same character widths as the normal text.</div>
 <p>&nbsp;</p>
-</div>
-</div>
-

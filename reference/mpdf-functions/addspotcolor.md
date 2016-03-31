@@ -3,18 +3,17 @@ layout: page
 title: AddSpotColor
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/addspotcolor.html
+modification_time: 2015-08-05T12:00:39+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <div>
 <div>
 <p>(mPDF &gt;= 5.1)</p>
 <p>AddSpotColor – Define a Spot colour</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>AddSpotColor</b> ( string <span class="parameter">$name</span> , int <span class="parameter">$c</span> , int <span class="parameter">$m</span>, int <span class="parameter">$y</span> , int <span class="parameter">$k</span> )</div>
+<p class="manual_block">void <b>AddSpotColor</b> ( string <span class="parameter">$name</span> , int <span class="parameter">$c</span> , int <span class="parameter">$m</span>, int <span class="parameter">$y</span> , int <span class="parameter">$k</span> )</p>
 <p>Define a Spot colour which can be used in the document. Spot colours need to be defined at the start of the script.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">name</span></p>
@@ -45,6 +44,3 @@ HTML
 
 </div>
 </div>
-</div>
-</div>
-

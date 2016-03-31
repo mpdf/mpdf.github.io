@@ -3,11 +3,11 @@ layout: page
 title: MultiCell()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/multicell.html
+modification_time: 2015-08-05T12:00:49+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p><code><b>MultiCell</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text[, <b>mixed</b> border[, <b>string</b> align[, <b>integer</b> fill[, <b>mixed</b> link[, <b>string</b> directionality[, <b>boolean</b> encoded]]]]]])</code></p>
 <p>Writes a block of text directly to the PDF document at the current position. Lines are wrapped at the margins.
 
@@ -24,6 +24,3 @@ When set to false (default), UTF-8 encoded text will be appropriately converted 
 
 Default = false</li>
 </ul>
-</div>
-</div>
-

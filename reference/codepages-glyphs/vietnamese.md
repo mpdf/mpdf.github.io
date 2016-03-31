@@ -3,11 +3,11 @@ layout: page
 title: Vietnamese
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/vietnamese.html
+modification_time: 2015-08-05T12:02:50+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p><span>The Vietnamese alphabets are listed in several noncontiguous Unicode ranges: Basic Latin {U+0000..U+007F}, Latin-1 Supplement {U+0080..U+00FF}, Latin Extended-A, -B {U+0100..U+024F}, Latin Extended Additional {U+1E00..U+1EFF}, and Combining Diacritical Marks {U+0300.. U+036F}. </span></p>
 <p><span>Latin-1 Supplement</span></p>
 <p>À Á Â Ã È É Ê Ì Í Ò Ó Ô Õ Ù Ú Ý</p>
@@ -23,6 +23,3 @@ permalink: /reference/codepages-glyphs/vietnamese.html
 <p>Ọ ọ Ỏ ỏ Ố ố Ồ ồ Ổ ổ Ỗ ỗ Ộ ộ Ớ ớ Ờ ờ Ở ở Ỡ ỡ Ợ ợ</p>
 <p>Ụ ụ Ủ ủ Ứ ứ Ừ ừ Ử ử Ữ ữ Ự ự</p>
 <p><span>The Vietnamese <i>đồng</i> currency symbol is ₫ (U+20AB).</span></p>
-</div>
-</div>
-

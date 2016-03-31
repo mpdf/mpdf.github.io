@@ -3,11 +3,11 @@ layout: page
 title: Layers
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/layers.html
+modification_time: 2015-08-05T12:00:14+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.7)</p>
 <p>CSS "z-index" can be used to utilise layers in the PDF document.</p>
 <p>CSS can set the z-index for any block element or image (default = 0). This does not work on block elements with fixed or absolute position.</p>
@@ -56,6 +56,3 @@ $mpdf->EndLayer();
 
 <h3>Reserved Layer Names</h3>
 <p>mPDF automatically adds layer names for visibility: "Print only", "Screen only", and "Hidden"; these only show when utilised.</p>
-</div>
-</div>
-

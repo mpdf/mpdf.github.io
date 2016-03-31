@@ -3,11 +3,11 @@ layout: page
 title: progbar_heading
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/progbar-heading.html
+modification_time: 2015-08-05T12:02:22+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF &gt;= 5.0
 
 Customisable Progress bar
@@ -23,6 +23,3 @@ Default value: 'mPDF file progress'</p>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progressbar.html" | prepend: site.baseurl }}">progressBar</a> –Specify whether to show progress bars during file generation</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progbar-althtml.html" | prepend: site.baseurl }}">progbar_altHTML</a> - define customised HTML for progress bars</li>
 </ul>
-</div>
-</div>
-

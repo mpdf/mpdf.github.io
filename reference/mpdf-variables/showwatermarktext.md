@@ -3,18 +3,17 @@ layout: page
 title: showWatermarkText
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/showwatermarktext.html
+modification_time: 2015-08-05T12:02:27+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.2)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">boolean <b>showWatermarkText</b></div>
+<p class="manual_block">boolean <b>showWatermarkText</b></p>
 <p>Specifies whether or not to show/print the watermark text on each page. The text for the watermark must be defined using <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a>. The watermark is added to the document at the end of each page.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This superceded TopicIsUnvalidated in mPDF 2.2 as an alias, and is now the preferred form.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This superceded TopicIsUnvalidated in mPDF 2.2 as an alias, and is now the preferred form.</div>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">showWatermarkText</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span></p>
 <p class="manual_param_dd">If <span class="parameter">showWatermarkText</span> is <span class="smallblock">TRUE</span> or 1 the watermark text will be added to each page of the document.
@@ -28,7 +27,7 @@ The value can be changed during the document to turn the watermark on and off on
 
 Values of 1 or 0 can also be used</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"><thead>
+<table class="table"><thead>
 <tr><th>Version</th> <th>Description</th></tr>
 </thead> <tbody>
 <tr>
@@ -77,6 +76,3 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> - Specifies whether or not to show/print the watermark image</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermark-font.html" | prepend: site.baseurl }}">watermark_font</a> - Specifies the font to use for Watermark text</li>
 </ul>
-</div>
-</div>
-

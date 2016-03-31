@@ -3,11 +3,11 @@ layout: page
 title: Letterhead letters
 parent_title: Real life examples
 permalink: /real-life-examples/letterhead-letters.html
+modification_time: 2015-08-05T12:00:28+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Using the CSS @page selector, these are a couple of similar methods for producing multiple letters into 1 PDF file, where each letter uses a letterhead for page one then plain paper for the remaining pages.</p>
 <h3>Method 1</h3>
 
@@ -286,6 +286,3 @@ $mpdf->Output();
 <p>
 
 </p>
-</div>
-</div>
-

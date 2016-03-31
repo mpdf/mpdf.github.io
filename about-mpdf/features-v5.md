@@ -3,11 +3,11 @@ layout: page
 title: Features v5
 parent_title: About mPDF
 permalink: /about-mpdf/features-v5.html
+modification_time: 2015-08-05T11:59:20+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>Main features</h2>
 <ul>
 <li>Accepts UTF-8 encoded HTML</li>
@@ -64,6 +64,3 @@ permalink: /about-mpdf/features-v5.html
 <p>All <b>HTML entities</b> are supported, as well as decimal and hex e.g. &amp;apos;&nbsp;&amp;#8812; or &amp;#x21a4;</p>
 <p><a href="{{ "/setting-pdf-file-properties/password-protection.html" | prepend: site.baseurl }}">Password protection</a> can be set for the PDF file.</p>
 <p>NB The original commands from FPDF can be used e.g. Write(), but some are altered to allow UTF-8 encoding and RTL text to be processed e.g. use WriteCell() and WriteMultiCell() instead of Cell() and MultiCell().</p>
-</div>
-</div>
-

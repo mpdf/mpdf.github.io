@@ -3,14 +3,13 @@ layout: page
 title: User Input
 parent_title: Real life examples
 permalink: /real-life-examples/user-input.html
+modification_time: 2015-08-05T12:00:28+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
-<p>These scripts allow you to present a form to the user, who can enter text and upload an image; these are displayed first in the browser, with the option to create a PDF file from the output. These scripts should only be considered the basis of a full script and will need adapting considerably. In particular, note that the uploaded image files may need to be deleted at some point.</p>
 
-<div class="alert alert-info" role="alert">example_userinput.php</div>
+
+<p>These scripts allow you to present a form to the user, who can enter text and upload an image; these are displayed first in the browser, with the option to create a PDF file from the output. These scripts should only be considered the basis of a full script and will need adapting considerably. In particular, note that the uploaded image files may need to be deleted at some point.</p>
+<p class="manual_block">example_userinput.php</p>
 
 {% highlight php %}
 <?php
@@ -54,7 +53,7 @@ exit;
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">example_userinput2.php</div>
+<p class="manual_block">example_userinput2.php</p>
 
 {% highlight php %}
 <?php
@@ -112,7 +111,7 @@ exit;
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">example_userinput3.php</div>
+<p class="manual_block">example_userinput3.php</p>
 
 {% highlight php %}
 <?php
@@ -149,7 +148,4 @@ exit;
 
 ?>
 {% endhighlight %}
-
-</div>
-</div>
 

@@ -3,11 +3,11 @@ layout: page
 title: Fonts in mPDF 6.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/fonts-in-mpdf-6-x.html
+modification_time: 2015-08-05T11:59:27+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF supports Truetype fonts, reading and embedding directly from the .ttf font files. Fonts must follow the Truetype specification and use Unicode mapping to the characters. Truetype collections (.ttc files) and Opentype files (.otf) in Truetype format are also supported.</p>
 <h2>Easy to add new fonts</h2>
 <ol>
@@ -74,24 +74,20 @@ permalink: /fonts-languages/fonts-in-mpdf-6-x.html
 <h2>Complex scripts</h2>
 <h3>Right-to-left languages (Hebrew, Arabic etc.)</h3>
 <p>Arabic languages and Hebrew are written in a right-to-left direction (RTL). mPDF recognises both Arabic and Hebrew languages and reverses text direction automatically.</p>
-
-<div class="alert alert-info" role="alert">ألسّلام عليكم &nbsp; &nbsp; שלום</div>
+<p class="manual_block">ألسّلام عليكم &nbsp; &nbsp; שלום</p>
 <p>Arabic languages (but not Hebrew) also change the form of the letter depending on its position in the text e.g. these are the initial, medial, final, and isolated forms of arabic letter 'ain':</p>
+<p class="manual_block">ع ـع ـعـ عـ</p>
 
-<div class="alert alert-info" role="alert">ع ـع ـعـ عـ</div>
-
-<div class="alert alert-info" role="alert"><b>Note:</b> You must enable OpenType layout (OTL) features for a font to correctly display right-to-left scripts.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly display right-to-left scripts.</div>
 <h3>Indic languages, Lao, Tibetan etc.</h3>
 <p>Other complex scripts require some processing of characters before display. For example some vowels consist of 2 characters, to be placed before and after the adjacent consonant e.g.</p>
+<p class="manual_block">U+0D1C + U+0D4C [vowel AU] = [written together as &amp;#x0D1C;&amp;#x0D4C;]
 
-<div class="alert alert-info" role="alert">U+0D1C + U+0D4C [vowel AU] = [written together as &amp;#x0D1C;&amp;#x0D4C;]
-
-ജ + ൌ = ജൌ</div>
+ജ + ൌ = ജൌ</p>
 <p>Consonant conjuncts are where two adjacent characters are written as a single 'conjunct' form e.g.</p>
+<p class="manual_block">प + ॡ = पॣ</p>
 
-<div class="alert alert-info" role="alert">प + ॡ = पॣ</div>
-
-<div class="alert alert-info" role="alert"><b>Note:</b> You must enable OpenType layout (OTL) features for a font to correctly display complex scripts.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly display complex scripts.</div>
 <h3>Vertical writing</h3>
 <p>Vertical writing is not supported by mPDF (e.g. Mongolian and Phags-pa) although the individual characters can be displayed using suitable fonts.</p>
 <h2>Unicode Supplementary Planes</h2>
@@ -263,7 +259,4 @@ $this->fontdata = array(
 
 <div style="font-family:pmingliu;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
 {% endhighlight %}
-
-</div>
-</div>
 

@@ -3,11 +3,11 @@ layout: page
 title: Fonts in mPDF 5.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/fonts-in-mpdf-5-x.html
+modification_time: 2015-08-05T11:59:26+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF version 5 supports Truetype fonts, reading and embedding directly from the .ttf font files. Fonts must follow the Truetype specification and use Unicode mapping to the characters. Truetype collections (.ttc files) and Opentype files (.otf) in Truetype format are also supported.</p>
 <h2>Easy to add new fonts</h2>
 <ol>
@@ -64,8 +64,7 @@ $mpdf->SetAutoFont(AUTOFONT_THAIVIET);
 <h2>Full Unicode support</h2>
 <p>The DejaVu fonts distributed with mPDF contain an extensive set of characters, but it is easy to add fonts to access uncommon characters.</p>
 <p>(The following characters will only appear in your browser if you have appropriate fonts installed on your computer.)</p>
-
-<div class="alert alert-info" role="alert">Georgian (DejaVuSansCondensed)
+<p class="manual_block">Georgian (DejaVuSansCondensed)
 
 Ⴀ Ⴁ Ⴂ Ⴃ Ⴄ Ⴅ Ⴆ Ⴇ Ⴈ Ⴉ Ⴊ Ⴋ Ⴌ Ⴍ Ⴎ Ⴏ Ⴐ Ⴑ Ⴒ Ⴓ
 
@@ -95,45 +94,39 @@ Enclosed Alphanumerics (Quivira)
 
 Miscellaneous Symbols (DejaVuSansCondensed)
 
-☀ ☁ ☂ ☃ ☄ ★ ☆ ☇ ☈ ☉ ☊ ☋ ☌ ☍ ☎ ☏ ☐ ☑ ☒</div>
+☀ ☁ ☂ ☃ ☄ ★ ☆ ☇ ☈ ☉ ☊ ☋ ☌ ☍ ☎ ☏ ☐ ☑ ☒</p>
 <p>Names in brackets are open-source fonts which cover the Unicode ranges - see <a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode coverage of free fonts</a> for details of these and other open-source fonts.</p>
 <h2>Complex scripts</h2>
 <p>Although all characters may be displayed, there are various reasons why a script may not appear as expected.</p>
 <h3>Right-to-left languages (Hebrew, Arabic etc.)</h3>
 <p>Arabic languages and Hebrew are written in a right-to-left direction (RTL). mPDF recognises both Arabic and Hebrew languages and reverses text direction automatically.</p>
-
-<div class="alert alert-info" role="alert">ألسّلام عليكم &nbsp; &nbsp; שלום</div>
+<p class="manual_block">ألسّلام عليكم &nbsp; &nbsp; שלום</p>
 <p>Arabic languages (but not Hebrew) also change the form of the letter depending on its position in the text e.g. these are the initial, medial, final, and isolated forms of arabic letter 'ain':</p>
-
-<div class="alert alert-info" role="alert">ع ـع ـعـ عـ</div>
+<p class="manual_block">ع ـع ـعـ عـ</p>
 <p>The isolated characters are contained in the Unicode block 'Arabic' U+0600 - U+06FF.</p>
 <p>The initial, medial and final forms are contained in Unicode Blocks 'Arabic Presentation Forms' A and B (U+FB50 - U+FDFF, U+FE70 - U+FEFE). Note that quite a large number of fonts contain the isolated characters but not the presentation forms. Fonts used with mPDF must contain the 'Arabic Presentation Forms' in order to display arabic text correctly. mPDF automatically converts letters to their initial/medial/final forms in several languages: arabic, persian/farsi, urdu, sindhi and pashto.</p>
 <p>Arabic text is used for many different languages e.g. persian/farsi, urdu, pashto etc. These languages often contain letters unique to that language. 'Arabic' fonts do not always contain the full set of arabic characters necessary for all languages.</p>
 <p>Other RTL languages (using other alphabets) are reversed in order, but not otherwise processed, by mPDF e.g. Syriac, Thaana, N'Ko, and Samaritan.</p>
 <h3>Indic languages</h3>
 <p>Indic languages are also complex scripts which require some processing of characters before display. For example some vowels consist of 2 characters, to be placed before and after the adjacent consonant e.g.</p>
+<p class="manual_block">U+0D1C + U+0D4C [vowel AU] = [written together as &amp;#x0D1C;&amp;#x0D4C;]
 
-<div class="alert alert-info" role="alert">U+0D1C + U+0D4C [vowel AU] = [written together as &amp;#x0D1C;&amp;#x0D4C;]
-
-ജ + ൌ = ജൌ</div>
+ജ + ൌ = ജൌ</p>
 <p>Consonant conjuncts are where two adjacent characters are written as a single 'conjunct' form e.g.</p>
-
-<div class="alert alert-info" role="alert">प + ॡ = पॣ</div>
+<p class="manual_block">प + ॡ = पॣ</p>
 <p>mPDF can support some of these languages, but requires specially prepared font files that are unique to mPDF. These are distributed with the mPDF package.
 
 Supported languages: Bengali, Devanāgarī, Gujarāti, Gurmukhi, Kannada, Malayalam, Oriya, Tamil, Telugu</p>
-
-<div class="alert alert-info" role="alert">আসসালামু আলাইকুম નમસ્તે നമസ്കാരം नमस्ते வணக்கம்!</div>
+<p class="manual_block">আসসালামু আলাইকুম નમસ્તે നമസ്കാരം नमस्ते வணக்கம்!</p>
 <p>Complex scripts <b>not</b> supported: Khmer, Sinhala, Tibetan, Myanmar (Burmese), Balinese</p>
 <h3>Vertical writing</h3>
 <p>Vertical writing is not supported by mPDF (e.g. Mongolian and Phags-pa) although the individual characters can be displayed using suitable fonts.</p>
 <h3>Combining diacritics</h3>
 <p>In Unicode, letters with diacritics (e.g. ÁáȦȧÄä) are usually represented as a single character e.g. Unicode U+0196 is an A Umlaut. There are 4 blocks in Unicode of diacritics or 'marks' which can be used to combine with adjacent letters: Combining Diacritical Marks (U+0300 - U+036F), Combining Diacritical Marks Supplement (U+1DC0 - U+1DFF), Combining Marks for Symbols(U+20D0 - U+20FF) and Combining Half Marks (U+FE20 - U+FE2F).</p>
 <p>Software applications may use special positioning information stored in OpenType font files to resposition the diacritic/mark depending on the context. mPDF does not support this repositioning and is dependent on the font design and original placement of the diacritic. (The following characters may display differently depending on your browser.)</p>
+<p class="manual_block">Á á Ȧ ȧ Ä ä ï (Precomposed characters)
 
-<div class="alert alert-info" role="alert">Á á Ȧ ȧ Ä ä ï (Precomposed characters)
-
-Á á Ȧ ȧ Ä ä ï (Using diacritics)</div>
+Á á Ȧ ȧ Ä ä ï (Using diacritics)</p>
 <p><b>It is recommended to use precomposed characters whenever possible with mPDF.</b></p>
 <h2>Unicode Supplementary Planes</h2>
 <p>The original Unicode allocated characters between x0000 and xFFFF (65,536 characters). This 'Basic Multilingual Plane' supported most characters in common use, including a large number of Unified Chinese-Japanese-Korean characters (CJK). Later the Unicode standard was extended to 16 Planes.</p>
@@ -304,7 +297,4 @@ $this->fontdata = array(
 
 <div style="font-family:pmingliu;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
 {% endhighlight %}
-
-</div>
-</div>
 

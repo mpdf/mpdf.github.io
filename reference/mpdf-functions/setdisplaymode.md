@@ -3,16 +3,15 @@ layout: page
 title: SetDisplayMode()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setdisplaymode.html
+modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetDisplayMode – Specify the initial Display Mode when the PDF file is opened in Adobe Reader</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetDisplayMode</b> ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])</div>
+<p class="manual_block">void <b>SetDisplayMode</b> ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])</p>
 <p>Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">zoom</span></p>
@@ -84,7 +83,7 @@ $mpdf->SetDisplayMode('fullpage','two');
 {% endhighlight %}
 
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -104,6 +103,3 @@ $mpdf->SetDisplayMode('fullpage','two');
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setdisplaypreferences.html" | prepend: site.baseurl }}">SetDisplayPreferences()</a> - Defines the way the document shall be presented on the screen</li>
 </ul>
-</div>
-</div>
-

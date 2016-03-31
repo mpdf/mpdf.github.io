@@ -3,21 +3,20 @@ layout: page
 title: progressBar
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/progressbar.html
+modification_time: 2015-08-05T12:02:22+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.2)</p>
 <p>progressBar –Specify whether to show progress bars during file generation</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>progressBar</b></div>
+<p class="manual_block">void <b>progressBar</b></p>
 <p>Specify whether to show progress bars during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> You should only change this variable in the configuration file <span class="filename">config.php</span>&nbsp; If you want to set this at runtime, use <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> You should only change this variable in the configuration file <span class="filename">config.php</span>&nbsp; If you want to set this at runtime, use <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> You may need to define _MPDF_URI if you are using progress bars - see <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> You may need to define _MPDF_URI if you are using progress bars - see <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">progressBar</span> =&nbsp;&nbsp;<span class="smallblock"> </span>2 | 1 | <span class="smallblock">FALSE</span></p>
 <p class="manual_param_dd"><b>Values</b>
@@ -30,7 +29,7 @@ permalink: /reference/mpdf-variables/progressbar.html
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -45,6 +44,3 @@ permalink: /reference/mpdf-variables/progressbar.html
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progbar-althtml.html" | prepend: site.baseurl }}">progbar_altHTML</a> - define customised HTML for progress bars</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

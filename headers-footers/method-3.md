@@ -3,16 +3,16 @@ layout: page
 title: Method 3
 parent_title: Headers & Footers
 permalink: /headers-footers/method-3.html
+modification_time: 2015-08-05T11:59:51+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>This uses <span class="smallblock">NAMED</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers throughout the document.</p>
 <p>These use the same array values as <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a> Variant #5.</p>
 <p>Note that named headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Do not name a header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name a header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer.</div>
 <h2>Defining NAMED Headers/Footers
 
 </h2>
@@ -393,6 +393,3 @@ $mpdf->WriteHTML($html);
 <li class="manual_boxlist"><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a></li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

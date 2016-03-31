@@ -3,13 +3,13 @@ layout: page
 title: Available Fonts v5.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/available-fonts-v5-x.html
+modification_time: 2015-08-05T11:59:29+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The following fonts are distributed with mPDF 5.x</p>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td colspan="2">
 <h3>General</h3>
@@ -85,7 +85,7 @@ permalink: /fonts-languages/available-fonts-v5-x.html
 </tr>
 </tbody> </table>
 <p>The following font names can be used with mPDF 5.x</p>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td colspan="2">
 <h3>Adobe Asian font-pack</h3>
@@ -128,6 +128,3 @@ permalink: /fonts-languages/available-fonts-v5-x.html
 </tr>
 </tbody> </table>
 <p>For a list of languages covered by the fonts included with mPDF, see <a href="{{ "/fonts-languages/fonts-language-cover-v5-x.html" | prepend: site.baseurl }}">Fonts and Language cover</a></p>
-</div>
-</div>
-

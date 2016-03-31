@@ -3,11 +3,11 @@ layout: page
 title: Overview
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/overview.html
+modification_time: 2015-08-05T12:00:37+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>mPDF Functions by Category</h2>
 <h3>Main controls</h3>
 <p><a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF</a> - Main class constructor</p>
@@ -102,6 +102,3 @@ permalink: /reference/mpdf-functions/overview.html
 <p><a href="{{ "/reference/mpdf-functions/writetext.html" | prepend: site.baseurl }}">WriteText</a> -</p>
 <p><a href="{{ "/reference/mpdf-functions/shaded-box.html" | prepend: site.baseurl }}">Shaded_box</a> -</p>
 <p><a href="{{ "/reference/mpdf-functions/circulartext.html" | prepend: site.baseurl }}">CircularText</a> - NB This does have an HTML equivalent as &lt;textcircle&gt;</p>
-</div>
-</div>
-

@@ -3,15 +3,14 @@ layout: page
 title: Indic fonts v5.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/indic-fonts-v5-x.html
+modification_time: 2015-08-05T11:59:36+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
 
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF &gt;= 6.0 this has been superseded by the use of <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>.</div>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 6.0 this has been superseded by the use of <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>.</div>
 <p>Special fonts are provided for several Indic languages.</p>
-<table class="bpmTopnTailC"> <thead>
+<table class="table"> <thead>
 <tr> <th>&nbsp;</th>
 <td>Unicode range</td>
 <td>Font name
@@ -75,6 +74,3 @@ permalink: /fonts-languages/indic-fonts-v5-x.html
 {% endhighlight %}
 
 <p>NB Indic font support is font-specific; adding other Indic fonts to mPDF won't work.</p>
-</div>
-</div>
-

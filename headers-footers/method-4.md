@@ -3,17 +3,16 @@ layout: page
 title: Method 4
 parent_title: Headers & Footers
 permalink: /headers-footers/method-4.html
+modification_time: 2015-08-05T11:59:51+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>This uses <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers &amp; footers. This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the headers/footers at any time during the document.</p>
 <p>Note that <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
-
-<div class="alert alert-info" role="alert"><b>Note:&nbsp;</b><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>, <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>, &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; and <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> can reference both HTML and NON-HTML headers/footers. When referring to an HTML header/footer you must add the prefix 'html_' to distinguish them.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
+<p class="manual_block"><b>Note:&nbsp;</b><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>, <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>, &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; and <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> can reference both HTML and NON-HTML headers/footers. When referring to an HTML header/footer you must add the prefix 'html_' to distinguish them.</p>
 <h2>Defining NAMED HTML Headers/Footers
 
 </h2>
@@ -438,6 +437,3 @@ $mpdf->WriteHTML($html);
 <li class="manual_boxlist"><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a></li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

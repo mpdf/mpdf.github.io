@@ -3,11 +3,11 @@ layout: page
 title: Overview
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/overview.html
+modification_time: 2015-08-05T12:01:18+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>mPDF Custom HTML tags by Category</h2>
 <h3>Paging</h3>
 <p><a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a> -</p>
@@ -43,6 +43,3 @@ permalink: /reference/html-control-tags/overview.html
 <p><a href="{{ "/reference/html-control-tags/barcode.html" | prepend: site.baseurl }}">barcode</a> -</p>
 <h3>Other</h3>
 <p><a href="{{ "/reference/html-control-tags/dottab.html" | prepend: site.baseurl }}">dottab</a> – Insert dots to following (right-aligned) text</p>
-</div>
-</div>
-

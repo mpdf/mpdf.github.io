@@ -3,11 +3,11 @@ layout: page
 title: printers_info
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/printers-info.html
+modification_time: 2015-08-05T12:02:20+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <div>
 <div>
 <div>
@@ -21,6 +21,3 @@ permalink: /reference/mpdf-variables/printers-info.html
 </div>
 </div>
 </div>
-</div>
-</div>
-

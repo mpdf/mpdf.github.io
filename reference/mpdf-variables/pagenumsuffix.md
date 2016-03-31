@@ -3,18 +3,17 @@ layout: page
 title: pagenumSuffix
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/pagenumsuffix.html
+modification_time: 2015-08-05T12:02:17+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 3.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">string <b>pagenumSuffix</b></div>
+<p class="manual_block">string <b>pagenumSuffix</b></p>
 <p>Specify text to follow the page number when using {PAGENO} to insert page numbers in headers or footers.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This is only recommended in non-HTML headers and footers. Although the text is added correctly in HTML headers &amp; footers, the text alignment is not readjusted after substitution e.g. if it used in the right margin.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This is only recommended in non-HTML headers and footers. Although the text is added correctly in HTML headers &amp; footers, the text alignment is not readjusted after substitution e.g. if it used in the right margin.</div>
 <h2>Examples</h2>
 
 {% highlight php %}
@@ -68,6 +67,3 @@ Will output a header:
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/aliasnbpggp.html" | prepend: site.baseurl }}">aliasNbPgGp</a> - Specify the text to be replaced by the group page total</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

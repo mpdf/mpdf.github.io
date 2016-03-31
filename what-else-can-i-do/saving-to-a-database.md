@@ -3,11 +3,11 @@ layout: page
 title: Saving to a database
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/saving-to-a-database.html
+modification_time: 2015-08-05T12:00:21+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>If you want to save the created file to a database (not necessarily recommended), one user has suggested the following:</p>
 
 {% highlight php %}
@@ -49,6 +49,3 @@ exit;
 {% endhighlight %}
 
 <p>&nbsp;</p>
-</div>
-</div>
-

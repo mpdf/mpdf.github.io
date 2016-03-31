@@ -3,15 +3,14 @@ layout: page
 title: setAutoBottomMargin
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/setautobottommargin.html
+modification_time: 2015-08-05T12:02:24+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">mixed <b>setAutoBottomMargin</b></div>
+<p class="manual_block">mixed <b>setAutoBottomMargin</b></p>
 <p>Specify the behaviour defining the bottom-margin of the document. When <span class="parameter"></span><span class="parameter">setAutoBottomMargin</span> is set to 'stretch' then <span class="parameter">autoMarginPadding</span> defines the minimum distance in mm that will be forced between the top of the footer and the bottom of the main text.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">setAutoBottomMargin</span></p>
@@ -35,6 +34,3 @@ stretch -&nbsp; margin-bottom sets a <b>minimum</b> distance in mm between the b
 </li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

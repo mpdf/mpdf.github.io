@@ -3,11 +3,11 @@ layout: page
 title: Unicode character planes
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/unicode-character-planes.html
+modification_time: 2015-08-05T12:03:01+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>&nbsp;</p>
 <p>As of Unicode 5.1, The BMP includes the following scripts:</p>
 <ul>
@@ -162,7 +162,7 @@ permalink: /reference/codepages-glyphs/unicode-character-planes.html
 <li><a href="http://en.wikipedia.org/wiki/Unicode_Specials">Specials</a> (FFF0–FFFF)</li>
 </ul>
 <p>&nbsp;</p>
-<table class="bpmTopicC"> <tbody>
+<table class="table"> <tbody>
 <tr> <th>&nbsp; </th> <th> 0</th> <th> 1</th> <th> 2</th> <th> 3</th> <th> 4</th> <th> 5</th> <th> 6</th> <th> 7</th> <th> 8</th> <th> 9</th> <th> A</th> <th> B</th> <th> C</th> <th> D</th> <th> E</th> <th> F</th> </tr>
 <tr> <th> 00 </th>
 <td colspan="2" class="control">C0&nbsp;Controls</td>
@@ -631,7 +631,7 @@ permalink: /reference/codepages-glyphs/unicode-character-planes.html
 <td colspan="16" class="alloc"><a href="http://www.unicode.org/charts/PDF/U4E00.pdf">CJK Unified Ideographs</a></td>
 </tr>
 </tbody> </table>
-<table class="bpmTopicC"> <tbody>
+<table class="table"> <tbody>
 <tr> <th> 80 </th>
 <td colspan="16" class="alloc"><a href="http://www.unicode.org/charts/PDF/U4E00.pdf">CJK Unified Ideographs</a></td>
 </tr>
@@ -1052,6 +1052,3 @@ permalink: /reference/codepages-glyphs/unicode-character-planes.html
 </tr>
 </tbody> </table>
 <p>From <a href="http://www.unicode.org/roadmaps/bmp/">http://www.unicode.org/roadmaps/bmp/</a></p>
-</div>
-</div>
-

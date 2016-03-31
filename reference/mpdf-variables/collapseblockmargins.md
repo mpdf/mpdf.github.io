@@ -3,16 +3,15 @@ layout: page
 title: collapseBlockMargins
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/collapseblockmargins.html
+modification_time: 2015-08-05T12:01:47+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.2)</p>
 <p>collapseBlockMargins – Specify whether to collapse (vertical) margins between block elements</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>collapseBlockMargins</b></div>
+<p class="manual_block">void <b>collapseBlockMargins</b></p>
 <p>Specify whether to collapse (vertical) margins between block elements. In line with CSS specification, the top/bottom margins of adjoining block-style elements are collapsed to the larger of the two. This works between all block elements such as DIV, P, H1-6 etc. and also lists and tables.</p>
 <p>NB Firefox does not collapse margins above and below tables, but IE8 does.</p>
 <h2>Values</h2>
@@ -25,7 +24,7 @@ permalink: /reference/mpdf-variables/collapseblockmargins.html
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -62,8 +61,5 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The collapse of margins at the top and bottom of the page is unaffected by this variable. This is set by the custom CSS property <code>margin-collapse: collapse|none</code> which can be defined in the <code>defaultCSS</code> variable in <span class="filename">config.php</span> or elsewhere.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The collapse of margins at the top and bottom of the page is unaffected by this variable. This is set by the custom CSS property <code>margin-collapse: collapse|none</code> which can be defined in the <code>defaultCSS</code> variable in <span class="filename">config.php</span> or elsewhere.</div>
 <p>&nbsp;</p>
-</div>
-</div>
-

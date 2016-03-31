@@ -3,16 +3,15 @@ layout: page
 title: ImportPage()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/importpage.html
+modification_time: 2015-08-05T12:00:47+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3)</p>
 <p>ImportPage – Import a page from an external PDF file</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">int <b>ImportPage</b> ( int <span class="parameter">$pageno</span> [, float <span class="parameter">$crop_x</span> [, float <span class="parameter">$crop_y</span> [, float <span class="parameter">$crop_w</span> [, float <span class="parameter">$crop_h</span> [, string <span class="parameter">$boxname</span> ]]]]])</div>
+<p class="manual_block">int <b>ImportPage</b> ( int <span class="parameter">$pageno</span> [, float <span class="parameter">$crop_x</span> [, float <span class="parameter">$crop_y</span> [, float <span class="parameter">$crop_w</span> [, float <span class="parameter">$crop_h</span> [, string <span class="parameter">$boxname</span> ]]]]])</p>
 <p>Import a page, or part of a page, from an external PDF file. The external source file must first be set with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template' is created in mPDF which stores the image of this page, ready to insert into the document.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">pageno</span></p>
@@ -43,7 +42,7 @@ permalink: /reference/mpdf-functions/importpage.html
 </h2>
 <p class="manual_param_dd"><b>ImportPage()</b> returns an ID for the template which it has created. This ID can be used at any time to insert the template into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -129,6 +128,3 @@ $mpdf->Output();
 </li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

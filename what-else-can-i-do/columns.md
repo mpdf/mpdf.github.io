@@ -3,11 +3,11 @@ layout: page
 title: Columns
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/columns.html
+modification_time: 2015-08-05T12:00:13+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Columns</p>
 <p>Multiple columns can be used on a page. This can started and stopped anywhere in the document, by either:</p>
 <p>$mPDF-&gt;SetColumns(nCols[, vAlign [, gap ]]); or
@@ -33,11 +33,8 @@ $mpdf->KeepColumns = true;
 <p><b>Limitations</b></p>
 <p>Columns are incompatible with (and automatically disable): justification if a table is included, table rotation, collapsible margins for blocks e.g. top and bottom margins for a DIV will not collapse (default) at the top/bottom of a column. Support for block-level borders (DIV, P etc) was added in mPDF 3.0</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Block element borders (P,DIV etc) in columns may appear as disjointed lines. This is because they are written to the document line by line to allow repositioning when the columns are adjusted. The borders should appear correctly when "zoomed in" and when printing. Table cell borders may be similarly affected. Also note that the horizontal borders between table cells will only appear half width if a background color is used in the cell below, because the cell background may write over the bottom half of the border.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Block element borders (P,DIV etc) in columns may appear as disjointed lines. This is because they are written to the document line by line to allow repositioning when the columns are adjusted. The borders should appear correctly when "zoomed in" and when printing. Table cell borders may be similarly affected. Also note that the horizontal borders between table cells will only appear half width if a background color is used in the cell below, because the cell background may write over the bottom half of the border.</div>
 <p>&nbsp;</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> To create columns that span more than one page, use <a href="{{ "/what-else-can-i-do/floating-blocks.html" | prepend: site.baseurl }}">Floating blocks</a>.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> To create columns that span more than one page, use <a href="{{ "/what-else-can-i-do/floating-blocks.html" | prepend: site.baseurl }}">Floating blocks</a>.</div>
 <p>&nbsp;</p>
-</div>
-</div>
-

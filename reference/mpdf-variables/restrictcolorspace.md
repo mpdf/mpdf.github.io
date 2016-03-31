@@ -3,18 +3,17 @@ layout: page
 title: restrictColorSpace
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/restrictcolorspace.html
+modification_time: 2015-08-05T12:02:24+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <div>
 <div>
 <p>(mPDF &gt;= 5.1)</p>
 <p>restrictColorSpace – Specify whether to automatically limit the colorspaces used</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>PDFAauto</b></div>
+<p class="manual_block">void <b>PDFAauto</b></p>
 <p>Specify whether to automatically limit the colorspaces used when creating PDF/A1-b or PDF/X-1a compliant documents. PDF files can contain objects using different colorSpaces e.g. Grayscale, RGB and CMYK. By default, mPDF creates PDF files using the colours as they are specified: font colour may be set (e.g. #880000) as an RGB colour, and the file may contain JPG images in RGB or CMYK format.</p>
 <p>
 
@@ -33,7 +32,7 @@ In some circumstances, you may wish to create a PDF file with restricted colorSp
 
 <span class="smallblock">DEFAULT</span>: 0</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -54,6 +53,3 @@ In some circumstances, you may wish to create a PDF file with restricted colorSp
 <p>&nbsp;</p>
 </div>
 </div>
-</div>
-</div>
-

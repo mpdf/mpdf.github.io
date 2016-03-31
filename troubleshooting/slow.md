@@ -3,11 +3,11 @@ layout: page
 title: Slow!
 parent_title: Troubleshooting
 permalink: /troubleshooting/slow.html
+modification_time: 2015-08-05T12:00:30+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF is quite slow. Large tables seem to be the biggest burden, especially if they have borders. The other thing that is slow is rewriting sections repeatedly to automatically re-size them e.g. a block element with position: fixed and overflow: auto</p>
 <p>On the other hand, I have used mPDF to produce a 400 page book, complete with a few images, 40 or so small tables, a table of contents and Index in approx 90 secs.</p>
 <p>Consider the following:</p>
@@ -29,6 +29,3 @@ permalink: /troubleshooting/slow.html
 <h3>Other things which are slow</h3>
 <p>Tables - the more rows and columns the worse it gets; if the size of the table requires it to be resized to fit on the page, this takes longer.</p>
 <p>Using "overflow: auto" on fixed-position divs, as it tries to rewrite the data repeatedly until it finds a best fit.</p>
-</div>
-</div>
-

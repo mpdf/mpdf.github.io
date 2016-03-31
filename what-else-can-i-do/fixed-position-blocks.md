@@ -3,11 +3,11 @@ layout: page
 title: Fixed position blocks
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/fixed-position-blocks.html
+modification_time: 2015-08-05T12:00:00+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF &gt;= 4.0</p>
 <h2>Position
 
@@ -52,9 +52,9 @@ top|left|bottom|right: LENGTH (any valid length unit: em, mm, px, % etc.) DEFAUL
 </li>
 </ul>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left -right -top -bottom, are all supported.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left -right -top -bottom, are all supported.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML reiteratively until it finds a reasonable fit to the available size.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML reiteratively until it finds a reasonable fit to the available size.</div>
 <h3>Overflow</h3>
 <p>The CSS property "overflow" determines how text is displayed if the block element size is too small for the text.</p>
 
@@ -131,6 +131,3 @@ Example #3 - Rotated barcode at the bottom right corner of the page
 {% endhighlight %}
 
 <p>&nbsp;</p>
-</div>
-</div>
-

@@ -3,13 +3,12 @@ layout: page
 title: Replaceable Aliases
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/replaceable-aliases.html
+modification_time: 2015-08-05T12:00:17+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Prior to mPDF 6.0 you could include <span class="parameter">{nb​}</span> and <span class="parameter">{nbpg​}</span> anywhere in the text of the document, including headers/footers.
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 6.0 you could include <span class="parameter">{nb​}</span> and <span class="parameter">{nbpg​}</span> anywhere in the text of the document, including headers/footers.
 
 In mPDF v6.0+ these will only be replaced when used in headers/footers.</div>
 <p>There are several placemarkers you can include, which will be replaced when the PDF file is ouput:</p>
@@ -43,6 +42,3 @@ Example: <span class="parameter">{DATE j-m-Y H:m}</span></p>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/aliasnbpg.html" | prepend: site.baseurl }}">aliasNbPg</a> - Specify the text to be replaced by the document page total</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/aliasnbpggp.html" | prepend: site.baseurl }}">aliasNbPgGp</a> - Specify the text to be replaced by the group page total</li>
 </ul>
-</div>
-</div>
-

@@ -3,18 +3,17 @@ layout: page
 title: autoScriptToLang
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/autoscripttolang.html
+modification_time: 2015-08-05T12:01:41+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <div>
 <div>
 <div>
 <p>(mPDF &gt;= 6.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">boolean <b>autoScriptToLang</b></div>
+<p class="manual_block">boolean <b>autoScriptToLang</b></p>
 <p>When <span class="smallblock">TRUE</span>, <code>marks up HTML text using the lang attribute, based on the Unicode script block in question, and configurable values in <span class="code">config_script2lang.php</code>.</span></p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">autoScriptToLang</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span></p>
@@ -32,6 +31,3 @@ permalink: /reference/mpdf-variables/autoscripttolang.html
 </div>
 </div>
 </div>
-</div>
-</div>
-

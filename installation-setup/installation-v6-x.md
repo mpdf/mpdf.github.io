@@ -3,11 +3,11 @@ layout: page
 title: Installation v6.x
 parent_title: Installation & Setup
 permalink: /installation-setup/installation-v6-x.html
+modification_time: 2015-08-05T11:59:23+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>First-time users</h2>
 <p>Installation:</p>
 <ul>
@@ -97,6 +97,3 @@ $mpdf-&gt;defaultPageNumStyle = "arabic-indic"; // at runtime</p>
 <p>When using columns, the top margin is now collapsed at top of every column (not just first column of page).</p>
 <p>The way mPDF handles optional end tags has been updated to be consistent with the <a href="http://www.w3.org/TR/html5/syntax.html#optional-tags">HTML5 specification</a> - previously not well defined for HTML4.</p>
 <p>Changes to the way lists are handled means that text-align:justify may be inherited by lists from surrounding block elements (which did not happen previously). See LISTS above for more information.</p>
-</div>
-</div>
-

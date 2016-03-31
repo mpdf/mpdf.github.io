@@ -3,16 +3,15 @@ layout: page
 title: SetDisplayPreferences()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setdisplaypreferences.html
+modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 3.0)</p>
 <p>SetDisplayPreferences – Defines the way the document shall be presented on the screen</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetDisplayPreferences</b> ( string <span class="parameter">$prefs</span> )</div>
+<p class="manual_block">void <b>SetDisplayPreferences</b> ( string <span class="parameter">$prefs</span> )</p>
 <p>Specify the way the document shall be presented on the screen when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">prefs</span></p>
@@ -63,6 +62,3 @@ $mpdf->Output('filename.pdf');
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setdisplaymode.html" | prepend: site.baseurl }}">SetDisplayMode()</a> - Specify the initial Display Mode when the PDF file is opened in Adobe Reader</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

@@ -3,21 +3,19 @@ layout: page
 title: Supported CSS
 parent_title: CSS & Stylesheets
 permalink: /css-stylesheets/supported-css.html
+modification_time: 2015-08-05T11:59:56+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>Supported CSS attributes - stylesheets or in-line</h2>
 <p>Unless otherwise stated, the following values are supported:</p>
 <p><span class="smallblock">LENGTH</span>: px, pc, pt, cm, mm, in, em, rem, ex and % (where appropriate) are supported. Default if no unit given is px.</p>
 <p><span class="smallblock">FONT-SIZE</span>: px, pc, pt, em, rem, ex, %, small, medium, large, x-small, x-large&nbsp; are supported. Default if no unit given is px.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Support for "rem" was added mPDF 5.7&nbsp; Unlike the CSS3 specification, the basic size used for rem in the document is based on the font-size set on the &lt;body&gt; element (rather than the &lt;html&gt; element).</div>
-
-<div class="alert alert-info" role="alert">Conversion from "px" is determined by the configurable variables <a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a></div>
-
-<div class="alert alert-info" role="alert">"ex" uses an approximation of half the font height</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Support for "rem" was added mPDF 5.7&nbsp; Unlike the CSS3 specification, the basic size used for rem in the document is based on the font-size set on the &lt;body&gt; element (rather than the &lt;html&gt; element).</div>
+<p class="manual_block">Conversion from "px" is determined by the configurable variables <a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a></p>
+<p class="manual_block">"ex" uses an approximation of half the font height</p>
 <p><span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as <i>sans</i>, <i>sans-serif</i>, <i>serif</i> or <i>monospace</i>.</p>
 <p><span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g. 'black', 'gray' are supported.
 
@@ -36,7 +34,7 @@ Also supported are:</p>
 </ul>
 <p>mPDF&nbsp; &gt;= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);</p>
 <p>*Alpha values (transparency) are only supported on background colours - not text color</p>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>HTML&nbsp;Tag</th>
 <td>Property</td>
 <td>Values allowed &amp; Notes
@@ -445,7 +443,7 @@ fixed - uses printable page (inside margins) as containing element.</p>
 <td>rtl | ltr (mPDF &gt;= 5.1)</td>
 </tr>
 </tbody> </table>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>HTML Tag</th>
 <td>Property</td>
 <td>Values allowed &amp; Notes
@@ -555,7 +553,7 @@ mPDF &gt;= 6.0</td>
 <td><b>NB Lists are handled as block-level elements as from mPDF 6.0 (see above)</b></td>
 </tr>
 </tbody> </table>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>
 <p>HTML Tag</p>
 </th>
@@ -634,7 +632,7 @@ mPDF &gt;= 6.0</td>
 As per CSS. (mPDF&nbsp; &gt;= 5.7)</td>
 </tr>
 </tbody> </table>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th style="white-space: nowrap;">HTML Tag</th>
 <td>Property</td>
 <td>Values allowed &amp; Notes
@@ -1037,7 +1035,7 @@ As per CSS3 specification</td>
 <td>rtl | ltr (mPDF &gt;= 6.0)</td>
 </tr>
 </tbody> </table>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>HTML Tag</th>
 <td>Property</td>
 <td>Values allowed &amp; Notes
@@ -1437,7 +1435,7 @@ margin-footer</i></td>
 </tr>
 </tbody> </table>
 <p><b>Common Text Styles</b></p>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td rowspan="25">COMMON TEXT STYLES</td>
 <td>font-family</td>
@@ -1653,6 +1651,3 @@ As per CSS3
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; Borders (including Gradients)</a></li>
 <li class="manual_boxlist"><a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML supported attributes</a> </li>
 </ul>
-</div>
-</div>
-

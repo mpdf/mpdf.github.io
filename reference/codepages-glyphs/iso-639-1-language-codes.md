@@ -3,13 +3,13 @@ layout: page
 title: ISO 639-1 language codes
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/iso-639-1-language-codes.html
+modification_time: 2015-08-05T12:03:02+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The language/country codes recognised by mPDF are configurable in the <span class="filename">config_cp.php</span> file.</p>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr class="oddrow">
 <td>
 <p>ISO 639-1</p>
@@ -1989,6 +1989,3 @@ permalink: /reference/codepages-glyphs/iso-639-1-language-codes.html
 </tr>
 </tbody> </table>
 <p>&nbsp;</p>
-</div>
-</div>
-

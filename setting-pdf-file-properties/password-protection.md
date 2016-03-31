@@ -3,11 +3,11 @@ layout: page
 title: Password protection
 parent_title: Setting PDF file properties
 permalink: /setting-pdf-file-properties/password-protection.html
+modification_time: 2015-08-05T11:59:58+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The security settings for the PDF file can be set in mPDF:</p>
 <ul>
 <li>determine whether the document is encrypted</li>
@@ -22,6 +22,3 @@ permalink: /setting-pdf-file-properties/password-protection.html
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setprotection.html" | prepend: site.baseurl }}">SetProtection()</a> - Encrypts and sets the PDF document permissions</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

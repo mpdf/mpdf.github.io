@@ -3,11 +3,11 @@ layout: page
 title: Demo - Other Unicode character
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/demo-other-unicode-character.html
+modification_time: 2015-08-05T12:02:57+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Most of the following is from <a href="http://www.w3.org/2001/06/utf-8-test/UTF-8-demo.html">http://www.w3.org/2001/06/utf-8-test/UTF-8-demo.html </a>:</p>
 <h2>Olde English long 's'</h2>
 <p>Paradiſe Loſt</p>
@@ -220,6 +220,3 @@ abcdefghijklmnopqrstuvwxyz £©µÀÆÖÞßéöÿ
 ∀∂∈ℝ∧∪≡∞ ↑↗↨↻⇣ ┐┼╔╘░►☺♀ ﬁ�⑀₂ἠḂӥẄɐː⍎אԱა</p>
 <h2>Greetings in various languages</h2>
 <p>Hello world, Καλημέρα κόσμε, コンニチハ</p>
-</div>
-</div>
-

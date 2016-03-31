@@ -3,16 +3,15 @@ layout: page
 title: SetPageTemplate()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setpagetemplate.html
+modification_time: 2015-08-05T12:01:07+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3)</p>
 <p>SetPageTemplate – Specify a page from an external PDF file to use as a template</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetPageTemplate</b> ([ int <span class="parameter">$templateID</span> ])</div>
+<p class="manual_block">void <b>SetPageTemplate</b> ([ int <span class="parameter">$templateID</span> ])</p>
 <p>Specify a page from an external PDF file to use as a template. The page must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. Once a 'page template' has been set, the template is inserted on every subsequent page of the document. The template is added to the page at the same time as a new page is started (in the Header).</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">templateID</span></p>
@@ -20,7 +19,7 @@ permalink: /reference/mpdf-functions/setpagetemplate.html
 
 <span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> will clear the template, so subsequent pages will not have the template added.</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -83,6 +82,3 @@ $mpdf->Output();
 </li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

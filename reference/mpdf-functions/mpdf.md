@@ -3,16 +3,15 @@ layout: page
 title: mPDF()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/mpdf.html
+modification_time: 2015-08-05T12:00:37+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.0)</p>
 <p>mPDF – Initialise an instance of mPDF class</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">class <b>mPDF</b> ([ string <span class="parameter">$mode</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])</div>
+<p class="manual_block">class <b>mPDF</b> ([ string <span class="parameter">$mode</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])</p>
 <p>Initialise an instance of mPDF class.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">mode</span></p>
@@ -43,9 +42,9 @@ A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"<i><b>
 
 </b></i></p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> If the <span class="parameter">mode</span> is set by passing a country/language string, this may also set: available fonts, text justification, and directionality <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (as determined by <span class="filename">config_cp.php</span>)</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If the <span class="parameter">mode</span> is set by passing a country/language string, this may also set: available fonts, text justification, and directionality <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (as determined by <span class="filename">config_cp.php</span>)</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a></div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a></div>
 <ul> </li>
 </ul>
 <p class="manual_param_dt"><span class="parameter">format</span></p>
@@ -126,7 +125,7 @@ If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the
 
 L: Landscape</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -191,13 +190,9 @@ $mpdf=new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
 {% endhighlight %}
 
 <h2>Notes</h2>
-
-<div class="alert alert-info" role="alert"><b>Note</b>: <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
+<p class="manual_block"><b>Note</b>: <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</p>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML to the document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> - Finalise and output the document</li>
 </ul>
-</div>
-</div>
-

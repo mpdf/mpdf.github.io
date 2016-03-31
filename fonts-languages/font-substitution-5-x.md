@@ -3,11 +3,11 @@ layout: page
 title: Font substitution 5.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/font-substitution-5-x.html
+modification_time: 2015-08-05T11:59:37+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.0)</p>
 <p>If a font or default font is declared in mPDF (including the default stylesheet, and any CSS stylesheets etc.) the font that is actually set is determined by:</p>
 <h3>Standard use</h3>
@@ -35,6 +35,3 @@ permalink: /fonts-languages/font-substitution-5-x.html
 <p>If core fonts only are specified by using <code>$mpdf = new mPDF('c')</code>, then all font requests will be substituted by Arial/Helvetica, Times or Courier i.e. the core PDF fonts. mPDF determines whether the requested font is a sans-serif, serif or monospace font (as above), and substitutes accordingly.&nbsp;</p>
 <h3>Character (font) substitution</h3>
 <p>If some circumstances, individual characters are replaced by glyphs from another font - see <a href="{{ "/fonts-languages/character-substitution.html" | prepend: site.baseurl }}">character (font) substitution</a>.</p>
-</div>
-</div>
-

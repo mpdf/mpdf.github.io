@@ -3,14 +3,14 @@ layout: page
 title: Images
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/images.html
+modification_time: 2015-08-05T12:00:04+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Images are supported by mPDF: GIF, PNG, JPG, WMF, SVG, BMP and generated images from <acronym title="PHP: Hypertext Preprocessor">PHP </acronym> scripts.</p>
 <p>Transparent GIF images are supported, and so are interlaced and transparent PNG files, including transparency using alpha channel.</p>
-<table class="bpmNoLinesC"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>JPG image</td>
 <td><img src="files/images/tiger.jpg" alt="tiger.jpg" width="100" /></td>
@@ -43,8 +43,7 @@ permalink: /what-else-can-i-do/images.html
 <td><img src="files/images/tiger.svg" alt="tiger.svg" width="100" /></td>
 </tr>
 </tbody> </table>
-
-<div class="alert alert-info" role="alert"><b>Debugging Errors:</b> If you are having trouble with images not displaying correctly, set the variable <span class="parameter">$mpdf-&gt;showImageErrors</span> = true.</div>
+<p class="manual_block"><b>Debugging Errors:</b> If you are having trouble with images not displaying correctly, set the variable <span class="parameter">$mpdf-&gt;showImageErrors</span> = true.</p>
 <p>Images are handled in mPDF as in-line elements.</p>
 <p>Unlike the HTML specification, the&nbsp;width and height attributes of IMG will additionally take different dimensions e.g. mm, pt etc.&nbsp;</p>
 
@@ -240,6 +239,3 @@ $mpdf->Image('var: myvariable',0,0);
 <p>&nbsp;</p>
 <ul> </li>
 </ul>
-</div>
-</div>
-

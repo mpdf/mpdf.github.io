@@ -3,11 +3,11 @@ layout: page
 title: Font names
 parent_title: Fonts & Languages
 permalink: /fonts-languages/font-names.html
+modification_time: 2015-08-05T11:59:28+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h3>CSS font-family name</h3>
 <p>Every font family has a name which is defined in the font file. This is the name by which your computer OS registers and recognises the font family.</p>
 <p>This is also the name used in CSS e.g.</p>
@@ -79,6 +79,3 @@ $this->fontdata = array(
 <p>mPDF will try to locate the font-file. If you have defined <code>_MPDF_SYSTEM_TTFONTS</code> at the top of the <span class="filename">config_fonts.php</span> file, it will first look for the font-file there. This is useful if you are running mPDF on a computer which already has a folder with TTF fonts in (e.g. on Windows)</p>
 <p>If the font-file is not there, or <code>_MPDF_SYSTEM_TTFONTS</code> is not defined, mPDF will look in the folder <span class="filename">/[your_path_to_mpdf]/ttfonts/</span></p>
 <p>Note that the font-file names are case-sensitive and can contain capitals.</p>
-</div>
-</div>
-

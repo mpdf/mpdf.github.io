@@ -3,15 +3,14 @@ layout: page
 title: watermark_font
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/watermark-font.html
+modification_time: 2015-08-05T12:02:40+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">string <b>watermark_font</b></div>
+<p class="manual_block">string <b>watermark_font</b></p>
 <p>Specifies the font to use for the watermark on each page. The BOLD style of the font is used by default.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">watermark_font</span></p>
@@ -53,6 +52,3 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 </li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> - Specifies whether or not to show/print the watermark image</li>
 </ul>
-</div>
-</div>
-

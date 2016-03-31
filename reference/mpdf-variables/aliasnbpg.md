@@ -3,17 +3,16 @@ layout: page
 title: aliasNbPg
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/aliasnbpg.html
+modification_time: 2015-08-05T12:01:33+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Variable which defines the text to be replaced by the total page number in the document.</p>
 <p>Default = {nb}</p>
 <p>You can assign this value directly, or use the function: <a href="{{ "/reference/mpdf-functions/aliasnbpages.html" | prepend: site.baseurl }}">AliasNbPages()</a></p>
 <p>&nbsp;</p>
-
-<div class="alert alert-info" role="alert"><b>Note: </b>This variable originally started with an uppercase letter (&lt;= mPDF 2.2). Support for the uppercase version was removed in mPDF &gt;= 6.0</div>
+<p class="manual_block"><b>Note: </b>This variable originally started with an uppercase letter (&lt;= mPDF 2.2). Support for the uppercase version was removed in mPDF &gt;= 6.0</p>
 <p>&nbsp;</p>
 <h2>See Also</h2>
 <ul>
@@ -25,6 +24,3 @@ permalink: /reference/mpdf-variables/aliasnbpg.html
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable aliases</a> -&nbsp;</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/aliasnbpggp.html" | prepend: site.baseurl }}">aliasNbPgGp</a> - Specify the text to be replaced by the group page total</li>
 </ul>
-</div>
-</div>
-

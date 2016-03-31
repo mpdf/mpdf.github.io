@@ -3,11 +3,11 @@ layout: page
 title: Text Justification
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/text-justification.html
+modification_time: 2015-08-05T12:00:08+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>Justifying text &amp; Spacing</h2>
 <h3>Character and Word spacing</h3>
 <p>When text-alignment is set to Justify (i.e. aligning to both right and left margins), word spacing and character spacing are normally used to justify text.</p>
@@ -44,6 +44,3 @@ div.arabic {
 <h3>Justification before line-breaks</h3>
 <p>In a justified text block, an inline &lt;img&gt;, &lt;textarea&gt;, &lt;input&gt;, or &lt;select&gt; element which causes a new line, force the previous line to be justified. However, a &lt;hr&gt; or &lt;br&gt; do not force justification of the preceeding text.</p>
 <p>This behaviour matches most browsers. To allow optional compliance with the bahaviour of MS Word, which also justifies text before a &lt;br&gt; you can set the configurable variable <a href="{{ "/reference/mpdf-variables/justifyb4br.html" | prepend: site.baseurl }}">justifyB4br</a> to true.</p>
-</div>
-</div>
-

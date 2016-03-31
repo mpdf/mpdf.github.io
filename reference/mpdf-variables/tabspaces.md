@@ -3,15 +3,14 @@ layout: page
 title: tabSpaces
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/tabspaces.html
+modification_time: 2015-08-05T12:02:32+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">int <b>tabSpaces</b></div>
+<p class="manual_block">int <b>tabSpaces</b></p>
 <p>Specifies the number of spaces to substitue for a <span class="smallblock">TAB</span> character when parsing HTML input between &lt;pre&gt;...&lt;/pre&gt; tags. The default value (8) is consistent with the HTML specification, but many programs including Windows NotePad uses a value of 6.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">tabSpaces</span></p>
@@ -47,6 +46,3 @@ $mpdf->Output();
 <p><span class="jslink">
 
 </span></p>
-</div>
-</div>
-

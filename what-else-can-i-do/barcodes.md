@@ -3,17 +3,17 @@ layout: page
 title: Barcodes
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/barcodes.html
+modification_time: 2015-08-05T12:00:12+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;=4.0)</p>
 <p>A variety of barcodes can be produced with mPDF. Please see the example file for more information.</p>
 <h3>Specifications in mPDF
 
 </h3>
-<table class="bpmTopicC"> <tbody>
+<table class="table"> <tbody>
 <tr> <th rowspan="2" class="pmhBottomCenter" style="font-weight: bold;">Barcode type</th>
 <td rowspan="2" class="pmhBottomCenter" style="font-weight: bold;"><span class="parameter">code</span></td>
 <td rowspan="2" class="pmhBottomCenter" style="font-weight: bold;">X-dim</td>
@@ -239,6 +239,3 @@ permalink: /what-else-can-i-do/barcodes.html
 <p><sup>[3] </sup>Code specification: 2.24 - 3.5</p>
 <p><sup>[4] </sup>Bars per inch (determines bar/gap ratio, gap width) = 22</p>
 <p><sup>[5] </sup>Ratio of bar heights: Descender, Ascender, Full, Tracker (or Full:Half bar)</p>
-</div>
-</div>
-

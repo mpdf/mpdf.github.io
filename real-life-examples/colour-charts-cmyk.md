@@ -3,11 +3,11 @@ layout: page
 title: Colour Charts CMYK
 parent_title: Real life examples
 permalink: /real-life-examples/colour-charts-cmyk.html
+modification_time: 2015-08-05T12:00:25+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>This example produces colour charts for all the CMYK colours (incrementing each value by 10). See the <a href="files/docs/example_colors.pdf">result</a>.</p>
 
 {% highlight php %}
@@ -71,6 +71,3 @@ exit;
 {% endhighlight %}
 
 <p>&nbsp;</p>
-</div>
-</div>
-

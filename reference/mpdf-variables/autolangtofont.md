@@ -3,17 +3,16 @@ layout: page
 title: autoLangToFont
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/autolangtofont.html
+modification_time: 2015-08-05T12:01:39+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <div>
 <div>
 <p>(mPDF &gt;= 6.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">boolean <b>autoLangToFont</b></div>
+<p class="manual_block">boolean <b>autoLangToFont</b></p>
 <p>When <span class="smallblock">TRUE</span>, selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code></p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">autoLangToFont</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span></p>
@@ -30,6 +29,3 @@ permalink: /reference/mpdf-variables/autolangtofont.html
 <p>&nbsp;</p>
 </div>
 </div>
-</div>
-</div>
-

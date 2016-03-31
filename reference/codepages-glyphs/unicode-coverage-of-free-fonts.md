@@ -3,13 +3,13 @@ layout: page
 title: Unicode coverage of Free Fonts
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/unicode-coverage-of-free-fonts.html
+modification_time: 2015-08-05T12:03:03+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Fonts with full coverage of Unicode Ranges</p>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr>
 <td>Unicode Block</td>
 <td>Fonts with full coverage</td>
@@ -837,7 +837,7 @@ Special positioning required</td>
 </tbody> </table>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr>
 <td>&nbsp;Font name
 
@@ -988,6 +988,3 @@ Special positioning required</td>
 <td>http://wiki.irmug.com/index.php/X_Series_2</td>
 </tr>
 </tbody> </table>
-</div>
-</div>
-

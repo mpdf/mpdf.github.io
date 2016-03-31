@@ -3,19 +3,18 @@ layout: page
 title: autoFontGroupSize
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/autofontgroupsize.html
+modification_time: 2015-08-05T12:01:39+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3&nbsp; &lt;6.0)</p>
 <p>autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont</p>
 <h2>Value</h2>
-
-<div class="alert alert-info" role="alert">void <b>autoFontGroupSize</b></div>
+<p class="manual_block">void <b>autoFontGroupSize</b></p>
 <p>Specify the chunk size of text to group when auto-detecting languages using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a>.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This variable is removed from mPDF v 6.0</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This variable is removed from mPDF v 6.0</div>
 <p>Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage is that it may include bits of other languages either side, forcing them in the font used for the "foreign" language.
 
 Smaller chunks (1) - analysing word by word - takes more processing time, and cannot reverse RTL sentences. In text with CJK language, it makes it harder for mPDF to correctly identify between e.g. Korean and Chinese which share some characters. Thus words may be identified alternately as Korean or Chinese.</p>
@@ -31,7 +30,7 @@ Smaller chunks (1) - analysing word by word - takes more processing time, and ca
 
 <span class="smallblock">DEFAULT</span>: 2</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -107,6 +106,3 @@ See the result of this as a PDF file
 <li class="manual_boxlist"><a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li>
 <li class="manual_boxlist"><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
 </ul>
-</div>
-</div>
-

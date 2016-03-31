@@ -3,18 +3,18 @@ layout: page
 title: Index
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/index.html
+modification_time: 2015-08-05T12:00:14+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF can generate an index at the end of document using:</p>
 <ul>
 <li>&lt;indexentry content="Buffalo" /&gt; to make index entries at the appropriate place in the HTML text</li>
 <li>&lt;indexinsert ... /&gt; generates and inserts the Index at the end of document</li>
 </ul>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Indexes have been completely rewritten in mPDF 6. The notes below refer to mPDF v6.0+</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Indexes have been completely rewritten in mPDF 6. The notes below refer to mPDF v6.0+</div>
 <ul>
 <li>&lt;indexentry&gt; or IndexEntry() should be used to create Index entries during document writing.</li>
 <li>&lt;indexinsert&gt; or InsertIndex() should be used to generate the Index at the end of the document.</li>
@@ -90,8 +90,7 @@ a.mpdf_index_link {
 <p>A default stylesheet for Indexes is included in <span class="filename">mpdf.css</span></p>
 <h3>Index Collation</h3>
 <p>In order to generate an Index with non-ASCII characters, entries need to be sorted accordingly (collation), and non-ASCII characters should map to the appropriate Dividing letter e.g.:</p>
-
-<div class="alert alert-info" role="alert"><b>A</b>
+<p class="manual_block"><b>A</b>
 
 Alonso, Fernando
 
@@ -101,7 +100,7 @@ Arroyo Molino, David
 
 <b>B</b>
 
-BenÃtez, Carlos</div>
+BenÃtez, Carlos</p>
 <p>Entries in an Index can now be sorted using any of the Locale values available on your system. Set it using the "collation" property/parameter e.g.:</p>
 
 {% highlight php %}
@@ -163,8 +162,7 @@ $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
 
 <p>A shorthand way of displaying subentries is set by default, which suppresses the main entry if &gt; 1 subEntry. It can be disabled/enabled using the configurable variable $this-&gt;indexUseSubentries in config.php.</p>
 <p>This is the default appearance, with $this-&gt;indexUseSubentries = false; -</p>
-
-<div class="alert alert-info" role="alert">Mammals 73
+<p class="manual_block">Mammals 73
 
 - elephants 142
 
@@ -174,7 +172,7 @@ Marsupials
 
 - kangaroos 75
 
-- wombats 86</div>
+- wombats 86</p>
 <p>Index entries can also include simple mark-up tags and/or more than one colon e.g:</p>
 
 {% highlight php %}
@@ -182,13 +180,11 @@ Marsupials
 {% endhighlight %}
 
 <p>which appears as:</p>
+<p class="manual_block">Mammals
 
-<div class="alert alert-info" role="alert">Mammals
-
-- <b>elephants</b>: breeding 15</div>
+- <b>elephants</b>: breeding 15</p>
 <p>This is the appearance with $this-&gt;indexUseSubentries = false;</p>
-
-<div class="alert alert-info" role="alert">Mammals 73
+<p class="manual_block">Mammals 73
 
 Mammals, elephants 142
 
@@ -198,9 +194,6 @@ Mammals, humans 173
 
 Marsupials, kangaroos 75
 
-Marsupials, wombats 86</div>
+Marsupials, wombats 86</p>
 <h3>Customised appearance (advanced)</h3>
 <p>Several variables set at beginning of function InsertIndex() in mpdf.php which could be changed to alter appearance of Index. e.g. spacer, and joiner characters.</p>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: Rotated pages
 parent_title: Headers & Footers
 permalink: /headers-footers/rotated-pages.html
+modification_time: 2015-08-05T11:59:55+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Special case - rotated Portrait headers on Landscape pages
 
 ==========================================================</p>
@@ -26,6 +26,3 @@ $mpdf->forcePortraitHeaders = true;
 <li>when adding a page, you must only call $mpdf-&gt;AddPage('L') or &lt;pagebreak orientaion="landscape" /&gt;</li>
 </ul>
 <p>If you try to set new margins/headers etc. for new landscape pages when forcePortrait=true, it will go wrong</p>
-</div>
-</div>
-

@@ -3,19 +3,17 @@ layout: page
 title: jpgraph
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/jpgraph.html
+modification_time: 2015-08-05T12:01:25+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.4)</p>
 <p>jpgraph — Generate a graph from table data (requires <a href="http://www.aditus.nu/jpgraph/" target="_blank">JPGraph</a> integration)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt;<b>jpgraph</b> [ <span class="parameter">table </span>] [ <span class="parameter">type </span>] [ <span class="parameter">stacked </span>] [ <span class="parameter">dpi </span>] [ <span class="parameter">title </span>] [ <span class="parameter">splines </span>] [ <span class="parameter">bandw </span>] [ <span class="parameter">antialias </span>] [ <span class="parameter">label-y</span> ] [ <span class="parameter">label-x </span>] [ <span class="parameter">axis-x</span> ] [ <span class="parameter">axis-y</span> ] [ <span class="parameter">percent </span>] [ <span class="parameter">series </span>] [ <span class="parameter">data-col-begin</span> ] [ <span class="parameter">data-row-begin</span> ] [ <span class="parameter">data-col-end</span> ] [ <span class="parameter">data-row-end</span> ] [ <span class="parameter">show-values</span> ] [ <span class="parameter">width</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">legend-overlap</span> ] [ <span class="parameter">hide-grid</span> ] [ <span class="parameter">hide-y-axis</span> ] /&gt;</div>
+<p class="manual_block">&lt;<b>jpgraph</b> [ <span class="parameter">table </span>] [ <span class="parameter">type </span>] [ <span class="parameter">stacked </span>] [ <span class="parameter">dpi </span>] [ <span class="parameter">title </span>] [ <span class="parameter">splines </span>] [ <span class="parameter">bandw </span>] [ <span class="parameter">antialias </span>] [ <span class="parameter">label-y</span> ] [ <span class="parameter">label-x </span>] [ <span class="parameter">axis-x</span> ] [ <span class="parameter">axis-y</span> ] [ <span class="parameter">percent </span>] [ <span class="parameter">series </span>] [ <span class="parameter">data-col-begin</span> ] [ <span class="parameter">data-row-begin</span> ] [ <span class="parameter">data-col-end</span> ] [ <span class="parameter">data-row-end</span> ] [ <span class="parameter">show-values</span> ] [ <span class="parameter">width</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">legend-overlap</span> ] [ <span class="parameter">hide-grid</span> ] [ <span class="parameter">hide-y-axis</span> ] /&gt;</p>
 <p>Generates and inserts a graph into the document at the current writing position. &lt;jpgraph&gt; must follow the table which it refers to (not necessarily immediately). Requires <span class="parameter">useGraphs</span> set to <span class="smallblock">TRUE</span>.</p>
-
-<div class="alert alert-info" role="alert"><b>Note: </b>This requires <a href="http://www.aditus.nu/jpgraph/" target="_blank">JPGraph</a> to be installed on the server. See <a href="{{ "/what-else-can-i-do/graphs.html" | prepend: site.baseurl }}">Graphs</a> for further information.</div>
+<p class="manual_block"><b>Note: </b>This requires <a href="http://www.aditus.nu/jpgraph/" target="_blank">JPGraph</a> to be installed on the server. See <a href="{{ "/what-else-can-i-do/graphs.html" | prepend: site.baseurl }}">Graphs</a> for further information.</p>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">table</span></p>
 <p class="manual_param_dd">This attribute (optionally) specifies the table "id" or "name" from which to use data. 
@@ -44,8 +42,7 @@ xy
 scatter
 
 <span class="smallblock">DEFAULT</span>: bar</p>
-
-<div class="alert alert-info" role="alert">Graphs of type xy or scatter will expect exactly two columns/rows of numerical data - giving X and Y co-ordinates respectively. In the xy graph, the x values need to be in numerical order.</div>
+<p class="manual_block">Graphs of type xy or scatter will expect exactly two columns/rows of numerical data - giving X and Y co-ordinates respectively. In the xy graph, the x values need to be in numerical order.</p>
 <p class="manual_param_dt"><span class="parameter">stacked</span> = 1|0</p>
 <p class="manual_param_dd">Specifies whether to "stack" bars in graphs of type <i>bar</i> or <i>horizontal-bar</i>.
 
@@ -194,9 +191,9 @@ height</span></p>
 
 <span class="smallblock">DEFAULT</span>: 0</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Other attributes or styles supported by &lt;img&gt; can be used, except for <span class="parameter">width </span>and <span class="parameter">height </span>(which are ignored) and of course <span class="parameter">src</span>.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Other attributes or styles supported by &lt;img&gt; can be used, except for <span class="parameter">width </span>and <span class="parameter">height </span>(which are ignored) and of course <span class="parameter">src</span>.</div>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -272,6 +269,3 @@ exit;
 </li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

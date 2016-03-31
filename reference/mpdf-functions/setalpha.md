@@ -3,16 +3,15 @@ layout: page
 title: SetAlpha()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setalpha.html
+modification_time: 2015-08-05T12:00:53+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetAlpha – Set the opacity for Images</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetAlpha</b> ( float <span class="parameter">$alpha</span> [, integer <span class="parameter">$blend</span> ])</div>
+<p class="manual_block">void <b>SetAlpha</b> ( float <span class="parameter">$alpha</span> [, integer <span class="parameter">$blend</span> ])</p>
 <p>Set the opacity and blend mode for Images</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">alpha</span></p>
@@ -60,7 +59,7 @@ Luminosity
 
 <span class="smallblock">DEFAULT</span>: Normal</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -105,6 +104,3 @@ exit;
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/image.html" | prepend: site.baseurl }}">Image()</a> - Write an image to the current document</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

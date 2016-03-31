@@ -3,11 +3,11 @@ layout: page
 title: Resizing
 parent_title: Troubleshooting
 permalink: /troubleshooting/resizing.html
+modification_time: 2015-08-05T12:00:35+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF automatically resizes content in some circumstances. Using the default settings and CSS properties, the following are resized:</p>
 <ul>
 <li>tables will resize so that the tallest row (cell) will fit on a page [this is the only one that cannot be overridden]</li>
@@ -17,6 +17,3 @@ permalink: /troubleshooting/resizing.html
 <li>images will resize if necessary to fit onto a page</li>
 </ul>
 <p>Tables may also resize if you set the CSS property <code>page-break-inside: avoid</code></p>
-</div>
-</div>
-

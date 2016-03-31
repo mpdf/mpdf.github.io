@@ -3,11 +3,11 @@ layout: page
 title: iconv
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/iconv.html
+modification_time: 2015-08-05T12:02:59+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The following codepages are supported by the iconv function:</p>
 <p>European languages</p>
 <ul>
@@ -79,6 +79,3 @@ permalink: /reference/codepages-glyphs/iconv.html
 <p>&nbsp;</p>
 <p>See <a href="http://www.gnu.org/software/libiconv/">http://www.gnu.org/software/libiconv/</a></p>
 <p>&nbsp;</p>
-</div>
-</div>
-

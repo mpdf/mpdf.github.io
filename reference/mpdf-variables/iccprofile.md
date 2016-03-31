@@ -3,16 +3,15 @@ layout: page
 title: ICCProfile
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/iccprofile.html
+modification_time: 2015-08-05T12:01:59+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.3)</p>
 <p>ICCProfile – Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a (mPDF &gt;= 5.1) compliant documents</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>ICCProfile</b></div>
+<p class="manual_block">void <b>ICCProfile</b></p>
 <p>Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a compliant documents. The file must exist in <span class="filename">/iccprofiles/</span> folder</p>
 <p>Either a 3-colour RGB profile or a 4-colour CMYK profile should be used depending on other settings.</p>
 <p>The default colorspace for a PDF/A1-b document is RGB. The default for a PDF/X-1a document is CMYK.</p>
@@ -23,7 +22,7 @@ permalink: /reference/mpdf-variables/iccprofile.html
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>&nbsp;<span class="smallblock">&nbsp;</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -41,6 +40,3 @@ permalink: /reference/mpdf-variables/iccprofile.html
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfxauto.html" | prepend: site.baseurl }}">PDFXauto</a> - Specify whether to automatically fix issues to create PDF/X-1a compliant document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
 </ul>
-</div>
-</div>
-

@@ -3,19 +3,18 @@ layout: page
 title: WriteHTML()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/writehtml.html
+modification_time: 2015-08-05T12:01:16+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>WriteHTML — Write HTML code to the document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>WriteHTML</b> ( string <span class="parameter">$html</span> [, int <span class="parameter">$mode</span> [, boolean <span class="parameter">$initialise</span> [, boolean <span class="parameter">$close</span> ]]])</div>
+<p class="manual_block">void <b>WriteHTML</b> ( string <span class="parameter">$html</span> [, int <span class="parameter">$mode</span> [, boolean <span class="parameter">$initialise</span> [, boolean <span class="parameter">$close</span> ]]])</p>
 <p>Write <span class="parameter">html</span> code to the document.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Prior to mPDF 4.2 a fatal error was caused if <span class="parameter">html</span> was passed as a <span class="smallblock">NULL</span> value, <span class="smallblock">FALSE</span> or an undefined variable.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.2 a fatal error was caused if <span class="parameter">html</span> was passed as a <span class="smallblock">NULL</span> value, <span class="smallblock">FALSE</span> or an undefined variable.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">html</span></p>
 <p class="manual_param_dd">UTF-8 encoded HTML code to write to the document.</p>
@@ -87,7 +86,7 @@ Prior to mPDF 4.2 the default CSS was not parsed when using <span class="paramet
 
 </h2>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th> <th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -163,6 +162,3 @@ $mpdf->WriteHTML('...and this is the end</p>', 2, false, true);
 
 </li>
 </ul>
-</div>
-</div>
-

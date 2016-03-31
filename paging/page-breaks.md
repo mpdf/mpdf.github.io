@@ -3,11 +3,11 @@ layout: page
 title: Page breaks
 parent_title: Paging
 permalink: /paging/page-breaks.html
+modification_time: 2015-08-05T11:59:45+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>You can force a page break anywhere in the document either by using HTML code or PHP:</p>
 
 {% highlight php %}
@@ -82,9 +82,6 @@ div { border: 1px solid black; padding: 1em; }
 
 <p>....</p>
 
-</div>
-
-</div>
 
 </div>
 {% endhighlight %}
@@ -93,7 +90,7 @@ div { border: 1px solid black; padding: 1em; }
 <p>If the page break type is "cloneall" - the three DIV elements will all be closed, by drawing the border and padding for each at the end of the page; the three DIV elements will be re-opened, drawing the borders and padding, at the top of the next page.</p>
 <p>If the page break type is "clonebycss" - starting from the innermost element (div.level3) the DIV elements will have a border and padding at the end of the page if "box-decoration-break" is clone. In this case level2 and level 3 will be closed/cloned and level 1 will be sliced; the opposite will occur at the top of the next page.</p>
 <h3>Control of page breaks</h3>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>Automatic page breaks (in flow of text)</td>
 <td>Always "slice"</td>
@@ -135,6 +132,3 @@ page-break-before or page-break-after</td>
 <p>"page-break-before|after" is ignored if set on block elements inside a table.</p>
 <p>Background images and gradients are not sliced (always cloned).</p>
 <p>$this-&gt;restoreBlockPagebreaks in config.php is now redundant.</p>
-</div>
-</div>
-

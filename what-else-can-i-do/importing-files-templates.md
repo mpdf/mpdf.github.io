@@ -3,11 +3,11 @@ layout: page
 title: Importing files & Templates
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/importing-files-templates.html
+modification_time: 2015-08-05T12:00:18+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3)</p>
 <p>Using an extension of mPDF, pages from external PDF files can be imported into 'templates' and used throughout the current document. This can be used for:</p>
 <ul>
@@ -17,11 +17,11 @@ permalink: /what-else-can-i-do/importing-files-templates.html
 <li>create thumbnails as handouts etc. from a document you have produced</li>
 </ul>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> On limited testing, mPDF appears to import any PDF file (with a version &lt;= 1.4, or one produced by mPDF) as long as it is not password protected. Text and images are imported, but links, bookmarks etc. are not. LZW encoding is supported from mPDF 4.3 onwards</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> On limited testing, mPDF appears to import any PDF file (with a version &lt;= 1.4, or one produced by mPDF) as long as it is not password protected. Text and images are imported, but links, bookmarks etc. are not. LZW encoding is supported from mPDF 4.3 onwards</div>
 
-<div class="alert alert-info" role="alert"><b>Tip:</b> mPDF imports all embedded fonts required for the document, even if they are the same as the ones used in the document being written. Try to keep the file size of the external source PDF file down to a minimum.</div>
+<div class="alert alert-success" role="alert"><strong>Tip:</strong> mPDF imports all embedded fonts required for the document, even if they are the same as the ones used in the document being written. Try to keep the file size of the external source PDF file down to a minimum.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> to enable them.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> to enable them.</div>
 <h2>See</h2>
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
@@ -42,6 +42,3 @@ permalink: /what-else-can-i-do/importing-files-templates.html
 </li>
 <li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li>
 </ul>
-</div>
-</div>
-

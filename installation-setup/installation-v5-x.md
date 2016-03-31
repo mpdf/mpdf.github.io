@@ -3,11 +3,11 @@ layout: page
 title: Installation v5.x
 parent_title: Installation & Setup
 permalink: /installation-setup/installation-v5-x.html
+modification_time: 2015-08-05T11:59:23+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h3>First-time users</h3>
 <p>Installation:</p>
 <ul>
@@ -36,8 +36,7 @@ Upgrading from version mPDF 5.0 Beta
 
 </h3>
 <p>There is no upgrade package from v5 beta because so many of the files have had at least minor changes. You can overwrite most of the files, taking care to keep a note of your 3 configuration files.</p>
-
-<div class="alert alert-info" role="alert"><b>Important:</b> You must delete all temporary files in the <span class="filename">/ttfontdata/</span> folder.</div>
+<p class="manual_block"><b>Important:</b> You must delete all temporary files in the <span class="filename">/ttfontdata/</span> folder.</p>
 <h3>Changes from 5.0 Beta</h3>
 <ul>
 <li>config.php file has been changed (extra CJK characters to recognise CJK blocks)</li>
@@ -64,6 +63,3 @@ and not 'lucida'</p>
 </ul>
 <p>The initial parameters e.g. <code>new mPDF('utf-8')</code> have all changed. Old ones may be recognised, or will be ignored.</p>
 <p>&nbsp;</p>
-</div>
-</div>
-

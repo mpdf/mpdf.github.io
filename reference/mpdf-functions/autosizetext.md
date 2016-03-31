@@ -3,11 +3,11 @@ layout: page
 title: AutosizeText()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/autosizetext.html
+modification_time: 2015-08-05T12:00:42+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p><code><b>AutosizeText</b>(<b>string</b> text, <b>float</b> width, <b>string</b> font, <b>string</b> style[, <b>float</b> fontsize])
 
 </code> Writes a single line of text directly to the PDF document at the current position.
@@ -34,6 +34,3 @@ Maximm font size in points (pt)
 
 Default = 72</li>
 </ul>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: Limitations
 parent_title: About mPDF
 permalink: /about-mpdf/limitations.html
+modification_time: 2015-08-05T11:59:21+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The script is (a lot) slower than the original FPDF and html2fpdf. Some of this is due to the inclusion of unicode font files (when used), but there is also an increase in processing time.</p>
 <h3>Tables</h3>
 <p>Block elements (e.g. DIV or P) are not supported inside tables. The content is displayed, but any CSS properties which apply to block elements are ignored (e.g. borders, padding, margins etc).</p>
@@ -22,6 +22,3 @@ permalink: /about-mpdf/limitations.html
 <ul>
 <li><a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">Known issues</a></li>
 </ul>
-</div>
-</div>
-

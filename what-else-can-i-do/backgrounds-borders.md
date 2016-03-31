@@ -3,11 +3,11 @@ layout: page
 title: Backgrounds & Borders
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/backgrounds-borders.html
+modification_time: 2015-08-05T12:00:00+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>Backgrounds</h2>
 <p>Background colour (colour is the only property) can be set for in-line elements e.g. &lt;span&gt;</p>
 <p>3 types of background can be set for block elements (div, p etc), @page, and for the &lt;body&gt; element:</p>
@@ -22,7 +22,7 @@ permalink: /what-else-can-i-do/backgrounds-borders.html
 <p>Background-images are disabled in columns, and when "page-break-inside: avoid" is used to keep a block together.</p>
 <p>NB CSS2.1 states that the area for background-image should include the padding and the BORDER - IE7 does this, but Firefox 3 starts the tiling position 0 inside the border. mPDF complies with CSS and IE7.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Background-color and background-image set on the &lt;body&gt; element will cover the whole page i.e. not inside the "margins".&nbsp; (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Background-color and background-image set on the &lt;body&gt; element will cover the whole page i.e. not inside the "margins".&nbsp; (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</div>
 <p>&nbsp;</p>
 <h3>Gradients defined as background-image</h3>
 <p>(mPDF &gt;= 5.1) Gradients can be defined as background-image: both the Mozilla or the draft CSS3 syntax are supported e.g.:</p>
@@ -69,7 +69,7 @@ background-gradient: radial #00FFFF #FFFF00 0.5 0.5 0.5 0.5 0.65;
 <h2>Borders</h2>
 <p>In addition to the standard CSS styles for borders, border-radius and background-clip are supported. these are defined in the <a href="http://www.w3.org/TR/2008/WD-css3-background-20080910/#layering">CSS3 draft specification</a>.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Border-radius does not work if Columns are being used, or if<span class="parameter"> <a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a> </span>is <span class="smallblock">TRUE</span> (keep-with-table).</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Border-radius does not work if Columns are being used, or if<span class="parameter"> <a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a> </span>is <span class="smallblock">TRUE</span> (keep-with-table).</div>
 <p>The two length values of the ‘border-*-radius’ properties define the radii of a quarter ellipse that defines the shape of the corner of the outer border edge.</p>
 <p>The first value is the horizontal radius e.g. in ‘border-top-left-radius: 55pt 25pt’&nbsp; 55pt is radius of curve from top end of left border starting to go round to the top.</p>
 <p>If the second length is omitted it is equal to the first (and the corner is thus a quarter circle). If either length is zero, the corner is square, not rounded.</p>
@@ -142,6 +142,3 @@ div.rounded {
 {% endhighlight %}
 
 <p>&nbsp;</p>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: lang 6.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/lang-6-x.html
+modification_time: 2015-08-05T11:59:32+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The HTML lang attribute has a number of uses:</p>
 <ul>
 <li>when OTL tables are being used for a font, the language from the lang attribute is used to select which OTL features are applied;</li>
@@ -34,8 +34,7 @@ permalink: /fonts-languages/lang-6-x.html
 {% endhighlight %}
 
 <p>should be of equal specificity, and thus apply whichever comes later in the CSS stylesheet. mPDF however gives <code>:lang</code> priority over <code>.class</code></p>
-
-<div class="alert alert-info" role="alert"><b>The use of the lang attribute and CSS selector is the recommended method for handling multi-lingual documents</b></div>
+<p class="manual_block"><b>The use of the lang attribute and CSS selector is the recommended method for handling multi-lingual documents</b></p>
 <h3>Language tags</h3>
 <p>IETF tags should be used for lang which comply with the following:</p>
 <ul>
@@ -45,6 +44,3 @@ permalink: /fonts-languages/lang-6-x.html
 <li>i.e. [xx|xxx]{-Xxxx}{-XX}</li>
 <li>mPDF deals with IETF tags as case insensitive</li>
 </ul>
-</div>
-</div>
-

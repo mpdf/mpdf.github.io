@@ -3,16 +3,15 @@ layout: page
 title: SetHTMLFooter()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/sethtmlfooter.html
+modification_time: 2015-08-05T12:01:03+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.2)</p>
 <p>SetHTMLFooter – Sets an HTML page footer</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetHTMLFooter</b> ( string <span class="parameter">$html</span> [, string <span class="parameter">$side</span> ])</div>
+<p class="manual_block">void <b>SetHTMLFooter</b> ( string <span class="parameter">$html</span> [, string <span class="parameter">$side</span> ])</p>
 <p>Set an HTML page footer.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">header</span></p>
@@ -31,9 +30,9 @@ E - set the footer for <span class="smallblock">EVEN</span> pages
 
 <span class="smallblock">BLANK</span> - set the footer for <span class="smallblock">ODD</span> pages</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; <b>SetHTMLHeader()</b> and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">side</span> - set <span class="smallblock">ODD</span> page header/footer only as default</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; <b>SetHTMLHeader()</b> and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">side</span> - set <span class="smallblock">ODD</span> page header/footer only as default</div>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -52,6 +51,3 @@ E - set the footer for <span class="smallblock">EVEN</span> pages
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLHeader()</a></li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

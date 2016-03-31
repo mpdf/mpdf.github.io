@@ -3,15 +3,15 @@ layout: page
 title: Different page sizes
 parent_title: Paging
 permalink: /paging/different-page-sizes.html
+modification_time: 2015-08-05T11:59:48+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.3)</p>
 <p>The page (sheet) size can be reset within the document.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The @page model used by CSS and supported by mPDF allows the size of a "page-box" to be set,&nbsp;assuming a constant size of the "sheet" on which it is being printed. To avoid confusion, the term "sheet size" is preferred for the physical dimensions of the page of the document.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The @page model used by CSS and supported by mPDF allows the size of a "page-box" to be set,&nbsp;assuming a constant size of the "sheet" on which it is being printed. To avoid confusion, the term "sheet size" is preferred for the physical dimensions of the page of the document.</div>
 <p>There are different ways to change sheet size:</p>
 <h3>1) Using CSS @page</h3>
 
@@ -69,6 +69,3 @@ h1.bigsection {
 <li>Cannot use @page { size: portrait | landscape; } at the same time as defining the sheet-size</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

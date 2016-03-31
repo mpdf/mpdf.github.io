@@ -3,16 +3,15 @@ layout: page
 title: WriteFixedPosHTML()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/writefixedposhtml.html
+modification_time: 2015-08-05T12:01:16+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.0)</p>
 <p>WriteFixedPosHTML — Write HTML to a fixed position on the current page</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>WriteFixedPosHTML</b> ( string <span class="parameter">$html</span> , float <span class="parameter">$x</span> , float <span class="parameter">$y</span> , float <span class="parameter">$w</span> , float <span class="parameter">$h</span> [, string <span class="parameter">$overflow</span> ])</div>
+<p class="manual_block">void <b>WriteFixedPosHTML</b> ( string <span class="parameter">$html</span> , float <span class="parameter">$x</span> , float <span class="parameter">$y</span> , float <span class="parameter">$w</span> , float <span class="parameter">$h</span> [, string <span class="parameter">$overflow</span> ])</p>
 <p>Write HTML to a fixed position on the current page.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">html</span></p>
@@ -49,7 +48,7 @@ auto: force text to be reduced in size if required to fit inside the dimensions 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -88,6 +87,3 @@ $mpdf=Output();
 
 </li>
 </ul>
-</div>
-</div>
-

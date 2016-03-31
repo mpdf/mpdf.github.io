@@ -3,14 +3,13 @@ layout: page
 title: Hyphenation
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/hyphenation.html
+modification_time: 2015-08-05T12:00:01+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
-<p>(mPDF &gt;= 2.5)</p>
 
-<div class="alert alert-info" role="alert">Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)</div>
+
+<p>(mPDF &gt;= 2.5)</p>
+<p class="manual_block">Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)</p>
 <p>The CSS property <span class="parameter">hyphens</span> is supported on block elements (e.g. &lt;div&gt;), inline elements (e.g. &lt;span&gt;) and &lt;td/th&gt;.
 
 hyphens: none | manual | auto 
@@ -40,7 +39,7 @@ hyphens: auto;
 {% endhighlight %}
 
 <p>Automatic hyphenation is based on the commonly used TeX algorithm and requires pattern files for each language. The following languages are supplied with mPDF 2.5:</p>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td><b>Language</b></td>
 <td><span class="parameter">$SHYlang</span></td>
@@ -88,7 +87,7 @@ hyphens: auto;
 </tbody> </table>
 <p>A pattern file for each language is found in the folder /patterns/ and the variable <span class="parameter">$SHYlanguages</span> needs to be updated in <span class="filename">config.php</span> if any additions are made.</p>
 <p>Pattern checking can be fine-tuned by 4 variables if required:</p>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>&nbsp;</td>
 <td>Default value</td>
@@ -148,6 +147,3 @@ $mpdf->Output();
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/shylang.html" | prepend: site.baseurl }}">SHYlang</a> - Specify the language to use for automatic hyphenation</li>
 </ul>
-</div>
-</div>
-

@@ -3,21 +3,20 @@ layout: page
 title: RestartDocTemplate()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/restartdoctemplate.html
+modification_time: 2015-08-05T12:00:51+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDFI &gt;= 2.4)</p>
 <p>RestartDocTemplate – Re-start the use of a Document template from the next page</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>RestartDocTemplate</b> ( )</div>
+<p class="manual_block">void <b>RestartDocTemplate</b> ( )</p>
 <p>Restart the use of a document template (set by <a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a>) from the next page.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">none</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -83,6 +82,3 @@ $mpdf->Output();
 </li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

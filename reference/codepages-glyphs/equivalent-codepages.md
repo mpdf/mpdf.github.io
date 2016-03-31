@@ -3,12 +3,12 @@ layout: page
 title: Equivalent codepages
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/equivalent-codepages.html
+modification_time: 2015-08-05T12:02:59+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
-<table class="bpmTopnTailC"> <thead>
+
+
+<table class="table"> <thead>
 <tr>
 <td>'Codepage'</td>
 <td>mb_encoding</td>
@@ -71,7 +71,7 @@ permalink: /reference/codepages-glyphs/equivalent-codepages.html
 <td>Korean</td>
 </tr>
 </tbody> </table>
-<table class="bpmTopnTailC"> </table>
+<table class="table"> </table>
 <h2>Equivalent encodings</h2>
 <p>The following list gives equivalent encodings (different names for the same encoding), one per line.</p>
 <ul>
@@ -142,6 +142,3 @@ permalink: /reference/codepages-glyphs/equivalent-codepages.html
 <p>&nbsp;</p>
 <p>From : <a href="http://www.datamystic.com/textpipe/htmlhelp/conversion%20filters/fromUnicode.htm">http://www.datamystic.com/textpipe/htmlhelp/conversion%20filters/fromUnicode.htm</a></p>
 <p>&nbsp;</p>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: Headers & Top margins
 parent_title: Headers & Footers
 permalink: /headers-footers/headers-top-margins.html
+modification_time: 2015-08-05T11:59:53+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.0)</p>
 <p>In standard usage, mPDF sets the following:</p>
 <ul>
@@ -33,6 +33,3 @@ The converse is true with <span class="parameter">$this-&gt;setAutoBottomMargin<
 <p>- Incompatible with CSS @paged media</p>
 <p>- Cannot set a new Footer when already further down the page than there is room needed for footer</p>
 <p>- Potential error if using {nbpg} to define page total in an HTML header or footer. The top/bottom margin is calculated by writing the HTML header using the current page no. If when the header is finally written, a page number total of e.g. 500 causes an extra line in the header/footer, this will not be allowed for.</p>
-</div>
-</div>
-

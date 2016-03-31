@@ -3,15 +3,14 @@ layout: page
 title: charset_in
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/charset-in.html
+modification_time: 2015-08-05T12:01:46+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">string <b>charset_in</b></div>
+<p class="manual_block">string <b>charset_in</b></p>
 <p>Defines the character encoding of any input HTML. Use it together with <span class="parameter">allow_charset_conversion</span> to manually set an input encoding.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">charset_in</span></p>
@@ -55,6 +54,3 @@ $mpdf->Output();
 </li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

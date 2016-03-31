@@ -3,11 +3,11 @@ layout: page
 title: Invoice
 parent_title: Real life examples
 permalink: /real-life-examples/invoice.html
+modification_time: 2015-08-05T12:00:24+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>This example will produce a tabulated Invoice with headers and footers. See the <a href="files/docs/example_invoice.pdf">result</a>.</p>
 
 {% highlight php %}
@@ -537,6 +537,3 @@ exit;
 {% endhighlight %}
 
 <p>&nbsp;</p>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: Overview
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/overview.html
+modification_time: 2015-08-05T12:01:32+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>mPDF Variables by Category</h2>
 <p>Most of the following variables are set as defaults in the configuration file config.php&nbsp; When set there, they are written as e.g.:</p>
 
@@ -25,7 +25,7 @@ $this->variablename = true;
 $mpdf->variablename = true;
 {% endhighlight %}
 
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr>
 <td>Category</td>
 <td>Variable</td>
@@ -1265,6 +1265,3 @@ Colorspaces
 </tr>
 </tbody> </table>
 <p>[1] Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of the document. All others can be changed during the course of creating the document.</p>
-</div>
-</div>
-

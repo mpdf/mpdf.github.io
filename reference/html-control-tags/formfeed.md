@@ -3,24 +3,23 @@ layout: page
 title: formfeed
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/formfeed.html
+modification_time: 2015-08-05T12:01:22+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3)</p>
 <p>formfeed — Add a new page keeping current HTML tags/CSS styles active</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt;<b>formfeed</b> [&nbsp;<span class="parameter">orientation</span> ] [&nbsp;<span class="parameter">type</span> ] [&nbsp;<span class="parameter">resetpagenum</span> ] [&nbsp;<span class="parameter">pagenumstyle</span> ] [&nbsp;<span class="parameter">suppress</span> ] 
+<p class="manual_block">&lt;<b>formfeed</b> [&nbsp;<span class="parameter">orientation</span> ] [&nbsp;<span class="parameter">type</span> ] [&nbsp;<span class="parameter">resetpagenum</span> ] [&nbsp;<span class="parameter">pagenumstyle</span> ] [&nbsp;<span class="parameter">suppress</span> ] 
 
 [ <span class="parameter">margin-left</span> ] [ <span class="parameter">margin-right</span> ] [ <span class="parameter">margin-top</span> ] [ <span class="parameter">margin-bottom</span> ] [ <span class="parameter">margin-header</span> ] [ <span class="parameter">margin-footer</span> ]
 
-[ <span class="parameter">odd-header-name</span> ] [ <span class="parameter">odd-header-value</span> ] [ <span class="parameter">even-header-name</span> ] [ <span class="parameter">even-header-value</span> ] [ <span class="parameter">odd-footer-name</span> ] [ <span class="parameter">odd-footer-value</span> ] [ <span class="parameter">even-footer-name</span> ] [ <span class="parameter">even-footer-value</span> ] [ <span class="parameter">page-selector</span> ] /&gt;</div>
+[ <span class="parameter">odd-header-name</span> ] [ <span class="parameter">odd-header-value</span> ] [ <span class="parameter">even-header-name</span> ] [ <span class="parameter">even-header-value</span> ] [ <span class="parameter">odd-footer-name</span> ] [ <span class="parameter">odd-footer-value</span> ] [ <span class="parameter">even-footer-name</span> ] [ <span class="parameter">even-footer-value</span> ] [ <span class="parameter">page-selector</span> ] /&gt;</p>
 <p>Add a new page to the document. The attributes are the same as for &lt;pagebreak&gt;, but whereas pagebreak by default closes any open HTML tags, and does not continue CSS styles after the pagebreak, formfeed reinstates the active properties and styles on the new page.</p>
 <p>The attribute <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional formfeed (<span class="parameter">type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a formfeed with <span class="parameter">type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).</p>
 <p>Number of pages added:</p>
-<table class="bpmTopicC"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -69,10 +68,9 @@ permalink: /reference/html-control-tags/formfeed.html
 <td>2</td>
 </tr>
 </tbody> </table>
+<p class="manual_block"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</p>
 
-<div class="alert alert-info" role="alert"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
-
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">orientation</span> = L|P|landscape|portrait</p>
 <p class="manual_param_dd">This attribute specifies the orientation of the new page.
@@ -157,7 +155,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted leaves the header/footer unchanged. NB "" will not unset the header. Use <span class="parameter">odd-header-value</span> to turn the header off.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
 <p class="manual_param_dt"><span class="parameter">odd-header-value</span>
 
 <span class="parameter">even-header-</span><span class="parameter">value</span>
@@ -185,7 +183,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 </h2>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -222,14 +220,10 @@ This text will start on a new page, and will also have a blue border etc...</div
 {% endhighlight %}
 
 <h2>Notes</h2>
-
-<div class="alert alert-info" role="alert"><b>Note</b>: See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for further examples using the attributes. There is no PHP equivalent of &lt;formfeed&gt; but you can use <a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}"><span class="parameter">$restoreBlockPagebreaks</span></a></div>
+<p class="manual_block"><b>Note</b>: See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for further examples using the attributes. There is no PHP equivalent of &lt;formfeed&gt; but you can use <a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}"><span class="parameter">$restoreBlockPagebreaks</span></a></p>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add one or more (conditional) pages to the document</li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Forces a new page</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}">restoreBlockPagebreaks</a> - forces &lt;pagebreak&gt; to act in the same way as &lt;formfeed&gt;</li>
 </ul>
-</div>
-</div>
-

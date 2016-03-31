@@ -3,11 +3,11 @@ layout: page
 title: E-mail a PDF file
 parent_title: Real life examples
 permalink: /real-life-examples/e-mail-a-pdf-file.html
+modification_time: 2015-08-05T12:00:26+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>This example shows how to create a PDF file and e-mail it:</p>
 
 {% highlight php %}
@@ -132,7 +132,4 @@ exit;
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Submitted by a user. See <a href="http://www.mpdf1.com/mpdf/forum/comments.php?DiscussionID=663&amp;page=1#Item_5">message</a> in the Forum.</div>
-</div>
-</div>
-
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Submitted by a user. See <a href="http://www.mpdf1.com/mpdf/forum/comments.php?DiscussionID=663&amp;page=1#Item_5">message</a> in the Forum.</div>

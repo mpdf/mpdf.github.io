@@ -3,13 +3,13 @@ layout: page
 title: Available fonts v6
 parent_title: Fonts & Languages
 permalink: /fonts-languages/available-fonts-v6.html
+modification_time: 2015-08-05T11:59:29+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The following fonts are included with mPDF 6:</p>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr>
 <td>Font(s)</td>
 <td>Download URL</td>
@@ -338,7 +338,7 @@ No licence information available</td>
 </tr>
 </tbody> </table>
 <p>The following font names can also be used with mPDF:</p>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td colspan="2">
 <h3>Adobe Asian font-pack</h3>
@@ -381,6 +381,3 @@ No licence information available</td>
 </td>
 </tr>
 </tbody> </table>
-</div>
-</div>
-

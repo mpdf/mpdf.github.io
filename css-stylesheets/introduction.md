@@ -3,11 +3,11 @@ layout: page
 title: Introduction
 parent_title: CSS & Stylesheets
 permalink: /css-stylesheets/introduction.html
+modification_time: 2015-08-05T11:59:56+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Default CSS styles are defined in <span class="filename">config.php</span> file (as <code>var $default_CSS</code>) which is based on the recommended default values for HTML4 - <a href="http://www.w3.org/TR/CSS21/sample.html">http://www.w3.org/TR/CSS21/sample.html</a> The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.</p>
 <p>The following are supported (in order of ascending priority - lower ones in list overwrite higher):</p>
 <ul>
@@ -21,8 +21,7 @@ permalink: /css-stylesheets/introduction.html
 </li>
 <li>In-line CSS style e.g. &lt;p style="font-family:monospace;"&gt;</li>
 </ul>
-
-<div class="alert alert-info" role="alert">Note: Prior to mPDF 5.x HTML attributes overrode CSS styles.</div>
+<p class="manual_block">Note: Prior to mPDF 5.x HTML attributes overrode CSS styles.</p>
 <p>CSS attributes, used in stylesheets or in-line, can define:</p>
 <ul>
 <li>most tags/elements e.g. div, p, body, table, span</li>
@@ -83,6 +82,3 @@ $mpdf->WriteHTML($html,2);
 {% endhighlight %}
 
 <p>By default mPDF will match stylesheets set for "print" or "all" media. This can be changed by the configurable variable <a href="{{ "/reference/mpdf-variables/cssselectmedia.html" | prepend: site.baseurl }}">CSSselectMedia</a>.</p>
-</div>
-</div>
-

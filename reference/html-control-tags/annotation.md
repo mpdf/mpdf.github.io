@@ -3,23 +3,20 @@ layout: page
 title: annotation
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/annotation.html
+modification_time: 2015-08-05T12:01:19+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.2)</p>
 <p>annotation – Add an Annotation to the document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt;<b>annotation</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">pos-x</span> ] [ <span class="parameter">pos-y</span> ] [ <span class="parameter">icon</span> ] [ <span class="parameter">author</span> ] [ <span class="parameter">subject</span> ] [ <span class="parameter">opacity</span> ] [ <span class="parameter">color</span> ] [ <span class="parameter">popup</span> ] [ <span class="parameter">file</span> ] /&gt;</div>
+<p class="manual_block">&lt;<b>annotation</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">pos-x</span> ] [ <span class="parameter">pos-y</span> ] [ <span class="parameter">icon</span> ] [ <span class="parameter">author</span> ] [ <span class="parameter">subject</span> ] [ <span class="parameter">opacity</span> ] [ <span class="parameter">color</span> ] [ <span class="parameter">popup</span> ] [ <span class="parameter">file</span> ] /&gt;</p>
 <p>Adds an Annotation to the document. An annotation is like a Tooltip on a webpage. The Annotation marker, like those of "Sticky Notes" in Adobe Reader. When the reader passes the cursor over, it will display a popup text box.</p>
 <p>The exact position on the page can be specified using <span class="parameter">x</span> and <span class="parameter">y</span>, or left to position automatically. If <span class="parameter">x</span> and <span class="parameter">y</span> are not specified, the Annotation will be inserted at the current position of writing in the document. The <span class="parameter">x</span> position (horizontal) can be overridden by the variable <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a>, which can be used to force the Annotation marker to display in the right margin.</p>
 <p>The attribute <span class="parameter">file</span> can be used to specify a file (any type) which is to be embedded inside the PDF document.</p>
-
-<div class="alert alert-info" role="alert"><b>Note: </b>All text to do with an annotation (text, author, subject) is rendered with the system font and can therefore contain any Unicode character even if the document font restricts to a specific codepage.</div>
-
-<div class="alert alert-info" role="alert">Annotations cannot be moved or deleted by the reader.</div>
+<p class="manual_block"><b>Note: </b>All text to do with an annotation (text, author, subject) is rendered with the system font and can therefore contain any Unicode character even if the document font restricts to a specific codepage.</p>
+<p class="manual_block">Annotations cannot be moved or deleted by the reader.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">content</span></p>
 <p class="manual_param_dd">This parameter specifies the text to appear in the popup text box.
@@ -57,7 +54,7 @@ Paragraph
 
 <span class="smallblock">DEFAULT:</span> Note</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The default is "Comment" when using Annotations from HTML markup &lt;span title=""&gt; when <a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a> is <span class="smallblock">TRUE</span></div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The default is "Comment" when using Annotations from HTML markup &lt;span title=""&gt; when <a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a> is <span class="smallblock">TRUE</span></div>
 <p class="manual_param_dt"><span class="parameter">author</span></p>
 <p class="manual_param_dd">This specifies the name of the Author which will appear at the top of the popup text box.
 
@@ -103,7 +100,7 @@ Note that the PDF Reader (e.g. Adobe Reader) may reposition the popup box as it 
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -179,6 +176,3 @@ $mpdf->Output();
 </b></li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a> - Convert all HTML element <span class="parameter">title</span> attributes to Annotations</li>
 </ul>
-</div>
-</div>
-

@@ -3,16 +3,15 @@ layout: page
 title: InsertIndex()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/insertindex.html
+modification_time: 2015-08-05T12:00:49+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 6.0)</p>
 <p>InsertIndex — Generate an Index for the document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>InsertIndex</b> ([ int <span class="parameter">$usedivletters</span> [,&nbsp;boolean <span class="parameter">$uselinking</span> [, string <span class="parameter">$indexCollationLocale</span> [, string <span class="parameter">$indexCollationGroup</span> ]]]])</div>
+<p class="manual_block">void <b>InsertIndex</b> ([ int <span class="parameter">$usedivletters</span> [,&nbsp;boolean <span class="parameter">$uselinking</span> [, string <span class="parameter">$indexCollationLocale</span> [, string <span class="parameter">$indexCollationGroup</span> ]]]])</p>
 <p>Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>.</p>
 <h2>Parameters</h2>
 <p><span class="parameter">usedivletters</span></p>
@@ -45,7 +44,7 @@ NB This will not affect the overall order of entries, which is determined by the
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted - grouping occurs under the first letter of the index entries.</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -59,6 +58,3 @@ NB This will not affect the overall order of entries, which is determined by the
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a></li>
 </ul>
-</div>
-</div>
-

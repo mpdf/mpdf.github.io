@@ -3,21 +3,20 @@ layout: page
 title: CreateReference()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/createreference.html
+modification_time: 2015-08-05T12:00:44+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>CreateRefence — Generate an Index - DEPRACATED / Removed in mPDF v6.0</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>CreateReference</b> ( )</div>
+<p class="manual_block">void <b>CreateReference</b> ( )</p>
 <p>&nbsp;</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> <b>CreateReference()</b> is now depracated in favour of the better-named <a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a>.&nbsp;</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> <b>CreateReference()</b> is now depracated in favour of the better-named <a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a>.&nbsp;</div>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -35,6 +34,3 @@ permalink: /reference/mpdf-functions/createreference.html
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a> - Generate an Index</li>
 </ul>
-</div>
-</div>
-

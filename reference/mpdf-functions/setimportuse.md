@@ -3,21 +3,20 @@ layout: page
 title: SetImportUse()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setimportuse.html
+modification_time: 2015-08-05T12:01:06+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.3)</p>
 <p>SetImportUse – Enable the use of imported PDF files or templates</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetImportUse</b> ( )</div>
+<p class="manual_block">void <b>SetImportUse</b> ( )</p>
 <p>Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several functions allowing you to import PDF files into the document you are writing, and using templates.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use SetImportUse() to enable them.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use SetImportUse() to enable them.</div>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -62,6 +61,3 @@ $mpdf->Output();
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

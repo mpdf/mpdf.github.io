@@ -3,19 +3,18 @@ layout: page
 title: AddPageByArray()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/addpagebyarray.html
+modification_time: 2015-08-05T12:00:39+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.0)</p>
 <p>AddPageByArray — Add a new page using an array of parameters</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>AddPageByArray</b> ([ array <span class="parameter">$arr</span> ])</div>
+<p class="manual_block">void <b>AddPageByArray</b> ([ array <span class="parameter">$arr</span> ])</p>
 <p>Add a new page to the document using an array of parameters which are all optional. The parameter <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional page-break (<span class="parameter">type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a page-break with <span class="parameter">type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).</p>
 <p>Number of pages added:</p>
-<table class="bpmTopicC"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -65,12 +64,11 @@ permalink: /reference/mpdf-functions/addpagebyarray.html
 </tr>
 </tbody> </table>
 <p>&nbsp;</p>
+<p class="manual_block"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</p>
 
-<div class="alert alert-info" role="alert"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
-
-<div class="alert alert-info" role="alert"><b>Note:</b> The description below uses the same parameter names as used in AddPage(), but these were not recognised in mPDF &lt; 5.4&nbsp; The examples use different parameter names. From mPDF &gt;=5.4 both are supported. See below for a list of alternatives.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The description below uses the same parameter names as used in AddPage(), but these were not recognised in mPDF &lt; 5.4&nbsp; The examples use different parameter names. From mPDF &gt;=5.4 both are supported. See below for a list of alternatives.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">orientation</span> = L|P</p>
 <p class="manual_param_dd">This attribute specifies the orientation of the new page.
@@ -157,7 +155,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted leaves the header/footer unchanged. NB <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">odd-header-value</span> to -1 to turn the header off.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
 <p class="manual_param_dt"><span class="parameter">odd-header-value</span>
 
 <span class="parameter">even-header-</span><span class="parameter">value</span>
@@ -207,7 +205,7 @@ B (Type B paperback 128x198mm)</p>
 </ul>
 <p>&nbsp;</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -222,7 +220,7 @@ B (Type B paperback 128x198mm)</p>
 </tr>
 </tbody> </table>
 <h2>Alternative parameter names</h2>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>type</td>
 <td>condition</td>
@@ -518,11 +516,8 @@ $mpdf=Output();
 
 <h2>Notes</h2>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Unlike FPDF <b>AddPage()</b> or <b>AddPageByArray()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Unlike FPDF <b>AddPage()</b> or <b>AddPageByArray()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to <b>AddPage()</b> or <b>AddPageByArray()</b></li>
 </ul>
-</div>
-</div>
-

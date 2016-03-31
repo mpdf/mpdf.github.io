@@ -3,11 +3,11 @@ layout: page
 title: debugfonts
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/debugfonts.html
+modification_time: 2015-08-05T12:01:50+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <div>
 <div>
 <p>mPDF &gt;= 5.0</p>
@@ -17,6 +17,3 @@ permalink: /reference/mpdf-variables/debugfonts.html
 <p>Values: true|false</p>
 </div>
 </div>
-</div>
-</div>
-

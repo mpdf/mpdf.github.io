@@ -3,19 +3,18 @@ layout: page
 title: Bookmark()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/bookmark.html
+modification_time: 2015-08-05T12:00:42+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>Bookmark – Add a Bookmark to the document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>Bookmark</b> ( string <span class="parameter">$content</span> [, int <span class="parameter">$level</span> [, float <span class="parameter">$y</span> ]])</div>
+<p class="manual_block">void <b>Bookmark</b> ( string <span class="parameter">$content</span> [, int <span class="parameter">$level</span> [, float <span class="parameter">$y</span> ]])</p>
 <p>Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">content</span></p>
 <p class="manual_param_dd">Specifies the text to appear as a Bookmark.
@@ -99,14 +98,10 @@ This will produce a Bookmark tree in Adobe Reader:
 {% endhighlight %}
 
 <h2>Notes</h2>
-
-<div class="alert alert-info" role="alert"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>.</div>
+<p class="manual_block"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>.</p>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/bookmark.html" | prepend: site.baseurl }}">bookmark</a>&gt; - Custom HTML tag - equivalent to Bookmark()
 
 </li>
 </ul>
-</div>
-</div>
-

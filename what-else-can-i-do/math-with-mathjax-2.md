@@ -3,15 +3,14 @@ layout: page
 title: Math with MathJax 2
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/math-with-mathjax-2.html
+modification_time: 2015-08-05T12:00:23+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This is an alternative method to the one in <a href="{{ "/what-else-can-i-do/math-formulae-with-mathjax.html" | prepend: site.baseurl }}">Math Formulae with MathJax</a></div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This version has an updated script which should work in all browsers.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This is an alternative method to the one in <a href="{{ "/what-else-can-i-do/math-formulae-with-mathjax.html" | prepend: site.baseurl }}">Math Formulae with MathJax</a></div>
+
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This version has an updated script which should work in all browsers.</div>
 <p>
 
 1) Adapt the page in which you are testing/writing the Math formulae</p>
@@ -193,6 +192,3 @@ exit;
 {% endhighlight %}
 
 <p>See an example: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a></p>
-</div>
-</div>
-

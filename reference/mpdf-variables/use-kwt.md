@@ -3,11 +3,11 @@ layout: page
 title: use_kwt
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/use-kwt.html
+modification_time: 2015-08-05T12:02:34+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF &gt;= 2.0</p>
 <p>Keep with table</p>
 <p>Default false</p>
@@ -16,6 +16,3 @@ permalink: /reference/mpdf-variables/use-kwt.html
 <p>Can be used together with &lt;table style="page-break-inside: avoid;"&gt;</p>
 <p>Automatically sets the table to fit on one page (i.e. page-break-inside=avoid) if it is a rotated table.</p>
 <p>Ignored if: Heading is longer than one line of text on the page, Columns are on, Keep-block-together active (i.e. page-break-inside=avoid for surrounding BLOCK).</p>
-</div>
-</div>
-

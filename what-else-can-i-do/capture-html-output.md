@@ -3,11 +3,11 @@ layout: page
 title: Capture HTML output
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/capture-html-output.html
+modification_time: 2015-08-05T12:00:21+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>One way of outputting a webpage to mPDF without re-writing your scripts too much, is to buffer the output:</p>
 
 {% highlight php %}
@@ -37,7 +37,4 @@ $mpdf->Output();
 
 exit;
 {% endhighlight %}
-
-</div>
-</div>
 

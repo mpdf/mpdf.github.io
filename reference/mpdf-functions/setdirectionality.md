@@ -3,16 +3,15 @@ layout: page
 title: SetDirectionality()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setdirectionality.html
+modification_time: 2015-08-05T12:00:59+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetDirectionality – Set the document RTL state</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetDirectionality</b> ( string <span class="parameter">$dir</span> )</div>
+<p class="manual_block">void <b>SetDirectionality</b> ( string <span class="parameter">$dir</span> )</p>
 <p>Set the document RTL state. This defines the default alignment of tables, columns, text justification, page layout etc. See <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional Text</a> for more details. If SetDirectionality('rtl') is set, <i>Text Bidirectionality</i> is automatically turned on.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">dir</span></p>
@@ -47,7 +46,4 @@ $mpdf->Output();
 
 ?>
 {% endhighlight %}
-
-</div>
-</div>
 

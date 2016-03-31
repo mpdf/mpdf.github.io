@@ -3,11 +3,11 @@ layout: page
 title: Auto-layout algorithm
 parent_title: Tables
 permalink: /tables/auto-layout-algorithm.html
+modification_time: 2015-08-05T11:59:44+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>Algorithm used for autosizing tables</h2>
 <h3>For non-rotated tables</h3>
 <ol>
@@ -63,6 +63,3 @@ This disregards the value of autosize.
 <p>&lt;table style="overflow: auto | hidden | visible | wrap"&gt;</p>
 <p>auto is the default, described above.</p>
 <p>&nbsp;</p>
-</div>
-</div>
-

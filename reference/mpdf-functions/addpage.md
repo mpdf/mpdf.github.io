@@ -3,21 +3,20 @@ layout: page
 title: AddPage()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/addpage.html
+modification_time: 2015-08-05T12:00:38+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>AddPage — Add a new page</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> A new function <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a> was added in mPDF 5.0 which is recommended as much simpler to use.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> A new function <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a> was added in mPDF 5.0 which is recommended as much simpler to use.</div>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>AddPage</b> ([ string <span class="parameter">$orientation</span> [, string <span class="parameter">$type</span> [, string <span class="parameter">$resetpagenum</span> [, string <span class="parameter">$pagenumstyle</span> [, string <span class="parameter">$suppress</span> [, float <span class="parameter">$margin-left</span> [, float <span class="parameter">$margin-right</span> [, float $<span class="parameter">margin-top</span> [, float $<span class="parameter">margin-bottom</span> [, float $<span class="parameter">margin-header</span> [, float <span class="parameter">$margin-footer</span> [, string <span class="parameter">$odd-header-name</span> [, string <span class="parameter">$even-header-name</span> [, string $<span class="parameter">odd-footer-name</span> [, string $<span class="parameter">even-footer-name</span> [, mixed $<span class="parameter">odd-header-value</span> [, mixed <span class="parameter">$even-header-value</span> [, mixed <span class="parameter">$odd-footer-value</span> [, mixed $<span class="parameter">even-footer-value</span> [, string <span class="parameter">$pageselector</span> [, mixed <span class="parameter">$sheet-size</span> ]]]]]]]]]]]]]]]]]]]]])</div>
+<p class="manual_block">void <b>AddPage</b> ([ string <span class="parameter">$orientation</span> [, string <span class="parameter">$type</span> [, string <span class="parameter">$resetpagenum</span> [, string <span class="parameter">$pagenumstyle</span> [, string <span class="parameter">$suppress</span> [, float <span class="parameter">$margin-left</span> [, float <span class="parameter">$margin-right</span> [, float $<span class="parameter">margin-top</span> [, float $<span class="parameter">margin-bottom</span> [, float $<span class="parameter">margin-header</span> [, float <span class="parameter">$margin-footer</span> [, string <span class="parameter">$odd-header-name</span> [, string <span class="parameter">$even-header-name</span> [, string $<span class="parameter">odd-footer-name</span> [, string $<span class="parameter">even-footer-name</span> [, mixed $<span class="parameter">odd-header-value</span> [, mixed <span class="parameter">$even-header-value</span> [, mixed <span class="parameter">$odd-footer-value</span> [, mixed $<span class="parameter">even-footer-value</span> [, string <span class="parameter">$pageselector</span> [, mixed <span class="parameter">$sheet-size</span> ]]]]]]]]]]]]]]]]]]]]])</p>
 <p>Add a new page to the document. The parameter <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional page-break (<span class="parameter">type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a page-break with <span class="parameter">type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).</p>
 <p>Number of pages added:</p>
-<table class="bpmTopicC"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -67,10 +66,9 @@ permalink: /reference/mpdf-functions/addpage.html
 </tr>
 </tbody> </table>
 <p>&nbsp;</p>
+<p class="manual_block"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</p>
 
-<div class="alert alert-info" role="alert"><b>Note: </b>If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
-
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">orientation</span> = L|P</p>
 <ul> </li>
@@ -165,7 +163,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted leaves the header/footer unchanged. NB <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">odd-header-value</span> to -1 to turn the header off.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
 <p class="manual_param_dt"><span class="parameter">odd-header-value</span>
 
 <span class="parameter">even-header-</span><span class="parameter">value</span>
@@ -213,7 +211,7 @@ B (Type B paperback 128x198mm)</p>
 - explicitly define the <span class="parameter">orientation</span> as L or P</p>
 <p>&nbsp;</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -359,13 +357,9 @@ $mpdf->WriteHTML('End section of book with no headers');
 
 <h2>Notes</h2>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Unlike FPDF <b>AddPage()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
-
-<div class="alert alert-info" role="alert"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of both <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Unlike FPDF <b>AddPage()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
+<p class="manual_block"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of both <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</p>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to <b>AddPage()</b> </li>
 </ul>
-</div>
-</div>
-

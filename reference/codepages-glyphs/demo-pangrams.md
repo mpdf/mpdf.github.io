@@ -3,11 +3,11 @@ layout: page
 title: Demo - Pangrams
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/demo-pangrams.html
+modification_time: 2015-08-05T12:02:54+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Pangrams - (from Wikipedia)&nbsp;</p>
 <h3>English</h3>
 <p>The quick brown fox jumps over a lazy dog</p>
@@ -116,6 +116,3 @@ permalink: /reference/codepages-glyphs/demo-pangrams.html
 <p>Чуєш їх, доцю, га? Кумедна ж ти, прощайся без ґольфів!</p>
 <p>Жебракують філософи при ґанку церкви в Гадячі, ще й шатро їхнє п'яне знаємо.</p>
 <p>&nbsp;</p>
-</div>
-</div>
-

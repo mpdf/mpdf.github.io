@@ -3,19 +3,18 @@ layout: page
 title: normalLineheight
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/normallineheight.html
+modification_time: 2015-08-05T12:02:16+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.2)</p>
 <p>normalLineheight – Define the default line-height</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>normalLineheight</b></div>
+<p class="manual_block">void <b>normalLineheight</b></p>
 <p>This variable defines the default line-height used when the CSS property line-height is set to normal (default).</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF v 6.0 onwards, this value will only be used when the variable <code>useFixedNormalLineHeight</code> is set to <span class="smallblock">TRUE</span></div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF v 6.0 onwards, this value will only be used when the variable <code>useFixedNormalLineHeight</code> is set to <span class="smallblock">TRUE</span></div>
 <p>For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a>.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">normalLineheight</span></p>
@@ -25,7 +24,7 @@ permalink: /reference/mpdf-variables/normallineheight.html
 
 <span class="smallblock">DEFAULT</span>: 1.33</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -41,6 +40,3 @@ permalink: /reference/mpdf-variables/normallineheight.html
 <li><a href="http://typophile.com/node/13081">http://typophile.com/node/13081</a></li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

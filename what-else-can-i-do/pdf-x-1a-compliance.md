@@ -3,17 +3,16 @@ layout: page
 title: PDF/X-1a compliance
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/pdf-x-1a-compliance.html
+modification_time: 2015-08-05T12:00:20+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.1)</p>
 <p>PDF/X-1a is a file format to facilitate printing of electronic documents.</p>
 <p>Two key elements to this function are the requirement for PDF/X documents to be 100% self-contained, and all images need to be CMYK or spot colors.</p>
 <p>A PDF/X document can be identified as such through PDF/X-specific metadata located in the document. However, claiming to be PDF/X compliant and being so are not necessarily the same.</p>
-
-<div class="alert alert-info" role="alert"><b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/X-1a compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.</div>
+<p class="manual_block"><b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/X-1a compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.</p>
 <h2>mPDF and PDF/X-1a compliance</h2>
 <p>You can make mPDF produce mPDF/X-1a:2003 compliant files by setting:</p>
 
@@ -82,7 +81,7 @@ $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to fo
 
 <p>&nbsp;</p>
 <p>The following issues will cause a warning message when you try to generate a PDFX file:</p>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr>
 <td>Problem detected</td>
 <td>Action taken by mPDF</td>
@@ -144,6 +143,3 @@ $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to fo
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
 </ul>
-</div>
-</div>
-

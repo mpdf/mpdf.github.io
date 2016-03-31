@@ -3,11 +3,11 @@ layout: page
 title: Line-height
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/line-height.html
+modification_time: 2015-08-05T12:00:05+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The line-height of text can be controlled using the CSS property <code>line-height</code> (since mPDF 4). This used a fixed value for the line-height when <code>normal</code> was specified (the default CSS value) -&nbsp; set by the configurable variable <code>normalLineheight</code>. It also used a fixed proportion to determine the position of the text baseline (non-configurable).</p>
 <p>Form mPDF 6, you can (optionally) use font metrics derived from each font file to:</p>
 <ul>
@@ -98,6 +98,3 @@ $this->normalLineheight = 1.33;
 <p>Remember that line-height for a TABLE has a default value (1.2) set in the <code>config.php defaultCSS</code>. This is left in for backwards compatability. You can change this value to 'normal' for results consistent with most browsers.</p>
 <p>Line-height in a &lt;textarea&gt; is fixed and defined in <code>classes/mpdfform.php</code> (= 1.2)</p>
 <p>Details of the font metrics can be seen by inspecting the temporary font files e.g. <code>/ttfontdata/[fontname].mtx.php</code>.</p>
-</div>
-</div>
-

@@ -3,11 +3,11 @@ layout: page
 title: Forms
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/forms.html
+modification_time: 2015-08-05T12:00:13+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF can generate a static view of HTML forms and their elements, or (from mPDF &gt;=5.3) can produce an "Active Form".</p>
 <h2>"Active" Forms</h2>
 <p>Active forms can be generated which can either be printed, or the data submitted to a URI. The variable <code>$this-&gt;useActiveForms</code> should be set to <span class="smallblock">TRUE</span> either at run-time or in <span class="filename">config.php</span></p>
@@ -50,7 +50,7 @@ permalink: /what-else-can-i-do/forms.html
 <p>Javascript can be set for buttons using <code>onClick=""</code> but note this uses "Acrobat" Javascript. (You can download the Acrobat Javascript reference manual from the Adobe Developer's site).</p>
 <p>For select, text and textarea you can use <code>onChange=""</code> which is triggered after the value has been changed.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF &gt;= 5.4, &lt;textarea&gt; and &lt;input type="text"&gt; will accept javascript as: <code>onKeystroke</code>, <code>onValidate</code>, <code>onCalculate</code> and <code>onFormat</code>.
+<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 5.4, &lt;textarea&gt; and &lt;input type="text"&gt; will accept javascript as: <code>onKeystroke</code>, <code>onValidate</code>, <code>onCalculate</code> and <code>onFormat</code>.
 
 <code>onChange</code> is depracated but works as <code>onCalculate</code> (for &lt;textarea&gt; and &lt;input&gt;).
 
@@ -60,6 +60,3 @@ Select still accepts <code>onChange</code>.</div>
 <p>Adobe Reader 10 largely ignores any control one tries to place on the appearance of some form fields, and does it's own thing. In general, the <code>font-size</code> set for the form field will determine its size, and for text/textarea and select fields, <code>color</code> will determine the font colour used. CSS values for <code>border-color</code> or <code>background-color</code> will work for (non-image) buttons, textarea and text fields. Other things like the border style and width can be altered by configurable variables in <span class="filename"><code>config.php</code></span> but the level of control is disappointing.</p>
 <p>Radio buttons and check-boxes use Adobe Reader's own icons, but Foxit uses information provided by the PDF file. The variable <code>$this-&gt;formUseZapD</code> determines whether ZapfDingbat symbols are used, or mPDF's appearance streams designed to mimic Adobe Reader's appearance.</p>
 <p>Some components of interactive forms may be output in RGB colorspace even if you have specified <code>restrictColorSpace</code>. Since restricted colorSpace is mainly used for PDFA/PDFX files - which cannot contain active form fields anyway - this shouldn't matter.</p>
-</div>
-</div>
-

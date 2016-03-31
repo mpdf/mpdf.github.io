@@ -3,14 +3,14 @@ layout: page
 title: Symbols (Adobe)
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/symbols-adobe.html
+modification_time: 2015-08-05T12:02:49+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>Symbols</h2>
 <p>&nbsp;</p>
-<table class="bpmClearC"><tbody>
+<table class="table"><tbody>
 <tr>
 <td>&nbsp;</td>
 <td>!</td>
@@ -214,6 +214,3 @@ permalink: /reference/codepages-glyphs/symbols-adobe.html
 </tbody></table>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-</div>
-</div>
-

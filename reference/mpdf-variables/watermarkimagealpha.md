@@ -3,15 +3,14 @@ layout: page
 title: watermarkImageAlpha
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/watermarkimagealpha.html
+modification_time: 2015-08-05T12:02:40+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.2)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">string <b>watermarkTextAlpha</b></div>
+<p class="manual_block">string <b>watermarkTextAlpha</b></p>
 <p>Specifies the transparency (alpha value) to use for the watermark text on each page.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">watermarkTextAlpha</span></p>
@@ -54,6 +53,3 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> - Specifies whether or not to show/print the watermark image</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermark-font.html" | prepend: site.baseurl }}">watermark_font</a> - Specifies the font to use for Watermark text</li>
 </ul>
-</div>
-</div>
-

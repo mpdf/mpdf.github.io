@@ -3,11 +3,11 @@ layout: page
 title: Licence
 parent_title: About mPDF
 permalink: /about-mpdf/licence.html
+modification_time: 2015-08-05T11:59:22+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>License: GPL</p>
 <p>A PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support</p>
 <p>Copyright (C) 2010 Ian Back</p>
@@ -24,6 +24,3 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 
 GNU General Public License for more details.</p>
 <p>[<a href="http://www.opensource.org/licenses/gpl-license.php">http://www.opensource.org/licenses/gpl-license.php</a>]</p>
-</div>
-</div>
-

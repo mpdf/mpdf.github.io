@@ -3,13 +3,12 @@ layout: page
 title: OpenType layout (OTL)
 parent_title: Fonts & Languages
 permalink: /fonts-languages/opentype-layout-otl.html
+modification_time: 2015-08-05T11:59:27+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
 
-<div class="alert alert-info" role="alert">OpenType layout features were introduced in mPDF &gt;= 6.0</div>
+
+<p class="manual_block">OpenType layout features were introduced in mPDF &gt;= 6.0</p>
 <h2>Advanced Typography</h2>
 <p>Many TrueType fonts contain OpenType Layout (OTL) tables. These Advanced Typographic tables contain additional information that extend the capabilities of the fonts to support high-quality international typography:</p>
 <ul>
@@ -29,7 +28,7 @@ permalink: /fonts-languages/opentype-layout-otl.html
 <li>separate algorithm for Tibetan line-breaking</li>
 </ul>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> There are other smart-font technologies around to deal with complex scripts, namely Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> There are other smart-font technologies around to deal with complex scripts, namely Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.</div>
 <h2>What can OTL Fonts do?</h2>
 <p>Support for OTL fonts allows the faithful display of almost all complex scripts:</p>
 <ul>
@@ -152,7 +151,7 @@ font-feature-settings: "ss07";
 
 <h3>useOTL</h3>
 <p>useOTL should be set to an integer between 0 and 255. Each bit will enable OTL features for a different group of scripts:</p>
-<table class="bpmTopic"> <tbody>
+<table class="table"> <tbody>
 <tr>
 <td>Bit</td>
 <td>dec</td>
@@ -269,7 +268,4 @@ font-feature-settings: "ss07";
 
 $mpdf->fonttrans['freeserif'] = 'freeserif2';
 {% endhighlight %}
-
-</div>
-</div>
 

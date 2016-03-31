@@ -3,15 +3,14 @@ layout: page
 title: Default stylesheet
 parent_title: CSS & Stylesheets
 permalink: /css-stylesheets/default-stylesheet.html
+modification_time: 2015-08-05T11:59:57+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF uses a default "stylesheet" for default settings of style and layout; this is in <span class="filename">config.php</span> as a variable <span class="parameter">$defaultCSS</span>.</p>
 <p>mPDF ( &gt;= 2.2) will load an optional file <span class="filename">mpdf.css</span> (located in the same directory as <span class="filename">mpdf.php</span>) which can be edited to change your default styles for PDF files.</p>
-
-<div class="alert alert-info" role="alert"><b>mPDF &gt;= 6.0</b> A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following text describes behaviour prior to mPDF v6.0)</div>
+<p class="manual_block"><b>mPDF &gt;= 6.0</b> A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following text describes behaviour prior to mPDF v6.0)</p>
 <p>The file should be a valid CSS stylesheet, but will only support changing properties at element level i.e. P, DIV, TABLE, TD and not P.classname.</p>
 <p>The mpdf.css file supplied is inactive as it has all the entries commented out by /* ... */</p>
 <p>The following values will restore behaviour of pre-4.2 versions to 4.2:</p>
@@ -201,7 +200,4 @@ var $defaultCSS2 = array(
 
 );
 {% endhighlight %}
-
-</div>
-</div>
 

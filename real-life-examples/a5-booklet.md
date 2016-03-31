@@ -3,11 +3,11 @@ layout: page
 title: A5 Booklet
 parent_title: Real life examples
 permalink: /real-life-examples/a5-booklet.html
+modification_time: 2015-08-05T12:00:26+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>This script was written to create a new PDF file based on a pre-existing PDF document, converting an A4 document into an A5 booklet ready for duplex printing. Page order is adjusted, and page orientation is rotated so that it prints a landscape booklet.</p>
 
 {% highlight php %}
@@ -101,7 +101,4 @@ function GetBookletPages($np, $backcover=true) {
 
 ?>
 {% endhighlight %}
-
-</div>
-</div>
 

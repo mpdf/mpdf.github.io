@@ -3,16 +3,15 @@ layout: page
 title: watermarktext
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/watermarktext.html
+modification_time: 2015-08-05T12:01:31+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 3.0)</p>
 <p>watermarktext – Set the text to use as a Watermark</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt;<b>watermarktext</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">alpha</span> ] /&gt;</div>
+<p class="manual_block">&lt;<b>watermarktext</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">alpha</span> ] /&gt;</p>
 <p>Set the text to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text such as "DRAFT". The watermark will be added to each page when the Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermark</a> is set to 1 or <span class="smallblock">TRUE</span>.&nbsp;</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">content</span></p>
@@ -28,7 +27,7 @@ If the text is blank, it will clear the watermark text, so nothing appears.
 
 <span class="smallblock">DEFAULT</span>: 0.2</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"><thead>
+<table class="table"><thead>
 <tr><th>Version</th><th>Description</th></tr>
 </thead> <tbody>
 <tr>
@@ -72,6 +71,3 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermark-font.html" | prepend: site.baseurl }}">watermark_font</a> - Specifies the font to use for Watermark text</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

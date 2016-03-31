@@ -3,11 +3,11 @@ layout: page
 title: Demo - 1000 Character Classic
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/demo-1000-character-classic.html
+modification_time: 2015-08-05T12:02:56+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>南朝梁敕员外散骑侍郎 周兴嗣 撰</p>
 <p>天地玄黄，宇宙洪荒，日月盈昃，辰宿列张，
 
@@ -134,6 +134,3 @@ permalink: /reference/codepages-glyphs/demo-1000-character-classic.html
 束带矜庄，徘徊瞻眺，孤陋寡闻，愚蒙等诮，
 
 谓语助者，焉哉乎也。</p>
-</div>
-</div>
-

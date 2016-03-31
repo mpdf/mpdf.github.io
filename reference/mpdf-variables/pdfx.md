@@ -3,18 +3,17 @@ layout: page
 title: PDFX
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/pdfx.html
+modification_time: 2015-08-05T12:02:19+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <div>
 <div>
 <p>(mPDF &gt;= 5.1)</p>
 <p>PDFX – Create PDF/X-1a compliant document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>PDFX</b></div>
+<p class="manual_block">void <b>PDFX</b></p>
 <p>Specify whether to create a PDF/X-1a compliant document.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">PDFX</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
@@ -26,7 +25,7 @@ permalink: /reference/mpdf-variables/pdfx.html
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -47,6 +46,3 @@ permalink: /reference/mpdf-variables/pdfx.html
 <p>&nbsp;</p>
 </div>
 </div>
-</div>
-</div>
-

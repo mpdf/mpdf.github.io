@@ -3,11 +3,11 @@ layout: page
 title: Useful links
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/useful-links.html
+modification_time: 2015-08-05T12:03:02+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Fonts frequency (browsers)</p>
 <ul>
 <li><a href="http://www.codestyle.org/css/font-family/sampler-CombinedResults.shtml">http://www.codestyle.org/css/font-family/sampler-CombinedResults.shtml</a></li>
@@ -20,6 +20,3 @@ permalink: /reference/codepages-glyphs/useful-links.html
 <ul>
 <li><a href="http://sourceforge.net/projects/dejavu/">http://sourceforge.net/projects/dejavu/</a></li>
 </ul>
-</div>
-</div>
-

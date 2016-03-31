@@ -3,14 +3,14 @@ layout: page
 title: Configuration files v6.x
 parent_title: Configuration
 permalink: /configuration/configuration-files-v6-x.html
+modification_time: 2015-08-05T11:59:39+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 6.0)</p>
 <p>Four configuration files are included in the root folder of mPDF:</p>
-<table class="bpmTopnTailClear"> <thead>
+<table class="table"> <thead>
 <tr>
 <td>File name</td>
 <td>Details</td>
@@ -43,6 +43,3 @@ permalink: /configuration/configuration-files-v6-x.html
 </tr>
 </tbody> </table>
 <p>&nbsp;</p>
-</div>
-</div>
-

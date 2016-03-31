@@ -3,11 +3,11 @@ layout: page
 title: Method 2
 parent_title: Headers & Footers
 permalink: /headers-footers/method-2.html
+modification_time: 2015-08-05T11:59:50+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">HTML</span> headers &amp; footers. This is the simplest &amp; quickest way to program a header/footer once for the whole document that includes images or uses more complex layout styles.</p>
 <h2>Setting Headers/Footers for the whole document
 
@@ -268,6 +268,3 @@ $mpdf->Output();
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a></li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

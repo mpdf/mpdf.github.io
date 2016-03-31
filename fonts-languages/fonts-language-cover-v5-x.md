@@ -3,11 +3,11 @@ layout: page
 title: Fonts & Language cover v5.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/fonts-language-cover-v5-x.html
+modification_time: 2015-08-05T11:59:34+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>The following Open Source fonts are included with mPDF 5:</p>
 <ul>
 <li><i>DejaVuSans, DejaVuSansCondensed, DejaVuSansMono, DejaVuSerif, DejaVuSerifCondensed</i></li>
@@ -18,7 +18,7 @@ permalink: /fonts-languages/fonts-language-cover-v5-x.html
 <h3>Coverage of included fonts
 
 </h3>
-<table class="bpmTopicC"> <thead>
+<table class="table"> <thead>
 <tr> <th>&nbsp;</th><th>&nbsp;</th>
 <td>
 <p>DejaVuSans</p>
@@ -145,6 +145,3 @@ permalink: /fonts-languages/fonts-language-cover-v5-x.html
 </tr>
 </tbody> </table>
 <p>&nbsp;</p>
-</div>
-</div>
-

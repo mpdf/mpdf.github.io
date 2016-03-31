@@ -3,11 +3,11 @@ layout: page
 title: Tables
 parent_title: Tables
 permalink: /tables/tables.html
+modification_time: 2015-08-05T11:59:43+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>Styles</h2>
 <p>For a full list of CSS styles supported by mPDF for tables/cells, see&nbsp;<a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Valid CSS</a>. Note the custom attribute "topntail" which I have added to add a horizontal border at the top and bottom of the table, and under the THEAD row if present.</p>
 <p>Block-level tags (DIV, P etc) are ignored inside tables, including any CSS styles - inline CSS or stylesheet classes, id etc. To set text characteristics within a table/cell, either define the CSS for the table/cell, or use in-line tags e.g. &lt;SPAN style="..."&gt;</p>
@@ -48,6 +48,3 @@ permalink: /tables/tables.html
 <code>$table_error_report = false;</code> // Die and report error if table is too wide to contain whole words (even after autosizing)
 
 <code>$table_error_report_param = '';</code> // Parameter which can be passed to show in error report i.e. chapter number being processed.</p>
-</div>
-</div>
-

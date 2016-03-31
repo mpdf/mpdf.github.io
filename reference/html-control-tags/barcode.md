@@ -3,19 +3,18 @@ layout: page
 title: barcode
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/barcode.html
+modification_time: 2015-08-05T12:01:19+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.0)</p>
 <p>barcode – Add a Barcode to the document</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt;<b>barcode</b>&nbsp; <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;</div>
+<p class="manual_block">&lt;<b>barcode</b>&nbsp; <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;</p>
 <p>Add a Barcode to the document.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> and the example file for further information.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> and the example file for further information.</div>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">code</span></p>
 <p class="manual_param_dd">Specifies the code to translate to a barcode.
@@ -96,7 +95,7 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 
 <span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>)</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -141,8 +140,7 @@ Examples
 {% endhighlight %}
 
 <h2>Notes</h2>
-
-<div class="alert alert-info" role="alert"><b>Note</b>: The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
+<p class="manual_block"><b>Note</b>: The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
 
 vertical-align&nbsp; (default: middle)
 
@@ -158,7 +156,7 @@ background-color (default white)
 
 NB padding has defaults as 0(mm) if not specified
 
-Padding is in addition to any specified quiet zones/light margins.</div>
+Padding is in addition to any specified quiet zones/light margins.</p>
 
 {% highlight php %}
 Example with CSS
@@ -193,7 +191,7 @@ Example with CSS
 <div class="barcodecell"><barcode code="54321068" type="I25" class="barcode" /></div>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><b>Note:</b> mPDF will generate a Checkdigit for most barcodes if required, which is added to the barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> mPDF will generate a Checkdigit for most barcodes if required, which is added to the barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:</div>
 
 {% highlight php %}
 Example - Generating a checkdigit
@@ -223,6 +221,3 @@ exit;
 <p><span class="jslink">
 
 </span></p>
-</div>
-</div>
-

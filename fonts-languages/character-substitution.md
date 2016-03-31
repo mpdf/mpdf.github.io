@@ -3,14 +3,14 @@ layout: page
 title: Character substitution
 parent_title: Fonts & Languages
 permalink: /fonts-languages/character-substitution.html
+modification_time: 2015-08-05T11:59:38+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.0)</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Prior to mPDF 5.0 there were 2 configurable variables, <code>$this-&gt;useSubstitutions</code> and <code>$this-&gt;useSubstitutionsMB</code>. controlling behaviour of core fonts and unicode fonts respectively. From mPDF 5.0, character substitution using core fonts is always ON and cannot be disabled by configurable variables. <code>$this-&gt;useSubstitutionsMB</code> is depracated but it is recognised as an alias for <code>$this-&gt;useSubstitutions</code>. <code>$this-&gt;useSubstitutions</code> controls behaviour in Unicode font documents.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 5.0 there were 2 configurable variables, <code>$this-&gt;useSubstitutions</code> and <code>$this-&gt;useSubstitutionsMB</code>. controlling behaviour of core fonts and unicode fonts respectively. From mPDF 5.0, character substitution using core fonts is always ON and cannot be disabled by configurable variables. <code>$this-&gt;useSubstitutionsMB</code> is depracated but it is recognised as an alias for <code>$this-&gt;useSubstitutions</code>. <code>$this-&gt;useSubstitutions</code> controls behaviour in Unicode font documents.</div>
 <h3>Core fonts
 
 </h3>
@@ -39,6 +39,3 @@ $this->useSubstitutions = true;
 <li>looks in each of the the font(s) set by <code>$this-&gt;backupSubsFont</code> array in the <span class="filename">config_fonts.php</span> file</li>
 </ol>
 <p>It is not recommended to enable this for regular use, as it will add to the processing time.</p>
-</div>
-</div>
-

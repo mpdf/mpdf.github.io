@@ -3,11 +3,11 @@ layout: page
 title: forcePortraitMargins
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/forceportraitmargins.html
+modification_time: 2015-08-05T12:01:57+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF &gt;= 2.3</p>
 <p>==========================================================
 
@@ -24,6 +24,3 @@ If default page orientation is P(ortrait), then adding new page L(andscape) caus
 
 NB - if using OddEven (double-sided document), it is the Portrait orientation L/R margins that alternate.</p>
 <p>When adding a page, you must only call $mpdf-&gt;AddPage('L') or &lt;pagebreak orientaion="landscape" /&gt; - if you try to set new margins/headers etc. for new landscape pages when forcePortraitMargins=true, it will go wrong</p>
-</div>
-</div>
-

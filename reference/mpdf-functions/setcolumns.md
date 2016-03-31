@@ -3,21 +3,20 @@ layout: page
 title: SetColumns()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setcolumns.html
+modification_time: 2015-08-05T12:00:56+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetColumns – Control use of Columns on the page</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetColumns</b> ( int <span class="parameter">$nCols</span> [, string <span class="parameter">$vAlign</span> [, float <span class="parameter">$gap</span> ]])</div>
+<p class="manual_block">void <b>SetColumns</b> ( int <span class="parameter">$nCols</span> [, string <span class="parameter">$vAlign</span> [, float <span class="parameter">$gap</span> ]])</p>
 <p>Define, start or stop Columns in the document.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The maximum ratio to adjust column height when justifying is set by <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - too large a value can give ugly results</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The maximum ratio to adjust column height when justifying is set by <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - too large a value can give ugly results</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() after commands like <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() after commands like <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">nCols</span></p>
 <p class="manual_param_dd">Set the number of (vertical) columns to use on a page
@@ -74,6 +73,3 @@ $mpdf=Output();
 
 </li>
 </ul>
-</div>
-</div>
-

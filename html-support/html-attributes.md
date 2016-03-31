@@ -3,19 +3,19 @@ layout: page
 title: HTML Attributes
 parent_title: HTML support
 permalink: /html-support/html-attributes.html
+modification_time: 2015-08-05T11:59:42+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h2>HTML tag Attributes (in-line) supported</h2>
 <p>Example of an HTML attribute: &lt;div <span class="parameter">align</span>="center"&gt;</p>
 <p>mPDF supports attribute values in single or double quotes e.g. &lt;div align="center"&gt; or &lt;div align='center'&gt;</p>
 <p>Minimised attributes are not supported e.g. &lt;input type="checkbox" <i>disabled</i> /&gt;</p>
 <p>XHTML specification is recommended for best compliance with mPDF.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The attributes <span class="parameter">class</span>, <span class="parameter">id</span> and <span class="parameter">style</span> are supported on most HTML tags: see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.</div>
-<table class="bpmTopic"> <tbody>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The attributes <span class="parameter">class</span>, <span class="parameter">id</span> and <span class="parameter">style</span> are supported on most HTML tags: see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.</div>
+<table class="table"> <tbody>
 <tr>
 <td rowspan="2">HTML, BODY and ALL recognised tags
 
@@ -415,13 +415,13 @@ Only if also editable and size=1</td>
 </tbody> </table>
 <p>* <span class="parameter">lang</span> is only recognised when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in their formal/long form i.e. selected="selected"</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in their formal/long form i.e. selected="selected"</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.</div>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -447,6 +447,3 @@ Only if also editable and size=1</td>
 </td>
 </tr>
 </tbody> </table>
-</div>
-</div>
-

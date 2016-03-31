@@ -3,11 +3,11 @@ layout: page
 title: Reserving x blank pages
 parent_title: Real life examples
 permalink: /real-life-examples/reserving-x-blank-pages.html
+modification_time: 2015-08-05T12:00:27+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>One user wanted to reserve several blank pages on the left for advertisements, whilst flowing the document on the other pages.</p>
 <p>There isn't a 'proper' way to do it, but a few lines of script in <span class="filename">mpdf.php</span> may work:
 
@@ -43,6 +43,3 @@ $this->MarginCorrection = 0;
 <p><code>$this-&gt;page % 2 == 1</code> will leave odd pages blank</p>
 <p><code>$this-&gt;page &lt; 5</code> will leave blank alternate pages up to and including page number 4</p>
 <p>&nbsp;</p>
-</div>
-</div>
-

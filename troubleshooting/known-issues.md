@@ -3,11 +3,11 @@ layout: page
 title: Known Issues
 parent_title: Troubleshooting
 permalink: /troubleshooting/known-issues.html
+modification_time: 2015-08-05T12:00:29+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <h3>Crashing with no error message</h3>
 <p>Ensure mbregex is enabled as part of mb_string. <span>Apparently this is enabled by default when you enable mbstring in most cases, however with cPanel and some other non-standard environments this might not be the case, so people have to explicitly look for and enable mbregex (i.e. compile PHP with <span>`--enable-mbregex`</span>.</span></p>
 <h3>Blank pages or some sections missing</h3>
@@ -41,6 +41,3 @@ ini_set("pcre.backtrack_limit","1000000");
 <ul>
 <li><a href="{{ "/about-mpdf/limitations.html" | prepend: site.baseurl }}">Limitations</a></li>
 </ul>
-</div>
-</div>
-

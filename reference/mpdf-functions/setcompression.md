@@ -3,16 +3,15 @@ layout: page
 title: SetCompression()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setcompression.html
+modification_time: 2015-08-05T12:00:56+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>SetCompression – Specifies that mPDF should compress the data for the PDF file</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>SetCompression</b> ( boolean <span class="parameter">$flag</span> )</div>
+<p class="manual_block">void <b>SetCompression</b> ( boolean <span class="parameter">$flag</span> )</p>
 <p>Specifies that mPDF should compress the data for the PDF file. This makes a smaller PDF file and is set by default to <span class="smallblock">TRUE</span> on initialising the mPDF class.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">flag</span></p>
@@ -40,7 +39,4 @@ $mpdf->Output('filename.pdf');
 
 ?>
 {% endhighlight %}
-
-</div>
-</div>
 

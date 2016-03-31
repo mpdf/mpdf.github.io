@@ -3,11 +3,11 @@ layout: page
 title: mbstring
 parent_title: Codepages & Glyphs
 permalink: /reference/codepages-glyphs/mbstring.html
+modification_time: 2015-08-05T12:03:01+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>Currently the following character encodings are supported by the mbstring module. Any of those Character encodings can be specified in the encoding parameter of mbstring functions.</p>
 <ul>
 <li>UCS-4, UCS-4BE, UCS-4LE</li>
@@ -46,6 +46,3 @@ permalink: /reference/codepages-glyphs/mbstring.html
 <p>For the module to be enabled, php must have been compiled with <i>--enable-mbstring</i>&nbsp;<a href="phpinfo.html" target="_blank"></a></p>
 <p>See <a href="http://uk.php.net/manual/en/ref.mbstring.php">http://uk.php.net/manual/en/ref.mbstring.php</a></p>
 <p>&nbsp;</p>
-</div>
-</div>
-

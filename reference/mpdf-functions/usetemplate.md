@@ -3,21 +3,20 @@ layout: page
 title: UseTemplate()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/usetemplate.html
+modification_time: 2015-08-05T12:01:14+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3)</p>
 <p>UseTemplate – Insert an imported page from an external PDF file</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">array <b>UseTemplate</b> ( int <span class="parameter">$templateID</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$width</span> [, float <span class="parameter">$height</span> ]]]])</div>
+<p class="manual_block">array <b>UseTemplate</b> ( int <span class="parameter">$templateID</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$width</span> [, float <span class="parameter">$height</span> ]]]])</p>
 <p>Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the imported page as it is printed (see Example #1).</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The template will be printed onto the page as the bottom 'layer' i.e. anything else written to that page by mPDF will be written on top of thie template. NB If you use WriteHTML() and have a background-color set on BODY this will hide the template from view e.g. &lt;body style="background-color:#FFFFFF;"&gt;</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The template will be printed onto the page as the bottom 'layer' i.e. anything else written to that page by mPDF will be written on top of thie template. NB If you use WriteHTML() and have a background-color set on BODY this will hide the template from view e.g. &lt;body style="background-color:#FFFFFF;"&gt;</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> If you are using automatic header-margins, you need to set the header before starting the first page; if you start the document with UseTemplate() this will move it to page 1, so the order needs to be:
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If you are using automatic header-margins, you need to set the header before starting the first page; if you start the document with UseTemplate() this will move it to page 1, so the order needs to be:
 
 <code>$mpdf = new mPDF();
 
@@ -64,7 +63,7 @@ $mpdf-&gt;WriteHTML($html);</code></div>
 </h2>
 <p class="manual_param_dd"><b>UseTemplate()</b> returns an array of the calculated <span class="parameter">width</span> and <span class="parameter">height</span>.</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -156,6 +155,3 @@ $mpdf->Output();
 <li><a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

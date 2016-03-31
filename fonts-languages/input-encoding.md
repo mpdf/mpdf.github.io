@@ -3,11 +3,11 @@ layout: page
 title: Input encoding
 parent_title: Fonts & Languages
 permalink: /fonts-languages/input-encoding.html
+modification_time: 2015-08-05T11:59:33+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF accepts UTF-8 encoded text by default for all functions.</p>
 <p>You can use the following to allow you to write html code encoded in other than utf-8 (in functions like <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>):</p>
 
@@ -19,7 +19,7 @@ $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
 $mpdf->charset_in='windows-1252';
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><b>Note:</b> <span class="parameter">charset_in</span> requires codes recognised by the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> i.e. windows-1252 not win-1252</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="parameter">charset_in</span> requires codes recognised by the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> i.e. windows-1252 not win-1252</div>
 <p>If <span class="parameter">allow_charset_conversion</span> is <span class="smallblock">TRUE</span> mPDF will also read the charset from the HTML header if present e.g.</p>
 
 {% highlight php %}
@@ -37,6 +37,3 @@ $mpdf->charset_in='windows-1252';
 <p>In PHP5 you can list the codepages recognised by mb_ functions using mb_list_encodings().</p>
 <p>Also note that each function has different ways of failing if illegal characters are encountered.</p>
 <p>&nbsp;</p>
-</div>
-</div>
-

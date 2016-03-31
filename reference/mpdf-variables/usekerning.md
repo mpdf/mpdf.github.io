@@ -3,15 +3,14 @@ layout: page
 title: useKerning
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/usekerning.html
+modification_time: 2015-08-05T12:02:37+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 5.4)</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">boolean <b>useKerning</b></div>
+<p class="manual_block">boolean <b>useKerning</b></p>
 <p>When <span class="smallblock">TRUE</span>, mPDF will support the CSS style <span class="parameter">font-kerning</span>. This should only be set to <span class="smallblock">TRUE</span> when required to conserve memory and processing time.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">useKerning</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span></p>
@@ -24,6 +23,3 @@ permalink: /reference/mpdf-variables/usekerning.html
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/kerning.html" | prepend: site.baseurl }}">Kerning</a> </li>
 </ul>
-</div>
-</div>
-

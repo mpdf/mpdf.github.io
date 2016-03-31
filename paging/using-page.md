@@ -3,14 +3,14 @@ layout: page
 title: Using @page
 parent_title: Paging
 permalink: /paging/using-page.html
+modification_time: 2015-08-05T11:59:48+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.2)</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</div>
 <p>&nbsp;</p>
 <h2>About CSS Paged Media
 
@@ -349,7 +349,4 @@ $mpdf->WriteHTML($html);
 
 $mpdf->Output();
 {% endhighlight %}
-
-</div>
-</div>
 

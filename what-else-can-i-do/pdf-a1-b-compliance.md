@@ -3,11 +3,11 @@ layout: page
 title: PDF/A1-b compliance
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/pdf-a1-b-compliance.html
+modification_time: 2015-08-05T12:00:20+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 4.3)</p>
 <p>PDF/A1-b is a file format for the long-term archiving of electronic documents. It is based on the PDF Reference Version 1.4 from Adobe Systems Inc. and is defined by ISO 19005-1:2005</p>
 <p>A key element to this reproducibility is the requirement for PDF/A documents to be 100% self-contained. All of the information necessary for displaying the document in the same manner every time is embedded in the file. This includes, but is not limited to, all content (text, raster images and vector graphics), fonts, and color information. A PDF/A document is not permitted to be reliant on information from external sources (e.g. font programs and hyperlinks).</p>
@@ -26,8 +26,7 @@ permalink: /what-else-can-i-do/pdf-a1-b-compliance.html
 </ul>
 <p>PDF/A-1b has the objective of ensuring reliable reproduction of the visual appearance of the document. PDF/A-1a includes all the requirements of PDF/A-1b and additionally requires that document structure be included (also known as being "tagged"), with the objective of ensuring that document content can be searched and repurposed.</p>
 <p>A PDF/A document can be identified as such through PDF/A-specific metadata located in the "http://www.aiim.org/pdfa/ns/id/" namespace. However, claiming to be PDF/A and being so are not necessarily the same.</p>
-
-<div class="alert alert-info" role="alert"><b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/A1-b compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.</div>
+<p class="manual_block"><b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/A1-b compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.</p>
 <h2>mPDF and PDF/A1-b compliance</h2>
 <p>You can make mPDF produce mPDF/A1-b compliant files by setting:</p>
 
@@ -104,7 +103,7 @@ $mpdf->PDFAauto = true; // Overrides warnings making changes when possible to fo
 {% endhighlight %}
 
 <p>The following issues will cause a warning message when you try to generate a PDFA file:</p>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr>
 <td>Problem detected</td>
 <td>Action taken by mPDF</td>
@@ -177,6 +176,3 @@ $mpdf->PDFAauto = true; // Overrides warnings making changes when possible to fo
 <h2>Useful resources</h2>
 <p>On-line PDFA Validator: <a href="http://www.validatepdfa.com/online.htm">http://www.validatepdfa.com/online.htm</a></p>
 <p>Useful info on PDFA: <a href="http://www.pdfa.org/doku.php?id=pdfa:en:techdoc">http://www.pdfa.org/doku.php?id=pdfa:en:techdoc</a></p>
-</div>
-</div>
-

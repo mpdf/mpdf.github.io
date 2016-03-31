@@ -3,11 +3,11 @@ layout: page
 title: Method 1
 parent_title: Headers & Footers
 permalink: /headers-footers/method-1.html
+modification_time: 2015-08-05T11:59:50+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control over styling. There are several variants of this method, using string or array. The simplest form does not allow different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.</p>
 <h2>Setting a Header/Footer at the start of a document
 
@@ -197,7 +197,7 @@ $arr = array (
 $mpdf->SetHeader($arr, 'O');  // E for Even header
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><b>Note:</b> When you are using the array form, any values that are not defined in the array use the document default values, not the defaultheader values (like the previous Simple form)&nbsp; i.e. an undefined font-size uses the document default of 10pt, not the <span class="parameter">$defaultheaderfontsize</span> of 8pt.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> When you are using the array form, any values that are not defined in the array use the document default values, not the defaultheader values (like the previous Simple form)&nbsp; i.e. an undefined font-size uses the document default of 10pt, not the <span class="parameter">$defaultheaderfontsize</span> of 8pt.</div>
 <p>Although this looks complex, you could change one value easily throughout a document:</p>
 
 {% highlight php %}
@@ -434,6 +434,3 @@ $mpdf->Output();
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">$defaultfooterline</a></li>
 </ul>
 <p>&nbsp;</p>
-</div>
-</div>
-

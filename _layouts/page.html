@@ -9,3 +9,9 @@ layout: default
   {{ content }}
 
 </article>
+
+{% if page.modification_time %}
+<div>
+	<small>Page last modified at {{ page.modification_time | date_to_rfc822 }}</small>
+</div>
+{% endif %}

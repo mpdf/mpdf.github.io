@@ -3,11 +3,11 @@ layout: page
 title: bookmarkStyles
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/bookmarkstyles.html
+modification_time: 2015-08-05T12:01:45+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>mPDF &gt;= 5.4</p>
 <p>Bookmarks can be styled by adding code as below to your script. You can define a colour (array of RGB) and/or a font-style (B, I, or BI) for each level (starting at 0). Results may depend on the PDF Reader you are using.</p>
 <h2>Example</h2>
@@ -34,7 +34,4 @@ $this->bookmarkStyles = array(
 
 ?>
 {% endhighlight %}
-
-</div>
-</div>
 

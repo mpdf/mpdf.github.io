@@ -3,22 +3,20 @@ layout: page
 title: tocentry
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/tocentry.html
+modification_time: 2015-08-05T12:01:30+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 1.0)</p>
 <p>tocentry – Insert an entry for the Table of Contents</p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">&lt;<b>tocentry</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">level</span> ] [ <span class="parameter">name</span> ] /&gt;</div>
+<p class="manual_block">&lt;<b>tocentry</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">level</span> ] [ <span class="parameter">name</span> ] /&gt;</p>
 <p>Insert an entry for the Table of Contents referencing the current writing position in the document.</p>
 <p>&nbsp;</p>
+<p class="manual_block"><b>Note: </b>The position for the Table of Contents must be specified using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</p>
 
-<div class="alert alert-info" role="alert"><b>Note: </b>The position for the Table of Contents must be specified using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
-
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF 2.3 you can use more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">name</span>.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF 2.3 you can use more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">name</span>.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">content</span></p>
 <p class="manual_param_dd">This parameter sets the text as it will appear in the ToC entry. Text should be UTF-8 encoded. 
@@ -42,7 +40,7 @@ Starts at level 0
 
 "ALL" will add this entry to every ToC active in the document.</p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -77,8 +75,7 @@ $mpdf=Output();
 {% endhighlight %}
 
 <h2>Notes</h2>
-
-<div class="alert alert-info" role="alert"><b>Note</b>: Since mPDF 2.0 <b>insertTOC()</b> should <b>not</b> be called at the end of the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">Output()</a> will automatically generate the ToC if it has been defined with either or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or&nbsp;&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</div>
+<p class="manual_block"><b>Note</b>: Since mPDF 2.0 <b>insertTOC()</b> should <b>not</b> be called at the end of the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">Output()</a> will automatically generate the ToC if it has been defined with either or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or&nbsp;&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</p>
 <h3>Recommended placement</h3>
 <p>Recommended placement of ToC Entries is just after the first word following the opening tag of the block element:</p>
 
@@ -104,6 +101,3 @@ $mpdf=Output();
 <li class="manual_boxlist"> &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; - Insert a Table of Contents in the document </li>
 <li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> - Mark a ToC entry in the document </li>
 </ul>
-</div>
-</div>
-

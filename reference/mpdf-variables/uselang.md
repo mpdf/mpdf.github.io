@@ -3,22 +3,21 @@ layout: page
 title: useLang
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/uselang.html
+modification_time: 2015-08-05T12:02:38+00:00
 ---
 
-<div id="bpmbook" class="bpmbook" style="direction:ltr;">
-<div class="topic_user_field">
-<div id="U0">
+
+
 <p>(mPDF &gt;= 2.3&nbsp; &lt;= 5.7)</p>
 <p>useLang – Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span></p>
 <h2>Description</h2>
-
-<div class="alert alert-info" role="alert">void <b>useLang</b></div>
+<p class="manual_block">void <b>useLang</b></p>
 <p>Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span>.</p>
 <p>See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for more details.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This variable was removed in mPDF 6.0&nbsp; <a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}"><code>autoScriptToLang</code></a> should be used for the same effect.</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> This variable was removed in mPDF 6.0&nbsp; <a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}"><code>autoScriptToLang</code></a> should be used for the same effect.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The default value was changed to <span class="smallblock">TRUE </span>in version 4.0</div>
+<div class="alert alert-info" role="alert"><strong>Note:</strong> The default value was changed to <span class="smallblock">TRUE </span>in version 4.0</div>
 <p><b>Note:</b> <span class="parameter">lang</span> is a useful way to select appropriate fonts for some languages. Automatic font selection using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the HTML with the <span class="parameter">lang</span> attribute, so useLang is required. Using automatic font selection adds considerable processing time when creating a large document. Automatic font selection is only valid when using UTF-8 as the codepage for the document.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">useLang</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
@@ -30,7 +29,7 @@ permalink: /reference/mpdf-variables/uselang.html
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
 <h2>Changelog</h2>
-<table class="bpmTopic"> <thead>
+<table class="table"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
 </thead> <tbody>
 <tr>
@@ -85,6 +84,3 @@ $mpdf->Output();
 <li class="manual_boxlist"><a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li>
 <li class="manual_boxlist"><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
 </ul>
-</div>
-</div>
-
