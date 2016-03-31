@@ -69,7 +69,7 @@ $mpdf->WriteHTML('<p>This text will only be visible on screen, and will not be i
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/css-stylesheets/supported-css.html">Supported CSS</a> - 'visibility'</li>
+<li class="manual_boxlist"><a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> - 'visibility'</li>
 </ul>
 <p>&nbsp;</p>
 </div>

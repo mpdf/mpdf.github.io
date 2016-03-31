@@ -18,7 +18,7 @@ permalink: /reference/html-control-tags/textcircle.html
 <div class="alert alert-info" role="alert"><b>Note:</b> CSS style are not inherited from parent elements.</div>
 
 <div class="alert alert-info" role="alert">From mPDF &gt;= 5.6 the CSS property <code><span class="parameter">font-size</code></span> can be set to <code>auto</code>. This automatically sizes text to fill a semicircle (if both top and bottom set) or a full circle (if only one set).</div>
-<p>Circular Text is displayed as though an in-line element. Automatic kerning will be applied to the text if <a href="/reference/mpdf-variables/usekerning.html">useKerning</a> is <span class="smallblock">TRUE</span>.&nbsp;</p>
+<p>Circular Text is displayed as though an in-line element. Automatic kerning will be applied to the text if <a href="{{ "/reference/mpdf-variables/usekerning.html" | prepend: site.baseurl }}">useKerning</a> is <span class="smallblock">TRUE</span>.&nbsp;</p>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Prior to mPDF 5.6 the textcircle was displayed with a white background. in &gt;= 5.6 the background has been changed to transparent by default.</div>
 <h2>Parameters</h2>
@@ -100,7 +100,7 @@ style="background-color: #FFAAAA; border:1px solid red; padding: 0.3em; margin: 
 <p>&nbsp;</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/circulartext.html">CircularText()</a> - PHP equivalent to &lt;textcircle&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/circulartext.html" | prepend: site.baseurl }}">CircularText()</a> - PHP equivalent to &lt;textcircle&gt;</li>
 </ul>
 </div>
 </div>

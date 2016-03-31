@@ -25,7 +25,7 @@ Specify the level of this entry i.e. like heading1,2,3; but starts at level 0
 Default = 0</li>
 </ul>
 <p>NB Bookmarks use system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</p>
-<p>See - <a href="/reference/mpdf-variables/bookmarkstyles.html">bookmarkStyles</a></p>
+<p>See - <a href="{{ "/reference/mpdf-variables/bookmarkstyles.html" | prepend: site.baseurl }}">bookmarkStyles</a></p>
 <p>&nbsp;</p>
 </div>
 </div>

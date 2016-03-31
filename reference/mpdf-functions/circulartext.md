@@ -28,7 +28,7 @@ kerning: (fixed) spacing between letters in percentage. Default value: 120. Zero
 fontwidth: width of letters in percentage. Default value: 100. Zero is not allowed
 
 - uses automatic Kerning between letters if useKerning == true</p>
-<p>See &lt;<a href="/reference/html-control-tags/textcircle.html">textcircle</a>&gt; for more details</p>
+<p>See &lt;<a href="{{ "/reference/html-control-tags/textcircle.html" | prepend: site.baseurl }}">textcircle</a>&gt; for more details</p>
 </div>
 </div>
 

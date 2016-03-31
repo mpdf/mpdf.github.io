@@ -14,7 +14,7 @@ permalink: /reference/mpdf-variables/allowcjkoverflow.html
 <p>&nbsp;&nbsp;&nbsp; $this-&gt;allowCJKorphans = true;&nbsp;&nbsp;&nbsp; // FALSE=always wrap to next line; TRUE=squeeze or overflow
 
 &nbsp;&nbsp;&nbsp; $this-&gt;allowCJKoverflow = false; // FALSE=squeeze; TRUE=overflow (only selected)</p>
-<p>See also <a href="/reference/mpdf-variables/allowcjkorphans.html">allowCJKorphans</a> and <a href="/reference/mpdf-variables/cjkforceend.html">CJKforceend </a></p>
+<p>See also <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a> and <a href="{{ "/reference/mpdf-variables/cjkforceend.html" | prepend: site.baseurl }}">CJKforceend </a></p>
 </div>
 </div>
 

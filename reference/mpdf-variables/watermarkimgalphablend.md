@@ -13,7 +13,7 @@ permalink: /reference/mpdf-variables/watermarkimgalphablend.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">void <b>watermarkImgAlphaBlend</b></div>
-<p>Specify the blend mode for overlying watermark images. Different blend modes work with different types of images. The blend modes are those specified in the <a href="/reference/pdf-files-adobe/pdf-reference.html">PDF reference</a>. The value of Normal gives acceptable results for most cases. 'Multiply' may produce better results with overlying WMF or SVG images.</p>
+<p>Specify the blend mode for overlying watermark images. Different blend modes work with different types of images. The blend modes are those specified in the <a href="{{ "/reference/pdf-files-adobe/pdf-reference.html" | prepend: site.baseurl }}">PDF reference</a>. The value of Normal gives acceptable results for most cases. 'Multiply' may produce better results with overlying WMF or SVG images.</p>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> This variable can be changed either in the configuration file <span class="filename">config.php</span>&nbsp; or at runtime</div>
 <h2>Values</h2>
@@ -56,7 +56,7 @@ Exclusion
 </tbody> </table>
 <p>See Also</p>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/watermarkimgbehind.html">watermarkImgBehind</a> - Specify whether to place watermark images behind page contents</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermarkimgbehind.html" | prepend: site.baseurl }}">watermarkImgBehind</a> - Specify whether to place watermark images behind page contents</li>
 </ul>
 <p>&nbsp;</p>
 </div>

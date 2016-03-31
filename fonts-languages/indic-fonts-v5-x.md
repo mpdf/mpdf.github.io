@@ -9,7 +9,7 @@ permalink: /fonts-languages/indic-fonts-v5-x.html
 <div class="topic_user_field">
 <div id="U0">
 
-<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF &gt;= 6.0 this has been superseded by the use of <a href="/fonts-languages/opentype-layout-otl.html">OpenType layout (OTL)</a>.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> From mPDF &gt;= 6.0 this has been superseded by the use of <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>.</div>
 <p>Special fonts are provided for several Indic languages.</p>
 <table class="bpmTopnTailC"> <thead>
 <tr> <th>&nbsp;</th>

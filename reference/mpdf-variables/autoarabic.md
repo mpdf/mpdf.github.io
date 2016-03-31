@@ -25,8 +25,8 @@ permalink: /reference/mpdf-variables/autoarabic.html
 <span class="smallblock">TRUE: </span>mPDF will attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi, and text will then be marked with a specific language tag e.g. "pa", "ur", "fa" etc.</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/autoscripttolang.html">autoScriptToLang</a> - <code><span class="code">marks up HTML text using the lang attribute, based on the Unicode script block in question</code></span></li>
-<li class="manual_boxlist"><a href="/fonts-languages/automatic-font-selection.html">Automatic Font selection</a> </li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">autoScriptToLang</a> - <code><span class="code">marks up HTML text using the lang attribute, based on the Unicode script block in question</code></span></li>
+<li class="manual_boxlist"><a href="{{ "/fonts-languages/automatic-font-selection.html" | prepend: site.baseurl }}">Automatic Font selection</a> </li>
 </ul>
 </div>
 </div>

@@ -13,7 +13,7 @@ permalink: /reference/mpdf-functions/setdirectionality.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">void <b>SetDirectionality</b> ( string <span class="parameter">$dir</span> )</div>
-<p>Set the document RTL state. This defines the default alignment of tables, columns, text justification, page layout etc. See <a href="/fonts-languages/arabic-rtl-text-v5-x.html">RTL &amp; Bidirectional Text</a> for more details. If SetDirectionality('rtl') is set, <i>Text Bidirectionality</i> is automatically turned on.</p>
+<p>Set the document RTL state. This defines the default alignment of tables, columns, text justification, page layout etc. See <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional Text</a> for more details. If SetDirectionality('rtl') is set, <i>Text Bidirectionality</i> is automatically turned on.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">dir</span></p>
 <p class="manual_param_dd">Defines the directionality of the document

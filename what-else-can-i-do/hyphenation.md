@@ -31,7 +31,7 @@ hyphens: manual
 
 SHY inside the word take priority over hyphenation points determined by other resources.</p>
 <h3>Soft hyphens</h3>
-<p>The soft-hyphen character (U+00AD or &amp;shy;) and the &lt;wbr&gt; tag (from mPDF 5.7) are supported in <a href="/reference/mpdf-functions/writehtml.html">WriteHTML()</a>.</p>
+<p>The soft-hyphen character (U+00AD or &amp;shy;) and the &lt;wbr&gt; tag (from mPDF 5.7) are supported in <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.</p>
 <h3>Automatic hyphenation</h3>
 <p>Automatic hyphenation is set using CSS:</p>
 
@@ -146,7 +146,7 @@ $mpdf->Output();
 <p>If automatic hyphenation does not recognise a particular word, you can add words to a dictionary file with your own hyphenation. Edit the file "pathtoyourmpdf/patterns/dictionary.txt" and add a new line for each word, marking the possible hyphenations with a forward slash. You can mark more than one place for each word e.g. "dis/es/tab/lish/men/tar/i/an/ism"</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/shylang.html">SHYlang</a> - Specify the language to use for automatic hyphenation</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/shylang.html" | prepend: site.baseurl }}">SHYlang</a> - Specify the language to use for automatic hyphenation</li>
 </ul>
 </div>
 </div>

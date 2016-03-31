@@ -43,7 +43,7 @@ permalink: /reference/mpdf-functions/fpdf-original-functions.html
 
 <a href="http://www.fpdf.org/en/doc/write.htm">Write</a> - print flowing text*</p>
 <p>&nbsp;</p>
-<p>*Note that these functions require text to be encoded if required, and do not automatically reverse RTL text, or convert HTML entities to characters. See the mPDF functions <a href="/reference/mpdf-functions/writecell.html">WriteCell()</a> and <a href="/reference/mpdf-functions/writetext.html">WriteText()</a> which do much the same thing, but support UTF-8 input regardless of the output encoding of your PDF file.</p>
+<p>*Note that these functions require text to be encoded if required, and do not automatically reverse RTL text, or convert HTML entities to characters. See the mPDF functions <a href="{{ "/reference/mpdf-functions/writecell.html" | prepend: site.baseurl }}">WriteCell()</a> and <a href="{{ "/reference/mpdf-functions/writetext.html" | prepend: site.baseurl }}">WriteText()</a> which do much the same thing, but support UTF-8 input regardless of the output encoding of your PDF file.</p>
 </div>
 </div>
 

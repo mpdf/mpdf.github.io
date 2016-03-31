@@ -75,9 +75,9 @@ Number of fonts 6
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/debug.html">debug</a> - specify whether to show errors</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/showimageerrors.html">showImageErrors</a> - show/hide error reporting for problems with Images</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/allow-output-buffering.html">allow_output_buffering</a> - prevent error mesages when using output buffering</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/debug.html" | prepend: site.baseurl }}">debug</a> - specify whether to show errors</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a> - prevent error mesages when using output buffering</li>
 </ul>
 </div>
 </div>

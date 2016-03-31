@@ -13,7 +13,7 @@ permalink: /reference/mpdf-variables/annotmargin.html
 <p>(+ve value float) Distance from right margin of page to show annotations;</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/annotation.html">Annotation()</a> - Add an Annotation to the document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">Annotation()</a> - Add an Annotation to the document</li>
 </ul>
 <p>&nbsp;</p>
 </div>

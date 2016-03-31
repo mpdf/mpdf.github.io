@@ -24,7 +24,7 @@ permalink: /reference/mpdf-variables/allow-output-buffering.html
 <span class="smallblock">TRUE</span>: Ignores any content in the object buffer when outputting the PDF file.</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/troubleshooting/error-messages.html">Error Messages</a> 
+<li class="manual_boxlist"><a href="{{ "/troubleshooting/error-messages.html" | prepend: site.baseurl }}">Error Messages</a> 
 
 </li>
 </ul>

@@ -15,7 +15,7 @@ permalink: /reference/mpdf-functions/indexentrysee.html
 <div class="alert alert-info" role="alert">void <b>IndexEntrySee</b> ( string <span class="parameter">$content</span> , string <span class="parameter">$see_content</span> )</div>
 <p>Insert a cross-reference entry for the document Index i.e. "Dromedary - see Camel".</p>
 
-<div class="alert alert-info" role="alert"><b>Note: </b>The Index must be generated explicity at the end of the document using <a href="/reference/mpdf-functions/tocpagebreak.html">CreateIndex()</a> at some point before <a href="/reference/mpdf-functions/output.html">Output()</a> is called.</div>
+<div class="alert alert-info" role="alert"><b>Note: </b>The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">content</span></p>
 <p class="manual_param_dd">This parameter sets the text as it will appear in the Index entry. Text should be UTF-8 encoded. Text entries passed in the form "Subject:Subcategory" will appear in the Index as "Subject, Subcategory".
@@ -43,9 +43,9 @@ Dromedary - see Camel, types
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/indexentry.html">IndexEntry()</a> - Mark an Index entry in the document</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/tocentry.html">indexentry</a>&gt; - Mark an Index entry in the document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/tocpagebreak.html">CreateIndex()</a> - Generate a document Index</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a> - Mark an Index entry in the document</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; - Mark an Index entry in the document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> - Generate a document Index</li>
 </ul>
 </div>
 </div>

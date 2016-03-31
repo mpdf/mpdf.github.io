@@ -172,8 +172,8 @@ div.onitsside { page: rotated; page-break-before: right; }
 <h2>Setting a named page</h2>
 <p>You can also set the page using parameters in:</p>
 <ul>
-<li>functions: <a href="/reference/mpdf-functions/addpage.html">AddPage()</a> and <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a></li>
-<li>html tags: &lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt; &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; and &lt;<a href="/reference/html-control-tags/formfeed.html">formfeed</a>&gt;</li>
+<li>functions: <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a></li>
+<li>html tags: &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; and &lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">formfeed</a>&gt;</li>
 </ul>
 <h3>page-break-before
 

@@ -15,9 +15,9 @@ permalink: /reference/mpdf-functions/setcolumns.html
 <div class="alert alert-info" role="alert">void <b>SetColumns</b> ( int <span class="parameter">$nCols</span> [, string <span class="parameter">$vAlign</span> [, float <span class="parameter">$gap</span> ]])</div>
 <p>Define, start or stop Columns in the document.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> The maximum ratio to adjust column height when justifying is set by <a href="/reference/mpdf-variables/max-colh-correction.html">$max_colH_correction</a> - too large a value can give ugly results</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> The maximum ratio to adjust column height when justifying is set by <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - too large a value can give ugly results</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() after commands like <a href="/reference/mpdf-functions/sethtmlheader.html">SetHTMLHeader()</a> etc.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() after commands like <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">nCols</span></p>
 <p class="manual_param_dd">Set the number of (vertical) columns to use on a page
@@ -68,9 +68,9 @@ $mpdf=Output();
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/addcolumn.html">AddColumn()</a> - Start a new Column</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/columnbreak.html">columnbreak</a>&gt; - Start a new Column</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/columns.html">columns</a>&gt; - Control the use of multiple columns on the page - HTML equivalent of SetColumns()
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addcolumn.html" | prepend: site.baseurl }}">AddColumn()</a> - Start a new Column</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/columnbreak.html" | prepend: site.baseurl }}">columnbreak</a>&gt; - Start a new Column</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/columns.html" | prepend: site.baseurl }}">columns</a>&gt; - Control the use of multiple columns on the page - HTML equivalent of SetColumns()
 
 </li>
 </ul>

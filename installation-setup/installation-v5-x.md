@@ -27,9 +27,9 @@ permalink: /installation-setup/installation-v5-x.html
 </li>
 </ul>
 <p>To test the installation, point your browser to the example files folder e.g. <span class="filename">[path_to_mpdf_folder]/mpdf/examples/</span></p>
-<p>If you wish to install additional fonts please see the notes in <a href="/fonts-languages/fonts-in-mpdf-5-x.html">Fonts &amp; Languages</a> for further instructions.</p>
-<p>If you wish to define a different folder for temporary files rather than <span class="filename">/tmp/</span> see the note on '<a href="/installation-setup/folders-for-temporary-files.html">Folder for temporary files</a>'.</p>
-<p>If you have problems, please read the section on <a href="/troubleshooting/known-issues.html">troubleshooting</a> in the manual.</p>
+<p>If you wish to install additional fonts please see the notes in <a href="{{ "/fonts-languages/fonts-in-mpdf-5-x.html" | prepend: site.baseurl }}">Fonts &amp; Languages</a> for further instructions.</p>
+<p>If you wish to define a different folder for temporary files rather than <span class="filename">/tmp/</span> see the note on '<a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">Folder for temporary files</a>'.</p>
+<p>If you have problems, please read the section on <a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">troubleshooting</a> in the manual.</p>
 <h3>
 
 Upgrading from version mPDF 5.0 Beta

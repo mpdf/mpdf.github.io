@@ -16,7 +16,7 @@ permalink: /reference/html-control-tags/tocentry.html
 <p>Insert an entry for the Table of Contents referencing the current writing position in the document.</p>
 <p>&nbsp;</p>
 
-<div class="alert alert-info" role="alert"><b>Note: </b>The position for the Table of Contents must be specified using <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a> or &lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt; at some point before <a href="/reference/mpdf-functions/output.html">Output()</a> is called.</div>
+<div class="alert alert-info" role="alert"><b>Note: </b>The position for the Table of Contents must be specified using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> From mPDF 2.3 you can use more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">name</span>.</div>
 <h2>Parameters</h2>
@@ -78,7 +78,7 @@ $mpdf=Output();
 
 <h2>Notes</h2>
 
-<div class="alert alert-info" role="alert"><b>Note</b>: Since mPDF 2.0 <b>insertTOC()</b> should <b>not</b> be called at the end of the document. <a href="/reference/codepages-glyphs/iso-8859-win-comparison-chart.html">Output()</a> will automatically generate the ToC if it has been defined with either or <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a> or&nbsp;&lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt;.</div>
+<div class="alert alert-info" role="alert"><b>Note</b>: Since mPDF 2.0 <b>insertTOC()</b> should <b>not</b> be called at the end of the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">Output()</a> will automatically generate the ToC if it has been defined with either or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or&nbsp;&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</div>
 <h3>Recommended placement</h3>
 <p>Recommended placement of ToC Entries is just after the first word following the opening tag of the block element:</p>
 
@@ -100,9 +100,9 @@ $mpdf=Output();
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"> <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a> - Insert a Table of Contents in the document </li>
-<li class="manual_boxlist"> &lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt; - Insert a Table of Contents in the document </li>
-<li class="manual_boxlist"> <a href="/reference/mpdf-functions/toc-entry.html">TOC_Entry()</a> - Mark a ToC entry in the document </li>
+<li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> - Insert a Table of Contents in the document </li>
+<li class="manual_boxlist"> &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; - Insert a Table of Contents in the document </li>
+<li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> - Mark a ToC entry in the document </li>
 </ul>
 </div>
 </div>

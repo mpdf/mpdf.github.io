@@ -42,15 +42,15 @@ E - set the footer for <span class="smallblock">EVEN</span> pages
 <h2>Examples</h2>
 <p>For examples and further information please see:</p>
 <ul>
-<li class="manual_boxlist"><a href="/headers-footers/headers-footers.html">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="/headers-footers/method-1.html">Headers &amp; Footers - Method 3</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a></li>
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/deffooterbyname.html">DefFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/pagefooter.html">pagefooter</a>&gt;</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setheaderbyname.html">SetHeaderByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/setpagefooter.html">setpagefooter</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/setpagefooter.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;</li>
 </ul>
 <p>&nbsp;</p>
 </div>

@@ -13,7 +13,7 @@ permalink: /
 
 <h2>Useful manual pages</h2>
 
-- <a href="about-mpdf/features-v5.html">Main features</a>
+- <a href="{{ "/about-mpdf/features-v5.html" | prepend: site.baseurl }}">Main features</a>
 - <a href="about-mpdf/requirements-v5.html">Requirements</a>
 - <a href="about-mpdf/limitations.html">Known limitations</a>
 - <a href="about-mpdf/credits.html">Credits</a>

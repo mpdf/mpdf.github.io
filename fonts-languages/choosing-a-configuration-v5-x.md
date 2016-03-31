@@ -13,7 +13,7 @@ permalink: /fonts-languages/choosing-a-configuration-v5-x.html
 <p>Some of the things you can change are:</p>
 <ul>
 <li>the initial parameter used to call mPDF e.g. <code>$mpdf=new mPDF('c')</code></li>
-<li>configuration variables set in <span class="filename">config.php</span> see <a href="/reference/mpdf-variables/overview.html">mPDF Variables - Overview</a>
+<li>configuration variables set in <span class="filename">config.php</span> see <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">mPDF Variables - Overview</a>
 
 (many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
 <li>font details in <span class="filename">config_fonts.php</span></li>
@@ -30,7 +30,7 @@ permalink: /fonts-languages/choosing-a-configuration-v5-x.html
 <h2>Core non-embedded fonts</h2>
 <p>PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and&nbsp;Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not need to be embedded in the PDF document.</p>
 <p><i>Advantages:</i> Small file size, fast processing, small memory usage.</p>
-<p><i>Disadvantages:</i> Limited choice of fonts for appearance. Will not display characters which are not in the <a href="/reference/codepages-glyphs/win-1252.html">win-1252</a>&nbsp; <a href="/reference/codepages-glyphs/symbols-adobe.html">Symbols</a>, or&nbsp; <a href="/reference/codepages-glyphs/zapfdingbats-adobe.html">Dingbats</a> codepages (suitable for most Western European languages).</p>
+<p><i>Disadvantages:</i> Limited choice of fonts for appearance. Will not display characters which are not in the <a href="{{ "/reference/codepages-glyphs/win-1252.html" | prepend: site.baseurl }}">win-1252</a>&nbsp; <a href="{{ "/reference/codepages-glyphs/symbols-adobe.html" | prepend: site.baseurl }}">Symbols</a>, or&nbsp; <a href="{{ "/reference/codepages-glyphs/zapfdingbats-adobe.html" | prepend: site.baseurl }}">Dingbats</a> codepages (suitable for most Western European languages).</p>
 <p>To use core fonts only, use 'c' for the initial parameter:</p>
 
 {% highlight php %}
@@ -86,7 +86,7 @@ $this->fonttrans = array(
 {% endhighlight %}
 
 <h2>Languages which require special fonts</h2>
-<p>Indic languages always require special handling (cf. <a href="/fonts-languages/indic-fonts-v5-x.html">Indic fonts</a>). Other than this, whether you need to do anything special is determined by the choice of fonts you use in the document, and whether they contain the necessary characters to display your text. The DejaVu fonts distributed with mPDF will usually display most Western and Eastern European languages, Cyrillic text, Baltic languages, Turkish, and Greek. Languages which usually need special consideration are: CJK (chinese - japanese - korean) languages, Vietnamese, Thai, and Arabic languages. With these, you need to tell mPDF to select a suitable font.</p>
+<p>Indic languages always require special handling (cf. <a href="{{ "/fonts-languages/indic-fonts-v5-x.html" | prepend: site.baseurl }}">Indic fonts</a>). Other than this, whether you need to do anything special is determined by the choice of fonts you use in the document, and whether they contain the necessary characters to display your text. The DejaVu fonts distributed with mPDF will usually display most Western and Eastern European languages, Cyrillic text, Baltic languages, Turkish, and Greek. Languages which usually need special consideration are: CJK (chinese - japanese - korean) languages, Vietnamese, Thai, and Arabic languages. With these, you need to tell mPDF to select a suitable font.</p>
 <p>There are a number of different ways to do this:</p>
 <p>1) Write your HTML code to specify the exact fonts needed:</p>
 
@@ -161,7 +161,7 @@ break;
 <body lang="hi">
 {% endhighlight %}
 
-<p>5) Use&nbsp;<a href="/reference/mpdf-functions/setautofont.html">SetAutoFont()</a> to automatically detect these languages. AutoFont inspects the HTML code and inserts&nbsp;a <code>span</code> element to mark text which is auto-detected e.g.</p>
+<p>5) Use&nbsp;<a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> to automatically detect these languages. AutoFont inspects the HTML code and inserts&nbsp;a <code>span</code> element to mark text which is auto-detected e.g.</p>
 
 {% highlight php %}
 <?php
@@ -181,7 +181,7 @@ $mpdf->SetAutoFont(AUTOFONT_ALL);
 
 <p>The <code>lang</code> attribute means that mPDF will select a font as described above in 2). You can also use CSS stylesheets to apply additional styles e.g. changing the font-size.</p>
 <p>Do not use AutoFont as well as methods (1) - (4).</p>
-<p>6) Use <a href="/reference/mpdf-variables/usesubstitutions.html">$useSubstitutions</a> to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not represented in the current font, it will try to substitute it from one of the fonts defined in <code>$this-&gt;backupSubsFont</code> in <span class="filename">config_fonts.php</span>.</p>
+<p>6) Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a> to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not represented in the current font, it will try to substitute it from one of the fonts defined in <code>$this-&gt;backupSubsFont</code> in <span class="filename">config_fonts.php</span>.</p>
 
 {% highlight php %}
 $this->backupSubsFont = array('dejavusanscondensed','norasi');
@@ -215,8 +215,8 @@ $mpdf = new mPDF('ru-x');     // behaves as though ('ru') called (Russian)
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/annotation.html">RTL &amp; Bidirectional text</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setautofont.html">SetAutoFont()</a> - Automatically detect language in the input HTML text and use appropriate fonts</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Automatically detect language in the input HTML text and use appropriate fonts</li>
 </ul>
 <p>There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a>.</p>
 </div>

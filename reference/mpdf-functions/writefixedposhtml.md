@@ -83,8 +83,8 @@ $mpdf=Output();
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/writehtml.html">WriteHTML</a> - Add an Index entry in the document </li>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/fixed-position-blocks.html">Fixed position elements</a> - About fixed-position elements (using CSS)
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML</a> - Add an Index entry in the document </li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/fixed-position-blocks.html" | prepend: site.baseurl }}">Fixed position elements</a> - About fixed-position elements (using CSS)
 
 </li>
 </ul>

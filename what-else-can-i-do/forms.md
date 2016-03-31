@@ -34,8 +34,8 @@ permalink: /what-else-can-i-do/forms.html
 <p>Duplicate field names can be used (e.g. to echo the text to a field elsewhere in the document), but fields with the same name must be of the the same type, and have the same default value set.</p>
 <p>Value(s) for radio buttons and checkboxes are required, and can only contain letters, numbers, colon(:), undersore(_), hyphen(-) or period(.)</p>
 <p>Values in all other form fields can contain any unicode character (although obviously only win-1252 codepage if you are using core fonts only for the document). HTML entities e.g. &amp;#2046; are recommended.</p>
-<p>See <a href="/html-support/html-attributes.html">HTML attibutes</a> for details of attributes which can be set e.g. disabled, required etc.</p>
-<p>See <a href="/css-stylesheets/supported-css.html">supported CSS</a> for style properties which can be applied.</p>
+<p>See <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attibutes</a> for details of attributes which can be set e.g. disabled, required etc.</p>
+<p>See <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">supported CSS</a> for style properties which can be applied.</p>
 <h3>Exporting (submitting) data</h3>
 <p>Data from forms can be submitted to a URI in either HTML or XFDF format (cf. <span class="filename">config.php</span>). XFDF is a form of XML and is recommended, because of encoding issues. See <span class="filename">formsubmit.php</span> in the example folder for ideas on how to handle the submitted data.</p>
 <p>NB A submitted radio button field name is doubled with an underscore i.e. "myButtonName_myButtonName"</p>

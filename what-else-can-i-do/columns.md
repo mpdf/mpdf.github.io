@@ -36,7 +36,7 @@ $mpdf->KeepColumns = true;
 <div class="alert alert-info" role="alert"><b>Note:</b> Block element borders (P,DIV etc) in columns may appear as disjointed lines. This is because they are written to the document line by line to allow repositioning when the columns are adjusted. The borders should appear correctly when "zoomed in" and when printing. Table cell borders may be similarly affected. Also note that the horizontal borders between table cells will only appear half width if a background color is used in the cell below, because the cell background may write over the bottom half of the border.</div>
 <p>&nbsp;</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> To create columns that span more than one page, use <a href="/what-else-can-i-do/floating-blocks.html">Floating blocks</a>.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> To create columns that span more than one page, use <a href="{{ "/what-else-can-i-do/floating-blocks.html" | prepend: site.baseurl }}">Floating blocks</a>.</div>
 <p>&nbsp;</p>
 </div>
 </div>

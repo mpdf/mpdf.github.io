@@ -8,7 +8,7 @@ permalink: /tables/table-layout.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>mPDF will atempt to layout tables using the same algorithm recommended by the HTML specifications (see <a href="/tables/auto-layout-algorithm.html">Auto-layout algorithm</a>). However, the constraints of fitting content to the page size means that the recommended algorithm has to be altered.</p>
+<p>mPDF will atempt to layout tables using the same algorithm recommended by the HTML specifications (see <a href="{{ "/tables/auto-layout-algorithm.html" | prepend: site.baseurl }}">Auto-layout algorithm</a>). However, the constraints of fitting content to the page size means that the recommended algorithm has to be altered.</p>
 <p>In general, mPDF places more priority on producing a pleasing, efficiently laid out table than it does on respecting defined values e.g. &lt;table width="300px"&gt; or &lt;td width="30%"&gt;</p>
 <p>If the result is not what you want, consider using some of the following to control the layout:</p>
 <ul>
@@ -33,7 +33,7 @@ permalink: /tables/table-layout.html
 <p><span class="parameter">$ignore_table_width</span></p>
 <p>Table widths set as absolute length values are respected when possible by mPDF - as long as the table layout meets the other constraints. This can lead to an ugly or inefficiently laid out table for a printed document. Setting <span class="parameter">$</span><span class="parameter">ignore_table_</span><span class="parameter">width</span> = <span class="smallblock">TRUE</span>; will force mPDF to ignore any table widths set as absolute length values.</p>
 <p><span class="parameter">$tableMinSizePriority</span></p>
-<p>If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="/reference/mpdf-variables/tableminsizepriority.html">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v&gt;=4.6)</p>
+<p>If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v&gt;=4.6)</p>
 </div>
 </div>
 

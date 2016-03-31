@@ -49,7 +49,7 @@ $this->PDFA = true; // Edit in config.php or set at runtime
 <p>PDF files handle colours internally in a number of different colorspaces. PDFA files must have one defined (and embedded) colour profile for one colorspace.</p>
 <p>The 3 colour RGB colorspace is used most commonly in PDF/A documents, although you could select a 4-colour CMYK colorspace - but you cannot use both together, and SPOT colours are not permitted. RGB colorpsace is the default in mPDF for a PDF/A1-b document.</p>
 <p>It is likely that most content in a PDF file will be RGB unless you have specifically defined otherwise e.g. a CMYK JPG image file, or colours defined as CMYK() etc.</p>
-<p>Colorspaces can be altered - see <a href="/reference/mpdf-variables/restrictcolorspace.html">restrictColorSpace</a>.</p>
+<p>Colorspaces can be altered - see <a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a>.</p>
 <p>An ICC Color profile must be embedded in the file.</p>
 <ul> </li>
 </ul>
@@ -166,13 +166,13 @@ $mpdf->PDFAauto = true; // Overrides warnings making changes when possible to fo
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/pdf-x-1a-compliance.html">PDF/X-1a compliance</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfa.html">PDFA</a> - Create PDF/A1-b compliant document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfx.html">PDFX</a> - Create PDF/X-1a compliant document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfaauto.html">PDFAauto</a> - Specify whether to automatically fix issues to create PDF/A1-b compliant document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfxauto.html">PDFXauto</a> - Specify whether to automatically fix issues to create PDF/X-1a compliant document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/iccprofile.html">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/restrictcolorspace.html">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-x-1a-compliance.html" | prepend: site.baseurl }}">PDF/X-1a compliance</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfa.html" | prepend: site.baseurl }}">PDFA</a> - Create PDF/A1-b compliant document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfx.html" | prepend: site.baseurl }}">PDFX</a> - Create PDF/X-1a compliant document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfaauto.html" | prepend: site.baseurl }}">PDFAauto</a> - Specify whether to automatically fix issues to create PDF/A1-b compliant document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfxauto.html" | prepend: site.baseurl }}">PDFXauto</a> - Specify whether to automatically fix issues to create PDF/X-1a compliant document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
 </ul>
 <h2>Useful resources</h2>
 <p>On-line PDFA Validator: <a href="http://www.validatepdfa.com/online.htm">http://www.validatepdfa.com/online.htm</a></p>

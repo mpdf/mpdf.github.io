@@ -67,7 +67,7 @@ $mpdf->Output();
 {% endhighlight %}
 
 <h2>See Also</h2>
-<p><a href="/what-else-can-i-do/capture-html-output.html">Capturing HTML</a></p>
+<p><a href="{{ "/what-else-can-i-do/capture-html-output.html" | prepend: site.baseurl }}">Capturing HTML</a></p>
 </div>
 </div>
 

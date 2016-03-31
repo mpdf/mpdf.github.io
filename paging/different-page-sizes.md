@@ -35,18 +35,18 @@ h1.bigsection {
 </style>
 {% endhighlight %}
 
-<p>You can reference the @page selectors using other CSS as above (and see <a href="/paging/using-page.html">Using @page</a>) or setting attributes in:</p>
+<p>You can reference the @page selectors using other CSS as above (and see <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a>) or setting attributes in:</p>
 <ul>
-<li>&lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt;&nbsp; e.g. &lt;tocpagebreak ... page-selector="bigger" toc-page-selector="toc" ... /&gt;</li>
-<li>&lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt;&nbsp; e.g. &lt;pagebreak ... page-selector="bigger" ... /&gt;</li>
+<li>&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;&nbsp; e.g. &lt;tocpagebreak ... page-selector="bigger" toc-page-selector="toc" ... /&gt;</li>
+<li>&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;&nbsp; e.g. &lt;pagebreak ... page-selector="bigger" ... /&gt;</li>
 </ul>
-<p>The functions <a href="/reference/mpdf-functions/addpage.html">AddPage()</a> and <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a> both have parameters which allow you to select a @page</p>
+<p>The functions <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> both have parameters which allow you to select a @page</p>
 <h3>2) Specify the sheet size when forcing a new page (HTML tags)
 
 </h3>
 <ul>
-<li>&lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; e.g. &lt;pagebreak ... sheet-size="A3-L" ... /&gt;</li>
-<li>&lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt; e.g. &lt;tocpagebreak ... sheet-size="420mm 370mm" toc-sheet-size="A4" ... /&gt;</li>
+<li>&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; e.g. &lt;pagebreak ... sheet-size="A3-L" ... /&gt;</li>
+<li>&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; e.g. &lt;tocpagebreak ... sheet-size="420mm 370mm" toc-sheet-size="A4" ... /&gt;</li>
 </ul>
 <p>Accepted values are:</p>
 <ul>
@@ -55,8 +55,8 @@ h1.bigsection {
 <li>a string of 2 dimensions e.g. "21cm 29.7cm" Can be px, pt, in, mm, cm: but not em, ex, or %</li>
 </ul>
 <h3>3) Specify the sheet size when forcing a new page (functions)</h3>
-<p>The functions <a href="/reference/mpdf-functions/addpage.html">AddPage()</a> and <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a> both have parameters to select sheet size.</p>
-<p>Accepted values - same options as the original <a href="/reference/mpdf-functions/mpdf.html">mPDF()</a> - are:</p>
+<p>The functions <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> both have parameters to select sheet size.</p>
+<p>Accepted values - same options as the original <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a> - are:</p>
 <ul>
 <li>"A4", "A3", "Letter" etc</li>
 <li>"A4-L", "A3-L", "Letter-L" etc. for landscape</li>
@@ -65,7 +65,7 @@ h1.bigsection {
 <h3>Limitations</h3>
 <ul>
 <li>mPDF will not carry over block-style elements across page-breaks.</li>
-<li>Does not work with &lt;<a href="/reference/html-control-tags/formfeed.html">formfeed</a>&gt;, and disabled if using $this-&gt;restoreBlockPageBreaks</li>
+<li>Does not work with &lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">formfeed</a>&gt;, and disabled if using $this-&gt;restoreBlockPageBreaks</li>
 <li>Cannot use @page { size: portrait | landscape; } at the same time as defining the sheet-size</li>
 </ul>
 <p>&nbsp;</p>

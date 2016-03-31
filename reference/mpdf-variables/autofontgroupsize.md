@@ -13,7 +13,7 @@ permalink: /reference/mpdf-variables/autofontgroupsize.html
 <h2>Value</h2>
 
 <div class="alert alert-info" role="alert">void <b>autoFontGroupSize</b></div>
-<p>Specify the chunk size of text to group when auto-detecting languages using <a href="/reference/mpdf-functions/setautofont.html">SetAutoFont()</a>.</p>
+<p>Specify the chunk size of text to group when auto-detecting languages using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a>.</p>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> This variable is removed from mPDF v 6.0</div>
 <p>Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage is that it may include bits of other languages either side, forcing them in the font used for the "foreign" language.
@@ -102,10 +102,10 @@ See the result of this as a PDF file
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/uselang.html">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/autofontgroupsize.html">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>
 <li class="manual_boxlist"><a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li>
-<li class="manual_boxlist"><a href="/fonts-languages/lang-v5-x.html">lang</a> - Information on mPDF support for the HTML attribute lang</li>
+<li class="manual_boxlist"><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
 </ul>
 </div>
 </div>

@@ -13,7 +13,7 @@ permalink: /reference/html-control-tags/pagefooter.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">&lt;<b>pagefooter</b> [ <span class="parameter">name</span> ] [ <span class="parameter">content-left</span> ] [ <span class="parameter">content-center</span> ] [ <span class="parameter">content-right</span> ] [ <span class="parameter">footer-style</span> ] [ <span class="parameter">footer-style-left</span> ] [ <span class="parameter">footer-style-center</span> ] [ <span class="parameter">footer-style-right</span> ] [ <span class="parameter">line</span> ] /&gt;</div>
-<p>Define a page footer with a given name. Named footers can be referenced and set later in the document e.g. &lt;<a href="/reference/html-control-tags/setpageheader.html">setpagefooter</a>&gt;</p>
+<p>Define a page footer with a given name. Named footers can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;</p>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 <h2>Attributes</h2>
@@ -75,15 +75,15 @@ color
 <h2>Examples</h2>
 <p>For examples and further information please see:</p>
 <ul>
-<li class="manual_boxlist"><a href="/headers-footers/headers-footers.html">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="/headers-footers/method-1.html">Headers &amp; Footers - Method 3</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a></li>
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/defheaderbyname.html">DefFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/pagefooter.html">pageheader</a>&gt;</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setheaderbyname.html">SetFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/setpageheader.html">setpagefooter</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pageheader</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;</li>
 </ul>
 <p>&nbsp;</p>
 </div>

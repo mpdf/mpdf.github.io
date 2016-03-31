@@ -14,7 +14,7 @@ permalink: /fonts-languages/character-substitution.html
 <h3>Core fonts
 
 </h3>
-<p>In documents using core fonts only, only characters included in the <a href="/reference/codepages-glyphs/win-1252.html">win-1252</a> codepage are available in the Arial/Helvetica, Times or Courier fonts. If the document includes characters which are included in the other core Adobe fonts - <a href="/reference/codepages-glyphs/symbols-adobe.html">Symbols</a>, or&nbsp; <a href="/reference/codepages-glyphs/zapfdingbats-adobe.html">Dingbats</a> - these will be substituted. Because they are displayed using a different font they may appear 'odd'.</p>
+<p>In documents using core fonts only, only characters included in the <a href="{{ "/reference/codepages-glyphs/win-1252.html" | prepend: site.baseurl }}">win-1252</a> codepage are available in the Arial/Helvetica, Times or Courier fonts. If the document includes characters which are included in the other core Adobe fonts - <a href="{{ "/reference/codepages-glyphs/symbols-adobe.html" | prepend: site.baseurl }}">Symbols</a>, or&nbsp; <a href="{{ "/reference/codepages-glyphs/zapfdingbats-adobe.html" | prepend: site.baseurl }}">Dingbats</a> - these will be substituted. Because they are displayed using a different font they may appear 'odd'.</p>
 <h3>Unicode fonts
 
 </h3>
@@ -31,7 +31,7 @@ $this->useSubstitutions = true;
 <li>if the character is in Unicode Plane 2 (SIP) i.e. Unicode value &gt; U+20000: 
 
 <ol>
-<li>looks in the sip-ext font file (see <a href="/fonts-languages/fonts-in-mpdf-5-x.html">Fonts in mPDF 5.x</a>);</li>
+<li>looks in the sip-ext font file (see <a href="{{ "/fonts-languages/fonts-in-mpdf-5-x.html" | prepend: site.baseurl }}">Fonts in mPDF 5.x</a>);</li>
 <li>looks in the font defined by <code>$this-&gt;backupSIPFont</code> in the <span class="filename">config_fonts.php</span> file</li>
 </ol>
 </li>

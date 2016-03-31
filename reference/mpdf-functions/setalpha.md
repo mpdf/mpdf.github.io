@@ -102,7 +102,7 @@ exit;
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/image.html">Image()</a> - Write an image to the current document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/image.html" | prepend: site.baseurl }}">Image()</a> - Write an image to the current document</li>
 </ul>
 <p>&nbsp;</p>
 </div>

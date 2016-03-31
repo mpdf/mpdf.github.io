@@ -13,7 +13,7 @@ permalink: /reference/mpdf-functions/setdefaultfontsize.html
 
 <div class="alert alert-info" role="alert"><b>Note</b>: Although this function is still available, it is not needed, nor recommended. Default font size and other layout styles can be altered if required by editing the file mpdf.css
 
-See <a href="/css-stylesheets/default-stylesheet.html">Default stylesheet</a> for more information.</div>
+See <a href="{{ "/css-stylesheets/default-stylesheet.html" | prepend: site.baseurl }}">Default stylesheet</a> for more information.</div>
 <p>&nbsp;</p>
 </div>
 </div>

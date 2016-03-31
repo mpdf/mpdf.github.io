@@ -13,7 +13,7 @@ permalink: /reference/mpdf-variables/list-indent-default.html
 
 <div class="alert alert-info" role="alert">void <b>list_indent_default</b></div>
 <p>Define the default indentation of a list item, when in standard 'browser' list mode.</p>
-<p>For more information, see <a href="/what-else-can-i-do/lists.html">Lists</a>.</p>
+<p>For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists</a>.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">list_indent_default</span></p>
 <p class="manual_param_dd"><b>Values</b>
@@ -31,7 +31,7 @@ permalink: /reference/mpdf-variables/list-indent-default.html
 </tr>
 </tbody> </table>
 <h2>See Also</h2>
-<p><a href="/what-else-can-i-do/lists.html">Lists </a></p>
+<p><a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists </a></p>
 </div>
 </div>
 

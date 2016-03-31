@@ -48,7 +48,7 @@ div.right { direction: rtl; }
 <p>The default value for text-align is "a nameless value which is dependent on direction". However, once text-align is specified, it is respected and inherited by all descendants.</p>
 <h3>Text Bidirectionality</h3>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> <a href="/fonts-languages/opentype-layout-otl.html">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</div>
 <p>Bi-directional text is supported in mPDF.</p>
 <p>1) The following Unicode characters are supported, and can be inserted directly in the text as HTML entities:</p>
 <table class="bpmTopic"> <tbody>
@@ -239,7 +239,7 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 <h3>See Also</h3>
 <ul>
 <li class="manual_boxlist">
-<p><a href="/fonts-languages/lang-v5-x.html">lang</a> - Information on mPDF support for the HTML attribute lang</p>
+<p><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</p>
 </li>
 </ul>
 </div>

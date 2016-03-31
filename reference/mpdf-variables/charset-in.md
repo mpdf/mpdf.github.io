@@ -17,7 +17,7 @@ permalink: /reference/mpdf-variables/charset-in.html
 <p class="manual_param_dt"><span class="parameter">charset_in</span></p>
 <p class="manual_param_dd"><b>Values</b> (case-insensitive)
 
-Any string value allowed which is valid for the PHP function <a href="/reference/codepages-glyphs/iconv.html">iconv()</a>. This appears to vary depending on the local configuration. See the manual entry for <a href="/reference/codepages-glyphs/iconv.html">iconv</a> for usual values. You may need to use cp1252 or windows-1252 instead of win-1252, or iso-88591 instead of iso-8859-1.
+Any string value allowed which is valid for the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv()</a>. This appears to vary depending on the local configuration. See the manual entry for <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> for usual values. You may need to use cp1252 or windows-1252 instead of win-1252, or iso-88591 instead of iso-8859-1.
 
 <span class="smallblock">BLANK</span> or omitted: Expect all text input as UTF-8 encoding.</p>
 <h2>Examples</h2>
@@ -48,9 +48,9 @@ $mpdf->Output();
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/writehtml.html">WriteHTML()</a> - Write HTML code to document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/allow-charset-conversion.html">allow_charset_conversion</a> - Activates character encoding conversion of input text</li>
-<li class="manual_boxlist"> <a href="/reference/codepages-glyphs/iconv.html">iconv</a> - list of values accepted for this variable
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML code to document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">allow_charset_conversion</a> - Activates character encoding conversion of input text</li>
+<li class="manual_boxlist"> <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> - list of values accepted for this variable
 
 </li>
 </ul>

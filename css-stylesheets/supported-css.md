@@ -15,11 +15,11 @@ permalink: /css-stylesheets/supported-css.html
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Support for "rem" was added mPDF 5.7&nbsp; Unlike the CSS3 specification, the basic size used for rem in the document is based on the font-size set on the &lt;body&gt; element (rather than the &lt;html&gt; element).</div>
 
-<div class="alert alert-info" role="alert">Conversion from "px" is determined by the configurable variables <a href="/reference/mpdf-variables/dpi.html">dpi</a> and <a href="/reference/mpdf-variables/img-dpi.html">img_dpi</a></div>
+<div class="alert alert-info" role="alert">Conversion from "px" is determined by the configurable variables <a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a></div>
 
 <div class="alert alert-info" role="alert">"ex" uses an approximation of half the font height</div>
 <p><span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as <i>sans</i>, <i>sans-serif</i>, <i>serif</i> or <i>monospace</i>.</p>
-<p><span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or <a href="/css-stylesheets/named-colours.html">colour names</a> e.g. 'black', 'gray' are supported.
+<p><span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g. 'black', 'gray' are supported.
 
 Also supported are:</p>
 <ul>
@@ -32,7 +32,7 @@ Also supported are:</p>
 <li>cmyka(100,100,100,100,1) <i>[or 0-100%; last value is transparency (alpha) - between 0-1]*</i></li>
 <li>device-cmyk(100,100,100,100) <i>[or 0-100%]</i></li>
 <li><i>device-cmyka</i>(100,100,100,100,1) <i>[or 0-100%; last value is transparency (alpha) - between 0-1]*</i></li>
-<li>spot(COLOR NAME, 100%). (cf. <a href="/reference/mpdf-functions/addspotcolor.html">AddSpotColor</a>)</li>
+<li>spot(COLOR NAME, 100%). (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)</li>
 </ul>
 <p>mPDF&nbsp; &gt;= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);</p>
 <p>*Alpha values (transparency) are only supported on background colours - not text color</p>
@@ -76,7 +76,7 @@ Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)</td>
 <p>background-position is supported as per CSS2.1</p>
 <p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
 <p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 <p>(All except background-color added mPDF 3.0)</p>
 </td>
 </tr>
@@ -96,7 +96,7 @@ Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)</td>
 <p>linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or</p>
 <p>radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;</p>
 <p>x, y and radius are values between 0 and 1</p>
-<p>(custom attribute) (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 </td>
 </tr>
 <tr>
@@ -268,7 +268,7 @@ As per draft CSS3 spec. (mPDF &gt;= 6.0)</p>
 <p>background-position is supported as per CSS2.1</p>
 <p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
 <p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 <p>(All except background-color added mPDF 3.0)</p>
 </td>
 </tr>
@@ -309,7 +309,7 @@ As per draft CSS3 spec. (mPDF &gt;= 6.0)</p>
 <p>linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or</p>
 <p>radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;</p>
 <p>x, y and radius are values between 0 and 1</p>
-<p>(custom attribute) (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 </td>
 </tr>
 <tr>
@@ -348,14 +348,14 @@ As per draft CSS3 spec. (mPDF &gt;= 6.0)</p>
 <td>box-decoration-break</td>
 <td>
 <p>slice | clone&nbsp; (default = slice)</p>
-<p>Defines the handling of padding and borders at page breaks, when <a href="/paging/page-breaks.html">clonebycss</a> set</p>
+<p>Defines the handling of padding and borders at page breaks, when <a href="{{ "/paging/page-breaks.html" | prepend: site.baseurl }}">clonebycss</a> set</p>
 </td>
 </tr>
 <tr>
 <td>z-index</td>
 <td>
 <p>Sets a layer in the PDF document.</p>
-<p>Note: this is not the same as a "layer" in CSS terms. See <a href="/what-else-can-i-do/layers.html">Layers</a>.</p>
+<p>Note: this is not the same as a "layer" in CSS terms. See <a href="{{ "/what-else-can-i-do/layers.html" | prepend: site.baseurl }}">Layers</a>.</p>
 </td>
 </tr>
 <tr> <th rowspan="11">
@@ -654,7 +654,7 @@ As per CSS. (mPDF&nbsp; &gt;= 5.7)</td>
 <p>background-position is supported as per CSS2.1</p>
 <p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
 <p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 <p>(All except background-color added mPDF 5.1)</p>
 </td>
 </tr>
@@ -837,7 +837,7 @@ Controls table layout if minimum width is too wide for page.</td>
 <p>background-position is supported as per CSS2.1</p>
 <p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
 <p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 <p>(All except background-color added mPDF 5.1)</p>
 </td>
 </tr>
@@ -905,7 +905,7 @@ As per CSS3 specification</td>
 <p>linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or</p>
 <p>radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;</p>
 <p>x, y and radius are values between 0 and 1</p>
-<p>(custom attribute) (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 <p>(Added mPDF 3.2)</p>
 </td>
 </tr>
@@ -1164,13 +1164,13 @@ smooth - interpolation enabled</p>
 </tr>
 <tr>
 <td>float</td>
-<td>left | right (cf. <a href="/what-else-can-i-do/images.html">Images</a>)
+<td>left | right (cf. <a href="{{ "/what-else-can-i-do/images.html" | prepend: site.baseurl }}">Images</a>)
 
 </td>
 </tr>
 <tr>
 <td>z-index</td>
-<td>Sets a layer in the PDF document. See <a href="/what-else-can-i-do/layers.html">Layers</a>.</td>
+<td>Sets a layer in the PDF document. See <a href="{{ "/what-else-can-i-do/layers.html" | prepend: site.baseurl }}">Layers</a>.</td>
 </tr>
 <tr>
 <td>(vspace, hspace)</td>
@@ -1385,7 +1385,7 @@ margin-footer</i></td>
 <p>background-position is supported as per CSS2.1</p>
 <p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
 <p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 </td>
 </tr>
 <tr>
@@ -1420,7 +1420,7 @@ margin-footer</i></td>
 <p>linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or</p>
 <p>radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;</p>
 <p>x, y and radius are values between 0 and 1</p>
-<p>(custom attribute) (cf. <a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; borders</a>)</p>
+<p>(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
 </td>
 </tr>
 <tr>
@@ -1429,11 +1429,11 @@ margin-footer</i></td>
 </tr>
 <tr>
 <td><i>pagenumstyle</i></td>
-<td>1 | A | a | I | i&nbsp; <span class="smallblock">&nbsp;</span>See &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; for details</td>
+<td>1 | A | a | I | i&nbsp; <span class="smallblock">&nbsp;</span>See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for details</td>
 </tr>
 <tr>
 <td><i>suppress</i></td>
-<td>on | off | 1 | 0&nbsp; See &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; for details</td>
+<td>on | off | 1 | 0&nbsp; See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for details</td>
 </tr>
 </tbody> </table>
 <p><b>Common Text Styles</b></p>
@@ -1650,8 +1650,8 @@ As per CSS3
 <p>medium|thin|thick are accepted for size - converted to 1px, 3px, 5px</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; Borders (including Gradients)</a></li>
-<li class="manual_boxlist"><a href="/html-support/html-attributes.html">HTML supported attributes</a> </li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; Borders (including Gradients)</a></li>
+<li class="manual_boxlist"><a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML supported attributes</a> </li>
 </ul>
 </div>
 </div>

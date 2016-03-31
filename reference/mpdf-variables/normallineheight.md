@@ -16,7 +16,7 @@ permalink: /reference/mpdf-variables/normallineheight.html
 <p>This variable defines the default line-height used when the CSS property line-height is set to normal (default).</p>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> From mPDF v 6.0 onwards, this value will only be used when the variable <code>useFixedNormalLineHeight</code> is set to <span class="smallblock">TRUE</span></div>
-<p>For more information, see <a href="/what-else-can-i-do/line-height.html">Line-height</a>.</p>
+<p>For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a>.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">normalLineheight</span></p>
 <p class="manual_param_dd"><b>Values</b>
@@ -34,7 +34,7 @@ permalink: /reference/mpdf-variables/normallineheight.html
 </tr>
 </tbody> </table>
 <h2>See Also</h2>
-<p><a href="/what-else-can-i-do/line-height.html">Line-height</a></p>
+<p><a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a></p>
 <h2>Further reading</h2>
 <ul>
 <li><a href="http://office.microsoft.com/en-us/word/HP100165231033.aspx">http://office.microsoft.com/en-us/word/HP100165231033.aspx</a> </li>

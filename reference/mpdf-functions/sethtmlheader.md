@@ -35,7 +35,7 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Important Difference - <a href="/reference/mpdf-functions/setheader.html">SetHeader()</a> and <a href="/reference/mpdf-functions/setfooter.html">SetFooter()</a> called without specifying a <span class="parameter">side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; <b>SetHTMLHeader()</b> and <a href="/reference/mpdf-functions/sethtmlfooter.html">SetHTMLFooter()</a> without a <span class="parameter">side</span> - sets <span class="smallblock">ODD</span> page header/footer only as default</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; <b>SetHTMLHeader()</b> and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">side</span> - sets <span class="smallblock">ODD</span> page header/footer only as default</div>
 <h2>Changelog</h2>
 <table class="bpmTopic"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
@@ -48,12 +48,12 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 <h2>Examples</h2>
 <p>For examples and further information please see:</p>
 <ul>
-<li class="manual_boxlist"><a href="/headers-footers/headers-footers.html">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="/headers-footers/method-2.html">Headers &amp; Footers - Method 2</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/method-2.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 2</a></li>
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/sethtmlfooter.html">SetHTMLFooter()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a></li>
 </ul>
 <p>&nbsp;</p>
 </div>

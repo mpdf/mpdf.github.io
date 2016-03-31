@@ -13,7 +13,7 @@ permalink: /reference/mpdf-variables/bidirectional.html
 <div class="alert alert-info" role="alert"><b>Note: </b>This variable originally started with an uppercase letter (&lt;= mPDF 2.2). Support for the uppercase version was removed in mPDF &gt;= 6.0</div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/fonts-languages/arabic-rtl-text-v5-x.html">RTL &amp; Bidirectional text</a> </li>
+<li class="manual_boxlist"><a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a> </li>
 </ul>
 </div>
 </div>

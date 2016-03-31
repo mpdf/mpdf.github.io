@@ -13,7 +13,7 @@ permalink: /headers-footers/method-4.html
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:&nbsp;</b><a href="/reference/mpdf-functions/addpage.html">AddPage()</a>, <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a>, &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebrea</a>k&gt; &lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt; and <a href="/paging/using-page.html">@page</a> can reference both HTML and NON-HTML headers/footers. When referring to an HTML header/footer you must add the prefix 'html_' to distinguish them.</div>
+<div class="alert alert-info" role="alert"><b>Note:&nbsp;</b><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>, <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>, &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; and <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> can reference both HTML and NON-HTML headers/footers. When referring to an HTML header/footer you must add the prefix 'html_' to distinguish them.</div>
 <h2>Defining NAMED HTML Headers/Footers
 
 </h2>
@@ -97,17 +97,17 @@ $html = '
 <ul>
 <li>Methods for <span class="smallblock">HTML</span> headers/footers only - <b>Recommended</b> when setting the first page header/footer at the start of a document (although they can also be used to change headers/footers during the document).
 <ul>
-<li><a href="/reference/mpdf-functions/sethtmlheaderbyname.html">SetHTMLHeaderByName()</a> - see Example #3&nbsp; </li>
-<li><a href="/reference/mpdf-functions/sethtmlfooterbyname.html">SetHTMLFooterByName()</a> - see Example #3
+<li><a href="{{ "/reference/mpdf-functions/sethtmlheaderbyname.html" | prepend: site.baseurl }}">SetHTMLHeaderByName()</a> - see Example #3&nbsp; </li>
+<li><a href="{{ "/reference/mpdf-functions/sethtmlfooterbyname.html" | prepend: site.baseurl }}">SetHTMLFooterByName()</a> - see Example #3
 
 </li>
-<li><a href="/paging/using-page.html">@page</a> - see Example #5
+<li><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> - see Example #5
 
 </li>
-<li>&lt;<a href="/reference/html-control-tags/sethtmlpageheader.html">sethtmlpageheader</a>&gt; - see Example #4
+<li>&lt;<a href="{{ "/reference/html-control-tags/sethtmlpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt; - see Example #4
 
 </li>
-<li>&lt;<a href="/reference/html-control-tags/sethtmlpagefooter.html">sethtmlpagefooter</a>&gt; - see Example#4
+<li>&lt;<a href="{{ "/reference/html-control-tags/sethtmlpagefooter.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt; - see Example#4
 
 </li>
 </ul>
@@ -116,17 +116,17 @@ $html = '
 <ul>
 <li>Methods to access any headers/footers (<span class="smallblock">HTML</span> or <span class="smallblock">NON-HTML</span>) - <b>Recommended</b> when changing header/footer during the document.
 <ul>
-<li><a href="/reference/mpdf-functions/addpage.html">AddPage()</a> - see Example #6
+<li><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - see Example #6
 
 </li>
-<li>&lt;<a href="/reference/html-control-tags/pagebreak.html">pagebrea</a>k&gt; - see Example #7
+<li>&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; - see Example #7
 
 </li>
-<li><a href="/paging/using-page.html">@page</a> - see Example #5
+<li><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> - see Example #5
 
 </li>
-<li><a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a> - see Example #8</li>
-<li>&lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt; - see Example #9</li>
+<li><a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> - see Example #8</li>
+<li>&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; - see Example #9</li>
 </ul>
 </li>
 </ul>
@@ -423,19 +423,19 @@ $mpdf->WriteHTML($html);
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/defhtmlheaderbyname.html">DefHTMLHeaderByName()</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/defhtmlfooterbyname.html">DefHTMLFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/htmlpageheader.html">htmlpageheader</a>&gt;</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/htmlpagefooter.html">htmlpagefooter</a>&gt;</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/sethtmlheaderbyname.html">SetHTMLHeaderByName()</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/sethtmlfooterbyname.html">SetHTMLFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/sethtmlpageheader.html">sethtmlpageheader</a>&gt;</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/sethtmlpagefooter.html">sethtmlpagefooter</a>&gt;</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/addpage.html">AddPage()</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/pagebreak.html">pagebrea</a>k&gt;</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt;</li>
-<li class="manual_boxlist"><a href="/paging/using-page.html">@page</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlheaderbyname.html" | prepend: site.baseurl }}">SetHTMLHeaderByName()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooterbyname.html" | prepend: site.baseurl }}">SetHTMLFooterByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/sethtmlpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt;</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/sethtmlpagefooter.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt;</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a></li>
 </ul>
 <p>&nbsp;</p>
 </div>

@@ -16,7 +16,7 @@ permalink: /what-else-can-i-do/line-breaking.html
 <li>Hyphen-minus U+002D when CSS hyphens set to "manual" or "auto", except when in a URL, or when following character is a &gt; or a numeral</li>
 <li>Hard hyphen U+2010 when CSS hyphens set to "manual" or "auto"</li>
 <li>Soft hyphen U+00AD "­" when CSS hyphens set to "manual" or "auto"</li>
-<li><a href="/what-else-can-i-do/hyphenation.html">Automatic hyphenation</a> when CSS hyphens set to "auto"</li>
+<li><a href="{{ "/what-else-can-i-do/hyphenation.html" | prepend: site.baseurl }}">Automatic hyphenation</a> when CSS hyphens set to "auto"</li>
 <li>Between CJK characters, except CJK numerals, before "CJK-following" or after "CJK-leading" characters</li>
 </ul>
 <p>Lao, Thai and Khmer text does not have space between words. By default, mPDF uses word dictionaries to determine appropriate opportunites for line-breaks. Users may turn this function off using the configurable variable <code>useDictionaryLBR</code>.</p>

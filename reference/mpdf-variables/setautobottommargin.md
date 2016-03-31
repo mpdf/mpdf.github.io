@@ -26,11 +26,11 @@ stretch -&nbsp; margin-bottom sets a <b>minimum</b> distance in mm between the b
 <span class="smallblock">DEFAULT</span> <span class="smallblock">FALSE</span></p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/headers-footers/headers-top-margins.html">Headers &amp; Top margins </a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/setautotopmargin.html">setAutoTopMargin</a> -Specify mode of determining top-margin position
+<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-top-margins.html" | prepend: site.baseurl }}">Headers &amp; Top margins </a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/setautotopmargin.html" | prepend: site.baseurl }}">setAutoTopMargin</a> -Specify mode of determining top-margin position
 
 </li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/automarginpadding.html">autoMarginPadding</a> - Specify padding between top-margin and header in automatic mode
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/automarginpadding.html" | prepend: site.baseurl }}">autoMarginPadding</a> - Specify padding between top-margin and header in automatic mode
 
 </li>
 </ul>

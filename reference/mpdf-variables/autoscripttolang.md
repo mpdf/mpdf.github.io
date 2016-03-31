@@ -25,8 +25,8 @@ permalink: /reference/mpdf-variables/autoscripttolang.html
 <span class="smallblock">FALSE</span>: No markup applied.</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/autolangtofont.html">autoLangToFont</a> - selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code></li>
-<li class="manual_boxlist"><a href="/fonts-languages/automatic-font-selection.html">Automatic Font selection</a> </li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">autoLangToFont</a> - selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code></li>
+<li class="manual_boxlist"><a href="{{ "/fonts-languages/automatic-font-selection.html" | prepend: site.baseurl }}">Automatic Font selection</a> </li>
 </ul>
 <p>&nbsp;</p>
 </div>

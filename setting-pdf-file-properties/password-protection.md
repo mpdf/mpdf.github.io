@@ -19,7 +19,7 @@ permalink: /setting-pdf-file-properties/password-protection.html
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setprotection.html">SetProtection()</a> - Encrypts and sets the PDF document permissions</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setprotection.html" | prepend: site.baseurl }}">SetProtection()</a> - Encrypts and sets the PDF document permissions</li>
 </ul>
 <p>&nbsp;</p>
 </div>

@@ -13,7 +13,7 @@ permalink: /reference/mpdf-functions/insertindex.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">void <b>InsertIndex</b> ([ int <span class="parameter">$usedivletters</span> [,&nbsp;boolean <span class="parameter">$uselinking</span> [, string <span class="parameter">$indexCollationLocale</span> [, string <span class="parameter">$indexCollationGroup</span> ]]]])</div>
-<p>Inserts an Index for the document based on index entries made using &lt;<a href="/reference/html-control-tags/tocentry.html">indexentry</a>&gt; or <a href="/reference/mpdf-functions/indexentry.html">IndexEntry()</a>.</p>
+<p>Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>.</p>
 <h2>Parameters</h2>
 <p><span class="parameter">usedivletters</span></p>
 <p class="manual_param_dd">Defines whether to divide index entries starting with the same letter, using a (large) letter as a heading.
@@ -57,7 +57,7 @@ NB This will not affect the overall order of entries, which is determined by the
 </tbody> </table>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/index.html">Indexes</a></li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a></li>
 </ul>
 </div>
 </div>

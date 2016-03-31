@@ -31,7 +31,7 @@ permalink: /fonts-languages/fonts-in-mpdf-6-x.html
         ),
 {% endhighlight %}
 
-<p>For fonts which handle complex scripts and/or right-to-left text, see <a href="/fonts-languages/opentype-layout-otl.html">OpenType layout (OTL)</a> for details of setting OTL use and support for kashida e.g.</p>
+<p>For fonts which handle complex scripts and/or right-to-left text, see <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> for details of setting OTL use and support for kashida e.g.</p>
 
 {% highlight php %}
    "frutiger" => array(
@@ -70,7 +70,7 @@ permalink: /fonts-languages/fonts-in-mpdf-6-x.html
 {% endhighlight %}
 
 <h2>Full Unicode support</h2>
-<p>The DejaVu fonts distributed with mPDF contain an extensive set of characters - see <a href="/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html">Unicode coverage of free fonts</a> for details of these and other open-source fonts.</p>
+<p>The DejaVu fonts distributed with mPDF contain an extensive set of characters - see <a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode coverage of free fonts</a> for details of these and other open-source fonts.</p>
 <h2>Complex scripts</h2>
 <h3>Right-to-left languages (Hebrew, Arabic etc.)</h3>
 <p>Arabic languages and Hebrew are written in a right-to-left direction (RTL). mPDF recognises both Arabic and Hebrew languages and reverses text direction automatically.</p>
@@ -101,7 +101,7 @@ permalink: /fonts-languages/fonts-in-mpdf-6-x.html
 <p>Plane 2, the Supplementary Ideographic Plane (SIP), is used for about 40,000 Unified Han (CJK) Ideographs.</p>
 <p>mPDF supports fonts containing characters from all Unicode Planes. By choosing the correct font, almost every single character from Unicode 5 can be displayed in a PDF file.</p>
 <h3>Unicode Supplementary Multilingual Plane (SMP or Plane 1) U+10000 - U+1FFFF</h3>
-<p>The Unicode Supplementary Multilingual Plane contains ranges such as Gothic text and Egyptian Hieroglyphics. as well as other (mainly) ancient scripts - see <a href="/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html">Unicode coverage of free fonts</a> for full list.</p>
+<p>The Unicode Supplementary Multilingual Plane contains ranges such as Gothic text and Egyptian Hieroglyphics. as well as other (mainly) ancient scripts - see <a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode coverage of free fonts</a> for full list.</p>
 <p>mPDF uses a different method to embed fonts in the PDF file if they include characters from SMP or SIP, because the characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less eficient than the default method, and it can be suppressed by adding the font name to the array <code>BMPonly</code> in the <span class="filename">config_fonts.php</span> configuration file.</p>
 <p>Note that the DejaVu fonts&nbsp; distributed with mPDF do contain a few characters in the SMP plane, but most users will not require them and by default they are added to the array <code>BMPonly</code>.</p>
 <h2>Using CJK fonts in mPDF</h2>

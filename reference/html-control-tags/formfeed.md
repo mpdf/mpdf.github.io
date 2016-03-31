@@ -151,7 +151,7 @@ If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the 
 <span class="parameter">odd-footer-name</span>
 
 <span class="parameter">even-footer-name</span></p>
-<p class="manual_param_dd">Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using &lt;<a href="/reference/html-control-tags/pageheader.html">pageheader</a>&gt;, &lt;<a href="/reference/html-control-tags/pagefooter.html">pagefooter</a>&gt;, &lt;<a href="/reference/html-control-tags/htmlpageheader.html">htmlpageheader</a>&gt;, or &lt;<a href="/reference/html-control-tags/htmlpagefooter.html">htmlpagefooter</a>&gt;.
+<p class="manual_param_dd">Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
@@ -165,7 +165,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 <span class="parameter">odd-footer-</span><span class="parameter">value</span>
 
 <span class="parameter">even-footer-</span><span class="parameter">value</span></p>
-<p class="manual_param_dd">Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using &lt;<a href="/reference/html-control-tags/pageheader.html">pageheader</a>&gt;, &lt;<a href="/reference/html-control-tags/pagefooter.html">pagefooter</a>&gt;, &lt;<a href="/reference/html-control-tags/htmlpageheader.html">htmlpageheader</a>&gt;, or &lt;<a href="/reference/html-control-tags/htmlpagefooter.html">htmlpagefooter</a>&gt;.
+<p class="manual_param_dd">Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
@@ -180,7 +180,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 <p class="manual_param_dd">Select a named CSS @page.
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p>
-<p class="manual_param_dd">See <a href="/paging/using-page.html">Using @page</a> for more information</p>
+<p class="manual_param_dd">See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information</p>
 <h2>
 
 </h2>
@@ -223,12 +223,12 @@ This text will start on a new page, and will also have a blue border etc...</div
 
 <h2>Notes</h2>
 
-<div class="alert alert-info" role="alert"><b>Note</b>: See &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; for further examples using the attributes. There is no PHP equivalent of &lt;formfeed&gt; but you can use <a href="/reference/mpdf-variables/restoreblockpagebreaks.html"><span class="parameter">$restoreBlockPagebreaks</span></a></div>
+<div class="alert alert-info" role="alert"><b>Note</b>: See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for further examples using the attributes. There is no PHP equivalent of &lt;formfeed&gt; but you can use <a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}"><span class="parameter">$restoreBlockPagebreaks</span></a></div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/addpage.html">AddPage()</a> - Add one or more (conditional) pages to the document</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/formfeed.html">pagebreak</a>&gt; - Forces a new page</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/restoreblockpagebreaks.html">restoreBlockPagebreaks</a> - forces &lt;pagebreak&gt; to act in the same way as &lt;formfeed&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add one or more (conditional) pages to the document</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Forces a new page</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}">restoreBlockPagebreaks</a> - forces &lt;pagebreak&gt; to act in the same way as &lt;formfeed&gt;</li>
 </ul>
 </div>
 </div>

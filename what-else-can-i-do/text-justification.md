@@ -35,7 +35,7 @@ div.arabic {
 {% endhighlight %}
 
 <h3>Kashida in Arabic text</h3>
-<p>In Arabic text, justification can be achieved by elongating the line between characters - this is known as "kashida". Kashida can be used by configuring the font in <span class="filename">config_fonts.php</span>&nbsp; cf. <a href="/fonts-languages/opentype-layout-otl.html">OpenType layout features (OTL)</a></p>
+<p>In Arabic text, justification can be achieved by elongating the line between characters - this is known as "kashida". Kashida can be used by configuring the font in <span class="filename">config_fonts.php</span>&nbsp; cf. <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout features (OTL)</a></p>
 <h3>Non-breaking space (NBSP)</h3>
 <p>The non-breaking space character is supported when using all codepages other than CJK - unless the font chosen does not have a glyph/character representing the nbsp (? only FreeSerif); in these cases the nbsp is converted to a normal space. When supported, it prevents word wrapping and prevents collapse of white space as expected with HTML.</p>
 <h3>The last line</h3>
@@ -43,7 +43,7 @@ div.arabic {
 <p>If the penultimate line was stretched considerably, the last line may look odd using the same spacing, so maximum values for the character-spacing (<span class="parameter">$jSmaxCharLast</span>) and word-spacing (<span class="parameter">$jSmaxWordLast</span>) can be set in the configuration file.</p>
 <h3>Justification before line-breaks</h3>
 <p>In a justified text block, an inline &lt;img&gt;, &lt;textarea&gt;, &lt;input&gt;, or &lt;select&gt; element which causes a new line, force the previous line to be justified. However, a &lt;hr&gt; or &lt;br&gt; do not force justification of the preceeding text.</p>
-<p>This behaviour matches most browsers. To allow optional compliance with the bahaviour of MS Word, which also justifies text before a &lt;br&gt; you can set the configurable variable <a href="/reference/mpdf-variables/justifyb4br.html">justifyB4br</a> to true.</p>
+<p>This behaviour matches most browsers. To allow optional compliance with the bahaviour of MS Word, which also justifies text before a &lt;br&gt; you can set the configurable variable <a href="{{ "/reference/mpdf-variables/justifyb4br.html" | prepend: site.baseurl }}">justifyB4br</a> to true.</p>
 </div>
 </div>
 

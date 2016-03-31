@@ -88,11 +88,11 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><b>Note:</b> mPDF will convert pages with character sets which work with the PHP function <a href="/reference/codepages-glyphs/iconv.html">iconv()</a></div>
+<div class="alert alert-info" role="alert"><b>Note:</b> mPDF will convert pages with character sets which work with the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv()</a></div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/writehtml.html">WriteHTML()</a> - Write HTML code to document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/charset-in.html">charset_in</a> - character encoding of input text</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML code to document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/charset-in.html" | prepend: site.baseurl }}">charset_in</a> - character encoding of input text</li>
 </ul>
 <p>&nbsp;</p>
 </div>

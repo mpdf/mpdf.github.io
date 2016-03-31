@@ -13,7 +13,7 @@ permalink: /reference/mpdf-variables/list-auto-mode.html
 
 <div class="alert alert-info" role="alert">void <b>list_auto_mode</b></div>
 <p>Specify whether to use mPDF custom method of automatic indentation of lists, or standard browser-compatible. The custom mPDF method is ignored if <code>list-style-position: inside</code>, or image used for marker (or custom U+).</p>
-<p>For more information, see <a href="/what-else-can-i-do/lists.html">Lists</a>.</p>
+<p>For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists</a>.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">list_auto_mode</span></p>
 <p class="manual_param_dd"><b>Values</b>
@@ -34,7 +34,7 @@ mpdf - list display will be consistent with mPDF behaviour prior to v6.0
 </tbody> </table>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/lists.html">Lists </a></li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists </a></li>
 </ul>
 </div>
 </div>

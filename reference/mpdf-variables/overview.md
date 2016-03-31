@@ -37,7 +37,7 @@ $mpdf->variablename = true;
 </thead> <tbody>
 <tr>
 <td>Paging</td>
-<td><a href="/reference/mpdf-variables/mirrormargins.html">mirrorMargins</a></td>
+<td><a href="{{ "/reference/mpdf-variables/mirrormargins.html" | prepend: site.baseurl }}">mirrorMargins</a></td>
 <td>0</td>
 <td><span class="smallblock">DOCUMENT</span> 
 
@@ -61,7 +61,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/forceportraitmargins.html">forcePortraitMargins</a></td>
+<td><a href="{{ "/reference/mpdf-variables/forceportraitmargins.html" | prepend: site.baseurl }}">forcePortraitMargins</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>2.3</td>
@@ -69,7 +69,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/displaydefaultorientation.html">displayDefaultOrientation</a></td>
+<td><a href="{{ "/reference/mpdf-variables/displaydefaultorientation.html" | prepend: site.baseurl }}">displayDefaultOrientation</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>2.3</td>
@@ -77,7 +77,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/autopagebreak.html">autoPageBreak</a></td>
+<td><a href="{{ "/reference/mpdf-variables/autopagebreak.html" | prepend: site.baseurl }}">autoPageBreak</a></td>
 <td><span class="smallblock">TRUE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.1</td>
@@ -85,7 +85,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/setautotopmargin.html">setAutoTopMargin</a></td>
+<td><a href="{{ "/reference/mpdf-variables/setautotopmargin.html" | prepend: site.baseurl }}">setAutoTopMargin</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>4.0</td>
@@ -93,7 +93,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/setautobottommargin.html">setAutoBottomMargin</a></td>
+<td><a href="{{ "/reference/mpdf-variables/setautobottommargin.html" | prepend: site.baseurl }}">setAutoBottomMargin</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>4.0</td>
@@ -101,7 +101,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/automarginpadding.html">autoMarginPadding</a></td>
+<td><a href="{{ "/reference/mpdf-variables/automarginpadding.html" | prepend: site.baseurl }}">autoMarginPadding</a></td>
 <td>2</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>4.0</td>
@@ -109,7 +109,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/margbuffer.html">margBuffer</a></td>
+<td><a href="{{ "/reference/mpdf-variables/margbuffer.html" | prepend: site.baseurl }}">margBuffer</a></td>
 <td>2</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.5</td>
@@ -117,7 +117,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/printers-info.html">printers_info</a></td>
+<td><a href="{{ "/reference/mpdf-variables/printers-info.html" | prepend: site.baseurl }}">printers_info</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>5.1</td>
@@ -125,7 +125,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/bleedmargin.html">bleedMargin</a></td>
+<td><a href="{{ "/reference/mpdf-variables/bleedmargin.html" | prepend: site.baseurl }}">bleedMargin</a></td>
 <td>5</td>
 <td>&nbsp;</td>
 <td>5.1</td>
@@ -133,7 +133,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/crossmarkmargin.html">crossMarkMargin</a></td>
+<td><a href="{{ "/reference/mpdf-variables/crossmarkmargin.html" | prepend: site.baseurl }}">crossMarkMargin</a></td>
 <td>5</td>
 <td>&nbsp;</td>
 <td>5.1</td>
@@ -141,7 +141,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/cropmarkmargin.html">cropMarkMargin</a></td>
+<td><a href="{{ "/reference/mpdf-variables/cropmarkmargin.html" | prepend: site.baseurl }}">cropMarkMargin</a></td>
 <td>8</td>
 <td>&nbsp;</td>
 <td>5.1</td>
@@ -149,7 +149,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/cropmarklength.html">cropMarkLength</a></td>
+<td><a href="{{ "/reference/mpdf-variables/cropmarklength.html" | prepend: site.baseurl }}">cropMarkLength</a></td>
 <td>18</td>
 <td>&nbsp;</td>
 <td>5.1</td>
@@ -157,7 +157,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/nonprintmargin.html">nonPrintMargin</a></td>
+<td><a href="{{ "/reference/mpdf-variables/nonprintmargin.html" | prepend: site.baseurl }}">nonPrintMargin</a></td>
 <td>8</td>
 <td>&nbsp;</td>
 <td>5.1</td>
@@ -167,7 +167,7 @@ $mpdf->variablename = true;
 <td>
 <p>Page numbering</p>
 </td>
-<td><a href="/reference/mpdf-variables/aliasnbpg.html">aliasNbPg</a></td>
+<td><a href="{{ "/reference/mpdf-variables/aliasnbpg.html" | prepend: site.baseurl }}">aliasNbPg</a></td>
 <td>"{nb}"</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>&nbsp;</td>
@@ -175,7 +175,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/aliasnbpggp.html">aliasNbPgGp</a></td>
+<td><a href="{{ "/reference/mpdf-variables/aliasnbpggp.html" | prepend: site.baseurl }}">aliasNbPgGp</a></td>
 <td>"{nbpg}"</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>&nbsp;</td>
@@ -185,7 +185,7 @@ $mpdf->variablename = true;
 <td>
 
 </td>
-<td><a href="/reference/mpdf-variables/pagenumprefix.html">pagenumPrefix</a></td>
+<td><a href="{{ "/reference/mpdf-variables/pagenumprefix.html" | prepend: site.baseurl }}">pagenumPrefix</a></td>
 <td>""</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.0</td>
@@ -193,7 +193,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/pagenumsuffix.html">pagenumSuffix</a></td>
+<td><a href="{{ "/reference/mpdf-variables/pagenumsuffix.html" | prepend: site.baseurl }}">pagenumSuffix</a></td>
 <td>""</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.0</td>
@@ -201,7 +201,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/nbpgprefix.html">nbpgPrefix</a></td>
+<td><a href="{{ "/reference/mpdf-variables/nbpgprefix.html" | prepend: site.baseurl }}">nbpgPrefix</a></td>
 <td>""</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.0</td>
@@ -209,7 +209,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/nbpgsuffix.html">nbpgSuffix</a></td>
+<td><a href="{{ "/reference/mpdf-variables/nbpgsuffix.html" | prepend: site.baseurl }}">nbpgSuffix</a></td>
 <td>""</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.0</td>
@@ -217,7 +217,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/defaultpagenumstyle.html">defaultPageNumStyle</a></td>
+<td><a href="{{ "/reference/mpdf-variables/defaultpagenumstyle.html" | prepend: site.baseurl }}">defaultPageNumStyle</a></td>
 <td>"1"</td>
 <td><span class="smallblock"><span class="smallblock">DOCUMENT</span></span></td>
 <td>6.0</td>
@@ -225,7 +225,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>Fonts, Languages and Character sets</td>
-<td><a href="/reference/mpdf-variables/allow-charset-conversion.html">percentSubset
+<td><a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">percentSubset
 
 </a></td>
 <td>30</td>
@@ -239,7 +239,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/usekerning.html">useKerning</a></td>
+<td><a href="{{ "/reference/mpdf-variables/usekerning.html" | prepend: site.baseurl }}">useKerning</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.4</td>
@@ -247,7 +247,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/maxttffilesize.html">maxTTFFilesize</a></td>
+<td><a href="{{ "/reference/mpdf-variables/maxttffilesize.html" | prepend: site.baseurl }}">maxTTFFilesize</a></td>
 <td>2000</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.0</td>
@@ -255,7 +255,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/allow-charset-conversion.html">allow_charset_conversion</a></td>
+<td><a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">allow_charset_conversion</a></td>
 <td><span class="smallblock">TRUE</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -263,7 +263,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/charset-in.html">charset_in</a></td>
+<td><a href="{{ "/reference/mpdf-variables/charset-in.html" | prepend: site.baseurl }}">charset_in</a></td>
 <td><i><span class="smallblock">NULL</span></i></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -271,7 +271,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/bidirectional.html">biDirectional</a></td>
+<td><a href="{{ "/reference/mpdf-variables/bidirectional.html" | prepend: site.baseurl }}">biDirectional</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -289,7 +289,7 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/useadobecjk.html">useAdobeCJK</a></td>
+<td><a href="{{ "/reference/mpdf-variables/useadobecjk.html" | prepend: site.baseurl }}">useAdobeCJK</a></td>
 <td><span class="smallblock">TRUE</span></td>
 <td><span class="smallblock">DOCUMENT*</span></td>
 <td>5.0</td>
@@ -313,7 +313,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/uselang.html">useLang</a></td>
+<td><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a></td>
 <td><span class="smallblock">TRUE</span></td>
 <td>&nbsp;</td>
 <td>2.3</td>
@@ -324,7 +324,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/autoscripttolang.html">autoScriptToLang</a></td>
+<td><a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">autoScriptToLang</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>6.0</td>
@@ -334,7 +334,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/autolangtofont.html">autoLangToFont</a></td>
+<td><a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">autoLangToFont</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>6.0</td>
@@ -344,7 +344,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/basescript.html">baseScript</a></td>
+<td><a href="{{ "/reference/mpdf-variables/basescript.html" | prepend: site.baseurl }}">baseScript</a></td>
 <td><span class="smallblock">1</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>6.0</td>
@@ -352,7 +352,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/autoarabic.html">autoArabic</a></td>
+<td><a href="{{ "/reference/mpdf-variables/autoarabic.html" | prepend: site.baseurl }}">autoArabic</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>6.0</td>
@@ -360,7 +360,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/autovietnamese.html">autoVietnamese</a></td>
+<td><a href="{{ "/reference/mpdf-variables/autovietnamese.html" | prepend: site.baseurl }}">autoVietnamese</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>6.0</td>
@@ -380,7 +380,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/falseboldweight.html">falseBoldWeight</a></td>
+<td><a href="{{ "/reference/mpdf-variables/falseboldweight.html" | prepend: site.baseurl }}">falseBoldWeight</a></td>
 <td>5</td>
 <td>&nbsp;</td>
 <td>4.2</td>
@@ -388,7 +388,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/smcapsscale.html">smCapsScale</a></td>
+<td><a href="{{ "/reference/mpdf-variables/smcapsscale.html" | prepend: site.baseurl }}">smCapsScale</a></td>
 <td>0.75</td>
 <td>&nbsp;</td>
 <td>5.0</td>
@@ -396,7 +396,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/smcapsstretch.html">smCapsStretch</a></td>
+<td><a href="{{ "/reference/mpdf-variables/smcapsstretch.html" | prepend: site.baseurl }}">smCapsStretch</a></td>
 <td>115</td>
 <td>&nbsp;</td>
 <td>5.0</td>
@@ -404,7 +404,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/backupsubsfont.html">backupSubsFont</a></td>
+<td><a href="{{ "/reference/mpdf-variables/backupsubsfont.html" | prepend: site.baseurl }}">backupSubsFont</a></td>
 <td>array('dejavusanscondensed')</td>
 <td>&nbsp;</td>
 <td>5.0</td>
@@ -412,7 +412,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/backupsipfont.html">backupSIPFont</a></td>
+<td><a href="{{ "/reference/mpdf-variables/backupsipfont.html" | prepend: site.baseurl }}">backupSIPFont</a></td>
 <td><span class="smallblock">NOT DEFINED</span></td>
 <td>&nbsp;</td>
 <td>5.0</td>
@@ -436,7 +436,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/repackagettf.html">repackageTTF</a></td>
+<td><a href="{{ "/reference/mpdf-variables/repackagettf.html" | prepend: site.baseurl }}">repackageTTF</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.2</td>
@@ -444,7 +444,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/usesubstitutions.html">useSubstitutions</a></td>
+<td><a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">useSubstitutions</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>(4.0)</td>
@@ -467,7 +467,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/collapseblockmargins.html">collapseBlockMargins</a></td>
+<td><a href="{{ "/reference/mpdf-variables/collapseblockmargins.html" | prepend: site.baseurl }}">collapseBlockMargins</a></td>
 <td><span class="smallblock">TRUE</span></td>
 <td>&nbsp;</td>
 <td>4.2</td>
@@ -475,7 +475,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/dpi.html">dpi</a></td>
+<td><a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a></td>
 <td>96</td>
 <td>&nbsp;</td>
 <td>4.5</td>
@@ -483,7 +483,7 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/enableimports.html">enableImports</a></td>
+<td><a href="{{ "/reference/mpdf-variables/enableimports.html" | prepend: site.baseurl }}">enableImports</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT*</span></td>
 <td>4.3</td>
@@ -491,11 +491,11 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 
 * You must only change this variable in the <span class="filename">config.php</span> file.
 
-Use <a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> to change at runtime.</td>
+Use <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> to change at runtime.</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/allow-output-buffering.html">allow_output_buffering</a></td>
+<td><a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.0</td>
@@ -503,7 +503,7 @@ Use <a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> to 
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/allow-html-optional-endtags.html">allow_html_optional_endtags</a></td>
+<td><a href="{{ "/reference/mpdf-variables/allow-html-optional-endtags.html" | prepend: site.baseurl }}">allow_html_optional_endtags</a></td>
 <td><span class="smallblock">TRUE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>&nbsp;</td>
@@ -511,7 +511,7 @@ Use <a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> to 
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/ignore-invalid-utf8.html">ignore_invalid_utf8</a></td>
+<td><a href="{{ "/reference/mpdf-variables/ignore-invalid-utf8.html" | prepend: site.baseurl }}">ignore_invalid_utf8</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -519,7 +519,7 @@ Use <a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> to 
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/text-input-as-html.html">text_input_as_HTML</a></td>
+<td><a href="{{ "/reference/mpdf-variables/text-input-as-html.html" | prepend: site.baseurl }}">text_input_as_HTML</a></td>
 <td><span class="smallblock">FALSE</span> 
 
 </td>
@@ -529,7 +529,7 @@ Use <a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> to 
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/showstats.html">showStats</a></td>
+<td><a href="{{ "/reference/mpdf-variables/showstats.html" | prepend: site.baseurl }}">showStats</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>4.0</td>
@@ -537,7 +537,7 @@ Use <a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> to 
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/progressbar.html">progressBar</a></td>
+<td><a href="{{ "/reference/mpdf-variables/progressbar.html" | prepend: site.baseurl }}">progressBar</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT*</span></td>
 <td>4.2</td>
@@ -545,11 +545,11 @@ Use <a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> to 
 
 * You must only change this variable in the <span class="filename">config.php</span> file.
 
-Use <a href="/reference/mpdf-functions/startprogressbaroutput.html">StartProgressBarOutput()</a> to set at runtime.</td>
+Use <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a> to set at runtime.</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/progbar-heading.html">progbar_heading</a></td>
+<td><a href="{{ "/reference/mpdf-variables/progbar-heading.html" | prepend: site.baseurl }}">progbar_heading</a></td>
 <td>"mPDF file progress"</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.0</td>
@@ -557,7 +557,7 @@ Use <a href="/reference/mpdf-functions/startprogressbaroutput.html">StartProgres
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/progbar-althtml.html">progbar_altHTML</a></td>
+<td><a href="{{ "/reference/mpdf-variables/progbar-althtml.html" | prepend: site.baseurl }}">progbar_altHTML</a></td>
 <td>""</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.0</td>
@@ -565,7 +565,7 @@ Use <a href="/reference/mpdf-functions/startprogressbaroutput.html">StartProgres
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/incrementfpr1-1-4.html">incrementFPR1 [1-4]</a></td>
+<td><a href="{{ "/reference/mpdf-variables/incrementfpr1-1-4.html" | prepend: site.baseurl }}">incrementFPR1 [1-4]</a></td>
 <td>10,20,30,50</td>
 <td>&nbsp;</td>
 <td>4.2</td>
@@ -573,7 +573,7 @@ Use <a href="/reference/mpdf-functions/startprogressbaroutput.html">StartProgres
 </tr>
 <tr>
 <td>Debugging</td>
-<td><a href="/reference/mpdf-variables/debug.html">debug</a></td>
+<td><a href="{{ "/reference/mpdf-variables/debug.html" | prepend: site.baseurl }}">debug</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.1</td>
@@ -581,7 +581,7 @@ Use <a href="/reference/mpdf-functions/startprogressbaroutput.html">StartProgres
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/debugfonts.html">debugfonts</a></td>
+<td><a href="{{ "/reference/mpdf-variables/debugfonts.html" | prepend: site.baseurl }}">debugfonts</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.0</td>
@@ -589,7 +589,7 @@ Use <a href="/reference/mpdf-functions/startprogressbaroutput.html">StartProgres
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/showimageerrors.html">showImageErrors</a></td>
+<td><a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.0</td>
@@ -601,7 +601,7 @@ Use <a href="/reference/mpdf-functions/startprogressbaroutput.html">StartProgres
 Colorspaces
 
 </td>
-<td><a href="/reference/mpdf-variables/pdfa.html">PDFA</a></td>
+<td><a href="{{ "/reference/mpdf-variables/pdfa.html" | prepend: site.baseurl }}">PDFA</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>4.3</td>
@@ -609,7 +609,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/pdfaauto.html">PDFAauto</a></td>
+<td><a href="{{ "/reference/mpdf-variables/pdfaauto.html" | prepend: site.baseurl }}">PDFAauto</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>4.3</td>
@@ -617,7 +617,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/pdfx.html">PDFX</a></td>
+<td><a href="{{ "/reference/mpdf-variables/pdfx.html" | prepend: site.baseurl }}">PDFX</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.1</td>
@@ -625,7 +625,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/pdfxauto.html">PDFXauto</a></td>
+<td><a href="{{ "/reference/mpdf-variables/pdfxauto.html" | prepend: site.baseurl }}">PDFXauto</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.1</td>
@@ -633,7 +633,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/iccprofile.html">ICCProfile</a></td>
+<td><a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a></td>
 <td>""</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>4.3</td>
@@ -641,7 +641,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/restrictcolorspace.html">restrictColorSpace</a></td>
+<td><a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a></td>
 <td>0</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.1</td>
@@ -649,7 +649,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Annotations</td>
-<td><a href="/reference/mpdf-variables/title2annots.html">title2annots</a></td>
+<td><a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>2.2</td>
@@ -657,7 +657,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/annotmargin.html">annotMargin</a></td>
+<td><a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a></td>
 <td><i><span class="smallblock">NULL</span></i></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>2.2 
@@ -667,7 +667,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/annotopacity.html">annotOpacity</a></td>
+<td><a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a></td>
 <td>0.5</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>2.2</td>
@@ -675,7 +675,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Bookmarks (Outlines)</td>
-<td><a href="/reference/mpdf-variables/anchor2bookmark.html">anchor2Bookmark</a></td>
+<td><a href="{{ "/reference/mpdf-variables/anchor2bookmark.html" | prepend: site.baseurl }}">anchor2Bookmark</a></td>
 <td>0</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>&nbsp;</td>
@@ -683,7 +683,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/h2bookmarks.html">h2bookmarks</a></td>
+<td><a href="{{ "/reference/mpdf-variables/h2bookmarks.html" | prepend: site.baseurl }}">h2bookmarks</a></td>
 <td>array()</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.7</td>
@@ -691,7 +691,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/h2toc.html">h2toc</a></td>
+<td><a href="{{ "/reference/mpdf-variables/h2toc.html" | prepend: site.baseurl }}">h2toc</a></td>
 <td>array()</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.7</td>
@@ -699,7 +699,7 @@ Colorspaces
 </tr>
 <tr>
 <td>CSS &amp; Styles</td>
-<td><a href="/reference/mpdf-variables/cssselectmedia.html">CSSselectMedia</a></td>
+<td><a href="{{ "/reference/mpdf-variables/cssselectmedia.html" | prepend: site.baseurl }}">CSSselectMedia</a></td>
 <td>"print"
 
 </td>
@@ -737,7 +737,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Page Headers &amp; Footers</td>
-<td><a href="/reference/mpdf-variables/defaultfooterfontsize.html">defaultfooterfontsize</a></td>
+<td><a href="{{ "/reference/mpdf-variables/defaultfooterfontsize.html" | prepend: site.baseurl }}">defaultfooterfontsize</a></td>
 <td>8</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -745,7 +745,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/defaultfooterfontstyle.html">defaultfooterfontstyle</a></td>
+<td><a href="{{ "/reference/mpdf-variables/defaultfooterfontstyle.html" | prepend: site.baseurl }}">defaultfooterfontstyle</a></td>
 <td>"BI"</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -753,7 +753,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/defaultfooterline.html">defaultfooterline</a></td>
+<td><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">defaultfooterline</a></td>
 <td>1 
 
 </td>
@@ -763,7 +763,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/defaultheaderfontsize.html">defaultheaderfontsize</a></td>
+<td><a href="{{ "/reference/mpdf-variables/defaultheaderfontsize.html" | prepend: site.baseurl }}">defaultheaderfontsize</a></td>
 <td>8</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -771,7 +771,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/defaultheaderfontstyle.html">defaultheaderfontstyle</a></td>
+<td><a href="{{ "/reference/mpdf-variables/defaultheaderfontstyle.html" | prepend: site.baseurl }}">defaultheaderfontstyle</a></td>
 <td>"BI"</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -779,7 +779,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/defaultheaderline.html">defaultheaderline</a></td>
+<td><a href="{{ "/reference/mpdf-variables/defaultheaderline.html" | prepend: site.baseurl }}">defaultheaderline</a></td>
 <td>1</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -787,7 +787,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/footer-line-spacing.html">footer_line_spacing</a></td>
+<td><a href="{{ "/reference/mpdf-variables/footer-line-spacing.html" | prepend: site.baseurl }}">footer_line_spacing</a></td>
 <td>0.25</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -795,7 +795,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/header-line-spacing.html">header_line_spacing</a></td>
+<td><a href="{{ "/reference/mpdf-variables/header-line-spacing.html" | prepend: site.baseurl }}">header_line_spacing</a></td>
 <td>0.25</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -803,7 +803,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/forceportraitheaders.html">forcePortraitHeaders</a></td>
+<td><a href="{{ "/reference/mpdf-variables/forceportraitheaders.html" | prepend: site.baseurl }}">forcePortraitHeaders</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>&nbsp;</td>
@@ -821,7 +821,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Tables</td>
-<td><a href="/reference/mpdf-variables/simpletables.html">simpleTables</a></td>
+<td><a href="{{ "/reference/mpdf-variables/simpletables.html" | prepend: site.baseurl }}">simpleTables</a></td>
 <td><span class="smallblock">FALSE</span> 
 
 </td>
@@ -831,7 +831,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/packtabledata.html">packTableData</a></td>
+<td><a href="{{ "/reference/mpdf-variables/packtabledata.html" | prepend: site.baseurl }}">packTableData</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>4.4</td>
@@ -849,7 +849,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/tableminsizepriority.html">tableMinSizePriority</a></td>
+<td><a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>4.6</td>
@@ -857,7 +857,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/ignore-table-percents.html">ignore_table_percents</a></td>
+<td><a href="{{ "/reference/mpdf-variables/ignore-table-percents.html" | prepend: site.baseurl }}">ignore_table_percents</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>2.2</td>
@@ -865,7 +865,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/ignore-table-widths.html">ignore_table_widths</a></td>
+<td><a href="{{ "/reference/mpdf-variables/ignore-table-widths.html" | prepend: site.baseurl }}">ignore_table_widths</a></td>
 <td><span class="smallblock">FALSE</span> 
 
 </td>
@@ -875,7 +875,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/keep-table-proportions.html">keep_table_proportions</a></td>
+<td><a href="{{ "/reference/mpdf-variables/keep-table-proportions.html" | prepend: site.baseurl }}">keep_table_proportions</a></td>
 <td><span class="smallblock">FALSE</span> 
 
 </td>
@@ -885,7 +885,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/shrink-tables-to-fit.html">shrink_tables_to_fit</a></td>
+<td><a href="{{ "/reference/mpdf-variables/shrink-tables-to-fit.html" | prepend: site.baseurl }}">shrink_tables_to_fit</a></td>
 <td>1.4 
 
 </td>
@@ -895,7 +895,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/table-error-report.html">table_error_report</a></td>
+<td><a href="{{ "/reference/mpdf-variables/table-error-report.html" | prepend: site.baseurl }}">table_error_report</a></td>
 <td><span class="smallblock">FALSE</span> 
 
 </td>
@@ -905,7 +905,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/table-error-report-param.html">table_error_report_param</a></td>
+<td><a href="{{ "/reference/mpdf-variables/table-error-report-param.html" | prepend: site.baseurl }}">table_error_report_param</a></td>
 <td>"" 
 
 </td>
@@ -915,7 +915,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/use-kwt.html">use_kwt</a></td>
+<td><a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">use_kwt</a></td>
 <td><span class="smallblock">FALSE</span> 
 
 </td>
@@ -925,7 +925,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/iterationcounter.html">iterationCounter</a></td>
+<td><a href="{{ "/reference/mpdf-variables/iterationcounter.html" | prepend: site.baseurl }}">iterationCounter</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.0</td>
@@ -933,7 +933,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/decimal-align.html">decimal_align</a></td>
+<td><a href="{{ "/reference/mpdf-variables/decimal-align.html" | prepend: site.baseurl }}">decimal_align</a></td>
 <td><span class="smallblock">cf.</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.7</td>
@@ -941,7 +941,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Images</td>
-<td><a href="/reference/mpdf-variables/img-dpi.html">img_dpi</a></td>
+<td><a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a></td>
 <td>96</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -949,7 +949,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Text Spacing &amp; Justification</td>
-<td><a href="/reference/mpdf-variables/normallineheight.html">normalLineheight</a></td>
+<td><a href="{{ "/reference/mpdf-variables/normallineheight.html" | prepend: site.baseurl }}">normalLineheight</a></td>
 <td>1.33</td>
 <td>&nbsp;</td>
 <td>4.2</td>
@@ -957,7 +957,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/usefixednormallineheight.html">useFixedNormalLineHeight</a></td>
+<td><a href="{{ "/reference/mpdf-variables/usefixednormallineheight.html" | prepend: site.baseurl }}">useFixedNormalLineHeight</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>6.0</td>
@@ -965,7 +965,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/usefixedtextbaseline.html">useFixedTextBaseline</a></td>
+<td><a href="{{ "/reference/mpdf-variables/usefixedtextbaseline.html" | prepend: site.baseurl }}">useFixedTextBaseline</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>6.0</td>
@@ -973,7 +973,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/adjustfontdesclineheight.html">adjustFontDescLineheight</a></td>
+<td><a href="{{ "/reference/mpdf-variables/adjustfontdesclineheight.html" | prepend: site.baseurl }}">adjustFontDescLineheight</a></td>
 <td>1.14</td>
 <td>&nbsp;</td>
 <td>6.0</td>
@@ -983,7 +983,7 @@ Colorspaces
 <td>
 
 </td>
-<td><a href="/reference/mpdf-variables/jsmaxchar.html">jSmaxChar</a></td>
+<td><a href="{{ "/reference/mpdf-variables/jsmaxchar.html" | prepend: site.baseurl }}">jSmaxChar</a></td>
 <td>2</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -991,7 +991,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/jsmaxwordlast.html">jSmaxWordLast</a></td>
+<td><a href="{{ "/reference/mpdf-variables/jsmaxwordlast.html" | prepend: site.baseurl }}">jSmaxWordLast</a></td>
 <td>2</td>
 <td>&nbsp;</td>
 <td>5.1</td>
@@ -999,7 +999,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/jsmaxcharlast.html">jSmaxCharLast</a></td>
+<td><a href="{{ "/reference/mpdf-variables/jsmaxcharlast.html" | prepend: site.baseurl }}">jSmaxCharLast</a></td>
 <td>1</td>
 <td>&nbsp;</td>
 <td>5.1</td>
@@ -1017,7 +1017,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/jsword.html">jSWord</a></td>
+<td><a href="{{ "/reference/mpdf-variables/jsword.html" | prepend: site.baseurl }}">jSWord</a></td>
 <td>0.4</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1033,7 +1033,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/allowcjkorphans.html">allowCJKorphans</a></td>
+<td><a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a></td>
 <td><span class="smallblock">TRUE</span></td>
 <td>&nbsp;</td>
 <td>5.2</td>
@@ -1041,7 +1041,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/allowcjkoverflow.html">allowCJKoverflow</a></td>
+<td><a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>5.2</td>
@@ -1049,7 +1049,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/cjkforceend.html">CJKforceend</a></td>
+<td><a href="{{ "/reference/mpdf-variables/cjkforceend.html" | prepend: site.baseurl }}">CJKforceend</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>5.7</td>
@@ -1058,7 +1058,7 @@ Colorspaces
 <tr>
 <td>&nbsp;</td>
 <td>
-<p><a href="/reference/mpdf-variables/tabspaces.html">tabSpaces</a></p>
+<p><a href="{{ "/reference/mpdf-variables/tabspaces.html" | prepend: site.baseurl }}">tabSpaces</a></p>
 </td>
 <td>8</td>
 <td>&nbsp;</td>
@@ -1067,7 +1067,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/justifyb4br.html">justifyB4br</a></td>
+<td><a href="{{ "/reference/mpdf-variables/justifyb4br.html" | prepend: site.baseurl }}">justifyB4br</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>4.4</td>
@@ -1091,7 +1091,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/shylang.html">SHYlang</a></td>
+<td><a href="{{ "/reference/mpdf-variables/shylang.html" | prepend: site.baseurl }}">SHYlang</a></td>
 <td>"en"</td>
 <td>&nbsp;</td>
 <td>2.5</td>
@@ -1099,7 +1099,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Columns</td>
-<td><a href="/reference/mpdf-variables/keepcolumns.html">keepColumns</a></td>
+<td><a href="{{ "/reference/mpdf-variables/keepcolumns.html" | prepend: site.baseurl }}">keepColumns</a></td>
 <td><span class="smallblock">FALSE</span> 
 
 </td>
@@ -1109,7 +1109,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/max-colh-correction.html">max_colH_correction</a></td>
+<td><a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">max_colH_correction</a></td>
 <td>1.15</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1117,7 +1117,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Lists</td>
-<td><a href="/reference/mpdf-variables/list-auto-mode.html">list_auto_mode</a>
+<td><a href="{{ "/reference/mpdf-variables/list-auto-mode.html" | prepend: site.baseurl }}">list_auto_mode</a>
 
 </td>
 <td>"browser"
@@ -1133,7 +1133,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/list-indent-default.html">list_indent_default</a></td>
+<td><a href="{{ "/reference/mpdf-variables/list-indent-default.html" | prepend: site.baseurl }}">list_indent_default</a></td>
 <td>"40px"</td>
 <td>&nbsp;</td>
 <td>6.0</td>
@@ -1141,7 +1141,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/list-indent-default-mpdf.html">list_indent_default_mpdf</a></td>
+<td><a href="{{ "/reference/mpdf-variables/list-indent-default-mpdf.html" | prepend: site.baseurl }}">list_indent_default_mpdf</a></td>
 <td>"0em"</td>
 <td>&nbsp;</td>
 <td>6.0</td>
@@ -1149,7 +1149,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/list-marker-offset.html">list_marker_offset</a></td>
+<td><a href="{{ "/reference/mpdf-variables/list-marker-offset.html" | prepend: site.baseurl }}">list_marker_offset</a></td>
 <td>"5.5pt"</td>
 <td>&nbsp;</td>
 <td>6.0</td>
@@ -1157,7 +1157,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/list-symbol-size.html">list_symbol_size</a></td>
+<td><a href="{{ "/reference/mpdf-variables/list-symbol-size.html" | prepend: site.baseurl }}">list_symbol_size</a></td>
 <td>"3.6pt"</td>
 <td>&nbsp;</td>
 <td>6.0</td>
@@ -1173,7 +1173,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/list-indent-first-level.html">list_indent_first_level</a></td>
+<td><a href="{{ "/reference/mpdf-variables/list-indent-first-level.html" | prepend: site.baseurl }}">list_indent_first_level</a></td>
 <td>0</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1181,7 +1181,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/list-number-suffix.html">list_number_suffix</a></td>
+<td><a href="{{ "/reference/mpdf-variables/list-number-suffix.html" | prepend: site.baseurl }}">list_number_suffix</a></td>
 <td>&nbsp;"."</td>
 <td>&nbsp;</td>
 <td>2.1</td>
@@ -1189,7 +1189,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Watermarks</td>
-<td><a href="/reference/mpdf-variables/showwatermarkimage.html">showWatermarkImage</a></td>
+<td><a href="{{ "/reference/mpdf-variables/showwatermarkimage.html" | prepend: site.baseurl }}">showWatermarkImage</a></td>
 <td>&nbsp;<i><span class="smallblock">NULL</span></i></td>
 <td>&nbsp;</td>
 <td>2.2</td>
@@ -1197,7 +1197,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/showwatermarktext.html">showWatermarkText</a></td>
+<td><a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkText</a></td>
 <td>&nbsp;<i><span class="smallblock">NULL</span></i></td>
 <td>&nbsp;</td>
 <td>2.2</td>
@@ -1205,7 +1205,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/watermark-font.html">watermark_font</a></td>
+<td><a href="{{ "/reference/mpdf-variables/watermark-font.html" | prepend: site.baseurl }}">watermark_font</a></td>
 <td>&nbsp;""
 
 </td>
@@ -1215,17 +1215,17 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/watermarkimagealpha.html">watermarkImageAlpha</a></td>
+<td><a href="{{ "/reference/mpdf-variables/watermarkimagealpha.html" | prepend: site.baseurl }}">watermarkImageAlpha</a></td>
 <td>&nbsp;0.2</td>
 <td>&nbsp;</td>
 <td>2.2
 
 </td>
-<td>Can be changed by <a href="/reference/mpdf-functions/setwatermarktext.html">SetWatermarkImage()</a></td>
+<td>Can be changed by <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkImage()</a></td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/watermarkimgalphablend.html">watermarkImgAlphaBlend</a></td>
+<td><a href="{{ "/reference/mpdf-variables/watermarkimgalphablend.html" | prepend: site.baseurl }}">watermarkImgAlphaBlend</a></td>
 <td>"Normal"</td>
 <td>&nbsp;</td>
 <td>4.5</td>
@@ -1233,7 +1233,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/watermarkimgbehind.html">watermarkImgBehind</a></td>
+<td><a href="{{ "/reference/mpdf-variables/watermarkimgbehind.html" | prepend: site.baseurl }}">watermarkImgBehind</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
 <td>4.4</td>
@@ -1241,7 +1241,7 @@ Colorspaces
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td><a href="/reference/mpdf-variables/watermarktextalpha.html">watermarkTextAlpha</a></td>
+<td><a href="{{ "/reference/mpdf-variables/watermarktextalpha.html" | prepend: site.baseurl }}">watermarkTextAlpha</a></td>
 <td>&nbsp;0.2</td>
 <td>&nbsp;</td>
 <td>2.2</td>
@@ -1249,7 +1249,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Borders</td>
-<td><a href="/what-else-can-i-do/backgrounds-borders.html">autoPadding</a></td>
+<td><a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">autoPadding</a></td>
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>3.0</td>
@@ -1257,7 +1257,7 @@ Colorspaces
 </tr>
 <tr>
 <td>Bookmarks</td>
-<td><a href="/reference/mpdf-variables/bookmarkstyles.html">bookmarkStyles</a></td>
+<td><a href="{{ "/reference/mpdf-variables/bookmarkstyles.html" | prepend: site.baseurl }}">bookmarkStyles</a></td>
 <td><span class="smallblock">array()</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.4</td>

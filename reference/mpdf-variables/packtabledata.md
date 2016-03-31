@@ -36,7 +36,7 @@ permalink: /reference/mpdf-variables/packtabledata.html
 </tbody> </table>
 <h2>See Also</h2>
 <ul>
-<li><a href="/reference/mpdf-variables/simpletables.html">simpleTables</a> - Disables complex table borders etc. to improve performance</li>
+<li><a href="{{ "/reference/mpdf-variables/simpletables.html" | prepend: site.baseurl }}">simpleTables</a> - Disables complex table borders etc. to improve performance</li>
 </ul>
 <p>&nbsp;</p>
 </div>

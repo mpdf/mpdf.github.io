@@ -13,10 +13,10 @@ permalink: /reference/mpdf-functions/setpagetemplate.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">void <b>SetPageTemplate</b> ([ int <span class="parameter">$templateID</span> ])</div>
-<p>Specify a page from an external PDF file to use as a template. The page must have already been stored as a 'template' using <a href="/reference/mpdf-functions/setsourcefile.html">SetSourceFile()</a>. Once a 'page template' has been set, the template is inserted on every subsequent page of the document. The template is added to the page at the same time as a new page is started (in the Header).</p>
+<p>Specify a page from an external PDF file to use as a template. The page must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. Once a 'page template' has been set, the template is inserted on every subsequent page of the document. The template is added to the page at the same time as a new page is started (in the Header).</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">templateID</span></p>
-<p class="manual_param_dd">This parameter specifies the ID of the page template to use. Value must be a valid template ID from <a href="/reference/mpdf-functions/setsourcefile.html">SetSourceFile()</a>.
+<p class="manual_param_dd">This parameter specifies the ID of the page template to use. Value must be a valid template ID from <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>.
 
 <span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> will clear the template, so subsequent pages will not have the template added.</p>
 <h2>Changelog</h2>
@@ -68,17 +68,17 @@ $mpdf->Output();
 
 <h2>See Also</h2>
 <ul>
-<li><a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
-<li><a href="/reference/mpdf-functions/thumbnail.html">Thumbnail()</a> - Print thumbnails of an external PDF file
+<li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
+<li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
 
 </li>
-<li><a href="/reference/mpdf-functions/setsourcefile.html">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document
+<li><a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document
 
 </li>
-<li><a href="/reference/mpdf-functions/usetemplate.html">UseTemplate()</a> - Insert an imported page from an external PDF file
+<li><a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> - Insert an imported page from an external PDF file
 
 </li>
-<li><a href="/reference/mpdf-functions/setdoctemplate.html">SetDocTemplate()</a> - Specify an external PDF file to use as a template
+<li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template
 
 </li>
 </ul>

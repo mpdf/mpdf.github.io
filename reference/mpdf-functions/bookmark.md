@@ -100,10 +100,10 @@ This will produce a Bookmark tree in Adobe Reader:
 
 <h2>Notes</h2>
 
-<div class="alert alert-info" role="alert"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a>.</div>
+<div class="alert alert-info" role="alert"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>.</div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/bookmark.html">bookmark</a>&gt; - Custom HTML tag - equivalent to Bookmark()
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/bookmark.html" | prepend: site.baseurl }}">bookmark</a>&gt; - Custom HTML tag - equivalent to Bookmark()
 
 </li>
 </ul>

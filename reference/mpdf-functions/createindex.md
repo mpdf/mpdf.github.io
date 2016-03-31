@@ -11,11 +11,11 @@ permalink: /reference/mpdf-functions/createindex.html
 <p>(mPDF &gt;= 2.2)</p>
 <p>CreateIndex — Generate an Index for the document</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This function is removed in mPDF v6.0 and replaced by <a href="/reference/mpdf-functions/insertindex.html">InsertIndex</a>()</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> This function is removed in mPDF v6.0 and replaced by <a href="{{ "/reference/mpdf-functions/insertindex.html" | prepend: site.baseurl }}">InsertIndex</a>()</div>
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">void <b>CreateIndex</b> ([ int <span class="parameter">$numberofcolumns</span> [, float <span class="parameter">$fontsize</span> [, float <span class="parameter">$linespacing</span> [, float <span class="parameter">$offset</span> [, int <span class="parameter">$usedivletters</span> [, float <span class="parameter">$divlettersfontsize</span> [, float <span class="parameter">$columngap</span> [, string <span class="parameter">$font</span> [, string <span class="parameter">$divletterfont</span> [, boolean <span class="parameter">$uselinking</span> ]]]]]]]]])</div>
-<p>Inserts an Index for the document based on index entries made using &lt;<a href="/reference/html-control-tags/tocentry.html">indexentry</a>&gt; or <a href="/reference/mpdf-functions/tocpagebreak.html">CreateIndex()</a>.</p>
+<p>Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>.</p>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Prior to mPDF 2.2 the function CreateReference() was used. CreateIndex() is now the preferred form.</div>
 
@@ -131,8 +131,8 @@ $mpdf=Output();
 <div class="alert alert-info" role="alert"><b>Note:</b> There is no HTML equivalent of CreateIndex()</div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/indexentry.html">IndexEntry()</a> - Add an Index entry in the document </li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/tocentry.html">indexentry</a>&gt; - Mark an Index entry in the document </li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a> - Add an Index entry in the document </li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; - Mark an Index entry in the document </li>
 </ul>
 </div>
 </div>

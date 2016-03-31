@@ -17,10 +17,10 @@ permalink: /reference/mpdf-functions/settitle.html
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
 
-<div class="alert alert-info" role="alert">Note: The <span class="parameter">title</span> tag from the header of an HTML document will override this value when you use <a href="/reference/mpdf-functions/writehtml.html">WriteHTML()</a>.</div>
+<div class="alert alert-info" role="alert">Note: The <span class="parameter">title</span> tag from the header of an HTML document will override this value when you use <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.</div>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">text</span></p>
-<p class="manual_param_dd">Defines the text to appear as a Title. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. <a href="/reference/mpdf-utilities/strcode2utf.html">strcode2utf()</a> is a useful function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.</p>
+<p class="manual_param_dd">Defines the text to appear as a Title. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.</p>
 <h2>Examples</h2>
 
 {% highlight php %}
@@ -69,11 +69,11 @@ $mpdf->Output('filename.pdf');
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setauthor.html">SetAuthor()</a> - Set document Author in metadata</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setcreator.html">SetCreator()</a> - Set document Creator in metadata</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setsubject.html">SetSubject()</a> - Set document Subject in metadata</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setkeywords.html">SetKeywords()</a> - Set document Keywords in metadata</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-utilities/strcode2utf.html">strcode2utf()</a> - Convert HTML numerical entities to UTF-8 encoded string</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setauthor.html" | prepend: site.baseurl }}">SetAuthor()</a> - Set document Author in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setcreator.html" | prepend: site.baseurl }}">SetCreator()</a> - Set document Creator in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setsubject.html" | prepend: site.baseurl }}">SetSubject()</a> - Set document Subject in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setkeywords.html" | prepend: site.baseurl }}">SetKeywords()</a> - Set document Keywords in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> - Convert HTML numerical entities to UTF-8 encoded string</li>
 </ul>
 </div>
 </div>

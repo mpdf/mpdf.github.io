@@ -15,7 +15,7 @@ permalink: /reference/html-control-tags/jpgraph.html
 <div class="alert alert-info" role="alert">&lt;<b>jpgraph</b> [ <span class="parameter">table </span>] [ <span class="parameter">type </span>] [ <span class="parameter">stacked </span>] [ <span class="parameter">dpi </span>] [ <span class="parameter">title </span>] [ <span class="parameter">splines </span>] [ <span class="parameter">bandw </span>] [ <span class="parameter">antialias </span>] [ <span class="parameter">label-y</span> ] [ <span class="parameter">label-x </span>] [ <span class="parameter">axis-x</span> ] [ <span class="parameter">axis-y</span> ] [ <span class="parameter">percent </span>] [ <span class="parameter">series </span>] [ <span class="parameter">data-col-begin</span> ] [ <span class="parameter">data-row-begin</span> ] [ <span class="parameter">data-col-end</span> ] [ <span class="parameter">data-row-end</span> ] [ <span class="parameter">show-values</span> ] [ <span class="parameter">width</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">legend-overlap</span> ] [ <span class="parameter">hide-grid</span> ] [ <span class="parameter">hide-y-axis</span> ] /&gt;</div>
 <p>Generates and inserts a graph into the document at the current writing position. &lt;jpgraph&gt; must follow the table which it refers to (not necessarily immediately). Requires <span class="parameter">useGraphs</span> set to <span class="smallblock">TRUE</span>.</p>
 
-<div class="alert alert-info" role="alert"><b>Note: </b>This requires <a href="http://www.aditus.nu/jpgraph/" target="_blank">JPGraph</a> to be installed on the server. See <a href="/what-else-can-i-do/graphs.html">Graphs</a> for further information.</div>
+<div class="alert alert-info" role="alert"><b>Note: </b>This requires <a href="http://www.aditus.nu/jpgraph/" target="_blank">JPGraph</a> to be installed on the server. See <a href="{{ "/what-else-can-i-do/graphs.html" | prepend: site.baseurl }}">Graphs</a> for further information.</div>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">table</span></p>
 <p class="manual_param_dd">This attribute (optionally) specifies the table "id" or "name" from which to use data. 
@@ -266,8 +266,8 @@ exit;
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/usegraphs.html">useGraphs</a> - Parse table data from the HTML, and allow the use of &lt;<a href="/reference/html-control-tags/jpgraph.html">jpgraph</a>&gt;</li>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/graphs.html">Graphs</a> - More about JPGraph and graphs
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/usegraphs.html" | prepend: site.baseurl }}">useGraphs</a> - Parse table data from the HTML, and allow the use of &lt;<a href="{{ "/reference/html-control-tags/jpgraph.html" | prepend: site.baseurl }}">jpgraph</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/graphs.html" | prepend: site.baseurl }}">Graphs</a> - More about JPGraph and graphs
 
 </li>
 </ul>

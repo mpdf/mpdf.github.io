@@ -12,7 +12,7 @@ permalink: /what-else-can-i-do/writing-non-html-text.html
 <p>This will surround the text with &lt;pre&gt; tags whilst preventing any &lt;pre&gt; tags included in the text from being parsed. It also allows use of a text string marker (<span class="parameter">formfeed</span>) to be replaced by a formfeed in the output file.</p>
 <h2>See</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-utilities/preparepretext.html">preparePreText()</a> 
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-utilities/preparepretext.html" | prepend: site.baseurl }}">preparePreText()</a> 
 
 </li>
 </ul>

@@ -9,7 +9,7 @@ permalink: /tables/tables.html
 <div class="topic_user_field">
 <div id="U0">
 <h2>Styles</h2>
-<p>For a full list of CSS styles supported by mPDF for tables/cells, see&nbsp;<a href="/css-stylesheets/supported-css.html">Valid CSS</a>. Note the custom attribute "topntail" which I have added to add a horizontal border at the top and bottom of the table, and under the THEAD row if present.</p>
+<p>For a full list of CSS styles supported by mPDF for tables/cells, see&nbsp;<a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Valid CSS</a>. Note the custom attribute "topntail" which I have added to add a horizontal border at the top and bottom of the table, and under the THEAD row if present.</p>
 <p>Block-level tags (DIV, P etc) are ignored inside tables, including any CSS styles - inline CSS or stylesheet classes, id etc. To set text characteristics within a table/cell, either define the CSS for the table/cell, or use in-line tags e.g. &lt;SPAN style="..."&gt;</p>
 <p>Both models of border-collapse are supported (CSS border-collapse:collapse or separate), as well as cellSpacing and cellPadding.</p>
 <h2>Rotate</h2>

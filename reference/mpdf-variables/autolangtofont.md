@@ -24,8 +24,8 @@ permalink: /reference/mpdf-variables/autolangtofont.html
 <span class="smallblock">FALSE</span>: Font selection unaffected.</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/autoscripttolang.html">autoScriptToLang</a> - marks up HTML text using the lang attribute, based on the Unicode script block</li>
-<li class="manual_boxlist"><a href="/fonts-languages/automatic-font-selection.html">Automatic Font selection</a> </li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">autoScriptToLang</a> - marks up HTML text using the lang attribute, based on the Unicode script block</li>
+<li class="manual_boxlist"><a href="{{ "/fonts-languages/automatic-font-selection.html" | prepend: site.baseurl }}">Automatic Font selection</a> </li>
 </ul>
 <p>&nbsp;</p>
 </div>

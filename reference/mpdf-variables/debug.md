@@ -60,8 +60,8 @@ $mpdf->Output();
 <div class="alert alert-info" role="alert"><b>Note:</b> This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages inadvertently picked up suppressed errors such as those caused by @fopen()&nbsp; - even though the @ is deliberately there to prevent interruption of the script.</div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/showimageerrors.html">showImageErrors</a> - show/hide error reporting for problems with Images</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/allow-output-buffering.html">allow_output_buffering</a> - prevent error mesages when using output buffering</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a> - prevent error mesages when using output buffering</li>
 </ul>
 <p>&nbsp;</p>
 </div>

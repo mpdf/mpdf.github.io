@@ -36,13 +36,13 @@ permalink: /reference/mpdf-variables/pdfxauto.html
 </tbody> </table>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/pdf-a1-b-compliance.html">PDF/A1-b compliance</a></li>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/pdf-x-1a-compliance.html">PDF/X-1a compliance</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfa.html">PDFA</a> - Create PDF/A1-b compliant document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfx.html">PDFX</a> - Create PDF/X-1a compliant document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/pdfaauto.html">PDFAauto</a> - Specify whether to automatically fix issues to create PDF/A1-b compliant document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/iccprofile.html">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/restrictcolorspace.html">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-a1-b-compliance.html" | prepend: site.baseurl }}">PDF/A1-b compliance</a></li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/pdf-x-1a-compliance.html" | prepend: site.baseurl }}">PDF/X-1a compliance</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfa.html" | prepend: site.baseurl }}">PDFA</a> - Create PDF/A1-b compliant document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfx.html" | prepend: site.baseurl }}">PDFX</a> - Create PDF/X-1a compliant document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/pdfaauto.html" | prepend: site.baseurl }}">PDFAauto</a> - Specify whether to automatically fix issues to create PDF/A1-b compliant document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a> - Specify the ICC profile for the chosen colorspace used in the document</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a> - Specify whether to automatically limit the colorspaces used</li>
 </ul>
 <p>&nbsp;</p>
 </div>

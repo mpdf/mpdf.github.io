@@ -13,7 +13,7 @@ permalink: /reference/mpdf-variables/defaultpagenumstyle.html
 
 <div class="alert alert-info" role="alert">void <b>defaultPageNumStyle</b></div>
 <p>Specifies a default page number style to use from the start of the document.</p>
-<p>For more information, see <a href="/paging/page-numbering.html">page numbering</a>.</p>
+<p>For more information, see <a href="{{ "/paging/page-numbering.html" | prepend: site.baseurl }}">page numbering</a>.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">defaultPageNumStyle</span></p>
 <p class="manual_param_dd"><b>Values</b>
@@ -46,7 +46,7 @@ DEFAULT</span>: "1"</p>
 </tbody> </table>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/paging/page-numbering.html">Page numbering</a></li>
+<li class="manual_boxlist"><a href="{{ "/paging/page-numbering.html" | prepend: site.baseurl }}">Page numbering</a></li>
 </ul>
 </div>
 </div>

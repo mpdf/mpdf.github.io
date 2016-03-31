@@ -15,12 +15,12 @@ permalink: /reference/mpdf-functions/setautofont.html
 <div class="alert alert-info" role="alert">void <b>SetAutoFont</b> ( int <span class="parameter">$flag</span> )</div>
 <p>Turns on the AutoFont function, which automatically detects language in the input HTML text and uses appropriate fonts.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This function was removed in mPDF 6.0&nbsp; Use <a href="/reference/mpdf-variables/autolangtofont.html"><code>autoLangToFont</code></a> for the same results</div>
-<p>AutoFont uses <code>&lt;span lang="" class="lang_xx"&gt;...&lt;/span&gt;</code> to mark text which is auto-detected. See <a href="/fonts-languages/lang-v5-x.html">lang</a> for further details, but note that SetAutoFont also:</p>
+<div class="alert alert-info" role="alert"><b>Note:</b> This function was removed in mPDF 6.0&nbsp; Use <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}"><code>autoLangToFont</code></a> for the same results</div>
+<p>AutoFont uses <code>&lt;span lang="" class="lang_xx"&gt;...&lt;/span&gt;</code> to mark text which is auto-detected. See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for further details, but note that SetAutoFont also:</p>
 <ul>
 <li>disables support for text-align=justify</li>
-<li>sets <a href="/reference/mpdf-variables/uselang.html">$useLang</a>=<span class="smallblock">TRUE</span></li>
-<li>sets <a href="/reference/mpdf-variables/bidirectional.html">$biDirectional</a>=<span class="smallblock">TRUE</span> (if AUTOFONT_RTL is set)</li>
+<li>sets <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a>=<span class="smallblock">TRUE</span></li>
+<li>sets <a href="{{ "/reference/mpdf-variables/bidirectional.html" | prepend: site.baseurl }}">$biDirectional</a>=<span class="smallblock">TRUE</span> (if AUTOFONT_RTL is set)</li>
 </ul>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Using automatic language detection adds considerable processing time when creating a large document.</div>
@@ -112,10 +112,10 @@ $mpdf->Output();
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/uselang.html">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/autofontgroupsize.html">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li>
 <li class="manual_boxlist"><a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li>
-<li class="manual_boxlist"><a href="/fonts-languages/lang-v5-x.html">lang</a> - Information on mPDF support for the HTML attribute lang</li>
+<li class="manual_boxlist"><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
 </ul>
 </div>
 </div>

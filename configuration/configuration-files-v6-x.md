@@ -21,7 +21,7 @@ permalink: /configuration/configuration-files-v6-x.html
 
 </td>
 <td>
-<p>Configure most <a href="/configuration/configuration-variables.html">variables</a> which affect mPDF. These values can be set at the beginning of individual scripts, but changes here will affect all of your PDF files.</p>
+<p>Configure most <a href="{{ "/configuration/configuration-variables.html" | prepend: site.baseurl }}">variables</a> which affect mPDF. These values can be set at the beginning of individual scripts, but changes here will affect all of your PDF files.</p>
 <p>Also contains basic default CSS stylesheet properties.</p>
 </td>
 </tr>

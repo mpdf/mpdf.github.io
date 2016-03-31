@@ -60,12 +60,12 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setwatermarktext.html">SetWatermarkText()</a> - Sets the text to use for a Watermark</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/settitle.html">SetTitle()</a> - Set document Title in metadata</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setauthor.html">SetAuthor()</a> - Set document Author in metadata</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setcreator.html">SetCreator()</a> - Set document Creator in metadata</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setsubject.html">SetSubject()</a> - Set document Subject in metadata</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setkeywords.html">SetKeywords()</a> - Set document Keywords in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Sets the text to use for a Watermark</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/settitle.html" | prepend: site.baseurl }}">SetTitle()</a> - Set document Title in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setauthor.html" | prepend: site.baseurl }}">SetAuthor()</a> - Set document Author in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setcreator.html" | prepend: site.baseurl }}">SetCreator()</a> - Set document Creator in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setsubject.html" | prepend: site.baseurl }}">SetSubject()</a> - Set document Subject in metadata</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setkeywords.html" | prepend: site.baseurl }}">SetKeywords()</a> - Set document Keywords in metadata</li>
 </ul>
 </div>
 </div>

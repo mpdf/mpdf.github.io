@@ -198,7 +198,7 @@ Default = 2</li>
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><span class="manual_boxlist"><a href="/reference/mpdf-utilities/preparepretext.html">preparePreText()</a> - </span>Prepares text to be output ignoring the HTML markup</li>
+<li class="manual_boxlist"><span class="manual_boxlist"><a href="{{ "/reference/mpdf-utilities/preparepretext.html" | prepend: site.baseurl }}">preparePreText()</a> - </span>Prepares text to be output ignoring the HTML markup</li>
 </ul>
 </div>
 </div>

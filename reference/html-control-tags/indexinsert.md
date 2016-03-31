@@ -13,10 +13,10 @@ permalink: /reference/html-control-tags/indexinsert.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">&lt;<b>indexinsert</b> [ <span class="parameter">font</span> ] [ <span class="parameter">font-size</span> ] [ <span class="parameter">line-spacing</span> ] [ <span class="parameter">cols</span> ] [ <span class="parameter">gap</span> ] [ <span class="parameter">offset</span> ] [ <span class="parameter">links</span> ] [ <span class="parameter">usedivletters</span> ] [ <span class="parameter">div-font</span> ] [ <span class="parameter">div-font-size</span> ] /&gt;</div>
-<p>From mPDF v 6.0 onwards, the attributes have changed. See <a href="/what-else-can-i-do/index.html">Indexes</a> for more information. The following is for mPDF &gt;= v6.0:</p>
+<p>From mPDF v 6.0 onwards, the attributes have changed. See <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a> for more information. The following is for mPDF &gt;= v6.0:</p>
 
 <div class="alert alert-info" role="alert">&lt;<b>indexinsert</b> [ <span class="parameter">links</span> ] [ <span class="parameter">usedivletters</span> ] [ <span class="parameter">collation</span> ] [ <span class="parameter">collation-group</span> ] /&gt;</div>
-<p>Inserts an Index for the document based on index entries made using &lt;<a href="/reference/html-control-tags/tocentry.html">indexentry</a>&gt; or <a href="/reference/mpdf-functions/tocpagebreak.html">CreateIndex()</a>.</p>
+<p>Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>.</p>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">font </span></p>
 <p class="manual_param_dd">Set the font-family for the Index.
@@ -132,7 +132,7 @@ Example #1 (mPDF >= 6.0)
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/index.html">Indexes</a></li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a></li>
 </ul>
 </div>
 </div>

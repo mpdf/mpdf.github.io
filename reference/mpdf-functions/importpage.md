@@ -13,7 +13,7 @@ permalink: /reference/mpdf-functions/importpage.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">int <b>ImportPage</b> ( int <span class="parameter">$pageno</span> [, float <span class="parameter">$crop_x</span> [, float <span class="parameter">$crop_y</span> [, float <span class="parameter">$crop_w</span> [, float <span class="parameter">$crop_h</span> [, string <span class="parameter">$boxname</span> ]]]]])</div>
-<p>Import a page, or part of a page, from an external PDF file. The external source file must first be set with <a href="/reference/mpdf-functions/setsourcefile.html">SetSourceFile()</a>. A 'template' is created in mPDF which stores the image of this page, ready to insert into the document.</p>
+<p>Import a page, or part of a page, from an external PDF file. The external source file must first be set with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template' is created in mPDF which stores the image of this page, ready to insert into the document.</p>
 <h2>Parameters</h2>
 <p class="manual_param_dt"><span class="parameter">pageno</span></p>
 <p class="manual_param_dd">This parameter specifies the page number from the source PDF file to import.&nbsp; <span class="parameter">pageno</span> should be a positive integer value.
@@ -41,7 +41,7 @@ permalink: /reference/mpdf-functions/importpage.html
 <h2>Return Value
 
 </h2>
-<p class="manual_param_dd"><b>ImportPage()</b> returns an ID for the template which it has created. This ID can be used at any time to insert the template into the document with <a href="/reference/mpdf-functions/usetemplate.html">UseTemplate()</a> or <a href="/reference/mpdf-functions/setpagetemplate.html">SetPageTemplate()</a></p>
+<p class="manual_param_dd"><b>ImportPage()</b> returns an ID for the template which it has created. This ID can be used at any time to insert the template into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a></p>
 <h2>Changelog</h2>
 <table class="bpmTopic"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
@@ -111,20 +111,20 @@ $mpdf->Output();
 
 <h2>See Also</h2>
 <ul>
-<li><a href="/reference/mpdf-functions/setimportuse.html">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
-<li><a href="/reference/mpdf-functions/thumbnail.html">Thumbnail()</a> - Print thumbnails of an external PDF file
+<li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
+<li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
 
 </li>
-<li><a href="/reference/mpdf-functions/setsourcefile.html">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document
+<li><a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document
 
 </li>
-<li><a href="/reference/mpdf-functions/usetemplate.html">UseTemplate()</a> - Insert an imported page from an external PDF file
+<li><a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> - Insert an imported page from an external PDF file
 
 </li>
-<li><a href="/reference/mpdf-functions/setpagetemplate.html">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template
+<li><a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template
 
 </li>
-<li><a href="/reference/mpdf-functions/setdoctemplate.html">SetDocTemplate()</a> - Specify an external PDF file to use as a template
+<li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template
 
 </li>
 </ul>

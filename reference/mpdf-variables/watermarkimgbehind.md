@@ -42,7 +42,7 @@ permalink: /reference/mpdf-variables/watermarkimgbehind.html
 </tbody> </table>
 <p>See Also</p>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/watermarkimgalphablend.html">watermarkImgAlphaBlend</a> - Specify the blend mode for overlaid watermark images</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermarkimgalphablend.html" | prepend: site.baseurl }}">watermarkImgAlphaBlend</a> - Specify the blend mode for overlaid watermark images</li>
 </ul>
 <p>&nbsp;</p>
 </div>

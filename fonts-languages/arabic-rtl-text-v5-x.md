@@ -98,11 +98,11 @@ I have left options encoded in <span class="function">function InitArabic()</spa
 <div class="alert alert-info" role="alert"><b>Note:</b> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner, LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.</div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/uselang.html">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setautofont.html">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/autofontgroupsize.html">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li>
 <li class="manual_boxlist"><a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li>
-<li class="manual_boxlist"><a href="/fonts-languages/lang-v5-x.html">lang</a> - Information on mPDF support for the HTML attribute lang</li>
+<li class="manual_boxlist"><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
 </ul>
 </div>
 </div>

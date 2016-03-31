@@ -21,7 +21,7 @@ permalink: /configuration/configuration-files-v5-x.html
 <td><span class="filename">config.php</span> 
 
 </td>
-<td>Configure most <a href="/configuration/configuration-variables.html">variables</a> which affect mPDF. These values can be set at the beginning of individual scripts, but changes here will affect all of your PDF files.</td>
+<td>Configure most <a href="{{ "/configuration/configuration-variables.html" | prepend: site.baseurl }}">variables</a> which affect mPDF. These values can be set at the beginning of individual scripts, but changes here will affect all of your PDF files.</td>
 <td>These values were defined at the start of the <span class="filename">mpdf.php</span> file.</td>
 </tr>
 <tr>

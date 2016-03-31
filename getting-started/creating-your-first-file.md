@@ -45,7 +45,7 @@ exit;
 <h2>Notes</h2>
 
 <div class="alert alert-info" role="alert"><b>Note</b>: <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. <code>define('_MPDF_PATH','../')</code>. From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
-<p>For details and options for the Output command, see&nbsp;<a href="/reference/mpdf-functions/output.html">Output()</a></p>
+<p>For details and options for the Output command, see&nbsp;<a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a></p>
 </div>
 </div>
 

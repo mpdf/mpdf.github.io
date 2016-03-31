@@ -11,7 +11,7 @@ permalink: /css-stylesheets/introduction.html
 <p>Default CSS styles are defined in <span class="filename">config.php</span> file (as <code>var $default_CSS</code>) which is based on the recommended default values for HTML4 - <a href="http://www.w3.org/TR/CSS21/sample.html">http://www.w3.org/TR/CSS21/sample.html</a> The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.</p>
 <p>The following are supported (in order of ascending priority - lower ones in list overwrite higher):</p>
 <ul>
-<li>HTML attributes e.g. &lt;div align="center"&gt; (see <a href="/html-support/html-attributes.html">supported HTML attributes</a>)</li>
+<li>HTML attributes e.g. &lt;div align="center"&gt; (see <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">supported HTML attributes</a>)</li>
 <li>CSS Stylesheets - included in header of HTML document or as &lt;link&nbsp; /&gt; or as @import()
 <ul>
 <li>- html tags e.g. p { font-size:12pt; color:#880000; }</li>
@@ -35,12 +35,12 @@ permalink: /css-stylesheets/introduction.html
 - table, tr, th and td will only be recognised as the last items (as above)
 
 - only 'block' elements (not 'in-line') can be included i.e. div.style1 a {...} will not work, nor will a#class1 {...}</p>
-<p>For a full list of CSS attributes supported see <a href="/css-stylesheets/supported-css.html">Supported CSS</a></p>
+<p>For a full list of CSS attributes supported see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a></p>
 <p>Note the OUTLINE style (which is not supported in most browsers) does work in mPDF e.g.
 
 &lt;span style="outline-width:thin|medium|thick; outline-color:#rrggbb|invert"&gt;</p>
 <h2>Using a stylesheet</h2>
-<p>The WriteHTML() method takes second parameter i.e. <span class="parameter">mode</span>. See <a href="/reference/mpdf-functions/writehtml.html">WriteHTML()</a> for details of this and other parameters.</p>
+<p>The WriteHTML() method takes second parameter i.e. <span class="parameter">mode</span>. See <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> for details of this and other parameters.</p>
 <p><span class="parameter">mode</span>
 
 0 - Use this (default) if the text you pass is a complete HTML page including head and body and style definitions.
@@ -82,7 +82,7 @@ $mpdf->WriteHTML($html,2);
 <link rel="stylesheet" media="print" href="..." />
 {% endhighlight %}
 
-<p>By default mPDF will match stylesheets set for "print" or "all" media. This can be changed by the configurable variable <a href="/reference/mpdf-variables/cssselectmedia.html">CSSselectMedia</a>.</p>
+<p>By default mPDF will match stylesheets set for "print" or "all" media. This can be changed by the configurable variable <a href="{{ "/reference/mpdf-variables/cssselectmedia.html" | prepend: site.baseurl }}">CSSselectMedia</a>.</p>
 </div>
 </div>
 

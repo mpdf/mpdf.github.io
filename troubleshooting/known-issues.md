@@ -22,7 +22,7 @@ ini_set("pcre.backtrack_limit","1000000");
 {% endhighlight %}
 
 <h3>Keep-with-table</h3>
-<p>If <a href="/reference/mpdf-variables/use-kwt.html">use_kwt</a> ("keep-with-table") is set, and a heading element precedes a table inside a div with border/background set: it doesn't work e.g.</p>
+<p>If <a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">use_kwt</a> ("keep-with-table") is set, and a heading element precedes a table inside a div with border/background set: it doesn't work e.g.</p>
 
 {% highlight php %}
 <div style="border: 1px solid #000000; background-color: #EEEEFF;"><h2>Title</h2><table...
@@ -30,7 +30,7 @@ ini_set("pcre.backtrack_limit","1000000");
 
 <h3>Program dies with no error message when generating a large PDF file</h3>
 <p>A timeout due to Apache configuration 'TimeOut' will cause the script to terminate with no error message, despite increasing the PHP time limit etc.</p>
-<p>See also <a href="/troubleshooting/blank-screen.html">Blank screen</a> for a bug when using localhost</p>
+<p>See also <a href="{{ "/troubleshooting/blank-screen.html" | prepend: site.baseurl }}">Blank screen</a> for a bug when using localhost</p>
 <h2>Problems fixed from mPDF &gt;= 5.0</h2>
 <h3>Indic Fonts - ASCII characters</h3>
 <p>The Indic fonts (added mPDF 4.0) do not contain the basic ASCII characters: a-z, A-Z, and in some: ` and $</p>
@@ -39,7 +39,7 @@ ini_set("pcre.backtrack_limit","1000000");
 <p>With some SVG images, Adobe Reader 7 throws an error - "Problem with Type 3 font, form or pattern".</p>
 <h2>See Also</h2>
 <ul>
-<li><a href="/about-mpdf/limitations.html">Limitations</a></li>
+<li><a href="{{ "/about-mpdf/limitations.html" | prepend: site.baseurl }}">Limitations</a></li>
 </ul>
 </div>
 </div>

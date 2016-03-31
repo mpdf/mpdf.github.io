@@ -67,16 +67,16 @@ If the <span class="parameter">page</span> value is <span class="smallblock">BLA
 <h2>Examples</h2>
 <p>For examples and further information please see:</p>
 <ul>
-<li class="manual_boxlist"><a href="/headers-footers/headers-footers.html">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="/headers-footers/method-4.html">Headers &amp; Footers - Method 3</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a></li>
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/defheaderbyname.html">DefHeaderByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/pageheader.html">pageheader</a>&gt;</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setheaderbyname.html">SetHeaderByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/setpagefooter.html">setpagefooter</a>&gt;</li>
-<li class="manual_boxlist"><a href="/paging/using-page.html">@page</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/setpagefooter.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a></li>
 </ul>
 <p>&nbsp;</p>
 </div>

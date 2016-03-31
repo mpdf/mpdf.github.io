@@ -136,7 +136,7 @@ exit;
 </tbody> </table>
 <p><img src="files/images/example_graph.png" alt="example_graph.png" /></p>
 <p>&nbsp;</p>
-<p>Note that graphs can be rotated as with images using&lt;jpgraph rotate="90" ... (see <a href="/html-support/html-attributes.html">HTML attributes</a>)</p>
+<p>Note that graphs can be rotated as with images using&lt;jpgraph rotate="90" ... (see <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)</p>
 </div>
 </div>
 

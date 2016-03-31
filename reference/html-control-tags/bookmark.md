@@ -88,7 +88,7 @@ This will produce a Bookmark tree in Adobe Reader:
 
 <h2>Notes</h2>
 
-<div class="alert alert-info" role="alert"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in &lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt;.</div>
+<div class="alert alert-info" role="alert"><b>Note</b>: To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.</div>
 <h3>Recommended placement</h3>
 <p>Recommended placement of Bookmarks is just after the first word following the opening tag of the block element:</p>
 
@@ -123,7 +123,7 @@ $mpdf->h2bookmarks = array('H1'=>0, 'H2'=>1, 'H3'=>2);
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/bookmark.html">Bookmark()</a> - PHP equivalent to &lt;bookmark&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/bookmark.html" | prepend: site.baseurl }}">Bookmark()</a> - PHP equivalent to &lt;bookmark&gt;</li>
 </ul>
 </div>
 </div>

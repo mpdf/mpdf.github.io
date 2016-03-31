@@ -28,7 +28,7 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<p>See also <a href="/troubleshooting/known-issues.html">Known issues</a> and <a href="/troubleshooting/corrupt-pdf-file.html">Corrupt PDF file</a>.</p>
+<p>See also <a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">Known issues</a> and <a href="{{ "/troubleshooting/corrupt-pdf-file.html" | prepend: site.baseurl }}">Corrupt PDF file</a>.</p>
 <hr />
 <h3>localhost problems / Vista 64 bit</h3>
 <p>Since updating to Windows Vistax64bit for development, all files containing images or external stylesheets crashed or timeout.</p>

@@ -14,7 +14,7 @@ permalink: /reference/mpdf-variables/usetibetanlbr.html
 <div class="alert alert-info" role="alert">boolean <b>useTibetanLBR</b></div>
 <p>Specify whether to use mPDF algorithm to determine appropriate places for line breaks when using Tibetan text.</p>
 <p>mPDF uses a simple algorithm to identify line-breaking opportunities after the characters U+0F0B (Tsheg) or U+0F0D.</p>
-<p>For more information, see <a href="/what-else-can-i-do/line-breaking.html">Line breaking</a>.</p>
+<p>For more information, see <a href="{{ "/what-else-can-i-do/line-breaking.html" | prepend: site.baseurl }}">Line breaking</a>.</p>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">useTibetanLBR = <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span></p>
 <p class="manual_param_dd"><b>Values</b>
@@ -32,7 +32,7 @@ permalink: /reference/mpdf-variables/usetibetanlbr.html
 </tr>
 </tbody> </table>
 <h2>See Also</h2>
-<p><a href="/what-else-can-i-do/line-breaking.html">Line breaking</a></p>
+<p><a href="{{ "/what-else-can-i-do/line-breaking.html" | prepend: site.baseurl }}">Line breaking</a></p>
 </div>
 </div>
 

@@ -66,7 +66,7 @@ permalink: /what-else-can-i-do/images.html
 $this->img_dpi = 96;
 {% endhighlight %}
 
-<p>In addition, many CSS style properties are supported including <span class="parameter">vertical-align</span>, as well as some custom attributes such as <span class="parameter">opacity</span> and <span class="parameter">rotate</span>. (See <a href="/css-stylesheets/supported-css.html">Supported CSS</a> and <a href="/html-support/html-attributes.html">HTML attributes</a>)</p>
+<p>In addition, many CSS style properties are supported including <span class="parameter">vertical-align</span>, as well as some custom attributes such as <span class="parameter">opacity</span> and <span class="parameter">rotate</span>. (See <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> and <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)</p>
 <p>Images can be used in:</p>
 <ul>
 <li>In-line images, including in HTML headers &amp; footers</li>

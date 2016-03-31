@@ -12,7 +12,7 @@ permalink: /reference/mpdf-variables/showwatermarktext.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">boolean <b>showWatermarkText</b></div>
-<p>Specifies whether or not to show/print the watermark text on each page. The text for the watermark must be defined using <a href="/reference/mpdf-functions/setwatermarktext.html">SetWatermarkText()</a>. The watermark is added to the document at the end of each page.</p>
+<p>Specifies whether or not to show/print the watermark text on each page. The text for the watermark must be defined using <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a>. The watermark is added to the document at the end of each page.</p>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> This superceded TopicIsUnvalidated in mPDF 2.2 as an alias, and is now the preferred form.</div>
 <h2>Values</h2>
@@ -70,12 +70,12 @@ $mpdf->WriteHTML('<p>Hallo World</p>');
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setwatermarktext.html">SetWatermarkText()</a> - Set the text to use as a Watermark</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setwatermarkimage.html">SetWatermarkImage()</a> - Set an image to use as a Watermark</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/watermarkimagealpha.html">watermarkImageAlpha</a> - Specifies the transparency (alpha value) for the watermark image</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/watermarktextalpha.html">watermarkTextAlpha</a> - Specifies the transparency (alpha value) for the watermark text</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/showwatermarktext.html">showWatermarkImage</a> - Specifies whether or not to show/print the watermark image</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/watermark-font.html">watermark_font</a> - Specifies the font to use for Watermark text</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Set the text to use as a Watermark</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a> - Set an image to use as a Watermark</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermarkimagealpha.html" | prepend: site.baseurl }}">watermarkImageAlpha</a> - Specifies the transparency (alpha value) for the watermark image</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermarktextalpha.html" | prepend: site.baseurl }}">watermarkTextAlpha</a> - Specifies the transparency (alpha value) for the watermark text</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> - Specifies whether or not to show/print the watermark image</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermark-font.html" | prepend: site.baseurl }}">watermark_font</a> - Specifies the font to use for Watermark text</li>
 </ul>
 </div>
 </div>

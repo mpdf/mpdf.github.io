@@ -13,7 +13,7 @@ permalink: /fonts-languages/choosing-a-configuration-v6-x.html
 <p>Some of the things you can change are:</p>
 <ul>
 <li>the initial parameter used to call mPDF e.g. <code>$mpdf=new mPDF('c')</code></li>
-<li>configuration variables set in <span class="filename">config.php</span> see <a href="/reference/mpdf-variables/overview.html">mPDF Variables - Overview</a>
+<li>configuration variables set in <span class="filename">config.php</span> see <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">mPDF Variables - Overview</a>
 
 (many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
 <li>font details in <span class="filename">config_fonts.php</span></li>
@@ -30,7 +30,7 @@ permalink: /fonts-languages/choosing-a-configuration-v6-x.html
 <h2>Core non-embedded fonts</h2>
 <p>PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and&nbsp;Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not need to be embedded in the PDF document.</p>
 <p><i>Advantages:</i> Small file size, fast processing, small memory usage.</p>
-<p><i>Disadvantages:</i> Limited choice of fonts for appearance. Will not display characters which are not in the <a href="/reference/codepages-glyphs/win-1252.html">win-1252</a>&nbsp; <a href="/reference/codepages-glyphs/symbols-adobe.html">Symbols</a>, or&nbsp; <a href="/reference/codepages-glyphs/zapfdingbats-adobe.html">Dingbats</a> codepages (suitable for most Western European languages).</p>
+<p><i>Disadvantages:</i> Limited choice of fonts for appearance. Will not display characters which are not in the <a href="{{ "/reference/codepages-glyphs/win-1252.html" | prepend: site.baseurl }}">win-1252</a>&nbsp; <a href="{{ "/reference/codepages-glyphs/symbols-adobe.html" | prepend: site.baseurl }}">Symbols</a>, or&nbsp; <a href="{{ "/reference/codepages-glyphs/zapfdingbats-adobe.html" | prepend: site.baseurl }}">Dingbats</a> codepages (suitable for most Western European languages).</p>
 <p>To use core fonts only, use 'c' for the initial parameter:</p>
 
 {% highlight php %}
@@ -85,7 +85,7 @@ $this->fonttrans = array(
 <p>Most browsers / PC applications automatically select / substitute appropriate fonts when required. mPDF does not do this by default (additional processing resources required). there are two situations when you need to consider the method of font selection:</p>
 <ul>
 <li>the text contains characters which are not covered by the initial font selected</li>
-<li>the text contains complex script requiring special treatment i.e. <a href="/fonts-languages/opentype-layout-otl.html">OpenType layout (OTL)</a></li>
+<li>the text contains complex script requiring special treatment i.e. <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a></li>
 </ul>
 <p>The DejaVu fonts distributed with mPDF contain characters (glyphs) to display most Western and Eastern European languages, Cyrillic text, Baltic languages, Turkish, and Greek. Languages which usually need special consideration are: CJK (chinese - japanese - korean) languages, Indic languages, Vietnamese, Thai, and Arabic languages. With these, you need to tell mPDF to select a suitable font.</p>
 <p>There are several different ways to do this:</p>
@@ -133,7 +133,7 @@ $mpdf->autoScriptToLang = true;
 <li><code>autoLangToFont</code></li>
 <li>CSS stylesheet using the <code>:lang</code> selector</li>
 </ul>
-<p>4) Use <a href="/reference/mpdf-variables/usesubstitutions.html">$useSubstitutions</a> to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not represented in the specified font, it will try to substitute it from one of the fonts defined in <code>$this-&gt;backupSubsFont</code> in <span class="filename">config_fonts.php</span>.</p>
+<p>4) Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a> to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not represented in the specified font, it will try to substitute it from one of the fonts defined in <code>$this-&gt;backupSubsFont</code> in <span class="filename">config_fonts.php</span>.</p>
 
 {% highlight php %}
 $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
@@ -148,7 +148,7 @@ $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
 <p>It is possible to use method 4) together with 1) 2) or 3), to ensure that all special characters are displayed.</p>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/annotation.html">RTL &amp; Bidirectional text</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a></li>
 </ul>
 <p>&nbsp;</p>
 </div>

@@ -15,7 +15,7 @@ permalink: /reference/html-control-tags/barcode.html
 <div class="alert alert-info" role="alert">&lt;<b>barcode</b>&nbsp; <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;</div>
 <p>Add a Barcode to the document.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> See <a href="/what-else-can-i-do/barcodes.html">barcodes</a> and the example file for further information.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> and the example file for further information.</div>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">code</span></p>
 <p class="manual_param_dd">Specifies the code to translate to a barcode.
@@ -94,7 +94,7 @@ NB Ignored for Postcode barcodes
 
 Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODABAR and CODE11
 
-<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see <a href="/what-else-can-i-do/barcodes.html">barcodes</a>)</p>
+<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>)</p>
 <h2>Changelog</h2>
 <table class="bpmTopic"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
@@ -216,7 +216,7 @@ exit;
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/what-else-can-i-do/barcodes.html">Barcodes</a> - More information on types of barcode
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">Barcodes</a> - More information on types of barcode
 
 </li>
 </ul>

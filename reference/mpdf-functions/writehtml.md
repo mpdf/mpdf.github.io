@@ -147,19 +147,19 @@ $mpdf->WriteHTML('...and this is the end</p>', 2, false, true);
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/allow-charset-conversion.html">allow_charset_conversion</a> - attempts to read any charset declaration in the HTML code</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">allow_charset_conversion</a> - attempts to read any charset declaration in the HTML code</li>
 <li class="manual_boxlist"><a href="indexb1bd.html?tid=230">disablePrintCSS</a> - prevents stylesheets set for print media being parsed</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/ignore-invalid-utf8.html">ignore_invalid_utf8</a> - prevents mPDF from failing if text contains invalid UTF-8 characters
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/ignore-invalid-utf8.html" | prepend: site.baseurl }}">ignore_invalid_utf8</a> - prevents mPDF from failing if text contains invalid UTF-8 characters
 
 </li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/charset-in.html">charset_in</a> - specify the input text character set if not UTF-8
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/charset-in.html" | prepend: site.baseurl }}">charset_in</a> - specify the input text character set if not UTF-8
 
 </li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/bidirectional.html">biDirectional</a> - specify whether mPDF should test for <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/bidirectional.html" | prepend: site.baseurl }}">biDirectional</a> - specify whether mPDF should test for <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text
 
 </li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/allow-html-optional-endtags.html">allow_html_optional_endtags</a> -specify whether mPDF should try to accommodate optional HTML endtags</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/restoreblockpagebreaks.html">restoreBlockPagebreaks</a> - keep current HTML tags/CSS styles active when forcing a page-break or formfeed
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-html-optional-endtags.html" | prepend: site.baseurl }}">allow_html_optional_endtags</a> -specify whether mPDF should try to accommodate optional HTML endtags</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}">restoreBlockPagebreaks</a> - keep current HTML tags/CSS styles active when forcing a page-break or formfeed
 
 </li>
 </ul>

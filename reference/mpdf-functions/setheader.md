@@ -182,15 +182,15 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 <h2>Examples</h2>
 <p>For examples and further information please see:</p>
 <ul>
-<li class="manual_boxlist"><a href="/headers-footers/headers-footers.html">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="/headers-footers/method-1.html">Headers &amp; Footers - Method 1</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 1</a></li>
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setfooter.html">SetFooter()</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultheaderfontsize.html">$defaultheaderfontsize</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultheaderfontstyle.html">$defaultheaderfontstyle</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultheaderline.html">$defaultheaderline</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultheaderfontsize.html" | prepend: site.baseurl }}">$defaultheaderfontsize</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultheaderfontstyle.html" | prepend: site.baseurl }}">$defaultheaderfontstyle</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultheaderline.html" | prepend: site.baseurl }}">$defaultheaderline</a></li>
 </ul>
 <ul> </li>
 </ul>

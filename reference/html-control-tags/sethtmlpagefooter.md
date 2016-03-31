@@ -59,15 +59,15 @@ If the <span class="parameter">page</span> value is <span class="smallblock">BLA
 <h2>Examples</h2>
 <p>For examples and further information please see:</p>
 <ul>
-<li class="manual_boxlist"><a href="/headers-footers/headers-footers.html">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="/headers-footers/method-4.html">Headers &amp; Footers - Method 4</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 4</a></li>
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/defhtmlheaderbyname.html">DefHTMLFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/htmlpageheader.html">htmlpagefooter</a>&gt;</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/sethtmlfooterbyname.html">SetHTMLFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/sethtmlpageheader.html">sethtmlpageheader</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooterbyname.html" | prepend: site.baseurl }}">SetHTMLFooterByName()</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/sethtmlpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt;</li>
 </ul>
 <p>&nbsp;</p>
 </div>

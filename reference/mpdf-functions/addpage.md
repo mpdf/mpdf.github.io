@@ -11,7 +11,7 @@ permalink: /reference/mpdf-functions/addpage.html
 <p>(mPDF &gt;= 1.0)</p>
 <p>AddPage — Add a new page</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> A new function <a href="/reference/mpdf-functions/addpagebyarray.html">AddPageByArray()</a> was added in mPDF 5.0 which is recommended as much simpler to use.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> A new function <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a> was added in mPDF 5.0 which is recommended as much simpler to use.</div>
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">void <b>AddPage</b> ([ string <span class="parameter">$orientation</span> [, string <span class="parameter">$type</span> [, string <span class="parameter">$resetpagenum</span> [, string <span class="parameter">$pagenumstyle</span> [, string <span class="parameter">$suppress</span> [, float <span class="parameter">$margin-left</span> [, float <span class="parameter">$margin-right</span> [, float $<span class="parameter">margin-top</span> [, float $<span class="parameter">margin-bottom</span> [, float $<span class="parameter">margin-header</span> [, float <span class="parameter">$margin-footer</span> [, string <span class="parameter">$odd-header-name</span> [, string <span class="parameter">$even-header-name</span> [, string $<span class="parameter">odd-footer-name</span> [, string $<span class="parameter">even-footer-name</span> [, mixed $<span class="parameter">odd-header-value</span> [, mixed <span class="parameter">$even-header-value</span> [, mixed <span class="parameter">$odd-footer-value</span> [, mixed $<span class="parameter">even-footer-value</span> [, string <span class="parameter">$pageselector</span> [, mixed <span class="parameter">$sheet-size</span> ]]]]]]]]]]]]]]]]]]]]])</div>
@@ -159,7 +159,7 @@ If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the 
 <span class="parameter">odd-footer-name</span>
 
 <span class="parameter">even-footer-name</span></p>
-<p class="manual_param_dd">Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using <a href="/reference/mpdf-functions/defheaderbyname.html">DefHeaderByName()</a>, <a href="/reference/mpdf-functions/deffooterbyname.html">DefFooterByName()</a>, <a href="/reference/mpdf-functions/defhtmlheaderbyname.html">DefHTMLHeaderByName()</a>, or <a href="/reference/mpdf-functions/defhtmlfooterbyname.html">DefHTMLFooterByName()</a>.
+<p class="manual_param_dd">Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>, <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>, <a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>, or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
@@ -173,7 +173,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 <span class="parameter">odd-footer-</span><span class="parameter">value</span>
 
 <span class="parameter">even-footer-</span><span class="parameter">value</span></p>
-<p class="manual_param_dd">Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using <a href="/reference/mpdf-functions/defheaderbyname.html">DefHeaderByName()</a>, <a href="/reference/mpdf-functions/deffooterbyname.html">DefFooterByName()</a>, <a href="/reference/mpdf-functions/defhtmlheaderbyname.html">DefHTMLHeaderByName()</a>, or <a href="/reference/mpdf-functions/defhtmlfooterbyname.html">DefHTMLFooterByName()</a>.
+<p class="manual_param_dd">Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>, <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>, <a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>, or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
@@ -187,7 +187,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 <p class="manual_param_dd">Select a named CSS @page.
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p>
-<p class="manual_param_dd">See <a href="/paging/using-page.html">Using @page</a> for more information</p>
+<p class="manual_param_dd">See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information</p>
 <p class="manual_param_dt"><span class="parameter">sheet-size</span></p>
 <p class="manual_param_dd"><span class="parameter">sheet-size</span> can be specified either as a pre-defined page size, or as an array of width and height in millimetres e.g. array(210,297).
 
@@ -359,12 +359,12 @@ $mpdf->WriteHTML('End section of book with no headers');
 
 <h2>Notes</h2>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Unlike FPDF <b>AddPage()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="/reference/codepages-glyphs/iso-8859-win-comparison-chart.html">WriteHTML()</a> will automatically add the first page to a new document.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> Unlike FPDF <b>AddPage()</b> does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
 
-<div class="alert alert-info" role="alert"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of both <a href="/reference/mpdf-functions/addpage.html">AddPage()</a>.</div>
+<div class="alert alert-info" role="alert"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of both <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; - Custom HTML tag - equivalent to <b>AddPage()</b> </li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to <b>AddPage()</b> </li>
 </ul>
 </div>
 </div>

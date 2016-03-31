@@ -21,7 +21,7 @@ permalink: /reference/mpdf-variables/cjkforceend.html
 
 will force hanging punctuation to hang outside right margin.</p>
 <p>&nbsp;</p>
-<p>See also <a href="/reference/mpdf-variables/allowcjkoverflow.html">allowCJKoverflow</a> and <a href="/reference/mpdf-variables/allowcjkorphans.html">allowCJKorphans</a></p>
+<p>See also <a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a> and <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a></p>
 </div>
 </div>
 

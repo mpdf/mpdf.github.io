@@ -96,7 +96,7 @@ Enclosed Alphanumerics (Quivira)
 Miscellaneous Symbols (DejaVuSansCondensed)
 
 ☀ ☁ ☂ ☃ ☄ ★ ☆ ☇ ☈ ☉ ☊ ☋ ☌ ☍ ☎ ☏ ☐ ☑ ☒</div>
-<p>Names in brackets are open-source fonts which cover the Unicode ranges - see <a href="/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html">Unicode coverage of free fonts</a> for details of these and other open-source fonts.</p>
+<p>Names in brackets are open-source fonts which cover the Unicode ranges - see <a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode coverage of free fonts</a> for details of these and other open-source fonts.</p>
 <h2>Complex scripts</h2>
 <p>Although all characters may be displayed, there are various reasons why a script may not appear as expected.</p>
 <h3>Right-to-left languages (Hebrew, Arabic etc.)</h3>
@@ -142,7 +142,7 @@ Á á Ȧ ȧ Ä ä ï (Using diacritics)</div>
 <p>Plane 2, the Supplementary Ideographic Plane (SIP), is used for about 40,000 Unified Han (CJK) Ideographs.</p>
 <p>mPDF version 5 supports fonts containing characters from all Unicode Planes. By choosing the correct font, almost every single character from Unicode 5 can be displayed in a PDF file.</p>
 <h3>Unicode Supplementary Multilingual Plane (SMP or Plane 1) U+10000 - U+1FFFF</h3>
-<p>The Unicode Supplementary Multilingual Plane contains ranges such as Gothic text and Egyptian Hieroglyphics. as well as other (mainly) ancient scripts - see <a href="/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html">Unicode coverage of free fonts</a> for full list.</p>
+<p>The Unicode Supplementary Multilingual Plane contains ranges such as Gothic text and Egyptian Hieroglyphics. as well as other (mainly) ancient scripts - see <a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode coverage of free fonts</a> for full list.</p>
 <p>mPDF uses a different method to embed fonts in the PDF file if they include characters from SMP or SIP, because the characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less eficient than the default method, and it can be suppressed by adding the font name to the array <code>BMPonly</code> in the <span class="filename">config_fonts.php</span> configuration file.</p>
 <p>Note that the DejaVu fonts&nbsp; distributed with mPDF do contain a few characters in the SMP plane, but most users will not require them and by default they are added to the array <code>BMPonly</code>.</p>
 <h2>Using CJK fonts in mPDF</h2>

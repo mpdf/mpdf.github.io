@@ -15,7 +15,7 @@ permalink: /reference/mpdf-functions/createreference.html
 <div class="alert alert-info" role="alert">void <b>CreateReference</b> ( )</div>
 <p>&nbsp;</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> <b>CreateReference()</b> is now depracated in favour of the better-named <a href="/reference/mpdf-functions/createindex.html">CreateIndex()</a>.&nbsp;</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> <b>CreateReference()</b> is now depracated in favour of the better-named <a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a>.&nbsp;</div>
 <h2>Changelog</h2>
 <table class="bpmTopic"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
@@ -33,7 +33,7 @@ permalink: /reference/mpdf-functions/createreference.html
 </tbody> </table>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/createindex.html">CreateIndex()</a> - Generate an Index</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a> - Generate an Index</li>
 </ul>
 </div>
 </div>

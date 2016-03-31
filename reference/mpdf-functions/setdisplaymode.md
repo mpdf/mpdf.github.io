@@ -102,7 +102,7 @@ $mpdf->SetDisplayMode('fullpage','two');
 </tbody> </table>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setdisplaypreferences.html">SetDisplayPreferences()</a> - Defines the way the document shall be presented on the screen</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setdisplaypreferences.html" | prepend: site.baseurl }}">SetDisplayPreferences()</a> - Defines the way the document shall be presented on the screen</li>
 </ul>
 </div>
 </div>

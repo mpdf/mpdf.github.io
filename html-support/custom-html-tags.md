@@ -8,7 +8,7 @@ permalink: /html-support/custom-html-tags.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>mPDF uses a number of custom HTML tags (see <a href="/reference/html-control-tags/overview.html">HTML Control Tags - Overview</a>).</p>
+<p>mPDF uses a number of custom HTML tags (see <a href="{{ "/reference/html-control-tags/overview.html" | prepend: site.baseurl }}">HTML Control Tags - Overview</a>).</p>
 <p>In addition to those, the custom tags &lt;ttz&gt; &lt;tts&gt; and &lt;tta&gt; are reserved for use internally within the mPDF program to denote the core symbol, dingbat and arial characters.</p>
 <h2>Invalid HTML?
 

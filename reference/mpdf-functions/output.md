@@ -31,7 +31,7 @@ F: save to a local file with the name given by <span class="parameter">filename<
 
 S: return the document as a string. <span class="parameter">filename</span> is ignored.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> You can use the 'S' option to e-mail a PDF file - see example under&nbsp;<a href="/real-life-examples/e-mail-a-pdf-file.html">E-mail a PDF file</a>.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> You can use the 'S' option to e-mail a PDF file - see example under&nbsp;<a href="{{ "/real-life-examples/e-mail-a-pdf-file.html" | prepend: site.baseurl }}">E-mail a PDF file</a>.</div>
 <h2>Examples</h2>
 
 {% highlight php %}

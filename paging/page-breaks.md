@@ -25,7 +25,7 @@ $mpdf->AddPage();
 <li>numbering (on/off, style or suprress)</li>
 <li>header/footer</li>
 </ul>
-<p>Note the special <a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a> or &lt;<a href="/reference/html-control-tags/tocpagebreak.html">tocpagebreak</a>&gt; which are like <a href="/reference/mpdf-functions/addpage.html">AddPage()</a> and &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; whilst at the same time marking the position for a Table of Contents to be later inserted. CSS <a href="/paging/using-page.html">@page</a> can also be used to define page breaks.</p>
+<p>Note the special <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; which are like <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; whilst at the same time marking the position for a Table of Contents to be later inserted. CSS <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> can also be used to define page breaks.</p>
 <h2>Forcing Page Breaks</h2>
 <p>You can set the CSS value for <span class="parameter">page-break-before</span> to "always | left | right" for any block element (p, div etc). This will force a page-break, but take care that any enclosing (outer) block elements will be 'closed down' and their characteristics lost.</p>
 <h2>Avoiding Page Breaks</h2>
@@ -51,7 +51,7 @@ $mpdf->use_kwt = true;    // DEFAULT=false
 
 (Note that mPDF will always resize tables if it is the only way to fit a row or whole table onto a full page.)</p>
 <h2>Headers and Footers</h2>
-<p>See the documentation for <a href="/headers-footers/headers-footers.html">Headers and Footers</a></p>
+<p>See the documentation for <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers and Footers</a></p>
 <h2>Types of page break</h2>
 <p>The handling of borders and padding at page breaks was updated in mPDF 6.0. mPDF has three types of page breaks:</p>
 <p>1) "slice" - no border and no padding are inserted at a break. The effect is as though the element were rendered with no breaks present, and then sliced by the breaks afterward</p>

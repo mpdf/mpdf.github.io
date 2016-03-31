@@ -12,7 +12,7 @@ permalink: /reference/mpdf-variables/anchor2bookmark.html
 <div class="alert alert-info" role="alert"><b>Note: </b>This variable originally started with an uppercase letter (&lt;= mPDF 2.2). Support for the uppercase version was removed in mPDF &gt;= 6.0</div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setanchor2bookmark.html">SetAnchor2Bookmark()</a> - Specifies how PDF Book marks are created from HTML anchors</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setanchor2bookmark.html" | prepend: site.baseurl }}">SetAnchor2Bookmark()</a> - Specifies how PDF Book marks are created from HTML anchors</li>
 </ul>
 </div>
 </div>

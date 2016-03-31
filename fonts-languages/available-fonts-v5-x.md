@@ -127,7 +127,7 @@ permalink: /fonts-languages/available-fonts-v5-x.html
 </td>
 </tr>
 </tbody> </table>
-<p>For a list of languages covered by the fonts included with mPDF, see <a href="/fonts-languages/fonts-language-cover-v5-x.html">Fonts and Language cover</a></p>
+<p>For a list of languages covered by the fonts included with mPDF, see <a href="{{ "/fonts-languages/fonts-language-cover-v5-x.html" | prepend: site.baseurl }}">Fonts and Language cover</a></p>
 </div>
 </div>
 

@@ -36,7 +36,7 @@ permalink: /reference/mpdf-variables/img-dpi.html
 </tbody> </table>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/dpi.html">dpi</a> - Specify conversion for other values set in pixels
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> - Specify conversion for other values set in pixels
 
 </li>
 </ul>

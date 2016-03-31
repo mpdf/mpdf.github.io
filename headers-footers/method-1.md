@@ -141,7 +141,7 @@ $mpdf->SetHeader($arr);
 <h3>Variant #5 (Array)
 
 </h3>
-<p>Set a header/footer using an array of values. This allows greater control over styling.&nbsp; <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately using the second parameter of <a href="/reference/mpdf-functions/setheader.html">SetHeader()</a>.</p>
+<p>Set a header/footer using an array of values. This allows greater control over styling.&nbsp; <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately using the second parameter of <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>.</p>
 
 {% highlight php %}
 <?php
@@ -213,7 +213,7 @@ $mpdf->SetHeader($arr, 'O');
 {% endhighlight %}
 
 <h2>Changing Header/Footer during the document</h2>
-<p>This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use, whichever of the Variants above you are using. When a new page is added to the document (e.g. using <a href="/reference/mpdf-functions/addpage.html">AddPage()</a> or &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt;) mPDF does the following:</p>
+<p>This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use, whichever of the Variants above you are using. When a new page is added to the document (e.g. using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;) mPDF does the following:</p>
 <ul>
 <li>writes the footer for the current page</li>
 <li>starts the new page</li>
@@ -424,14 +424,14 @@ $mpdf->Output();
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setfooter.html">SetHeader()</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setfooter.html">SetFooter()</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultheaderfontsize.html">$defaultheaderfontsize</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultheaderfontstyle.html">$defaultheaderfontstyle</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultheaderline.html">$defaultheaderline</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultfooterfontsize.html">$defaultfooterfontsize</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultfooterline.html">$defaultfooterfontstyle</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/defaultfooterline.html">$defaultfooterline</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetHeader()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultheaderfontsize.html" | prepend: site.baseurl }}">$defaultheaderfontsize</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultheaderfontstyle.html" | prepend: site.baseurl }}">$defaultheaderfontstyle</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultheaderline.html" | prepend: site.baseurl }}">$defaultheaderline</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterfontsize.html" | prepend: site.baseurl }}">$defaultfooterfontsize</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">$defaultfooterfontstyle</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">$defaultfooterline</a></li>
 </ul>
 <p>&nbsp;</p>
 </div>

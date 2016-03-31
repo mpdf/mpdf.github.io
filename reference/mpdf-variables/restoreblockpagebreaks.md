@@ -12,9 +12,9 @@ permalink: /reference/mpdf-variables/restoreblockpagebreaks.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">boolean <b>restoreBlockPageBreaks</b></div>
-<p>Specifies whether or not to restore open HTML block elements after a forced pagebreak. When a pagebreak is forced by <a href="/reference/mpdf-functions/addpage.html">AddPage()</a> or &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt;, mPDF by default will close any HTML block elements, expecting the HTML code to start afresh after the pagebreak. If this value is set to <span class="smallblock">TRUE</span> mPDF will attempt to carry over any CSS style values for the current block elements and continue after the pagebreak.</p>
+<p>Specifies whether or not to restore open HTML block elements after a forced pagebreak. When a pagebreak is forced by <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;, mPDF by default will close any HTML block elements, expecting the HTML code to start afresh after the pagebreak. If this value is set to <span class="smallblock">TRUE</span> mPDF will attempt to carry over any CSS style values for the current block elements and continue after the pagebreak.</p>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This variable was removed in mPDF 6.0&nbsp; See <a href="/paging/page-breaks.html">Page Breaks</a> for more information</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> This variable was removed in mPDF 6.0&nbsp; See <a href="{{ "/paging/page-breaks.html" | prepend: site.baseurl }}">Page Breaks</a> for more information</div>
 <h2>Values</h2>
 <p class="manual_param_dt"><span class="parameter">restoreBlockPageBreaks</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span></p>
 <p class="manual_param_dd"><b>Values</b>
@@ -59,8 +59,8 @@ $mpdf->WriteHTML('<p>Hallo World</p></div></div>');
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setwatermarktext.html">WriteHTML()</a> - Write HTML code to the document</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/formfeed.html">formfeed</a>&gt; - Equivalent to pagebreak with <span class="parameter">restoreBlockPageBreaks</span> set to <span class="smallblock">TRUE</span> </li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML code to the document</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">formfeed</a>&gt; - Equivalent to pagebreak with <span class="parameter">restoreBlockPageBreaks</span> set to <span class="smallblock">TRUE</span> </li>
 </ul>
 </div>
 </div>

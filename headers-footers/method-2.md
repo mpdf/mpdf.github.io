@@ -12,7 +12,7 @@ permalink: /headers-footers/method-2.html
 <h2>Setting Headers/Footers for the whole document
 
 </h2>
-<p>Use <a href="/reference/mpdf-functions/sethtmlheader.html">SetHTMLHeader()</a> and/or <a href="/reference/mpdf-functions/sethtmlfooter.html">SetHTMLFooter()</a> to set HTML headers/footers before writing to the document.</p>
+<p>Use <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> and/or <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> to set HTML headers/footers before writing to the document.</p>
 
 {% highlight php %}
 Example #1 - Single-sided document
@@ -97,7 +97,7 @@ $mpdf->Output();
 {% endhighlight %}
 
 <h2>Changing Header/Footer during the document</h2>
-<p>This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use. When a new page is added to the document (e.g. using <a href="/reference/mpdf-functions/addpage.html">AddPage()</a> or &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt;) mPDF does the following:</p>
+<p>This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use. When a new page is added to the document (e.g. using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;) mPDF does the following:</p>
 <ul>
 <li>writes the footer for the current page</li>
 <li>starts the new page</li>
@@ -264,8 +264,8 @@ $mpdf->Output();
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/sethtmlfooter.html">SetHTMLHeader()</a></li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/sethtmlfooter.html">SetHTMLFooter()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLHeader()</a></li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a></li>
 </ul>
 <p>&nbsp;</p>
 </div>

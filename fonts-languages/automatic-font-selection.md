@@ -9,7 +9,7 @@ permalink: /fonts-languages/automatic-font-selection.html
 <div class="topic_user_field">
 <div id="U0">
 
-<div class="alert alert-info" role="alert"><b>Note:</b> This describes automatice font selection in mPDF &gt;= v6.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> This describes automatic font selection in mPDF &gt;= v6.</div>
 <p>mPDF has two functions which can be used together or separately:</p>
 <p><code>autoScriptToLang</code> - marks up HTML text using the lang attribute, based on the Unicode script block in question, and configurable values in <code>config_script2lang.php</code>.</p>
 <p><code>autoLangToFont</code> - selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code>.</p>

@@ -13,11 +13,11 @@ permalink: /reference/html-control-tags/htmlpagefooter.html
 <h2>Description</h2>
 
 <div class="alert alert-info" role="alert">&lt;<b>htmlpagefooter</b>&nbsp; <span class="parameter">name</span>&nbsp; &gt; <span class="parameter">html</span> &lt;/htmlpagefooter&gt;</div>
-<p>Define an HTML page footer with a given name. Named footer can be referenced and set later in the document e.g. &lt;<a href="/reference/html-control-tags/setpageheader.html">sethtmlpagefooter</a>&gt;</p>
+<p>Define an HTML page footer with a given name. Named footer can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;</p>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> Remember that, unlike most mPDF custom tags which are self-closing with /&gt;, htmlpageheader and htmlpagefooter require end tags. If you wish to make the HTML code compatible with browsers, see <a href="/html-support/custom-html-tags.html">Custom tags</a></div>
+<div class="alert alert-info" role="alert"><b>Note:</b> Remember that, unlike most mPDF custom tags which are self-closing with /&gt;, htmlpageheader and htmlpagefooter require end tags. If you wish to make the HTML code compatible with browsers, see <a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a></div>
 <h2>Attributes</h2>
 <p class="manual_param_dt"><span class="parameter">name</span></p>
 <p class="manual_param_dd">This attribute is a text string to use as the name for this footer.
@@ -38,16 +38,16 @@ If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_defa
 <h2>Examples</h2>
 <p>For examples and further information please see:</p>
 <ul>
-<li class="manual_boxlist"><a href="/headers-footers/headers-footers.html">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="/headers-footers/method-4.html">Headers &amp; Footers - Method 4</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
+<li class="manual_boxlist"><a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 4</a></li>
 </ul>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"> <a href="/reference/mpdf-functions/defhtmlfooterbyname.html">DefHTMLFooterByName()</a> </li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/htmlpageheader.html">htmlpageheader</a>&gt; </li>
-<li class="manual_boxlist"> <a href="/reference/mpdf-functions/sethtmlfooterbyname.html">SetHTMLFooterByName()</a></li>
-<li class="manual_boxlist"> &lt;<a href="/reference/html-control-tags/sethtmlpagefooter.html">sethtmlpagefooter</a>&gt; </li>
-<li class="manual_boxlist"> <a href="/paging/using-page.html">@page</a> </li>
+<li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a> </li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt; </li>
+<li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/sethtmlfooterbyname.html" | prepend: site.baseurl }}">SetHTMLFooterByName()</a></li>
+<li class="manual_boxlist"> &lt;<a href="{{ "/reference/html-control-tags/sethtmlpagefooter.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt; </li>
+<li class="manual_boxlist"> <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> </li>
 </ul>
 </div>
 </div>

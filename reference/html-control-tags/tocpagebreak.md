@@ -23,7 +23,7 @@ permalink: /reference/html-control-tags/tocpagebreak.html
 
 <div class="alert alert-info" role="alert"><b>Note:</b> From mPDF 5.7 the layout of a table of contents can be controlled using CSS. <span class="parameter">font</span> <span class="parameter">font-size</span> and <span class="parameter">indent</span> have become redundant.</div>
 
-<div class="alert alert-info" role="alert"><b>Note:</b> When writing a <span class="smallblock">DOUBLE-SIDED</span> document, the <acronym title="Table of Contents">ToC</acronym> will always start on an <span class="smallblock">ODD</span> page. Therefore there is no option to specifiy the pagebreak <span class="parameter">type </span>as in &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; - using <b>&lt;tocpagebreak&gt;</b> will always continue the document on an <span class="smallblock">ODD</span> page.</div>
+<div class="alert alert-info" role="alert"><b>Note:</b> When writing a <span class="smallblock">DOUBLE-SIDED</span> document, the <acronym title="Table of Contents">ToC</acronym> will always start on an <span class="smallblock">ODD</span> page. Therefore there is no option to specifiy the pagebreak <span class="parameter">type </span>as in &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - using <b>&lt;tocpagebreak&gt;</b> will always continue the document on an <span class="smallblock">ODD</span> page.</div>
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Page numbering was suppressed in the <acronym title="Table of Contents">ToC</acronym> prior to mPDF v 6.0. From v6.0 onwards, you can specify the page numbering throughout the <acronym title="Table of Contents">ToC</acronym> .</div>
 
@@ -34,7 +34,7 @@ permalink: /reference/html-control-tags/tocpagebreak.html
 <div class="alert alert-info" role="alert"><b>Note:</b> If <b>&lt;tocpagebreak&gt;</b> occurs at the start of a blank (<span class="smallblock">ODD</span>) page, no new page(s) will be added. This was added in mPDF 2.3 to allow a <acronym title="Table of Contents">ToC</acronym> to be placed on the first page, or to allow a <acronym title="Table of Contents">ToC</acronym> to follow another <acronym title="Table of Contents">ToC</acronym>. In this case, any properties for the continuing document are ignored. If you define several <acronym title="Table of Contents">ToC</acronym>s following immediately on from one another, set the properties in the first <acronym title="Table of Contents">ToC</acronym> you define (including the <span class="parameter">resetpagenum</span>).</div>
 <h2>Attributes</h2>
 
-<div class="alert alert-info" role="alert">The first set of attributes specify characteristics for the <acronym title="Table of Contents">ToC</acronym>, which is generated automatically at the end of the document when <a href="/reference/mpdf-functions/output.html">Output()</a> is called.</div>
+<div class="alert alert-info" role="alert">The first set of attributes specify characteristics for the <acronym title="Table of Contents">ToC</acronym>, which is generated automatically at the end of the document when <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 <p><span class="parameter">paging</span> = 1|on|0|off</p>
 <p class="manual_param_dd">Specify whether to show page numbers in the <acronym title="Table of Contents">ToC</acronym>.
 
@@ -93,7 +93,7 @@ toc-even-header-name</span><span class="parameter">
 toc-odd-footer-name
 
 </span><span class="parameter">toc-even-footer-name</span></p>
-<p class="manual_param_dd">Selects a header or footer by name to use for the <acronym title="Table of Contents">ToC</acronym>. The header/footer must already have been defined using <a href="/reference/mpdf-functions/defheaderbyname.html">defHeaderByName()</a>, <a href="/reference/mpdf-functions/deffooterbyname.html">defFooterByName()</a>, <a href="/reference/mpdf-functions/defhtmlheaderbyname.html">defHTMLHeaderByName()</a>, or <a href="/reference/mpdf-functions/defhtmlfooterbyname.html">defHTMLFooterByName()</a>.
+<p class="manual_param_dd">Selects a header or footer by name to use for the <acronym title="Table of Contents">ToC</acronym>. The header/footer must already have been defined using <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">defHeaderByName()</a>, <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">defFooterByName()</a>, <a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">defHTMLHeaderByName()</a>, or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">defHTMLFooterByName()</a>.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
@@ -107,7 +107,7 @@ toc-even-header-value
 toc-odd-footer-value</span><span class="parameter">
 
 toc-even-footer-value</span></p>
-<p class="manual_param_dd">Specify whether to show a header or footer in the <acronym title="Table of Contents">ToC</acronym>. The header/footer must already have been defined using <a href="/reference/mpdf-functions/defheaderbyname.html">defHeaderByName()</a>, <a href="/reference/mpdf-functions/deffooterbyname.html">defFooterByName()</a>, <a href="/reference/mpdf-functions/defhtmlheaderbyname.html">defHTMLHeaderByName()</a>, or <a href="/reference/mpdf-functions/defhtmlfooterbyname.html">defHTMLFooterByName()</a>.
+<p class="manual_param_dd">Specify whether to show a header or footer in the <acronym title="Table of Contents">ToC</acronym>. The header/footer must already have been defined using <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">defHeaderByName()</a>, <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">defFooterByName()</a>, <a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">defHTMLHeaderByName()</a>, or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">defHTMLFooterByName()</a>.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
@@ -149,7 +149,7 @@ It is recommended that you use htmlspecialchars('Your bookmark text', ENT_QUOTES
 <p class="manual_param_dd">Select a named CSS @page for the <acronym title="Table of Contents">ToC</acronym>.
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p>
-<p class="manual_param_dd">See <a href="/paging/using-page.html">Using @page</a> for more information</p>
+<p class="manual_param_dd">See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information</p>
 <p>&nbsp;</p>
 <p class="manual_param_dt"><span class="parameter">toc-sheet-size</span></p>
 <p class="manual_param_dd"><span class="parameter">toc-sheet-size</span> can be specified either as a pre-defined page size, or as two <span class="smallblock">LENGTH</span> values separated by a space, representing width and height e.g. '210mm 297mm'. em, ex and % are not accepted. Note that this is different from the 'size' property of the page-box used with the CSS @page selector.
@@ -176,7 +176,7 @@ B (Type B paperback 128x198mm)
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the preceding page number sequence&nbsp;unchanged.</p>
 <p class="manual_param_dt"><span class="parameter">toc-pagenumstyle</span> = 1|A|a|I|i|[+ any value supported for list-style-type]</p>
-<p class="manual_param_dd">Sets/resets the page numbering style to use in the <acronym title="Table of Contents">ToC</acronym> (values as for cf. <a href="/css-stylesheets/supported-css.html">lists</a>)
+<p class="manual_param_dd">Sets/resets the page numbering style to use in the <acronym title="Table of Contents">ToC</acronym> (values as for cf. <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">lists</a>)
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;page number&nbsp;style&nbsp;unchanged.</p>
 <p class="manual_param_dd"><b>Values</b> (case-sensitive)
@@ -200,9 +200,9 @@ i: Roman lowercase - i, ii, iii, iv...</p>
 
 0 <i>or</i> off: Show page numbers in the <acronym title="Table of Contents">ToC</acronym></p>
 
-<div class="alert alert-info" role="alert">The rest of the attributes are defined exactly as for &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt;. Note that these attributes define page numbering, margins, headers/footers for the document as it continues from this point on; in the final document this will be the part of the document immediately after the <acronym title="Table of Contents">ToC</acronym>.
+<div class="alert alert-info" role="alert">The rest of the attributes are defined exactly as for &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;. Note that these attributes define page numbering, margins, headers/footers for the document as it continues from this point on; in the final document this will be the part of the document immediately after the <acronym title="Table of Contents">ToC</acronym>.
 
-Please refer to &lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; for further details.</div>
+Please refer to &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for further details.</div>
 <h2>Changelog</h2>
 <table class="bpmTopic"> <thead>
 <tr> <th>Version</th><th>Description</th> </tr>
@@ -264,9 +264,9 @@ Example #1
 
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/addpage.html">&lt;tocentry</a>&gt;- Add an entry for Table of Contents</li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/pagebreak.html">pagebreak</a>&gt; - Add a new page</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/tocpagebreak.html">TOCpagebreak()</a> - PHP equivalent of &lt;<b>tocpagebreak</b>&gt;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">&lt;tocentry</a>&gt;- Add an entry for Table of Contents</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Add a new page</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> - PHP equivalent of &lt;<b>tocpagebreak</b>&gt;</li>
 </ul>
 </div>
 </div>

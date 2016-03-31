@@ -109,7 +109,7 @@ NEXT-EVEN: Add one or two pages as required to make the current page <span class
 <p class="manual_param_dt"><span class="parameter">pagenumstyle</span> = 1|A|a|I|i|[+ any value supported for list-style-type]</p>
 <ul> </li>
 </ul>
-<p class="manual_param_dd">Sets/resets the page numbering style (values as for cf. <a href="/css-stylesheets/supported-css.html">lists</a>)
+<p class="manual_param_dd">Sets/resets the page numbering style (values as for cf. <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">lists</a>)
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;page number&nbsp;style&nbsp;unchanged.</p>
 <p class="manual_param_dd"><b>Values</b> (case-sensitive)
@@ -159,7 +159,7 @@ If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the 
 <span class="parameter">odd-footer-name</span>
 
 <span class="parameter">even-footer-name</span></p>
-<p class="manual_param_dd">Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using &lt;<a href="/reference/html-control-tags/pageheader.html">pageheader</a>&gt;, &lt;<a href="/reference/html-control-tags/pagefooter.html">pagefooter</a>&gt;, &lt;<a href="/reference/html-control-tags/htmlpageheader.html">htmlpageheader</a>&gt;, or &lt;<a href="/reference/html-control-tags/htmlpagefooter.html">htmlpagefooter</a>&gt;.
+<p class="manual_param_dd">Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
@@ -173,7 +173,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 <span class="parameter">odd-footer-</span><span class="parameter">value</span>
 
 <span class="parameter">even-footer-</span><span class="parameter">value</span></p>
-<p class="manual_param_dd">Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using &lt;<a href="/reference/html-control-tags/pageheader.html">pageheader</a>&gt;, &lt;<a href="/reference/html-control-tags/pagefooter.html">pagefooter</a>&gt;, &lt;<a href="/reference/html-control-tags/htmlpageheader.html">htmlpageheader</a>&gt;, or &lt;<a href="/reference/html-control-tags/htmlpagefooter.html">htmlpagefooter</a>&gt;.
+<p class="manual_param_dd">Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
@@ -187,7 +187,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 <p class="manual_param_dd">Select a named CSS @page.
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p>
-<p class="manual_param_dd">See <a href="/paging/using-page.html">Using @page</a> for more information</p>
+<p class="manual_param_dd">See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information</p>
 <p class="manual_param_dt"><span class="parameter">sheet-size</span></p>
 <p class="manual_param_dd"><span class="parameter">sheet-size</span> can be specified either as a pre-defined page size, or as two <span class="smallblock">LENGTH</span> values separated by a space, representing width and height e.g. '210mm 297mm'. em, ex and % are not accepted. Note that this is different from the 'size' property of the page-box used with the CSS @page selector.
 
@@ -310,13 +310,13 @@ Example #3 - Changing headers/footers
 
 <h2>Notes</h2>
 
-<div class="alert alert-info" role="alert"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of <a href="/reference/mpdf-functions/addpage.html">AddPage()</a>.</div>
+<div class="alert alert-info" role="alert"><b>Note</b>: <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
 <h2>See Also</h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/addpage.html">AddPage()</a> - Add one or more (conditional) pages to the document</li>
-<li class="manual_boxlist"><a href="/paging/page-breaks.html">Page breaks</a></li>
-<li class="manual_boxlist">&lt;<a href="/reference/html-control-tags/formfeed.html">formfeed</a>&gt; - Forces a new page keeping current HTML tags/CSS active</li>
-<li class="manual_boxlist"><a href="/reference/mpdf-variables/restoreblockpagebreaks.html">restoreBlockPageBreaks</a> - Configure pagebreak to act like formfeed</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add one or more (conditional) pages to the document</li>
+<li class="manual_boxlist"><a href="{{ "/paging/page-breaks.html" | prepend: site.baseurl }}">Page breaks</a></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">formfeed</a>&gt; - Forces a new page keeping current HTML tags/CSS active</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}">restoreBlockPageBreaks</a> - Configure pagebreak to act like formfeed</li>
 </ul>
 </div>
 </div>

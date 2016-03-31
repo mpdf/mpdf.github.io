@@ -14,7 +14,7 @@ permalink: /what-else-can-i-do/overwriting-existing-files.html
 <div class="alert alert-info" role="alert"><b>Note:</b> OverWrite() was written to work on PDF files produced by mPDF. It will work with encrpyted files, as long as the same encryption properties are used for the new document. I have also used it successfully with a number of external PDF files, including those produced by Acrobat Distiller (but not if they are encrypted). It will not work with embedded font subsets.</div>
 <h2>See</h2>
 <ul>
-<li><a href="/reference/mpdf-functions/overwrite.html">OverWrite()</a> - Replace specified text strings in an existing PDF file</li>
+<li><a href="{{ "/reference/mpdf-functions/overwrite.html" | prepend: site.baseurl }}">OverWrite()</a> - Replace specified text strings in an existing PDF file</li>
 <li><a href="index4a46.html?tid=348">mPDFI()</a> - Class constructor for importing files and templates</li>
 </ul>
 <p>&nbsp;</p>

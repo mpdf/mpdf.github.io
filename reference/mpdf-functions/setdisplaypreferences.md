@@ -60,7 +60,7 @@ $mpdf->Output('filename.pdf');
 
 </h2>
 <ul>
-<li class="manual_boxlist"><a href="/reference/mpdf-functions/setdisplaymode.html">SetDisplayMode()</a> - Specify the initial Display Mode when the PDF file is opened in Adobe Reader</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setdisplaymode.html" | prepend: site.baseurl }}">SetDisplayMode()</a> - Specify the initial Display Mode when the PDF file is opened in Adobe Reader</li>
 </ul>
 <p>&nbsp;</p>
 </div>
