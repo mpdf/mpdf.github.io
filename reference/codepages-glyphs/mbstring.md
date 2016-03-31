@@ -6,7 +6,8 @@ permalink: /reference/codepages-glyphs/mbstring.html
 modification_time: 2015-08-05T12:03:01+00:00
 ---
 
-<p>Currently the following character encodings are supported by the mbstring module. Any of those Character encodings can be specified in the encoding parameter of mbstring functions.</p>
+Currently the following character encodings are supported by the mbstring module. Any of those Character encodings can be specified in the encoding parameter of mbstring functions.
+
 <ul>
 <li>UCS-4, UCS-4BE, UCS-4LE</li>
 <li>UCS-2, UCS-2BE, UCS-2LE</li>
@@ -41,6 +42,8 @@ modification_time: 2015-08-05T12:03:01+00:00
 <li>CP866 (IBM866)</li>
 <li>KOI8-R</li>
 </ul>
-<p>For the module to be enabled, php must have been compiled with <i>--enable-mbstring</i>&nbsp;<a href="phpinfo.html" target="_blank"></a></p>
-<p>See <a href="http://uk.php.net/manual/en/ref.mbstring.php">http://uk.php.net/manual/en/ref.mbstring.php</a></p>
+
+For the module to be enabled, php must have been compiled with <i>--enable-mbstring</i>&nbsp;<a href="phpinfo.html" target="_blank"></a>
+
+See <a href="http://uk.php.net/manual/en/ref.mbstring.php">http://uk.php.net/manual/en/ref.mbstring.php</a>
 

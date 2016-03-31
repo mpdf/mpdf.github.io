@@ -6,19 +6,21 @@ permalink: /reference/mpdf-variables/watermarkimagealpha.html
 modification_time: 2015-08-05T12:02:40+00:00
 ---
 
-<p>(mPDF &gt;= 2.2)</p>
+(mPDF &gt;= 2.2)
 
 # Description
 
-<p class="manual_block">string <b>watermarkTextAlpha</b></p>
-<p>Specifies the transparency (alpha value) to use for the watermark text on each page.</p>
+string <b>watermarkTextAlpha</b>
+
+Specifies the transparency (alpha value) to use for the watermark text on each page.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">watermarkTextAlpha</span></p>
-<p class="manual_param_dd">Define as a value between 0 and 1.
+<span class="parameter">watermarkTextAlpha</span>
 
-<span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> : 0.2</p>
+Define as a value between 0 and 1.
+
+<span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> : 0.2
 
 # Examples
 
@@ -37,7 +39,9 @@ $mpdf->showWatermarkImage = true;
 
 $mpdf->watermarkImageAlpha = 0.1;
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 ?>
 {% endhighlight %}

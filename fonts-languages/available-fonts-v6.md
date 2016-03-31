@@ -6,7 +6,8 @@ permalink: /fonts-languages/available-fonts-v6.html
 modification_time: 2015-08-05T11:59:29+00:00
 ---
 
-<p>The following fonts are included with mPDF 6:</p>
+The following fonts are included with mPDF 6:
+
 <table class="table"> <thead>
 <tr>
 <td>Font(s)</td>
@@ -19,45 +20,70 @@ modification_time: 2015-08-05T11:59:29+00:00
 </thead> <tbody>
 <tr>
 <td>
-<p>DejaVuSans</p>
-<p>DejaVuSansCondensed</p>
-<p>DejaVuSerif</p>
-<p>DejaVuSerifCondensed</p>
-<p>DejaVuSansMono</p>
+
+DejaVuSans
+
+DejaVuSansCondensed
+
+DejaVuSerif
+
+DejaVuSerifCondensed
+
+DejaVuSansMono
+
 </td>
 <td>http://dejavu-fonts.org</td>
 <td>
-<p>© Bitstream</p>
-<p>http://dejavu-fonts.org/wiki/License</p>
+
+© Bitstream
+
+http://dejavu-fonts.org/wiki/License
+
 </td>
 <td>[Numerous]</td>
 </tr>
 <tr>
 <td>
-<p>FreeSans</p>
-<p>FreeSerif</p>
-<p>FreeMono</p>
+
+FreeSans
+
+FreeSerif
+
+FreeMono
+
 </td>
 <td>http://www.gnu.org/software/freefont/</td>
 <td>
-<p>GNU GPL v3</p>
+
+GNU GPL v3
+
 </td>
 <td>
-<p>[Numerous incl. Indic]</p>
+
+[Numerous incl. Indic]
+
 </td>
 </tr>
 <tr>
 <td>Quivira</td>
 <td>http://www.quivira-font.com/</td>
 <td>
-<p><i><span>free for any use</span></i></p>
+
+<i><span>free for any use</span></i>
+
 </td>
 <td>
-<p>Coptic</p>
-<p>Buhid</p>
-<p>Tagalog</p>
-<p>Tagbanwa</p>
-<p>Lisu</p>
+
+Coptic
+
+Buhid
+
+Tagalog
+
+Tagbanwa
+
+Lisu
+
 </td>
 </tr>
 <tr>
@@ -69,9 +95,13 @@ modification_time: 2015-08-05T11:59:29+00:00
 <tr>
 <td>XBRiyaz</td>
 <td>
-<p>http://www.redlers.com/downloadfont.html</p>
-<p>(<span>XW Zar fonts)</span></p>
-<p><span>http://wiki.irmug.org/index.php/XWZar</span></p>
+
+http://www.redlers.com/downloadfont.html
+
+(<span>XW Zar fonts)</span>
+
+<span>http://wiki.irmug.org/index.php/XWZar</span>
+
 </td>
 <td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a></td>
 <td>Arabic</td>
@@ -88,11 +118,16 @@ modification_time: 2015-08-05T11:59:29+00:00
 </tr>
 <tr>
 <td>
-<p>Estrangelo Edessa</p>
+
+Estrangelo Edessa
+
 </td>
 <td>
-<p>http://www.bethmardutho.org/index.php/resources/fonts.html</p>
-<p>(SyrCOMEdessa.otf)</p>
+
+http://www.bethmardutho.org/index.php/resources/fonts.html
+
+(SyrCOMEdessa.otf)
+
 </td>
 <td>Adapted licence (free to use/share)
 
@@ -104,13 +139,21 @@ modification_time: 2015-08-05T11:59:29+00:00
 <td>http://users.teilar.gr/~g1951d/</td>
 <td><i><span>free for any use</span></i></td>
 <td>
-<p>Carian</p>
-<p>Lycian</p>
-<p>Lydian</p>
-<p>Phoenecian</p>
-<p>Ugaritic</p>
-<p>Linear B</p>
-<p>Old Italic</p>
+
+Carian
+
+Lycian
+
+Lydian
+
+Phoenecian
+
+Ugaritic
+
+Linear B
+
+Old Italic
+
 </td>
 </tr>
 <tr>
@@ -132,12 +175,18 @@ modification_time: 2015-08-05T11:59:29+00:00
 <tr>
 <td>Kaputaunicode</td>
 <td>
-<p>http://www.kaputa.com/slword/kaputaunicode.htm</p>
-<p>http://www.locallanguages.lk/sinhala_unicode_converters</p>
+
+http://www.kaputa.com/slword/kaputaunicode.htm
+
+http://www.locallanguages.lk/sinhala_unicode_converters
+
 </td>
 <td>
-<p>Free</p>
-<p>Sri Lanka Web Community Center</p>
+
+Free
+
+Sri Lanka Web Community Center
+
 </td>
 <td>Sinhala</td>
 </tr>
@@ -156,8 +205,11 @@ modification_time: 2015-08-05T11:59:29+00:00
 <tr>
 <td>Khmeros</td>
 <td>
-<p>http://www.khmeros.info/en/fonts</p>
-<p>(http://www.cambodia.org/fonts/)</p>
+
+http://www.khmeros.info/en/fonts
+
+(http://www.cambodia.org/fonts/)
+
 </td>
 <td>LGPL Licence
 
@@ -167,8 +219,11 @@ modification_time: 2015-08-05T11:59:29+00:00
 <tr>
 <td>Dhyana</td>
 <td>
-<p>Google Fonts</p>
-<p>http://www.google.com/fonts/earlyaccess</p>
+
+Google Fonts
+
+http://www.google.com/fonts/earlyaccess
+
 </td>
 <td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a> 
 
@@ -178,12 +233,17 @@ modification_time: 2015-08-05T11:59:29+00:00
 <tr>
 <td>Tharlon</td>
 <td>
-<p>Google Fonts</p>
+
+Google Fonts
+
 http://code.google.com/p/tharlon-font/</td>
 <td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a></td>
 <td>
-<p>Myanmar</p>
-<p>Tai Le</p>
+
+Myanmar
+
+Tai Le
+
 </td>
 </tr>
 <tr>
@@ -193,7 +253,9 @@ http://code.google.com/p/tharlon-font/</td>
 <td>http://www.sil.org/resources/software_fonts/padauk</td>
 <td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a></td>
 <td>
-<p>Myanmar</p>
+
+Myanmar
+
 </td>
 </tr>
 <tr>
@@ -208,20 +270,29 @@ http://code.google.com/p/tharlon-font/</td>
 <td>ZawgyiOne</td>
 <td>http://code.google.com/p/zawgyi/wiki/MyanmarFontDownload</td>
 <td>
-<p>Freely available.</p>
-<p>No licence information available</p>
+
+Freely available.
+
+No licence information available
+
 </td>
 <td>
-<p>Myanmar</p>
+
+Myanmar
+
 </td>
 </tr>
 <tr>
 <td>
-<p>Garuda</p>
+
+Garuda
+
 </td>
 <td>http://www.hawaii.edu/thai/thaifonts/</td>
 <td>
-<p>Freely available.</p>
+
+Freely available.
+
 No licence information available</td>
 <td>Thai</td>
 </tr>
@@ -241,17 +312,24 @@ No licence information available</td>
 </tr>
 <tr>
 <td>
-<p>Sun-ExtA</p>
-<p>Sun-ExtB</p>
+
+Sun-ExtA
+
+Sun-ExtB
+
 </td>
 <td>http://www.alanwood.net/downloads/index.html</td>
 <td>Freeware
 
 (Beijing ZhongYi Electronics Co)</td>
 <td>
-<p>Chinese</p>
-<p>Japanese</p>
-<p>Runic</p>
+
+Chinese
+
+Japanese
+
+Runic
+
 </td>
 </tr>
 <tr>
@@ -264,19 +342,26 @@ No licence information available</td>
 </tr>
 <tr>
 <td>
-<p>Aboriginal Sans</p>
+
+Aboriginal Sans
+
 </td>
 <td>http://www.languagegeek.com/font/fontdownload.html 
 
 </td>
 <td>
-<p>GNU GPL 3</p>
+
+GNU GPL 3
 
 </td>
 <td>
-<p>Cree</p>
-<p>Canadian Aboriginal</p>
-<p>Inuktuit</p>
+
+Cree
+
+Canadian Aboriginal
+
+Inuktuit
+
 </td>
 </tr>
 <tr>
@@ -286,11 +371,17 @@ No licence information available</td>
 
 </td>
 <td>
-<p>Glagolitic</p>
-<p>Shavian</p>
-<p>Osmanya</p>
-<p>Kharoshthi</p>
-<p>Deseret</p>
+
+Glagolitic
+
+Shavian
+
+Osmanya
+
+Kharoshthi
+
+Deseret
+
 </td>
 </tr>
 <tr>
@@ -330,12 +421,17 @@ No licence information available</td>
 <td>http://fonts.qurancomplex.gov.sa/?page_id=42</td>
 <td><a href="http://scripts.sil.org/ofl" target="_blank">https://www.ohloh.net/licenses/KFGQPC</a></td>
 <td>
-<p>Arabic</p>
-<p>(Koran/Quran)</p>
+
+Arabic
+
+(Koran/Quran)
+
 </td>
 </tr>
 </tbody> </table>
-<p>The following font names can also be used with mPDF:</p>
+
+The following font names can also be used with mPDF:
+
 <table class="table"> <tbody>
 <tr>
 <td colspan="2">
@@ -346,7 +442,9 @@ No licence information available</td>
 </tr>
 <tr>
 <td>
-<p>GB</p>
+
+GB
+
 </td>
 <td>Chinese (Simplified) Adobe Asian font-pack containing all characters in codepage GBK (extension of GB2312)</td>
 </tr>
@@ -371,15 +469,24 @@ No licence information available</td>
 </tr>
 <tr>
 <td>
-<p>sans</p>
-<p>sans-serif</p>
-<p>serif</p>
-<p>monospace</p>
-<p>mono</p>
+
+sans
+
+sans-serif
+
+serif
+
+monospace
+
+mono
+
 </td>
 <td>
-<p>sans-serif, serif and monospace are recognised generic font-families specified by CSS.</p>
-<p>These are recognised by mPDF - cf. <span class="filename">config_fonts.php</span></p>
+
+sans-serif, serif and monospace are recognised generic font-families specified by CSS.
+
+These are recognised by mPDF - cf. <span class="filename">config_fonts.php</span>
+
 </td>
 </tr>
 </tbody> </table>

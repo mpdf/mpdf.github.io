@@ -6,22 +6,25 @@ permalink: /reference/mpdf-variables/list-symbol-size.html
 modification_time: 2015-08-05T12:02:11+00:00
 ---
 
-<p>(mPDF &gt;= 6.0)</p>
+(mPDF &gt;= 6.0)
 
 # Description
 
-<p class="manual_block">void <b>list_symbol_size</b></p>
-<p>Define the size of a list marker, when using "bullet" markers i.e. disc/circle/square.</p>
-<p>For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists</a>.</p>
+void <b>list_symbol_size</b>
+
+Define the size of a list marker, when using "bullet" markers i.e. disc/circle/square.
+
+For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists</a>.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">list_symbol_size</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">list_symbol_size</span>
+
+<b>Values</b>
 
 <span class="smallblock">LENGTH</span>: Any valid CSS length value is permitted e.g. "10pt" or "3em"
 
-<span class="smallblock">DEFAULT</span>: '3.6pt'</p>
+<span class="smallblock">DEFAULT</span>: '3.6pt'
 
 # Changelog
 
@@ -36,4 +39,5 @@ modification_time: 2015-08-05T12:02:11+00:00
 
 # See Also
 
-<p><a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists </a></p>
+<a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists </a>
+

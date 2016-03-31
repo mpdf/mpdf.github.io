@@ -8,21 +8,24 @@ modification_time: 2015-08-05T12:01:39+00:00
 
 <div>
 <div>
-<p>(mPDF &gt;= 6.0)</p>
+
+(mPDF &gt;= 6.0)
 
 # Description
 
-<p class="manual_block">boolean <b>autoLangToFont</b></p>
-<p>When <span class="smallblock">TRUE</span>, selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code></p>
+boolean <b>autoLangToFont</b>
+
+When <span class="smallblock">TRUE</span>, selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code>
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">autoLangToFont</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">autoLangToFont</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <i><span class="smallblock">TRUE</span></i>: <span class="smallblock">DEFAULT</span> selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code>
 
-<span class="smallblock">FALSE</span>: Font selection unaffected.</p>
+<span class="smallblock">FALSE</span>: Font selection unaffected.
 
 # See Also
 

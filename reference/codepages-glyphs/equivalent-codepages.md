@@ -73,7 +73,8 @@ modification_time: 2015-08-05T12:02:59+00:00
 
 # Equivalent encodings
 
-<p>The following list gives equivalent encodings (different names for the same encoding), one per line.</p>
+The following list gives equivalent encodings (different names for the same encoding), one per line.
+
 <ul>
 <li>US-ASCII, ASCII, ISO646-US, ISO_646.IRV:1991, ISO-IR-6, ANSI_X3.4-1968, ANSI_X3.4-1986, CP367, IBM367, US, csASCII</li>
 <li>UCS-2, ISO-10646-UCS-2, csUnicode</li>
@@ -140,5 +141,5 @@ modification_time: 2015-08-05T12:02:59+00:00
 <li>ISO-2022-KR, csISO2022KR</li>
 </ul>
 
-<p>From : <a href="http://www.datamystic.com/textpipe/htmlhelp/conversion%20filters/fromUnicode.htm">http://www.datamystic.com/textpipe/htmlhelp/conversion%20filters/fromUnicode.htm</a></p>
+From : <a href="http://www.datamystic.com/textpipe/htmlhelp/conversion%20filters/fromUnicode.htm">http://www.datamystic.com/textpipe/htmlhelp/conversion%20filters/fromUnicode.htm</a>
 

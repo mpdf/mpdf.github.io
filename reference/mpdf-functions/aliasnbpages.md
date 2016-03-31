@@ -6,20 +6,23 @@ permalink: /reference/mpdf-functions/aliasnbpages.html
 modification_time: 2015-08-05T12:00:40+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>AliasNbPages – Defines the placeholder used to insert total number of pages into the document</p>
+(mPDF &gt;= 1.0)
+
+AliasNbPages – Defines the placeholder used to insert total number of pages into the document
 
 # Description
 
-<p class="manual_block">void <b>AliasNbPages</b> ( string <span class="parameter">$text</span> )</p>
-<p>Set the value for the variable string <a href="{{ "/reference/mpdf-variables/aliasnbpg.html" | prepend: site.baseurl }}">aliasNbPg</a> which is used as a placeholder used to insert total number of pages into the document.</p>
+void <b>AliasNbPages</b> ( string <span class="parameter">$text</span> )
+
+Set the value for the variable string <a href="{{ "/reference/mpdf-variables/aliasnbpg.html" | prepend: site.baseurl }}">aliasNbPg</a> which is used as a placeholder used to insert total number of pages into the document.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">text</span></p>
-<p class="manual_param_dd">Defines the text for the vaiable <span class="parameter">aliasNbPg</span>. 
+<span class="parameter">text</span>
 
-<span class="smallblock">DEFAULT</span>: {nb}</p>
+Defines the text for the vaiable <span class="parameter">aliasNbPg</span>. 
+
+<span class="smallblock">DEFAULT</span>: {nb}
 
 # Examples
 
@@ -34,7 +37,9 @@ $mpdf=new mPDF();
 
 $mpdf->AliasNbPages('[pagetotal]');
 
-$mpdf->WriteHTML('<p>There are [pagetotal] pages in this document</p>');
+$mpdf->WriteHTML('
+There are [pagetotal] pages in this document
+');
 
 $mpdf->Output();
 

@@ -6,7 +6,8 @@ permalink: /about-mpdf/credits.html
 modification_time: 2015-08-05T11:59:21+00:00
 ---
 
-<p>All credit is due to the following:</p>
+All credit is due to the following:
+
 <ul>
 <li>Olivier Plathey for the original FPDF class [<a href="http://www.fpdf.org/">http://www.fpdf.org</a>]</li>
 <li>Renato Coelho for html2fpdf class [<a href="http://html2fpdf.sourceforge.net/">http://html2fpdf.sourceforge.net</a>]</li>
@@ -14,13 +15,17 @@ modification_time: 2015-08-05T11:59:21+00:00
 <li>Nicola Asuni for TCPDF [<a href="http://www.tcpdf.org/">http://www.tcpdf.org</a>]</li>
 <li>Khaled Al-Sham'aa for ideas on joining Arabic letters [<a href="http://www.ar-php.org/">http://www.ar-php.org</a>]</li>
 </ul>
-<p>Including from FPDF extensions:</p>
+
+Including from FPDF extensions:
+
 <ul>
 <li>Martin Hall-May&nbsp; for WMF support
 
 </li>
 </ul>
-<p>Including from HTML2FPDF:</p>
+
+Including from HTML2FPDF:
+
 <ul>
 <li>Damon Kohler for the Flowing Block script</li>
 <li>Clément Lavoillotte for HTML-oriented FPDF idea</li>

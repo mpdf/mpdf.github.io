@@ -6,7 +6,8 @@ permalink: /setting-pdf-file-properties/password-protection.html
 modification_time: 2015-08-05T11:59:58+00:00
 ---
 
-<p>The security settings for the PDF file can be set in mPDF:</p>
+The security settings for the PDF file can be set in mPDF:
+
 <ul>
 <li>determine whether the document is encrypted</li>
 <li>if encrypted, what permissions are granted to the user e.g.print and/or copy</li>

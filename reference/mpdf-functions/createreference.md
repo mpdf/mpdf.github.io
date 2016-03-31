@@ -6,12 +6,13 @@ permalink: /reference/mpdf-functions/createreference.html
 modification_time: 2015-08-05T12:00:44+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>CreateRefence — Generate an Index - DEPRACATED / Removed in mPDF v6.0</p>
+(mPDF &gt;= 1.0)
+
+CreateRefence — Generate an Index - DEPRACATED / Removed in mPDF v6.0
 
 # Description
 
-<p class="manual_block">void <b>CreateReference</b> ( )</p>
+void <b>CreateReference</b> ( )
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <b>CreateReference()</b> is now depracated in favour of the better-named <a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a>.&nbsp;</div>
 
@@ -23,7 +24,9 @@ modification_time: 2015-08-05T12:00:44+00:00
 <tr>
 <td>1.0</td>
 <td>
-<p>Function was added.</p>
+
+Function was added.
+
 </td>
 </tr>
 <tr>

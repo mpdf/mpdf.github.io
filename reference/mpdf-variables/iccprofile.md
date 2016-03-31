@@ -6,23 +6,29 @@ permalink: /reference/mpdf-variables/iccprofile.html
 modification_time: 2015-08-05T12:01:59+00:00
 ---
 
-<p>(mPDF &gt;= 4.3)</p>
-<p>ICCProfile – Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a (mPDF &gt;= 5.1) compliant documents</p>
+(mPDF &gt;= 4.3)
+
+ICCProfile – Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a (mPDF &gt;= 5.1) compliant documents
 
 # Description
 
-<p class="manual_block">void <b>ICCProfile</b></p>
-<p>Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a compliant documents. The file must exist in <span class="filename">/iccprofiles/</span> folder</p>
-<p>Either a 3-colour RGB profile or a 4-colour CMYK profile should be used depending on other settings.</p>
-<p>The default colorspace for a PDF/A1-b document is RGB. The default for a PDF/X-1a document is CMYK.</p>
-<p>Specify the name without the <span class="filename">.icc</span> extension. sRGB_IEC61966-2-1 is used as the default file for PDF/A1-b documents if none is specified (a profile must be specified for PDF/X-1a)</p>
+void <b>ICCProfile</b>
+
+Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a compliant documents. The file must exist in <span class="filename">/iccprofiles/</span> folder
+
+Either a 3-colour RGB profile or a 4-colour CMYK profile should be used depending on other settings.
+
+The default colorspace for a PDF/A1-b document is RGB. The default for a PDF/X-1a document is CMYK.
+
+Specify the name without the <span class="filename">.icc</span> extension. sRGB_IEC61966-2-1 is used as the default file for PDF/A1-b documents if none is specified (a profile must be specified for PDF/X-1a)
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">ICCProfile</span> =&nbsp; <span class="smallblock">STRING</span></p>
-<p class="manual_param_dd">Name of a valid ICC colour profile in the <span class="filename">/iccprofiles/</span> folder - without the <span class="filename">.icc</span> extension.
+<span class="parameter">ICCProfile</span> =&nbsp; <span class="smallblock">STRING</span>
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>&nbsp;<span class="smallblock">&nbsp;</span></p>
+Name of a valid ICC colour profile in the <span class="filename">/iccprofiles/</span> folder - without the <span class="filename">.icc</span> extension.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>&nbsp;<span class="smallblock">&nbsp;</span>
 
 # Changelog
 

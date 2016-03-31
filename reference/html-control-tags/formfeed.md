@@ -6,19 +6,24 @@ permalink: /reference/html-control-tags/formfeed.html
 modification_time: 2015-08-05T12:01:22+00:00
 ---
 
-<p>(mPDF &gt;= 2.3)</p>
-<p>formfeed — Add a new page keeping current HTML tags/CSS styles active</p>
+(mPDF &gt;= 2.3)
+
+formfeed — Add a new page keeping current HTML tags/CSS styles active
 
 # Description
 
-<p class="manual_block">&lt;<b>formfeed</b> [&nbsp;<span class="parameter">orientation</span> ] [&nbsp;<span class="parameter">type</span> ] [&nbsp;<span class="parameter">resetpagenum</span> ] [&nbsp;<span class="parameter">pagenumstyle</span> ] [&nbsp;<span class="parameter">suppress</span> ] 
+&lt;<b>formfeed</b> [&nbsp;<span class="parameter">orientation</span> ] [&nbsp;<span class="parameter">type</span> ] [&nbsp;<span class="parameter">resetpagenum</span> ] [&nbsp;<span class="parameter">pagenumstyle</span> ] [&nbsp;<span class="parameter">suppress</span> ] 
 
 [ <span class="parameter">margin-left</span> ] [ <span class="parameter">margin-right</span> ] [ <span class="parameter">margin-top</span> ] [ <span class="parameter">margin-bottom</span> ] [ <span class="parameter">margin-header</span> ] [ <span class="parameter">margin-footer</span> ]
 
-[ <span class="parameter">odd-header-name</span> ] [ <span class="parameter">odd-header-value</span> ] [ <span class="parameter">even-header-name</span> ] [ <span class="parameter">even-header-value</span> ] [ <span class="parameter">odd-footer-name</span> ] [ <span class="parameter">odd-footer-value</span> ] [ <span class="parameter">even-footer-name</span> ] [ <span class="parameter">even-footer-value</span> ] [ <span class="parameter">page-selector</span> ] /&gt;</p>
-<p>Add a new page to the document. The attributes are the same as for &lt;pagebreak&gt;, but whereas pagebreak by default closes any open HTML tags, and does not continue CSS styles after the pagebreak, formfeed reinstates the active properties and styles on the new page.</p>
-<p>The attribute <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional formfeed (<span class="parameter">type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a formfeed with <span class="parameter">type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).</p>
-<p>Number of pages added:</p>
+[ <span class="parameter">odd-header-name</span> ] [ <span class="parameter">odd-header-value</span> ] [ <span class="parameter">even-header-name</span> ] [ <span class="parameter">even-header-value</span> ] [ <span class="parameter">odd-footer-name</span> ] [ <span class="parameter">odd-footer-value</span> ] [ <span class="parameter">even-footer-name</span> ] [ <span class="parameter">even-footer-value</span> ] [ <span class="parameter">page-selector</span> ] /&gt;
+
+Add a new page to the document. The attributes are the same as for &lt;pagebreak&gt;, but whereas pagebreak by default closes any open HTML tags, and does not continue CSS styles after the pagebreak, formfeed reinstates the active properties and styles on the new page.
+
+The attribute <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional formfeed (<span class="parameter">type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a formfeed with <span class="parameter">type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).
+
+Number of pages added:
+
 <table class="table"> <tbody>
 <tr>
 <td>&nbsp;</td>
@@ -75,22 +80,27 @@ modification_time: 2015-08-05T12:01:22+00:00
 
 # Attributes
 
-<p class="manual_param_dt"><span class="parameter">orientation</span> = L|P|landscape|portrait</p>
-<p class="manual_param_dd">This attribute specifies the orientation of the new page.
+<span class="parameter">orientation</span> = L|P|landscape|portrait
 
-<span class="smallblock">BLANK</span> or omitted leaves the current orientation unchanged</p>
-<p class="manual_param_dd"><b>Values</b> (case-insensitive)
+This attribute specifies the orientation of the new page.
+
+<span class="smallblock">BLANK</span> or omitted leaves the current orientation unchanged
+
+<b>Values</b> (case-insensitive)
 
 L <i>or</i> landscape: Landscape
 
-P <i>or</i> portrait:&nbsp;Portrait</p>
-<p class="manual_param_dt"><span class="parameter">type</span> = E|O|even|odd|next-odd|next-even</p>
-<p class="manual_param_dd">If <span class="parameter">type</span> is specified when writiing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, the formfeed is conditional; a new page will only be added if necessary to meet the specified condition.&nbsp;
+P <i>or</i> portrait:&nbsp;Portrait
+
+<span class="parameter">type</span> = E|O|even|odd|next-odd|next-even
+
+If <span class="parameter">type</span> is specified when writiing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, the formfeed is conditional; a new page will only be added if necessary to meet the specified condition.&nbsp;
 
 If&nbsp;not writing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, a formfeed <span class="parameter">type</span>="E" will be ignored, whilst a formfeed <span class="parameter">type</span>="O" will always force a new page.
 
-<span class="smallblock">BLANK</span> or omitted will force a new page unconditionally.</p>
-<p class="manual_param_dd"><b>Values</b> (case-insensitive)
+<span class="smallblock">BLANK</span> or omitted will force a new page unconditionally.
+
+<b>Values</b> (case-insensitive)
 
 O <i>or</i> odd: Add a new page if required to make current page an&nbsp;<span class="smallblock">ODD</span>&nbsp;one.
 
@@ -98,16 +108,21 @@ E <i>or</i> even: Add a new page if required to make current page an&nbsp;<span 
 
 NEXT-ODD: Add one or two pages as required to make the current page <span class="smallblock">ODD</span>.
 
-NEXT-EVEN: Add one or two pages as required to make the current page <span class="smallblock">EVEN</span>.</p>
-<p class="manual_param_dt"><span class="parameter">resetpagenum</span> = 1 - ∞</p>
-<p class="manual_param_dd">Sets/resets the document page number to <span class="parameter">resetpagenum</span> starting on the new page. (The value must be a positive integer).
+NEXT-EVEN: Add one or two pages as required to make the current page <span class="smallblock">EVEN</span>.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the current&nbsp;page number sequence&nbsp;unchanged.</p>
-<p class="manual_param_dt"><span class="parameter">pagenumstyle</span> = 1|A|a|I|i</p>
-<p class="manual_param_dd">Sets/resets the page numbering style (values as for lists)
+<span class="parameter">resetpagenum</span> = 1 - ∞
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;page number&nbsp;style&nbsp;unchanged.</p>
-<p class="manual_param_dd"><b>Values</b> (case-sensitive)
+Sets/resets the document page number to <span class="parameter">resetpagenum</span> starting on the new page. (The value must be a positive integer).
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the current&nbsp;page number sequence&nbsp;unchanged.
+
+<span class="parameter">pagenumstyle</span> = 1|A|a|I|i
+
+Sets/resets the page numbering style (values as for lists)
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;page number&nbsp;style&nbsp;unchanged.
+
+<b>Values</b> (case-sensitive)
 
 1: Decimal - 1,2,3,4...
 
@@ -117,17 +132,21 @@ a: Alpha lowercase - a,b,c,d...
 
 I: Roman uppercase - I, II, III, IV...
 
-i: Roman lowercase - i, ii, iii, iv...</p>
-<p class="manual_param_dt"><span class="parameter">suppress</span> = on|off|1|0</p>
-<p class="manual_param_dd"><span class="parameter">suppress</span>=on will suppress document page numbers from the new page onwards (until <span class="parameter">suppress</span>=off is used)
+i: Roman lowercase - i, ii, iii, iv...
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;condition unchanged.</p>
-<p class="manual_param_dd"><b>Values</b> (case-insensitive)
+<span class="parameter">suppress</span> = on|off|1|0
+
+<span class="parameter">suppress</span>=on will suppress document page numbers from the new page onwards (until <span class="parameter">suppress</span>=off is used)
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;condition unchanged.
+
+<b>Values</b> (case-insensitive)
 
 1 <i>or</i> on: Suppress (hide) page numbers from the new page forwards.
 
-0 <i>or</i> off: Show page numbers from the new page forwards.</p>
-<p class="manual_param_dt"><span class="parameter">margin-left</span>
+0 <i>or</i> off: Show page numbers from the new page forwards.
+
+<span class="parameter">margin-left</span>
 
 <span class="parameter">margin-right</span>
 
@@ -137,53 +156,61 @@ i: Roman lowercase - i, ii, iii, iv...</p>
 
 <span class="parameter">margin-header</span>
 
-<span class="parameter">margin-footer</span></p>
-<p class="manual_param_dd">Sets the page margins from the new page forwards.
+<span class="parameter">margin-footer</span>
+
+Sets the page margins from the new page forwards.
 
 All values should be specified as <span class="smallblock">LENGTH</span> in any valid CSS form.
 
 If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current margin unchanged. NB "0" (zero) will set the margin to zero.</p>
-<p class="manual_param_dt"><span class="parameter">odd-header-name</span>
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current margin unchanged. NB "0" (zero) will set the margin to zero.
+
+<span class="parameter">odd-header-name</span>
 
 <span class="parameter">even-header-name</span>
 
 <span class="parameter">odd-footer-name</span>
 
-<span class="parameter">even-footer-name</span></p>
-<p class="manual_param_dd">Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
+<span class="parameter">even-footer-name</span>
+
+Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the header/footer unchanged. NB "" will not unset the header. Use <span class="parameter">odd-header-value</span> to turn the header off.</p>
+<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the header/footer unchanged. NB "" will not unset the header. Use <span class="parameter">odd-header-value</span> to turn the header off.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
-<p class="manual_param_dt"><span class="parameter">odd-header-value</span>
+
+<span class="parameter">odd-header-value</span>
 
 <span class="parameter">even-header-</span><span class="parameter">value</span>
 
 <span class="parameter">odd-footer-</span><span class="parameter">value</span>
 
-<span class="parameter">even-footer-</span><span class="parameter">value</span></p>
-<p class="manual_param_dd">Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
+<span class="parameter">even-footer-</span><span class="parameter">value</span>
+
+Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the header/footer state unchanged.</p>
-<p class="manual_param_dd"><b>Values</b> (case-insensitive)
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the header/footer state unchanged.
+
+<b>Values</b> (case-insensitive)
 
 1 <i>or</i> on: Start using the selected header/footer from the new page onwards.
 
--1 <i>or</i> off: Start the selected header from the new page onwards.</p>
-<p><span class="parameter">pageselector</span></p>
+-1 <i>or</i> off: Start the selected header from the new page onwards.
+
+<span class="parameter">pageselector</span>
 
 # 
 
-<p class="manual_param_dd">Select a named CSS @page.
+Select a named CSS @page.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.</p>
-<p class="manual_param_dd">See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information</p>
+<span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.
+
+See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information
 
 # 
 
@@ -195,7 +222,9 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 <tr>
 <td>2.3</td>
 <td>
-<p>Function was added.&nbsp;</p>
+
+Function was added.&nbsp;
+
 </td>
 </tr>
 <tr>

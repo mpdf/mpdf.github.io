@@ -6,15 +6,19 @@ permalink: /what-else-can-i-do/pdf-x-1a-compliance.html
 modification_time: 2015-08-05T12:00:20+00:00
 ---
 
-<p>(mPDF &gt;= 5.1)</p>
-<p>PDF/X-1a is a file format to facilitate printing of electronic documents.</p>
-<p>Two key elements to this function are the requirement for PDF/X documents to be 100% self-contained, and all images need to be CMYK or spot colors.</p>
-<p>A PDF/X document can be identified as such through PDF/X-specific metadata located in the document. However, claiming to be PDF/X compliant and being so are not necessarily the same.</p>
-<p class="manual_block"><b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/X-1a compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.</p>
+(mPDF &gt;= 5.1)
+
+PDF/X-1a is a file format to facilitate printing of electronic documents.
+
+Two key elements to this function are the requirement for PDF/X documents to be 100% self-contained, and all images need to be CMYK or spot colors.
+
+A PDF/X document can be identified as such through PDF/X-specific metadata located in the document. However, claiming to be PDF/X compliant and being so are not necessarily the same.
+
+<b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/X-1a compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.
 
 # mPDF and PDF/X-1a compliance
 
-<p>You can make mPDF produce mPDF/X-1a:2003 compliant files by setting:</p>
+You can make mPDF produce mPDF/X-1a:2003 compliant files by setting:
 
 {% highlight php %}
 <?php
@@ -24,19 +28,26 @@ $this->PDFX = true; // Edit in config.php or set at runtime
 
 ## Colorspaces and ICC Profiles
 
-<p>PDF files handle colours internally in a number of different colorspaces. PDFX files can only use CMYK and spot colurs, and a colorspace profile must be embedded in the document.</p>
-<p>It is likely that most content in a PDF file will be RGB unless you have specifically defined otherwise e.g. a CMYK JPG image file, or colours defined as CMYK() etc.</p>
-<p>Colorspaces can be altered using <a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a>.</p>
-<p>An ICC Color profile must be embedded in the file.</p>
-<p>A default CMYK ICC profile is included with mPDF: SWOP2006_Coated5v2.icc</p>
-<p>Sources of free ICC profiles are:</p>
+PDF files handle colours internally in a number of different colorspaces. PDFX files can only use CMYK and spot colurs, and a colorspace profile must be embedded in the document.
+
+It is likely that most content in a PDF file will be RGB unless you have specifically defined otherwise e.g. a CMYK JPG image file, or colours defined as CMYK() etc.
+
+Colorspaces can be altered using <a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a>.
+
+An ICC Color profile must be embedded in the file.
+
+A default CMYK ICC profile is included with mPDF: SWOP2006_Coated5v2.icc
+
+Sources of free ICC profiles are:
+
 <ul>
 <li><a href="http://www.color.org/">http://www.color.org</a></li>
 <li><a href="http://www.eci.org/">http://www.eci.org</a> </li>
 <li><a href="http://www.color.org/profiles2.xalter">http://www.color.org/profiles2.xalter </a></li>
 <li><a href="http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html">http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html </a></li>
 </ul>
-<p>You can change the color profile used by mPDF by adding a&nbsp; <span class="filename">*.icc</span> file to the <span class="filename">[mpdf]/iccprofiles/</span> folder. It must be a 4-colour CMYK profile. Then edit <span class="filename">config.php</span> e.g.</p>
+
+You can change the color profile used by mPDF by adding a&nbsp; <span class="filename">*.icc</span> file to the <span class="filename">[mpdf]/iccprofiles/</span> folder. It must be a 4-colour CMYK profile. Then edit <span class="filename">config.php</span> e.g.
 
 {% highlight php %}
 <?php
@@ -46,18 +57,21 @@ $this->ICCProfile = 'SWOP2006_Coated5v2';
 
 ## Fonts
 
-<p>All fonts must be embedded in a PDF/X file. mPDF normally uses the core Adobe fonts (Helvetica, Times, Courier, Symbol and Zapfdingbats) in a number of situations, and these font files are not available to embed. This affects:</p>
+All fonts must be embedded in a PDF/X file. mPDF normally uses the core Adobe fonts (Helvetica, Times, Courier, Symbol and Zapfdingbats) in a number of situations, and these font files are not available to embed. This affects:
+
 <ul>
 <li><span class="parameter">$useCoreFontsOnly</span> is not permitted</li>
 <li>lists <code>&lt;ul&gt;</code> cannot use Zapfdingbats font for bullets</li>
 <li>form element <code>&lt;select&gt;</code> cannot use Zapfdingbats character as the drop-down symbol</li>
 <li>ISBN/ISSN barcode cannot use Helvetica for the ISBN number (above the bar)</li>
 </ul>
-<p>Also, the fonts GB, BIG5, UHC and SJIS which reference the free CJK font pack from Adobe cannot be used</p>
+
+Also, the fonts GB, BIG5, UHC and SJIS which reference the free CJK font pack from Adobe cannot be used
 
 ## Transparency and Annotations
 
-<p>Because PDF/X-1a has the objective of ensuring reliable reproduction of the document, no objects may be transparent or semi-transparent. This affects:</p>
+Because PDF/X-1a has the objective of ensuring reliable reproduction of the document, no objects may be transparent or semi-transparent. This affects:
+
 <ul>
 <li>watermarks text or images</li>
 <li>images with the CSS property <span class="parameter">opacity</span> set</li>
@@ -66,7 +80,8 @@ $this->ICCProfile = 'SWOP2006_Coated5v2';
 
 # Making it happen!
 
-<p>When <code>$this-&gt;PDFX</code> is set to true, the following changes will automatically and silently happen:</p>
+When <code>$this-&gt;PDFX</code> is set to true, the following changes will automatically and silently happen:
+
 <ul>
 <li>list bullets will use the characters from the current font (if available) e.g. • ⚬ ▪ </li>
 <li>the default font (which in some circumstances is set to a core Adobe font) is set to an alternative embedded font</li>
@@ -75,11 +90,12 @@ $this->ICCProfile = 'SWOP2006_Coated5v2';
 <li>a Metadata object is added to the file </li>
 <li>an ICC Color Profile is added as /OuputIntent</li>
 </ul>
-<p>Only the first change may make a discernible change to the displayed document. All other changes are to the file structure.</p>
+
+Only the first change may make a discernible change to the displayed document. All other changes are to the file structure.
 
 ## Warnings
 
-<p>Some problems can be fixed by mPDF, but will cause a change to the appearance of your document. By default they will generate warning messages. Once you have assessed the warnings, you can direct mPDF to make these changes automatically by setting in your script:</p>
+Some problems can be fixed by mPDF, but will cause a change to the appearance of your document. By default they will generate warning messages. Once you have assessed the warnings, you can direct mPDF to make these changes automatically by setting in your script:
 
 {% highlight php %}
 <?php
@@ -87,7 +103,8 @@ $this->ICCProfile = 'SWOP2006_Coated5v2';
 $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to force PDFX-1a compliance
 {% endhighlight %}
 
-<p>The following issues will cause a warning message when you try to generate a PDFX file:</p>
+The following issues will cause a warning message when you try to generate a PDFX file:
+
 <table class="table"> <thead>
 <tr>
 <td>Problem detected</td>
@@ -100,8 +117,11 @@ $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to fo
 </tr>
 <tr>
 <td>
-<p>Character substitution (<span class="parameter">$useSubstitutions</span> or <span class="parameter">$useSubstitutionsMB</span>) is enabled.</p>
-<p>This would attempt to substitute missing characters using core Adobe fonts which are disallowed.</p>
+
+Character substitution (<span class="parameter">$useSubstitutions</span> or <span class="parameter">$useSubstitutionsMB</span>) is enabled.
+
+This would attempt to substitute missing characters using core Adobe fonts which are disallowed.
+
 </td>
 <td>Character substitution is disabled
 
@@ -113,8 +133,11 @@ $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to fo
 </tr>
 <tr>
 <td>
-<p>Images which have CSS property opacity set less than 1 - PDFX does not allow transparency.</p>
-<p>NB GIF or PNG images with a simple transparency set (not alpha-channel mask) are valid.</p>
+
+Images which have CSS property opacity set less than 1 - PDFX does not allow transparency.
+
+NB GIF or PNG images with a simple transparency set (not alpha-channel mask) are valid.
+
 </td>
 <td>Opacity is changed to 1 (no transparency)</td>
 </tr>
@@ -134,7 +157,8 @@ $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to fo
 
 ## Fatal Errors
 
-<p>Some issues cannot be fixed automatically by mPDF and will generate fatal errors:</p>
+Some issues cannot be fixed automatically by mPDF and will generate fatal errors:
+
 <ul>
 <li><span class="parameter">$useCoreFontsOnly</span> is set as <span class="smallblock">TRUE</span> (cannot embed core fonts)</li>
 <li>BIG5, SJIS, UHC or GB fonts cannot be used (cannot be embedded)</li>

@@ -44,7 +44,8 @@ This disregards the value of autosize.
 </ul>
 </li>
 </ol>
-<p>If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v&gt;=4.6)</p>
+
+If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v&gt;=4.6)
 
 ## For rotated tables
 
@@ -59,7 +60,10 @@ This disregards the value of autosize.
 </li>
 <li>Else a new page is started, and the algorithm above followed (obviously containing size width becomes height etc.)</li>
 </ol>
-<p>* From mPDF 4.3, this can be overridden using CSS property overflow:</p>
-<p>&lt;table style="overflow: auto | hidden | visible | wrap"&gt;</p>
-<p>auto is the default, described above.</p>
+
+* From mPDF 4.3, this can be overridden using CSS property overflow:
+
+&lt;table style="overflow: auto | hidden | visible | wrap"&gt;
+
+auto is the default, described above.
 

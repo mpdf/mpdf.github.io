@@ -6,11 +6,11 @@ permalink: /headers-footers/method-2.html
 modification_time: 2015-08-05T11:59:50+00:00
 ---
 
-<p>This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">HTML</span> headers &amp; footers. This is the simplest &amp; quickest way to program a header/footer once for the whole document that includes images or uses more complex layout styles.</p>
+This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">HTML</span> headers &amp; footers. This is the simplest &amp; quickest way to program a header/footer once for the whole document that includes images or uses more complex layout styles.
 
 # Setting Headers/Footers for the whole document
 
-<p>Use <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> and/or <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> to set HTML headers/footers before writing to the document.</p>
+Use <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> and/or <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> to set HTML headers/footers before writing to the document.
 
 {% highlight php %}
 Example #1 - Single-sided document
@@ -96,13 +96,16 @@ $mpdf->Output();
 
 # Changing Header/Footer during the document
 
-<p>This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use. When a new page is added to the document (e.g. using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;) mPDF does the following:</p>
+This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use. When a new page is added to the document (e.g. using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;) mPDF does the following:
+
 <ul>
 <li>writes the footer for the current page</li>
 <li>starts the new page</li>
 <li>writes the header for the new page</li>
 </ul>
-<p>Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:</p>
+
+Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:
+
 <ul>
 <li>change the header before the page-break</li>
 <li>change the footer after the page-break
@@ -164,7 +167,7 @@ $mpdf->Output();
 
 # Table of Contents
 
-<p>Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Contents is very clumsy, it is strongly recommended that you use one of the <span class="smallblock">NAMED</span> methods. Here for the record is how you would do it:</p>
+Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Contents is very clumsy, it is strongly recommended that you use one of the <span class="smallblock">NAMED</span> methods. Here for the record is how you would do it:
 
 {% highlight php %}
 <?php
@@ -206,7 +209,7 @@ $mpdf->WriteHTML('Main part of document...');
 $mpdf->Output();
 {% endhighlight %}
 
-<p>...and for historical reference, using depracated TOC function:</p>
+...and for historical reference, using depracated TOC function:
 
 {% highlight php %}
 <?php
@@ -249,7 +252,9 @@ $mpdf->TOCfooter = array();
 
 $mpdf->TOCpreHTML = '<h2>Table of Contents</h2>');
 
-$mpdf->TOCpostHTML = '<p>Text to come after the contenst list</p>';
+$mpdf->TOCpostHTML = '
+Text to come after the contenst list
+';
 
 $mpdf->TOCbookmarkText = 'Contents';
 

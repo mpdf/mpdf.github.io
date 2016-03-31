@@ -6,7 +6,8 @@ permalink: /reference/codepages-glyphs/unicode-coverage-of-free-fonts.html
 modification_time: 2015-08-05T12:03:03+00:00
 ---
 
-<p>Fonts with full coverage of Unicode Ranges</p>
+Fonts with full coverage of Unicode Ranges
+
 <table class="table"> <thead>
 <tr>
 <td>Unicode Block</td>
@@ -72,8 +73,11 @@ Special processing required</td>
 
 Special processing required</td>
 <td style="background-color: #aaaaaa;">
-<p>sun-exta (&gt;90%)</p>
-<p>dejavusans(+cond), xbriyaz, xbzar (&gt;50%)</p>
+
+sun-exta (&gt;90%)
+
+dejavusans(+cond), xbriyaz, xbzar (&gt;50%)
+
 </td>
 </tr>
 <tr class="evenrow">
@@ -900,8 +904,11 @@ Special positioning required</td>
 <tr class="oddrow">
 <td>aboriginalsans, aboriginalserif</td>
 <td>
-<p>AboriginalSansREGULAR.ttf</p>
-<p>AboriginalSerifREGULAR.ttf</p>
+
+AboriginalSansREGULAR.ttf
+
+AboriginalSerifREGULAR.ttf
+
 </td>
 <td>http://www.languagegeek.com/font/fontdownload.html#Full_Unicode</td>
 </tr>
@@ -958,16 +965,22 @@ Special positioning required</td>
 <tr class="evenrow">
 <td>hannoma / hannomb</td>
 <td>
-<p>HAN NOM A.ttf</p>
-<p>HAN NOM B.ttf</p>
+
+HAN NOM A.ttf
+
+HAN NOM B.ttf
+
 </td>
 <td>http://vietunicode.sourceforge.net/fonts/fonts_hannom.html</td>
 </tr>
 <tr class="oddrow">
 <td>sun-exta / sun-extb</td>
 <td>
-<p>Sun-ExtA.ttf</p>
-<p>Sun-ExtB.ttf</p>
+
+Sun-ExtA.ttf
+
+Sun-ExtB.ttf
+
 </td>
 <td>http://www.alanwood.net/unicode/fonts-east-asian.html</td>
 </tr>
@@ -979,8 +992,11 @@ Special positioning required</td>
 <tr class="evenrow">
 <td>xbzar / xbriyaz</td>
 <td>
-<p>XB Riyaz.ttf</p>
-<p>XB Zar.ttf</p>
+
+XB Riyaz.ttf
+
+XB Zar.ttf
+
 </td>
 <td>http://wiki.irmug.com/index.php/X_Series_2</td>
 </tr>

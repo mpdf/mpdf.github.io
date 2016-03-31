@@ -6,8 +6,9 @@ permalink: /what-else-can-i-do/barcodes.html
 modification_time: 2015-08-05T12:00:12+00:00
 ---
 
-<p>(mPDF &gt;=4.0)</p>
-<p>A variety of barcodes can be produced with mPDF. Please see the example file for more information.</p>
+(mPDF &gt;=4.0)
+
+A variety of barcodes can be produced with mPDF. Please see the example file for more information.
 
 ## Specifications in mPDF
 
@@ -21,19 +22,27 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td rowspan="2" class="pmhBottomCenter" style="font-weight: bold;">Pr ratio</td>
 </tr>
 <tr> <th>
-<p><b>Left
 
-</b></p>
+<b>Left
+
+</b>
+
 </th>
 <td>
-<p><b>Right</b></p>
+
+<b>Right</b>
+
 </td>
 <td>
-<p><b>Top/bottom</b></p>
+
+<b>Top/bottom</b>
+
 </td>
 </tr>
 <tr> <th>
-<p>EAN-13</p>
+
+EAN-13
+
 </th>
 <td>EAN13, ISBN, ISSN</td>
 <td>0.33</td>
@@ -45,7 +54,9 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td>&nbsp;</td>
 </tr>
 <tr> <th>
-<p>UPC-A</p>
+
+UPC-A
+
 </th>
 <td>UPCA</td>
 <td>0.33</td>
@@ -57,7 +68,9 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td>&nbsp;</td>
 </tr>
 <tr> <th>
-<p>UPC-E</p>
+
+UPC-E
+
 </th>
 <td>UPCE</td>
 <td>0.33</td>
@@ -69,7 +82,9 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td>&nbsp;</td>
 </tr>
 <tr> <th>
-<p>EAN-8</p>
+
+EAN-8
+
 </th>
 <td>EAN8</td>
 <td>0.33</td>
@@ -159,7 +174,9 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td>0</td>
 <td>&nbsp;</td>
 <td>
-<p>2.5<sup>[1]</sup></p>
+
+2.5<sup>[1]</sup>
+
 </td>
 </tr>
 <tr> <th>Standard 2 of 5</th>
@@ -171,7 +188,9 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td>0</td>
 <td>&nbsp;</td>
 <td>
-<p>3<sup>[2]</sup></p>
+
+3<sup>[2]</sup>
+
 </td>
 </tr>
 <tr> <th>Interleaved 2 of 5</th>
@@ -183,7 +202,9 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td>0</td>
 <td>&nbsp;</td>
 <td>
-<p>2.5<sup>[1]</sup></p>
+
+2.5<sup>[1]</sup>
+
 </td>
 </tr>
 <tr> <th>Code 93</th>
@@ -215,7 +236,9 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td>0</td>
 <td>&nbsp;</td>
 <td>
-<p>2.5<sup>[1]</sup></p>
+
+2.5<sup>[1]</sup>
+
 </td>
 </tr>
 <tr> <th>Code 11</th>
@@ -229,11 +252,20 @@ modification_time: 2015-08-05T12:00:12+00:00
 <td>3<sup>[3]</sup></td>
 </tr>
 </tbody> </table>
-<p>All values in millimeters, unless specified as a factor of X-dim e.g. 10X.</p>
-<p>X = width of narrowest bar (also known as module width)</p>
-<p>Pr ratio is ratio of narrow bar to wide bar</p>
-<p><sup>[1] </sup>Code specification: 1:2 - 1:3 (&gt;2.2 if X&lt;0.5mm)</p>
-<p><sup>[2] </sup>Code specification: 1:3 - 1:4.5</p>
-<p><sup>[3] </sup>Code specification: 2.24 - 3.5</p>
-<p><sup>[4] </sup>Bars per inch (determines bar/gap ratio, gap width) = 22</p>
-<p><sup>[5] </sup>Ratio of bar heights: Descender, Ascender, Full, Tracker (or Full:Half bar)</p>
+
+All values in millimeters, unless specified as a factor of X-dim e.g. 10X.
+
+X = width of narrowest bar (also known as module width)
+
+Pr ratio is ratio of narrow bar to wide bar
+
+<sup>[1] </sup>Code specification: 1:2 - 1:3 (&gt;2.2 if X&lt;0.5mm)
+
+<sup>[2] </sup>Code specification: 1:3 - 1:4.5
+
+<sup>[3] </sup>Code specification: 2.24 - 3.5
+
+<sup>[4] </sup>Bars per inch (determines bar/gap ratio, gap width) = 22
+
+<sup>[5] </sup>Ratio of bar heights: Descender, Ascender, Full, Tracker (or Full:Half bar)
+

@@ -8,14 +8,15 @@ modification_time: 2015-08-05T11:59:25+00:00
 
 # Getting started
 
-<p>The following PHP will produce the most basic example with mPDF.</p>
-<p>Include the main file containing the mpdf class:</p>
+The following PHP will produce the most basic example with mPDF.
+
+Include the main file containing the mpdf class:
 
 {% highlight php %}
 include('../mpdf.php');
 {% endhighlight %}
 
-<p>Create an instance of the class:</p>
+Create an instance of the class:
 
 {% highlight php %}
 <?php
@@ -23,15 +24,17 @@ include('../mpdf.php');
 $mpdf=new mPDF();
 {% endhighlight %}
 
-<p>Write some HTML code:</p>
+Write some HTML code:
 
 {% highlight php %}
 <?php
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 {% endhighlight %}
 
-<p>Output a PDF file:</p>
+Output a PDF file:
 
 {% highlight php %}
 <?php
@@ -44,4 +47,6 @@ exit;
 # Notes
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. <code>define('_MPDF_PATH','../')</code>. From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
-<p>For details and options for the Output command, see&nbsp;<a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a></p>
+
+For details and options for the Output command, see&nbsp;<a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a>
+

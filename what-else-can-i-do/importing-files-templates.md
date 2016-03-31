@@ -6,8 +6,10 @@ permalink: /what-else-can-i-do/importing-files-templates.html
 modification_time: 2015-08-05T12:00:18+00:00
 ---
 
-<p>(mPDF &gt;= 2.3)</p>
-<p>Using an extension of mPDF, pages from external PDF files can be imported into 'templates' and used throughout the current document. This can be used for:</p>
+(mPDF &gt;= 2.3)
+
+Using an extension of mPDF, pages from external PDF files can be imported into 'templates' and used throughout the current document. This can be used for:
+
 <ul>
 <li>page templates e.g. statements or invoices</li>
 <li>letterheads (see also <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>)</li>

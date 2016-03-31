@@ -6,23 +6,27 @@ permalink: /reference/mpdf-variables/autofontgroupsize.html
 modification_time: 2015-08-05T12:01:39+00:00
 ---
 
-<p>(mPDF &gt;= 2.3&nbsp; &lt;6.0)</p>
-<p>autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont</p>
+(mPDF &gt;= 2.3&nbsp; &lt;6.0)
+
+autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont
 
 # Value
 
-<p class="manual_block">void <b>autoFontGroupSize</b></p>
-<p>Specify the chunk size of text to group when auto-detecting languages using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a>.</p>
+void <b>autoFontGroupSize</b>
+
+Specify the chunk size of text to group when auto-detecting languages using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a>.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This variable is removed from mPDF v 6.0</div>
-<p>Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage is that it may include bits of other languages either side, forcing them in the font used for the "foreign" language.
 
-Smaller chunks (1) - analysing word by word - takes more processing time, and cannot reverse RTL sentences. In text with CJK language, it makes it harder for mPDF to correctly identify between e.g. Korean and Chinese which share some characters. Thus words may be identified alternately as Korean or Chinese.</p>
+Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage is that it may include bits of other languages either side, forcing them in the font used for the "foreign" language.
+
+Smaller chunks (1) - analysing word by word - takes more processing time, and cannot reverse RTL sentences. In text with CJK language, it makes it harder for mPDF to correctly identify between e.g. Korean and Chinese which share some characters. Thus words may be identified alternately as Korean or Chinese.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">autoFontGroupSize</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">autoFontGroupSize</span>
+
+<b>Values</b>
 
 1: individual words are analysed
 
@@ -30,7 +34,7 @@ Smaller chunks (1) - analysing word by word - takes more processing time, and ca
 
 3: as big chunks as possible are grouped, including ASCII characters and punctuation
 
-<span class="smallblock">DEFAULT</span>: 2</p>
+<span class="smallblock">DEFAULT</span>: 2
 
 # Changelog
 
@@ -65,11 +69,11 @@ p { font-family: FreeSerif; }
 
 </style>
 
-<p>Most of this text is in English, but has occasional words in Chinese:来自商务 or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: الابيض</p>
+Most of this text is in English, but has occasional words in Chinese:来自商务 or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: الابيض
 
-<p>الابيض "بشدة" تفجير</p>
+الابيض "بشدة" تفجير
 
-<p>其截至 WHO 年底 2005 笔</p>
+其截至 WHO 年底 2005 笔
 
 ";
 
@@ -87,9 +91,10 @@ $mpdf->autoFontGroupSize = 3;
 
 $mpdf->WriteHTML($html);
 
-$html2 = "<p>In this example, the word boundaries from different languages are already defined by marking with &amp;lt;span&amp;gt; tags</p>
+$html2 = "
+In this example, the word boundaries from different languages are already defined by marking with &amp;lt;span&amp;gt; tags
 
-<p>Most of this text is in English, but has occasional words in Chinese:<span>来自商务</span> or Vietnamese: <span>Một khảo sát mới cho biết</span>, or maybe even Arabic: <span>الابيض</span></p>
+Most of this text is in English, but has occasional words in Chinese:<span>来自商务</span> or Vietnamese: <span>Một khảo sát mới cho biết</span>, or maybe even Arabic: <span>الابيض</span>
 
 ";
 

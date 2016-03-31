@@ -6,24 +6,27 @@ permalink: /reference/mpdf-variables/pdfa.html
 modification_time: 2015-08-05T12:02:17+00:00
 ---
 
-<p>(mPDF &gt;= 4.3)</p>
-<p>PDFA – Create PDF/A1-b compliant document</p>
+(mPDF &gt;= 4.3)
+
+PDFA – Create PDF/A1-b compliant document
 
 # Description
 
-<p class="manual_block">void <b>PDFA</b></p>
-<p>Specify whether to create a PDF/A1-b compliant document.</p>
+void <b>PDFA</b>
+
+Specify whether to create a PDF/A1-b compliant document.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">PDFA</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">PDFA</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>: create PDF/A1-b compliant document&nbsp;&nbsp;&nbsp; 
 
 <span class="smallblock">FALSE</span>: normal PDF document
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 # Changelog
 

@@ -6,18 +6,19 @@ permalink: /what-else-can-i-do/graphs.html
 modification_time: 2015-08-05T12:00:16+00:00
 ---
 
-<p>mPDF can generate graphs from table data. This requires the <b>JPGraph</b> program, which is an open-source PHP library available from <a href="http://www.aditus.nu/jpgraph/" target="_blank">http://www.aditus.nu/jpgraph/</a></p>
-<p>Graphs have only been tested with the PHP5 version of JPGraph.</p>
+mPDF can generate graphs from table data. This requires the <b>JPGraph</b> program, which is an open-source PHP library available from <a href="http://www.aditus.nu/jpgraph/" target="_blank">http://www.aditus.nu/jpgraph/</a>
+
+Graphs have only been tested with the PHP5 version of JPGraph.
 
 ## Installation
 
-<p>JPGraph needs to be installed on your server. Follow the instructions for installing JPGraph, including configuring the script to access the TTF fonts necessary to produce JPGraphs.</p>
+JPGraph needs to be installed on your server. Follow the instructions for installing JPGraph, including configuring the script to access the TTF fonts necessary to produce JPGraphs.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Check that you have a subfolder in your /mpdf/ folder named /graph_cache/ and make sure it is writeable.</div>
 
 ## Using Graphs in mPDF
 
-<p>See the example below. The table containing data must precede the graph. Nested tables will be ignored.</p>
+See the example below. The table containing data must precede the graph. Nested tables will be ignored.
 
 {% highlight php %}
 Example #1
@@ -83,7 +84,7 @@ exit;
 
 ## Result
 
-<p>This should produce a PDF file like this:</p>
+This should produce a PDF file like this:
 
 <table class="table"> <tbody>
 <tr>
@@ -132,6 +133,8 @@ exit;
 <td>52</td>
 </tr>
 </tbody> </table>
-<p><img src="files/images/example_graph.png" alt="example_graph.png" /></p>
 
-<p>Note that graphs can be rotated as with images using&lt;jpgraph rotate="90" ... (see <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)</p>
+<img src="files/images/example_graph.png" alt="example_graph.png" />
+
+Note that graphs can be rotated as with images using&lt;jpgraph rotate="90" ... (see <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)
+

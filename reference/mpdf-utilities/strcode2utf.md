@@ -6,13 +6,15 @@ permalink: /reference/mpdf-utilities/strcode2utf.html
 modification_time: 2015-08-05T12:02:42+00:00
 ---
 
-<p>(htmltoolkit &gt;=1.0)</p>
-<p>strcode2utf – Convert HTML numerical entities to UTF-8 encoded string</p>
+(htmltoolkit &gt;=1.0)
+
+strcode2utf – Convert HTML numerical entities to UTF-8 encoded string
 
 # Description
 
-<p class="manual_block">string <b>strcode2utf</b> ( string <span class="parameter">$text</span> [, boolean <span class="parameter">$low</span> ])</p>
-<p>Returns a UTF-8 encoded string.</p>
+string <b>strcode2utf</b> ( string <span class="parameter">$text</span> [, boolean <span class="parameter">$low</span> ])
+
+Returns a UTF-8 encoded string.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function is not part of the mPDF class, and is located in the htmltoolkit.php file. It is called without the class prefix e.g. $mpd-&gt;</div>
 
@@ -20,23 +22,27 @@ modification_time: 2015-08-05T12:02:42+00:00
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">text</span></p>
-<p class="manual_param_dd">The input string, containing HTML numerical entities e.g. &amp;#8123; or &amp;#x2022;</p>
-<p class="manual_param_dt"><span class="parameter">low</span></p>
-<p class="manual_param_dd">Specifies whether to convert HTML numerical entities of ASCII characters (&lt;128).
+<span class="parameter">text</span>
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+The input string, containing HTML numerical entities e.g. &amp;#8123; or &amp;#x2022;
+
+<span class="parameter">low</span>
+
+Specifies whether to convert HTML numerical entities of ASCII characters (&lt;128).
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE</span>: Convert all HTML numerical entities to UTF-8 characters
 
-<span class="smallblock">FALSE</span>: Only convert characters above codepoint 127</p>
+<span class="smallblock">FALSE</span>: Only convert characters above codepoint 127
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function does not convert named character entities like &amp;amp; &amp;quot; or &amp;raquo;</div>
 
 # Return value
 
-<p>Returns a UTF-8 encoded string.</p>
+Returns a UTF-8 encoded string.
 
 # Examples
 
@@ -55,7 +61,9 @@ $mpdf->SetWatermarkText($wm);
 
 $mpdf->showWatermark = true;
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 ?>
 {% endhighlight %}

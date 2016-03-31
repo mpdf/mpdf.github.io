@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/saving-to-a-database.html
 modification_time: 2015-08-05T12:00:21+00:00
 ---
 
-<p>If you want to save the created file to a database (not necessarily recommended), one user has suggested the following:</p>
+If you want to save the created file to a database (not necessarily recommended), one user has suggested the following:
 
 {% highlight php %}
 <?php
@@ -18,7 +18,7 @@ $data = bin2hex($s);
 $query = "INSERT INTO aaa SET content=0x".$data." ";
 {% endhighlight %}
 
-<p>When you want to output the PDf file:</p>
+When you want to output the PDf file:
 
 {% highlight php %}
 <?php

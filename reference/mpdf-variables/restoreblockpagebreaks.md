@@ -6,25 +6,27 @@ permalink: /reference/mpdf-variables/restoreblockpagebreaks.html
 modification_time: 2015-08-05T12:02:23+00:00
 ---
 
-<p>(mPDF &gt;= 2.3&nbsp; &lt;= 6.0)</p>
+(mPDF &gt;= 2.3&nbsp; &lt;= 6.0)
 
 # Description
 
-<p class="manual_block">boolean <b>restoreBlockPageBreaks</b></p>
-<p>Specifies whether or not to restore open HTML block elements after a forced pagebreak. When a pagebreak is forced by <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;, mPDF by default will close any HTML block elements, expecting the HTML code to start afresh after the pagebreak. If this value is set to <span class="smallblock">TRUE</span> mPDF will attempt to carry over any CSS style values for the current block elements and continue after the pagebreak.</p>
+boolean <b>restoreBlockPageBreaks</b>
+
+Specifies whether or not to restore open HTML block elements after a forced pagebreak. When a pagebreak is forced by <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;, mPDF by default will close any HTML block elements, expecting the HTML code to start afresh after the pagebreak. If this value is set to <span class="smallblock">TRUE</span> mPDF will attempt to carry over any CSS style values for the current block elements and continue after the pagebreak.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This variable was removed in mPDF 6.0&nbsp; See <a href="{{ "/paging/page-breaks.html" | prepend: site.baseurl }}">Page Breaks</a> for more information</div>
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">restoreBlockPageBreaks</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">restoreBlockPageBreaks</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE</span>: Restore block element properties after a pagebreak
 
 <span class="smallblock"><i>FALSE</i></span>: <span class="smallblock">DEFAULT</span> Do not restore block elements after a pagebreak
 
-Values of 1 or 0 can also be used</p>
+Values of 1 or 0 can also be used
 
 # Changelog
 
@@ -50,11 +52,15 @@ $mpdf=new mPDF();
 
 $mpdf->restoreBlockPageBreaks = true;
 
-$mpdf->WriteHTML('<div class="firstlevel"><div class="secondlevel"><p>Hallo World</p>');
+$mpdf->WriteHTML('<div class="firstlevel"><div class="secondlevel">
+Hallo World
+');
 
 $mpdf->AddPage();
 
-$mpdf->WriteHTML('<p>Hallo World</p></div></div>');
+$mpdf->WriteHTML('
+Hallo World
+</div></div>');
 
 ?>
 {% endhighlight %}

@@ -6,19 +6,23 @@ permalink: /reference/mpdf-functions/setdisplaypreferences.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-<p>(mPDF &gt;= 3.0)</p>
-<p>SetDisplayPreferences – Defines the way the document shall be presented on the screen</p>
+(mPDF &gt;= 3.0)
+
+SetDisplayPreferences – Defines the way the document shall be presented on the screen
 
 # Description
 
-<p class="manual_block">void <b>SetDisplayPreferences</b> ( string <span class="parameter">$prefs</span> )</p>
-<p>Specify the way the document shall be presented on the screen when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p>
+void <b>SetDisplayPreferences</b> ( string <span class="parameter">$prefs</span> )
+
+Specify the way the document shall be presented on the screen when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">prefs</span></p>
-<p class="manual_param_dd">This parameter takes a string containing any one or more of the possible values separated by any characters (e.g. comma, forward slash or space). All the options start as <span class="smallblock">FALSE</span>, and can only be set <span class="smallblock">TRUE</span> by this command. Each setting is added to those previously set.</p>
-<p class="manual_param_dd"><b>Values</b> (case-sensitive)
+<span class="parameter">prefs</span>
+
+This parameter takes a string containing any one or more of the possible values separated by any characters (e.g. comma, forward slash or space). All the options start as <span class="smallblock">FALSE</span>, and can only be set <span class="smallblock">TRUE</span> by this command. Each setting is added to those previously set.
+
+<b>Values</b> (case-sensitive)
 
 FullScreen: Full-screen mode, with no menu bar, window controls, or any other window visible
 
@@ -34,7 +38,7 @@ CenterWindow: whether to position the document’s window in the center of the s
 
 FitWindow: whether to resize the document’s window to fit the size of the first displayed page
 
-NoPrintScaling: overrides the user's default setting to scale the printing size (mPDF &gt;= 5.1)</p>
+NoPrintScaling: overrides the user's default setting to scale the printing size (mPDF &gt;= 5.1)
 
 # Examples
 
@@ -49,7 +53,9 @@ $mpdf=new mPDF();
 
 $mpdf->SetDisplayPreferences('/HideMenubar/HideToolbar/DisplayDocTitle');
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->Output('filename.pdf');
 

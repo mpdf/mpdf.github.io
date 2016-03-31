@@ -6,13 +6,15 @@ permalink: /reference/mpdf-functions/setbasepath.html
 modification_time: 2015-08-05T12:00:55+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>SetBasePath – Specifies a base URL for mPDF to interpret relative URLs</p>
+(mPDF &gt;= 1.0)
+
+SetBasePath – Specifies a base URL for mPDF to interpret relative URLs
 
 # Description
 
-<p class="manual_block">void <b>SetBasePath</b> ( string <span class="parameter">$url</span> )</p>
-<p>Specifies that mPDF should interpret any URLs in the HTML code relative to this <span class="parameter">url</span>. Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, and images.</p>
+void <b>SetBasePath</b> ( string <span class="parameter">$url</span> )
+
+Specifies that mPDF should interpret any URLs in the HTML code relative to this <span class="parameter">url</span>. Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, and images.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.</div>
 
@@ -20,8 +22,9 @@ modification_time: 2015-08-05T12:00:55+00:00
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">url</span></p>
-<p class="manual_param_dd">A full URL should be provided, but the following will all work:
+<span class="parameter">url</span>
+
+A full URL should be provided, but the following will all work:
 
 http://www.mydomain.com
 
@@ -29,7 +32,7 @@ http://www.mydomain.com/index.php
 
 http://www.mydomain.com/path/<span class="smallblock">
 
-</span></p>
+</span>
 
 # Examples
 

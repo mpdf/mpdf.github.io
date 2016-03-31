@@ -6,32 +6,34 @@ permalink: /what-else-can-i-do/fixed-position-blocks.html
 modification_time: 2015-08-05T12:00:00+00:00
 ---
 
-<p>mPDF &gt;= 4.0</p>
+mPDF &gt;= 4.0
 
 # Position
 
-<p>The CSS property "position" is <b>partially</b> supported in mPDF, allowing a block element (div etc.) to be placed at a fixed position on the page.</p>
+The CSS property "position" is <b>partially</b> supported in mPDF, allowing a block element (div etc.) to be placed at a fixed position on the page.
 
 {% highlight php %}
 position: fixed|absolute
 {% endhighlight %}
 
-<p><span class="parameter">absolute</span> - treats the whole physical page as the containing element
+<span class="parameter">absolute</span> - treats the whole physical page as the containing element
 
-<span class="parameter">fixed</span> - treats the 'printable page' (inside the margins) as the containing element</p>
+<span class="parameter">fixed</span> - treats the 'printable page' (inside the margins) as the containing element
 
 {% highlight php %}
 top|left|bottom|right: LENGTH (any valid length unit: em, mm, px, % etc.) DEFAULT = auto
 {% endhighlight %}
 
-<p><span class="parameter">rotate</span> - (introduced mPDF 5.0) rotates the block element 90 degrees clockwise or anticlockwise</p>
-<p>top|left|bottom|right|width|height are all used to set the size of the block element BEFORE rotation i.e. if the width is not specified, the lft and right margins will be used to calculate the width. After rotation, left|top are used to position the top left corner of the (rotated) element. There is an exception if bottom or right are specified without the respective top or left values; in this case these values are used to position the bottom or right edge of the (rotated) element.</p>
+<span class="parameter">rotate</span> - (introduced mPDF 5.0) rotates the block element 90 degrees clockwise or anticlockwise
+
+top|left|bottom|right|width|height are all used to set the size of the block element BEFORE rotation i.e. if the width is not specified, the lft and right margins will be used to calculate the width. After rotation, left|top are used to position the top left corner of the (rotated) element. There is an exception if bottom or right are specified without the respective top or left values; in this case these values are used to position the bottom or right edge of the (rotated) element.
 
 {% highlight php %}
 90|-90 DEFAULT = BLANK
 {% endhighlight %}
 
-<p>Limitations:</p>
+Limitations:
+
 <ul>
 <li>There is no equivalent concept of the viewport as in the browser (in CSS)</li>
 <li>All positioning is relative to the current page of the document being written
@@ -56,15 +58,17 @@ top|left|bottom|right: LENGTH (any valid length unit: em, mm, px, % etc.) DEFAUL
 
 ## Overflow
 
-<p>The CSS property "overflow" determines how text is displayed if the block element size is too small for the text.</p>
+The CSS property "overflow" determines how text is displayed if the block element size is too small for the text.
 
 {% highlight php %}
 overflow: visible|hidden|auto  DEFAULT = visible
 {% endhighlight %}
 
-<p><span class="parameter">visible</span> - all text will show, even if it lies outside the defined block element</p>
-<p><span class="parameter">hidden</span> - text will be 'clipped' so that overflowing text is not visible</p>
-<p><span class="parameter">auto</span> - text will be automatically reduced in size if required to fit inside the block element</p>
+<span class="parameter">visible</span> - all text will show, even if it lies outside the defined block element
+
+<span class="parameter">hidden</span> - text will be 'clipped' so that overflowing text is not visible
+
+<span class="parameter">auto</span> - text will be automatically reduced in size if required to fit inside the block element
 
 # Example
 

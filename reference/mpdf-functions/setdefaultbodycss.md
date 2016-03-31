@@ -6,24 +6,29 @@ permalink: /reference/mpdf-functions/setdefaultbodycss.html
 modification_time: 2015-08-05T12:00:57+00:00
 ---
 
-<p>(mPDF &gt;= 4.2)</p>
-<p>SetDefaultBodyCSS – Change default CSS properties at runtime</p>
+(mPDF &gt;= 4.2)
+
+SetDefaultBodyCSS – Change default CSS properties at runtime
 
 # Description
 
-<p class="manual_block">void <b>SetDefaultBodyCSS</b> ( string <span class="parameter">$property</span> , string <span class="parameter">$value</span> )</p>
-<p>Change default CSS properties at runtime. This changes the default CSS stylesheet values for the BODY element.</p>
+void <b>SetDefaultBodyCSS</b> ( string <span class="parameter">$property</span> , string <span class="parameter">$value</span> )
+
+Change default CSS properties at runtime. This changes the default CSS stylesheet values for the BODY element.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">property</span></p>
-<p class="manual_param_dd">Specifies the CSS property to set. Any valid CSS property that mPDF supports for the BODY element e.g.
+<span class="parameter">property</span>
+
+Specifies the CSS property to set. Any valid CSS property that mPDF supports for the BODY element e.g.
 
 <code>font-family</code>, <code>font-size</code>, <code>color </code>
 
-Case-insensitive</p>
-<p><span class="parameter">value</span></p>
-<p class="manual_param_dd"><span class="parameter"></span>Specifies the value for the given property.</p>
+Case-insensitive
+
+<span class="parameter">value</span>
+
+<span class="parameter"></span>Specifies the value for the given property.
 
 # Examples
 

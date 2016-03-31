@@ -6,7 +6,8 @@ permalink: /fonts-languages/about-pdf-files.html
 modification_time: 2015-08-05T11:59:26+00:00
 ---
 
-<p>In order for users to be able to read a PDF file, they need to be able to access the necessary fonts/characters. They can do this in three ways:</p>
+In order for users to be able to read a PDF file, they need to be able to access the necessary fonts/characters. They can do this in three ways:
+
 <ul>
 <li>PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and&nbsp;Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program,and do not need to be embedded in the PDF document.
 

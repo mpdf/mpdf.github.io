@@ -6,17 +6,23 @@ permalink: /paging/page-numbering.html
 modification_time: 2015-08-05T11:59:47+00:00
 ---
 
-<p>{PAGENO} in a header or footer will be replaced by the document page number. By default this will be the actual page number in decimal numerals.</p>
-<p>You can optionally:</p>
+{PAGENO} in a header or footer will be replaced by the document page number. By default this will be the actual page number in decimal numerals.
+
+You can optionally:
+
 <ul>
 <li> suppress page numbering - {PAGENO} will be replaced by a blank string - but counting will continue</li>
 <li>reset numbering - reset the numbering anywhere in the document*</li>
 <li>define/change the style of the numbering - as for lists it can be roman, alphabetical or decimal</li>
 </ul>
-<p class="manual_block">From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</p>
-<p class="manual_block">From mPDF 6.0 the page number style can include any of the values used for list-style-type</p>
-<p>Page numbering changes are made when adding a new page using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; (or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> and&nbsp; &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;) or using <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>.</p>
-<p>You could obviously also hide the page numbering by redefining a header or footer that does not include {PAGENO}.</p>
+
+From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.
+
+From mPDF 6.0 the page number style can include any of the values used for list-style-type
+
+Page numbering changes are made when adding a new page using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; (or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> and&nbsp; &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;) or using <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>.
+
+You could obviously also hide the page numbering by redefining a header or footer that does not include {PAGENO}.
 
 {% highlight php %}
 Example #1
@@ -35,7 +41,8 @@ $mpdf->setFooter('{PAGENO}');
 
 $mpdf->WriteHTML('Section 1');
 
-$mpdf->WriteHTML('<pagebreak suppress="on" />');
+$mpdf->WriteHTML('
+');
 
 // You could also do this using
 
@@ -55,7 +62,7 @@ $mpdf->Output();
 ## Changing page numbering from the start of the document
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF 6.0 the default page number style used from the start of the document can be set using <a href="{{ "/reference/mpdf-variables/defaultpagenumstyle.html" | prepend: site.baseurl }}"><code>defaultPageNumStyle</code></a>. The following text is now redundant.</div>
-<p>If you want to set page numbering characteristics from the first page onwards, you should explicitly add the first page of the document using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>. Note that this is normally not required, as mPDF creates a new first page automatically if required when first using WriteHTML().</p>
+<p>If you want to set page numbering characteristics from the first page onwards, you should explicitly add the first page of the document using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>. Note that this is normally not required, as mPDF creates a new first page automatically if required when first using WriteHTML().
 
 {% highlight php %}
 Example #2 In a complex document you could suppress the page numbering from the start for the cover page(s); then reset the number to 1, and set the style as lowercase Roman (i,ii,iii) for the foreword and introduction; then reset the style to decimal for the rest of the document:
@@ -82,7 +89,8 @@ $mpdf->AddPage('','','','','on');
 
 $mpdf->WriteHTML('Your Front Cover Pages');
 
-$mpdf->WriteHTML('<pagebreak type="NEXT-ODD" resetpagenum="1" pagenumstyle="i" suppress="off" />');
+$mpdf->WriteHTML('
+');
 
 // You could also do this using
 
@@ -99,7 +107,7 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<p>If using the initial&nbsp; <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> causes problems (a blank first page), an alternative way to do this is:</p>
+<p>If using the initial&nbsp; <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> causes problems (a blank first page), an alternative way to do this is:
 
 {% highlight php %}
 <?php
@@ -119,6 +127,7 @@ $mpdf->PageNumSubstitutions[] = array('from'=>1, 'reset'=> 0, 'type'=>'I', 'supp
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/aliasnbpg.html" | prepend: site.baseurl }}">aliasNbPg</a> - Specify the text to be replaced by the document page total</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/aliasnbpggp.html" | prepend: site.baseurl }}">aliasNbPgGp</a> - Specify the text to be replaced by the group page total</li>
 </ul>
-<p>Please also see <a href="http://mpdf1.com/documentation/table-of-contents">Table of Contents</a> for this special case.</p>
+
+Please also see <a href="http://mpdf1.com/documentation/table-of-contents">Table of Contents</a> for this special case.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> &nbsp; startPageNums() and <span class="parameter">$showdefaultpagenos</span> are now depracated and will do nothing (used prior to v1.3)</div>

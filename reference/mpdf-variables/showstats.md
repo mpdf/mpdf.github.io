@@ -6,24 +6,27 @@ permalink: /reference/mpdf-variables/showstats.html
 modification_time: 2015-08-05T12:02:26+00:00
 ---
 
-<p>(mPDF &gt;= 4.0)</p>
-<p>showStats – Display performance data for the generated PDF file</p>
+(mPDF &gt;= 4.0)
+
+showStats – Display performance data for the generated PDF file
 
 # Value
 
-<p class="manual_block">void <b>showStats</b></p>
-<p>Specify whether to show performance data. Useful if you are developing with mPDF, and want to test different configurations.</p>
+void <b>showStats</b>
+
+Specify whether to show performance data. Useful if you are developing with mPDF, and want to test different configurations.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">showStats</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">showStats</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>: enable display of data
 
 <span class="smallblock">FALSE</span>: disabled
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 # Changelog
 

@@ -6,13 +6,15 @@ permalink: /reference/mpdf-variables/enableimports.html
 modification_time: 2015-08-05T12:01:55+00:00
 ---
 
-<p>(mPDF &gt;= 4.3)</p>
-<p>enableImports – Enable the use of imported PDF files or templates</p>
+(mPDF &gt;= 4.3)
+
+enableImports – Enable the use of imported PDF files or templates
 
 # Description
 
-<p class="manual_block">void <b>enableImports</b></p>
-<p>Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several functions allowing you to import PDF files into the document you are writing, and using templates.</p>
+void <b>enableImports</b>
+
+Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several functions allowing you to import PDF files into the document you are writing, and using templates.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> You should only change this variable in the configuration file <span class="filename">config.php</span>&nbsp; If you want to set this at runtime, use <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a></div>
 
@@ -20,14 +22,15 @@ modification_time: 2015-08-05T12:01:55+00:00
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">enableImports</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">enableImports</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>: enable import/template functions
 
 <span class="smallblock">FALSE</span>: disabled
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 # Changelog
 

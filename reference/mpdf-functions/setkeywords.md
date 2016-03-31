@@ -6,20 +6,23 @@ permalink: /reference/mpdf-functions/setkeywords.html
 modification_time: 2015-08-05T12:01:06+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>SetKeywords – Set the document metadata Keywords</p>
+(mPDF &gt;= 1.0)
+
+SetKeywords – Set the document metadata Keywords
 
 # Description
 
-<p class="manual_block">void <b>SetKeywords</b> ( string <span class="parameter">$text</span> )</p>
-<p>Set Keywords for the document metadata. This metadata can be seen when inspecting the document properties in Adobe Reader.</p>
+void <b>SetKeywords</b> ( string <span class="parameter">$text</span> )
+
+Set Keywords for the document metadata. This metadata can be seen when inspecting the document properties in Adobe Reader.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">text</span></p>
-<p class="manual_param_dd">Defines the text to appear as Keywords. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.</p>
+<span class="parameter">text</span>
+
+Defines the text to appear as Keywords. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.
 
 # Examples
 
@@ -34,7 +37,9 @@ $mpdf=new mPDF();
 
 $mpdf->SetKeywords('My Keywords, More Keywords');
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->Output('filename.pdf');
 
@@ -54,7 +59,9 @@ $md = strcode2utf("&amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;
 
 $mpdf->SetKeywords($md);
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->Output('filename.pdf');
 

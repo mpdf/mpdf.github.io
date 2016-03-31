@@ -6,24 +6,31 @@ permalink: /reference/mpdf-functions/setalpha.html
 modification_time: 2015-08-05T12:00:53+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>SetAlpha – Set the opacity for Images</p>
+(mPDF &gt;= 1.0)
+
+SetAlpha – Set the opacity for Images
 
 # Description
 
-<p class="manual_block">void <b>SetAlpha</b> ( float <span class="parameter">$alpha</span> [, integer <span class="parameter">$blend</span> ])</p>
-<p>Set the opacity and blend mode for Images</p>
+void <b>SetAlpha</b> ( float <span class="parameter">$alpha</span> [, integer <span class="parameter">$blend</span> ])
+
+Set the opacity and blend mode for Images
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">alpha</span></p>
-<p class="manual_param_dd">This parameter specifies the opacity for any subsequent images written to the current document.</p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">alpha</span>
 
-Float: 0 (transparent) to 1 (opaque)</p>
-<p class="manual_param_dt"><span class="parameter">blend</span></p>
-<p class="manual_param_dd">This parameter specifies the blend mode.</p>
-<p class="manual_param_dd"><b>Values</b>
+This parameter specifies the opacity for any subsequent images written to the current document.
+
+<b>Values</b>
+
+Float: 0 (transparent) to 1 (opaque)
+
+<span class="parameter">blend</span>
+
+This parameter specifies the blend mode.
+
+<b>Values</b>
 
 <span class="smallblock">STRING</span> - One of the following:
 
@@ -59,7 +66,7 @@ Color
 
 Luminosity
 
-<span class="smallblock">DEFAULT</span>: Normal</p>
+<span class="smallblock">DEFAULT</span>: Normal
 
 # Changelog
 

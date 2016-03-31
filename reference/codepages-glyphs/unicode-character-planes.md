@@ -6,7 +6,8 @@ permalink: /reference/codepages-glyphs/unicode-character-planes.html
 modification_time: 2015-08-05T12:03:01+00:00
 ---
 
-<p>As of Unicode 5.1, The BMP includes the following scripts:</p>
+As of Unicode 5.1, The BMP includes the following scripts:
+
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/Basic_Latin">Basic Latin</a> (0000–007F)</li>
 <li><a href="http://en.wikipedia.org/wiki/Latin-1">Latin-1</a> Supplement (0080–00FF)</li>
@@ -1048,4 +1049,6 @@ modification_time: 2015-08-05T12:03:01+00:00
 <td class="nonchar">Spec.</td>
 </tr>
 </tbody> </table>
-<p>From <a href="http://www.unicode.org/roadmaps/bmp/">http://www.unicode.org/roadmaps/bmp/</a></p>
+
+From <a href="http://www.unicode.org/roadmaps/bmp/">http://www.unicode.org/roadmaps/bmp/</a>
+

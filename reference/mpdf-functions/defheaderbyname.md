@@ -6,13 +6,15 @@ permalink: /reference/mpdf-functions/defheaderbyname.html
 modification_time: 2015-08-05T12:00:45+00:00
 ---
 
-<p>(mPDF &gt;= 2.0)</p>
-<p>DefHeaderByName – Define a page header with a given name</p>
+(mPDF &gt;= 2.0)
+
+DefHeaderByName – Define a page header with a given name
 
 # Description
 
-<p class="manual_block">void <b>DefHeaderByName</b> ([ string <span class="parameter">$name</span> [, array <span class="parameter">$header</span> ]])</p>
-<p>Define a page header with a given name. Named headers can be referenced and set later in the document e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a></p>
+void <b>DefHeaderByName</b> ([ string <span class="parameter">$name</span> [, array <span class="parameter">$header</span> ]])
+
+Define a page header with a given name. Named headers can be referenced and set later in the document e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
@@ -20,15 +22,19 @@ modification_time: 2015-08-05T12:00:45+00:00
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">name</span></p>
-<p class="manual_param_dd">User-defined name for the header. If <span class="parameter">name</span> = <span class="smallblock">BLANK</span> the name '_default' is used.<span class="smallblock">
+<span class="parameter">name</span>
 
-</span></p>
-<p class="manual_param_dt"><span class="parameter">header</span></p>
-<p class="manual_param_dd">This parameter specifies the content of the page header as an array.
+User-defined name for the header. If <span class="parameter">name</span> = <span class="smallblock">BLANK</span> the name '_default' is used.<span class="smallblock">
 
-<span class="smallblock">DEFAULT</span>: array()</p>
-<p class="manual_param_dd"><b>Values</b> in the array
+</span>
+
+<span class="parameter">header</span>
+
+This parameter specifies the content of the page header as an array.
+
+<span class="smallblock">DEFAULT</span>: array()
+
+<b>Values</b> in the array
 
 <span class="parameter">content</span>: <span class="smallblock">TEXT STRING</span>
 
@@ -40,7 +46,7 @@ modification_time: 2015-08-05T12:00:45+00:00
 
 <span class="parameter">color</span>: CSS '#RRGGBB' string
 
-<span class="parameter">line</span>: 0|1 - specify whether to draw a line under the Header</p>
+<span class="parameter">line</span>: 0|1 - specify whether to draw a line under the Header
 
 {% highlight php %}
 $header = array (
@@ -105,7 +111,8 @@ $header = array (
 
 # Examples
 
-<p>For examples and further information please see:</p>
+For examples and further information please see:
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a></li>

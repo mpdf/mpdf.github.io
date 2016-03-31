@@ -6,21 +6,23 @@ permalink: /reference/mpdf-variables/allow-charset-conversion.html
 modification_time: 2015-08-05T12:01:34+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
+(mPDF &gt;= 1.0)
 
 # Description
 
-<p class="manual_block">boolean <b>allow_charset_conversion</b></p>
-<p>When <span class="smallblock">TRUE</span>, mPDF will attempt to parse the character set of any input HTML. You can also use it together with <span class="parameter">charset_in</span> to manually set an input encoding.</p>
+boolean <b>allow_charset_conversion</b>
+
+When <span class="smallblock">TRUE</span>, mPDF will attempt to parse the character set of any input HTML. You can also use it together with <span class="parameter">charset_in</span> to manually set an input encoding.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">allow_charset_conversion</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">allow_charset_conversion</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <i><span class="smallblock">TRUE</span></i>: <span class="smallblock">DEFAULT</span> Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">charset_in</span> 
 
-<span class="smallblock">FALSE</span>: Expect all text input as UTF-8 encoding.</p>
+<span class="smallblock">FALSE</span>: Expect all text input as UTF-8 encoding.
 
 # Examples
 

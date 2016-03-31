@@ -6,22 +6,25 @@ permalink: /reference/mpdf-variables/falseboldweight.html
 modification_time: 2015-08-05T12:01:56+00:00
 ---
 
-<p>(mPDF &gt;= 4.2)</p>
-<p>falseBoldWeight – Specify weight used for bold text when using an artificial (outline) bold</p>
+(mPDF &gt;= 4.2)
+
+falseBoldWeight – Specify weight used for bold text when using an artificial (outline) bold
 
 # Description
 
-<p class="manual_block">void <b>falseBoldWeight</b></p>
-<p>Specify weight used for bold text when using an artificial (outline) bold. If bold text is set by &lt;b&gt; and the current font does not have a font file for the bold variant, an artificial bold is created by stroking the outline of the characters. This variable sets the width of the line and thus the "weight" of the bold text. Values between 0 and 10 are recommended.</p>
+void <b>falseBoldWeight</b>
+
+Specify weight used for bold text when using an artificial (outline) bold. If bold text is set by &lt;b&gt; and the current font does not have a font file for the bold variant, an artificial bold is created by stroking the outline of the characters. This variable sets the width of the line and thus the "weight" of the bold text. Values between 0 and 10 are recommended.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">falseBoldWeight</span><span class="smallblock"></span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">falseBoldWeight</span><span class="smallblock"></span>
+
+<b>Values</b>
 
 <span class="smallblock">INTEGER </span>: set weight of bold text
 
-<span class="smallblock"></span><span class="smallblock">DEFAULT</span>: 5</p>
+<span class="smallblock"></span><span class="smallblock">DEFAULT</span>: 5
 
 # Changelog
 

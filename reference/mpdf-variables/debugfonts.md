@@ -8,10 +8,16 @@ modification_time: 2015-08-05T12:01:50+00:00
 
 <div>
 <div>
-<p>mPDF &gt;= 5.0</p>
-<p>Show errors and warning notes for fonts.</p>
-<p>Default set in config.php</p>
-<p>Default value: False</p>
-<p>Values: true|false</p>
+
+mPDF &gt;= 5.0
+
+Show errors and warning notes for fonts.
+
+Default set in config.php
+
+Default value: False
+
+Values: true|false
+
 </div>
 </div>

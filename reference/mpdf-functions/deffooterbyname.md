@@ -6,13 +6,15 @@ permalink: /reference/mpdf-functions/deffooterbyname.html
 modification_time: 2015-08-05T12:00:45+00:00
 ---
 
-<p>(mPDF &gt;= 2.0)</p>
-<p>DefFooterByName – Define a page footer with a given name</p>
+(mPDF &gt;= 2.0)
+
+DefFooterByName – Define a page footer with a given name
 
 # Description
 
-<p class="manual_block">void <b>DefFooterByName</b> ([ string <span class="parameter">$name</span> [, array <span class="parameter">$footer</span> ]])</p>
-<p>Define a page footer with a given name. Named footers can be referenced and set later in the document e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a></p>
+void <b>DefFooterByName</b> ([ string <span class="parameter">$name</span> [, array <span class="parameter">$footer</span> ]])
+
+Define a page footer with a given name. Named footers can be referenced and set later in the document e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
@@ -20,15 +22,19 @@ modification_time: 2015-08-05T12:00:45+00:00
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">name</span></p>
-<p class="manual_param_dd">User-defined name for the footer. If <span class="parameter">name</span> = <span class="smallblock">BLANK</span> the name '_default' is used.<span class="smallblock">
+<span class="parameter">name</span>
 
-</span></p>
-<p class="manual_param_dt"><span class="parameter">footer</span></p>
-<p class="manual_param_dd">This parameter specifies the content of the page footer as an array.
+User-defined name for the footer. If <span class="parameter">name</span> = <span class="smallblock">BLANK</span> the name '_default' is used.<span class="smallblock">
 
-<span class="smallblock">DEFAULT</span>: array()abov</p>
-<p class="manual_param_dd"><b>Values</b> in the array
+</span>
+
+<span class="parameter">footer</span>
+
+This parameter specifies the content of the page footer as an array.
+
+<span class="smallblock">DEFAULT</span>: array()abov
+
+<b>Values</b> in the array
 
 <span class="parameter">content</span>: <span class="smallblock">TEXT STRING</span>
 
@@ -40,7 +46,7 @@ modification_time: 2015-08-05T12:00:45+00:00
 
 <span class="parameter">color</span>: CSS '#RRGGBB' string
 
-<span class="parameter">line</span>: 0|1 - specify whether to draw a line above the footer</p>
+<span class="parameter">line</span>: 0|1 - specify whether to draw a line above the footer
 
 {% highlight php %}
 $footer = array (
@@ -105,7 +111,8 @@ $footer = array (
 
 # Examples
 
-<p>For examples and further information please see:</p>
+For examples and further information please see:
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a></li>

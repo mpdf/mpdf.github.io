@@ -8,9 +8,11 @@ modification_time: 2015-08-05T12:00:29+00:00
 
 # Other Methods
 
-<p>mPDF is optimised to accept HTML code and CSS styles. Apart from WriteHTML() there are other methods that can be used to write to the PDF document, but these do not always have full functionality. These are methods available in the original FPDF and successors, and if these are all you are using you may find that you do not need to use mPDF with its extra functions that slow the program down - see FPDF and UFPDF for further details.</p>
-<p>The methods Cell() and Text() from FPDF are still present, but should not be used directly as they will not cope with UTF-8 encoded text. Use the WriteCell() and WriteText() methods instead.</p>
-<p>All the methods described below handle UTF-8 encoded text, and all but AutosizeText() and watermark() will reverse RTL (right-to-left) text when appropriate.</p>
+mPDF is optimised to accept HTML code and CSS styles. Apart from WriteHTML() there are other methods that can be used to write to the PDF document, but these do not always have full functionality. These are methods available in the original FPDF and successors, and if these are all you are using you may find that you do not need to use mPDF with its extra functions that slow the program down - see FPDF and UFPDF for further details.
+
+The methods Cell() and Text() from FPDF are still present, but should not be used directly as they will not cope with UTF-8 encoded text. Use the WriteCell() and WriteText() methods instead.
+
+All the methods described below handle UTF-8 encoded text, and all but AutosizeText() and watermark() will reverse RTL (right-to-left) text when appropriate.
 
 ## Direct writing methods and OTL (updated: mPDF &gt;= 6.0)
 
@@ -22,24 +24,33 @@ modification_time: 2015-08-05T12:00:29+00:00
 <li> MultiCell() does not support kerning and justification. NB This includes &lt;textarea&gt; in forms which uses MultiCell() internally. </li>
 <li>&lt;select&gt; form objects also do NOT support kerning.</li>
 </ul>
-<p>Text containing HTML entities, as well as decimal and hex e.g. &amp; apos; &amp; #8812; or &amp; #x21a4; can be used in all of these methods, by setting:
+
+Text containing HTML entities, as well as decimal and hex e.g. &amp; apos; &amp; #8812; or &amp; #x21a4; can be used in all of these methods, by setting:
 
 $mpdf-&gt;text_input_as_HTML = true; (default = false)
 
-This will convert all the above to their apropriate characters, otherwise the text will be output as it is.</p>
-<p>For most of the methods, you are referred to the originals at <a href="http://www.fpdf.org/" target="_blank">FPDF</a> &gt;&gt; Manual for more information.</p>
-<p class="manual_block"><b>WriteCell</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text[, <b>mixed</b> border[, <b>integer</b> ln[, <b>string</b> align[, <b>integer</b> fill[, <b>mixed</b> link[, <b>float</b> returnx]]]]]])</p>
-<p>Writes a single line of text directly to the PDF document at the current position.
+This will convert all the above to their apropriate characters, otherwise the text will be output as it is.
 
-See the details for Cell() at FPDF. An additional parameter returnx has been added; if ln is set, the current position moves not to the left margin, but to the value set as returnx.</p>
-<p class="manual_block"><b>WriteText</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text)</p>
-<p>Writes a single line of text directly to the PDF document at a specified position.
+For most of the methods, you are referred to the originals at <a href="http://www.fpdf.org/" target="_blank">FPDF</a> &gt;&gt; Manual for more information.
 
-See the details for Text() at FPDF.</p>
-<p class="manual_block"><b>MultiCell</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text[, <b>mixed</b> border[, <b>string</b> align[, <b>integer</b> fill[, <b>mixed</b> link[, <b>string</b> directionality[, <b>boolean</b> encoded]]]]]])</p>
-<p>Writes a block of text directly to the PDF document at the current position. Lines are wrapped at the margins.
+<b>WriteCell</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text[, <b>mixed</b> border[, <b>integer</b> ln[, <b>string</b> align[, <b>integer</b> fill[, <b>mixed</b> link[, <b>float</b> returnx]]]]]])
 
-See the details for MultiCell() at FPDF. Two additional parameters have been added:</p>
+Writes a single line of text directly to the PDF document at the current position.
+
+See the details for Cell() at FPDF. An additional parameter returnx has been added; if ln is set, the current position moves not to the left margin, but to the value set as returnx.
+
+<b>WriteText</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text)
+
+Writes a single line of text directly to the PDF document at a specified position.
+
+See the details for Text() at FPDF.
+
+<b>MultiCell</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text[, <b>mixed</b> border[, <b>string</b> align[, <b>integer</b> fill[, <b>mixed</b> link[, <b>string</b> directionality[, <b>boolean</b> encoded]]]]]])
+
+Writes a block of text directly to the PDF document at the current position. Lines are wrapped at the margins.
+
+See the details for MultiCell() at FPDF. Two additional parameters have been added:
+
 <ul>
 <li>directionality
 
@@ -52,21 +63,25 @@ When set to false (default), UTF-8 encoded text will be appropriately converted 
 
 Default = false</li>
 </ul>
-<p class="manual_block"><b>SetX</b>(<b>float</b> x)
+
+<b>SetX</b>(<b>float</b> x)
 
 <b>SetY</b>(<b>float</b> y)
 
-<b>SetXY</b>(<b>float</b> x, <b>float</b> y)</p>
-<p>Sets the co-ordinates for the current position to write. Note only milimeters can be used as units. X and Y are measured from the top-left corner of the page.
+<b>SetXY</b>(<b>float</b> x, <b>float</b> y)
 
-See the details these methods at FPDF</p>
-<p class="manual_block"><b>AutosizeText</b>(<b>string</b> text, <b>float</b> width, <b>string</b> font, <b>string</b> style[, <b>float</b> fontsize])
+Sets the co-ordinates for the current position to write. Note only milimeters can be used as units. X and Y are measured from the top-left corner of the page.
+
+See the details these methods at FPDF
+
+<b>AutosizeText</b>(<b>string</b> text, <b>float</b> width, <b>string</b> font, <b>string</b> style[, <b>float</b> fontsize])
 
 Writes a single line of text directly to the PDF document at the current position.
 
 Font size will be automatically reduced to fit width (but is not increased).
 
-NB Does not reverse RTL text</p>
+NB Does not reverse RTL text
+
 <ul>
 <li>text
 
@@ -86,11 +101,13 @@ Maximm font size in points (pt)
 
 Default = 72</li>
 </ul>
-<p class="manual_block"><b>watermark</b>(<b>string</b> text[, <b>float</b> angle[, <b>float</b> fontsize[, <b>float</b> alpha]]])
+
+<b>watermark</b>(<b>string</b> text[, <b>float</b> angle[, <b>float</b> fontsize[, <b>float</b> alpha]]])
 
 Writes a single line of text centred on the page, which can be rotated and transparent i.e. a watermark.
 
-NB Does not reverse RTL text.</p>
+NB Does not reverse RTL text.
+
 <ul>
 <li>text
 
@@ -111,9 +128,11 @@ Transparency
 
 Default = 0.2</li>
 </ul>
-<p class="manual_block"><b>RoundedRect</b>(<b>float</b> x, <b>float</b> y, <b>float</b> w, <b>float</b> h, <b>float</b> radius[, <b>string</b> style])
 
-Draws a rectangle with rounded corners directly to the PDF document at the specified position.</p>
+<b>RoundedRect</b>(<b>float</b> x, <b>float</b> y, <b>float</b> w, <b>float</b> h, <b>float</b> radius[, <b>string</b> style])
+
+Draws a rectangle with rounded corners directly to the PDF document at the specified position.
+
 <ul>
 <li>x
 
@@ -136,9 +155,11 @@ Box style: D or empty string - draw border (default); F - fill; DF or FD - draw 
 
 Default = '' i.e. border, no fill</li>
 </ul>
-<p class="manual_block"><b>shaded_box</b>(<b>string</b> title[, <b>string</b> font[, <b>float</b> fontstyle[, <b>float</b> fontsize[, <b>float</b> width[, <b>string</b> style[, <b>float</b> radius[, <b>string</b> backgroundcolor[, <b>string</b> color[, <b>float</b> padding]]]]]]]]])
 
-Writes a single line of text surrounded by a box directly to the PDF document at the current position. The box can have rounded corners, and be filled with background-colour.</p>
+<b>shaded_box</b>(<b>string</b> title[, <b>string</b> font[, <b>float</b> fontstyle[, <b>float</b> fontsize[, <b>float</b> width[, <b>string</b> style[, <b>float</b> radius[, <b>string</b> backgroundcolor[, <b>string</b> color[, <b>float</b> padding]]]]]]]]])
+
+Writes a single line of text surrounded by a box directly to the PDF document at the current position. The box can have rounded corners, and be filled with background-colour.
+
 <ul>
 <li>title
 

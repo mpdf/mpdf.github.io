@@ -6,13 +6,15 @@ permalink: /reference/mpdf-functions/setimportuse.html
 modification_time: 2015-08-05T12:01:06+00:00
 ---
 
-<p>(mPDF &gt;= 4.3)</p>
-<p>SetImportUse – Enable the use of imported PDF files or templates</p>
+(mPDF &gt;= 4.3)
+
+SetImportUse – Enable the use of imported PDF files or templates
 
 # Description
 
-<p class="manual_block">void <b>SetImportUse</b> ( )</p>
-<p>Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several functions allowing you to import PDF files into the document you are writing, and using templates.</p>
+void <b>SetImportUse</b> ( )
+
+Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several functions allowing you to import PDF files into the document you are writing, and using templates.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use SetImportUse() to enable them.</div>
 
@@ -24,7 +26,9 @@ modification_time: 2015-08-05T12:01:06+00:00
 <tr>
 <td>4.3</td>
 <td>
-<p>Function added.</p>
+
+Function added.
+
 </td>
 </tr>
 </tbody> </table>

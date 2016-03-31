@@ -6,23 +6,27 @@ permalink: /reference/html-control-tags/dottab.html
 modification_time: 2015-08-05T12:01:21+00:00
 ---
 
-<p>(mPDF &gt;= 4.3)</p>
-<p>dottab – Insert dots to following (right-aligned) text</p>
+(mPDF &gt;= 4.3)
+
+dottab – Insert dots to following (right-aligned) text
 
 # Description
 
-<p class="manual_block">&lt;<b>dottab</b> [ <span class="parameter">outdent</span> ] /&gt;</p>
-<p>Insert a string of dots to fill the space to the text which follows &lt;dottab /&gt;, which is right-aligned. This gives the appearance seen in e.g. a table of contents, or a menu with prices. A minimum of 3 dots (with spaces either side) is inserted. If the text which follows the &lt;dottab /&gt; will not fit on a single line, the default tab of ' ... ' is added, and text is not right-aligned.</p>
+&lt;<b>dottab</b> [ <span class="parameter">outdent</span> ] /&gt;
+
+Insert a string of dots to fill the space to the text which follows &lt;dottab /&gt;, which is right-aligned. This gives the appearance seen in e.g. a table of contents, or a menu with prices. A minimum of 3 dots (with spaces either side) is inserted. If the text which follows the &lt;dottab /&gt; will not fit on a single line, the default tab of ' ... ' is added, and text is not right-aligned.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If a space is required after the &lt;dottab&gt; use a non-breaking space &amp;nbsp;</div>
-<p class="manual_block">From mPDF 5.7+ CSS styles can be applied to &lt;dottab&gt; as for an inline element.</p>
+
+From mPDF 5.7+ CSS styles can be applied to &lt;dottab&gt; as for an inline element.
 
 # Attributes
 
-<p class="manual_param_dt"><span class="parameter">outdent</span></p>
-<p class="manual_param_dd">Takes any valid CSS <span class="smallblock">LENGTH</span>&nbsp; e.g. "2em"
+<span class="parameter">outdent</span>
 
-<span class="smallblock">DEFAULT</span>: 0</p>
+Takes any valid CSS <span class="smallblock">LENGTH</span>&nbsp; e.g. "2em"
+
+<span class="smallblock">DEFAULT</span>: 0
 
 # Changelog
 
@@ -48,7 +52,9 @@ Example #1
 {% highlight php %}
 <?php
 
-$menuitem = '<p>Chilli con carne <dottab />&amp;nbsp;£7.95</p>';
+$menuitem = '
+Chilli con carne <dottab />&amp;nbsp;£7.95
+';
 
 $mpdf->WriteHTML($menuitem);
 {% endhighlight %}
@@ -62,6 +68,8 @@ Example #2
 
 To right-align the text which follows the <dottab> whilst indenting any preceding lines:
 
-$menuitem = '<p style="padding-right: 3em">Chilli con carne etc. etc. <dottab outdent="3em" />&amp;nbsp;£7.95</p>';
+$menuitem = '
+Chilli con carne etc. etc. <dottab outdent="3em" />&amp;nbsp;£7.95
+';
 {% endhighlight %}
 

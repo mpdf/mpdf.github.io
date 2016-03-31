@@ -6,24 +6,27 @@ permalink: /reference/mpdf-variables/debug.html
 modification_time: 2015-08-05T12:01:50+00:00
 ---
 
-<p>(mPDF &gt;= 3.1)</p>
-<p>debug – Turn on debugging messages</p>
+(mPDF &gt;= 3.1)
+
+debug – Turn on debugging messages
 
 # Description
 
-<p class="manual_block">void <b>debug</b></p>
-<p>Specify whether to show debugging messages. If you are having problems with mPDF, set <span class="parameter">debug</span> to TRUE to show error and warning&nbsp; messages that may otherwise be suppressed.</p>
+void <b>debug</b>
+
+Specify whether to show debugging messages. If you are having problems with mPDF, set <span class="parameter">debug</span> to TRUE to show error and warning&nbsp; messages that may otherwise be suppressed.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">debug</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">debug</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>: enable debugging
 
 <span class="smallblock">FALSE</span>: disable debugging
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 # Changelog
 

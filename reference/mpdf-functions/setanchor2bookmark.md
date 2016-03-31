@@ -6,26 +6,29 @@ permalink: /reference/mpdf-functions/setanchor2bookmark.html
 modification_time: 2015-08-05T12:00:54+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>SetAnchor2Bookmark – Specifies whether PDF Bookmarks are created automatically from HTML anchors</p>
+(mPDF &gt;= 1.0)
+
+SetAnchor2Bookmark – Specifies whether PDF Bookmarks are created automatically from HTML anchors
 
 # Description
 
-<p class="manual_block">void <b>SetAnchor2Bookmark</b> ( int <span class="parameter">$mode</span> )</p>
-<p>Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="Introduction" /&gt;) . This function simply sets the variable <span class="parameter">$anchor2Bookmark</span></p>
+void <b>SetAnchor2Bookmark</b> ( int <span class="parameter">$mode</span> )
+
+Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="Introduction" /&gt;) . This function simply sets the variable <span class="parameter">$anchor2Bookmark</span>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">mode</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">mode</span>
+
+<b>Values</b>
 
 0 - does not generate a bookmark
 
 1 - generate a bookmark using the text value of the <span class="parameter">name</span> attribute
 
-<span class="smallblock">DEFAULT</span>: 0<span class="smallblock"> </span></p>
+<span class="smallblock">DEFAULT</span>: 0<span class="smallblock"> </span>
 
 # Changelog
 

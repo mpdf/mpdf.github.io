@@ -8,24 +8,28 @@ modification_time: 2015-08-05T12:02:19+00:00
 
 <div>
 <div>
-<p>(mPDF &gt;= 5.1)</p>
-<p>PDFX – Create PDF/X-1a compliant document</p>
+
+(mPDF &gt;= 5.1)
+
+PDFX – Create PDF/X-1a compliant document
 
 # Description
 
-<p class="manual_block">void <b>PDFX</b></p>
-<p>Specify whether to create a PDF/X-1a compliant document.</p>
+void <b>PDFX</b>
+
+Specify whether to create a PDF/X-1a compliant document.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">PDFX</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">PDFX</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>: create PDF/X-1a compliant document&nbsp;&nbsp;&nbsp; 
 
 <span class="smallblock">FALSE</span>: normal PDF document
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 # Changelog
 

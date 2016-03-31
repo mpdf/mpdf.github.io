@@ -6,23 +6,27 @@ permalink: /reference/mpdf-functions/setheader.html
 modification_time: 2015-08-05T12:01:02+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>SetHeader – Sets a page header</p>
+(mPDF &gt;= 1.0)
+
+SetHeader – Sets a page header
 
 # Description
 
-<p class="manual_block">void <b>SetHeader</b> ([ mixed <span class="parameter">$header</span> [, string <span class="parameter">$side</span> [, boolean <span class="parameter">$write</span> ]]])</p>
-<p>Set a page header.</p>
+void <b>SetHeader</b> ([ mixed <span class="parameter">$header</span> [, string <span class="parameter">$side</span> [, boolean <span class="parameter">$write</span> ]]])
+
+Set a page header.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">header</span></p>
-<p class="manual_param_dd">This parameter specifies the content of the page header. It can accept a string or array. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> or array() is passed, this will clear the page header.
+<span class="parameter">header</span>
 
-<span class="smallblock">DEFAULT</span>: array()</p>
-<p class="manual_param_dd"><b>Values</b>
+This parameter specifies the content of the page header. It can accept a string or array. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> or array() is passed, this will clear the page header.
+
+<span class="smallblock">DEFAULT</span>: array()
+
+<b>Values</b>
 
 A simple text string is set as content for the <span class="smallblock">RIGHT</span> margin. If <span class="smallblock">DOUBLE-SIDED</span> document, this is mirrored on <span class="smallblock">EVEN</span> pages i.e. <span class="smallblock">LEFT</span> margin.
 
@@ -44,7 +48,7 @@ An array can be in two forms. The first form includes information for both <span
 
 <span class="parameter">color</span>: CSS '#RRGGBB' string
 
-<span class="parameter">line</span>: 0|1 - specify whether to draw a line under the Header</p>
+<span class="parameter">line</span>: 0|1 - specify whether to draw a line under the Header
 
 {% highlight php %}
 $header = array (
@@ -102,7 +106,7 @@ $header = array (
 );
 {% endhighlight %}
 
-<p class="manual_param_dd">The second form includes information for either <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> headers, and must be accompanied by a valid value for <span class="parameter">side</span> =&nbsp;O|E</p>
+The second form includes information for either <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> headers, and must be accompanied by a valid value for <span class="parameter">side</span> =&nbsp;O|E
 
 {% highlight php %}
 $header = array (
@@ -154,21 +158,25 @@ $header = array (
 );
 {% endhighlight %}
 
-<p class="manual_param_dt"><span class="parameter">side</span></p>
-<p class="manual_param_dd">Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
+<span class="parameter">side</span>
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span></p>
-<p class="manual_param_dd"><b>Values</b> (case-sensitive)
+Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+
+<b>Values</b> (case-sensitive)
 
 O - set the header for <span class="smallblock">ODD</span> pages
 
 E - set the header for <span class="smallblock">EVEN</span> pages
 
-<span class="smallblock">BLANK</span> - sets both <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> page headers</p>
-<p class="manual_param_dt"><span class="parameter">write</span></p>
-<p class="manual_param_dd">If <span class="smallblock">TRUE</span> it forces the Header to be written immediately to the current page. Use if the header is being set after the new page has been added.
+<span class="smallblock">BLANK</span> - sets both <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> page headers
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="parameter">write</span>
+
+If <span class="smallblock">TRUE</span> it forces the Header to be written immediately to the current page. Use if the header is being set after the new page has been added.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="parameter">write</span> forces the appropriate header to be written. If you have just defined an <span class="smallblock">ODD</span>-sided header and the document is currently writing to an <span class="smallblock">EVEN</span>-sided page, the <span class="smallblock">EVEN</span> header will be output.</div>
 
@@ -185,7 +193,8 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 
 # Examples
 
-<p>For examples and further information please see:</p>
+For examples and further information please see:
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 1</a></li>

@@ -6,17 +6,19 @@ permalink: /reference/mpdf-variables/setautotopmargin.html
 modification_time: 2015-08-05T12:02:25+00:00
 ---
 
-<p>(mPDF &gt;= 4.0)</p>
+(mPDF &gt;= 4.0)
 
 # Description
 
-<p class="manual_block">mixed <b>setAutoTopMargin</b></p>
-<p>Specify the behaviour defining the top-margin of the document. When <span class="parameter">setAutoTopMargin</span> is set to 'stretch' then <span class="parameter">autoMarginPadding</span> defines the minimum distance in mm that will be forced between the bottom of the header and the top of the main text.</p>
+mixed <b>setAutoTopMargin</b>
+
+Specify the behaviour defining the top-margin of the document. When <span class="parameter">setAutoTopMargin</span> is set to 'stretch' then <span class="parameter">autoMarginPadding</span> defines the minimum distance in mm that will be forced between the bottom of the header and the top of the main text.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">setAutoTopMargin</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">setAutoTopMargin</span>
+
+<b>Values</b>
 
 pad - the value for margin-top is used to set a fixed distance in mm (padding) between the bottom of the header and top of the main text
 
@@ -24,7 +26,7 @@ stretch -&nbsp; margin-top sets a <b>minimum</b> distance in mm between the top 
 
 <span class="smallblock">FALSE</span> - the defined value for margin-top is respected even if the header overlaps the main body of the document.
 
-<span class="smallblock">DEFAULT</span> <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span> <span class="smallblock">FALSE</span>
 
 # See Also
 

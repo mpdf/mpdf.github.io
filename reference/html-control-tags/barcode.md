@@ -6,31 +6,37 @@ permalink: /reference/html-control-tags/barcode.html
 modification_time: 2015-08-05T12:01:19+00:00
 ---
 
-<p>(mPDF &gt;= 4.0)</p>
-<p>barcode – Add a Barcode to the document</p>
+(mPDF &gt;= 4.0)
+
+barcode – Add a Barcode to the document
 
 # Description
 
-<p class="manual_block">&lt;<b>barcode</b>&nbsp; <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;</p>
-<p>Add a Barcode to the document.</p>
+&lt;<b>barcode</b>&nbsp; <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;
+
+Add a Barcode to the document.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> and the example file for further information.</div>
 
 # Attributes
 
-<p class="manual_param_dt"><span class="parameter">code</span></p>
-<p class="manual_param_dd">Specifies the code to translate to a barcode.
+<span class="parameter">code</span>
+
+Specifies the code to translate to a barcode.
 
 <span class="parameter">code</span> for EAN13 / ISBN / ISSN / UPCA / UPCE can contain hyphens '-' but no other characters are allowed.
 
 Check-digits can be optionally included for EAN13 / ISBN / ISSN / UPCA / UPCE
 
-<span class="smallblock">REQUIRED</span></p>
-<p class="manual_param_dt"><span class="parameter">type</span></p>
-<p class="manual_param_dd"><span class="parameter">type</span> specifies the type of barcode required.
+<span class="smallblock">REQUIRED</span>
 
-<span class="smallblock">DEFAULT</span>: EAN13</p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">type</span>
+
+<span class="parameter">type</span> specifies the type of barcode required.
+
+<span class="smallblock">DEFAULT</span>: EAN13
+
+<b>Values</b>
 
 EAN13, ISBN, ISSN, UPCA, UPCE, EAN8
 
@@ -56,10 +62,13 @@ MSI, MSI+
 
 CODABAR
 
-CODE11</p>
-<p class="manual_param_dd">Note: Type with a + at the end includes check-digits.</p>
-<p class="manual_param_dt"><span class="parameter">text</span></p>
-<p class="manual_param_dd"><b>EAN13 only</b>
+CODE11
+
+Note: Type with a + at the end includes check-digits.
+
+<span class="parameter">text</span>
+
+<b>EAN13 only</b>
 
 Specifies whether to show the the code at the top of an EAN13 barcode.
 
@@ -67,9 +76,11 @@ Note that ISBN and ISSN always show the text, prefixed with ISBN or ISSN.
 
 Values: 1 or 0
 
-<span class="smallblock">DEFAULT</span>: 0</p>
-<p class="manual_param_dt"><span class="parameter">size</span></p>
-<p class="manual_param_dd">Specifies the size of the barcode.
+<span class="smallblock">DEFAULT</span>: 0
+
+<span class="parameter">size</span>
+
+Specifies the size of the barcode.
 
 <span class="parameter">size (float)</span> will scale the nominal size of the barcode as a factor of 1
 
@@ -77,9 +88,11 @@ Values: 1 or 0
 
 NB Sizes between 0.8 and 2.0 are recommended for EAN13 and similar barcodes.
 
-<span class="smallblock">DEFAULT</span>: 1</p>
-<p class="manual_param_dt"><span class="parameter">height</span></p>
-<p class="manual_param_dd">Specifies the height of the barcode.
+<span class="smallblock">DEFAULT</span>: 1
+
+<span class="parameter">height</span>
+
+Specifies the height of the barcode.
 
 <span class="parameter">height (float)</span> will determine the relative height of the barcode as a factor of 1
 
@@ -89,13 +102,15 @@ The height factor is applied after the <span class="parameter">size </span>
 
 NB Ignored for Postcode barcodes
 
-<span class="smallblock">DEFAULT</span>: 1<span class="smallblock"></span></p>
-<p class="manual_param_dt"><span class="parameter">pr</span></p>
-<p class="manual_param_dd">Specifies the print ratio i.e. narrow:wide bar width for some types of barcode.
+<span class="smallblock">DEFAULT</span>: 1<span class="smallblock"></span>
+
+<span class="parameter">pr</span>
+
+Specifies the print ratio i.e. narrow:wide bar width for some types of barcode.
 
 Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODABAR and CODE11
 
-<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>)</p>
+<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>)
 
 # Changelog
 
@@ -225,6 +240,8 @@ exit;
 
 </li>
 </ul>
-<p><span class="jslink">
 
-</span></p>
+<span class="jslink">
+
+</span>
+

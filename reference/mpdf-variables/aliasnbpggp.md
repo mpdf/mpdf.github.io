@@ -6,9 +6,11 @@ permalink: /reference/mpdf-variables/aliasnbpggp.html
 modification_time: 2015-08-05T12:01:34+00:00
 ---
 
-<p>Variable which defines the text to be replaced by the total page number in the page group.</p>
-<p>Default = {nbpg}</p>
-<p>You can assign this value directly, or use the function: <a href="{{ "/reference/mpdf-functions/aliasnbpagegroups.html" | prepend: site.baseurl }}">AliasNbPageGroups()</a>&nbsp;</p>
+Variable which defines the text to be replaced by the total page number in the page group.
+
+Default = {nbpg}
+
+You can assign this value directly, or use the function: <a href="{{ "/reference/mpdf-functions/aliasnbpagegroups.html" | prepend: site.baseurl }}">AliasNbPageGroups()</a>&nbsp;
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This variable originally started with an uppercase letter (&lt;= mPDF 2.2). Support for the uppercase version was removed in mPDF &gt;= 6.0</div>
 

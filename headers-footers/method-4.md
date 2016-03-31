@@ -6,11 +6,13 @@ permalink: /headers-footers/method-4.html
 modification_time: 2015-08-05T11:59:51+00:00
 ---
 
-<p>This uses <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers &amp; footers. This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the headers/footers at any time during the document.</p>
-<p>Note that <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.</p>
+This uses <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers &amp; footers. This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the headers/footers at any time during the document.
+
+Note that <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
-<p class="manual_block"><b>Note:&nbsp;</b><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>, <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>, &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; and <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> can reference both HTML and NON-HTML headers/footers. When referring to an HTML header/footer you must add the prefix 'html_' to distinguish them.</p>
+
+<b>Note:&nbsp;</b><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>, <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>, &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; and <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> can reference both HTML and NON-HTML headers/footers. When referring to an HTML header/footer you must add the prefix 'html_' to distinguish them.
 
 # Defining NAMED HTML Headers/Footers
 
@@ -88,7 +90,8 @@ $html = '
 
 # Referencing a Header/Footer by NAME
 
-<p>Once you have defined <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers/footers for your document, you can reference them using:</p>
+Once you have defined <span class="smallblock">NAMED</span> <span class="smallblock">HTML</span> headers/footers for your document, you can reference them using:
+
 <ul>
 <li>Methods for <span class="smallblock">HTML</span> headers/footers only - <b>Recommended</b> when setting the first page header/footer at the start of a document (although they can also be used to change headers/footers during the document).
 <ul>
@@ -128,7 +131,7 @@ $html = '
 
 # Setting a named HTML header at the start of a document
 
-<p>When using a <span class="smallblock">NAMED</span> header on the first page, remember that mPDF writes the header as the first page is started. This is usually when you first use WriteHTML() which automatically triggers an AddPage().</p>
+When using a <span class="smallblock">NAMED</span> header on the first page, remember that mPDF writes the header as the first page is started. This is usually when you first use WriteHTML() which automatically triggers an AddPage().
 
 {% highlight php %}
 Example #3 - SetHTMLHeaderByName()
@@ -148,7 +151,7 @@ $mpdf->WriteHTML('Document text');
 $mpdf->Output();
 {% endhighlight %}
 
-<p>In this example using custom HTML tags to set the <span class="smallblock">HTML</span> header, notice that &lt;sethtmlpageheader&gt; has <span class="parameter">show-this-page</span> = 1. This is because as soon as you call WriteHTML(), mPDF has added the first page, so this fixes the problem by forcing the header to show on the first page:</p>
+In this example using custom HTML tags to set the <span class="smallblock">HTML</span> header, notice that &lt;sethtmlpageheader&gt; has <span class="parameter">show-this-page</span> = 1. This is because as soon as you call WriteHTML(), mPDF has added the first page, so this fixes the problem by forcing the header to show on the first page:
 
 {% highlight php %}
 Example #4 - <sethtmlpageheader>
@@ -345,7 +348,8 @@ $mpdf->WriteHTML('Document text with No Headers/Footers');
 {% endhighlight %}
 
 {% highlight php %}
-Example #7 - <pagebreak>
+Example #7 - 
+
 {% endhighlight %}
 
 {% highlight php %}
@@ -353,9 +357,7 @@ Example #7 - <pagebreak>
 
 $html = '
 
-<p>Document text</p>
-
-<pagebreak odd-header-name="html_MyHeader2" odd-header-value="on" odd-footer-name="html_MyFooter2" odd-footer-value="on" />
+<p>Document text
 
 <p>Text of Chapter 2/p>
 
@@ -405,11 +407,11 @@ $html = '
 
 <!-- Define HTML headers etc  here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 'MyHeader2', 'MyFooter2' (as Example #2) -->
 
-<p>Introduction: Here starts the document</p>
+<p>Introduction: Here starts the document
 
 <tocpagebreak toc-odd-header-name='html_MyTOCHeader' toc-odd-footer-name='html_MyTOCFooter' toc-odd-header-value="1" toc-odd-footer-value="1"odd-header-name='html_MyHeader2' odd-header-value="1"  odd-footer-name='html_MyFooter2' odd-footer-value="1" />
 
-<p>Text of Chapter 2... </p>
+Text of Chapter 2... 
 
 ';
 

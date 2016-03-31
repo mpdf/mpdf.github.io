@@ -6,7 +6,7 @@ permalink: /real-life-examples/a5-booklet.html
 modification_time: 2015-08-05T12:00:26+00:00
 ---
 
-<p>This script was written to create a new PDF file based on a pre-existing PDF document, converting an A4 document into an A5 booklet ready for duplex printing. Page order is adjusted, and page orientation is rotated so that it prints a landscape booklet.</p>
+This script was written to create a new PDF file based on a pre-existing PDF document, converting an A4 document into an A5 booklet ready for duplex printing. Page order is adjusted, and page orientation is rotated so that it prints a landscape booklet.
 
 {% highlight php %}
 <?php

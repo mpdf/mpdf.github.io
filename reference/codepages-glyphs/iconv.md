@@ -6,8 +6,10 @@ permalink: /reference/codepages-glyphs/iconv.html
 modification_time: 2015-08-05T12:02:59+00:00
 ---
 
-<p>The following codepages are supported by the iconv function:</p>
-<p>European languages</p>
+The following codepages are supported by the iconv function:
+
+European languages
+
 <ul>
 <li>ASCII</li>
 <li>ISO-8859-{1,2,3,4,5,7,9,10,13,14,15,16}</li>
@@ -18,54 +20,78 @@ modification_time: 2015-08-05T12:02:59+00:00
 <li>Mac{Cyrillic,Ukraine,Greek,Turkish}</li>
 <li> Macintosh</li>
 </ul>
-<p>Semitic languages</p>
+
+Semitic languages
+
 <ul>
 <li>ISO-8859-{6,8}</li>
 <li>CP{1255,1256}</li>
 <li>CP862</li>
 <li>Mac{Hebrew,Arabic}</li>
 </ul>
-<p>Japanese</p>
+
+Japanese
+
 <ul>
 <li>EUC-JP, SHIFT_JIS, CP932, ISO-2022-JP, ISO-2022-JP-2, ISO-2022-JP-1</li>
 </ul>
-<p>Chinese</p>
+
+Chinese
+
 <ul>
 <li>EUC-CN, HZ, GBK, GB18030, EUC-TW, BIG5, CP950, BIG5-HKSCS, ISO-2022-CN, ISO-2022-CN-EXT</li>
 </ul>
-<p>Korean</p>
+
+Korean
+
 <ul>
 <li>EUC-KR, CP949, ISO-2022-KR, JOHAB</li>
 </ul>
-<p>Armenian</p>
+
+Armenian
+
 <ul>
 <li>ARMSCII-8</li>
 </ul>
-<p>Georgian</p>
+
+Georgian
+
 <ul>
 <li>Georgian-Academy, Georgian-PS</li>
 </ul>
-<p>Tajik</p>
+
+Tajik
+
 <ul>
 <li>KOI8-T</li>
 </ul>
-<p>Thai</p>
+
+Thai
+
 <ul>
 <li>TIS-620, CP874, MacThai</li>
 </ul>
-<p>Laotian</p>
+
+Laotian
+
 <ul>
 <li>MuleLao-1, CP1133</li>
 </ul>
-<p>Vietnamese</p>
+
+Vietnamese
+
 <ul>
 <li>VISCII, TCVN, CP1258</li>
 </ul>
-<p>Platform specifics</p>
+
+Platform specifics
+
 <ul>
 <li>HP-ROMAN8, NEXTSTEP</li>
 </ul>
-<p>Full Unicode</p>
+
+Full Unicode
+
 <ul>
 <li>UTF-8</li>
 <li>UCS-2, UCS-2BE, UCS-2LE</li>
@@ -75,5 +101,5 @@ modification_time: 2015-08-05T12:02:59+00:00
 <li>UTF-7</li>
 </ul>
 
-<p>See <a href="http://www.gnu.org/software/libiconv/">http://www.gnu.org/software/libiconv/</a></p>
+See <a href="http://www.gnu.org/software/libiconv/">http://www.gnu.org/software/libiconv/</a>
 

@@ -6,21 +6,23 @@ permalink: /reference/mpdf-variables/usekerning.html
 modification_time: 2015-08-05T12:02:37+00:00
 ---
 
-<p>(mPDF &gt;= 5.4)</p>
+(mPDF &gt;= 5.4)
 
 # Description
 
-<p class="manual_block">boolean <b>useKerning</b></p>
-<p>When <span class="smallblock">TRUE</span>, mPDF will support the CSS style <span class="parameter">font-kerning</span>. This should only be set to <span class="smallblock">TRUE</span> when required to conserve memory and processing time.</p>
+boolean <b>useKerning</b>
+
+When <span class="smallblock">TRUE</span>, mPDF will support the CSS style <span class="parameter">font-kerning</span>. This should only be set to <span class="smallblock">TRUE</span> when required to conserve memory and processing time.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">useKerning</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">useKerning</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE</span>: Enable support for CSS style <span class="parameter">font-kerning</span>
 
-<span class="smallblock"><i>FALSE</i></span>: <span class="smallblock">DEFAULT</span></p>
+<span class="smallblock"><i>FALSE</i></span>: <span class="smallblock">DEFAULT</span>
 
 # See Also
 

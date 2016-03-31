@@ -6,7 +6,8 @@ permalink: /reference/codepages-glyphs/iso-8859-win-comparison-chart.html
 modification_time: 2015-08-05T12:02:48+00:00
 ---
 
-<p>ISO-8859 codepages</p>
+ISO-8859 codepages
+
 <table class="table"><tbody>
 <tr><th>Dec</th><th>Hex</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>13</th><th>14</th><th>15</th><th>16</th></tr>
 <tr><th>160</th><th>A0</th>
@@ -2459,8 +2460,13 @@ F−
 
 # See Also
 
-<p>UNICODE Full list characters</p>
-<p><a href="http://www.unicode.org/Public/UNIDATA/UnicodeData.txt">http://www.unicode.org/Public/UNIDATA/UnicodeData.txt</a></p>
-<p>Mappings - sources</p>
-<p><a href="http://www-950.ibm.com/software/globalization/icu/demo/converters?s=ALL">http://www-950.ibm.com/software/globalization/icu/demo/converters?s=ALL</a></p>
-<p><a href="http://www.unicode.org/Public/MAPPINGS/VENDORS/">http://www.unicode.org/Public/MAPPINGS/VENDORS/</a></p>
+UNICODE Full list characters
+
+<a href="http://www.unicode.org/Public/UNIDATA/UnicodeData.txt">http://www.unicode.org/Public/UNIDATA/UnicodeData.txt</a>
+
+Mappings - sources
+
+<a href="http://www-950.ibm.com/software/globalization/icu/demo/converters?s=ALL">http://www-950.ibm.com/software/globalization/icu/demo/converters?s=ALL</a>
+
+<a href="http://www.unicode.org/Public/MAPPINGS/VENDORS/">http://www.unicode.org/Public/MAPPINGS/VENDORS/</a>
+

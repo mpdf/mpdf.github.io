@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/keep-table-proportions.html
 modification_time: 2015-08-05T12:02:06+00:00
 ---
 
-<p>If table width is set, and is &gt; page width, setting this value to true forces the table to keep relative sizes when resizing.</p>
-<p>
+If table width is set, and is &gt; page width, setting this value to true forces the table to keep relative sizes when resizing.
 
-It also forces respect of cell widths set by %</p>
+It also forces respect of cell widths set by %
+

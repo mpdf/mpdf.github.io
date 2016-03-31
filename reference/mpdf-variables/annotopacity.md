@@ -6,9 +6,11 @@ permalink: /reference/mpdf-variables/annotopacity.html
 modification_time: 2015-08-05T12:01:38+00:00
 ---
 
-<p>float $annotOpacity = 0.5;&nbsp;&nbsp;&nbsp; // default Opacity for Annotations;</p>
-<p>Value &gt;0 - &lt;= 1</p>
-<p>Suggest 0.5 if using in-line with text, or 1 if using in the margins (with annotMargin &lt;&gt; 0)</p>
+float $annotOpacity = 0.5;&nbsp;&nbsp;&nbsp; // default Opacity for Annotations;
+
+Value &gt;0 - &lt;= 1
+
+Suggest 0.5 if using in-line with text, or 1 if using in the margins (with annotMargin &lt;&gt; 0)
 
 # See Also
 

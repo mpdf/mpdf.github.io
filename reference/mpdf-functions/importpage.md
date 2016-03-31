@@ -6,43 +6,55 @@ permalink: /reference/mpdf-functions/importpage.html
 modification_time: 2015-08-05T12:00:47+00:00
 ---
 
-<p>(mPDF &gt;= 2.3)</p>
-<p>ImportPage – Import a page from an external PDF file</p>
+(mPDF &gt;= 2.3)
+
+ImportPage – Import a page from an external PDF file
 
 # Description
 
-<p class="manual_block">int <b>ImportPage</b> ( int <span class="parameter">$pageno</span> [, float <span class="parameter">$crop_x</span> [, float <span class="parameter">$crop_y</span> [, float <span class="parameter">$crop_w</span> [, float <span class="parameter">$crop_h</span> [, string <span class="parameter">$boxname</span> ]]]]])</p>
-<p>Import a page, or part of a page, from an external PDF file. The external source file must first be set with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template' is created in mPDF which stores the image of this page, ready to insert into the document.</p>
+int <b>ImportPage</b> ( int <span class="parameter">$pageno</span> [, float <span class="parameter">$crop_x</span> [, float <span class="parameter">$crop_y</span> [, float <span class="parameter">$crop_w</span> [, float <span class="parameter">$crop_h</span> [, string <span class="parameter">$boxname</span> ]]]]])
+
+Import a page, or part of a page, from an external PDF file. The external source file must first be set with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template' is created in mPDF which stores the image of this page, ready to insert into the document.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">pageno</span></p>
-<p class="manual_param_dd">This parameter specifies the page number from the source PDF file to import.&nbsp; <span class="parameter">pageno</span> should be a positive integer value.
+<span class="parameter">pageno</span>
 
-<span class="smallblock">DEFAULT</span>: 1</p>
-<p class="manual_param_dt"><span class="parameter">crop_x</span></p>
-<p class="manual_param_dd">Specifies the x-coordinate (abscissa) for the page of the source PDF file, when importing a 'cropped' page into the template. Value in millimetres.
+This parameter specifies the page number from the source PDF file to import.&nbsp; <span class="parameter">pageno</span> should be a positive integer value.
 
-<span class="smallblock">DEFAULT</span>: 0</p>
-<p class="manual_param_dt"><span class="parameter">crop_y</span></p>
-<p class="manual_param_dd">Specifies the y-coordinate (ordinate) for the page of the source PDF file, when importing a 'cropped' page into the template. Value in millimetres.
+<span class="smallblock">DEFAULT</span>: 1
 
-<span class="smallblock">DEFAULT</span>: 0</p>
-<p class="manual_param_dt"><span class="parameter">crop_w</span></p>
-<p class="manual_param_dd">Specifies the width in millimetres when importing a 'cropped' page into the template.
+<span class="parameter">crop_x</span>
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page width from the source file</p>
+Specifies the x-coordinate (abscissa) for the page of the source PDF file, when importing a 'cropped' page into the template. Value in millimetres.
 
-<p class="manual_param_dt"><span class="parameter">crop_h</span></p>
-<p class="manual_param_dd">Specifies the height in millimetres when importing a 'cropped' page into the template.
+<span class="smallblock">DEFAULT</span>: 0
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page height from the source file</p>
-<p class="manual_param_dt"><span class="parameter">boxname</span></p>
-<p class="manual_param_dd"><span class="parameter">boxname</span> is currently not used.</p>
+<span class="parameter">crop_y</span>
+
+Specifies the y-coordinate (ordinate) for the page of the source PDF file, when importing a 'cropped' page into the template. Value in millimetres.
+
+<span class="smallblock">DEFAULT</span>: 0
+
+<span class="parameter">crop_w</span>
+
+Specifies the width in millimetres when importing a 'cropped' page into the template.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page width from the source file
+
+<span class="parameter">crop_h</span>
+
+Specifies the height in millimetres when importing a 'cropped' page into the template.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page height from the source file
+
+<span class="parameter">boxname</span>
+
+<span class="parameter">boxname</span> is currently not used.
 
 # Return Value
 
-<p class="manual_param_dd"><b>ImportPage()</b> returns an ID for the template which it has created. This ID can be used at any time to insert the template into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a></p>
+<b>ImportPage()</b> returns an ID for the template which it has created. This ID can be used at any time to insert the template into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a>
 
 # Changelog
 

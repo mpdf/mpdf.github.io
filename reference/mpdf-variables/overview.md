@@ -8,7 +8,7 @@ modification_time: 2015-08-05T12:01:32+00:00
 
 # mPDF Variables by Category
 
-<p>Most of the following variables are set as defaults in the configuration file config.php&nbsp; When set there, they are written as e.g.:</p>
+Most of the following variables are set as defaults in the configuration file config.php&nbsp; When set there, they are written as e.g.:
 
 {% highlight php %}
 <?php
@@ -16,7 +16,7 @@ modification_time: 2015-08-05T12:01:32+00:00
 $this->variablename = true;
 {% endhighlight %}
 
-<p>Alternatively you can redefine the variable in individual scripts; here it will be written as e.g. (assuming your class object is "mpdf"):</p>
+Alternatively you can redefine the variable in individual scripts; here it will be written as e.g. (assuming your class object is "mpdf"):
 
 {% highlight php %}
 <?php
@@ -49,7 +49,9 @@ $mpdf->variablename = true;
 <tr>
 <td>&nbsp;</td>
 <td>
-<p>restoreBlockPagebreaks</p>
+
+restoreBlockPagebreaks
+
 </td>
 <td><span class="smallblock">FALSE</span></td>
 <td>&nbsp;</td>
@@ -164,7 +166,9 @@ $mpdf->variablename = true;
 </tr>
 <tr>
 <td>
-<p>Page numbering</p>
+
+Page numbering
+
 </td>
 <td><a href="{{ "/reference/mpdf-variables/aliasnbpg.html" | prepend: site.baseurl }}">aliasNbPg</a></td>
 <td>"{nb}"</td>
@@ -301,7 +305,9 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 <tr>
 <td>&nbsp;</td>
 <td>
-<p>autoFontGroupSize</p>
+
+autoFontGroupSize
+
 </td>
 <td>2</td>
 <td>&nbsp;</td>
@@ -317,8 +323,11 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 <td>&nbsp;</td>
 <td>2.3</td>
 <td>
-<p>Default value <span class="smallblock">FALSE</span> before v4.0</p>
-<p>Removed in v6.0</p>
+
+Default value <span class="smallblock">FALSE</span> before v4.0
+
+Removed in v6.0
+
 </td>
 </tr>
 <tr>
@@ -328,7 +337,9 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>6.0</td>
 <td>
-<p>Replaces SetAutoFont function</p>
+
+Replaces SetAutoFont function
+
 </td>
 </tr>
 <tr>
@@ -338,7 +349,9 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>6.0</td>
 <td>
-<p>Replaces useLang</p>
+
+Replaces useLang
+
 </td>
 </tr>
 <tr>
@@ -428,9 +441,13 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 
 </td>
 <td>
-<p>Removed mPDF 5.0 - Use</p>
-<p><code>$mpdf=new mPDF('c');</code></p>
-<p>The alias <span class="parameter">use_embeddedfonts_1252</span> was used before v4.0</p>
+
+Removed mPDF 5.0 - Use
+
+<code>$mpdf=new mPDF('c');</code>
+
+The alias <span class="parameter">use_embeddedfonts_1252</span> was used before v4.0
+
 </td>
 </tr>
 <tr>
@@ -448,8 +465,11 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 <td>&nbsp;</td>
 <td>(4.0)</td>
 <td>
-<p>NB Altered behaviour mPDF &gt;= 5.0</p>
-<p>Default value <span class="smallblock">TRUE</span> before v4.0</p>
+
+NB Altered behaviour mPDF &gt;= 5.0
+
+Default value <span class="smallblock">TRUE</span> before v4.0
+
 </td>
 </tr>
 <tr>
@@ -459,9 +479,13 @@ Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</
 <td>&nbsp;</td>
 <td>4.2</td>
 <td>
-<p>Removed in mPDF 5.0</p>
-<p>Use useSusbstitutions instead.</p>
-<p>Substitute missing characters in UTF-8(multibyte) documents - from core fonts</p>
+
+Removed in mPDF 5.0
+
+Use useSusbstitutions instead.
+
+Substitute missing characters in UTF-8(multibyte) documents - from core fonts
+
 </td>
 </tr>
 <tr>
@@ -727,7 +751,9 @@ Colorspaces
 <tr>
 <td>&nbsp;</td>
 <td>
-<p>useDefaultCSS2</p>
+
+useDefaultCSS2
+
 </td>
 <td>&nbsp;</td>
 <td><span class="smallblock">DOCUMENT</span></td>
@@ -1057,7 +1083,9 @@ Colorspaces
 <tr>
 <td>&nbsp;</td>
 <td>
-<p><a href="{{ "/reference/mpdf-variables/tabspaces.html" | prepend: site.baseurl }}">tabSpaces</a></p>
+
+<a href="{{ "/reference/mpdf-variables/tabspaces.html" | prepend: site.baseurl }}">tabSpaces</a>
+
 </td>
 <td>8</td>
 <td>&nbsp;</td>
@@ -1263,4 +1291,6 @@ Colorspaces
 <td>Specify appearance of Bookmarks in PDF reader</td>
 </tr>
 </tbody> </table>
-<p>[1] Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of the document. All others can be changed during the course of creating the document.</p>
+
+[1] Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of the document. All others can be changed during the course of creating the document.
+

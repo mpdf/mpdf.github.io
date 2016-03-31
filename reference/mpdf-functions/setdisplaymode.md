@@ -6,19 +6,23 @@ permalink: /reference/mpdf-functions/setdisplaymode.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>SetDisplayMode – Specify the initial Display Mode when the PDF file is opened in Adobe Reader</p>
+(mPDF &gt;= 1.0)
+
+SetDisplayMode – Specify the initial Display Mode when the PDF file is opened in Adobe Reader
 
 # Description
 
-<p class="manual_block">void <b>SetDisplayMode</b> ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])</p>
-<p>Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.</p>
+void <b>SetDisplayMode</b> ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])
+
+Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">zoom</span></p>
-<p class="manual_param_dd">This parameter specifies the magnification (zoom) of the display when the document is opened.</p>
-<p class="manual_param_dd"><b>Values</b> (case-sensitive)
+<span class="parameter">zoom</span>
+
+This parameter specifies the magnification (zoom) of the display when the document is opened.
+
+<b>Values</b> (case-sensitive)
 
 fullpage: Fit a whole page in the screen
 
@@ -28,12 +32,15 @@ real: Display at real size
 
 default: User's default setting in Adobe Reader
 
-<span class="smallblock">INTEGER</span> : Display at a percentage zoom (e.g. 90 will display at 90% zoom)</p>
-<p class="manual_param_dt"><span class="parameter">layout</span></p>
-<p class="manual_param_dd">Specify the page layout to be used when the document is opened.
+<span class="smallblock">INTEGER</span> : Display at a percentage zoom (e.g. 90 will display at 90% zoom)
 
-<span class="smallblock">DEFAULT</span>: "continuous"</p>
-<p class="manual_param_dd"><b>Values</b> (case-sensitive)
+<span class="parameter">layout</span>
+
+Specify the page layout to be used when the document is opened.
+
+<span class="smallblock">DEFAULT</span>: "continuous"
+
+<b>Values</b> (case-sensitive)
 
 single: Display one page at a time
 
@@ -45,7 +52,7 @@ twoleft: Display the pages in two columns, with the first page displayed on the 
 
 tworight: Display the pages in two columns, with the first page displayed on the right side (mPDF &gt;= 5.2)
 
-default: User's default setting in Adobe Reader</p>
+default: User's default setting in Adobe Reader
 
 # Examples
 
@@ -60,7 +67,9 @@ $mpdf=new mPDF();
 
 $mpdf->SetDisplayMode('fullwidth');
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->Output('filename.pdf');
 
@@ -91,7 +100,9 @@ $mpdf->SetDisplayMode('fullpage','two');
 <tr>
 <td>1.0</td>
 <td>
-<p>Function was added.</p>
+
+Function was added.
+
 </td>
 </tr>
 <tr>

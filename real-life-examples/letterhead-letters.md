@@ -6,7 +6,7 @@ permalink: /real-life-examples/letterhead-letters.html
 modification_time: 2015-08-05T12:00:28+00:00
 ---
 
-<p>Using the CSS @page selector, these are a couple of similar methods for producing multiple letters into 1 PDF file, where each letter uses a letterhead for page one then plain paper for the remaining pages.</p>
+Using the CSS @page selector, these are a couple of similar methods for producing multiple letters into 1 PDF file, where each letter uses a letterhead for page one then plain paper for the remaining pages.
 
 ## Method 1
 
@@ -116,8 +116,6 @@ background-color: lightblue;
 $letter = 'Dear Sir or Madam,<br />
 
 Contents of your letter...
-
-<pagebreak />
 
 ... more letter on page 2 ...
 
@@ -284,4 +282,3 @@ $mpdf->Output();
 
 <p>
 
-</p>

@@ -6,11 +6,15 @@ permalink: /what-else-can-i-do/table-of-contents.html
 modification_time: 2015-08-05T12:00:15+00:00
 ---
 
-<p>You can insert one or more tables of contents in the document using HTML or PHP code - see:</p>
-<p><a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; will insert a Table of Contents (ToC) at the current position.</p>
-<p><a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">tocentry</a>&gt; can be used to mark entries for the <acronym title="Table of Contents">ToC</acronym> .</p>
-<p>From mPDF &gt;= 5.7, CSS styles can be used to control layout of the ToC.</p>
-<p>At the end of the document, the ToC is generated, creating HTML code (internally) which looks like this:</p>
+You can insert one or more tables of contents in the document using HTML or PHP code - see:
+
+<a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; will insert a Table of Contents (ToC) at the current position.
+
+<a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">tocentry</a>&gt; can be used to mark entries for the <acronym title="Table of Contents">ToC</acronym> .
+
+From mPDF &gt;= 5.7, CSS styles can be used to control layout of the ToC.
+
+At the end of the document, the ToC is generated, creating HTML code (internally) which looks like this:
 
 {% highlight php %}
 <div class="mpdf_toc" id="mpdf_toc_0">
@@ -48,8 +52,9 @@ modification_time: 2015-08-05T12:00:15+00:00
 </div>
 {% endhighlight %}
 
-<p>The id is "0" for root/un-named ToC; otherwise it is lowercase of the name="" used for the ToC</p>
-<p>An example CSS stylesheet for this:</p>
+The id is "0" for root/un-named ToC; otherwise it is lowercase of the name="" used for the ToC
+
+An example CSS stylesheet for this:
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF v 6.0 this example stylesheet for ToCs was added to the file <span class="filename">mpdf.css</span> which is read by default as a secondary default CSS stylesheet</div>
 
@@ -101,7 +106,7 @@ span.mpdf_toc_t_level_2 {}
 span.mpdf_toc_p_level_2 {}
 {% endhighlight %}
 
-<p>For additional ToCs, these will have &lt;toc name=""&gt; attribute. Use the lowercase e.g. for name="Figures"</p>
+For additional ToCs, these will have &lt;toc name=""&gt; attribute. Use the lowercase e.g. for name="Figures"
 
 {% highlight php %}
 #mpdf_toc_figures {font-family:Calibri; font-size: 10pt;}
@@ -113,10 +118,13 @@ span.mpdf_toc_p_level_2 {}
 
 ## Automatically Generated ToC entries
 
-<p>You can automatically generate ToC entries from h1 - h6 tags, by setting the variable <a href="{{ "/reference/mpdf-variables/h2toc.html" | prepend: site.baseurl }}"><code>h2toc</code></a>.</p>
-<p>Only the default ToC will be used if more than 1 ToCs are defined for the document.</p>
-<p>H1 - H6 must be written with uppercase when defining the array.</p>
-<p>Example:</p>
+You can automatically generate ToC entries from h1 - h6 tags, by setting the variable <a href="{{ "/reference/mpdf-variables/h2toc.html" | prepend: site.baseurl }}"><code>h2toc</code></a>.
+
+Only the default ToC will be used if more than 1 ToCs are defined for the document.
+
+H1 - H6 must be written with uppercase when defining the array.
+
+Example:
 
 {% highlight php %}
 <?php
@@ -124,4 +132,5 @@ span.mpdf_toc_p_level_2 {}
 $mpdf->h2toc = array('H1'=>0, 'H2'=>1, 'H3'=>2);
 {% endhighlight %}
 
-<p>NB This will ignores calls from inside ToC e.g. if &lt;tocpagebreak toc-prehtml="&lt;h3&gt;Table of Contents&lt;/h3&gt;" and H3 is set to auto-generate a ToC entry - these will be ignored.</p>
+NB This will ignores calls from inside ToC e.g. if &lt;tocpagebreak toc-prehtml="&lt;h3&gt;Table of Contents&lt;/h3&gt;" and H3 is set to auto-generate a ToC entry - these will be ignored.
+

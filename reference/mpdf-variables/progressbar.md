@@ -6,13 +6,15 @@ permalink: /reference/mpdf-variables/progressbar.html
 modification_time: 2015-08-05T12:02:22+00:00
 ---
 
-<p>(mPDF &gt;= 4.2)</p>
-<p>progressBar –Specify whether to show progress bars during file generation</p>
+(mPDF &gt;= 4.2)
+
+progressBar –Specify whether to show progress bars during file generation
 
 # Description
 
-<p class="manual_block">void <b>progressBar</b></p>
-<p>Specify whether to show progress bars during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation.</p>
+void <b>progressBar</b>
+
+Specify whether to show progress bars during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> You should only change this variable in the configuration file <span class="filename">config.php</span>&nbsp; If you want to set this at runtime, use <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
 
@@ -20,8 +22,9 @@ modification_time: 2015-08-05T12:02:22+00:00
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">progressBar</span> =&nbsp;&nbsp;<span class="smallblock"> </span>2 | 1 | <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">progressBar</span> =&nbsp;&nbsp;<span class="smallblock"> </span>2 | 1 | <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 2: display multiple progress bars for detailed examination of progress
 
@@ -29,7 +32,7 @@ modification_time: 2015-08-05T12:02:22+00:00
 
 <span class="smallblock">FALSE</span>: disable progress bars
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 # Changelog
 

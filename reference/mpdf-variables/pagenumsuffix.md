@@ -6,12 +6,13 @@ permalink: /reference/mpdf-variables/pagenumsuffix.html
 modification_time: 2015-08-05T12:02:17+00:00
 ---
 
-<p>(mPDF &gt;= 3.0)</p>
+(mPDF &gt;= 3.0)
 
 # Description
 
-<p class="manual_block">string <b>pagenumSuffix</b></p>
-<p>Specify text to follow the page number when using {PAGENO} to insert page numbers in headers or footers.</p>
+string <b>pagenumSuffix</b>
+
+Specify text to follow the page number when using {PAGENO} to insert page numbers in headers or footers.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This is only recommended in non-HTML headers and footers. Although the text is added correctly in HTML headers &amp; footers, the text alignment is not readjusted after substitution e.g. if it used in the right margin.</div>
 

@@ -6,18 +6,19 @@ permalink: /reference/mpdf-variables/progbar-althtml.html
 modification_time: 2015-08-05T12:02:21+00:00
 ---
 
-<p>mPDF &gt;= 5.0
+mPDF &gt;= 5.0
 
 Customisable Progress bar
 
 Default set in config.php
 
-Default value: ''</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp; // e.g. '&lt;html&gt;&lt;body&gt;Creating PDF file. Please wait...';
+Default value: ''
+
+&nbsp;&nbsp;&nbsp;&nbsp; // e.g. '&lt;html&gt;&lt;body&gt;Creating PDF file. Please wait...';
 
 &nbsp;&nbsp;&nbsp; // Should include &lt;html&gt; and &lt;body&gt; but NOT end tags
 
-&nbsp;&nbsp;&nbsp; // Can incude &lt;head&gt; and link to stylesheet etc.</p>
+&nbsp;&nbsp;&nbsp; // Can incude &lt;head&gt; and link to stylesheet etc.
 
 # See Also
 

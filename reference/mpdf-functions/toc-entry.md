@@ -6,13 +6,15 @@ permalink: /reference/mpdf-functions/toc-entry.html
 modification_time: 2015-08-05T12:01:13+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>TOC_Entry – Insert an entry for the Table of Contents</p>
+(mPDF &gt;= 1.0)
+
+TOC_Entry – Insert an entry for the Table of Contents
 
 # Description
 
-<p class="manual_block">void <b>TOC_Entry</b> ( string <span class="parameter">$content</span> [, int <span class="parameter">$level</span> [, string <span class="parameter">$name</span> ]])</p>
-<p>Insert an entry for the Table of Contents referencing the current writing position in the document.</p>
+void <b>TOC_Entry</b> ( string <span class="parameter">$content</span> [, int <span class="parameter">$level</span> [, string <span class="parameter">$name</span> ]])
+
+Insert an entry for the Table of Contents referencing the current writing position in the document.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The position for the Table of Contents must be specified using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 
@@ -20,27 +22,33 @@ modification_time: 2015-08-05T12:01:13+00:00
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">content</span></p>
-<p class="manual_param_dd">This parameter sets the text as it will appear in the ToC entry. 
+<span class="parameter">content</span>
+
+This parameter sets the text as it will appear in the ToC entry. 
 
 <span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;annotation content="This is &amp;lt; 40" /&gt;
 
 It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
-<span class="smallblock">REQUIRED</span></p>
-<p class="manual_param_dt"><span class="parameter">level</span></p>
-<p class="manual_param_dd">Specify the level of this entry i.e. like heading1,2,3 
+<span class="smallblock">REQUIRED</span>
+
+<span class="parameter">level</span>
+
+Specify the level of this entry i.e. like heading1,2,3 
 
 Starts at level 0
 
-<span class="smallblock">DEFAULT</span>: 0</p>
-<p class="manual_param_dt"><span class="parameter">name</span></p>
-<p class="manual_param_dd">Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry, if using more than one <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">name</span> can be any alphanumeric characters (except just "0") and is case-insensitive.
+<span class="smallblock">DEFAULT</span>: 0
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the default <acronym title="Table of Contents">ToC</acronym>.</p>
-<p class="manual_param_dd"><b>Values</b> (case-insensitive)
+<span class="parameter">name</span>
 
-"ALL" will add this entry to every ToC active in the document.</p>
+Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry, if using more than one <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">name</span> can be any alphanumeric characters (except just "0") and is case-insensitive.
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the default <acronym title="Table of Contents">ToC</acronym>.
+
+<b>Values</b> (case-insensitive)
+
+"ALL" will add this entry to every ToC active in the document.
 
 # Changelog
 

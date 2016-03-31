@@ -6,7 +6,7 @@ permalink: /real-life-examples/e-mail-a-pdf-file.html
 modification_time: 2015-08-05T12:00:26+00:00
 ---
 
-<p>This example shows how to create a PDF file and e-mail it:</p>
+This example shows how to create a PDF file and e-mail it:
 
 {% highlight php %}
 <?php

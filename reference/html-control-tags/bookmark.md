@@ -6,28 +6,33 @@ permalink: /reference/html-control-tags/bookmark.html
 modification_time: 2015-08-05T12:01:20+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>bookmark – Add a Bookmark to the document</p>
+(mPDF &gt;= 1.0)
+
+bookmark – Add a Bookmark to the document
 
 # Description
 
-<p class="manual_block">&lt;<b>bookmark</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">level</span> ] /&gt;</p>
-<p>Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.</p>
+&lt;<b>bookmark</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">level</span> ] /&gt;
+
+Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
 
 # Attributes
 
-<p class="manual_param_dt"><span class="parameter">content</span></p>
-<p class="manual_param_dd">Specifies the text to appear as a Bookmark.
+<span class="parameter">content</span>
+
+Specifies the text to appear as a Bookmark.
 
 <span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;bookmark content="&amp;lt; 40" /&gt;
 
-It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.</p>
-<p class="manual_param_dt"><span class="parameter">level</span></p>
-<p class="manual_param_dd"><span class="parameter">level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 below. Accepts an integer from 0 to the maximum depth you wish.
+It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
-<span class="smallblock">DEFAULT</span>: 0</p>
+<span class="parameter">level</span>
+
+<span class="parameter">level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 below. Accepts an integer from 0 to the maximum depth you wish.
+
+<span class="smallblock">DEFAULT</span>: 0
 
 # Examples
 
@@ -94,19 +99,19 @@ This will produce a Bookmark tree in Adobe Reader:
 
 ## Recommended placement
 
-<p>Recommended placement of Bookmarks is just after the first word following the opening tag of the block element:</p>
+Recommended placement of Bookmarks is just after the first word following the opening tag of the block element:
 
 {% highlight php %}
 <h2>First<bookmark... /> word of a heading or block</h2>
 {% endhighlight %}
 
-<p>or alternatively just after the opening tag of the block element:</p>
+or alternatively just after the opening tag of the block element:
 
 {% highlight php %}
 <h2><bookmark... />Heading or block</h2>
 {% endhighlight %}
 
-<p>or just after a word to be marked:</p>
+or just after a word to be marked:
 
 {% highlight php %}
 ... this is a word<bookmark... /> in the middle of text to be marked ...
@@ -114,11 +119,15 @@ This will produce a Bookmark tree in Adobe Reader:
 
 ## Automatically Generated Bookmarks
 
-<p>You can automatically generate bookmarks from h1 - h6 tags, by setting the variable <code><span class="parameter">$h2bookmarks</code></span>.</p>
-<p>Define arrays with e.g. the tag =&gt; Bookmark level</p>
-<p>Remember bookmark levels start at 0.</p>
-<p>H1 - H6 must be written with uppercase when defining the array.</p>
-<p>Example:</p>
+You can automatically generate bookmarks from h1 - h6 tags, by setting the variable <code><span class="parameter">$h2bookmarks</code></span>.
+
+Define arrays with e.g. the tag =&gt; Bookmark level
+
+Remember bookmark levels start at 0.
+
+H1 - H6 must be written with uppercase when defining the array.
+
+Example:
 
 {% highlight php %}
 <?php

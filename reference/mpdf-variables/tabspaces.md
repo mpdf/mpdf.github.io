@@ -6,21 +6,23 @@ permalink: /reference/mpdf-variables/tabspaces.html
 modification_time: 2015-08-05T12:02:32+00:00
 ---
 
-<p>(mPDF &gt;= 2.3)</p>
+(mPDF &gt;= 2.3)
 
 # Description
 
-<p class="manual_block">int <b>tabSpaces</b></p>
-<p>Specifies the number of spaces to substitue for a <span class="smallblock">TAB</span> character when parsing HTML input between &lt;pre&gt;...&lt;/pre&gt; tags. The default value (8) is consistent with the HTML specification, but many programs including Windows NotePad uses a value of 6.</p>
+int <b>tabSpaces</b>
+
+Specifies the number of spaces to substitue for a <span class="smallblock">TAB</span> character when parsing HTML input between &lt;pre&gt;...&lt;/pre&gt; tags. The default value (8) is consistent with the HTML specification, but many programs including Windows NotePad uses a value of 6.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">tabSpaces</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">tabSpaces</span>
+
+<b>Values</b>
 
 Integer value greater than 0
 
-<span class="smallblock"></span><span class="smallblock">DEFAULT</span>: 8</p>
+<span class="smallblock"></span><span class="smallblock">DEFAULT</span>: 8
 
 # Examples
 
@@ -37,7 +39,8 @@ $mpdf->tabSpaces = 6;
 
 $html = file_get_content('NotePad.txt');
 
-$mpdf->WriteHTML('<pre>'.$html.'</pre>');
+$mpdf->WriteHTML('
+'.$html.'</pre>');
 
 $mpdf->Output();
 
@@ -46,4 +49,5 @@ $mpdf->Output();
 
 <p><span class="jslink">
 
-</span></p>
+</span>
+

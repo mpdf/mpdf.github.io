@@ -8,19 +8,24 @@ modification_time: 2015-08-05T12:01:09+00:00
 
 <div>
 <div>
-<p>(mPDF &gt;= 5.4)</p>
-<p>SetVisibility – Set the visibility of subsequent objects</p>
+
+(mPDF &gt;= 5.4)
+
+SetVisibility – Set the visibility of subsequent objects
 
 # Description
 
-<p class="manual_block">void <b>SetVisibility</b> ( string <span class="parameter">$visibility</span> )</p>
-<p>Set the visibility of subsequent objects</p>
+void <b>SetVisibility</b> ( string <span class="parameter">$visibility</span> )
+
+Set the visibility of subsequent objects
 
 # Parameters
 
 <span class="parameter">visibility</span>
-<p class="manual_param_dd">This parameter specifies the visibility.</p>
-<p class="manual_param_dd"><b>Values</b>
+
+This parameter specifies the visibility.
+
+<b>Values</b>
 
 <span class="smallblock">STRING</span> - One of the following:
 
@@ -32,7 +37,7 @@ printonly
 
 screenonly
 
-<span class="smallblock">DEFAULT</span>: visible</p>
+<span class="smallblock">DEFAULT</span>: visible
 
 # Changelog
 
@@ -58,11 +63,15 @@ Example #1
 
 $mpdf->SetVisibility('printonly'); 
 
-$mpdf->WriteHTML('<p>This text will only be visible when the document is printed</p>');
+$mpdf->WriteHTML('
+This text will only be visible when the document is printed
+');
 
 $mpdf->SetVisibility('screenonly'); 
 
-$mpdf->WriteHTML('<p>This text will only be visible on screen, and will not be included when the document is printed</p>');
+$mpdf->WriteHTML('
+This text will only be visible on screen, and will not be included when the document is printed
+');
 
 ...
 

@@ -6,31 +6,37 @@ permalink: /reference/mpdf-functions/output.html
 modification_time: 2015-08-05T12:00:50+00:00
 ---
 
-<p>(FPDF)</p>
-<p>Output – Finalise the document and send it to specified destination</p>
+(FPDF)
+
+Output – Finalise the document and send it to specified destination
 
 # Description
 
-<p class="manual_block">string <b>Output</b> ([ string <span class="parameter">$filename</span> , string <span class="parameter">$dest</span> ])</p>
-<p>Send the document to a given destination: browser, file or string. In the case of browser, the plug-in may be used (if present) or a download ("Save as" dialog box) may be forced.</p>
+string <b>Output</b> ([ string <span class="parameter">$filename</span> , string <span class="parameter">$dest</span> ])
+
+Send the document to a given destination: browser, file or string. In the case of browser, the plug-in may be used (if present) or a download ("Save as" dialog box) may be forced.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">filename</span></p>
-<p class="manual_param_dd">The name of the file. If not specified, the document will be sent to the browser (destination I).
+<span class="parameter">filename</span>
 
-<span class="smallblock">BLANK</span> or omitted: "doc.pdf"</p>
-<p class="manual_param_dt"><span class="parameter">dest</span></p>
-<p class="manual_param_dd">Destination where to send the document.
+The name of the file. If not specified, the document will be sent to the browser (destination I).
 
-<span class="smallblock">DEFAULT</span>: "I" i.e. Browser</p>
-<p class="manual_param_dd">I: send the file inline to the browser. The plug-in is used if available. The name given by <span class="parameter">filename</span> is used when one selects the "Save as" option on the link generating the PDF.
+<span class="smallblock">BLANK</span> or omitted: "doc.pdf"
+
+<span class="parameter">dest</span>
+
+Destination where to send the document.
+
+<span class="smallblock">DEFAULT</span>: "I" i.e. Browser
+
+I: send the file inline to the browser. The plug-in is used if available. The name given by <span class="parameter">filename</span> is used when one selects the "Save as" option on the link generating the PDF.
 
 D: send to the browser and force a file download with the name given by <span class="parameter">filename</span>.
 
 F: save to a local file with the name given by <span class="parameter">filename</span> (may include a path).
 
-S: return the document as a string. <span class="parameter">filename</span> is ignored.</p>
+S: return the document as a string. <span class="parameter">filename</span> is ignored.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> You can use the 'S' option to e-mail a PDF file - see example under&nbsp;<a href="{{ "/real-life-examples/e-mail-a-pdf-file.html" | prepend: site.baseurl }}">E-mail a PDF file</a>.</div>
 
@@ -47,7 +53,9 @@ Example #1
 
 $mpdf=new mPDF();
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->Output();
 
@@ -65,7 +73,9 @@ Example #2
 
 $mpdf=new mPDF();
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->Output('filename.pdf','F');
 

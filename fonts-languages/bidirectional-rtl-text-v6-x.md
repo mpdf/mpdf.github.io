@@ -8,12 +8,14 @@ modification_time: 2015-08-05T11:59:35+00:00
 
 ## Document Directionality - RTL versus LTR
 
-<p>The document has a baseline direction which is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:</p>
+The document has a baseline direction which is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:
+
 <ul>
 <li>text alignment in blocks for which text-align has not been specifically set</li>
 <li>layout of mirrored page-margins, columns, ToC and Indexes, headers / footers</li>
 </ul>
-<p>This base/document directionality is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> by default, and can be set by any of the following:</p>
+
+This base/document directionality is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> by default, and can be set by any of the following:
 
 {% highlight php %}
 <?php
@@ -25,11 +27,11 @@ $mpdf->SetDirectionality('rtl');
 <body dir="rtl"> or <body style="direction: rtl;">
 {% endhighlight %}
 
-<p>Base direction is an inherited CSS property, so will affect all content, unless direction is specified elswhere.</p>
+Base direction is an inherited CSS property, so will affect all content, unless direction is specified elswhere.
 
 ## Block-level Directionality
 
-<p>Direction can be set for any HTML block elements e.g. &lt;div&gt;&lt;p&gt;&lt;table&gt;&lt;ul&gt; etc using:</p>
+Direction can be set for any HTML block elements e.g. &lt;div&gt;&lt;p&gt;&lt;table&gt;&lt;ul&gt; etc using:
 
 {% highlight php %}
 [HTML]
@@ -43,18 +45,22 @@ or
 div.right { direction: rtl; }
 {% endhighlight %}
 
-<p>Block-level direction <i>may</i> affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.</p>
-<p>Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.</p>
+Block-level direction <i>may</i> affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
+
+Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.
 
 ## Text alignment
 
-<p>The default value for text-align is "a nameless value which is dependent on direction". However, once text-align is specified, it is respected and inherited by all descendants.</p>
+The default value for text-align is "a nameless value which is dependent on direction". However, once text-align is specified, it is respected and inherited by all descendants.
 
 ## Text Bidirectionality
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</div>
-<p>Bi-directional text is supported in mPDF.</p>
-<p>1) The following Unicode characters are supported, and can be inserted directly in the text as HTML entities:</p>
+
+Bi-directional text is supported in mPDF.
+
+1) The following Unicode characters are supported, and can be inserted directly in the text as HTML entities:
+
 <table class="table"> <tbody>
 <tr>
 <td>LRE</td>
@@ -151,28 +157,35 @@ div.right { direction: rtl; }
 <td>&amp;#x200F;</td>
 </tr>
 </tbody> </table>
-<p>2) The following HTML tags are supported:</p>
+
+2) The following HTML tags are supported:
+
 <ul>
 <li>&lt;bdo&gt; (NB the "dir" attribute is mandatory on &lt;bdo&gt;)</li>
 <li>&lt;bdi&gt; (HTML5)</li>
 </ul>
-<p>3) The CSS property "unicode-bidi" is supported with the following (CSS3) values: normal | embed | isolate | bidi-override | isolate-override | plaintext. 
+
+3) The CSS property "unicode-bidi" is supported with the following (CSS3) values: normal | embed | isolate | bidi-override | isolate-override | plaintext. 
 
 See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w3.org/TR/css3-writing-modes/#unicode-bidi</a> for more details. 
 
-"unicode-bidi" is supported on block level elements as well as in-line elements, but note that:</p>
+"unicode-bidi" is supported on block level elements as well as in-line elements, but note that:
+
 <ul>
 <li>the value is not inherited to child blocks</li>
 <li>using "embed" or "isolate" has no effect on block level boxes</li>
 <li>"isolate-override" is equivalent to "bidi-override" on block level boxes</li>
 </ul>
-<p>NB dir="auto" is not supported generally, but it is supported for &lt;bdi&gt; (has the same effect as if omitted) to use First Strong Isolate (FSI).</p>
-<p>Directionality can now be set on individual table cells &lt;td style="direction:rtl;unicode-bidi:embed;"&gt; or &lt;td dir="rtl"&gt;</p>
+
+NB dir="auto" is not supported generally, but it is supported for &lt;bdi&gt; (has the same effect as if omitted) to use First Strong Isolate (FSI).
+
+Directionality can now be set on individual table cells &lt;td style="direction:rtl;unicode-bidi:embed;"&gt; or &lt;td dir="rtl"&gt;
 
 ## Equivalent methods
 
-<p>The following are equivalent methods:</p>
-<p>EMBED</p>
+The following are equivalent methods:
+
+EMBED
 
 {% highlight php %}
 <span dir="rtl">...</span>
@@ -182,7 +195,7 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 <span style="direction: rtl; unicode-bidi: embed">...</span>
 {% endhighlight %}
 
-<p>OVERRIDE</p>
+OVERRIDE
 
 {% highlight php %}
 <bdo dir="rtl">...</bdo>
@@ -194,7 +207,7 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 <span style="direction: rtl; unicode-bidi: bidi-override">...</span>
 {% endhighlight %}
 
-<p>ISOLATE</p>
+ISOLATE
 
 {% highlight php %}
 <bdi dir="ltr">...</bdi>
@@ -206,7 +219,7 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 <span style="direction: rtl; unicode-bidi: isolate">...</span>
 {% endhighlight %}
 
-<p>First Strong Isolate (FSI)</p>
+First Strong Isolate (FSI)
 
 {% highlight php %}
 <bdi>...</bdi>
@@ -222,13 +235,14 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 
 ## First strong isolate (FSI)
 
-<p>FSI is useful when including text within a paragraph where the directionality of the text is unknown. For example, if you are printing out a catalogue from a database of book titles and the number of readers, when some book titles are in right-to-left script, you may use this template:</p>
+FSI is useful when including text within a paragraph where the directionality of the text is unknown. For example, if you are printing out a catalogue from a database of book titles and the number of readers, when some book titles are in right-to-left script, you may use this template:
 
 {% highlight php %}
 <li>Title: {TITLE} - {READERS} readers</li>
 {% endhighlight %}
 
-<p>This would result in the following:</p>
+This would result in the following:
+
 <ul>
 <li>Title: Alice in Wonderland - 12390 readers</li>
 <li>Title: עליסה בארץ הפלאות, סיפור-ילדים מאת לואיס קרול - 17890 readers</li>
@@ -238,7 +252,8 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 <li>Title: <bdi>{TITLE}</bdi> - {READERS} readers</li>
 {% endhighlight %}
 
-<p>Using BDI will result in the following:</p>
+Using BDI will result in the following:
+
 <ul>
 <li>Title: Alice in Wonderland - 12390 readers</li>
 <li>Title: עליסה בארץ הפלאות, סיפור-ילדים מאת לואיס קרול ‭- 1790 readers‬</li>
@@ -248,6 +263,8 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 
 <ul>
 <li class="manual_boxlist">
-<p><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</p>
+
+<a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang
+
 </li>
 </ul>

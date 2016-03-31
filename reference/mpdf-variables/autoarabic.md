@@ -6,24 +6,27 @@ permalink: /reference/mpdf-variables/autoarabic.html
 modification_time: 2015-08-05T12:01:38+00:00
 ---
 
-<p>(mPDF &gt;= 6.0)</p>
+(mPDF &gt;= 6.0)
 
 # Description
 
-<p class="manual_block">boolean <b>autoArabic</b></p>
-<p>Tells mPDF whether to try and distinguish between Arabic languages when using <code>autoScriptToLang</code>.</p>
-<p>Analysis of the text will attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi. If active, the text will then be marked with a specific language tag e.g. "pa", "ur", "fa" etc.</p>
+boolean <b>autoArabic</b>
+
+Tells mPDF whether to try and distinguish between Arabic languages when using <code>autoScriptToLang</code>.
+
+Analysis of the text will attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi. If active, the text will then be marked with a specific language tag e.g. "pa", "ur", "fa" etc.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">autoArabic</span> = <i><span class="smallblock">TRUE|FALSE</span></i><span class="smallblock"> 
+<span class="parameter">autoArabic</span> = <i><span class="smallblock">TRUE|FALSE</span></i><span class="smallblock"> 
 
-</span></p>
-<p class="manual_param_dd"><b>Values</b>
+</span>
+
+<b>Values</b>
 
 <i><span class="smallblock">FALSE</span></i>: <span class="smallblock">DEFAULT</span> Arabic script will be marked with the attribute lang='und-Arab' when using <code>autoScriptToLang</code>. 
 
-<span class="smallblock">TRUE: </span>mPDF will attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi, and text will then be marked with a specific language tag e.g. "pa", "ur", "fa" etc.</p>
+<span class="smallblock">TRUE: </span>mPDF will attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi, and text will then be marked with a specific language tag e.g. "pa", "ur", "fa" etc.
 
 # See Also
 

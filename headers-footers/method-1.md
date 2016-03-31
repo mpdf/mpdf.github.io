@@ -6,13 +6,13 @@ permalink: /headers-footers/method-1.html
 modification_time: 2015-08-05T11:59:50+00:00
 ---
 
-<p>This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control over styling. There are several variants of this method, using string or array. The simplest form does not allow different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.</p>
+This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control over styling. There are several variants of this method, using string or array. The simplest form does not allow different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.
 
 # Setting a Header/Footer at the start of a document
 
 ## Variant #1 (Simplest form)
 
-<p>Use a single command with a string as parameter, to set a header/footer at the right margin of the page on <span class="smallblock">ODD</span> pages, and left margin for <span class="smallblock">EVEN</span> pages (if <span class="smallblock">DOUBLE-SIDED</span> document), or right margin for all pages.</p>
+Use a single command with a string as parameter, to set a header/footer at the right margin of the page on <span class="smallblock">ODD</span> pages, and left margin for <span class="smallblock">EVEN</span> pages (if <span class="smallblock">DOUBLE-SIDED</span> document), or right margin for all pages.
 
 {% highlight php %}
 <?php
@@ -28,7 +28,7 @@ $mpdf->Output();
 
 ## Variant #2 (Split string)
 
-<p>Set a header/footer in three parts. The text string defines three strings divided by '|' which will set a header at the left/centre/right margin of the page on <span class="smallblock">ODD</span> pages and right/centre/left margin for <span class="smallblock">EVEN</span> pages (if&nbsp; <span class="smallblock">DOUBLE-SIDED</span> document), or left/centre/right margin for all pages. Note the use of {PAGENO} which can be used in any type of header or footer.</p>
+Set a header/footer in three parts. The text string defines three strings divided by '|' which will set a header at the left/centre/right margin of the page on <span class="smallblock">ODD</span> pages and right/centre/left margin for <span class="smallblock">EVEN</span> pages (if&nbsp; <span class="smallblock">DOUBLE-SIDED</span> document), or left/centre/right margin for all pages. Note the use of {PAGENO} which can be used in any type of header or footer.
 
 {% highlight php %}
 <?php
@@ -46,7 +46,7 @@ $mpdf->Output();
 
 ## Variant #3 (Controlling style with variables)
 
-<p>This is the same as Variant #2, but you can control some aspects of style for the headers/footers by altering certain mPDF variables.</p>
+This is the same as Variant #2, but you can control some aspects of style for the headers/footers by altering certain mPDF variables.
 
 {% highlight php %}
 <?php
@@ -76,7 +76,7 @@ $mpdf->Output();
 
 ## Variant #4 (Array) - DEPRACATED
 
-<p>Set a header/footer using an array of values. This allows greater control over styling. Recommended to use Variant #5, which is very similar, but specifies <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> forms separately.</p>
+Set a header/footer using an array of values. This allows greater control over styling. Recommended to use Variant #5, which is very similar, but specifies <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> forms separately.
 
 {% highlight php %}
 <?php
@@ -140,7 +140,7 @@ $mpdf->SetHeader($arr);
 
 ## Variant #5 (Array)
 
-<p>Set a header/footer using an array of values. This allows greater control over styling.&nbsp; <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately using the second parameter of <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>.</p>
+Set a header/footer using an array of values. This allows greater control over styling.&nbsp; <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately using the second parameter of <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>.
 
 {% highlight php %}
 <?php
@@ -197,7 +197,8 @@ $mpdf->SetHeader($arr, 'O');  // E for Even header
 {% endhighlight %}
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> When you are using the array form, any values that are not defined in the array use the document default values, not the defaultheader values (like the previous Simple form)&nbsp; i.e. an undefined font-size uses the document default of 10pt, not the <span class="parameter">$defaultheaderfontsize</span> of 8pt.</div>
-<p>Although this looks complex, you could change one value easily throughout a document:</p>
+
+Although this looks complex, you could change one value easily throughout a document:
 
 {% highlight php %}
 <?php
@@ -213,13 +214,16 @@ $mpdf->SetHeader($arr, 'O');
 
 # Changing Header/Footer during the document
 
-<p>This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use, whichever of the Variants above you are using. When a new page is added to the document (e.g. using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;) mPDF does the following:</p>
+This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use, whichever of the Variants above you are using. When a new page is added to the document (e.g. using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;) mPDF does the following:
+
 <ul>
 <li>writes the footer for the current page</li>
 <li>starts the new page</li>
 <li>writes the header for the new page</li>
 </ul>
-<p>Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:</p>
+
+Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:
+
 <ul>
 <li>change the header before the page-break</li>
 <li>change the footer after the page-break
@@ -253,7 +257,7 @@ $mpdf->WriteHTML('Second section text...');
 $mpdf->Output();
 {% endhighlight %}
 
-<p>It gets even more complicated if you are using <span class="smallblock">DOUBLE-SIDED</span> document and you want to start the new section of your book on an <span class="smallblock">ODD</span> page:</p>
+It gets even more complicated if you are using <span class="smallblock">DOUBLE-SIDED</span> document and you want to start the new section of your book on an <span class="smallblock">ODD</span> page:
 
 {% highlight php %}
 <?php
@@ -287,7 +291,7 @@ $mpdf->Output();
 
 # Table of Contents
 
-<p>Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Contents gets so clumsy, it is recommended that you consider one of the <span class="smallblock">NAMED</span> methods. Here for the record is how you would do it:</p>
+Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Contents gets so clumsy, it is recommended that you consider one of the <span class="smallblock">NAMED</span> methods. Here for the record is how you would do it:
 
 {% highlight php %}
 <?php
@@ -349,7 +353,7 @@ $mpdf->WriteHTML('Main part of document...');
 $mpdf->Output();
 {% endhighlight %}
 
-<p>... and for historical purposes using depracated TOC functions:</p>
+... and for historical purposes using depracated TOC functions:
 
 {% highlight php %}
 <?php
@@ -400,7 +404,9 @@ $mpdf->TOCfooter = array();
 
 $mpdf->TOCpreHTML = '<h2>Table of Contents</h2>');
 
-$mpdf->TOCpostHTML = '<p>Text to come after the contenst list</p>';
+$mpdf->TOCpostHTML = '
+Text to come after the contenst list
+';
 
 $mpdf->TOCbookmarkText = 'Contents';
 

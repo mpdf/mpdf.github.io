@@ -6,11 +6,13 @@ permalink: /paging/different-page-sizes.html
 modification_time: 2015-08-05T11:59:48+00:00
 ---
 
-<p>(mPDF &gt;= 4.3)</p>
-<p>The page (sheet) size can be reset within the document.</p>
+(mPDF &gt;= 4.3)
+
+The page (sheet) size can be reset within the document.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The @page model used by CSS and supported by mPDF allows the size of a "page-box" to be set,&nbsp;assuming a constant size of the "sheet" on which it is being printed. To avoid confusion, the term "sheet size" is preferred for the physical dimensions of the page of the document.</div>
-<p>There are different ways to change sheet size:</p>
+
+There are different ways to change sheet size:
 
 ## 1) Using CSS @page
 
@@ -34,12 +36,14 @@ h1.bigsection {
 </style>
 {% endhighlight %}
 
-<p>You can reference the @page selectors using other CSS as above (and see <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a>) or setting attributes in:</p>
+You can reference the @page selectors using other CSS as above (and see <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a>) or setting attributes in:
+
 <ul>
 <li>&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;&nbsp; e.g. &lt;tocpagebreak ... page-selector="bigger" toc-page-selector="toc" ... /&gt;</li>
 <li>&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;&nbsp; e.g. &lt;pagebreak ... page-selector="bigger" ... /&gt;</li>
 </ul>
-<p>The functions <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> both have parameters which allow you to select a @page</p>
+
+The functions <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> both have parameters which allow you to select a @page
 
 ## 2) Specify the sheet size when forcing a new page (HTML tags)
 
@@ -47,7 +51,9 @@ h1.bigsection {
 <li>&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; e.g. &lt;pagebreak ... sheet-size="A3-L" ... /&gt;</li>
 <li>&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; e.g. &lt;tocpagebreak ... sheet-size="420mm 370mm" toc-sheet-size="A4" ... /&gt;</li>
 </ul>
-<p>Accepted values are:</p>
+
+Accepted values are:
+
 <ul>
 <li>"A4", "A3", "Letter" etc</li>
 <li>"A4-L", "A3-L", "Letter-L" etc. for landscape</li>
@@ -56,8 +62,10 @@ h1.bigsection {
 
 ## 3) Specify the sheet size when forcing a new page (functions)
 
-<p>The functions <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> both have parameters to select sheet size.</p>
-<p>Accepted values - same options as the original <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a> - are:</p>
+The functions <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> both have parameters to select sheet size.
+
+Accepted values - same options as the original <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a> - are:
+
 <ul>
 <li>"A4", "A3", "Letter" etc</li>
 <li>"A4-L", "A3-L", "Letter-L" etc. for landscape</li>

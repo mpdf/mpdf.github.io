@@ -6,8 +6,10 @@ permalink: /what-else-can-i-do/line-breaking.html
 modification_time: 2015-08-05T12:00:06+00:00
 ---
 
-<p>The algorithm for determining automatic line breaks was completely rewritten in mPDF v6.0 - the following notes apply to mPDF &gt;= 6.0</p>
-<p>Line breaks will be allowed at:</p>
+The algorithm for determining automatic line breaks was completely rewritten in mPDF v6.0 - the following notes apply to mPDF &gt;= 6.0
+
+Line breaks will be allowed at:
+
 <ul>
 <li>Spaces U+0020</li>
 <li>Word break U+200B</li>
@@ -17,6 +19,10 @@ modification_time: 2015-08-05T12:00:06+00:00
 <li><a href="{{ "/what-else-can-i-do/hyphenation.html" | prepend: site.baseurl }}">Automatic hyphenation</a> when CSS hyphens set to "auto"</li>
 <li>Between CJK characters, except CJK numerals, before "CJK-following" or after "CJK-leading" characters</li>
 </ul>
-<p>Lao, Thai and Khmer text does not have space between words. By default, mPDF uses word dictionaries to determine appropriate opportunites for line-breaks. Users may turn this function off using the configurable variable <code>useDictionaryLBR</code>.</p>
-<p>Alternatively users can insert the character U+200B (zero-width space) in the text to mark line-breaking opportunities manually.</p>
-<p>Similarly for Tibetan script, mPDF 6 uses a simple algorithm to identify line-breaking opportunities after the characters U+0F0B (Tsheg) or U+0F0D. This can be overriden using the configurable variable <code>useTibetanLBR</code>.</p>
+
+Lao, Thai and Khmer text does not have space between words. By default, mPDF uses word dictionaries to determine appropriate opportunites for line-breaks. Users may turn this function off using the configurable variable <code>useDictionaryLBR</code>.
+
+Alternatively users can insert the character U+200B (zero-width space) in the text to mark line-breaking opportunities manually.
+
+Similarly for Tibetan script, mPDF 6 uses a simple algorithm to identify line-breaking opportunities after the characters U+0F0B (Tsheg) or U+0F0D. This can be overriden using the configurable variable <code>useTibetanLBR</code>.
+

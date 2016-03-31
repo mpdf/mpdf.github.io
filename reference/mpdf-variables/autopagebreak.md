@@ -6,24 +6,27 @@ permalink: /reference/mpdf-variables/autopagebreak.html
 modification_time: 2015-08-05T12:01:41+00:00
 ---
 
-<p>(mPDF &gt;= 3.1)</p>
-<p>autoPageBreak – Specify whether to allow automatic page breaks</p>
+(mPDF &gt;= 3.1)
+
+autoPageBreak – Specify whether to allow automatic page breaks
 
 # Description
 
-<p class="manual_block">void <b>autoPageBreak</b></p>
-<p>Specify whether to allow automatic page breaks. By default, mPDF creates page breaks when required in the document. Setting the value to FALSE allows an oversized object (image etc.) to overwrite the footer and/or the bottom margin of the page.</p>
+void <b>autoPageBreak</b>
+
+Specify whether to allow automatic page breaks. By default, mPDF creates page breaks when required in the document. Setting the value to FALSE allows an oversized object (image etc.) to overwrite the footer and/or the bottom margin of the page.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">autoPageBreak</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">autoPageBreak</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>: enables automatic page breaks
 
 <span class="smallblock">FALSE</span>: disable automatic page breaks
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
 
 # Changelog
 

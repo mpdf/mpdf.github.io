@@ -8,17 +8,24 @@ modification_time: 2015-08-05T11:59:56+00:00
 
 # Supported CSS attributes - stylesheets or in-line
 
-<p>Unless otherwise stated, the following values are supported:</p>
-<p><span class="smallblock">LENGTH</span>: px, pc, pt, cm, mm, in, em, rem, ex and % (where appropriate) are supported. Default if no unit given is px.</p>
-<p><span class="smallblock">FONT-SIZE</span>: px, pc, pt, em, rem, ex, %, small, medium, large, x-small, x-large&nbsp; are supported. Default if no unit given is px.</p>
+Unless otherwise stated, the following values are supported:
+
+<span class="smallblock">LENGTH</span>: px, pc, pt, cm, mm, in, em, rem, ex and % (where appropriate) are supported. Default if no unit given is px.
+
+<span class="smallblock">FONT-SIZE</span>: px, pc, pt, em, rem, ex, %, small, medium, large, x-small, x-large&nbsp; are supported. Default if no unit given is px.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Support for "rem" was added mPDF 5.7&nbsp; Unlike the CSS3 specification, the basic size used for rem in the document is based on the font-size set on the &lt;body&gt; element (rather than the &lt;html&gt; element).</div>
-<p class="manual_block">Conversion from "px" is determined by the configurable variables <a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a></p>
-<p class="manual_block">"ex" uses an approximation of half the font height</p>
-<p><span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as <i>sans</i>, <i>sans-serif</i>, <i>serif</i> or <i>monospace</i>.</p>
-<p><span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g. 'black', 'gray' are supported.
 
-Also supported are:</p>
+Conversion from "px" is determined by the configurable variables <a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a>
+
+"ex" uses an approximation of half the font height
+
+<span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as <i>sans</i>, <i>sans-serif</i>, <i>serif</i> or <i>monospace</i>.
+
+<span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g. 'black', 'gray' are supported.
+
+Also supported are:
+
 <ul>
 <li>rgb(255,255,255)</li>
 <li>rgba(255,255,255,1) <i>[last value is transparency (alpha) - between 0-1]*</i></li>
@@ -31,8 +38,11 @@ Also supported are:</p>
 <li><i>device-cmyka</i>(100,100,100,100,1) <i>[or 0-100%; last value is transparency (alpha) - between 0-1]*</i></li>
 <li>spot(COLOR NAME, 100%). (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)</li>
 </ul>
-<p>mPDF&nbsp; &gt;= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);</p>
-<p>*Alpha values (transparency) are only supported on background colours - not text color</p>
+
+mPDF&nbsp; &gt;= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);
+
+*Alpha values (transparency) are only supported on background colours - not text color
+
 <table class="table"> <thead>
 <tr> <th>HTML&nbsp;Tag</th>
 <td>Property</td>
@@ -68,39 +78,59 @@ Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)</td>
 <tr>
 <td>background, background-image, background-position, background-repeat, background-color</td>
 <td>
-<p>background is parsed as per the CSS specification.</p>
-<p>background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).</p>
-<p>background-position is supported as per CSS2.1</p>
-<p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
-<p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
-<p>(All except background-color added mPDF 3.0)</p>
+
+background is parsed as per the CSS specification.
+
+background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).
+
+background-position is supported as per CSS2.1
+
+background-repeat: repeat | repeat-x | repeat-y | no-repeat
+
+background-attachment is parsed but has no effect.
+
+See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
+(All except background-color added mPDF 3.0)
+
 </td>
 </tr>
 <tr>
 <td><i>background-image-resolution</i></td>
 <td>
-<p>normal | [ from-image 
 
- &lt;dpi&gt; ]&nbsp; (mPDF &gt;= 5.1)</p>
-<p>Custom tag, but as for image-resolution in CSS3</p>
+normal | [ from-image 
+
+ &lt;dpi&gt; ]&nbsp; (mPDF &gt;= 5.1)
+
+Custom tag, but as for image-resolution in CSS3
+
 </td>
 </tr>
 <tr>
 <td><i>background-gradient</i></td>
 <td>
-<p>Defines a linear or radial colour gradient for the background.</p>
-<p>linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or</p>
-<p>radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;</p>
-<p>x, y and radius are values between 0 and 1</p>
-<p>(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
+
+Defines a linear or radial colour gradient for the background.
+
+linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or
+
+radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;
+
+x, y and radius are values between 0 and 1
+
+(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
 </td>
 </tr>
 <tr>
 <td><i>background-image-opacity</i></td>
 <td>
-<p>Value between 0 and 1.0</p>
-<p>Sets the opacity/transparency of the background image.</p>
+
+Value between 0 and 1.0
+
+Sets the opacity/transparency of the background image.
+
 </td>
 </tr>
 <tr>
@@ -120,57 +150,79 @@ Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)</td>
 6 - Resize-to-fit w and h</td>
 </tr>
 <tr> <th rowspan="30">
-<p>All Block level tags:</p>
-<p>P, DIV, H1-H6, OL, UL, ADDRESS,</p>
-<p>BLOCKQUOTE, CAPTION,</p>
-<p>CENTER, DL, DT, DD, FORM,</p>
-<p>ARTICLE, ASIDE, DETAILS,</p>
-<p>FIELDSET, FIGURE,</p>
-<p>FIGCAPTION, FOOTER,</p>
-<p>HEADER, HGROUP, NAV,</p>
-<p>SECTION, SUMMARY</p>
-<p>
 
-</p>
+All Block level tags:
+
+P, DIV, H1-H6, OL, UL, ADDRESS,
+
+BLOCKQUOTE, CAPTION,
+
+CENTER, DL, DT, DD, FORM,
+
+ARTICLE, ASIDE, DETAILS,
+
+FIELDSET, FIGURE,
+
+FIGCAPTION, FOOTER,
+
+HEADER, HGROUP, NAV,
+
+SECTION, SUMMARY
+
 </th>
 <td>margin*, margin-top, margin-bottom, margin-left, margin-right</td>
 <td>
-<p><span class="smallblock">LENGTH</span></p>
+
+<span class="smallblock">LENGTH</span>
+
 </td>
 </tr>
 <tr>
 <td>padding*, padding-right, padding-left, padding-top, padding-bottom</td>
 <td>
-<p><span class="smallblock">LENGTH</span></p>
+
+<span class="smallblock">LENGTH</span>
 
 </td>
 </tr>
 <tr>
 <td>border, border-top, border-bottom, border-left, border-right</td>
 <td>
-<p>Size style and colour e.g.</p>
-<p><span class="smallblock">LENGTH</span> solid|dotted|dashed|double <span class="smallblock">COLOR</span></p>
+
+Size style and colour e.g.
+
+<span class="smallblock">LENGTH</span> solid|dotted|dashed|double <span class="smallblock">COLOR</span>
+
 </td>
 </tr>
 <tr>
 <td>border-color*, border-top-color, border-right-color, border-bottom-color, border-left-color</td>
 <td>
-<p><span class="smallblock">COLOR</span></p>
-<p>(mPDF &gt;= 4.0)</p>
+
+<span class="smallblock">COLOR</span>
+
+(mPDF &gt;= 4.0)
+
 </td>
 </tr>
 <tr>
 <td>border-width*, border-top-width, border-right-width, border-bottom-width, border-left-width</td>
 <td>
-<p><span class="smallblock">LENGTH</span>&nbsp;</p>
+
+<span class="smallblock">LENGTH</span>&nbsp;
+
 (mPDF &gt;= 4.0)</td>
 </tr>
 <tr>
 <td>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</td>
 <td>
-<p>solid|dotted|dashed|double</p>
-<p>(mPDF &gt;= 4.0)</p>
-<p>(double was added mPDF 4.2)</p>
+
+solid|dotted|dashed|double
+
+(mPDF &gt;= 4.0)
+
+(double was added mPDF 4.2)
+
 </td>
 </tr>
 <tr>
@@ -184,18 +236,25 @@ NB Use of $autoPadding which can automatically increase padding in block element
 <tr>
 <td>width</td>
 <td>
-<p><span class="smallblock">LENGTH</span></p>
-<p>mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be contained by the outer block's physical dimensions. width and height are overridden if this is not the case.</p>
+
+<span class="smallblock">LENGTH</span>
+
+mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
+
 </td>
 </tr>
 <tr>
 <td>height</td>
 <td>
-<p><span class="smallblock">LENGTH</span>&nbsp;</p>
-<p>mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be contained by the outer block's physical dimensions. width and height are overridden if this is not the case.</p>
-<p>(Prior to mPDF v5.1: only supported if whole block is all on one page; will extend a block but not shorten it; will not force a pagebreak even if height should move onto next page.)
 
-NB % is interpreted as % of printable page height (inside margins)</p>
+<span class="smallblock">LENGTH</span>&nbsp;
+
+mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
+
+(Prior to mPDF v5.1: only supported if whole block is all on one page; will extend a block but not shorten it; will not force a pagebreak even if height should move onto next page.)
+
+NB % is interpreted as % of printable page height (inside margins)
+
 </td>
 </tr>
 <tr>
@@ -233,87 +292,125 @@ NB % is interpreted as % of printable page height (inside margins)</p>
 <tr>
 <td>line-height</td>
 <td>
-<p>Line height as a factor of font-height. Usual values around 1.2 or 1.3
 
-Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)</p>
-<p>'normal' also accepted (set by default to 1.3 in mPDF)</p>
+Line height as a factor of font-height. Usual values around 1.2 or 1.3
+
+Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)
+
+'normal' also accepted (set by default to 1.3 in mPDF)
+
 </td>
 </tr>
 <tr>
 <td>line-stacking-strategy</td>
 <td>
-<p>inline-line-height | block-line-height | max-height | grid-height
 
-As per draft CSS3 spec. (mPDF &gt;= 6.0)</p>
-<p>Default = inline-line-height</p>
+inline-line-height | block-line-height | max-height | grid-height
+
+As per draft CSS3 spec. (mPDF &gt;= 6.0)
+
+Default = inline-line-height
+
 </td>
 </tr>
 <tr>
 <td>line-stacking-shift</td>
 <td>
-<p>consider-shifts | disregard-shifts
 
-As per draft CSS3 spec. (mPDF &gt;= 6.0)</p>
-<p>Default = consider-shifts</p>
+consider-shifts | disregard-shifts
+
+As per draft CSS3 spec. (mPDF &gt;= 6.0)
+
+Default = consider-shifts
+
 </td>
 </tr>
 <tr>
 <td>background, background-image, background-position, background-repeat, background-color</td>
 <td>
-<p>background is parsed as per the CSS specification.</p>
-<p>background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).</p>
-<p>background-position is supported as per CSS2.1</p>
-<p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
-<p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
-<p>(All except background-color added mPDF 3.0)</p>
+
+background is parsed as per the CSS specification.
+
+background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).
+
+background-position is supported as per CSS2.1
+
+background-repeat: repeat | repeat-x | repeat-y | no-repeat
+
+background-attachment is parsed but has no effect.
+
+See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
+(All except background-color added mPDF 3.0)
+
 </td>
 </tr>
 <tr>
 <td>background-clip</td>
 <td>
-<p>padding-box|border-box (default=border-box)</p>
-<p>extended to include "content-box" from mPDF 5.7</p>
+
+padding-box|border-box (default=border-box)
+
+extended to include "content-box" from mPDF 5.7
+
 </td>
 </tr>
 <tr>
 <td>background-origin</td>
 <td>
-<p>padding-box|content-box|border-box&nbsp; (default padding-box)</p>
-<p>As per CSS3. mPDF &gt;= 5.7</p>
+
+padding-box|content-box|border-box&nbsp; (default padding-box)
+
+As per CSS3. mPDF &gt;= 5.7
+
 </td>
 </tr>
 <tr>
 <td>background-size</td>
 <td>
-<p>[ &lt;length&gt; | &lt;percentage&gt; | auto ]{1,2} | cover | contain&nbsp; (default = auto)</p>
-<p>As per CSS3. mPDF &gt;= 5.7</p>
+
+[ &lt;length&gt; | &lt;percentage&gt; | auto ]{1,2} | cover | contain&nbsp; (default = auto)
+
+As per CSS3. mPDF &gt;= 5.7
+
 </td>
 </tr>
 <tr>
 <td><i>background-image-resolution</i></td>
 <td>
-<p>normal | [ from-image 
 
- &lt;dpi&gt; ]&nbsp; (mPDF &gt;= 5.1)</p>
-<p>Custom tag, but as for image-resolution in CSS3</p>
+normal | [ from-image 
+
+ &lt;dpi&gt; ]&nbsp; (mPDF &gt;= 5.1)
+
+Custom tag, but as for image-resolution in CSS3
+
 </td>
 </tr>
 <tr>
 <td><i>background-gradient</i></td>
 <td>
-<p>Defines a linear or radial colour gradient for the background.</p>
-<p>linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or</p>
-<p>radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;</p>
-<p>x, y and radius are values between 0 and 1</p>
-<p>(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
+
+Defines a linear or radial colour gradient for the background.
+
+linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or
+
+radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;
+
+x, y and radius are values between 0 and 1
+
+(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
 </td>
 </tr>
 <tr>
 <td><i>background-image-opacity</i></td>
 <td>
-<p>Value between 0 and 1.0</p>
-<p>Sets the opacity/transparency of the background image.</p>
+
+Value between 0 and 1.0
+
+Sets the opacity/transparency of the background image.
+
 </td>
 </tr>
 <tr>
@@ -334,99 +431,150 @@ As per draft CSS3 spec. (mPDF &gt;= 6.0)</p>
 </tr>
 <tr>
 <td>
-<p>box-shadow</p>
+
+box-shadow
+
 </td>
 <td>
-<p>As per CSS3 specification. 'inset' is not supported.</p>
-<p>(mPDF &gt;= 5.4)</p>
+
+As per CSS3 specification. 'inset' is not supported.
+
+(mPDF &gt;= 5.4)
+
 </td>
 </tr>
 <tr>
 <td>box-decoration-break</td>
 <td>
-<p>slice | clone&nbsp; (default = slice)</p>
-<p>Defines the handling of padding and borders at page breaks, when <a href="{{ "/paging/page-breaks.html" | prepend: site.baseurl }}">clonebycss</a> set</p>
+
+slice | clone&nbsp; (default = slice)
+
+Defines the handling of padding and borders at page breaks, when <a href="{{ "/paging/page-breaks.html" | prepend: site.baseurl }}">clonebycss</a> set
+
 </td>
 </tr>
 <tr>
 <td>z-index</td>
 <td>
-<p>Sets a layer in the PDF document.</p>
-<p>Note: this is not the same as a "layer" in CSS terms. See <a href="{{ "/what-else-can-i-do/layers.html" | prepend: site.baseurl }}">Layers</a>.</p>
+
+Sets a layer in the PDF document.
+
+Note: this is not the same as a "layer" in CSS terms. See <a href="{{ "/what-else-can-i-do/layers.html" | prepend: site.baseurl }}">Layers</a>.
+
 </td>
 </tr>
 <tr> <th rowspan="11">
-<p>All Block level tags:</p>
-<p>P, DIV, H1-H6, OL, UL, ADDRESS,</p>
-<p>BLOCKQUOTE, CAPTION,</p>
-<p>CENTER, DL, DT, DD, FORM,</p>
-<p>ARTICLE, ASIDE, DETAILS,</p>
-<p>FIELDSET, FIGURE, FIGCAPTION, FOOTER,</p>
-<p>HEADER, HGROUP, NAV,</p>
-<p>SECTION, SUMMARY</p>
-<p>(contd.)</p>
+
+All Block level tags:
+
+P, DIV, H1-H6, OL, UL, ADDRESS,
+
+BLOCKQUOTE, CAPTION,
+
+CENTER, DL, DT, DD, FORM,
+
+ARTICLE, ASIDE, DETAILS,
+
+FIELDSET, FIGURE, FIGCAPTION, FOOTER,
+
+HEADER, HGROUP, NAV,
+
+SECTION, SUMMARY
+
+(contd.)
+
 </th>
 <td><span class="smallblock">COMMON TEXT STYLES</span></td>
 <td><span class="smallblock">See below</span></td>
 </tr>
 <tr>
 <td>
-<p><i>text-indent</i></p>
+
+<i>text-indent</i>
+
 </td>
 <td>
-<p>Indents first line of text in the paragraph/block.</p>
-<p><span class="smallblock">LENGTH</span></p>
-<p>(Indent is disabled in tables.)</p>
-<p>Negative value will give a 'hanging indent'.</p>
+
+Indents first line of text in the paragraph/block.
+
+<span class="smallblock">LENGTH</span>
+
+(Indent is disabled in tables.)
+
+Negative value will give a 'hanging indent'.
+
 </td>
 </tr>
 <tr>
 <td>position</td>
 <td>fixed | absolute
-<p>absolute - uses physical page as containing element;
 
-fixed - uses printable page (inside margins) as containing element.</p>
-<p>(mPDF &gt;= 4.0)</p>
-<p>NB Only supported for top-level elements i.e. where the parent element is &lt;body&gt;. Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported.</p>
+absolute - uses physical page as containing element;
+
+fixed - uses printable page (inside margins) as containing element.
+
+(mPDF &gt;= 4.0)
+
+NB Only supported for top-level elements i.e. where the parent element is &lt;body&gt;. Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported.
+
 </td>
 </tr>
 <tr>
 <td>overflow</td>
 <td>
-<p>visible | hidden | auto</p>
-<p>Applies to block elements with position fixed or absolute. auto - causes text to autofit within the block size (constrained if necessary to page edges).</p>
-<p>(mPDF &gt;= 4.0)</p>
+
+visible | hidden | auto
+
+Applies to block elements with position fixed or absolute. auto - causes text to autofit within the block size (constrained if necessary to page edges).
+
+(mPDF &gt;= 4.0)
+
 </td>
 </tr>
 <tr>
 <td>hyphens</td>
 <td>
-<p>none | manual | auto (default = manual)</p>
-<p>As per CSS. (mPDF&nbsp; &gt;= 5.7)</p>
+
+none | manual | auto (default = manual)
+
+As per CSS. (mPDF&nbsp; &gt;= 5.7)
+
 </td>
 </tr>
 <tr>
 <td><i>rotate</i></td>
 <td>
-<p>90 | -90</p>
-<p>Applies only to block elements with position fixed or absolute. (mPDF &gt;= 5.0)</p>
-<p>Sizing and layout of the block element using top, left, bottom, right, width and height are applied BEFORE the element is rotated. The top and left co-ordinates are respected for positioning, except when bottom or right are specified without respective top or left when the bottom/right co-ordinates are used.</p>
+
+90 | -90
+
+Applies only to block elements with position fixed or absolute. (mPDF &gt;= 5.0)
+
+Sizing and layout of the block element using top, left, bottom, right, width and height are applied BEFORE the element is rotated. The top and left co-ordinates are respected for positioning, except when bottom or right are specified without respective top or left when the bottom/right co-ordinates are used.
+
 </td>
 </tr>
 <tr>
 <td>top, left, bottom, right</td>
 <td>
-<p><span class="smallblock">LENGTH</span></p>
-<p>Applies to block elements with position fixed or absolute.</p>
-<p>(mPDF &gt;= 4.0)</p>
+
+<span class="smallblock">LENGTH</span>
+
+Applies to block elements with position fixed or absolute.
+
+(mPDF &gt;= 4.0)
+
 </td>
 </tr>
 <tr>
 <td>float</td>
 <td>
-<p>left|right</p>
-<p>Partially supported as for CSS2 property.</p>
-<p>NB Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported.</p>
+
+left|right
+
+Partially supported as for CSS2 property.
+
+NB Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported.
+
 </td>
 </tr>
 <tr>
@@ -451,7 +599,9 @@ fixed - uses printable page (inside margins) as containing element.</p>
 </tr>
 </thead> <tbody>
 <tr> <th rowspan="5">
-<p>LIST tags: OL, UL</p>
+
+LIST tags: OL, UL
+
 </th>
 <td>list-style</td>
 <td>[ 'list-style-type' 
@@ -465,8 +615,11 @@ fixed - uses printable page (inside margins) as containing element.</p>
 <td>
 <ul> </li>
 </ul>
-<p>1 | A | a | I | i | disc | circle | square | decimal | lower-roman | upper-roman | lower-latin | upper-latin | lower-alpha | upper-alpha | none</p>
-<p>arabic-indic | bengali | cambodian | cjk-decimal | devanagari | gujarati | gurmukhi | hebrew |kannada | khmer | lao | malayalam | oriya | persian | telugu | thai | urdu | tamil</p>
+
+1 | A | a | I | i | disc | circle | square | decimal | lower-roman | upper-roman | lower-latin | upper-latin | lower-alpha | upper-alpha | none
+
+arabic-indic | bengali | cambodian | cjk-decimal | devanagari | gujarati | gurmukhi | hebrew |kannada | khmer | lao | malayalam | oriya | persian | telugu | thai | urdu | tamil
+
 "1" - decimal
 
 "A" = upper-latin
@@ -476,25 +629,35 @@ fixed - uses printable page (inside margins) as containing element.</p>
 "I" = upper-roman
 
 "i" = lower-roman
-<p>Custom list-style-type is recognised e.g.: U+263Argb(255,0,0);</p>
-<p>- where U+263A is the Unicode HEX value of the character you want for the bullet 
 
-- the character MUST be included in the font used for that list item</p>
-<p>- rgb() bit is optional</p>
+Custom list-style-type is recognised e.g.: U+263Argb(255,0,0);
+
+- where U+263A is the Unicode HEX value of the character you want for the bullet 
+
+- the character MUST be included in the font used for that list item
+
+- rgb() bit is optional
+
 </td>
 </tr>
 <tr>
 <td>list-style-image</td>
 <td>
-<p><span class="smallblock">&lt;URI&gt;</span></p>
-<p>mPDF &gt;= 6.0</p>
+
+<span class="smallblock">&lt;URI&gt;</span>
+
+mPDF &gt;= 6.0
+
 </td>
 </tr>
 <tr>
 <td>list-style-position</td>
 <td>
-<p>inside | outside&nbsp; (default = outside)</p>
-<p>mPDF &gt;= 6.0</p>
+
+inside | outside&nbsp; (default = outside)
+
+mPDF &gt;= 6.0
+
 </td>
 </tr>
 <tr>
@@ -502,22 +665,29 @@ fixed - uses printable page (inside margins) as containing element.</p>
 <td><b>NB Lists are handled as block-level elements as from mPDF 6.0 (see above)</b></td>
 </tr>
 <tr> <th rowspan="5">
-<p>LI</p>
+
+LI
+
 </th>
 <td>list-style</td>
 <td>
-<p>[ 'list-style-type' 
+
+[ 'list-style-type' 
 
  'list-style-position' 
 
- 'list-style-image' ]&nbsp;&nbsp; mPDF &gt;= 6.0</p>
+ 'list-style-image' ]&nbsp;&nbsp; mPDF &gt;= 6.0
+
 </td>
 </tr>
 <tr>
 <td>list-style-type<i>&nbsp;</i></td>
 <td>
-<p>1 | A | a | I | i | disc | circle | square | decimal | lower-roman | upper-roman | lower-latin | upper-latin | lower-alpha | upper-alpha | none</p>
-<p>arabic-indic | bengali | cambodian | cjk-decimal | devanagari | gujarati | gurmukhi | hebrew |kannada | khmer | lao | malayalam | oriya | persian | telugu | thai | urdu | tamil</p>
+
+1 | A | a | I | i | disc | circle | square | decimal | lower-roman | upper-roman | lower-latin | upper-latin | lower-alpha | upper-alpha | none
+
+arabic-indic | bengali | cambodian | cjk-decimal | devanagari | gujarati | gurmukhi | hebrew |kannada | khmer | lao | malayalam | oriya | persian | telugu | thai | urdu | tamil
+
 "1" - decimal
 
 "A" = upper-latin
@@ -527,24 +697,33 @@ fixed - uses printable page (inside margins) as containing element.</p>
 "I" = upper-roman
 
 "i" = lower-roman
-<p>Custom list-style-type is recognised e.g.: U+263Argb(255,0,0);</p>
-<p>- where U+263A is the Unicode HEX value of the character you want for the bullet 
 
-- the character MUST be included in the font used for that list item</p>
-<p>- rgb() bit is optional</p>
+Custom list-style-type is recognised e.g.: U+263Argb(255,0,0);
+
+- where U+263A is the Unicode HEX value of the character you want for the bullet 
+
+- the character MUST be included in the font used for that list item
+
+- rgb() bit is optional
+
 </td>
 </tr>
 <tr>
 <td>list-style-image</td>
 <td>
-<p><span class="smallblock">&lt;URI&gt;</span></p>
+
+<span class="smallblock">&lt;URI&gt;</span>
+
 mPDF &gt;= 6.0</td>
 </tr>
 <tr>
 <td>list-style-position</td>
 <td>
-<p>inside | outside&nbsp; (default = outside)</p>
-<p>mPDF &gt;= 6.0</p>
+
+inside | outside&nbsp; (default = outside)
+
+mPDF &gt;= 6.0
+
 </td>
 </tr>
 <tr>
@@ -554,7 +733,9 @@ mPDF &gt;= 6.0</td>
 </tbody> </table>
 <table class="table"> <thead>
 <tr> <th>
-<p>HTML Tag</p>
+
+HTML Tag
+
 </th>
 <td>Property</td>
 <td>Values allowed &amp; Notes
@@ -563,12 +744,19 @@ mPDF &gt;= 6.0</td>
 </tr>
 </thead> <tbody>
 <tr> <th rowspan="9">
-<p>All Inline tags:</p>
-<p>SPAN, A, SUB, SUP,&nbsp; ACRONYM,</p>
-<p>BIG, SMALL, INS, S, STRIKE,</p>
-<p>DEL, STRONG, CITE, Q, EM,</p>
-<p>B, I, U, SAMP, CODE, KBD, TT,</p>
-<p>VAR, FONT, TIME, MARK</p>
+
+All Inline tags:
+
+SPAN, A, SUB, SUP,&nbsp; ACRONYM,
+
+BIG, SMALL, INS, S, STRIKE,
+
+DEL, STRONG, CITE, Q, EM,
+
+B, I, U, SAMP, CODE, KBD, TT,
+
+VAR, FONT, TIME, MARK
+
 </th>
 <td><span class="smallblock">COMMON TEXT STYLES</span></td>
 <td><span class="smallblock">See below</span></td>
@@ -576,35 +764,53 @@ mPDF &gt;= 6.0</td>
 <tr>
 <td>border, border-top, border-bottom, border-left, border-right</td>
 <td>
-<p>Size style and colour e.g.</p>
-<p><span class="smallblock">LENGTH</span> solid|dotted|dashed|double <span class="smallblock">COLOR</span></p>
-<p>(mPDF &gt;= 5.4)</p>
+
+Size style and colour e.g.
+
+<span class="smallblock">LENGTH</span> solid|dotted|dashed|double <span class="smallblock">COLOR</span>
+
+(mPDF &gt;= 5.4)
+
 </td>
 </tr>
 <tr>
 <td>
-<p>border-color*, border-top-color, border-right-color, border-bottom-color, border-left-color</p>
+
+border-color*, border-top-color, border-right-color, border-bottom-color, border-left-color
+
 </td>
 <td>
-<p><span class="smallblock">COLOR</span></p>
-<p>(mPDF &gt;= 5.4)</p>
+
+<span class="smallblock">COLOR</span>
+
+(mPDF &gt;= 5.4)
+
 </td>
 </tr>
 <tr>
 <td>
-<p>border-width*, border-top-width, border-right-width, border-bottom-width, border-left-width</p>
+
+border-width*, border-top-width, border-right-width, border-bottom-width, border-left-width
+
 </td>
 <td>
-<p><span class="smallblock">LENGTH</span>&nbsp;</p>
+
+<span class="smallblock">LENGTH</span>&nbsp;
+
 (mPDF &gt;= 5.4)</td>
 </tr>
 <tr>
 <td>
-<p>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</p>
+
+border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style
+
 </td>
 <td>
-<p>solid|dotted|dashed|double</p>
-<p>(mPDF &gt;= 5.4)</p>
+
+solid|dotted|dashed|double
+
+(mPDF &gt;= 5.4)
+
 </td>
 </tr>
 <tr>
@@ -620,14 +826,19 @@ mPDF &gt;= 6.0</td>
 <tr>
 <td>visibility</td>
 <td>
-<p>hidden | visible | printonly | screenonly (default = visible)</p>
-<p>(mPDF &gt;= 5.7)</p>
+
+hidden | visible | printonly | screenonly (default = visible)
+
+(mPDF &gt;= 5.7)
+
 </td>
 </tr>
 <tr>
 <td>hyphens</td>
 <td>
-<p>none | manual | auto (default = manual)</p>
+
+none | manual | auto (default = manual)
+
 As per CSS. (mPDF&nbsp; &gt;= 5.7)</td>
 </tr>
 </tbody> </table>
@@ -646,13 +857,21 @@ As per CSS. (mPDF&nbsp; &gt;= 5.7)</td>
 <tr>
 <td>background, background-image, background-position, background-repeat, background-color</td>
 <td>
-<p>background is parsed as per the CSS specification.</p>
-<p>background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span>.</p>
-<p>background-position is supported as per CSS2.1</p>
-<p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
-<p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
-<p>(All except background-color added mPDF 5.1)</p>
+
+background is parsed as per the CSS specification.
+
+background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span>.
+
+background-position is supported as per CSS2.1
+
+background-repeat: repeat | repeat-x | repeat-y | no-repeat
+
+background-attachment is parsed but has no effect.
+
+See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
+(All except background-color added mPDF 5.1)
+
 </td>
 </tr>
 <tr>
@@ -664,8 +883,11 @@ As per CSS. (mPDF&nbsp; &gt;= 5.7)</td>
 <tr>
 <td><i>background-image-opacity</i></td>
 <td>
-<p>Value between 0 and 1.0</p>
-<p>Sets the opacity/transparency of the background image.</p>
+
+Value between 0 and 1.0
+
+Sets the opacity/transparency of the background image.
+
 </td>
 </tr>
 <tr>
@@ -676,40 +898,58 @@ As per CSS. (mPDF&nbsp; &gt;= 5.7)</td>
 </tr>
 <tr>
 <td>
-<p>border, border-right, border-left, border-top, border-bottom</p>
+
+border, border-right, border-left, border-top, border-bottom
+
 </td>
 <td>
-<p>Size style and colour e.g.</p>
+
+Size style and colour e.g.
+
 <span class="smallblock">LENGTH</span> double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none <span class="smallblock">COLOR</span>&nbsp;
-<p>NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | outset | groove | inset (other block elements only support solid | dotted | dashed | double)</p>
+
+NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | outset | groove | inset (other block elements only support solid | dotted | dashed | double)
+
 </td>
 </tr>
 <tr>
 <td>border-color*, border-top-color, border-right-color, border-bottom-color, border-left-color</td>
 <td>
-<p><span class="smallblock">COLOR</span></p>
-<p>(mPDF &gt;= 4.0)</p>
+
+<span class="smallblock">COLOR</span>
+
+(mPDF &gt;= 4.0)
+
 </td>
 </tr>
 <tr>
 <td>border-width*, border-top-width, border-right-width, border-bottom-width, border-left-width</td>
 <td>
-<p><span class="smallblock">LENGTH</span>&nbsp;</p>
+
+<span class="smallblock">LENGTH</span>&nbsp;
+
 (mPDF &gt;= 4.0)</td>
 </tr>
 <tr>
 <td>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</td>
 <td>
-<p>double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none</p>
-<p>(mPDF &gt;= 4.0)</p>
+
+double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none
+
+(mPDF &gt;= 4.0)
+
 </td>
 </tr>
 <tr>
 <td>padding*, padding-right, padding-left, padding-top, padding-bottom</td>
 <td>
-<p><span class="smallblock">LENGTH</span></p>
-<p>(mPDF &lt;= 1.3 incorrectly set cell-padding for all cells in table.)</p>
-<p>Sets table padding (only relevant when border-collapse:separate)</p>
+
+<span class="smallblock">LENGTH</span>
+
+(mPDF &lt;= 1.3 incorrectly set cell-padding for all cells in table.)
+
+Sets table padding (only relevant when border-collapse:separate)
+
 </td>
 </tr>
 <tr>
@@ -735,10 +975,15 @@ As per CSS. (mPDF&nbsp; &gt;= 5.7)</td>
 <tr>
 <td>border-spacing</td>
 <td>
-<p>Single or double values:</p>
-<p>2px sets horizontal and vertical;</p>
-<p>2px 3px sets horizontal=2 and vertical=3</p>
-<p>(Same as cellSpacing attribute) Default=2px</p>
+
+Single or double values:
+
+2px sets horizontal and vertical;
+
+2px 3px sets horizontal=2 and vertical=3
+
+(Same as cellSpacing attribute) Default=2px
+
 </td>
 </tr>
 <tr>
@@ -802,7 +1047,9 @@ Controls table layout if minimum width is too wide for page.</td>
 <td>rtl | ltr (mPDF &gt;= 5.1)</td>
 </tr>
 <tr> <th>
-<p>CAPTION</p>
+
+CAPTION
+
 </th>
 <td>caption-side</td>
 <td>top | bottom (mPDF &gt;= 5.4) Right and left are not supported
@@ -829,48 +1076,71 @@ Controls table layout if minimum width is too wide for page.</td>
 <tr>
 <td>background, background-image, background-position, background-repeat, background-color</td>
 <td>
-<p>background is parsed as per the CSS specification.</p>
-<p>background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span>.</p>
-<p>background-position is supported as per CSS2.1</p>
-<p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
-<p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
-<p>(All except background-color added mPDF 5.1)</p>
+
+background is parsed as per the CSS specification.
+
+background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span>.
+
+background-position is supported as per CSS2.1
+
+background-repeat: repeat | repeat-x | repeat-y | no-repeat
+
+background-attachment is parsed but has no effect.
+
+See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
+(All except background-color added mPDF 5.1)
+
 </td>
 </tr>
 <tr>
 <td><i>background-image-opacity</i></td>
 <td>
-<p>Value between 0 and 1.0</p>
-<p>Sets the opacity/transparency of the background image.</p>
+
+Value between 0 and 1.0
+
+Sets the opacity/transparency of the background image.
+
 </td>
 </tr>
 <tr>
 <td>border, border-right, border-left, border-top, border-bottom</td>
 <td>
-<p>Size style and colour e.g.</p>
+
+Size style and colour e.g.
+
 <span class="smallblock">LENGTH</span> double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none <span class="smallblock">COLOR</span>&nbsp;
-<p>NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none (other block elements only support solid | dotted | dashed | double)</p>
+
+NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none (other block elements only support solid | dotted | dashed | double)
+
 (mPDF &gt;= 5.1)</td>
 </tr>
 <tr>
 <td>border-color*, border-top-color, border-right-color, border-bottom-color, border-left-color</td>
 <td>
-<p><span class="smallblock">COLOR</span></p>
-<p>(mPDF &gt;= 5.1)</p>
+
+<span class="smallblock">COLOR</span>
+
+(mPDF &gt;= 5.1)
+
 </td>
 </tr>
 <tr>
 <td>border-width*, border-top-width, border-right-width, border-bottom-width, border-left-width</td>
 <td>
-<p><span class="smallblock">LENGTH</span>&nbsp;</p>
+
+<span class="smallblock">LENGTH</span>&nbsp;
+
 (mPDF &gt;= 5.1)</td>
 </tr>
 <tr>
 <td>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</td>
 <td>
-<p>double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none</p>
-<p>(mPDF &gt;= 5.1)</p>
+
+double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none
+
+(mPDF &gt;= 5.1)
+
 </td>
 </tr>
 <tr>
@@ -886,31 +1156,49 @@ As per CSS3 specification</td>
 <tr> <th rowspan="21">TD, TH</th>
 <td>background, background-image, background-position, background-repeat, background-color</td>
 <td>
-<p>background is parsed as per the CSS specification.</p>
-<p>background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).</p>
-<p>background-position is supported as per CSS2.1</p>
-<p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
-<p>background-attachment is parsed but has no effect.</p>
-<p>See note below.</p>
-<p>(All except background-color added mPDF 3.2)</p>
+
+background is parsed as per the CSS specification.
+
+background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).
+
+background-position is supported as per CSS2.1
+
+background-repeat: repeat | repeat-x | repeat-y | no-repeat
+
+background-attachment is parsed but has no effect.
+
+See note below.
+
+(All except background-color added mPDF 3.2)
+
 </td>
 </tr>
 <tr>
 <td><i>background-gradient</i></td>
 <td>
-<p>Defines a linear or radial colour gradient for the background.</p>
-<p>linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or</p>
-<p>radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;</p>
-<p>x, y and radius are values between 0 and 1</p>
-<p>(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
-<p>(Added mPDF 3.2)</p>
+
+Defines a linear or radial colour gradient for the background.
+
+linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or
+
+radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;
+
+x, y and radius are values between 0 and 1
+
+(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
+(Added mPDF 3.2)
+
 </td>
 </tr>
 <tr>
 <td><i>background-image-opacity</i></td>
 <td>
-<p>Value between 0 and 1.0</p>
-<p>Sets the opacity/transparency of the background image.</p>
+
+Value between 0 and 1.0
+
+Sets the opacity/transparency of the background image.
+
 </td>
 </tr>
 <tr>
@@ -931,38 +1219,54 @@ As per CSS3 specification</td>
 </tr>
 <tr>
 <td>
-<p>border, border-right, border-left, border-top, border-bottom</p>
+
+border, border-right, border-left, border-top, border-bottom
+
 </td>
 <td>
-<p>Size style and colour e.g.</p>
+
+Size style and colour e.g.
+
 <span class="smallblock">LENGTH</span> double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none <span class="smallblock">COLOR</span>&nbsp;
-<p>NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none (other block elements only support solid | dotted | dashed | double)</p>
+
+NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none (other block elements only support solid | dotted | dashed | double)
+
 </td>
 </tr>
 <tr>
 <td>border-color*, border-top-color, border-right-color, border-bottom-color, border-left-color</td>
 <td>
-<p><span class="smallblock">COLOR</span></p>
-<p>(mPDF &gt;= 4.0)</p>
+
+<span class="smallblock">COLOR</span>
+
+(mPDF &gt;= 4.0)
+
 </td>
 </tr>
 <tr>
 <td>border-width*, border-top-width, border-right-width, border-bottom-width, border-left-width</td>
 <td>
-<p><span class="smallblock">LENGTH</span>&nbsp;</p>
+
+<span class="smallblock">LENGTH</span>&nbsp;
+
 (mPDF &gt;= 4.0)</td>
 </tr>
 <tr>
 <td>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</td>
 <td>
-<p>double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none</p>
-<p>(mPDF &gt;= 4.0)</p>
+
+double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none
+
+(mPDF &gt;= 4.0)
+
 </td>
 </tr>
 <tr>
 <td>padding*, padding-right, padding-left, padding-top, padding-bottom</td>
 <td>
-<p><span class="smallblock">LENGTH</span></p>
+
+<span class="smallblock">LENGTH</span>
+
 </td>
 </tr>
 <tr>
@@ -990,11 +1294,17 @@ As per CSS3 specification</td>
 <tr>
 <td>text-align</td>
 <td>
-<p>left | right | center</p>
-<p>From mPDF 5.7, also supports a decimal-mark alignment followed by a default e.g.</p>
-<p>text-align: '.' center;</p>
-<p>Non-ASCII characters should be defined using Unicode values:</p>
-<p>text-align: '\66B' center;</p>
+
+left | right | center
+
+From mPDF 5.7, also supports a decimal-mark alignment followed by a default e.g.
+
+text-align: '.' center;
+
+Non-ASCII characters should be defined using Unicode values:
+
+text-align: '\66B' center;
+
 </td>
 </tr>
 <tr>
@@ -1020,7 +1330,9 @@ Default = consider-shifts</td>
 <tr>
 <td>hyphens<i>&nbsp;</i></td>
 <td>
-<p>none | manual | auto (default = manual)</p>
+
+none | manual | auto (default = manual)
+
 As per CSS. (mPDF&nbsp; &gt;= 5.7)</td>
 </tr>
 <tr>
@@ -1071,12 +1383,17 @@ As per CSS3 specification</td>
 <td>left|right|both</td>
 </tr>
 <tr> <th rowspan="18">
-<p>IMG</p>
+
+IMG
+
 </th>
 <td>vertical-align</td>
 <td>
-<p>top|middle|bottom|baseline|text-bottom|text-top</p>
-<p>(Full support only from mPDF 4.2)</p>
+
+top|middle|bottom|baseline|text-bottom|text-top
+
+(Full support only from mPDF 4.2)
+
 </td>
 </tr>
 <tr>
@@ -1086,11 +1403,17 @@ As per CSS3 specification</td>
 <tr>
 <td>border, border-right, border-left, border-top, border-bottom</td>
 <td>
-<p>Must be full declaration of size style and colour e.g.</p>
-<p>0.1pt solid|dotted|dashed #cccccc</p>
-<p>Will also accept #cccccc 0.1pt solid (which is generated by IE WYSIWYG editor)</p>
-<p>and (from mPDF 1.4) solid 3mm #000000</p>
-<p>medium | thin | thick accepted for size</p>
+
+Must be full declaration of size style and colour e.g.
+
+0.1pt solid|dotted|dashed #cccccc
+
+Will also accept #cccccc 0.1pt solid (which is generated by IE WYSIWYG editor)
+
+and (from mPDF 1.4) solid 3mm #000000
+
+medium | thin | thick accepted for size
+
 </td>
 </tr>
 <tr>
@@ -1104,9 +1427,13 @@ As per CSS3 specification</td>
 <tr>
 <td>opacity</td>
 <td>
-<p>Value between 0 and 1.0</p>
-<p>CSS3 recommended property (but already supported by FireFox)</p>
-<p>Sets the opacity/transparency of the image.</p>
+
+Value between 0 and 1.0
+
+CSS3 recommended property (but already supported by FireFox)
+
+Sets the opacity/transparency of the image.
+
 </td>
 </tr>
 <tr>
@@ -1124,16 +1451,21 @@ As per CSS3 specification</td>
 
 </td>
 <td>
-<p>auto | crisp-edges | optimizequality | smooth&nbsp; (as per draft CSS3)</p>
-<p>(mPDF &gt;= 6.0)</p>
-<p>Controls whether interpolation is on or off in PDF document. Once set for an image, subsequent use of the same image will use the initial setting for this property.</p>
-<p>auto (default) - uses the value set by config variable: $interpolateImages
+
+auto | crisp-edges | optimizequality | smooth&nbsp; (as per draft CSS3)
+
+(mPDF &gt;= 6.0)
+
+Controls whether interpolation is on or off in PDF document. Once set for an image, subsequent use of the same image will use the initial setting for this property.
+
+auto (default) - uses the value set by config variable: $interpolateImages
 
 crisp-edges - interpolation disabled
 
 optimizequality - interpolation enabled
 
-smooth - interpolation enabled</p>
+smooth - interpolation enabled
+
 </td>
 </tr>
 <tr>
@@ -1151,12 +1483,19 @@ smooth - interpolation enabled</p>
 <tr>
 <td>transform</td>
 <td>
-<p>All CSS3 transform functions are supported except matrix() i.e.</p>
-<p>translate(), translateX(), translateY()</p>
-<p>skew(), skewX(), skewY()</p>
-<p>scale(), scaleX(), scaleY()</p>
-<p>rotate()</p>
-<p>cf. <a href="http://www.w3.org/TR/css3-transforms/#typedef-transform-function">http://www.w3.org/TR/css3-transforms/#typedef-transform-function</a></p>
+
+All CSS3 transform functions are supported except matrix() i.e.
+
+translate(), translateX(), translateY()
+
+skew(), skewX(), skewY()
+
+scale(), scaleX(), scaleY()
+
+rotate()
+
+cf. <a href="http://www.w3.org/TR/css3-transforms/#typedef-transform-function">http://www.w3.org/TR/css3-transforms/#typedef-transform-function</a>
+
 </td>
 </tr>
 <tr>
@@ -1188,7 +1527,9 @@ smooth - interpolation enabled</p>
 </td>
 </tr>
 <tr> <th rowspan="3">
-<p>SELECT</p>
+
+SELECT
+
 </th>
 <td>font-family</td>
 <td><span class="smallblock">FONT-FAMILY</span></td>
@@ -1220,8 +1561,11 @@ smooth - interpolation enabled</p>
 <tr>
 <td>vertical-align</td>
 <td>
-<p>top|middle|bottom|baseline|text-bottom|text-top</p>
-<p>(Full support only from mPDF 4.2)</p>
+
+top|middle|bottom|baseline|text-bottom|text-top
+
+(Full support only from mPDF 4.2)
+
 </td>
 </tr>
 <tr>
@@ -1307,33 +1651,47 @@ smooth - interpolation enabled</p>
 <td><span class="smallblock">LENGTH</span>. (mPDF &gt;= 5.7)</td>
 </tr>
 <tr> <th rowspan="4">
-<p>@page</p>
-<p>@page &lt;named&gt;&nbsp;</p>
+
+@page
+
+@page &lt;named&gt;&nbsp;
+
 </th>
 <td>size</td>
 <td>
-<p>&lt;length&gt;{1,2} | auto | portrait | landscape
+
+&lt;length&gt;{1,2} | auto | portrait | landscape
 
 Note: 'em' 'ex' and % are not allowed
 
-Length values are width and height e.g. size: 8.5in 11in; or one value for a square.</p>
-<p>Sets the size of the 'page-box', which is usually used with a constant size sheet through the document, as in the CSS2 @paged media spec.</p>
+Length values are width and height e.g. size: 8.5in 11in; or one value for a square.
+
+Sets the size of the 'page-box', which is usually used with a constant size sheet through the document, as in the CSS2 @paged media spec.
+
 </td>
 </tr>
 <tr>
 <td>sheet-size</td>
 <td>
-<p>&lt;length&gt;{2} | A4 | A4-L etc.</p>
-<p>Note: 'em' 'ex' and % are not allowed</p>
-<p>Length values are width and height e.g. size: 8.5in 11in; Any of the standard sheet sizes can be used (as for mPDF() ) with the suffix '-L' for landscape</p>
+
+&lt;length&gt;{2} | A4 | A4-L etc.
+
+Note: 'em' 'ex' and % are not allowed
+
+Length values are width and height e.g. size: 8.5in 11in; Any of the standard sheet sizes can be used (as for mPDF() ) with the suffix '-L' for landscape
+
 </td>
 </tr>
 <tr>
 <td>odd-header-name, even-header-name, odd-footer-name, even-footer-name</td>
 <td>
-<p>A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">html_</span></p>
-<p>NB This was the original form, and still takes preference over header and footer which can be set using the pseudo-selectors e.g. :right</p>
-<p>The name <i>_default</i> can be used to allow the current non-HTML header to remain unchanged (mPDF &gt;= 5.1)</p>
+
+A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">html_</span>
+
+NB This was the original form, and still takes preference over header and footer which can be set using the pseudo-selectors e.g. :right
+
+The name <i>_default</i> can be used to allow the current non-HTML header to remain unchanged (mPDF &gt;= 5.1)
+
 </td>
 </tr>
 <tr>
@@ -1341,18 +1699,27 @@ Length values are width and height e.g. size: 8.5in 11in; or one value for a squ
 <td><span class="smallblock">LENGTH</span> (% refers to page-box width for left/right, of height for top/bottom)</td>
 </tr>
 <tr> <th rowspan="11">
-<p>@page&nbsp;&nbsp;</p>
-<p>@page :right</p>
-<p>@page :left</p>
-<p>@page :first</p>
-<p>@page &lt;named&gt;</p>
+
+@page&nbsp;&nbsp;
+
+@page :right
+
+@page :left
+
+@page :first
+
+@page &lt;named&gt;
 
 </th>
 <td>margin-top, margin-bottom</td>
 <td>
-<p><span class="smallblock">LENGTH</span> (% refers to page-box width for left/right, of height for top/bottom)</p>
-<p>Note that left and right margins cannot be changed when using a page selector.</p>
-<p>@page :first is not recognised unless @page has been set with some CSS properties</p>
+
+<span class="smallblock">LENGTH</span> (% refers to page-box width for left/right, of height for top/bottom)
+
+Note that left and right margins cannot be changed when using a page selector.
+
+@page :first is not recognised unless @page has been set with some CSS properties
+
 </td>
 </tr>
 <tr>
@@ -1366,8 +1733,11 @@ margin-footer</i></td>
 
 </td>
 <td>
-<p>crop | cross | none</p>
-<p>From mPDF 5.1 crop and cross can be used together.</p>
+
+crop | cross | none
+
+From mPDF 5.1 crop and cross can be used together.
+
 </td>
 </tr>
 <tr>
@@ -1377,19 +1747,29 @@ margin-footer</i></td>
 <tr>
 <td>background, background-image, background-position, background-repeat, background-color</td>
 <td>
-<p>background is parsed as per the CSS specification.</p>
-<p>background-image in the form url(image.png) or url('image.png') supported.</p>
-<p>background-position is supported as per CSS2.1</p>
-<p>background-repeat: repeat | repeat-x | repeat-y | no-repeat</p>
-<p>background-attachment is parsed but has no effect.</p>
-<p>See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
+
+background is parsed as per the CSS specification.
+
+background-image in the form url(image.png) or url('image.png') supported.
+
+background-position is supported as per CSS2.1
+
+background-repeat: repeat | repeat-x | repeat-y | no-repeat
+
+background-attachment is parsed but has no effect.
+
+See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
 </td>
 </tr>
 <tr>
 <td><i>background-image-opacity</i></td>
 <td>
-<p>Value between 0 and 1.0</p>
-<p>Sets the opacity/transparency of the background image.</p>
+
+Value between 0 and 1.0
+
+Sets the opacity/transparency of the background image.
+
 </td>
 </tr>
 <tr>
@@ -1413,11 +1793,17 @@ margin-footer</i></td>
 <tr>
 <td><i>background-gradient</i></td>
 <td>
-<p>Defines a linear or radial colour gradient for the background.</p>
-<p>linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or</p>
-<p>radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;</p>
-<p>x, y and radius are values between 0 and 1</p>
-<p>(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</p>
+
+Defines a linear or radial colour gradient for the background.
+
+linear <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or
+
+radial <span class="smallblock">COLOR1 </span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;
+
+x, y and radius are values between 0 and 1
+
+(custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+
 </td>
 </tr>
 <tr>
@@ -1433,7 +1819,9 @@ margin-footer</i></td>
 <td>on | off | 1 | 0&nbsp; See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for details</td>
 </tr>
 </tbody> </table>
-<p><b>Common Text Styles</b></p>
+
+<b>Common Text Styles</b>
+
 <table class="table"> <tbody>
 <tr>
 <td rowspan="25">COMMON TEXT STYLES</td>
@@ -1443,7 +1831,9 @@ margin-footer</i></td>
 <tr>
 <td>font-size</td>
 <td>
-<p><span class="smallblock">FONT-SIZE</span></p>
+
+<span class="smallblock">FONT-SIZE</span>
+
 </td>
 </tr>
 <tr>
@@ -1461,7 +1851,8 @@ margin-footer</i></td>
 <tr>
 <td>font-variant</td>
 <td>
-<p>normal | none | [ &lt;common-lig-values&gt; 
+
+normal | none | [ &lt;common-lig-values&gt; 
 
  &lt;discretionary-lig-values&gt; 
 
@@ -1481,8 +1872,10 @@ margin-footer</i></td>
 
  ordinal 
 
- slashed-zero ]</p>
-<p>(mPDF &gt;= 6.0)</p>
+ slashed-zero ]
+
+(mPDF &gt;= 6.0)
+
 </td>
 </tr>
 <tr>
@@ -1490,41 +1883,52 @@ margin-footer</i></td>
 
 </td>
 <td>
-<p>normal | sub | super</p>
-<p>(mPDF &gt;= 6.0)</p>
+
+normal | sub | super
+
+(mPDF &gt;= 6.0)
+
 </td>
 </tr>
 <tr>
 <td>font-variant-caps</td>
 <td>
-<p>normal | small-caps | all-small-caps | petite-caps | all-petite-caps | unicase | titling-caps</p>
-<p>(mPDF &gt;= 6.0)</p>
+
+normal | small-caps | all-small-caps | petite-caps | all-petite-caps | unicase | titling-caps
+
+(mPDF &gt;= 6.0)
+
 </td>
 </tr>
 <tr>
 <td>font-variant-ligatures</td>
 <td>
-<p>normal | none | [ &lt;common-lig-values&gt; 
+
+normal | none | [ &lt;common-lig-values&gt; 
 
  &lt;discretionary-lig-values&gt; 
 
  &lt;historical-lig-values&gt; 
 
- &lt;contextual-alt-values&gt; ]</p>
-<p>(mPDF &gt;= 6.0)</p>
-<p>&lt;common-lig-values&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = [ common-ligatures | no-common-ligatures ]
+ &lt;contextual-alt-values&gt; ]
+
+(mPDF &gt;= 6.0)
+
+&lt;common-lig-values&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = [ common-ligatures | no-common-ligatures ]
 
 &lt;discretionary-lig-values&gt; = [ discretionary-ligatures | no-discretionary-ligatures ]
 
 &lt;historical-lig-values&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; = [ historical-ligatures | no-historical-ligatures ]
 
-&lt;contextual-alt-values&gt;&nbsp;&nbsp;&nbsp; = [ contextual | no-contextual ]</p>
+&lt;contextual-alt-values&gt;&nbsp;&nbsp;&nbsp; = [ contextual | no-contextual ]
+
 </td>
 </tr>
 <tr>
 <td>font-variant-numeric</td>
 <td>
-<p>normal | [ &lt;numeric-figure-values&gt; 
+
+normal | [ &lt;numeric-figure-values&gt; 
 
  &lt;numeric-spacing-values&gt; 
 
@@ -1532,37 +1936,52 @@ margin-footer</i></td>
 
  ordinal 
 
- slashed-zero ]</p>
-<p>(mPDF &gt;= 6.0)</p>
+ slashed-zero ]
+
+(mPDF &gt;= 6.0)
+
 </td>
 </tr>
 <tr>
 <td>font-variant-alternates</td>
 <td>
-<p>Only [normal | historical-forms] supported (i.e. most are NOT supported)</p>
-<p>(mPDF &gt;= 6.0)</p>
+
+Only [normal | historical-forms] supported (i.e. most are NOT supported)
+
+(mPDF &gt;= 6.0)
+
 </td>
 </tr>
 <tr>
 <td>font-language-override</td>
 <td>3-letter case-sensitive OpenType language system tag
-<p>(mPDF &gt;= 6.0)</p>
+
+(mPDF &gt;= 6.0)
+
 </td>
 </tr>
 <tr>
 <td>font-feature-settings</td>
 <td>
-<p>Comma separated list of &lt;feature-tag-value&gt; with the following syntax:</p>
-<p>&lt;feature-tag-value&gt; = &lt;string&gt; [ &lt;integer&gt; | on | off ]?</p>
-<p>(mPDF &gt;= 6.0)</p>
+
+Comma separated list of &lt;feature-tag-value&gt; with the following syntax:
+
+&lt;feature-tag-value&gt; = &lt;string&gt; [ &lt;integer&gt; | on | off ]?
+
+(mPDF &gt;= 6.0)
+
 </td>
 </tr>
 <tr>
 <td>font-kerning</td>
 <td>
-<p>auto | normal | none (mPDF &gt;= 5.1)</p>
-<p>auto and normal both have the effect of turning kerning on, as long as</p>
-<p><code>$mpdf-&gt;useKerning = true;</code></p>
+
+auto | normal | none (mPDF &gt;= 5.1)
+
+auto and normal both have the effect of turning kerning on, as long as
+
+<code>$mpdf-&gt;useKerning = true;</code>
+
 </td>
 </tr>
 <tr>
@@ -1584,8 +2003,11 @@ margin-footer</i></td>
 <tr>
 <td>text-decoration</td>
 <td>
-<p>underline | line-through | normal (line-through = strike-through)&nbsp; (mPDF &gt;= 5.4)</p>
-<p>overline&nbsp; (mPDF &gt;= 5.7.3)</p>
+
+underline | line-through | normal (line-through = strike-through)&nbsp; (mPDF &gt;= 5.4)
+
+overline&nbsp; (mPDF &gt;= 5.7.3)
+
 </td>
 </tr>
 <tr>
@@ -1615,7 +2037,9 @@ As per CSS3
 <tr>
 <td>text-shadow</td>
 <td>
-<p>As per CSS3 specification. 'blur' is not supported.&nbsp; (mPDF &gt;= 5.4)</p>
+
+As per CSS3 specification. 'blur' is not supported.&nbsp; (mPDF &gt;= 5.4)
+
 </td>
 </tr>
 <tr>
@@ -1625,28 +2049,40 @@ As per CSS3
 <tr>
 <td>unicode-bidi</td>
 <td>
-<p>normal | embed | isolate | bidi-override | isolate-override | plaintext</p>
-<p>(mPDF &gt;= 6.0)</p>
-<p>When used on block-level elements:</p>
-<p>- the value is not inherited to child blocks
+
+normal | embed | isolate | bidi-override | isolate-override | plaintext
+
+(mPDF &gt;= 6.0)
+
+When used on block-level elements:
+
+- the value is not inherited to child blocks
 
 - using "embed" or "isolate" has no effect on block level-boxes
 
-- "isolate-override" is equivalent to "bidi-override" on block-level boxes</p>
+- "isolate-override" is equivalent to "bidi-override" on block-level boxes
+
 </td>
 </tr>
 </tbody> </table>
-<p><b>Notes:</b></p>
-<p>* Margin, padding, border-width, border-color and border-style accept the various shorthand forms e.g.:</p>
-<p>margin:1pt; will set all top, right, bottom and left values the same</p>
-<p>margin:1pt 2pt; will set top and bottom to 1pt, left and right to 2pt</p>
-<p>margin:1pt 2pt 3pt; will set top to 1pt, left and right to 2pt, and bottom to 3pt (mPDF &gt;= 4.0)</p>
-<p>margin:1pt 2pt 3pt 4pt; will set all values in order: top&gt;right&gt;bottom&gt;left</p>
-<p>NB Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</p>
+
+<b>Notes:</b>
+
+* Margin, padding, border-width, border-color and border-style accept the various shorthand forms e.g.:
+
+margin:1pt; will set all top, right, bottom and left values the same
+
+margin:1pt 2pt; will set top and bottom to 1pt, left and right to 2pt
+
+margin:1pt 2pt 3pt; will set top to 1pt, left and right to 2pt, and bottom to 3pt (mPDF &gt;= 4.0)
+
+margin:1pt 2pt 3pt 4pt; will set all values in order: top&gt;right&gt;bottom&gt;left
+
+NB Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables
 
 ## Border
 
-<p>medium|thin|thick are accepted for size - converted to 1px, 3px, 5px</p>
+medium|thin|thick are accepted for size - converted to 1px, 3px, 5px
 
 # See Also
 

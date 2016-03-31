@@ -6,28 +6,31 @@ permalink: /reference/mpdf-variables/showwatermarktext.html
 modification_time: 2015-08-05T12:02:27+00:00
 ---
 
-<p>(mPDF &gt;= 2.2)</p>
+(mPDF &gt;= 2.2)
 
 # Description
 
-<p class="manual_block">boolean <b>showWatermarkText</b></p>
-<p>Specifies whether or not to show/print the watermark text on each page. The text for the watermark must be defined using <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a>. The watermark is added to the document at the end of each page.</p>
+boolean <b>showWatermarkText</b>
+
+Specifies whether or not to show/print the watermark text on each page. The text for the watermark must be defined using <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a>. The watermark is added to the document at the end of each page.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This superceded TopicIsUnvalidated in mPDF 2.2 as an alias, and is now the preferred form.</div>
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">showWatermarkText</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span></p>
-<p class="manual_param_dd">If <span class="parameter">showWatermarkText</span> is <span class="smallblock">TRUE</span> or 1 the watermark text will be added to each page of the document.
+<span class="parameter">showWatermarkText</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span>
 
-The value can be changed during the document to turn the watermark on and off on different pages.</p>
-<p class="manual_param_dd"><b>Values</b>
+If <span class="parameter">showWatermarkText</span> is <span class="smallblock">TRUE</span> or 1 the watermark text will be added to each page of the document.
+
+The value can be changed during the document to turn the watermark on and off on different pages.
+
+<b>Values</b>
 
 <span class="smallblock">TRUE</span>: Show/print the watermark text
 
 <span class="smallblock"><i>FALSE</i></span>: <span class="smallblock">DEFAULT</span> Do not show/print the watermark text
 
-Values of 1 or 0 can also be used</p>
+Values of 1 or 0 can also be used
 
 # Changelog
 
@@ -55,7 +58,9 @@ $mpdf->SetWatermarkText('DRAFT');
 
 $mpdf->showWatermarkText = true;
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 // As showWatermark is true when the first page is finished, a watermark is added
 
@@ -65,7 +70,9 @@ $mpdf->AddPage();
 
 $mpdf->showWatermarkText = false;
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 ?>
 {% endhighlight %}

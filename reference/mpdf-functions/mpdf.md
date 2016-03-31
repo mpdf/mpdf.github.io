@@ -6,21 +6,25 @@ permalink: /reference/mpdf-functions/mpdf.html
 modification_time: 2015-08-05T12:00:37+00:00
 ---
 
-<p>(mPDF &gt;= 5.0)</p>
-<p>mPDF – Initialise an instance of mPDF class</p>
+(mPDF &gt;= 5.0)
+
+mPDF – Initialise an instance of mPDF class
 
 # Description
 
-<p class="manual_block">class <b>mPDF</b> ([ string <span class="parameter">$mode</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])</p>
-<p>Initialise an instance of mPDF class.</p>
+class <b>mPDF</b> ([ string <span class="parameter">$mode</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])
+
+Initialise an instance of mPDF class.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">mode</span></p>
-<p class="manual_param_dd">This parameter specifies the mode of the new document.
+<span class="parameter">mode</span>
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span></p>
-<p class="manual_param_dd"><b>Codepage Values</b> (case-insensitive)
+This parameter specifies the mode of the new document.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+
+<b>Codepage Values</b> (case-insensitive)
 
 <span class="smallblock">BLANK</span>
 
@@ -34,28 +38,34 @@ modification_time: 2015-08-05T12:00:37+00:00
 
 "...-aCJK" or "-aCJK"
 
-where ... can be any string. Only language/country codes will have any effect, but other strings are parsed for backwards compatability (but have no effect).</p>
-<p class="manual_param_dd">Only some combinations make sense. See <a href="{{ "/fonts-languages/choosing-a-configuration-v5-x.html" | prepend: site.baseurl }}">Choosing a configuration</a> for more details.</p>
-<p class="manual_param_dd"><b>Country/Language code values</b> (case-insensitive)
+where ... can be any string. Only language/country codes will have any effect, but other strings are parsed for backwards compatability (but have no effect).
+
+Only some combinations make sense. See <a href="{{ "/fonts-languages/choosing-a-configuration-v5-x.html" | prepend: site.baseurl }}">Choosing a configuration</a> for more details.
+
+<b>Country/Language code values</b> (case-insensitive)
 
 Country/language codes are defined in <span class="filename">config_cp.php</span>
 
 A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"<i><b>
 
-</b></i></p>
+</b></i>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If the <span class="parameter">mode</span> is set by passing a country/language string, this may also set: available fonts, text justification, and directionality <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (as determined by <span class="filename">config_cp.php</span>)</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a></div>
 <ul> </li>
 </ul>
-<p class="manual_param_dt"><span class="parameter">format</span></p>
+
+<span class="parameter">format</span>
+
 <ul> </li>
 </ul>
-<p class="manual_param_dd"><span class="parameter">format</span> can be specified either as a pre-defined page size, or as an array of width and height in millimetres (see Example #2 below).
 
-<span class="smallblock">DEFAULT</span>: "A4"</p>
-<p class="manual_param_dd"><b>Values</b> (case-insensitive)
+<span class="parameter">format</span> can be specified either as a pre-defined page size, or as an array of width and height in millimetres (see Example #2 below).
+
+<span class="smallblock">DEFAULT</span>: "A4"
+
+<b>Values</b> (case-insensitive)
 
 A0 - A10, B0 - B10, C0 - C10
 
@@ -69,22 +79,30 @@ A (Type A paperback 111x178mm)
 
 B (Type B paperback 128x198mm)
 
-Ledger, Tabloid*</p>
-<p class="manual_param_dd">All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L". 
+Ledger, Tabloid*
 
-If <span class="parameter">format</span> is defined as a string, the final <span class="parameter">orientation</span> parameter will be ignored.</p>
-<p class="manual_param_dd">*Ledger and Tabloid are standard formats with the same page size but different orientation (Ledger is landscape, and Tabloid is portrait). mPDF treats these identically; if you wish to use Ledger, you should specify "Ledger-L" for landscape.</p>
-<p class="manual_param_dt"><span class="parameter">default_font_size</span></p>
-<p class="manual_param_dd">Sets the default document font size in <b><i>points</i></b> (pt)
+All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L". 
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the default value set in <span class="parameter">defaultCSS</span>.</p>
-<p class="manual_param_dt"><span class="parameter">default_font</span></p>
+If <span class="parameter">format</span> is defined as a string, the final <span class="parameter">orientation</span> parameter will be ignored.
+
+*Ledger and Tabloid are standard formats with the same page size but different orientation (Ledger is landscape, and Tabloid is portrait). mPDF treats these identically; if you wish to use Ledger, you should specify "Ledger-L" for landscape.
+
+<span class="parameter">default_font_size</span>
+
+Sets the default document font size in <b><i>points</i></b> (pt)
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the default value set in <span class="parameter">defaultCSS</span>.
+
+<span class="parameter">default_font</span>
+
 <ul> </li>
 </ul>
-<p class="manual_param_dd">Sets the default font-family for the new document.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses default value set in <span class="parameter">defaultCSS</span> unless <span class="parameter">codepage</span> has been set to "win-1252". If <span class="parameter">codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. Helvetica, Times, or Courier.</p>
-<p class="manual_param_dt"><span class="parameter">margin_left</span>
+Sets the default font-family for the new document.
+
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses default value set in <span class="parameter">defaultCSS</span> unless <span class="parameter">codepage</span> has been set to "win-1252". If <span class="parameter">codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. Helvetica, Times, or Courier.
+
+<span class="parameter">margin_left</span>
 
 <span class="parameter">margin_right</span>
 
@@ -94,15 +112,17 @@ If <span class="parameter">format</span> is defined as a string, the final <span
 
 <span class="parameter">margin_header</span>
 
-<span class="parameter">margin_footer</span></p>
-<p class="manual_param_dd">Sets the page margins for the new document.
+<span class="parameter">margin_footer</span>
+
+Sets the page margins for the new document.
 
 All values should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
 If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values specified will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses the default values.</p>
-<p class="manual_param_dd"><span class="smallblock">DEFAULT</span> <b>Values</b>
+<span class="smallblock">BLANK</span>&nbsp;or omitted uses the default values.
+
+<span class="smallblock">DEFAULT</span> <b>Values</b>
 
 <span class="parameter">margin_left</span> 15
 
@@ -114,18 +134,22 @@ If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the
 
 <span class="parameter">margin_header</span> 9
 
-<span class="parameter">margin_footer</span> 9</p>
-<p class="manual_param_dt"><span class="parameter">orientation</span></p>
+<span class="parameter">margin_footer</span> 9
+
+<span class="parameter">orientation</span>
+
 <ul> </li>
 </ul>
-<p class="manual_param_dd">This attribute specifies the default page orientation of the new document if <span class="parameter">format</span> is defined as an array. This value will be ignored if <span class="parameter">format</span> is a string value.
 
-<span class="smallblock">DEFAULT</span>: "P"</p>
-<p class="manual_param_dd"><b>Values</b> (case-insensitive)
+This attribute specifies the default page orientation of the new document if <span class="parameter">format</span> is defined as an array. This value will be ignored if <span class="parameter">format</span> is a string value.
+
+<span class="smallblock">DEFAULT</span>: "P"
+
+<b>Values</b> (case-insensitive)
 
 <i>P:</i> <span class="smallblock">DEFAULT</span> Portrait
 
-L: Landscape</p>
+L: Landscape
 
 # Changelog
 
@@ -155,7 +179,9 @@ include("../mpdf.php");
 
 $mpdf=new mPDF();
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->Output('filename.pdf');
 

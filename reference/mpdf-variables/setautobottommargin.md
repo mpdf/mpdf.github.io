@@ -6,17 +6,19 @@ permalink: /reference/mpdf-variables/setautobottommargin.html
 modification_time: 2015-08-05T12:02:24+00:00
 ---
 
-<p>(mPDF &gt;= 4.0)</p>
+(mPDF &gt;= 4.0)
 
 # Description
 
-<p class="manual_block">mixed <b>setAutoBottomMargin</b></p>
-<p>Specify the behaviour defining the bottom-margin of the document. When <span class="parameter"></span><span class="parameter">setAutoBottomMargin</span> is set to 'stretch' then <span class="parameter">autoMarginPadding</span> defines the minimum distance in mm that will be forced between the top of the footer and the bottom of the main text.</p>
+mixed <b>setAutoBottomMargin</b>
+
+Specify the behaviour defining the bottom-margin of the document. When <span class="parameter"></span><span class="parameter">setAutoBottomMargin</span> is set to 'stretch' then <span class="parameter">autoMarginPadding</span> defines the minimum distance in mm that will be forced between the top of the footer and the bottom of the main text.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">setAutoBottomMargin</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">setAutoBottomMargin</span>
+
+<b>Values</b>
 
 pad - the value for margin-bottom is used to set a fixed distance in mm (padding) between the top of the footer and the bottom of the main text
 
@@ -24,7 +26,7 @@ stretch -&nbsp; margin-bottom sets a <b>minimum</b> distance in mm between the b
 
 <span class="smallblock">FALSE</span> - the defined value for margin-bottom is respected even if the footer overlaps the main body of the document.
 
-<span class="smallblock">DEFAULT</span> <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span> <span class="smallblock">FALSE</span>
 
 # See Also
 

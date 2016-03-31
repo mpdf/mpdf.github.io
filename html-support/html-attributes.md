@@ -8,10 +8,13 @@ modification_time: 2015-08-05T11:59:42+00:00
 
 # HTML tag Attributes (in-line) supported
 
-<p>Example of an HTML attribute: &lt;div <span class="parameter">align</span>="center"&gt;</p>
-<p>mPDF supports attribute values in single or double quotes e.g. &lt;div align="center"&gt; or &lt;div align='center'&gt;</p>
-<p>Minimised attributes are not supported e.g. &lt;input type="checkbox" <i>disabled</i> /&gt;</p>
-<p>XHTML specification is recommended for best compliance with mPDF.</p>
+Example of an HTML attribute: &lt;div <span class="parameter">align</span>="center"&gt;
+
+mPDF supports attribute values in single or double quotes e.g. &lt;div align="center"&gt; or &lt;div align='center'&gt;
+
+Minimised attributes are not supported e.g. &lt;input type="checkbox" <i>disabled</i> /&gt;
+
+XHTML specification is recommended for best compliance with mPDF.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The attributes <span class="parameter">class</span>, <span class="parameter">id</span> and <span class="parameter">style</span> are supported on most HTML tags: see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.</div>
 <table class="table"> <tbody>
@@ -58,17 +61,25 @@ modification_time: 2015-08-05T11:59:42+00:00
 <tr>
 <td>align</td>
 <td>
-<p>left | center | right | char</p>
-<p>char was added in mPDF 5.7</p>
+
+left | center | right | char
+
+char was added in mPDF 5.7
+
 </td>
 </tr>
 <tr>
 <td>char</td>
 <td>
-<p>Used in conjunction with align="char". Default if omitted is period "."</p>
-<p>Non-ASCII characters can be defined with HTML entities e.g. &amp;middot; or &amp;#183;</p>
-<p>As per HTML 4 spec.</p>
-<p>Added mPDF 5.7</p>
+
+Used in conjunction with align="char". Default if omitted is period "."
+
+Non-ASCII characters can be defined with HTML entities e.g. &amp;middot; or &amp;#183;
+
+As per HTML 4 spec.
+
+Added mPDF 5.7
+
 </td>
 </tr>
 <tr>
@@ -92,8 +103,11 @@ modification_time: 2015-08-05T11:59:42+00:00
 <tr>
 <td><i>autosize</i></td>
 <td>
-<p><span class="smallblock">FLOAT</span>&nbsp; value &gt;= 0</p>
-<p>Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be &gt;=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom attribute)</p>
+
+<span class="smallblock">FLOAT</span>&nbsp; value &gt;= 0
+
+Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be &gt;=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom attribute)
+
 </td>
 </tr>
 <tr>
@@ -177,9 +191,13 @@ modification_time: 2015-08-05T11:59:42+00:00
 <tr>
 <td><i>rotate</i></td>
 <td>
-<p>90 | -90 | 180</p>
-<p>90 = clockwise</p>
-<p>When width is specified e.g. width="3cm" this is applied to the rotated image i.e. will be width 3cm after rotating</p>
+
+90 | -90 | 180
+
+90 = clockwise
+
+When width is specified e.g. width="3cm" this is applied to the rotated image i.e. will be width 3cm after rotating
+
 </td>
 </tr>
 <tr>
@@ -260,9 +278,13 @@ modification_time: 2015-08-05T11:59:42+00:00
 <tr>
 <td>name</td>
 <td>
-<p><span class="smallblock">TEXT</span>&nbsp;&nbsp;</p>
-<p>Field names in Active Forms must only contain letters, numbers, colon(:), undersore(_) or hyphen(-).</p>
-<p>(This is largely as per HTML spec, but cannot contain period(.) as this is part of PDF spec for name heirarchies)</p>
+
+<span class="smallblock">TEXT</span>&nbsp;&nbsp;
+
+Field names in Active Forms must only contain letters, numbers, colon(:), undersore(_) or hyphen(-).
+
+(This is largely as per HTML spec, but cannot contain period(.) as this is part of PDF spec for name heirarchies)
+
 </td>
 </tr>
 <tr>
@@ -285,14 +307,19 @@ size = n rows visible. Default=1
 <tr>
 <td>spellcheck</td>
 <td>
-<p>true | false [HTML5] Default=false (mPDF &gt;= 5.3)</p>
+
+true | false [HTML5] Default=false (mPDF &gt;= 5.3)
+
 Only if also editable and size=1</td>
 </tr>
 <tr>
 <td>editable</td>
 <td>
-<p>editable&nbsp; [HTML5] Default=false (mPDF &gt;= 5.3)</p>
-<p>Only if size=1</p>
+
+editable&nbsp; [HTML5] Default=false (mPDF &gt;= 5.3)
+
+Only if size=1
+
 </td>
 </tr>
 <tr>
@@ -344,7 +371,9 @@ Only if also editable and size=1</td>
 <tr>
 <td>spellcheck</td>
 <td>
-<p>true | false [HTML5] Default=false (mPDF &gt;= 5.3)</p>
+
+true | false [HTML5] Default=false (mPDF &gt;= 5.3)
+
 </td>
 </tr>
 <tr>
@@ -368,8 +397,11 @@ Only if also editable and size=1</td>
 <td>INPUT (button, submit, reset)</td>
 <td><i>noprint</i></td>
 <td>
-<p>noprint</p>
-<p>(mPDF &gt;= 5.3)</p>
+
+noprint
+
+(mPDF &gt;= 5.3)
+
 </td>
 </tr>
 <tr>
@@ -387,7 +419,9 @@ Only if also editable and size=1</td>
 <tr>
 <td>METER</td>
 <td>
-<p>value, max, min, low, high, optimum</p>
+
+value, max, min, low, high, optimum
+
 </td>
 <td><span class="smallblock">FLOAT</span>
 
@@ -412,7 +446,8 @@ Only if also editable and size=1</td>
 <td>Any alphanumeric string. If present, will select custom progress/meter formats - IF they have been defined by the user by editing script <span class="filename">classes/meter.php</span></td>
 </tr>
 </tbody> </table>
-<p>* <span class="parameter">lang</span> is only recognised when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)</p>
+
+* <span class="parameter">lang</span> is only recognised when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</div>
 

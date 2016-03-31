@@ -9,9 +9,9 @@ modification_time: 2015-08-05T12:00:23+00:00
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This is an alternative method to the one in <a href="{{ "/what-else-can-i-do/math-formulae-with-mathjax.html" | prepend: site.baseurl }}">Math Formulae with MathJax</a></div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This version has an updated script which should work in all browsers.</div>
-<p>
 
-1) Adapt the page in which you are testing/writing the Math formulae</p>
+1) Adapt the page in which you are testing/writing the Math formulae
+
 <ul>
 <li>Ideally set the default output to SVG. Otherwise the user will need to select this from: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG</li>
 <li>Add code for a button to send the processed SVG to your PHP script</li>
@@ -46,7 +46,8 @@ Example of MathJax page
 
 <h3>Inline equation (TeX)</h3>
 
-<p>Finally, while display equations look good for a page of samples, the ability to mix math and text in a paragraph is also important. This expression \(\sqrt{3x-1}+(1+x)^2\) is an example of an inline equation.  As you see, MathJax equations can be used this way as well, without unduly disturbing the spacing between lines.</p>        
+Finally, while display equations look good for a page of samples, the ability to mix math and text in a paragraph is also important. This expression \(\sqrt{3x-1}+(1+x)^2\) is an example of an inline equation.  As you see, MathJax equations can be used this way as well, without unduly disturbing the spacing between lines.
+        
 
 <!-- This block of code adds a button to send the processed HTML code to your script: example_test.php -->
 
@@ -67,7 +68,7 @@ Example of MathJax page
 </html>
 {% endhighlight %}
 
-<p>2) Now you need a PHP script (in this example: <span class="filename">example_test.php</span>) which processes the output code from MathJax so that it is readable by mPDF:</p>
+2) Now you need a PHP script (in this example: <span class="filename">example_test.php</span>) which processes the output code from MathJax so that it is readable by mPDF:
 
 {% highlight php %}
 Example of 1st part of example_test.php
@@ -116,7 +117,7 @@ for ($i=0;$i<count($m[0]);$i++) {
 
 {% endhighlight %}
 
-<p>3a) Finally you can create a PDF document directly based on the MathJax web page submitted:</p>
+3a) Finally you can create a PDF document directly based on the MathJax web page submitted:
 
 {% highlight php %}
 Example of 2nd part of example_test.php creating a PDF document
@@ -159,7 +160,7 @@ exit;
 
 {% endhighlight %}
 
-<p>3b) Or you could output the prepared SVG code suitable for including directly in your PDF documents:</p>
+3b) Or you could output the prepared SVG code suitable for including directly in your PDF documents:
 
 {% highlight php %}
 Example of 2nd part of example_test.php to output the code to a browser
@@ -189,4 +190,5 @@ for ($i=0;$i<count($m[0]);$i++) {
 exit;
 {% endhighlight %}
 
-<p>See an example: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a></p>
+See an example: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a>
+

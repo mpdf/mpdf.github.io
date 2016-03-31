@@ -6,35 +6,43 @@ permalink: /reference/mpdf-functions/sethtmlheader.html
 modification_time: 2015-08-05T12:01:04+00:00
 ---
 
-<p>(mPDF &gt;= 1.2)</p>
-<p>SetHTMLHeader – Sets an HTML page header</p>
+(mPDF &gt;= 1.2)
+
+SetHTMLHeader – Sets an HTML page header
 
 # Description
 
-<p class="manual_block">void <b>SetHTMLHeader</b> ( string <span class="parameter">$html</span> [, string <span class="parameter">$side</span> [, boolean <span class="parameter">$write</span> ]])</p>
-<p>Set an HTML page header.</p>
+void <b>SetHTMLHeader</b> ( string <span class="parameter">$html</span> [, string <span class="parameter">$side</span> [, boolean <span class="parameter">$write</span> ]])
+
+Set an HTML page header.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">header</span></p>
-<p class="manual_param_dd">This parameter specifies the content of the page header as a string of valid HTML code.
+<span class="parameter">header</span>
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span></p>
-<p class="manual_param_dt"><span class="parameter">side</span></p>
-<p class="manual_param_dd">Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
+This parameter specifies the content of the page header as a string of valid HTML code.
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span></p>
-<p class="manual_param_dd"><b>Values</b> (case-sensitive)
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+
+<span class="parameter">side</span>
+
+Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+
+<b>Values</b> (case-sensitive)
 
 O - set the header for <span class="smallblock">ODD</span> pages
 
 E - set the header for <span class="smallblock">EVEN</span> pages
 
-<span class="smallblock">BLANK</span> - sets <span class="smallblock">ODD</span> page headers</p>
-<p class="manual_param_dt"><span class="parameter">write</span></p>
-<p class="manual_param_dd">If <span class="smallblock">TRUE</span> it forces the Header to be written immediately to the current page. Use if the header is being set after the new page has been added.
+<span class="smallblock">BLANK</span> - sets <span class="smallblock">ODD</span> page headers
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="parameter">write</span>
+
+If <span class="smallblock">TRUE</span> it forces the Header to be written immediately to the current page. Use if the header is being set after the new page has been added.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; <b>SetHTMLHeader()</b> and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">side</span> - sets <span class="smallblock">ODD</span> page header/footer only as default</div>
 
@@ -51,7 +59,8 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 
 # Examples
 
-<p>For examples and further information please see:</p>
+For examples and further information please see:
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-2.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 2</a></li>

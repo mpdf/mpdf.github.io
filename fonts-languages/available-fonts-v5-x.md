@@ -6,7 +6,8 @@ permalink: /fonts-languages/available-fonts-v5-x.html
 modification_time: 2015-08-05T11:59:29+00:00
 ---
 
-<p>The following fonts are distributed with mPDF 5.x</p>
+The following fonts are distributed with mPDF 5.x
+
 <table class="table"> <tbody>
 <tr>
 <td colspan="2">
@@ -17,11 +18,17 @@ modification_time: 2015-08-05T11:59:29+00:00
 </tr>
 <tr>
 <td>
-<p>DejaVuSans</p>
-<p>DejaVuSansCondensed</p>
-<p>DejaVuSansMono</p>
-<p>DejaVuSerif</p>
-<p>DejaVuSerifCondensed</p>
+
+DejaVuSans
+
+DejaVuSansCondensed
+
+DejaVuSansMono
+
+DejaVuSerif
+
+DejaVuSerifCondensed
+
 </td>
 <td>Good general coverage of common languages
 
@@ -36,12 +43,18 @@ modification_time: 2015-08-05T11:59:29+00:00
 </tr>
 <tr>
 <td>
-<p>Garuda</p>
-<p>Norasi</p>
+
+Garuda
+
+Norasi
+
 </td>
 <td>
-<p>Thai (sans-serif)</p>
-<p>Thai (serif)</p>
+
+Thai (sans-serif)
+
+Thai (serif)
+
 </td>
 </tr>
 <tr>
@@ -88,7 +101,9 @@ modification_time: 2015-08-05T11:59:29+00:00
 <td>Telugu</td>
 </tr>
 </tbody> </table>
-<p>The following font names can be used with mPDF 5.x</p>
+
+The following font names can be used with mPDF 5.x
+
 <table class="table"> <tbody>
 <tr>
 <td colspan="2">
@@ -99,7 +114,9 @@ modification_time: 2015-08-05T11:59:29+00:00
 </tr>
 <tr>
 <td>
-<p>GB</p>
+
+GB
+
 </td>
 <td>Chinese (Simplified) Adobe Asian font-pack containing all characters in codepage GBK (extension of GB2312)</td>
 </tr>
@@ -124,15 +141,25 @@ modification_time: 2015-08-05T11:59:29+00:00
 </tr>
 <tr>
 <td>
-<p>sans</p>
-<p>sans-serif</p>
-<p>serif</p>
-<p>monospace</p>
-<p>mono</p>
+
+sans
+
+sans-serif
+
+serif
+
+monospace
+
+mono
+
 </td>
 <td>
-<p>sans-serif, serif and monospace are recognised generic font-families specified by CSS. These are recognised by mPDF - defined in <span class="filename">config_fonts.php</span></p>
+
+sans-serif, serif and monospace are recognised generic font-families specified by CSS. These are recognised by mPDF - defined in <span class="filename">config_fonts.php</span>
+
 </td>
 </tr>
 </tbody> </table>
-<p>For a list of languages covered by the fonts included with mPDF, see <a href="{{ "/fonts-languages/fonts-language-cover-v5-x.html" | prepend: site.baseurl }}">Fonts and Language cover</a></p>
+
+For a list of languages covered by the fonts included with mPDF, see <a href="{{ "/fonts-languages/fonts-language-cover-v5-x.html" | prepend: site.baseurl }}">Fonts and Language cover</a>
+

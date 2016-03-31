@@ -6,16 +6,20 @@ permalink: /reference/mpdf-functions/setautofont.html
 modification_time: 2015-08-05T12:00:55+00:00
 ---
 
-<p>(mPDF &gt;= 2.3&nbsp;&nbsp; &lt;= 5.7)</p>
-<p>SetAutoFont – Automatically detect language in the input HTML text and use appropriate fonts</p>
+(mPDF &gt;= 2.3&nbsp;&nbsp; &lt;= 5.7)
+
+SetAutoFont – Automatically detect language in the input HTML text and use appropriate fonts
 
 # Description
 
-<p class="manual_block">void <b>SetAutoFont</b> ( int <span class="parameter">$flag</span> )</p>
-<p>Turns on the AutoFont function, which automatically detects language in the input HTML text and uses appropriate fonts.</p>
+void <b>SetAutoFont</b> ( int <span class="parameter">$flag</span> )
+
+Turns on the AutoFont function, which automatically detects language in the input HTML text and uses appropriate fonts.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This function was removed in mPDF 6.0&nbsp; Use <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}"><code>autoLangToFont</code></a> for the same results</div>
-<p>AutoFont uses <code>&lt;span lang="" class="lang_xx"&gt;...&lt;/span&gt;</code> to mark text which is auto-detected. See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for further details, but note that SetAutoFont also:</p>
+
+AutoFont uses <code>&lt;span lang="" class="lang_xx"&gt;...&lt;/span&gt;</code> to mark text which is auto-detected. See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for further details, but note that SetAutoFont also:
+
 <ul>
 <li>disables support for text-align=justify</li>
 <li>sets <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a>=<span class="smallblock">TRUE</span></li>
@@ -36,13 +40,15 @@ The font actually used for default chinese is determined by the settings in func
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">flag</span></p>
-<p class="manual_param_dd">This parameter specifies which languages are auto-detected. Either an integer or one of the defined constants can be used.
+<span class="parameter">flag</span>
+
+This parameter specifies which languages are auto-detected. Either an integer or one of the defined constants can be used.
 
 SetAutoFont(0) will turn off any auto-detection. Bitwise operators can be used with the defined constants e.g.
 
-SetAutoFont(AUTOFONT_CJK | AUTOFONT_THAIVIET) will turn on autodetection for CJK languages and Thai and Vietnamese.</p>
-<p class="manual_param_dd"><b>Values</b>
+SetAutoFont(AUTOFONT_CJK | AUTOFONT_THAIVIET) will turn on autodetection for CJK languages and Thai and Vietnamese.
+
+<b>Values</b>
 
 AUTOFONT_CJK = 1 = Any CJK languages (Chinese - Japanese - Korean)
 
@@ -54,7 +60,7 @@ AUTOFONT_INDIC = 8 = Indic languages such as Devanagari
 
 AUTOFONT_ALL = 15 = All of the above
 
-<span class="smallblock">DEFAULT</span>: AUTOFONT_ALL (15)</p>
+<span class="smallblock">DEFAULT</span>: AUTOFONT_ALL (15)
 
 # Changelog
 
@@ -95,11 +101,11 @@ $mpdf=new mPDF('utf-8');
 
 $html = '
 
-<p>Most of this text is in English, but has occasional words in Chinese:其貢獻在 or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: البرادعی</p>
+Most of this text is in English, but has occasional words in Chinese:其貢獻在 or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: البرادعی
 
-<p>البرادعی -12- البرادعی</p>
+البرادعی -12- البرادعی
 
-<p>其貢獻在國際間亦備受肯定，2005年</p>
+其貢獻在國際間亦備受肯定，2005年
 
 ';
 

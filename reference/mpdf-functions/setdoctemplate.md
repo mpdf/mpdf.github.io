@@ -6,24 +6,29 @@ permalink: /reference/mpdf-functions/setdoctemplate.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-<p>(mPDF &gt;= 2.3)</p>
-<p>SetDocTemplate – Specify an external PDF file to use as a template</p>
+(mPDF &gt;= 2.3)
+
+SetDocTemplate – Specify an external PDF file to use as a template
 
 # Description
 
-<p class="manual_block">void <b>SetDocTemplate</b> ( [ string <span class="parameter">$file</span> [, boolean <span class="parameter">$continue</span> ]])</p>
-<p>Specify an external PDF file to use as a template. Each page of the external source PDF file will be used as a template for the corresponding page in your new document. If the current mPDF document has more pages than the external PDF source document, the last page will (optionally) continue to be used for any remaining pages.</p>
+void <b>SetDocTemplate</b> ( [ string <span class="parameter">$file</span> [, boolean <span class="parameter">$continue</span> ]])
+
+Specify an external PDF file to use as a template. Each page of the external source PDF file will be used as a template for the corresponding page in your new document. If the current mPDF document has more pages than the external PDF source document, the last page will (optionally) continue to be used for any remaining pages.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">file</span></p>
-<p class="manual_param_dd">This parameter specifies the source PDF file used as the template document.&nbsp; <span class="parameter">file</span> should be a relative path to a local file.
+<span class="parameter">file</span>
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span></p>
-<p class="manual_param_dt"><span class="parameter">continue</span> = 1|0|<span class="smallblock">TRUE</span>|<span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd">If <span class="smallblock">TRUE</span> (or any positive value) it forces the last page of the source file to continue to be used as a template, if the current mPDF document contains more pages than the source file.
+This parameter specifies the source PDF file used as the template document.&nbsp; <span class="parameter">file</span> should be a relative path to a local file.
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+
+<span class="parameter">continue</span> = 1|0|<span class="smallblock">TRUE</span>|<span class="smallblock">FALSE</span>
+
+If <span class="smallblock">TRUE</span> (or any positive value) it forces the last page of the source file to continue to be used as a template, if the current mPDF document contains more pages than the source file.
+
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> If you want to turn the template off, just use <code>$mpdf-&gt;SetDocTemplate()</code> with no parameters.</div>
 

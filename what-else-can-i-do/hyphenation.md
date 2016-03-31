@@ -6,41 +6,50 @@ permalink: /what-else-can-i-do/hyphenation.html
 modification_time: 2015-08-05T12:00:01+00:00
 ---
 
-<p>(mPDF &gt;= 2.5)</p>
-<p class="manual_block">Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)</p>
-<p>The CSS property <span class="parameter">hyphens</span> is supported on block elements (e.g. &lt;div&gt;), inline elements (e.g. &lt;span&gt;) and &lt;td/th&gt;.
+(mPDF &gt;= 2.5)
+
+Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)
+
+The CSS property <span class="parameter">hyphens</span> is supported on block elements (e.g. &lt;div&gt;), inline elements (e.g. &lt;span&gt;) and &lt;td/th&gt;.
 
 hyphens: none | manual | auto 
 
-Default = manual</p>
-<p>The default can be changed by altering <code><span class="parameter">$defaultCSS</code></span> in <span class="filename">config.php</span></p>
+Default = manual
+
+The default can be changed by altering <code><span class="parameter">$defaultCSS</code></span> in <span class="filename">config.php</span>
 
 {% highlight php %}
 hyphens: manual
 {% endhighlight %}
 
-<p class="manual_param_dt">none</p>
-<p class="manual_param_dd">Words are not broken at line breaks, even if characters inside the word suggest line break points.</p>
-<p class="manual_param_dt">manual</p>
-<p class="manual_param_dd">Words are only broken at line breaks where there are characters inside the word that suggest line break opportunities. Characters can be explicit or conditional.</p>
-<p class="manual_param_dt">auto</p>
-<p class="manual_param_dd">Words can be broken at appropriate hyphenation points, as determined by characters inside the word, resources.
+none
 
-SHY inside the word take priority over hyphenation points determined by other resources.</p>
+Words are not broken at line breaks, even if characters inside the word suggest line break points.
+
+manual
+
+Words are only broken at line breaks where there are characters inside the word that suggest line break opportunities. Characters can be explicit or conditional.
+
+auto
+
+Words can be broken at appropriate hyphenation points, as determined by characters inside the word, resources.
+
+SHY inside the word take priority over hyphenation points determined by other resources.
 
 ## Soft hyphens
 
-<p>The soft-hyphen character (U+00AD or &amp;shy;) and the &lt;wbr&gt; tag (from mPDF 5.7) are supported in <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.</p>
+The soft-hyphen character (U+00AD or &amp;shy;) and the &lt;wbr&gt; tag (from mPDF 5.7) are supported in <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.
 
 ## Automatic hyphenation
 
-<p>Automatic hyphenation is set using CSS:</p>
+Automatic hyphenation is set using CSS:
 
 {% highlight php %}
 hyphens: auto;
 {% endhighlight %}
 
-<p>Automatic hyphenation is based on the commonly used TeX algorithm and requires pattern files for each language. The following languages are supplied with mPDF 2.5:</p>
+Automatic hyphenation is based on the commonly used TeX algorithm and requires pattern files for each language. The following languages are supplied with mPDF 2.5:
+
 <table class="table"> <tbody>
 <tr>
 <td><b>Language</b></td>
@@ -87,8 +96,11 @@ hyphens: auto;
 <td>sv</td>
 </tr>
 </tbody> </table>
-<p>A pattern file for each language is found in the folder /patterns/ and the variable <span class="parameter">$SHYlanguages</span> needs to be updated in <span class="filename">config.php</span> if any additions are made.</p>
-<p>Pattern checking can be fine-tuned by 4 variables if required:</p>
+
+A pattern file for each language is found in the folder /patterns/ and the variable <span class="parameter">$SHYlanguages</span> needs to be updated in <span class="filename">config.php</span> if any additions are made.
+
+Pattern checking can be fine-tuned by 4 variables if required:
+
 <table class="table"> <tbody>
 <tr>
 <td>&nbsp;</td>
@@ -134,7 +146,9 @@ $mpdf->SHYlang = 'fr';
 
 $mpdf->SHYleftmin = 3;
 
-$mpdf->WriteHTML('<p style="hyphens: auto">La grande texte....</p>');
+$mpdf->WriteHTML('
+La grande texte....
+');
 
 $mpdf->Output();
 
@@ -143,7 +157,7 @@ $mpdf->Output();
 
 ## Hyphenation Dictionary
 
-<p>If automatic hyphenation does not recognise a particular word, you can add words to a dictionary file with your own hyphenation. Edit the file "pathtoyourmpdf/patterns/dictionary.txt" and add a new line for each word, marking the possible hyphenations with a forward slash. You can mark more than one place for each word e.g. "dis/es/tab/lish/men/tar/i/an/ism"</p>
+If automatic hyphenation does not recognise a particular word, you can add words to a dictionary file with your own hyphenation. Edit the file "pathtoyourmpdf/patterns/dictionary.txt" and add a new line for each word, marking the possible hyphenations with a forward slash. You can mark more than one place for each word e.g. "dis/es/tab/lish/men/tar/i/an/ism"
 
 # See Also
 

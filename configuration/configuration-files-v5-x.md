@@ -6,8 +6,10 @@ permalink: /configuration/configuration-files-v5-x.html
 modification_time: 2015-08-05T11:59:39+00:00
 ---
 
-<p>(mPDF &gt;= 4.0)</p>
-<p>Three configuration files are included in the root folder of mPDF:</p>
+(mPDF &gt;= 4.0)
+
+Three configuration files are included in the root folder of mPDF:
+
 <table class="table"> <thead>
 <tr>
 <td>File name</td>

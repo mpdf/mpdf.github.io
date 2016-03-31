@@ -6,22 +6,25 @@ permalink: /reference/mpdf-functions/setsourcefile.html
 modification_time: 2015-08-05T12:01:08+00:00
 ---
 
-<p>(mPDF &gt;= 2.3)</p>
-<p>SetSourceFile – Specify the source PDF file used to import pages into the document</p>
+(mPDF &gt;= 2.3)
+
+SetSourceFile – Specify the source PDF file used to import pages into the document
 
 # Description
 
-<p class="manual_block">int <b>SetSourceFile</b> ( string <span class="parameter">$file</span> )</p>
-<p>Specify the source PDF file used to import pages into the document.</p>
+int <b>SetSourceFile</b> ( string <span class="parameter">$file</span> )
+
+Specify the source PDF file used to import pages into the document.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">file</span></p>
-<p class="manual_param_dd">This parameter specifies the source PDF file used to import pages into the document. <b>Note:&nbsp; <span class="parameter">file</span> should be a relative path to a local file.</b></p>
+<span class="parameter">file</span>
+
+This parameter specifies the source PDF file used to import pages into the document. <b>Note:&nbsp; <span class="parameter">file</span> should be a relative path to a local file.</b>
 
 # Return Value
 
-<p class="manual_param_dd"><b>SetSourceFile()</b> returns the number of pages in the source file.</p>
+<b>SetSourceFile()</b> returns the number of pages in the source file.
 
 # Changelog
 

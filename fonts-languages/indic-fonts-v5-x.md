@@ -7,7 +7,9 @@ modification_time: 2015-08-05T11:59:36+00:00
 ---
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 6.0 this has been superseded by the use of <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>.</div>
-<p>Special fonts are provided for several Indic languages.</p>
+
+Special fonts are provided for several Indic languages.
+
 <table class="table"> <thead>
 <tr> <th>&nbsp;</th>
 <td>Unicode range</td>
@@ -26,7 +28,9 @@ modification_time: 2015-08-05T11:59:36+00:00
 <td>0900-097F</td>
 <td>ind_hi_1_001</td>
 <td>
-<p>Hindi, Sindhi, Nepali</p>
+
+Hindi, Sindhi, Nepali
+
 </td>
 </tr>
 <tr class="oddrow"> <th>Malayalam</th>
@@ -65,10 +69,14 @@ modification_time: 2015-08-05T11:59:36+00:00
 <td>&nbsp;</td>
 </tr>
 </tbody> </table>
-<p>These fonts can be access using their font name e.g.</p>
+
+These fonts can be access using their font name e.g.
 
 {% highlight php %}
-<p style-"font-family: ind_ml_1_001;">ജൌ</p>
+
+ജൌ
+
 {% endhighlight %}
 
-<p>NB Indic font support is font-specific; adding other Indic fonts to mPDF won't work.</p>
+NB Indic font support is font-specific; adding other Indic fonts to mPDF won't work.
+

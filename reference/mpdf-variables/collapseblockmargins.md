@@ -6,25 +6,29 @@ permalink: /reference/mpdf-variables/collapseblockmargins.html
 modification_time: 2015-08-05T12:01:47+00:00
 ---
 
-<p>(mPDF &gt;= 4.2)</p>
-<p>collapseBlockMargins – Specify whether to collapse (vertical) margins between block elements</p>
+(mPDF &gt;= 4.2)
+
+collapseBlockMargins – Specify whether to collapse (vertical) margins between block elements
 
 # Description
 
-<p class="manual_block">void <b>collapseBlockMargins</b></p>
-<p>Specify whether to collapse (vertical) margins between block elements. In line with CSS specification, the top/bottom margins of adjoining block-style elements are collapsed to the larger of the two. This works between all block elements such as DIV, P, H1-6 etc. and also lists and tables.</p>
-<p>NB Firefox does not collapse margins above and below tables, but IE8 does.</p>
+void <b>collapseBlockMargins</b>
+
+Specify whether to collapse (vertical) margins between block elements. In line with CSS specification, the top/bottom margins of adjoining block-style elements are collapsed to the larger of the two. This works between all block elements such as DIV, P, H1-6 etc. and also lists and tables.
+
+NB Firefox does not collapse margins above and below tables, but IE8 does.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">collapseBlockMargins</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">collapseBlockMargins</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>: enable collapse
 
 <span class="smallblock">FALSE</span>: disable collapse
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
 
 # Changelog
 

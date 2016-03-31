@@ -6,17 +6,19 @@ permalink: /reference/mpdf-functions/restartdoctemplate.html
 modification_time: 2015-08-05T12:00:51+00:00
 ---
 
-<p>(mPDFI &gt;= 2.4)</p>
-<p>RestartDocTemplate – Re-start the use of a Document template from the next page</p>
+(mPDFI &gt;= 2.4)
+
+RestartDocTemplate – Re-start the use of a Document template from the next page
 
 # Description
 
-<p class="manual_block">void <b>RestartDocTemplate</b> ( )</p>
-<p>Restart the use of a document template (set by <a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a>) from the next page.</p>
+void <b>RestartDocTemplate</b> ( )
+
+Restart the use of a document template (set by <a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a>) from the next page.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">none</span></p>
+<span class="parameter">none</span>
 
 # Changelog
 

@@ -6,7 +6,7 @@ permalink: /real-life-examples/invoice.html
 modification_time: 2015-08-05T12:00:24+00:00
 ---
 
-<p>This example will produce a tabulated Invoice with headers and footers. See the <a href="files/docs/example_invoice.pdf">result</a>.</p>
+This example will produce a tabulated Invoice with headers and footers. See the <a href="files/docs/example_invoice.pdf">result</a>.
 
 {% highlight php %}
 <?php

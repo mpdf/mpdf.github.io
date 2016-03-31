@@ -6,7 +6,8 @@ permalink: /fonts-languages/fonts-language-cover-v5-x.html
 modification_time: 2015-08-05T11:59:34+00:00
 ---
 
-<p>The following Open Source fonts are included with mPDF 5:</p>
+The following Open Source fonts are included with mPDF 5:
+
 <ul>
 <li><i>DejaVuSans, DejaVuSansCondensed, DejaVuSansMono, DejaVuSerif, DejaVuSerifCondensed</i></li>
 <li><i>Garuda</i> - Thai (sans-serif)</li>
@@ -19,28 +20,44 @@ modification_time: 2015-08-05T11:59:34+00:00
 <table class="table"> <thead>
 <tr> <th>&nbsp;</th><th>&nbsp;</th>
 <td>
-<p>DejaVuSans</p>
-<p>(+condensed)</p>
+
+DejaVuSans
+
+(+condensed)
+
 </td>
 <td>
-<p>DejaVuSansMono</p>
+
+DejaVuSansMono
+
 </td>
 <td>
-<p>DejaVuSerif</p>
-<p>(+condensed)</p>
+
+DejaVuSerif
+
+(+condensed)
+
 </td>
 <td>Garuda (sans)
-<p>Norasi (serif)</p>
+
+Norasi (serif)
+
 </td>
 <td>
-<p>XBZar</p>
-<p>XBRiyaz</p>
+
+XBZar
+
+XBRiyaz
+
 </td>
 </tr>
 </thead> <tbody>
 <tr> <th>
-<p>Western European:</p>
-<p>English, French, German, Spanish, Icelandic etc.</p>
+
+Western European:
+
+English, French, German, Spanish, Icelandic etc.
+
 </th><th>win-1252 </th>
 <td>Y</td>
 <td>Y</td>
@@ -49,8 +66,11 @@ modification_time: 2015-08-05T11:59:34+00:00
 <td>Y</td>
 </tr>
 <tr> <th>
-<p>Central and Eastern Europe:</p>
-<p>Polish, Hungarian, Romanian</p>
+
+Central and Eastern Europe:
+
+Polish, Hungarian, Romanian
+
 </th><th>iso-8859-2 </th>
 <td>Y</td>
 <td>Y</td>
@@ -59,8 +79,11 @@ modification_time: 2015-08-05T11:59:34+00:00
 <td>-</td>
 </tr>
 <tr> <th>
-<p>Cyrillic:</p>
-<p>Russian, Bulgarian, Macedonian, Ukrainian etc.</p>
+
+Cyrillic:
+
+Russian, Bulgarian, Macedonian, Ukrainian etc.
+
 </th><th>win-1251</th>
 <td>Y</td>
 <td>Y</td>
@@ -69,8 +92,11 @@ modification_time: 2015-08-05T11:59:34+00:00
 <td>-</td>
 </tr>
 <tr> <th>
-<p>Baltic:</p>
-<p>Latvian, Lithuanian, Estonian, Greenlandic</p>
+
+Baltic:
+
+Latvian, Lithuanian, Estonian, Greenlandic
+
 </th><th>iso-8859-4 </th>
 <td>Y</td>
 <td>Y</td>

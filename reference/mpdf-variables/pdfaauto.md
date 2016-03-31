@@ -6,24 +6,27 @@ permalink: /reference/mpdf-variables/pdfaauto.html
 modification_time: 2015-08-05T12:02:18+00:00
 ---
 
-<p>(mPDF &gt;= 4.3)</p>
-<p>PDFAauto – Specify whether to automatically fix issues to create PDF/A1-b compliant document</p>
+(mPDF &gt;= 4.3)
+
+PDFAauto – Specify whether to automatically fix issues to create PDF/A1-b compliant document
 
 # Description
 
-<p class="manual_block">void <b>PDFAauto</b></p>
-<p>Specify whether to automatically fix issues to create PDF/A1-b compliant document</p>
+void <b>PDFAauto</b>
+
+Specify whether to automatically fix issues to create PDF/A1-b compliant document
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">PDFAauto</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">PDFAauto</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>:&nbsp; automatically fix issues to create PDF/A1-b compliant document&nbsp; 
 
 <span class="smallblock">FALSE</span>: show warning messages if changes are required for compliance
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
 # Changelog
 

@@ -6,26 +6,31 @@ permalink: /reference/mpdf-functions/setwatermarktext.html
 modification_time: 2015-08-05T12:01:10+00:00
 ---
 
-<p>(mPDF &gt;= 2.2)</p>
-<p>SetWatermarkText – Set the text to use as a Watermark</p>
+(mPDF &gt;= 2.2)
+
+SetWatermarkText – Set the text to use as a Watermark
 
 # Description
 
-<p class="manual_block">void <b>SetWatermarkText</b> ( [ string <span class="parameter">$text</span> [, float <span class="parameter">$alpha</span> ]])</p>
-<p>Set the text to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text such as "DRAFT". The watermark will be added to each page when the Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermark</a> is set to 1 or <span class="smallblock">TRUE</span>.&nbsp;</p>
+void <b>SetWatermarkText</b> ( [ string <span class="parameter">$text</span> [, float <span class="parameter">$alpha</span> ]])
+
+Set the text to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text such as "DRAFT". The watermark will be added to each page when the Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermark</a> is set to 1 or <span class="smallblock">TRUE</span>.&nbsp;
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 2.2 the function setUnvalidatedText() was used. SetWatermarkText() is now the preferred form.</div>
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">text</span></p>
-<p class="manual_param_dd">This parameter defines the text to use for the watermark. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. If the text is blank, it will clear the watermark text, so nothing appears.
+<span class="parameter">text</span>
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span></p>
-<p class="manual_param_dt"><span class="parameter">alpha</span></p>
-<p class="manual_param_dd">This parameter defines the transparency value (alpha) to use for the watermark: either text or image. The Value should be between 0 and 1.
+This parameter defines the text to use for the watermark. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. If the text is blank, it will clear the watermark text, so nothing appears.
 
-<span class="smallblock">DEFAULT</span>: 0.2</p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+
+<span class="parameter">alpha</span>
+
+This parameter defines the transparency value (alpha) to use for the watermark: either text or image. The Value should be between 0 and 1.
+
+<span class="smallblock">DEFAULT</span>: 0.2
 
 # Changelog
 
@@ -71,7 +76,9 @@ $mpdf->SetWatermarkText('DRAFT');
 
 $mpdf->showWatermarkText = true;
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 ?>
 {% endhighlight %}
@@ -91,7 +98,9 @@ $mpdf->SetWatermarkText($wm, 0.1);
 
 $mpdf->showWatermarkText = true;
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 ?>
 {% endhighlight %}

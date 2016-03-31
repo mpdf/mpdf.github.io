@@ -6,13 +6,15 @@ permalink: /reference/mpdf-functions/indexentry.html
 modification_time: 2015-08-05T12:00:48+00:00
 ---
 
-<p>(mPDF &gt;= 2.2)</p>
-<p>IndexEntry – Insert an Index entry for the document</p>
+(mPDF &gt;= 2.2)
+
+IndexEntry – Insert an Index entry for the document
 
 # Description
 
-<p class="manual_block">void <b>IndexEntry</b> ( string <span class="parameter">$content</span> [ string <span class="parameter">$xref</span> ])</p>
-<p>Insert an Index entry for the document Index, referencing the current writing position in the document. If <span class="parameter">xref</span> is set, it will appear as a cross-referencing entry in the index as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.</p>
+void <b>IndexEntry</b> ( string <span class="parameter">$content</span> [ string <span class="parameter">$xref</span> ])
+
+Insert an Index entry for the document Index, referencing the current writing position in the document. If <span class="parameter">xref</span> is set, it will appear as a cross-referencing entry in the index as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 
@@ -20,8 +22,9 @@ modification_time: 2015-08-05T12:00:48+00:00
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">content</span></p>
-<p class="manual_param_dd">This parameter sets the text as it will appear in the Index entry. 
+<span class="parameter">content</span>
+
+This parameter sets the text as it will appear in the Index entry. 
 
 <span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;annotation content="This is &amp;lt; 40" /&gt;
 
@@ -29,9 +32,11 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 Text entries passed in the form "Subject:Subcategory" will appear in the Index as "Subject, Subcategory"
 
-<span class="smallblock">REQUIRED</span></p>
-<p class="manual_param_dt"><span class="parameter">xref</span></p>
-<p class="manual_param_dd">This parameter sets the text used as a cross-reference. Text should be UTF-8 encoded.
+<span class="smallblock">REQUIRED</span>
+
+<span class="parameter">xref</span>
+
+This parameter sets the text used as a cross-reference. Text should be UTF-8 encoded.
 
 <span class="parameter">xref</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;indexentry xref="&amp;lt; 40" /&gt;
 
@@ -39,7 +44,7 @@ It is recommended that you use e.g. htmlspecialchars($xref, ENT_QUOTES) for this
 
 Text entries passed in the form "Subject:Subcategory" will appear in the Index as "Subject, Subcategory"
 
-<span class="smallblock">OPTIONAL</span></p>
+<span class="smallblock">OPTIONAL</span>
 
 # Changelog
 
@@ -63,11 +68,15 @@ Example #1
 
 $mpdf=new mPDF();
 
-$mpdf->WriteHTML('<p>Beginning bit of document...</p>');
+$mpdf->WriteHTML('
+Beginning bit of document...
+');
 
 $mpdf->IndexEntry("Buffalo");
 
-$mpdf->WriteHTML('<p>Your text which refers to a buffalo, which you would like to see in the Index</p>');
+$mpdf->WriteHTML('
+Your text which refers to a buffalo, which you would like to see in the Index
+');
 
 $mpdf->AddPage();    
 
@@ -100,19 +109,19 @@ Dromedary - see Camel, types
 
 ## Recommended placement
 
-<p>Recommended placement of Index Entries is just after the first word following the opening tag of the block element:</p>
+Recommended placement of Index Entries is just after the first word following the opening tag of the block element:
 
 {% highlight php %}
 <h2>First<indexentry... /> word of a heading or block</h2>
 {% endhighlight %}
 
-<p>or alternatively just after the opening tag of the block element:</p>
+or alternatively just after the opening tag of the block element:
 
 {% highlight php %}
 <h2><indexentry... />Heading or block</h2>
 {% endhighlight %}
 
-<p>or just after a word to be marked:</p>
+or just after a word to be marked:
 
 {% highlight php %}
 ... this is a word<indexentry... /> in the middle of text to be marked ...

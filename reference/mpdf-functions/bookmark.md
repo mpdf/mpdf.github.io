@@ -6,32 +6,39 @@ permalink: /reference/mpdf-functions/bookmark.html
 modification_time: 2015-08-05T12:00:42+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
-<p>Bookmark – Add a Bookmark to the document</p>
+(mPDF &gt;= 1.0)
+
+Bookmark – Add a Bookmark to the document
 
 # Description
 
-<p class="manual_block">void <b>Bookmark</b> ( string <span class="parameter">$content</span> [, int <span class="parameter">$level</span> [, float <span class="parameter">$y</span> ]])</p>
-<p>Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.</p>
+void <b>Bookmark</b> ( string <span class="parameter">$content</span> [, int <span class="parameter">$level</span> [, float <span class="parameter">$y</span> ]])
+
+Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target is set as the current writing position in the document when the Bookmark is defined.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">content</span></p>
-<p class="manual_param_dd">Specifies the text to appear as a Bookmark.
+<span class="parameter">content</span>
+
+Specifies the text to appear as a Bookmark.
 
 <span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;annotation content="This is &amp;lt; 40" /&gt;
 
-It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.</p>
-<p class="manual_param_dt"><span class="parameter">level</span></p>
-<p class="manual_param_dd"><span class="parameter">level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 below. Accepts an integer from 0 to the maximum depth you wish.
+It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
-<span class="smallblock">DEFAULT</span>: 0</p>
-<p class="manual_param_dt"><span class="parameter">y</span></p>
-<p class="manual_param_dd"><span class="parameter">y</span> specifies the y-coordinate on the page for the Bookmark. The top of the page is 0. The default is the current writing position on the page.
+<span class="parameter">level</span>
 
-<span class="smallblock"></span></p>
+<span class="parameter">level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 below. Accepts an integer from 0 to the maximum depth you wish.
+
+<span class="smallblock">DEFAULT</span>: 0
+
+<span class="parameter">y</span>
+
+<span class="parameter">y</span> specifies the y-coordinate on the page for the Bookmark. The top of the page is 0. The default is the current writing position on the page.
+
+<span class="smallblock"></span>
 
 # 
 

@@ -6,9 +6,11 @@ permalink: /headers-footers/method-3.html
 modification_time: 2015-08-05T11:59:51+00:00
 ---
 
-<p>This uses <span class="smallblock">NAMED</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers throughout the document.</p>
-<p>These use the same array values as <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a> Variant #5.</p>
-<p>Note that named headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.</p>
+This uses <span class="smallblock">NAMED</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers throughout the document.
+
+These use the same array values as <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a> Variant #5.
+
+Note that named headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name a header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer.</div>
 
@@ -85,8 +87,6 @@ $mpdf=new mPDF();
 
 $html = '
 
-<pageheader name="MyHeader1" content-left="" content-center="" content-right="My document" header-style="font-family: serif; font-size: 10pt; font-weight: bold; color: #000000;" line="on" />
-
 <pagefooter name="MyFooter1" content-left="{DATE j-m-Y}" content-center="{PAGENO}/{nbpg}" content-right="My document" footer-style="font-family: serif; font-size: 8pt; font-weight: bold; font-style: italic; color: #000000;" />
 
 <div>Now starts the document text... </div>
@@ -98,7 +98,8 @@ $mpdf->WriteHTML($html);
 
 # Referencing a Header/Footer by NAME
 
-<p>Once you have defined <span class="smallblock">NAMED</span> headers/footers for your document, you can reference them using:</p>
+<p>Once you have defined <span class="smallblock">NAMED</span> headers/footers for your document, you can reference them using:
+
 <ul>
 <li>Methods for <span class="smallblock">NON-HTML</span> headers/footers only - <b>Recommended</b> when setting the first page header/footer at the start of a document (although they can also be used to change headers/footers during the document).
 <ul>
@@ -138,7 +139,7 @@ $mpdf->WriteHTML($html);
 
 # Setting a named header at the start of a document
 
-<p>When using a <span class="smallblock">NAMED</span> header on the first page, remember that mPDF writes the header as the first page is started. This is usually when you first use WriteHTML() which automatically triggers an AddPage().</p>
+When using a <span class="smallblock">NAMED</span> header on the first page, remember that mPDF writes the header as the first page is started. This is usually when you first use WriteHTML() which automatically triggers an AddPage().
 
 {% highlight php %}
 Example #3 - SetHeaderByName()
@@ -158,7 +159,7 @@ $mpdf->WriteHTML('Document text');
 $mpdf->Output();
 {% endhighlight %}
 
-<p>In this example using custom HTML tags to set the <span class="smallblock">NON-HTML</span> header, notice that &lt;setpageheader&gt; has <span class="parameter">show-this-page</span> = 1. This is because as soon as you call WriteHTML(), mPDF has added the first page, so this fixes the problem by forcing the header to show on the first page:</p>
+In this example using custom HTML tags to set the <span class="smallblock">NON-HTML</span> header, notice that &lt;setpageheader&gt; has <span class="parameter">show-this-page</span> = 1. This is because as soon as you call WriteHTML(), mPDF has added the first page, so this fixes the problem by forcing the header to show on the first page:
 
 {% highlight php %}
 Example #4 - <setpageheader>
@@ -170,8 +171,6 @@ Example #4 - <setpageheader>
 $mpdf = new mPDF();
 
 $html = '
-
-<pageheader name="MyHeader1" content-left="" content-center="" content-right="My document" header-style="font-family: serif; font-size: 10pt; font-weight: bold; color: #000000;" line="on" />
 
 <pagefooter name="MyFooter1" content-left="{DATE j-m-Y}" content-center="{PAGENO}/{nbpg}" content-right="My document" footer-style="font-family: serif; font-size: 8pt; font-weight: bold; font-style: italic; color: #000000;" />
 
@@ -309,9 +308,7 @@ Example #7 - <pagebreak>
 
 $html = '
 
-<p>Document text</p>
-
-<pagebreak odd-header-name="MyHeader2" odd-header-value="on" odd-footer-name="MyFooter2" odd-footer-value="on" />
+<p>Document text
 
 <p>Text of Chapter 2/p>
 
@@ -361,11 +358,11 @@ $html = '
 
 <!-- Define headers etc. here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 'MyHeader2', 'MyFooter2' (as Example #2) -->
 
-<p>Introduction: Here starts the document</p>
+<p>Introduction: Here starts the document
 
 <tocpagebreak toc-odd-header-name='MyTOCHeader' toc-odd-footer-name='MyTOCFooter' toc-odd-header-value="1" toc-odd-footer-value="1"odd-header-name='MyHeader2' odd-header-value="1"  odd-footer-name='MyFooter2' odd-footer-value="1" />
 
-<p>Text of Chapter 2... </p>
+Text of Chapter 2... 
 
 ';
 

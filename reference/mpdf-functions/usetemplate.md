@@ -6,13 +6,15 @@ permalink: /reference/mpdf-functions/usetemplate.html
 modification_time: 2015-08-05T12:01:14+00:00
 ---
 
-<p>(mPDF &gt;= 2.3)</p>
-<p>UseTemplate – Insert an imported page from an external PDF file</p>
+(mPDF &gt;= 2.3)
+
+UseTemplate – Insert an imported page from an external PDF file
 
 # Description
 
-<p class="manual_block">array <b>UseTemplate</b> ( int <span class="parameter">$templateID</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$width</span> [, float <span class="parameter">$height</span> ]]]])</p>
-<p>Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the imported page as it is printed (see Example #1).</p>
+array <b>UseTemplate</b> ( int <span class="parameter">$templateID</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$width</span> [, float <span class="parameter">$height</span> ]]]])
+
+Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the imported page as it is printed (see Example #1).
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The template will be printed onto the page as the bottom 'layer' i.e. anything else written to that page by mPDF will be written on top of thie template. NB If you use WriteHTML() and have a background-color set on BODY this will hide the template from view e.g. &lt;body style="background-color:#FFFFFF;"&gt;</div>
 
@@ -34,36 +36,45 @@ $mpdf-&gt;WriteHTML($html);</code></div>
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">templateID</span></p>
-<p class="manual_param_dd">This parameter specifies the ID of the page template to insert.</p>
-<p class="manual_param_dt"><span class="parameter">x</span></p>
-<p class="manual_param_dd">Sets the <span class="parameter">x</span> co-ordinate (abscissa) to output the template. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
+<span class="parameter">templateID</span>
+
+This parameter specifies the ID of the page template to insert.
+
+<span class="parameter">x</span>
+
+Sets the <span class="parameter">x</span> co-ordinate (abscissa) to output the template. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
 <span class="smallblock">DEFAULT</span> <span class="smallblock">NULL</span> - Sets <span class="parameter">x</span> co-ordinate to 0
 
 <span class="smallblock">BLANK</span> or omitted - uses default (0)
 
--1: Uses current writing position in document</p>
-<p class="manual_param_dt"><span class="parameter">y</span></p>
-<p class="manual_param_dd">Sets the <span class="parameter">y</span> co-ordinate (ordinate) to output the template. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
+-1: Uses current writing position in document
+
+<span class="parameter">y</span>
+
+Sets the <span class="parameter">y</span> co-ordinate (ordinate) to output the template. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
 <span class="smallblock">DEFAULT</span> <span class="smallblock">NULL</span> - Sets <span class="parameter">y</span> co-ordinate to 0
 
 <span class="smallblock">BLANK</span> or omitted - uses default (0)
 
--1: Uses current writing position in document</p>
-<p class="manual_param_dt"><span class="parameter">width</span></p>
-<p class="manual_param_dd">Specifies the width for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
+-1: Uses current writing position in document
 
-<span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">width</span> nor <span class="parameter">height</span> are set) or if <span class="parameter">height</span> is set, the <span class="parameter">width</span> is automatically set to ouput the template in proportion to the original.</p>
-<p class="manual_param_dt"><span class="parameter">height</span></p>
-<p class="manual_param_dd">Specifies the height for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
+<span class="parameter">width</span>
 
-<span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">width</span> nor <span class="parameter">height</span> are set) or if <span class="parameter">width</span> is set, the <span class="parameter">height</span> is automatically set to ouput the template in proportion to the original.</p>
+Specifies the width for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
+
+<span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">width</span> nor <span class="parameter">height</span> are set) or if <span class="parameter">height</span> is set, the <span class="parameter">width</span> is automatically set to ouput the template in proportion to the original.
+
+<span class="parameter">height</span>
+
+Specifies the height for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
+
+<span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">width</span> nor <span class="parameter">height</span> are set) or if <span class="parameter">width</span> is set, the <span class="parameter">height</span> is automatically set to ouput the template in proportion to the original.
 
 # Return Value
 
-<p class="manual_param_dd"><b>UseTemplate()</b> returns an array of the calculated <span class="parameter">width</span> and <span class="parameter">height</span>.</p>
+<b>UseTemplate()</b> returns an array of the calculated <span class="parameter">width</span> and <span class="parameter">height</span>.
 
 # Changelog
 

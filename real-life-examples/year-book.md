@@ -6,7 +6,7 @@ permalink: /real-life-examples/year-book.html
 modification_time: 2015-08-05T12:00:25+00:00
 ---
 
-<p>This script was written to create a YearBook, where each entry must fit on a quarter page. See the <a href="files/docs/example_yearbook.pdf">result</a>.</p>
+This script was written to create a YearBook, where each entry must fit on a quarter page. See the <a href="files/docs/example_yearbook.pdf">result</a>.
 
 {% highlight php %}
 <?php

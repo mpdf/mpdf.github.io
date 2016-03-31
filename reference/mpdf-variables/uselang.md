@@ -6,30 +6,35 @@ permalink: /reference/mpdf-variables/uselang.html
 modification_time: 2015-08-05T12:02:38+00:00
 ---
 
-<p>(mPDF &gt;= 2.3&nbsp; &lt;= 5.7)</p>
-<p>useLang – Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span></p>
+(mPDF &gt;= 2.3&nbsp; &lt;= 5.7)
+
+useLang – Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span>
 
 # Description
 
-<p class="manual_block">void <b>useLang</b></p>
-<p>Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span>.</p>
-<p>See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for more details.</p>
+void <b>useLang</b>
+
+Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span>.
+
+See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for more details.
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> This variable was removed in mPDF 6.0&nbsp; <a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}"><code>autoScriptToLang</code></a> should be used for the same effect.</div>
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> The default value was changed to <span class="smallblock">TRUE </span>in version 4.0</div>
-<p><b>Note:</b> <span class="parameter">lang</span> is a useful way to select appropriate fonts for some languages. Automatic font selection using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the HTML with the <span class="parameter">lang</span> attribute, so useLang is required. Using automatic font selection adds considerable processing time when creating a large document. Automatic font selection is only valid when using UTF-8 as the codepage for the document.</p>
+
+<b>Note:</b> <span class="parameter">lang</span> is a useful way to select appropriate fonts for some languages. Automatic font selection using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the HTML with the <span class="parameter">lang</span> attribute, so useLang is required. Using automatic font selection adds considerable processing time when creating a large document. Automatic font selection is only valid when using UTF-8 as the codepage for the document.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">useLang</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">useLang</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+
+<b>Values</b>
 
 <span class="smallblock">TRUE </span>: recognise/support the HTML attribute <span class="parameter">lang</span>.
 
 <span class="smallblock">FALSE</span>: does not recognise/support the HTML attribute <span class="parameter">lang</span>.
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span></p>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
 
 # Changelog
 
@@ -62,11 +67,11 @@ $mpdf=new mPDF('utf-8');
 
 $html = '
 
-<p>Start with some English text</p>
+Start with some English text
 
-<p lang="ar"> هل ستسفر الجهود الدبلوماسية الجارية عن حلول؟ وكيف تنظر للاتهامات لبعض هذه الدول بالتدخل في الشأن العراقي، والتورط في دعم عمليات العنف؟ والى اي مدى يبدو الوضع في العراق انعكاسا للصراعات الإقليمية في المنطقة؟</p>
+ هل ستسفر الجهود الدبلوماسية الجارية عن حلول؟ وكيف تنظر للاتهامات لبعض هذه الدول بالتدخل في الشأن العراقي، والتورط في دعم عمليات العنف؟ والى اي مدى يبدو الوضع في العراق انعكاسا للصراعات الإقليمية في المنطقة؟
 
-<p>And again in English</p>
+And again in English
 
 ';
 

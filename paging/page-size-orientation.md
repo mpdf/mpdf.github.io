@@ -8,7 +8,7 @@ modification_time: 2015-08-05T11:59:47+00:00
 
 # Page sizes supported
 
-<p>When declaring an instance of <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF</a> class, you can specify the (default) page size and orientation for the document. The margins and orientation can be redefined throughout the document whenever you add a new page using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;. It can also be set by CSS using <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>.</p>
+When declaring an instance of <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF</a> class, you can specify the (default) page size and orientation for the document. The margins and orientation can be redefined throughout the document whenever you add a new page using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;. It can also be set by CSS using <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>.
 
 # Examples
 
@@ -21,11 +21,15 @@ Example #1
 
 $mpdf=new mPDF('', 'Legal');
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->AddPage('L'); // Adds a new page in Landscape orientation
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 $mpdf->Output();
 

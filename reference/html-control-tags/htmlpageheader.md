@@ -6,13 +6,15 @@ permalink: /reference/html-control-tags/htmlpageheader.html
 modification_time: 2015-08-05T12:01:23+00:00
 ---
 
-<p>(mPDF &gt;= 2.0)</p>
-<p>htmlpageheader – Define an HTML page header with a given name</p>
+(mPDF &gt;= 2.0)
+
+htmlpageheader – Define an HTML page header with a given name
 
 # Description
 
-<p class="manual_block">&lt;<b>htmlpageheader</b>&nbsp; <span class="parameter">name</span>&nbsp; &gt; <span class="parameter">html</span> &lt;/htmlpageheader&gt;</p>
-<p>Define an HTML page header with a given name. Named headers can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt;</p>
+&lt;<b>htmlpageheader</b>&nbsp; <span class="parameter">name</span>&nbsp; &gt; <span class="parameter">html</span> &lt;/htmlpageheader&gt;
+
+Define an HTML page header with a given name. Named headers can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt;
 
 <div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
@@ -20,15 +22,17 @@ modification_time: 2015-08-05T12:01:23+00:00
 
 # Attributes
 
-<p class="manual_param_dt"><span class="parameter">name</span></p>
-<p class="manual_param_dd">This attribute is a text string to use as the name for this header.
+<span class="parameter">name</span>
 
-If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_default'.</p>
+This attribute is a text string to use as the name for this header.
+
+If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_default'.
 
 # Content
 
-<p class="manual_param_dt"><span class="parameter">html</span></p>
-<p class="manual_param_dd">Any valid HTML code can be enclosed between the tags, and will be parsed by mPDF as for any other content.</p>
+<span class="parameter">html</span>
+
+Any valid HTML code can be enclosed between the tags, and will be parsed by mPDF as for any other content.
 
 # Changelog
 
@@ -43,7 +47,8 @@ If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_defa
 
 # Examples
 
-<p>For examples and further information please see:</p>
+For examples and further information please see:
+
 <ul>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
 <li class="manual_boxlist"><a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 4</a></li>

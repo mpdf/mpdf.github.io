@@ -6,19 +6,21 @@ permalink: /reference/mpdf-variables/watermark-font.html
 modification_time: 2015-08-05T12:02:40+00:00
 ---
 
-<p>(mPDF &gt;= 1.0)</p>
+(mPDF &gt;= 1.0)
 
 # Description
 
-<p class="manual_block">string <b>watermark_font</b></p>
-<p>Specifies the font to use for the watermark on each page. The BOLD style of the font is used by default.</p>
+string <b>watermark_font</b>
+
+Specifies the font to use for the watermark on each page. The BOLD style of the font is used by default.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">watermark_font</span></p>
-<p class="manual_param_dd">Define as any of the available font-families.
+<span class="parameter">watermark_font</span>
 
-<span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> uses the default font-family for the document.</p>
+Define as any of the available font-families.
+
+<span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> uses the default font-family for the document.
 
 # Examples
 
@@ -37,7 +39,9 @@ $mpdf->showWatermarkText = true;
 
 $mpdf->watermark_font = 'DejaVuSansCondensed';
 
-$mpdf->WriteHTML('<p>Hallo World</p>');
+$mpdf->WriteHTML('
+Hallo World
+');
 
 ?>
 {% endhighlight %}

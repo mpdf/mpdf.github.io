@@ -6,26 +6,33 @@ permalink: /reference/mpdf-functions/thumbnail.html
 modification_time: 2015-08-05T12:01:12+00:00
 ---
 
-<p>(mPDFI &gt;= 2.3)</p>
-<p>Thumbnail – Create thumbnails of an external PDF file and insert in current document</p>
+(mPDFI &gt;= 2.3)
+
+Thumbnail – Create thumbnails of an external PDF file and insert in current document
 
 # Description
 
-<p class="manual_block">void <b>Thumbnail</b> ( string <span class="parameter">$file</span> [, integer <span class="parameter">$numberperrow</span> [, float <span class="parameter">$spacing</span> ]])</p>
-<p>Create thumbnails of an external PDF file and insert in current document.</p>
+void <b>Thumbnail</b> ( string <span class="parameter">$file</span> [, integer <span class="parameter">$numberperrow</span> [, float <span class="parameter">$spacing</span> ]])
+
+Create thumbnails of an external PDF file and insert in current document.
 
 # Parameters
 
-<p class="manual_param_dt"><span class="parameter">file</span></p>
-<p class="manual_param_dd">This parameter specifies the source PDF file to import.&nbsp; <span class="parameter">file</span> should be a relative path to a local file.</p>
-<p class="manual_param_dt"><span class="parameter">numberperrow</span></p>
-<p class="manual_param_dd"><span class="parameter">number</span> specifies the number of thumbnails to print in each <b>row</b>. 
+<span class="parameter">file</span>
 
-<span class="smallblock">DEFAULT</span>: 3</p>
-<p class="manual_param_dt"><span class="parameter">spacing</span></p>
-<p class="manual_param_dd"><span class="parameter">S</span>pecifies the spacing (vertical and horizontal) between thumbnails in millimetres.
+This parameter specifies the source PDF file to import.&nbsp; <span class="parameter">file</span> should be a relative path to a local file.
 
-<span class="smallblock">DEFAULT</span>: 10</p>
+<span class="parameter">numberperrow</span>
+
+<span class="parameter">number</span> specifies the number of thumbnails to print in each <b>row</b>. 
+
+<span class="smallblock">DEFAULT</span>: 3
+
+<span class="parameter">spacing</span>
+
+<span class="parameter">S</span>pecifies the spacing (vertical and horizontal) between thumbnails in millimetres.
+
+<span class="smallblock">DEFAULT</span>: 10
 
 # Changelog
 

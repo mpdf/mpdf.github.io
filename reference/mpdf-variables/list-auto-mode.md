@@ -6,24 +6,27 @@ permalink: /reference/mpdf-variables/list-auto-mode.html
 modification_time: 2015-08-05T12:02:07+00:00
 ---
 
-<p>(mPDF &gt;= 6.0)</p>
+(mPDF &gt;= 6.0)
 
 # Description
 
-<p class="manual_block">void <b>list_auto_mode</b></p>
-<p>Specify whether to use mPDF custom method of automatic indentation of lists, or standard browser-compatible. The custom mPDF method is ignored if <code>list-style-position: inside</code>, or image used for marker (or custom U+).</p>
-<p>For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists</a>.</p>
+void <b>list_auto_mode</b>
+
+Specify whether to use mPDF custom method of automatic indentation of lists, or standard browser-compatible. The custom mPDF method is ignored if <code>list-style-position: inside</code>, or image used for marker (or custom U+).
+
+For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists</a>.
 
 # Values
 
-<p class="manual_param_dt"><span class="parameter">list_auto_mode</span></p>
-<p class="manual_param_dd"><b>Values</b>
+<span class="parameter">list_auto_mode</span>
+
+<b>Values</b>
 
 browser - list display will conform to standard browser behaviour for automatic indentation of lists
 
 mpdf - list display will be consistent with mPDF behaviour prior to v6.0
 
-<span class="smallblock">DEFAULT</span>: browser</p>
+<span class="smallblock">DEFAULT</span>: browser
 
 # Changelog
 
