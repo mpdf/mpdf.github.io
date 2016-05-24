@@ -3,10 +3,10 @@
     slug: about-mpdf
     items:
         -
-            title: 'Features v5'
+            title: 'Features'
             url: index0f5a.html
             permalink: /about-mpdf/features-v5.html
-            slug: features-v5
+            slug: features
             parent_title: 'About mPDF'
         -
             title: 'Requirements v5'
@@ -639,22 +639,15 @@
     slug: real-life-examples
     items:
         -
+            title: Overview
+            permalink: /real-life-examples/overview.html
+            slug: overview
+            parent_title: 'Real life examples'
+        -
             title: 'PDF from every page of website'
             url: index957c.html
             permalink: /real-life-examples/pdf-from-every-page-of-website.html
             slug: pdf-from-every-page-of-website
-            parent_title: 'Real life examples'
-        -
-            title: Invoice
-            url: index90d6.html
-            permalink: /real-life-examples/invoice.html
-            slug: invoice
-            parent_title: 'Real life examples'
-        -
-            title: 'Year Book'
-            url: index004c.html
-            permalink: /real-life-examples/year-book.html
-            slug: year-book
             parent_title: 'Real life examples'
         -
             title: 'Colour Charts CMYK'
@@ -673,12 +666,6 @@
             url: index51f0.html
             permalink: /real-life-examples/a5-booklet.html
             slug: a5-booklet
-            parent_title: 'Real life examples'
-        -
-            title: 'Reserving x blank pages'
-            url: indexcb6b.html
-            permalink: /real-life-examples/reserving-x-blank-pages.html
-            slug: reserving-x-blank-pages
             parent_title: 'Real life examples'
         -
             title: 'Letterhead letters'
