@@ -81,7 +81,7 @@ Example #2 - Using Custom HTML tags
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
 // Define the Headers and Footers with names
 
@@ -194,7 +194,7 @@ Example #5 - @page
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
 $html = '
 
@@ -340,7 +340,7 @@ $mpdf->SetHeaderByName('MyHeader1');
 
 $mpdf->WriteHTML('Introduction of document...');
 
-$mpdf->TOCpagebreak ('', '', '', '', '', '', '', '', '', '', '', '', 'MyTOCHeader', '', 'MyTOCFooter', '', 1, 0 , 1, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', 'MyHeader2', '', 'MyFooter2', '', 1, 0,  1,0); 
+$mpdf->TOCpagebreak ('', '', '', '', '', '', '', '', '', '', '', '', 'MyTOCHeader', '', 'MyTOCFooter', '', 1, 0 , 1, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', 'MyHeader2', '', 'MyFooter2', '', 1, 0,  1,0);
 
 $mpdf->WriteHTML('Main part of document...');
 
@@ -362,7 +362,7 @@ $html = '
 
 <tocpagebreak toc-odd-header-name='MyTOCHeader' toc-odd-footer-name='MyTOCFooter' toc-odd-header-value="1" toc-odd-footer-value="1"odd-header-name='MyHeader2' odd-header-value="1"  odd-footer-name='MyFooter2' odd-footer-value="1" />
 
-Text of Chapter 2... 
+Text of Chapter 2...
 
 ';
 

@@ -20,7 +20,7 @@ Set the value for the variable string <a href="{{ "/reference/mpdf-variables/ali
 
 <span class="parameter">text</span>
 
-Defines the text for the vaiable <span class="parameter">aliasNbPgGp</span>. 
+Defines the text for the vaiable <span class="parameter">aliasNbPgGp</span>.
 
 <span class="smallblock">DEFAULT</span>: {nbpg}
 
@@ -33,7 +33,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->AliasNbPageGroups('[pagetotal]');
 

@@ -27,7 +27,7 @@ MathJax is a Javascript program which renders math equations in a browser from e
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF(''); 
+$mpdf = new mPDF('');
 
 $html = file_get_contents('TeXSample.htm');
 
@@ -61,7 +61,7 @@ for ($i=0;$i<count($m[0]);$i++) {
 
 $mpdf->WriteHTML($html);
 
-$mpdf->Output(); 
+$mpdf->Output();
 
 exit;
 

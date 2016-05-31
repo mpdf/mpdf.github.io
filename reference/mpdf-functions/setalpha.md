@@ -88,15 +88,16 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
-$mpdf->SetAlpha(0.5); 
+$mpdf->SetAlpha(0.5);
 
 $mpdf->WriteHTML('<img src="clematis.jpg" />');
 
-$mpdf->SetAlpha(1); 
+$mpdf->SetAlpha(1);
 
 // This produces the identical result as the last 3 lines
 

@@ -20,7 +20,7 @@ Set the text to use as a Watermark. The watermark is a semi-transparent backgrou
 
 <span class="parameter">content</span>
 
-This parameter defines the text to use for the watermark. 
+This parameter defines the text to use for the watermark.
 
 <span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;watermarktext content="Brian&amp;#039;s document" /&gt;&nbsp; It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
@@ -54,7 +54,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->showWatermarkText = true;
 

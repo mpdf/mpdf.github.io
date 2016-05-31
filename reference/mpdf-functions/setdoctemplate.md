@@ -52,13 +52,14 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
-$mpdf->SetDocTemplate('logoheader.pdf',true); 
+$mpdf->SetDocTemplate('logoheader.pdf',true);
 
 // Do not add page until doc template set, as it is inserted at the start of each page
 

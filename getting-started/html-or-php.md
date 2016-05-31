@@ -19,7 +19,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->Bookmark('Start of the document');
 
@@ -39,7 +39,7 @@ Example #2
 
 $html = '<bookmark content="Start of the Document" /><div>Section 1 text</div>';
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML($html);
 

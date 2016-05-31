@@ -13,7 +13,7 @@ In mPDF there are a number of ways to configure your set-up. There is often a tr
 Some of the things you can change are:
 
 <ul>
-<li>the initial parameter used to call mPDF e.g. <code>$mpdf=new mPDF('c')</code></li>
+<li>the initial parameter used to call mPDF e.g. <code>$mpdf = new mPDF('c')</code></li>
 <li>configuration variables set in <span class="filename">config.php</span> see <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">mPDF Variables - Overview</a>
 
 (many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>

@@ -44,17 +44,18 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
 $pagecount = $mpdf->SetSourceFile('logoheader.pdf');
 
 $tplId = $mpdf->ImportPage($pagecount);
 
-$mpdf->SetPageTemplate($tplId); 
+$mpdf->SetPageTemplate($tplId);
 
 // Do not add page until page template set, as it is inserted at the start of each page
 
@@ -64,7 +65,7 @@ $mpdf->WriteHTML('Hallo World');
 
 // The template $tplId will be inserted on all subsequent pages until (optionally)
 
-// $mpdf->SetPageTemplate(); 
+// $mpdf->SetPageTemplate();
 
 $mpdf->Output();
 

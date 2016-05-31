@@ -81,7 +81,7 @@ B (Type B paperback 128x198mm)
 
 Ledger, Tabloid*
 
-All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L". 
+All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L".
 
 If <span class="parameter">format</span> is defined as a string, the final <span class="parameter">orientation</span> parameter will be ignored.
 
@@ -175,9 +175,10 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('
 Hallo World
@@ -199,23 +200,23 @@ Example #2
 
 // Define a new mPDF document using utf-8 fonts
 
-$mpdf=new mPDF('utf-8');
+$mpdf = new mPDF('utf-8');
 
 // Define a new mPDF document using win-1252 fonts based on a language/country code
 
-$mpdf=new mPDF('en-GB');
+$mpdf = new mPDF('en-GB');
 
 // Define a Landscape page size/format by name
 
-$mpdf=new mPDF('utf-8', 'A4-L');
+$mpdf = new mPDF('utf-8', 'A4-L');
 
 // Define a page size/format by array - page will be 190mm wide x 236mm height
 
-$mpdf=new mPDF('utf-8', array(190,236));
+$mpdf = new mPDF('utf-8', array(190,236));
 
 // Define a page using all default values except "L" for Landscape orientation
 
-$mpdf=new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
+$mpdf = new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
 {% endhighlight %}
 
 # Notes

@@ -1312,12 +1312,6 @@
                     slug: indexinsert
                     parent_title: 'HTML control tags'
                 -
-                    title: jpgraph
-                    url: indexc08a.html
-                    permalink: /reference/html-control-tags/jpgraph.html
-                    slug: jpgraph
-                    parent_title: 'HTML control tags'
-                -
                     title: pagebreak
                     url: index8cff.html
                     permalink: /reference/html-control-tags/pagebreak.html

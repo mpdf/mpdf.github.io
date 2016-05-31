@@ -86,7 +86,7 @@ This specifies the text to appear in the Annotation properties.
 
 <span class="parameter">opacity</span>
 
-Sets the opacity of the Annotation marker. Values must be greater than 0 and &lt;= 1. 
+Sets the opacity of the Annotation marker. Values must be greater than 0 and &lt;= 1.
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted or 0: sets the opacity to the value of <a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a> (<span class="smallblock">DEFAULT</span> 0.5), unless <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a> forces the Annotations to appear in the margin, when the <span class="smallblock">DEFAULT</span> is 1
 
@@ -168,7 +168,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $html = '
 This is a paragraph about violas<annotation content="Violas are like big violins" /> about which I know very little.
@@ -188,7 +188,7 @@ Example #2
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 // The Annotation markers will appear 10mm in from the right margin of the page
 

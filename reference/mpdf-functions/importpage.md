@@ -77,11 +77,12 @@ Example #1 - Using a full page
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
 $pagecount = $mpdf->SetSourceFile('logoheader.pdf');
 
@@ -104,11 +105,12 @@ Example #2 - Using a 'cropped' page
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
 $pagecount = $mpdf->SetSourceFile('testfile.pdf');
 

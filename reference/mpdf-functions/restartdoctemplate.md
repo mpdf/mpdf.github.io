@@ -40,15 +40,16 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
 // Document template consisting of 2 pages, first with logo and addresses, 2nd with a simple header
 
-$mpdf->SetDocTemplate('logoheader.pdf',true); 
+$mpdf->SetDocTemplate('logoheader.pdf',true);
 
 $mpdf->AddPage();
 

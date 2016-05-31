@@ -26,7 +26,7 @@ Number of pages added:
 </tr>
 <tr>
 <td><span class="parameter">type</span></td>
-<td><span class="smallblock">SINGLE-SIDED</span> 
+<td><span class="smallblock">SINGLE-SIDED</span>
 
 </td>
 <td>Currently
@@ -92,7 +92,7 @@ P <i>or</i> portrait:&nbsp;Portrait
 
 If <span class="parameter">type</span> is specified as "E" or "O" when writing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, the page-break is conditional; a new page will only be added if necessary to meet the specified condition.&nbsp;
 
-If <span class="parameter">type</span> is specified as "NEXT-ODD" or "NEXT-EVEN" when writing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, either one or two pages are added as necessary to meet the specified condition. 
+If <span class="parameter">type</span> is specified as "NEXT-ODD" or "NEXT-EVEN" when writing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, either one or two pages are added as necessary to meet the specified condition.
 
 If&nbsp;not writing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, a page-break <span class="parameter">type</span>="E" or "O" will be ignored.
 
@@ -102,7 +102,7 @@ If&nbsp;not writing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document
 
 O <i>or</i> ODD: Add a new page if required to make current page an&nbsp;<span class="smallblock">ODD</span>&nbsp;one.
 
-E <i>or</i> EVEN: Add a new page if required to make current page an&nbsp;<span class="smallblock">EVEN</span>&nbsp;one. 
+E <i>or</i> EVEN: Add a new page if required to make current page an&nbsp;<span class="smallblock">EVEN</span>&nbsp;one.
 
 NEXT-ODD: Add one or two pages as required to make the current page <span class="smallblock">ODD</span>.
 
@@ -340,7 +340,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('Your Introduction');
 
@@ -358,15 +358,15 @@ Example #2 - Resetting page numbering with a new style
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->useOddEven = 1;
 
 $mpdf->AddPageByArray(array(
 
-    'resetpagenum' => '1', 
+    'resetpagenum' => '1',
 
-    'pagenumstyle' => 'i', 
+    'pagenumstyle' => 'i',
 
     'suppress' => 'on',
 
@@ -384,7 +384,7 @@ Example #3 - Defining new margins and page orientation
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('Your Introduction');
 
@@ -418,7 +418,7 @@ Example #4 - Changing headers/footers
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->useOddEven = 1;
 
@@ -444,7 +444,7 @@ $mpdf->WriteHTML('Your Introduction');
 
 $mpdf->AddPageByArray(array(
 
-    'condition' => 'NEXT-ODD', 
+    'condition' => 'NEXT-ODD',
 
     'ohname' => 'myHeader',
 
@@ -464,7 +464,7 @@ $mpdf->AddPage('','NEXT-ODD','','','','','','','','','','','','','',-1,-1,-1,-1)
 
 $mpdf->AddPageByArray(array(
 
-    'condition' => 'NEXT-ODD', 
+    'condition' => 'NEXT-ODD',
 
     'ohvalue' => -1,
 
@@ -488,7 +488,7 @@ Example #5 - Blank template as example
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('Introduction');
 
@@ -496,11 +496,11 @@ $mpdf->AddPageByArray(array(
 
     'orientation' => '',
 
-    'condition' => '', 
+    'condition' => '',
 
-    'resetpagenum' => '', 
+    'resetpagenum' => '',
 
-    'pagenumstyle' => '', 
+    'pagenumstyle' => '',
 
     'suppress' => '',
 

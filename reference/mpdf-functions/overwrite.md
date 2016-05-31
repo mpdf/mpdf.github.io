@@ -90,23 +90,24 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
 // Must set codepage (e.g. UTF-8 or Core fonts) the same as for original document
 
 // The rest of the parameters do nothing
 
-$mpdf=new mPDFI('');
+$mpdf = new mPDFI('');
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
 // forces no subsetting - otherwise the inserted characters may not be contained in a subset font
 
-$mpdf->percentSubset = 0;    
+$mpdf->percentSubset = 0;
 
 $search = array(
 
-        'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', 
+        'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
 
         'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXZZZZZZZZ'
 
@@ -133,9 +134,10 @@ Example #2  Using encryption
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(''); 
+$mpdf = new mPDF('');
 
 $mpdf->percentSubset = 0;
 
@@ -145,7 +147,7 @@ $mpdf->WriteHTML('
 This copy is XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ');
 
-$mpdf->Output('test.pdf','F'); 
+$mpdf->Output('test.pdf','F');
 
     // Have to save various encryption keys, which are uniquely generated each document
 
@@ -165,7 +167,7 @@ unset( $mpdf );
 
 //==============================================================
 
-$mpdf=new mPDF('');
+$mpdf = new mPDF('');
 
 $mpdf->SetImportUse();
 

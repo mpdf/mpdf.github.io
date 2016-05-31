@@ -11,9 +11,10 @@ One way of outputting a webpage to mPDF without re-writing your scripts too much
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 // Buffer the following html with PHP so we can store it to a variable later
 

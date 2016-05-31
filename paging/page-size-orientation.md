@@ -19,7 +19,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF('', 'Legal');
+$mpdf = new mPDF('', 'Legal');
 
 $mpdf->WriteHTML('
 Hallo World
@@ -45,15 +45,15 @@ Example #2
 
 // Define a default Landscape page size/format by name
 
-$mpdf=new mPDF('utf-8', 'A4-L');
+$mpdf = new mPDF('utf-8', 'A4-L');
 
 // Define a default page size/format by array - page will be 190mm wide x 236mm height
 
-$mpdf=new mPDF('utf-8', array(190,236));
+$mpdf = new mPDF('utf-8', array(190,236));
 
 // Define a default page using all default values except "L" for Landscape orientation
 
-$mpdf=new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
+$mpdf = new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
 {% endhighlight %}
 
 # See Also

@@ -95,9 +95,10 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF('utf-8'); 
+$mpdf = new mPDF('utf-8');
 
 $html = '
 

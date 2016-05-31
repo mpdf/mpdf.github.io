@@ -110,7 +110,7 @@ toc-margin-bottom
 
 toc-margin-footer</span>
 
-Set the page margins for the <acronym title="Table of Contents">ToC</acronym>. 
+Set the page margins for the <acronym title="Table of Contents">ToC</acronym>.
 
 All values should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
@@ -152,7 +152,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 <b>Values</b> (case-insensitive)
 
-1 <i>or</i> on: Show the selected header/footer in the <acronym title="Table of Contents">ToC</acronym>. 
+1 <i>or</i> on: Show the selected header/footer in the <acronym title="Table of Contents">ToC</acronym>.
 
 -1 <i>or</i> off: Hide the selected header/footer in the <acronym title="Table of Contents">ToC</acronym>.
 
@@ -246,7 +246,7 @@ i: Roman lowercase - i, ii, iii, iv...
 
 <span class="parameter">toc-suppress</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">FALSE</span>|1|0
 
-<span class="parameter">suppress</span>=on will suppress document page numbers in the <acronym title="Table of Contents">ToC</acronym> 
+<span class="parameter">suppress</span>=on will suppress document page numbers in the <acronym title="Table of Contents">ToC</acronym>
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;condition unchanged.
 
@@ -316,7 +316,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('Introduction');
 

@@ -54,7 +54,8 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
 $text = file_get_contents('scriptfile.php');
 

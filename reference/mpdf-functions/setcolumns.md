@@ -59,7 +59,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mPDF->SetColumns(2, 'J', 3);
 

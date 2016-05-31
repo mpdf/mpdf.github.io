@@ -96,7 +96,7 @@ Set the font-family for the dividing letters in the Index.
 
 Specify whether to add hyperlinks (internal links) to the entries in the document Index.
 
-<span class="smallblock">TRUE</span> or 1: add links to Index 
+<span class="smallblock">TRUE</span> or 1: add links to Index
 
 <span class="smallblock">BLANK</span>&nbsp;or omitted, 0 or <span class="smallblock">FALSE</span>: do not add links to the Index
 
@@ -134,7 +134,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('
 Beginning bit of document...
@@ -146,7 +146,7 @@ $mpdf->WriteHTML('
 Your text which refers to a buffalo, which you would like to see in the Index
 ');
 
-$mpdf->AddPage();    
+$mpdf->AddPage();
 
 $mpdf->WriteHTML('<h2>Index</h2>',2);
 

@@ -6,13 +6,25 @@ permalink: /reference/mpdf-variables/progbar-heading.html
 modification_time: 2015-08-05T12:02:22+00:00
 ---
 
-mPDF &gt;= 5.0
+(mPDF >= 5.0 && < 7.0)
 
 Customisable Progress bar
 
 Default set in config.php
 
 Default value: 'mPDF file progress'
+
+# Changelog
+
+<table class="table">
+<thead>
+	<tr><th>Version</th><th>Description</th></tr>
+</thead>
+<tbody>
+	<tr><td>5.0</td><td>Variable was added.</td></tr>
+	<tr><td>7.0</td><td>Variable was removed along with progressbar capabilities.</td></tr>
+</tbody>
+</table>
 
 # See Also
 

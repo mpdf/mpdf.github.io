@@ -12,15 +12,13 @@ Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)
 
 The CSS property <span class="parameter">hyphens</span> is supported on block elements (e.g. &lt;div&gt;), inline elements (e.g. &lt;span&gt;) and &lt;td/th&gt;.
 
-hyphens: none | manual | auto 
+hyphens: none | manual | auto
 
 Default = manual
 
 The default can be changed by altering <code><span class="parameter">$defaultCSS</code></span> in <span class="filename">config.php</span>
 
-{% highlight php %}
 hyphens: manual
-{% endhighlight %}
 
 none
 
@@ -140,7 +138,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->SHYlang = 'fr';
 

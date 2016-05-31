@@ -11,9 +11,10 @@ If you get nothing but a blank screen on your browser, it may be because there i
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->debug = true;
 

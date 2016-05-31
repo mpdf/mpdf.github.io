@@ -30,13 +30,13 @@ The maximum ratio to adjust column height when justifying - too large a value ca
 <td>default
 
 </td>
-<td>1.15 
+<td>1.15
 
 </td>
 </tr>
 <tr>
 <td>range</td>
-<td>Values above 1.0 
+<td>Values above 1.0
 
 </td>
 </tr>
@@ -51,7 +51,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->max_colH_correction = 1.3;
 

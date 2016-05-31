@@ -98,7 +98,7 @@ Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
 
-# 
+#
 
 # Changelog
 
@@ -130,7 +130,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $stylesheet = file_get_contents('style.css');
 

@@ -24,7 +24,7 @@ Encrypts and sets the PDF document permissions for the PDF file, together with u
 
 This parameter is an array which specifies the permissions granted to the end-user.
 
-A blank array should be passed to deny all permissions to the user. The latter 4 permissions were added in mPDF &gt;=5.3&nbsp; 
+A blank array should be passed to deny all permissions to the user. The latter 4 permissions were added in mPDF &gt;=5.3&nbsp;
 
 Using any of these last 4 permissions require 128-bit encryption and will force this mode, regardless of any value set for <span class="parameter">length</span>.
 
@@ -106,7 +106,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 // Encrypt the file and grant no permissions to the user to copy, print etc.
 

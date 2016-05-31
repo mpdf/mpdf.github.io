@@ -40,7 +40,7 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 <span class="smallblock"></span>
 
-# 
+#
 
 # Examples
 
@@ -51,7 +51,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->Bookmark('Start of the document');
 
@@ -69,7 +69,7 @@ Example #2
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->Bookmark('Section 1', 0);
 

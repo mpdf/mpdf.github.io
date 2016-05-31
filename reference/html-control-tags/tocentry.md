@@ -24,7 +24,7 @@ Insert an entry for the Table of Contents referencing the current writing positi
 
 <span class="parameter">content</span>
 
-This parameter sets the text as it will appear in the ToC entry. Text should be UTF-8 encoded. 
+This parameter sets the text as it will appear in the ToC entry. Text should be UTF-8 encoded.
 
 <span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;tocentry content="&amp;lt; 40" /&gt;
 
@@ -34,7 +34,7 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 <span class="parameter">level</span>
 
-Specify the level of this entry (i.e. like heading 1,2,3) as a positive integer&nbsp; 
+Specify the level of this entry (i.e. like heading 1,2,3) as a positive integer&nbsp;
 
 Starts at level 0
 
@@ -70,7 +70,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('Introduction');
 

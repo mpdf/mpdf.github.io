@@ -16,39 +16,22 @@ The paged media model of CSS (http://www.w3.org/TR/1998/REC-CSS2-19980512/page.h
 
 {% highlight php %}
    _____________________________
-
   |                         |   |<- sheet
-
   |                         |<--+-- crop marks
-
   |   ______________________  __
-
-  |  |    A                 |   
-
+  |  |    A                 |
   |  |    ______________    |<--+-- page box
-
-  |  |   |   HEADER     |   |   
-
-  |  | D |              | B |   
-
-  |  |   |              |   |   
-
+  |  |   |   HEADER     |   |
+  |  | D |              | B |
+  |  |   |              |   |
   |  |   |              |<--+---+-- page box minus margins = printed area
-
-  |  |   |              |   |   
-
-  |  |   |              |   |   
-
-  |  |   |              |   |   
-
+  |  |   |              |   |
+  |  |   |              |   |
+  |  |   |              |   |
   |  |   |___FOOTER_____|   |   |   A: margin-top
-
   |  |    C                 |   |   B: margin-right
-
   |  |______________________|   |   C: margin-bottom
-
   |                             |   D: margin-left
-
   |_____________________________
 
 {% endhighlight %}
@@ -65,18 +48,18 @@ NB Page-box margins are INSIDE the page-box (unlike block elements in CSS).
 
 The CSS <code>@page</code> selector is partially supported in mPDF with the following properties:
 
-{% highlight php %}
+{% highlight css %}
 @page {
 
-  size: 8.5in 11in;  <length>{1,2} | auto | portrait | landscape  ('em' 'ex' and % are not allowed; length values are width height
+  size: 8.5in 11in;  <length>{1,2} | auto | portrait | landscape  /* 'em' 'ex' and % are not allowed; length values are width height */
 
-  margin: 10%; <any of the usual CSS values for margins> (% of page-box width for LR, of height for TB)
+  margin: 10%; /* <any of the usual CSS values for margins> (% of page-box width for LR, of height for TB) */
 
-  margin-header: 5mm; <any of the usual CSS values for margins>
+  margin-header: 5mm; /* <any of the usual CSS values for margins> */
 
-  margin-footer: 5mm; <any of the usual CSS values for margins>
+  margin-footer: 5mm; /* <any of the usual CSS values for margins> */
 
-  marks: crop | cross | none
+  marks: /*crop | cross | none*/
 
   header: html_myHTMLHeaderOdd;
 
@@ -151,7 +134,7 @@ CSS pseudo-selectors :left :right and :first are recognised by mPDF and support 
 
 Example:
 
-{% highlight php %}
+{% highlight css %}
 @page :right {
 
   margin-top: 3cm;
@@ -171,13 +154,13 @@ Properties specified in a :first @page rule override those specified in :right (
 
 Named pages are also supported e.g.:
 
-{% highlight php %}
+{% highlight css %}
 @page rotated { size: landscape; }
 {% endhighlight %}
 
 You can then refer to the named page in other CSS style sheets:
 
-{% highlight php %}
+{% highlight css %}
 div.onitsside { page: rotated; page-break-before: right; }
 {% endhighlight %}
 
@@ -217,7 +200,7 @@ So, for example, <code>page-break-before: right</code> is equivalent of <code>Ad
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
 $mpdf->useOddEven = 1;
 
@@ -303,7 +286,7 @@ div.noheader {
 
 <htmlpagefooter name="myFooter1" style="display:none">
 
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; 
+<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt;
 
     color: #000000; font-weight: bold; font-style: italic;"><tr>
 
@@ -319,7 +302,7 @@ div.noheader {
 
 <htmlpagefooter name="myFooter2" style="display:none">
 
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; 
+<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt;
 
     color: #000000; font-weight: bold; font-style: italic;"><tr>
 

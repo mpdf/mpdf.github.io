@@ -24,7 +24,7 @@ Insert an Index entry for the document Index, referencing the current writing po
 
 <span class="parameter">content</span>
 
-This parameter sets the text as it will appear in the Index entry. 
+This parameter sets the text as it will appear in the Index entry.
 
 <span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;annotation content="This is &amp;lt; 40" /&gt;
 
@@ -66,7 +66,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('
 Beginning bit of document...
@@ -78,7 +78,7 @@ $mpdf->WriteHTML('
 Your text which refers to a buffalo, which you would like to see in the Index
 ');
 
-$mpdf->AddPage();    
+$mpdf->AddPage();
 
 $mpdf->WriteHTML('<h2>Index</h2>',2);
 

@@ -112,9 +112,9 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
-$mpdf->writeBarcode('978-1234-567-890'); 
+$mpdf->writeBarcode('978-1234-567-890');
 
 $mpdf->Output();
 

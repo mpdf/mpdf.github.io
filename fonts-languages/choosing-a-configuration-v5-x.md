@@ -13,7 +13,7 @@ In mPDF there are a number of ways to configure your set-up. There is often a tr
 Some of the things you can change are:
 
 <ul>
-<li>the initial parameter used to call mPDF e.g. <code>$mpdf=new mPDF('c')</code></li>
+<li>the initial parameter used to call mPDF e.g. <code>$mpdf = new mPDF('c')</code></li>
 <li>configuration variables set in <span class="filename">config.php</span> see <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">mPDF Variables - Overview</a>
 
 (many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
@@ -159,9 +159,9 @@ then mPDF will restrict the fonts you can use for the whole document<code>. </co
 
 // If config_cp.php defines:
 
-CASE "th":  $spacing = "C";  
+CASE "th":  $spacing = "C";
 
-$unifonts = "garuda,garudaB,garudaI,garudaBI,norasi,norasiB,norasiI,norasiBI";  
+$unifonts = "garuda,garudaB,garudaI,garudaBI,norasi,norasiB,norasiI,norasiBI";
 
 break;
 
@@ -250,7 +250,7 @@ If you want to use core non-embedded fonts when possible (for Western European l
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF('en-GB-x');  // will only use core non-embedded fonts 
+$mpdf = new mPDF('en-GB-x');  // will only use core non-embedded fonts
 
 $mpdf = new mPDF('de-x');     // will only use core non-embedded fonts (German)
 

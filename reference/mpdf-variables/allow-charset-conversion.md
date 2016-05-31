@@ -20,7 +20,7 @@ When <span class="smallblock">TRUE</span>, mPDF will attempt to parse the charac
 
 <b>Values</b>
 
-<i><span class="smallblock">TRUE</span></i>: <span class="smallblock">DEFAULT</span> Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">charset_in</span> 
+<i><span class="smallblock">TRUE</span></i>: <span class="smallblock">DEFAULT</span> Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">charset_in</span>
 
 <span class="smallblock">FALSE</span>: Expect all text input as UTF-8 encoding.
 
@@ -55,7 +55,7 @@ $html = '
 
 </html>';
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->allow_charset_conversion = true;
 
@@ -75,7 +75,7 @@ Example #2
 
 $html = '... the body of the document encoded in ISO-8859-4 ...';
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->allow_charset_conversion = true;
 

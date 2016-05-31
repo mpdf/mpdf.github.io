@@ -6,13 +6,13 @@ permalink: /reference/mpdf-functions/startprogressbaroutput.html
 modification_time: 2015-08-05T12:01:11+00:00
 ---
 
-(mPDF &gt;= 4.2)
+(mPDF >= 4.2 && < 7.0)
 
 StartProgressBarOutput – Enable progress bars to be shown during file generation
 
 # Description
 
-void <b>StartProgressBarOutput</b> ( [ string <span class="parameter">$mode</span> ] )
+void `StartProgressBarOutput ( [ string <span class="parameter">$mode</span> ] )`
 
 Enable progress bars to be shown during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation. To set this value globally you can edit the value for <code>progressBar</code> in the configuration file <span class="filename">config.php</span>
 
@@ -30,16 +30,14 @@ Enable progress bars to be shown during file generation. Not recommended for gen
 
 # Examples
 
-{% highlight php %}
-Example #1
-{% endhighlight %}
+## Example #1
 
 {% highlight php %}
 <?php
 
 define('_MPDF_URI','../');     // must be  a relative or absolute URI - not a file system path
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->StartProgressBarOutput(2);
 
@@ -47,16 +45,25 @@ $mpdf->WriteHTML('You will hardly have time to see the progress bars!');
 
 $mpdf->Output();
 
-?>
 {% endhighlight %}
+
+# Changelog
+
+<table class="table">
+<thead>
+	<tr><th>Version</th><th>Description</th></tr>
+</thead>
+<tbody>
+	<tr><td>4.2</td><td>Variable was added.</td></tr>
+	<tr><td>7.0</td><td>Variable was removed along with progressbar capabilities.</td></tr>
+</tbody>
+</table>
 
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progressbar.html" | prepend: site.baseurl }}">progressBar</a> –Specify whether to show progress bars during file generation</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progbar-heading.html" | prepend: site.baseurl }}">progbar_heading</a> - define customised heading for progress bars</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progbar-althtml.html" | prepend: site.baseurl }}">progbar_altHTML</a> - define customised HTML for progress bars
-
-</li>
+	<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progressbar.html" | prepend: site.baseurl }}">progressBar</a> –Specify whether to show progress bars during file generation</li>
+	<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progbar-heading.html" | prepend: site.baseurl }}">progbar_heading</a> - define customised heading for progress bars</li>
+	<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progbar-althtml.html" | prepend: site.baseurl }}">progbar_altHTML</a> - define customised HTML for progress bars</li>
 </ul>
 

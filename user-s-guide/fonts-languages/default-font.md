@@ -15,7 +15,7 @@ permalink: /user-s-guide/fonts-languages/default-font.html
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF('','A4',9,'dejavusans');
+$mpdf = new mPDF('','A4',9,'dejavusans');
 
 $mpdf-&gt;WriteCell(110,5,'Hallo World');
 {% endhighlight %}

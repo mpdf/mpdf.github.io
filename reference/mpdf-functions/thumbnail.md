@@ -24,7 +24,7 @@ This parameter specifies the source PDF file to import.&nbsp; <span class="param
 
 <span class="parameter">numberperrow</span>
 
-<span class="parameter">number</span> specifies the number of thumbnails to print in each <b>row</b>. 
+<span class="parameter">number</span> specifies the number of thumbnails to print in each <b>row</b>.
 
 <span class="smallblock">DEFAULT</span>: 3
 
@@ -54,11 +54,12 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
 $mpdf->Thumbnail('testfile.pdf', 4);
 

@@ -10,38 +10,22 @@ modification_time: 2015-08-05T11:59:25+00:00
 
 The following PHP will produce the most basic example with mPDF.
 
-Include the main file containing the mpdf class:
-
 {% highlight php %}
-include('../mpdf.php');
-{% endhighlight %}
+
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 Create an instance of the class:
 
-{% highlight php %}
-<?php
+$mpdf = new mPDF();
 
-$mpdf=new mPDF();
-{% endhighlight %}
+// Write some HTML code:
 
-Write some HTML code:
+$mpdf->WriteHTML('Hello World');
 
-{% highlight php %}
-<?php
-
-$mpdf->WriteHTML('
-Hallo World
-');
-{% endhighlight %}
-
-Output a PDF file:
-
-{% highlight php %}
-<?php
-
+// Output a PDF file directly to the browser
 $mpdf->Output();
 
-exit;
 {% endhighlight %}
 
 # Notes

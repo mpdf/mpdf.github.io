@@ -62,7 +62,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF();
+$mpdf = new mPDF();
 
 $mpdf->WriteHTML('
 Beginning bit of document...
@@ -72,7 +72,7 @@ $mpdf->WriteHTML('
 Your text which refers to a buffalo,<indexentry content="Buffalo" /> which you would like to see in the Index
 ');
 
-$mpdf->AddPage();    
+$mpdf->AddPage();
 
 $mpdf->WriteHTML('<h2>Index</h2>',2);
 

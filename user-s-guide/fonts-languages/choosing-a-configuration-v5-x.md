@@ -12,7 +12,7 @@ permalink: /user-s-guide/fonts-languages/choosing-a-configuration-v5-x.html
 <p>In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at least in some form).</p>
 <p>Some of the things you can change are:</p>
 <ul>
-<li>the initial parameter used to call mPDF e.g. <code>$mpdf=new mPDF('c')</code></li>
+<li>the initial parameter used to call mPDF e.g. <code>$mpdf = new mPDF('c')</code></li>
 <li>configuration variables set in <span class="filename">config.php</span> see <a href="/reference/mpdf-variables/overview.html">mPDF Variables - Overview</a>
 
 (many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
@@ -141,9 +141,9 @@ $this-&gt;fonttrans = array(
 
 <code>// If config_cp.php defines:
 
-CASE "th":&nbsp; $spacing = "C";&nbsp; 
+CASE "th":&nbsp; $spacing = "C";&nbsp;
 
-$unifonts = "garuda,garudaB,garudaI,garudaBI,norasi,norasiB,norasiI,norasiBI";&nbsp; 
+$unifonts = "garuda,garudaB,garudaI,garudaBI,norasi,norasiB,norasiI,norasiBI";&nbsp;
 
 break;
 
@@ -223,7 +223,7 @@ $mpdf-&gt;SetAutoFont(AUTOFONT_ALL);
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF('en-GB-x');&nbsp; // will only use core non-embedded fonts 
+$mpdf = new mPDF('en-GB-x');&nbsp; // will only use core non-embedded fonts
 
 $mpdf = new mPDF('de-x');&nbsp;&nbsp;&nbsp;&nbsp; // will only use core non-embedded fonts (German)
 

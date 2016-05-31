@@ -15,7 +15,7 @@ Declared when instantiating the mPDF class (see Getting Started). These "provisi
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF('','A4',9,'dejavusans');
+$mpdf = new mPDF('','A4',9,'dejavusans');
 
 $mpdf->WriteCell(110,5,'Hallo World');
 {% endhighlight %}

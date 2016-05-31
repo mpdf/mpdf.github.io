@@ -17,9 +17,7 @@ modification_time: 2015-08-05T12:00:23+00:00
 <li>Add code for a button to send the processed SVG to your PHP script</li>
 </ul>
 
-{% highlight php %}
 Example of MathJax page
-{% endhighlight %}
 
 {% highlight php %}
 <!DOCTYPE html>
@@ -47,7 +45,7 @@ Example of MathJax page
 <h3>Inline equation (TeX)</h3>
 
 Finally, while display equations look good for a page of samples, the ability to mix math and text in a paragraph is also important. This expression \(\sqrt{3x-1}+(1+x)^2\) is an example of an inline equation.  As you see, MathJax equations can be used this way as well, without unduly disturbing the spacing between lines.
-        
+
 
 <!-- This block of code adds a button to send the processed HTML code to your script: example_test.php -->
 
@@ -81,7 +79,7 @@ Example of 1st part of example_test.php
 
 // calls on this script from external websites!
 
-$mpdf=new mPDF(''); 
+$mpdf = new mPDF('');
 
 $html = $_POST['bodydata'];
 
@@ -154,7 +152,7 @@ $mpdf->WriteHTML($stylesheet,1);
 
 $mpdf->WriteHTML($html);
 
-$mpdf->Output(); 
+$mpdf->Output();
 
 exit;
 

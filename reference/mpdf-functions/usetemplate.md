@@ -22,7 +22,7 @@ Insert an imported page/template from an external PDF file into the current docu
 
 <code>$mpdf = new mPDF();
 
-$mpdf-&gt;SetImportUse(); 
+$mpdf-&gt;SetImportUse();
 
 $mpdf-&gt;SetHTMLHeader($header);
 
@@ -96,11 +96,12 @@ Example #1
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
 // Add First page
 
@@ -131,11 +132,12 @@ Example #2 - Using a 'cropped' page
 {% highlight php %}
 <?php
 
-include("../mpdf.php");
+include("// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';");
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
-$mpdf->SetImportUse(); 
+$mpdf->SetImportUse();
 
 $pagecount = $mpdf->SetSourceFile('testfile.pdf');
 

@@ -38,7 +38,7 @@ $mpdf->variablename = true;
 <td>Paging</td>
 <td><a href="{{ "/reference/mpdf-variables/mirrormargins.html" | prepend: site.baseurl }}">mirrorMargins</a></td>
 <td>0</td>
-<td><span class="smallblock">DOCUMENT</span> 
+<td><span class="smallblock">DOCUMENT</span>
 
 </td>
 <td>4.0</td>
@@ -233,7 +233,7 @@ Page numbering
 </a></td>
 <td>30</td>
 <td><span class="smallblock">DOCUMENT</span></td>
-<td>5.0 
+<td>5.0
 
 </td>
 <td>Control subsetting behaviour for fonts
@@ -298,7 +298,7 @@ Page numbering
 <td>5.0</td>
 <td>* You must only change this variable in the <span class="filename">config.php</span> file.
 
-Use initial parameter to change at runtime e.g. <code>$mpdf=new mPDF('+aCJK');</code>
+Use initial parameter to change at runtime e.g. <code>$mpdf = new mPDF('+aCJK');</code>
 
 </td>
 </tr>
@@ -380,7 +380,7 @@ Replaces useLang
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>disableMultilingualJustify 
+<td>disableMultilingualJustify
 
 </td>
 <td><span class="smallblock">TRUE</span></td>
@@ -433,18 +433,18 @@ Replaces useLang
 <tr>
 <td>Configuration</td>
 <td>useOnlyCoreFonts</td>
-<td><span class="smallblock">FALSE</span> 
+<td><span class="smallblock">FALSE</span>
 
 </td>
 <td><span class="smallblock">DOCUMENT</span></td>
-<td>(3.0) 
+<td>(3.0)
 
 </td>
 <td>
 
 Removed mPDF 5.0 - Use
 
-<code>$mpdf=new mPDF('c');</code>
+<code>$mpdf = new mPDF('c');</code>
 
 The alias <span class="parameter">use_embeddedfonts_1252</span> was used before v4.0
 
@@ -543,7 +543,7 @@ Use <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.ba
 <tr>
 <td>&nbsp;</td>
 <td><a href="{{ "/reference/mpdf-variables/text-input-as-html.html" | prepend: site.baseurl }}">text_input_as_HTML</a></td>
-<td><span class="smallblock">FALSE</span> 
+<td><span class="smallblock">FALSE</span>
 
 </td>
 <td><span class="smallblock">DOCUMENT</span></td>
@@ -683,7 +683,7 @@ Colorspaces
 <td><a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a></td>
 <td><i><span class="smallblock">NULL</span></i></td>
 <td><span class="smallblock">DOCUMENT</span></td>
-<td>2.2 
+<td>2.2
 
 </td>
 <td>&nbsp;</td>
@@ -779,7 +779,7 @@ useDefaultCSS2
 <tr>
 <td>&nbsp;</td>
 <td><a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">defaultfooterline</a></td>
-<td>1 
+<td>1
 
 </td>
 <td>&nbsp;</td>
@@ -837,7 +837,7 @@ useDefaultCSS2
 <tr>
 <td>&nbsp;</td>
 <td>headerPageNoMarker</td>
-<td>"!|" 
+<td>"!|"
 
 </td>
 <td><span class="smallblock">DOCUMENT</span></td>
@@ -847,7 +847,7 @@ useDefaultCSS2
 <tr>
 <td>Tables</td>
 <td><a href="{{ "/reference/mpdf-variables/simpletables.html" | prepend: site.baseurl }}">simpleTables</a></td>
-<td><span class="smallblock">FALSE</span> 
+<td><span class="smallblock">FALSE</span>
 
 </td>
 <td><span class="smallblock">DOCUMENT</span></td>
@@ -891,7 +891,7 @@ useDefaultCSS2
 <tr>
 <td>&nbsp;</td>
 <td><a href="{{ "/reference/mpdf-variables/ignore-table-widths.html" | prepend: site.baseurl }}">ignore_table_widths</a></td>
-<td><span class="smallblock">FALSE</span> 
+<td><span class="smallblock">FALSE</span>
 
 </td>
 <td>&nbsp;</td>
@@ -901,7 +901,7 @@ useDefaultCSS2
 <tr>
 <td>&nbsp;</td>
 <td><a href="{{ "/reference/mpdf-variables/keep-table-proportions.html" | prepend: site.baseurl }}">keep_table_proportions</a></td>
-<td><span class="smallblock">FALSE</span> 
+<td><span class="smallblock">FALSE</span>
 
 </td>
 <td>&nbsp;</td>
@@ -911,7 +911,7 @@ useDefaultCSS2
 <tr>
 <td>&nbsp;</td>
 <td><a href="{{ "/reference/mpdf-variables/shrink-tables-to-fit.html" | prepend: site.baseurl }}">shrink_tables_to_fit</a></td>
-<td>1.4 
+<td>1.4
 
 </td>
 <td>&nbsp;</td>
@@ -921,7 +921,7 @@ useDefaultCSS2
 <tr>
 <td>&nbsp;</td>
 <td><a href="{{ "/reference/mpdf-variables/table-error-report.html" | prepend: site.baseurl }}">table_error_report</a></td>
-<td><span class="smallblock">FALSE</span> 
+<td><span class="smallblock">FALSE</span>
 
 </td>
 <td>&nbsp;</td>
@@ -931,7 +931,7 @@ useDefaultCSS2
 <tr>
 <td>&nbsp;</td>
 <td><a href="{{ "/reference/mpdf-variables/table-error-report-param.html" | prepend: site.baseurl }}">table_error_report_param</a></td>
-<td>"" 
+<td>""
 
 </td>
 <td>&nbsp;</td>
@@ -941,7 +941,7 @@ useDefaultCSS2
 <tr>
 <td>&nbsp;</td>
 <td><a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">use_kwt</a></td>
-<td><span class="smallblock">FALSE</span> 
+<td><span class="smallblock">FALSE</span>
 
 </td>
 <td>&nbsp;</td>
@@ -1127,7 +1127,7 @@ useDefaultCSS2
 <tr>
 <td>Columns</td>
 <td><a href="{{ "/reference/mpdf-variables/keepcolumns.html" | prepend: site.baseurl }}">keepColumns</a></td>
-<td><span class="smallblock">FALSE</span> 
+<td><span class="smallblock">FALSE</span>
 
 </td>
 <td>&nbsp;</td>

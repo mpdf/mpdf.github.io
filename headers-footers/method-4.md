@@ -23,7 +23,7 @@ Example #1 - Using PHP
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
 $mpdf->DefHTMLHeaderByName('Chapter2Header','<div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;">Chapter 2</div>');
 
@@ -37,7 +37,7 @@ Example #2 - Using Custom HTML tags
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
 $html = '
 
@@ -55,7 +55,7 @@ $html = '
 
 <htmlpagefooter name="myFooter1">
 
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; 
+<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt;
 
     color: #000000; font-weight: bold; font-style: italic;"><tr>
 
@@ -71,7 +71,7 @@ $html = '
 
 <htmlpagefooter name="myFooter2">
 
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; 
+<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt;
 
     color: #000000; font-weight: bold; font-style: italic;"><tr>
 
@@ -172,7 +172,7 @@ $html = '
 
 <htmlpagefooter name="MyFooter1">
 
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; 
+<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt;
 
     color: #000000; font-weight: bold; font-style: italic;"><tr>
 
@@ -206,7 +206,7 @@ Example #5 - @page
 {% highlight php %}
 <?php
 
-$mpdf=new mPDF(); 
+$mpdf = new mPDF();
 
 $html = '
 
@@ -278,7 +278,7 @@ div.noheader {
 
 <htmlpagefooter name="MyFooter1">
 
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; 
+<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt;
 
     color: #000000; font-weight: bold; font-style: italic;"><tr>
 
@@ -294,7 +294,7 @@ div.noheader {
 
 <htmlpagefooter name="MyFooter2">
 
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; 
+<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt;
 
     color: #000000; font-weight: bold; font-style: italic;"><tr>
 
@@ -348,7 +348,7 @@ $mpdf->WriteHTML('Document text with No Headers/Footers');
 {% endhighlight %}
 
 {% highlight php %}
-Example #7 - 
+Example #7 -
 
 {% endhighlight %}
 
@@ -389,7 +389,7 @@ $mpdf->SetHTMLHeaderByName('MyHeader1');
 
 $mpdf->WriteHTML('Introduction of document...');
 
-$mpdf->TOCpagebreak ('', '', '', '', '', '', '', '', '', '', '', '', 'html_MyTOCHeader', '', 'html_MyTOCFooter', '', 1, 0 , 1, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', 'html_MyHeader2', '', 'html_MyFooter2', '', 1, 0,  1,0); 
+$mpdf->TOCpagebreak ('', '', '', '', '', '', '', '', '', '', '', '', 'html_MyTOCHeader', '', 'html_MyTOCFooter', '', 1, 0 , 1, 0, '', '', '', '', '', '', '', '', '', '', '', '', '', 'html_MyHeader2', '', 'html_MyFooter2', '', 1, 0,  1,0);
 
 $mpdf->WriteHTML('Main part of document...');
 
@@ -411,7 +411,7 @@ $html = '
 
 <tocpagebreak toc-odd-header-name='html_MyTOCHeader' toc-odd-footer-name='html_MyTOCFooter' toc-odd-header-value="1" toc-odd-footer-value="1"odd-header-name='html_MyHeader2' odd-header-value="1"  odd-footer-name='html_MyFooter2' odd-footer-value="1" />
 
-Text of Chapter 2... 
+Text of Chapter 2...
 
 ';
 
