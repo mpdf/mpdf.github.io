@@ -19,7 +19,7 @@ All credit is due to the following:
 Including from FPDF extensions:
 
 <ul>
-<li>Martin Hall-May&nbsp; for WMF support
+<li>Martin Hall-May  for WMF support
 
 </li>
 </ul>

@@ -12,13 +12,13 @@ strcode2utf – Convert HTML numerical entities to UTF-8 encoded string
 
 # Description
 
-string <b>strcode2utf</b> ( string <span class="parameter">$text</span> [, boolean <span class="parameter">$low</span> ])
+string **strcode2utf** ( string <span class="parameter">$text</span> [, boolean <span class="parameter">$low</span> ])
 
 Returns a UTF-8 encoded string.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function is not part of the mPDF class, and is located in the htmltoolkit.php file. It is called without the class prefix e.g. $mpd-&gt;</div>
+<div class="alert alert-info" role="alert">**Note:** This function is not part of the mPDF class, and is located in the htmltoolkit.php file. It is called without the class prefix e.g. $mpd-&gt;</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <b>strcode2utf</b> is useful for preparing text to be used as a Watermark, or for the metadata properties of Title, Author, Creator and Keywords - which require UTF-8 encoded strings with no entities.</div>
+<div class="alert alert-info" role="alert">**Note:** **strcode2utf** is useful for preparing text to be used as a Watermark, or for the metadata properties of Title, Author, Creator and Keywords - which require UTF-8 encoded strings with no entities.</div>
 
 # Parameters
 
@@ -32,13 +32,13 @@ Specifies whether to convert HTML numerical entities of ASCII characters (&lt;12
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE</span>: Convert all HTML numerical entities to UTF-8 characters
 
 <span class="smallblock">FALSE</span>: Only convert characters above codepoint 127
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function does not convert named character entities like &amp;amp; &amp;quot; or &amp;raquo;</div>
+<div class="alert alert-info" role="alert">**Note:** This function does not convert named character entities like &amp;amp; &amp;quot; or &amp;raquo;</div>
 
 # Return value
 

@@ -12,7 +12,7 @@ SetDefaultBodyCSS – Change default CSS properties at runtime
 
 # Description
 
-void <b>SetDefaultBodyCSS</b> ( string <span class="parameter">$property</span> , string <span class="parameter">$value</span> )
+void **SetDefaultBodyCSS** ( string <span class="parameter">$property</span> , string <span class="parameter">$value</span> )
 
 Change default CSS properties at runtime. This changes the default CSS stylesheet values for the BODY element.
 
@@ -22,7 +22,7 @@ Change default CSS properties at runtime. This changes the default CSS styleshee
 
 Specifies the CSS property to set. Any valid CSS property that mPDF supports for the BODY element e.g.
 
-<code>font-family</code>, <code>font-size</code>, <code>color </code>
+`font-family`, `font-size`, `color `
 
 Case-insensitive
 

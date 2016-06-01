@@ -12,7 +12,7 @@ SetPageTemplate – Specify a page from an external PDF file to use as a templat
 
 # Description
 
-void <b>SetPageTemplate</b> ([ int <span class="parameter">$templateID</span> ])
+void **SetPageTemplate** ([ int <span class="parameter">$templateID</span> ])
 
 Specify a page from an external PDF file to use as a template. The page must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. Once a 'page template' has been set, the template is inserted on every subsequent page of the document. The template is added to the page at the same time as a new page is started (in the Header).
 

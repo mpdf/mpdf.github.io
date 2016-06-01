@@ -8,7 +8,7 @@ modification_time: 2015-08-05T11:59:48+00:00
 
 (mPDF &gt;= 4.2)
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</div>
+<div class="alert alert-info" role="alert">**Note:** If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</div>
 
 # About CSS Paged Media
 
@@ -46,7 +46,7 @@ NB Page-box margins are INSIDE the page-box (unlike block elements in CSS).
 
 # Supported CSS selectors
 
-The CSS <code>@page</code> selector is partially supported in mPDF with the following properties:
+The CSS `@page` selector is partially supported in mPDF with the following properties:
 
 {% highlight css %}
 @page {
@@ -86,17 +86,17 @@ All properties except size are optional.
 
 Three values for the <span class="parameter">size</span> property set the page box to the same size as the sheet:
 
-<code>auto</code>
+`auto`
 
-&nbsp;&nbsp;&nbsp; The page box will be set to the size and orientation of the target sheet.
+    The page box will be set to the size and orientation of the target sheet.
 
-<code>landscape</code>
+`landscape`
 
-&nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the longer sides are horizontal.
+    Overrides the target's orientation. The page box is the same size as the target, and the longer sides are horizontal.
 
-<code>portrait</code>
+`portrait`
 
-&nbsp;&nbsp;&nbsp; Overrides the target's orientation. The page box is the same size as the target, and the shorter sides are horizontal.
+    Overrides the target's orientation. The page box is the same size as the target, and the shorter sides are horizontal.
 
 The header and footer names refer to named headers/footers set in your document.
 
@@ -164,7 +164,7 @@ You can then refer to the named page in other CSS style sheets:
 div.onitsside { page: rotated; page-break-before: right; }
 {% endhighlight %}
 
-<code>&lt;div class="onitsside"&gt;</code> will thus start a new right/odd page which will be in landscape.
+`&lt;div class="onitsside"&gt;` will thus start a new right/odd page which will be in landscape.
 
 # Setting a named page
 
@@ -181,19 +181,19 @@ The CSS property 'page-break-before' is useful in conjunction with a named page 
 
 page-break-before: always|left|right;
 
-<code>always</code>
+`always`
 
-&nbsp;&nbsp;&nbsp; Always force a page break before the generated block element.
+    Always force a page break before the generated block element.
 
-<code>left</code>
+`left`
 
-&nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a left/even page.
+    Force one or two page breaks before the generated block element so that the next page is formatted as a left/even page.
 
-<code>right</code>
+`right`
 
-&nbsp;&nbsp;&nbsp; Force one or two page breaks before the generated block element so that the next page is formatted as a right/odd page.
+    Force one or two page breaks before the generated block element so that the next page is formatted as a right/odd page.
 
-So, for example, <code>page-break-before: right</code> is equivalent of <code>AddPage(... 'NEXT-ODD'...)</code>
+So, for example, `page-break-before: right` is equivalent of `AddPage(... 'NEXT-ODD'...)`
 
 ## Example using Headers and Footers
 

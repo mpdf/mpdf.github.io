@@ -18,7 +18,7 @@ permalink: /user-s-guide/about-mpdf/credits.html
 </ul>
 <p>Including from FPDF extensions:</p>
 <ul>
-<li>Martin Hall-May&nbsp; for WMF support
+<li>Martin Hall-May  for WMF support
 
 </li>
 </ul>
@@ -35,7 +35,7 @@ permalink: /user-s-guide/about-mpdf/credits.html
 <li>Seb for the _SetTextRendering() and SetTextOutline() functions</li>
 <li>Klemen VODOPIVEC for FPDF_Protection</li>
 </ul>
-<p>&nbsp;</p>
+<p> </p>
 </div>
 </div>
 

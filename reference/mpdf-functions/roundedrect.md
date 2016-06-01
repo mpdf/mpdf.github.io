@@ -6,27 +6,27 @@ permalink: /reference/mpdf-functions/roundedrect.html
 modification_time: 2015-08-05T12:00:52+00:00
 ---
 
-<code><b>RoundedRect</b>(<b>float</b> x, <b>float</b> y, <b>float</b> w, <b>float</b> h, <b>float</b> radius[, <b>string</b> style])
+`**RoundedRect**(**float** x, **float** y, **float** w, **float** h, **float** radius[, **string** style])
 
-</code> Draws a rectangle with rounded corners directly to the PDF document at the specified position.
+` Draws a rectangle with rounded corners directly to the PDF document at the specified position.
 
 <ul>
-<li><code>x</code>
+<li>`x`
 
 Abscissa of left edge of box - value in millimeters</li>
-<li><code>y</code>
+<li>`y`
 
 Ordinate of top edge of box - value in millimeters</li>
-<li><code>w</code>
+<li>`w`
 
 Width of the box - in millimeters</li>
-<li><code>h</code>
+<li>`h`
 
 Width of the box - in millimeters</li>
-<li><code>radius</code>
+<li>`radius`
 
 Radius of the rounded corners</li>
-<li><code>style</code>
+<li>`style`
 
 Box style: D or empty string - draw border (default); F - fill; DF or FD - draw and fill
 

@@ -19,9 +19,9 @@ ISO-8859 codepages
 <td>Ħ</td>
 <td>Ą</td>
 <td>Ё</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>‘</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>¡</td>
 <td>Ą</td>
 <td>ก</td>
@@ -36,7 +36,7 @@ ISO-8859 codepages
 <td>˘</td>
 <td>ĸ</td>
 <td>Ђ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>’</td>
 <td>¢</td>
 <td>¢</td>
@@ -53,7 +53,7 @@ ISO-8859 codepages
 <td>£</td>
 <td>Ŗ</td>
 <td>Ѓ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>£</td>
 <td>£</td>
 <td>£</td>
@@ -84,10 +84,10 @@ ISO-8859 codepages
 <tr><th>165</th><th>A5</th>
 <td>¥</td>
 <td>Ľ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ĩ</td>
 <td>Ѕ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>₯</td>
 <td>¥</td>
 <td>¥</td>
@@ -104,7 +104,7 @@ ISO-8859 codepages
 <td>Ĥ</td>
 <td>Ļ</td>
 <td>І</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>¦</td>
 <td>¦</td>
 <td>¦</td>
@@ -121,11 +121,11 @@ ISO-8859 codepages
 <td>§</td>
 <td>§</td>
 <td>Ї</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>§</td>
 <td>§</td>
 <td>§</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ง</td>
 <td>§</td>
 <td>§</td>
@@ -138,7 +138,7 @@ ISO-8859 codepages
 <td>¨</td>
 <td>¨</td>
 <td>Ј</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>¨</td>
 <td>¨</td>
 <td>¨</td>
@@ -155,7 +155,7 @@ ISO-8859 codepages
 <td>İ</td>
 <td>Š</td>
 <td>Љ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>©</td>
 <td>©</td>
 <td>©</td>
@@ -172,7 +172,7 @@ ISO-8859 codepages
 <td>Ş</td>
 <td>Ē</td>
 <td>Њ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ͺ</td>
 <td>×</td>
 <td>ª</td>
@@ -189,7 +189,7 @@ ISO-8859 codepages
 <td>Ğ</td>
 <td>Ģ</td>
 <td>Ћ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>«</td>
 <td>«</td>
 <td>«</td>
@@ -225,11 +225,11 @@ ISO-8859 codepages
 <tr><th>174</th><th>AE</th>
 <td>®</td>
 <td>Ž</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ž</td>
 <td>Ў</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 <td>®</td>
 <td>®</td>
 <td>Ū</td>
@@ -245,7 +245,7 @@ ISO-8859 codepages
 <td>Ż</td>
 <td>¯</td>
 <td>Џ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>―</td>
 <td>¯</td>
 <td>¯</td>
@@ -262,7 +262,7 @@ ISO-8859 codepages
 <td>°</td>
 <td>°</td>
 <td>А</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>°</td>
 <td>°</td>
 <td>°</td>
@@ -279,7 +279,7 @@ ISO-8859 codepages
 <td>ħ</td>
 <td>ą</td>
 <td>Б</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>±</td>
 <td>±</td>
 <td>±</td>
@@ -295,7 +295,7 @@ ISO-8859 codepages
 <td>²</td>
 <td>˛</td>
 <td>В</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>²</td>
 <td>²</td>
 <td>²</td>
@@ -312,7 +312,7 @@ ISO-8859 codepages
 <td>³</td>
 <td>ŗ</td>
 <td>Г</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>³</td>
 <td>³</td>
 <td>³</td>
@@ -329,7 +329,7 @@ ISO-8859 codepages
 <td>´</td>
 <td>´</td>
 <td>Д</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>΄</td>
 <td>´</td>
 <td>´</td>
@@ -345,7 +345,7 @@ ISO-8859 codepages
 <td>µ</td>
 <td>ĩ</td>
 <td>Е</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>΅</td>
 <td>µ</td>
 <td>µ</td>
@@ -362,7 +362,7 @@ ISO-8859 codepages
 <td>ĥ</td>
 <td>ļ</td>
 <td>Ж</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ά</td>
 <td>¶</td>
 <td>¶</td>
@@ -379,7 +379,7 @@ ISO-8859 codepages
 <td>·</td>
 <td>ˇ</td>
 <td>З</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>·</td>
 <td>·</td>
 <td>·</td>
@@ -396,7 +396,7 @@ ISO-8859 codepages
 <td>¸</td>
 <td>¸</td>
 <td>И</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Έ</td>
 <td>¸</td>
 <td>¸</td>
@@ -413,7 +413,7 @@ ISO-8859 codepages
 <td>ı</td>
 <td>š</td>
 <td>Й</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ή</td>
 <td>¹</td>
 <td>¹</td>
@@ -429,7 +429,7 @@ ISO-8859 codepages
 <td colspan="2">ş</td>
 <td>ē</td>
 <td>К</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ί</td>
 <td>÷</td>
 <td>º</td>
@@ -463,7 +463,7 @@ ISO-8859 codepages
 <td>ĵ</td>
 <td>ŧ</td>
 <td>М</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ό</td>
 <td>¼</td>
 <td>¼</td>
@@ -480,7 +480,7 @@ ISO-8859 codepages
 <td>½</td>
 <td>Ŋ</td>
 <td>Н</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>½</td>
 <td>½</td>
 <td>½</td>
@@ -494,10 +494,10 @@ ISO-8859 codepages
 <tr><th>190</th><th>BE</th>
 <td>¾</td>
 <td>ž</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ž</td>
 <td>О</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ύ</td>
 <td>¾</td>
 <td>¾</td>
@@ -515,7 +515,7 @@ ISO-8859 codepages
 <td>П</td>
 <td>؟</td>
 <td>Ώ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>¿</td>
 <td>ŋ</td>
 <td>ฟ</td>
@@ -530,9 +530,9 @@ ISO-8859 codepages
 <td>À</td>
 <td>Ā</td>
 <td>Р</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ΐ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>À</td>
 <td>Ā</td>
 <td>ภ</td>
@@ -549,7 +549,7 @@ ISO-8859 codepages
 <td>С</td>
 <td>ء</td>
 <td>Α</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Á</td>
 <td>Á</td>
 <td>ม</td>
@@ -566,7 +566,7 @@ ISO-8859 codepages
 <td>Т</td>
 <td>آ</td>
 <td>Β</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Â</td>
 <td>Â</td>
 <td>ย</td>
@@ -578,12 +578,12 @@ ISO-8859 codepages
 <tr><th>195</th><th>C3</th>
 <td>Ã</td>
 <td>Ă</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ã</td>
 <td>У</td>
 <td>أ</td>
 <td>Γ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ã</td>
 <td>Ã</td>
 <td>ร</td>
@@ -600,7 +600,7 @@ ISO-8859 codepages
 <td>Ф</td>
 <td>ؤ</td>
 <td>Δ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ä</td>
 <td>Ä</td>
 <td>ฤ</td>
@@ -617,7 +617,7 @@ ISO-8859 codepages
 <td>Х</td>
 <td>إ</td>
 <td>Ε</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Å</td>
 <td>Å</td>
 <td>ล</td>
@@ -634,7 +634,7 @@ ISO-8859 codepages
 <td>Ц</td>
 <td>ئ</td>
 <td>Ζ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Æ</td>
 <td>Æ</td>
 <td>ฦ</td>
@@ -651,7 +651,7 @@ ISO-8859 codepages
 <td>Ч</td>
 <td>ا</td>
 <td>Η</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ç</td>
 <td>Į</td>
 <td>ว</td>
@@ -668,7 +668,7 @@ ISO-8859 codepages
 <td>Ш</td>
 <td>ب</td>
 <td>Θ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>È</td>
 <td>Č</td>
 <td>ศ</td>
@@ -685,7 +685,7 @@ ISO-8859 codepages
 <td>Щ</td>
 <td>ة</td>
 <td>Ι</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>É</td>
 <td>É</td>
 <td>ษ</td>
@@ -702,7 +702,7 @@ ISO-8859 codepages
 <td>Ъ</td>
 <td>ت</td>
 <td>Κ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ê</td>
 <td>Ę</td>
 <td>ส</td>
@@ -719,7 +719,7 @@ ISO-8859 codepages
 <td>Ы</td>
 <td>ث</td>
 <td>Λ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ë</td>
 <td>Ë</td>
 <td>ห</td>
@@ -736,7 +736,7 @@ ISO-8859 codepages
 <td>Ь</td>
 <td>ج</td>
 <td>Μ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ì</td>
 <td>Ė</td>
 <td>ฬ</td>
@@ -753,7 +753,7 @@ ISO-8859 codepages
 <td>Э</td>
 <td>ح</td>
 <td>Ν</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Í</td>
 <td>Í</td>
 <td>อ</td>
@@ -770,7 +770,7 @@ ISO-8859 codepages
 <td>Ю</td>
 <td>خ</td>
 <td>Ξ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Î</td>
 <td>Î</td>
 <td>ฮ</td>
@@ -787,7 +787,7 @@ ISO-8859 codepages
 <td>Я</td>
 <td>د</td>
 <td>Ο</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ï</td>
 <td>Ï</td>
 <td>ฯ</td>
@@ -799,12 +799,12 @@ ISO-8859 codepages
 <tr><th>208</th><th>D0</th>
 <td>Ð</td>
 <td>Đ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Đ</td>
 <td>а</td>
 <td>ذ</td>
 <td>Π</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ğ</td>
 <td>Ð</td>
 <td>ะ</td>
@@ -821,7 +821,7 @@ ISO-8859 codepages
 <td>б</td>
 <td>ر</td>
 <td>Ρ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ñ</td>
 <td>Ņ</td>
 <td>ั</td>
@@ -837,8 +837,8 @@ ISO-8859 codepages
 <td>Ō</td>
 <td>в</td>
 <td>ز</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 <td>Ò</td>
 <td>Ō</td>
 <td>า</td>
@@ -855,7 +855,7 @@ ISO-8859 codepages
 <td>г</td>
 <td>س</td>
 <td>Σ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ó</td>
 <td>Ó</td>
 <td>ำ</td>
@@ -872,7 +872,7 @@ ISO-8859 codepages
 <td>д</td>
 <td>ش</td>
 <td>Τ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ô</td>
 <td>Ô</td>
 <td>ิ</td>
@@ -889,7 +889,7 @@ ISO-8859 codepages
 <td>е</td>
 <td>ص</td>
 <td>Υ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Õ</td>
 <td>Õ</td>
 <td>ี</td>
@@ -906,7 +906,7 @@ ISO-8859 codepages
 <td>ж</td>
 <td>ض</td>
 <td>Φ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ö</td>
 <td>Ö</td>
 <td>ึ</td>
@@ -923,7 +923,7 @@ ISO-8859 codepages
 <td>з</td>
 <td>ط</td>
 <td>Χ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>×</td>
 <td>Ũ</td>
 <td>ื</td>
@@ -940,7 +940,7 @@ ISO-8859 codepages
 <td>и</td>
 <td>ظ</td>
 <td>Ψ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ø</td>
 <td>Ø</td>
 <td>ุ</td>
@@ -957,7 +957,7 @@ ISO-8859 codepages
 <td>й</td>
 <td>ع</td>
 <td>Ω</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ù</td>
 <td>Ų</td>
 <td>ู</td>
@@ -974,7 +974,7 @@ ISO-8859 codepages
 <td>к</td>
 <td>غ</td>
 <td>Ϊ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ú</td>
 <td>Ú</td>
 <td>ฺ</td>
@@ -989,12 +989,12 @@ ISO-8859 codepages
 <td>Û</td>
 <td>Û</td>
 <td>л</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ϋ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Û</td>
 <td>Û</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ū</td>
 <td>Û</td>
 <td>Û</td>
@@ -1006,12 +1006,12 @@ ISO-8859 codepages
 <td>Ü</td>
 <td>Ü</td>
 <td>м</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ά</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ü</td>
 <td>Ü</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ü</td>
 <td>Ü</td>
 <td>Ü</td>
@@ -1023,12 +1023,12 @@ ISO-8859 codepages
 <td>Ŭ</td>
 <td>Ũ</td>
 <td>н</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>έ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>İ</td>
 <td>Ý</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ż</td>
 <td>Ý</td>
 <td>Ý</td>
@@ -1040,12 +1040,12 @@ ISO-8859 codepages
 <td>Ŝ</td>
 <td>Ū</td>
 <td>о</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ή</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ş</td>
 <td>Þ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>Ž</td>
 <td>Ŷ</td>
 <td>Þ</td>
@@ -1057,7 +1057,7 @@ ISO-8859 codepages
 <td>ß</td>
 <td>ß</td>
 <td>п</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ί</td>
 <td>‗</td>
 <td>ß</td>
@@ -1122,7 +1122,7 @@ ISO-8859 codepages
 <tr><th>227</th><th>E3</th>
 <td>ã</td>
 <td>ă</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ã</td>
 <td>у</td>
 <td>ك</td>
@@ -1343,7 +1343,7 @@ ISO-8859 codepages
 <tr><th>240</th><th>F0</th>
 <td>ð</td>
 <td>đ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>đ</td>
 <td>ȑ</td>
 <td>ِ</td>
@@ -1397,7 +1397,7 @@ ISO-8859 codepages
 <td>ó</td>
 <td>ķ</td>
 <td>ѓ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>σ</td>
 <td>ף</td>
 <td>ó</td>
@@ -1414,7 +1414,7 @@ ISO-8859 codepages
 <td>ô</td>
 <td>ô</td>
 <td>є</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>τ</td>
 <td>פ</td>
 <td>ô</td>
@@ -1427,11 +1427,11 @@ ISO-8859 codepages
 </tr>
 <tr><th>245</th><th>F5</th>
 <td>ő</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ġ</td>
 <td>õ</td>
 <td>ѕ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>υ</td>
 <td>ץ</td>
 <td>õ</td>
@@ -1448,7 +1448,7 @@ ISO-8859 codepages
 <td>ö</td>
 <td>ö</td>
 <td>і</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>φ</td>
 <td>צ</td>
 <td>ö</td>
@@ -1465,7 +1465,7 @@ ISO-8859 codepages
 <td>÷</td>
 <td>÷</td>
 <td>ї</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>χ</td>
 <td>ק</td>
 <td>÷</td>
@@ -1482,7 +1482,7 @@ ISO-8859 codepages
 <td>ĝ</td>
 <td>ø</td>
 <td>ј</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ψ</td>
 <td>ר</td>
 <td>ø</td>
@@ -1499,7 +1499,7 @@ ISO-8859 codepages
 <td>ù</td>
 <td>ų</td>
 <td>љ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ω</td>
 <td>ש</td>
 <td>ù</td>
@@ -1516,7 +1516,7 @@ ISO-8859 codepages
 <td>ú</td>
 <td>ú</td>
 <td>њ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ϊ</td>
 <td>ת</td>
 <td>ú</td>
@@ -1533,9 +1533,9 @@ ISO-8859 codepages
 <td>û</td>
 <td>û</td>
 <td>ћ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ϋ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>û</td>
 <td>û</td>
 <td>๛</td>
@@ -1550,12 +1550,12 @@ ISO-8859 codepages
 <td>ü</td>
 <td>ü</td>
 <td>ќ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ό</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ü</td>
 <td>ü</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ü</td>
 <td>ü</td>
 <td>ü</td>
@@ -1567,12 +1567,12 @@ ISO-8859 codepages
 <td>ŭ</td>
 <td>ũ</td>
 <td>§</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ύ</td>
-<td><i>LRM</i></td>
+<td>*LRM*</td>
 <td>ı</td>
 <td>ý</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ż</td>
 <td>ý</td>
 <td>ý</td>
@@ -1584,12 +1584,12 @@ ISO-8859 codepages
 <td>ŝ</td>
 <td>ū</td>
 <td>ў</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ώ</td>
-<td><i>RLM</i></td>
+<td>*RLM*</td>
 <td>ş</td>
 <td>þ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>ž</td>
 <td>ŷ</td>
 <td>þ</td>
@@ -1601,12 +1601,12 @@ ISO-8859 codepages
 <td>˙</td>
 <td>˙</td>
 <td>џ</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
+<td> </td>
 <td>ÿ</td>
 <td>ĸ</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>’</td>
 <td>ÿ</td>
 <td>ÿ</td>
@@ -1619,153 +1619,153 @@ ISO-8859 codepages
 <table class="table"><tbody>
 <tr><th>8−
 
-&nbsp;</th>
+ </th>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Euro_sign">€</a></span>
 
 20AC
 
-<i><b>128</b></i></td>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;">&nbsp;</td>
+***128***</td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;"> </td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">‚</a></span>
 
 201A
 
-<i><b>130</b></i></td>
+***130***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C6%91">ƒ</a></span>
 
 0192
 
-<i><b>131</b></i></td>
+***131***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">„</a></span>
 
 201E
 
-<i><b>132</b></i></td>
+***132***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Ellipsis">…</a></span>
 
 2026
 
-<i><b>133</b></i></td>
+***133***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Dagger_(typography)">†</a></span>
 
 2020
 
-<i><b>134</b></i></td>
+***134***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Double_dagger_(typography)">‡</a></span>
 
 2021
 
-<i><b>135</b></i></td>
+***135***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Circumflex">ˆ</a></span>
 
 02C6
 
-<i><b>136</b></i></td>
+***136***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Permille">‰</a></span>
 
 2030
 
-<i><b>137</b></i></td>
+***137***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%A0">Š</a></span>
 
 0160
 
-<i><b>138</b></i></td>
+***138***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Quotation_mark">‹</a></span>
 
 2039
 
-<i><b>139</b></i></td>
+***139***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%92">Œ</a></span>
 
 0152
 
-<i><b>140</b></i></td>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+***140***</td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;">      </td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%BD">Ž</a></span>
 
 017D
 
-<i><b>142</b></i></td>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;">&nbsp;</td>
+***142***</td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;"> </td>
 </tr>
-<tr><th>&nbsp;
+<tr><th> 
 
 9−
 
-&nbsp;</th>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;">&nbsp;</td>
+ </th>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;"> </td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">‘</a></span>
 
 2018
 
-<i><b>145</b></i></td>
+***145***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">’</a></span>
 
 2019
 
-<i><b>146</b></i></td>
+***146***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">“</a></span>
 
 201C
 
-<i><b>147</b></i></td>
+***147***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">”</a></span>
 
 201D
 
-<i><b>148</b></i></td>
+***148***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Bullet_(typography)">•</a></span>
 
 2022
 
-<i><b>149</b></i></td>
+***149***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Dash_(punctuation)">–</a></span>
 
 2013
 
-<i><b>150</b></i></td>
+***150***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Dash_(punctuation)">—</a></span>
 
 2014
 
-<i><b>151</b></i></td>
+***151***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Tilde">˜</a></span>
 
 02DC
 
-<i><b>152</b></i></td>
+***152***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Trademark">™</a></span>
 
 2122
 
-<i><b>153</b></i></td>
+***153***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%A0">š</a></span>
 
 0161
 
-<i><b>154</b></i></td>
+***154***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Quotation_mark">›</a></span>
 
 203A
 
-<i><b>155</b></i></td>
+***155***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%92">œ</a></span>
 
 0153
 
-<i><b>156</b></i></td>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;">&nbsp;</td>
+***156***</td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;"> </td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%BD">ž</a></span>
 
 017E
 
-<i><b>158</b></i></td>
+***158***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%B8">Ÿ</a></span>
 
 0178
 
-<i><b>159</b></i></td>
+***159***</td>
 </tr>
 </tbody></table>
 
@@ -1774,687 +1774,687 @@ ISO-8859 codepages
 <table class="table"><tbody>
 <tr><th>8−
 
-&nbsp;</th>
+ </th>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ђ</span>
 
 0402
 
-<i><b>128</b></i></td>
+***128***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ѓ</span>
 
 0403
 
-<i><b>129</b></i></td>
+***129***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‚</span>
 
 201A
 
-<i><b>130</b></i></td>
+***130***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ѓ</span>
 
 0453
 
-<i><b>131</b></i></td>
+***131***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>„</span>
 
 201E
 
-<i><b>132</b></i></td>
+***132***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>…</span>
 
 2026
 
-<i><b>133</b></i></td>
+***133***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>†</span>
 
 2020
 
-<i><b>134</b></i></td>
+***134***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‡</span>
 
 2021
 
-<i><b>135</b></i></td>
+***135***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Euro_sign">€</a></span>
 
 20AC
 
-<i><b>136</b></i></td>
+***136***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‰</span>
 
 2030
 
-<i><b>137</b></i></td>
+***137***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Љ</span>
 
 0409
 
-<i><b>138</b></i></td>
+***138***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‹</span>
 
 2039
 
-<i><b>139</b></i></td>
+***139***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Њ</span>
 
 040A
 
-<i><b>140</b></i></td>
+***140***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ќ</span>
 
 040C
 
-<i><b>141</b></i></td>
+***141***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ћ</span>
 
 040B
 
-<i><b>142</b></i></td>
+***142***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Џ</span>
 
 040F
 
-<i><b>143</b></i></td>
+***143***</td>
 </tr>
-<tr><th>&nbsp;
+<tr><th> 
 
 9−
 
-&nbsp;</th>
+ </th>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ђ</span>
 
 0452
 
-<i><b>144</b></i></td>
+***144***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‘</span>
 
 2018
 
-<i><b>145</b></i></td>
+***145***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>’</span>
 
 2019
 
-<i><b>146</b></i></td>
+***146***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>“</span>
 
 201C
 
-<i><b>147</b></i></td>
+***147***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>”</span>
 
 201D
 
-<i><b>148</b></i></td>
+***148***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>•</span>
 
 2022
 
-<i><b>149</b></i></td>
+***149***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>–</span>
 
 2013
 
-<i><b>150</b></i></td>
+***150***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>—</span>
 
 2014
 
-<i><b>151</b></i></td>
+***151***</td>
 <td style="background: #d0d0d0 none repeat scroll 0% 0%;">
 
-<i><b>152</b></i></td>
+***152***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>™</span>
 
 2122
 
-<i><b>153</b></i></td>
+***153***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>љ</span>
 
 0459
 
-<i><b>154</b></i></td>
+***154***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>›</span>
 
 203A
 
-<i><b>155</b></i></td>
+***155***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>њ</span>
 
 045A
 
-<i><b>156</b></i></td>
+***156***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ќ</span>
 
 045C
 
-<i><b>157</b></i></td>
+***157***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ћ</span>
 
 045B
 
-<i><b>158</b></i></td>
+***158***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>џ</span>
 
 045F
 
-<i><b>159</b></i></td>
+***159***</td>
 </tr>
-<tr><th>&nbsp;
+<tr><th> 
 
 A−
 
-&nbsp;</th>
+ </th>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><a href="http://en.wikipedia.org/wiki/Non-breaking_space">NBSP</a>
 
 00A0
 
-<i><b>160</b></i></td>
+***160***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ў</span>
 
 040E
 
-<i><b>161</b></i></td>
+***161***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ў</span>
 
 045E
 
-<i><b>162</b></i></td>
+***162***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ј</span>
 
 0408
 
-<i><b>163</b></i></td>
+***163***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>¤</span>
 
 00A4
 
-<i><b>164</b></i></td>
+***164***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ґ</span>
 
 0490
 
-<i><b>165</b></i></td>
+***165***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>¦</span>
 
 00A6
 
-<i><b>166</b></i></td>
+***166***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>§</span>
 
 00A7
 
-<i><b>167</b></i></td>
+***167***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ё</span>
 
 0401
 
-<i><b>168</b></i></td>
+***168***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>©</span>
 
 00A9
 
-<i><b>169</b></i></td>
+***169***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Є</span>
 
 0404
 
-<i><b>170</b></i></td>
+***170***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>«</span>
 
 00AB
 
-<i><b>171</b></i></td>
+***171***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>¬</span>
 
 00AC
 
-<i><b>172</b></i></td>
+***172***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><a href="http://en.wikipedia.org/wiki/Soft_hyphen">SHY</a>
 
 00AD
 
-<i><b>173</b></i></td>
+***173***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>®</span>
 
 00AE
 
-<i><b>174</b></i></td>
+***174***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ї</span>
 
 0407
 
-<i><b>175</b></i></td>
+***175***</td>
 </tr>
-<tr><th>&nbsp;
+<tr><th> 
 
 B−
 
-&nbsp;</th>
+ </th>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Degree_(symbol)">°</a></span>
 
 00B0
 
-<i><b>176</b></i></td>
+***176***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Plus-minus_sign">±</a></span>
 
 00B1
 
-<i><b>177</b></i></td>
+***177***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>І</span>
 
 0406
 
-<i><b>178</b></i></td>
+***178***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>і</span>
 
 0456
 
-<i><b>179</b></i></td>
+***179***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ґ</span>
 
 0491
 
-<i><b>180</b></i></td>
+***180***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Micro_sign">µ</a></span>
 
 00B5
 
-<i><b>181</b></i></td>
+***181***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>¶</span>
 
 00B6
 
-<i><b>182</b></i></td>
+***182***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>·</span>
 
 00B7
 
-<i><b>183</b></i></td>
+***183***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ё</span>
 
 0451
 
-<i><b>184</b></i></td>
+***184***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Numero_sign">№</a></span>
 
 2116
 
-<i><b>185</b></i></td>
+***185***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>є</span>
 
 0454
 
-<i><b>186</b></i></td>
+***186***</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>»</span>
 
 00BB
 
-<i><b>187</b></i></td>
+***187***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ј</span>
 
 0458
 
-<i><b>188</b></i></td>
+***188***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ѕ</span>
 
 0405
 
-<i><b>189</b></i></td>
+***189***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ѕ</span>
 
 0455
 
-<i><b>190</b></i></td>
+***190***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ї</span>
 
 0457
 
-<i><b>191</b></i></td>
+***191***</td>
 </tr>
-<tr><th>&nbsp;
+<tr><th> 
 
 C−
 
-&nbsp;</th>
+ </th>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>А</span>
 
 0410
 
-<i><b>192</b></i></td>
+***192***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Б</span>
 
 0411
 
-<i><b>193</b></i></td>
+***193***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>В</span>
 
 0412
 
-<i><b>194</b></i></td>
+***194***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Г</span>
 
 0413
 
-<i><b>195</b></i></td>
+***195***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Д</span>
 
 0414
 
-<i><b>196</b></i></td>
+***196***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Е</span>
 
 0415
 
-<i><b>197</b></i></td>
+***197***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ж</span>
 
 0416
 
-<i><b>198</b></i></td>
+***198***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>З</span>
 
 0417
 
-<i><b>199</b></i></td>
+***199***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>И</span>
 
 0418
 
-<i><b>200</b></i></td>
+***200***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Й</span>
 
 0419
 
-<i><b>201</b></i></td>
+***201***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>К</span>
 
 041A
 
-<i><b>202</b></i></td>
+***202***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Л</span>
 
 041B
 
-<i><b>203</b></i></td>
+***203***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>М</span>
 
 041C
 
-<i><b>204</b></i></td>
+***204***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Н</span>
 
 041D
 
-<i><b>205</b></i></td>
+***205***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>О</span>
 
 041E
 
-<i><b>206</b></i></td>
+***206***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>П</span>
 
 041F
 
-<i><b>207</b></i></td>
+***207***</td>
 </tr>
-<tr><th>&nbsp;
+<tr><th> 
 
 D−
 
-&nbsp;</th>
+ </th>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Р</span>
 
 0420
 
-<i><b>208</b></i></td>
+***208***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>С</span>
 
 0421
 
-<i><b>209</b></i></td>
+***209***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Т</span>
 
 0422
 
-<i><b>210</b></i></td>
+***210***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>У</span>
 
 0423
 
-<i><b>211</b></i></td>
+***211***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ф</span>
 
 0424
 
-<i><b>212</b></i></td>
+***212***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Х</span>
 
 0425
 
-<i><b>213</b></i></td>
+***213***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ц</span>
 
 0426
 
-<i><b>214</b></i></td>
+***214***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ч</span>
 
 0427
 
-<i><b>215</b></i></td>
+***215***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ш</span>
 
 0428
 
-<i><b>216</b></i></td>
+***216***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Щ</span>
 
 0429
 
-<i><b>217</b></i></td>
+***217***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ъ</span>
 
 042A
 
-<i><b>218</b></i></td>
+***218***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ы</span>
 
 042B
 
-<i><b>219</b></i></td>
+***219***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ь</span>
 
 042C
 
-<i><b>220</b></i></td>
+***220***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Э</span>
 
 042D
 
-<i><b>221</b></i></td>
+***221***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ю</span>
 
 042E
 
-<i><b>222</b></i></td>
+***222***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Я</span>
 
 042F
 
-<i><b>223</b></i></td>
+***223***</td>
 </tr>
-<tr><th>&nbsp;
+<tr><th> 
 
 E−
 
-&nbsp;</th>
+ </th>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>а</span>
 
 0430
 
-<i><b>224</b></i></td>
+***224***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>б</span>
 
 0431
 
-<i><b>225</b></i></td>
+***225***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>в</span>
 
 0432
 
-<i><b>226</b></i></td>
+***226***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>г</span>
 
 0433
 
-<i><b>227</b></i></td>
+***227***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>д</span>
 
 0434
 
-<i><b>228</b></i></td>
+***228***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>е</span>
 
 0435
 
-<i><b>229</b></i></td>
+***229***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ж</span>
 
 0436
 
-<i><b>230</b></i></td>
+***230***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>з</span>
 
 0437
 
-<i><b>231</b></i></td>
+***231***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>и</span>
 
 0438
 
-<i><b>232</b></i></td>
+***232***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>й</span>
 
 0439
 
-<i><b>233</b></i></td>
+***233***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>к</span>
 
 043A
 
-<i><b>234</b></i></td>
+***234***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>л</span>
 
 043B
 
-<i><b>235</b></i></td>
+***235***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>м</span>
 
 043C
 
-<i><b>236</b></i></td>
+***236***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>н</span>
 
 043D
 
-<i><b>237</b></i></td>
+***237***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>о</span>
 
 043E
 
-<i><b>238</b></i></td>
+***238***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>п</span>
 
 043F
 
-<i><b>239</b></i></td>
+***239***</td>
 </tr>
-<tr><th>&nbsp;
+<tr><th> 
 
 F−
 
-&nbsp;</th>
+ </th>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>р</span>
 
 0440
 
-<i><b>240</b></i></td>
+***240***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>с</span>
 
 0441
 
-<i><b>241</b></i></td>
+***241***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>т</span>
 
 0442
 
-<i><b>242</b></i></td>
+***242***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>у</span>
 
 0443
 
-<i><b>243</b></i></td>
+***243***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ф</span>
 
 0444
 
-<i><b>244</b></i></td>
+***244***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>х</span>
 
 0445
 
-<i><b>245</b></i></td>
+***245***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ц</span>
 
 0446
 
-<i><b>246</b></i></td>
+***246***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ч</span>
 
 0447
 
-<i><b>247</b></i></td>
+***247***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ш</span>
 
 0448
 
-<i><b>248</b></i></td>
+***248***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>щ</span>
 
 0449
 
-<i><b>249</b></i></td>
+***249***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ъ</span>
 
 044A
 
-<i><b>250</b></i></td>
+***250***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ы</span>
 
 044B
 
-<i><b>251</b></i></td>
+***251***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ь</span>
 
 044C
 
-<i><b>252</b></i></td>
+***252***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>э</span>
 
 044D
 
-<i><b>253</b></i></td>
+***253***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ю</span>
 
 044E
 
-<i><b>254</b></i></td>
+***254***</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>я</span>
 
 044F
 
-<i><b>255</b></i></td>
+***255***</td>
 </tr>
 </tbody></table>
 

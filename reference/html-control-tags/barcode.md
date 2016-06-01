@@ -12,11 +12,11 @@ barcode – Add a Barcode to the document
 
 # Description
 
-&lt;<b>barcode</b>&nbsp; <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;
+&lt;**barcode**  <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;
 
 Add a Barcode to the document.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> and the example file for further information.</div>
+<div class="alert alert-info" role="alert">**Note:** See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> and the example file for further information.</div>
 
 # Attributes
 
@@ -36,13 +36,13 @@ Check-digits can be optionally included for EAN13 / ISBN / ISSN / UPCA / UPCE
 
 <span class="smallblock">DEFAULT</span>: EAN13
 
-<b>Values</b>
+**Values**
 
 EAN13, ISBN, ISSN, UPCA, UPCE, EAN8
 
 EAN13P2, ISBNP2, ISSNP2, UPCAP2, UPCEP2, EAN8P2 (with EAN-2 supplement code i.e. 01-99 )
 
-EAN13P5, ISBNP5, ISSNP5, UPCAP5, UPCEP5, EAN8P5&nbsp; (with EAN-5 supplement code e.g. 90000 )
+EAN13P5, ISBNP5, ISSNP5, UPCAP5, UPCEP5, EAN8P5  (with EAN-5 supplement code e.g. 90000 )
 
 (UPCE needs the UPCA <span class="parameter">code</span> entered)
 
@@ -68,7 +68,7 @@ Note: Type with a + at the end includes check-digits.
 
 <span class="parameter">text</span>
 
-<b>EAN13 only</b>
+**EAN13 only**
 
 Specifies whether to show the the code at the top of an EAN13 barcode.
 
@@ -96,7 +96,7 @@ Specifies the height of the barcode.
 
 <span class="parameter">height (float)</span> will determine the relative height of the barcode as a factor of 1
 
-The height factor is applied after the <span class="parameter">size </span> 
+The height factor is applied after the <span class="parameter">size </span>
 
 <span class="parameter">size="2" height="0.5"</span> will generate a barcode of twice the nominal width, but with the nominal height.
 
@@ -161,9 +161,9 @@ Examples
 
 # Notes
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
+<div class="alert alert-info" role="alert">**Note:** The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
 
-vertical-align&nbsp; (default: middle)
+vertical-align  (default: middle)
 
 border*
 
@@ -212,7 +212,7 @@ Example with CSS
 <div class="barcodecell"><barcode code="54321068" type="I25" class="barcode" /></div>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> mPDF will generate a Checkdigit for most barcodes if required, which is added to the barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:</div>
+<div class="alert alert-info" role="alert">**Note:** mPDF will generate a Checkdigit for most barcodes if required, which is added to the barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:</div>
 
 {% highlight php %}
 Example - Generating a checkdigit
@@ -228,7 +228,7 @@ include('../classes/barcode.php');
 
 $bc = new PDFBarcode();
 
-echo $bc->getChecksum('9344543204454', 'C93'); 
+echo $bc->getChecksum('9344543204454', 'C93');
 
 exit;
 {% endhighlight %}

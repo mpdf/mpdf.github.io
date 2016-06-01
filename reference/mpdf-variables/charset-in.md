@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:01:46+00:00
 
 # Description
 
-string <b>charset_in</b>
+string **charset_in**
 
 Defines the character encoding of any input HTML. Use it together with <span class="parameter">allow_charset_conversion</span> to manually set an input encoding.
 
@@ -18,7 +18,7 @@ Defines the character encoding of any input HTML. Use it together with <span cla
 
 <span class="parameter">charset_in</span>
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 Any string value allowed which is valid for the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv()</a>. This appears to vary depending on the local configuration. See the manual entry for <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> for usual values. You may need to use cp1252 or windows-1252 instead of win-1252, or iso-88591 instead of iso-8859-1.
 

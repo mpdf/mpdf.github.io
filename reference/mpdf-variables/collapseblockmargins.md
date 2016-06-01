@@ -12,7 +12,7 @@ collapseBlockMargins – Specify whether to collapse (vertical) margins between 
 
 # Description
 
-void <b>collapseBlockMargins</b>
+void **collapseBlockMargins**
 
 Specify whether to collapse (vertical) margins between block elements. In line with CSS specification, the top/bottom margins of adjoining block-style elements are collapsed to the larger of the two. This works between all block elements such as DIV, P, H1-6 etc. and also lists and tables.
 
@@ -20,9 +20,9 @@ NB Firefox does not collapse margins above and below tables, but IE8 does.
 
 # Values
 
-<span class="parameter">collapseBlockMargins</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">collapseBlockMargins</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE </span>: enable collapse
 
@@ -69,5 +69,5 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> The collapse of margins at the top and bottom of the page is unaffected by this variable. This is set by the custom CSS property <code>margin-collapse: collapse|none</code> which can be defined in the <code>defaultCSS</code> variable in <span class="filename">config.php</span> or elsewhere.</div>
+<div class="alert alert-info" role="alert">**Note:** The collapse of margins at the top and bottom of the page is unaffected by this variable. This is set by the custom CSS property `margin-collapse: collapse|none` which can be defined in the `defaultCSS` variable in <span class="filename">config.php</span> or elsewhere.</div>
 

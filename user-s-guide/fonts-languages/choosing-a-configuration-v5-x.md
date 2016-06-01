@@ -12,7 +12,7 @@ permalink: /user-s-guide/fonts-languages/choosing-a-configuration-v5-x.html
 <p>In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at least in some form).</p>
 <p>Some of the things you can change are:</p>
 <ul>
-<li>the initial parameter used to call mPDF e.g. <code>$mpdf = new mPDF('c')</code></li>
+<li>the initial parameter used to call mPDF e.g. `$mpdf = new mPDF('c')`</li>
 <li>configuration variables set in <span class="filename">config.php</span> see <a href="/reference/mpdf-variables/overview.html">mPDF Variables - Overview</a>
 
 (many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
@@ -28,9 +28,9 @@ permalink: /user-s-guide/fonts-languages/choosing-a-configuration-v5-x.html
 <li>handling of languages which require special fonts, including auto_font and character substitution</li>
 </ul>
 <h2>Core non-embedded fonts</h2>
-<p>PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and&nbsp;Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not need to be embedded in the PDF document.</p>
-<p><i>Advantages:</i> Small file size, fast processing, small memory usage.</p>
-<p><i>Disadvantages:</i> Limited choice of fonts for appearance. Will not display characters which are not in the <a href="/reference/codepages-glyphs/win-1252.html">win-1252</a>&nbsp; <a href="/reference/codepages-glyphs/symbols-adobe.html">Symbols</a>, or&nbsp; <a href="/reference/codepages-glyphs/zapfdingbats-adobe.html">Dingbats</a> codepages (suitable for most Western European languages).</p>
+<p>PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not need to be embedded in the PDF document.</p>
+<p>*Advantages:* Small file size, fast processing, small memory usage.</p>
+<p>*Disadvantages:* Limited choice of fonts for appearance. Will not display characters which are not in the <a href="/reference/codepages-glyphs/win-1252.html">win-1252</a>  <a href="/reference/codepages-glyphs/symbols-adobe.html">Symbols</a>, or  <a href="/reference/codepages-glyphs/zapfdingbats-adobe.html">Dingbats</a> codepages (suitable for most Western European languages).</p>
 <p>To use core fonts only, use 'c' for the initial parameter:</p>
 
 {% highlight php %}
@@ -43,23 +43,23 @@ $mpdf = new mPDF('c');
 <p>The alternative (the default setup) uses TrueType Unicode fonts, and the only limitation of characters to display is determined by the font files themselves.</p>
 <h3>Subsetting fonts</h3>
 <p>Fonts with good coverage of all characters you may require can be very large. If you embed the whole font file in the PDF document, the file can become very large - especially if you use a number of fonts. mPDF can embed subsets of the fonts i.e. just including the characters used in the PDF document.</p>
-<p><i>Advantages of subsetting:</i> Manageable file size (typically between 20-200kB)</p>
-<p><i>Disadvantages of subsetting:</i> Increase in processing time and memory usage (not always), as mPDF has to rebuild font files for each document.</p>
-<p>By default, mPDF will embed subsets of fonts if less than 30% of the characters contained in the font are used in the document; otherwise it will embed the whole font file. You can override this by changing the configurable variable <code>$this-&gt;percentSubset</code></p>
-<p>For backwards compatibility, you can use '-s' or 's'&nbsp; in the initial parameter to override the <span class="filename">config.php</span> settings and force subsetting of all fonts e.g.</p>
+<p>*Advantages of subsetting:* Manageable file size (typically between 20-200kB)</p>
+<p>*Disadvantages of subsetting:* Increase in processing time and memory usage (not always), as mPDF has to rebuild font files for each document.</p>
+<p>By default, mPDF will embed subsets of fonts if less than 30% of the characters contained in the font are used in the document; otherwise it will embed the whole font file. You can override this by changing the configurable variable `$this->percentSubset`</p>
+<p>For backwards compatibility, you can use '-s' or 's'  in the initial parameter to override the <span class="filename">config.php</span> settings and force subsetting of all fonts e.g.</p>
 
 {% highlight php %}
 <?php
 
 $mpdf = new mPDF('s');
 
-$mpdf = new mPDF('ar-s');&nbsp; // also defining arabic language code
+$mpdf = new mPDF('ar-s');  // also defining arabic language code
 
 $mpdf = new mPDF('utf8-s'); // for backwards compatibility - the utf-8 does nothing
 {% endhighlight %}
 
 <h3>Using core non-embedded fonts in a Unicode document</h3>
-<p>If your document uses Unicode fonts as above, you can force mPDF to use the core (non-embedded) PDF fonts in parts of the document by selecting the fontnames: <code>chelvetica</code>, <code>ccourier</code> and <code>ctimes</code> e.g.</p>
+<p>If your document uses Unicode fonts as above, you can force mPDF to use the core (non-embedded) PDF fonts in parts of the document by selecting the fontnames: `chelvetica`, `ccourier` and `ctimes` e.g.</p>
 
 {% highlight php %}
 <?php
@@ -67,24 +67,24 @@ $mpdf = new mPDF('utf8-s'); // for backwards compatibility - the utf-8 does noth
 &lt;p style="font-family:chelvetica"&gt;This paragraph will use core fonts&lt;/p&gt;
 {% endhighlight %}
 
-<p>You could force mPDF to always use core fonts when Arial/Helvetica/Courier are specified, by editing the font translation variable <code>$this-&gt;fonttrans</code> in <span class="filename">config_fonts.php</span> e.g.:</p>
+<p>You could force mPDF to always use core fonts when Arial/Helvetica/Courier are specified, by editing the font translation variable `$this->fonttrans` in <span class="filename">config_fonts.php</span> e.g.:</p>
 
 {% highlight php %}
 <?php
 
-$this-&gt;fonttrans = array(
+$this->fonttrans = array(
 
-&nbsp;'arial' =&gt; 'chelvetica',
+ 'arial' =&gt; 'chelvetica',
 
-&nbsp;'helvetica' =&gt; 'chelvetica',
+ 'helvetica' =&gt; 'chelvetica',
 
-&nbsp;'timesnewroman' =&gt; 'ctimes',
+ 'timesnewroman' =&gt; 'ctimes',
 
-&nbsp;'times' =&gt; 'ctimes',
+ 'times' =&gt; 'ctimes',
 
-&nbsp;'couriernew' =&gt; 'ccourier',
+ 'couriernew' =&gt; 'ccourier',
 
-&nbsp;'courier' =&gt; 'ccourier',
+ 'courier' =&gt; 'ccourier',
 {% endhighlight %}
 
 <h2>Languages which require special fonts</h2>
@@ -95,29 +95,29 @@ $this-&gt;fonttrans = array(
 {% highlight php %}
 <?php
 
-<code>&lt;p style="font-family: Garuda"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;
+`&lt;p style="font-family: Garuda"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;
 
-</code><code>&lt;p style="font-family: BIG5"&gt;仝娃阿哀愛挨姶&lt;/p&gt;
+``&lt;p style="font-family: BIG5"&gt;仝娃阿哀愛挨姶&lt;/p&gt;
 
-</code><code>&lt;p style="font-family: sun-exta"&gt;仝娃阿哀愛挨姶&lt;/p&gt;</code>
+``&lt;p style="font-family: sun-exta"&gt;仝娃阿哀愛挨姶&lt;/p&gt;`
 
-<code>&lt;p </code><code>style="font-family: 'XB Riyaz'"</code><code>&gt;البرادعی البرادعی&lt;/p&gt;</code>
+`&lt;p ``style="font-family: 'XB Riyaz'"``&gt;البرادعی البرادعی&lt;/p&gt;`
 
-<code>&lt;p </code><code>style="font-family: ind_hi_1_001"</code><code>&gt;</code><span class="l">पहला पन्ना</span><code>&lt;/p&gt;</code>
+`&lt;p ``style="font-family: ind_hi_1_001"``&gt;`<span class="l">पहला पन्ना</span>`&lt;/p&gt;`
 {% endhighlight %}
 
-<p>2) Use the <code>lang</code> attribute to define the language. This causes mPDF to use a font as specified in the <span class="filename">config_cp.php</span> file. The current font-family will be used if it is available in the list defined as <code>$unifonts</code>, otherwise the first font specified in the <code>$unifonts</code> list will be selected.</p>
+<p>2) Use the `lang` attribute to define the language. This causes mPDF to use a font as specified in the <span class="filename">config_cp.php</span> file. The current font-family will be used if it is available in the list defined as `$unifonts`, otherwise the first font specified in the `$unifonts` list will be selected.</p>
 
 {% highlight php %}
 <?php
 
-<code>&lt;p lang="th"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;
+`&lt;p lang="th"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;
 
-</code><code>&lt;p lang="zh-CN"&gt;仝娃阿哀愛挨姶&lt;/p&gt;</code>
+``&lt;p lang="zh-CN"&gt;仝娃阿哀愛挨姶&lt;/p&gt;`
 
-<code>&lt;p lang="ar"&gt;البرادعی البرادعی&lt;/p&gt;</code>
+`&lt;p lang="ar"&gt;البرادعی البرادعی&lt;/p&gt;`
 
-<code>&lt;p lang="hi"&gt;</code><span class="l">पहला पन्ना</span><code>&lt;/p&gt;</code>
+`&lt;p lang="hi"&gt;`<span class="l">पहला पन्ना</span>`&lt;/p&gt;`
 {% endhighlight %}
 
 <p>3) If you set the language in the initial call to mPDF i.e.</p>
@@ -125,29 +125,29 @@ $this-&gt;fonttrans = array(
 {% highlight php %}
 <?php
 
-<code>$mpdf = new mPDF('th');
+`$mpdf = new mPDF('th');
 
-</code><code>$mpdf = new mPDF('zh-CN');</code>&nbsp; // You can append +aCJK or -aCJK
+``$mpdf = new mPDF('zh-CN');`  // You can append +aCJK or -aCJK
 
-<code>$mpdf = new mPDF('ar');
+`$mpdf = new mPDF('ar');
 
-</code><code>$mpdf = new mPDF('hi');</code>
+``$mpdf = new mPDF('hi');`
 {% endhighlight %}
 
-<p>then mPDF will restrict the fonts you can use for the whole document<code>. </code>Any of the fonts defined in <code>$unifonts</code> can be used:</p>
+<p>then mPDF will restrict the fonts you can use for the whole document`. `Any of the fonts defined in `$unifonts` can be used:</p>
 
 {% highlight php %}
 <?php
 
-<code>// If config_cp.php defines:
+`// If config_cp.php defines:
 
-CASE "th":&nbsp; $spacing = "C";&nbsp;
+CASE "th":  $spacing = "C"; 
 
-$unifonts = "garuda,garudaB,garudaI,garudaBI,norasi,norasiB,norasiI,norasiBI";&nbsp;
+$unifonts = "garuda,garudaB,garudaI,garudaBI,norasi,norasiB,norasiI,norasiBI"; 
 
 break;
 
-</code>
+`
 {% endhighlight %}
 
 <p>These paragraphs will appear in Garuda (a sans-serif font) and Norasi (serif) respectively:</p>
@@ -155,9 +155,9 @@ break;
 {% highlight php %}
 <?php
 
-<code>&lt;p style="font-family:sans"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;
+`&lt;p style="font-family:sans"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;
 
-</code><code>&lt;p style="font-family:serif"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;</code>
+``&lt;p style="font-family:serif"&gt;เป็นมนุษย์สุดประเสริฐเลิศคุณค่า&lt;/p&gt;`
 {% endhighlight %}
 
 <p>4) You can also set the language for the whole document by setting:</p>
@@ -165,16 +165,16 @@ break;
 {% highlight php %}
 <?php
 
-<code>&lt;body lang="th"&gt;
+`&lt;body lang="th"&gt;
 
-</code><code>&lt;body lang="zh-CN"&gt;</code>
+``&lt;body lang="zh-CN"&gt;`
 
-<code>&lt;body lang="ar"&gt;
+`&lt;body lang="ar"&gt;
 
-</code><code>&lt;body lang="hi"&gt;</code>
+``&lt;body lang="hi"&gt;`
 {% endhighlight %}
 
-<p>5) Use&nbsp;<a href="/reference/mpdf-functions/setautofont.html">SetAutoFont()</a> to automatically detect these languages. AutoFont inspects the HTML code and inserts&nbsp;a <code>span</code> element to mark text which is auto-detected e.g.</p>
+<p>5) Use <a href="/reference/mpdf-functions/setautofont.html">SetAutoFont()</a> to automatically detect these languages. AutoFont inspects the HTML code and inserts a `span` element to mark text which is auto-detected e.g.</p>
 
 {% highlight php %}
 <?php
@@ -185,7 +185,7 @@ $mpdf-&gt;SetAutoFont(AUTOFONT_ALL);
 {% highlight php %}
 <?php
 
-<code>&lt;p&gt;This is Thai text: </code><code>เป็นมนุษย์สุดประเสริฐเลิศคุณค่า</code><code>&lt;/p&gt;</code>
+`&lt;p&gt;This is Thai text: ``เป็นมนุษย์สุดประเสริฐเลิศคุณค่า``&lt;/p&gt;`
 {% endhighlight %}
 
 <p>becomes:</p>
@@ -193,21 +193,21 @@ $mpdf-&gt;SetAutoFont(AUTOFONT_ALL);
 {% highlight php %}
 <?php
 
-<code>&lt;p&gt;This is Thai text: &lt;span lang="th" class="lang_th"&gt;</code><code>เป็นมนุษย์สุดประเสริฐเลิศคุณค่า</code><code>&lt;/span&gt;&lt;/p&gt;</code>
+`&lt;p&gt;This is Thai text: &lt;span lang="th" class="lang_th"&gt;``เป็นมนุษย์สุดประเสริฐเลิศคุณค่า``&lt;/span&gt;&lt;/p&gt;`
 {% endhighlight %}
 
-<p>The <code>lang</code> attribute means that mPDF will select a font as described above in 2). You can also use CSS stylesheets to apply additional styles e.g. changing the font-size.</p>
+<p>The `lang` attribute means that mPDF will select a font as described above in 2). You can also use CSS stylesheets to apply additional styles e.g. changing the font-size.</p>
 <p>Do not use AutoFont as well as methods (1) - (4).</p>
-<p>6) Use <a href="/reference/mpdf-variables/usesubstitutions.html">$useSubstitutions</a> to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not represented in the current font, it will try to substitute it from one of the fonts defined in <code>$this-&gt;backupSubsFont</code> in <span class="filename">config_fonts.php</span>.</p>
+<p>6) Use <a href="/reference/mpdf-variables/usesubstitutions.html">$useSubstitutions</a> to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not represented in the current font, it will try to substitute it from one of the fonts defined in `$this->backupSubsFont` in <span class="filename">config_fonts.php</span>.</p>
 
 {% highlight php %}
 <?php
 
-<code>$this-&gt;backupSubsFont = array('dejavusanscondensed','norasi');</code>
+`$this->backupSubsFont = array('dejavusanscondensed','norasi');`
 {% endhighlight %}
 
 <h2>Which method should I use?</h2>
-<p>Let us call Western and Eastern European languages, Cyrillic text, Baltic languages, Turkish, and Greek - <b>common languages</b>, and CJK and Indic languages, Vietnamese, Thai, and Arabic - <b>special languages</b>.</p>
+<p>Let us call Western and Eastern European languages, Cyrillic text, Baltic languages, Turkish, and Greek - **common languages**, and CJK and Indic languages, Vietnamese, Thai, and Arabic - **special languages**.</p>
 <h3>Individually authored pages</h3>
 <p>If you are authoring a document in a common language which contains sections of text using special languages, the ideal method to use is 1) or 2).</p>
 <h3>Document in a Special language</h3>
@@ -223,13 +223,13 @@ $mpdf-&gt;SetAutoFont(AUTOFONT_ALL);
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF('en-GB-x');&nbsp; // will only use core non-embedded fonts
+$mpdf = new mPDF('en-GB-x');  // will only use core non-embedded fonts
 
-$mpdf = new mPDF('de-x');&nbsp;&nbsp;&nbsp;&nbsp; // will only use core non-embedded fonts (German)
+$mpdf = new mPDF('de-x');     // will only use core non-embedded fonts (German)
 
-$mpdf = new mPDF('ar-x');&nbsp;&nbsp;&nbsp;&nbsp; // behaves as though ('ar') called (Arabic)
+$mpdf = new mPDF('ar-x');     // behaves as though ('ar') called (Arabic)
 
-$mpdf = new mPDF('ru-x');&nbsp;&nbsp;&nbsp;&nbsp; // behaves as though ('ru') called (Russian)
+$mpdf = new mPDF('ru-x');     // behaves as though ('ru') called (Russian)
 {% endhighlight %}
 
 <h2>See Also</h2>

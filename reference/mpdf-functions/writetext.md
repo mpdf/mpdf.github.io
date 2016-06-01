@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/writetext.html
 modification_time: 2015-08-05T12:01:17+00:00
 ---
 
-<code><b>WriteText</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text)</code>
+`**WriteText**(**float** w, **float** h, **string** text)`
 
 Writes a single line of text directly to the PDF document at a specified position.
 

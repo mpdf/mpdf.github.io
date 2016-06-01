@@ -69,7 +69,7 @@ GNU GPL v3
 <td>http://www.quivira-font.com/</td>
 <td>
 
-<i><span>free for any use</span></i>
+*<span>free for any use</span>*
 
 </td>
 <td>
@@ -111,7 +111,7 @@ http://www.redlers.com/downloadfont.html
 
 </td>
 <td>http://opensiddur.org/tools/fonts/</td>
-<td>GNU GPL 2 
+<td>GNU GPL 2
 
 </td>
 <td>Hebrew</td>
@@ -137,7 +137,7 @@ http://www.bethmardutho.org/index.php/resources/fonts.html
 <tr>
 <td>Aegean</td>
 <td>http://users.teilar.gr/~g1951d/</td>
-<td><i><span>free for any use</span></i></td>
+<td>*<span>free for any use</span>*</td>
 <td>
 
 Carian
@@ -164,10 +164,10 @@ Old Italic
 </tr>
 <tr>
 <td>Lohitkannada</td>
-<td>https://fedorahosted.org/lohit/ 
+<td>https://fedorahosted.org/lohit/
 
 </td>
-<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a> 
+<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a>
 
 </td>
 <td>Kannada</td>
@@ -225,7 +225,7 @@ Google Fonts
 http://www.google.com/fonts/earlyaccess
 
 </td>
-<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a> 
+<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a>
 
 </td>
 <td>Lao</td>
@@ -261,7 +261,7 @@ Myanmar
 <tr>
 <td>Ayar fonts</td>
 <td>http://eng.ayarunicodegroup.org/</td>
-<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a> 
+<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a>
 
 </td>
 <td>Myanmar</td>
@@ -346,7 +346,7 @@ Runic
 Aboriginal Sans
 
 </td>
-<td>http://www.languagegeek.com/font/fontdownload.html 
+<td>http://www.languagegeek.com/font/fontdownload.html
 
 </td>
 <td>
@@ -367,7 +367,7 @@ Inuktuit
 <tr>
 <td>MPH 2B Damase</td>
 <td>http://www.alanwood.net/downloads/index.html</td>
-<td>(Public domain) 
+<td>(Public domain)
 
 </td>
 <td>
@@ -387,13 +387,13 @@ Deseret
 <tr>
 <td>Aegyptus</td>
 <td>http://users.teilar.gr/~g1951d/</td>
-<td><i><span>free for any use</span></i></td>
+<td>*<span>free for any use</span>*</td>
 <td>Egyptian Hieroglyphs</td>
 </tr>
 <tr>
 <td>Akkadian</td>
 <td>http://users.teilar.gr/~g1951d/</td>
-<td><i><span>free for any use</span></i></td>
+<td>*<span>free for any use</span>*</td>
 <td>Cuneiforn</td>
 </tr>
 <tr>

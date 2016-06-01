@@ -8,12 +8,12 @@ modification_time: 2015-08-05T12:00:34+00:00
 
 If you get something like:
 
-<b>Notice: Undefined index: win-1252 in D:\Program Files\Zend\Apache2\htdocs\mpdf\mpdf.php on line 3741</b>
+**Notice: Undefined index: win-1252 in D:\Program Files\Zend\Apache2\htdocs\mpdf\mpdf.php on line 3741**
 
 you need to suppress NOTICE warnings using e.g.
 
 {% highlight php %}
-error_reporting(E_ALL ^ E_NOTICE);  
+error_reporting(E_ALL ^ E_NOTICE);
 
 // or
 

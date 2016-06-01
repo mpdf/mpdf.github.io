@@ -12,11 +12,11 @@ IndexEntrySee – Insert a cross-reference entry for the document Index
 
 # Description
 
-void <b>IndexEntrySee</b> ( string <span class="parameter">$content</span> , string <span class="parameter">$see_content</span> )
+void **IndexEntrySee** ( string <span class="parameter">$content</span> , string <span class="parameter">$see_content</span> )
 
 Insert a cross-reference entry for the document Index i.e. "Dromedary - see Camel".
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
+<div class="alert alert-info" role="alert">**Note:** The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 
 # Parameters
 

@@ -15,17 +15,17 @@ PDFX – Create PDF/X-1a compliant document
 
 # Description
 
-void <b>PDFX</b>
+void **PDFX**
 
 Specify whether to create a PDF/X-1a compliant document.
 
 # Values
 
-<span class="parameter">PDFX</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">PDFX</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
-<span class="smallblock">TRUE </span>: create PDF/X-1a compliant document&nbsp;&nbsp;&nbsp; 
+<span class="smallblock">TRUE </span>: create PDF/X-1a compliant document   
 
 <span class="smallblock">FALSE</span>: normal PDF document
 

@@ -31,14 +31,14 @@ div.arabic {
 
    text-align: justify;
 
-   letter-spacing: 0; 
+   letter-spacing: 0;
 
 }
 {% endhighlight %}
 
 ## Kashida in Arabic text
 
-In Arabic text, justification can be achieved by elongating the line between characters - this is known as "kashida". Kashida can be used by configuring the font in <span class="filename">config_fonts.php</span>&nbsp; cf. <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout features (OTL)</a>
+In Arabic text, justification can be achieved by elongating the line between characters - this is known as "kashida". Kashida can be used by configuring the font in <span class="filename">config_fonts.php</span>  cf. <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout features (OTL)</a>
 
 ## Non-breaking space (NBSP)
 

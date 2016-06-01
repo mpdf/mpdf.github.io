@@ -12,11 +12,11 @@ WriteHTML — Write HTML code to the document
 
 # Description
 
-void <b>WriteHTML</b> ( string <span class="parameter">$html</span> [, int <span class="parameter">$mode</span> [, boolean <span class="parameter">$initialise</span> [, boolean <span class="parameter">$close</span> ]]])
+void **WriteHTML** ( string <span class="parameter">$html</span> [, int <span class="parameter">$mode</span> [, boolean <span class="parameter">$initialise</span> [, boolean <span class="parameter">$close</span> ]]])
 
 Write <span class="parameter">html</span> code to the document.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.2 a fatal error was caused if <span class="parameter">html</span> was passed as a <span class="smallblock">NULL</span> value, <span class="smallblock">FALSE</span> or an undefined variable.</div>
+<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 4.2 a fatal error was caused if <span class="parameter">html</span> was passed as a <span class="smallblock">NULL</span> value, <span class="smallblock">FALSE</span> or an undefined variable.</div>
 
 # Parameters
 
@@ -28,7 +28,7 @@ UTF-8 encoded HTML code to write to the document.
 
 Controls what parts of the <span class="parameter">html</span> code is parsed.
 
-<b>Values</b>
+**Values**
 
 0 - Parses a whole <span class="parameter">html</span> document
 
@@ -42,7 +42,7 @@ Controls what parts of the <span class="parameter">html</span> code is parsed.
 
 <span class="smallblock">DEFAULT</span>: 0
 
-<b>Mode #0</b> (<span class="smallblock">DEFAULT</span>)
+**Mode #0** (<span class="smallblock">DEFAULT</span>)
 
 Metadata:
 
@@ -72,13 +72,13 @@ If &lt;body&gt; tags are found, all <span class="parameter">html</span> outside 
 
 If no &lt;body&gt; tags are found, all remaining <span class="parameter">html</span> is parsed as content.
 
-<b>Mode #1</b>
+**Mode #1**
 
 The html input is only parsed as CSS style information only.
 
 The code does not have to be surrounded by &lt;style&gt; tags, so you can pass the contents of a stylesheet directly - see Example #1.
 
-<b>Mode #2</b>
+**Mode #2**
 
 If &lt;body&gt; tags are found, all <span class="parameter">html</span> outside these tags are discarded, and the rest is parsed as content for the document.
 

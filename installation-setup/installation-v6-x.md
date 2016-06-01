@@ -35,21 +35,21 @@ If you have problems, please read the section on <a href="{{ "/troubleshooting/k
 
 mPDF 6 has changed significantly from earlier version and it is recommended that a fresh install is used. You may wish to copy your previous config_* files and use them to update the new config files.
 
-<b>config_fonts.php</b> - values of "indic" and "unAglyphs" from previous versions are now redundant.
+**config_fonts.php** - values of "indic" and "unAglyphs" from previous versions are now redundant.
 
-<b>config_lang2fonts.php</b> - this is similar to the previous config_cp.php file; note however that $unifont (NOT $unifonts) must be only one font (not a comma-separated list as before).
+**config_lang2fonts.php** - this is similar to the previous config_cp.php file; note however that $unifont (NOT $unifonts) must be only one font (not a comma-separated list as before).
 
-<b>Included fonts</b> - the Indic fonts e.g. ind_bn_001.ttf are no longer required (nor do they work properly with mPDF 6).
+**Included fonts** - the Indic fonts e.g. ind_bn_001.ttf are no longer required (nor do they work properly with mPDF 6).
 
-<b>useLang</b> - this configurable variable, which used to be true by default, is now redundant. You may need to set: $mpdf-&gt;autoLangToFont = true; for the same results.
+**useLang** - this configurable variable, which used to be true by default, is now redundant. You may need to set: $mpdf-&gt;autoLangToFont = true; for the same results.
 
-<b>SetAutoFont()</b> - is now redundant. You may need to set: $mpdf-&gt;autoScriptToLang = true; for the same results.
+**SetAutoFont()** - is now redundant. You may need to set: $mpdf-&gt;autoScriptToLang = true; for the same results.
 
-<b>Indexes</b> - have been largely redefined. See the section above.
+**Indexes** - have been largely redefined. See the section above.
 
-<b>Lists</b> - have been rewritten. See the section above.
+**Lists** - have been rewritten. See the section above.
 
-<b>Headers and Footers</b> - have been rewritten. See the section above.
+**Headers and Footers** - have been rewritten. See the section above.
 
 A number of old depracated aliases will no longer be supported. Warning errors have been added to prompt you to change to the updated form:
 
@@ -115,7 +115,7 @@ Note: A suitable font must be used in the header/footer in order to display the 
 
 You can now set the pagenumberstyle from the beginning of the document by changing the configurable variable:
 
-$this-&gt;defaultPageNumStyle = "arabic-indic"; // in config.php
+$this->defaultPageNumStyle = "arabic-indic"; // in config.php
 
 $mpdf-&gt;defaultPageNumStyle = "arabic-indic"; // at runtime
 
@@ -135,7 +135,7 @@ Added support for opacity="0.6" (as attribute) in SVG - previously only supporte
 
 CSS position:absolute or fixed - rotate extended now to include rotate: 180; (previously just 90 or -90)
 
-The default value of $this-&gt;keep_table_proportions = true; in config.php has been changed (see effect on Example 6 - nested table in top right cell).
+The default value of $this->keep_table_proportions = true; in config.php has been changed (see effect on Example 6 - nested table in top right cell).
 
 Limited support has been added for SVG fonts embedded in SVG images (but not using @font-face rules) - see the separate Images demo file.
 

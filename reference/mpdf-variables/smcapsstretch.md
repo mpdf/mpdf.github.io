@@ -12,5 +12,5 @@ Control SmallCaps appearance
 
 Default set in config.php
 
-Default value: 115;&nbsp;&nbsp;&nbsp; // % to stretch small caps horizontally
+Default value: 115;    // % to stretch small caps horizontally
 

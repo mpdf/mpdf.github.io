@@ -32,9 +32,9 @@ This disregards the value of autosize.
 <ul>
 <li>if table height is greater than a full page, the size is reduced to fit the table on a full page, and printed.
 
-&nbsp;&nbsp;&nbsp; (This is an approximation, as it scales the table size by a factor of less than sqrt(tableheight / pageheight) ).
+    (This is an approximation, as it scales the table size by a factor of less than sqrt(tableheight / pageheight) ).
 
-&nbsp;&nbsp;&nbsp; This disregards the value of autosize.</li>
+    This disregards the value of autosize.</li>
 <li>if table height is greater than the remaining space on the page (but less than a full page):
 <ul>
 <li>if the table size can be reduced to fit in the remaining space, AND respect the autosize value (i.e. maximum scaling factor), it is scaled and printed in the remaining page space;</li>
@@ -55,7 +55,7 @@ If there is a conflict between respecting <span class="parameter">page-break-ins
 </li>
 <li>If the minimum width of the table is greater than the page height remaining, the table is resized to fit the minimum width = page height remaining, as long as the whole table fits, and the scaling factor is within the value of autosize.
 
-(Minimum width is calculated when each cell accommodates longest word - allowing for nowrap,&nbsp; &amp;nbsp; etc.)
+(Minimum width is calculated when each cell accommodates longest word - allowing for nowrap,  &amp;nbsp; etc.)
 
 </li>
 <li>Else a new page is started, and the algorithm above followed (obviously containing size width becomes height etc.)</li>

@@ -12,17 +12,17 @@ PDFA – Create PDF/A1-b compliant document
 
 # Description
 
-void <b>PDFA</b>
+void **PDFA**
 
 Specify whether to create a PDF/A1-b compliant document.
 
 # Values
 
-<span class="parameter">PDFA</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">PDFA</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
-<span class="smallblock">TRUE </span>: create PDF/A1-b compliant document&nbsp;&nbsp;&nbsp; 
+<span class="smallblock">TRUE </span>: create PDF/A1-b compliant document   
 
 <span class="smallblock">FALSE</span>: normal PDF document
 

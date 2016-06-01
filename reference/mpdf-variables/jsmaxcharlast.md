@@ -12,6 +12,6 @@ Maximum character spacing allowed (carried over) when finishing a last line.
 
 Default set in config.php
 
-$this-&gt;jSmaxCharLast = 1;
+$this->jSmaxCharLast = 1;
 
 </div>

@@ -10,5 +10,5 @@ In any page header or footer, {PAGENO} or {DATE j-m-Y} can be used - which will 
 
 The page number is the calculated number, taking regard of any resetting of numbering during the document.
 
-You can also use the GLOBAL replacement aliases {nb} and {nbpg} (see&nbsp;<a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a>).
+You can also use the GLOBAL replacement aliases {nb} and {nbpg} (see <a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a>).
 

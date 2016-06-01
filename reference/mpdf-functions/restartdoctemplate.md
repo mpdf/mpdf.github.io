@@ -12,7 +12,7 @@ RestartDocTemplate – Re-start the use of a Document template from the next pag
 
 # Description
 
-void <b>RestartDocTemplate</b> ( )
+void **RestartDocTemplate** ( )
 
 Restart the use of a document template (set by <a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a>) from the next page.
 

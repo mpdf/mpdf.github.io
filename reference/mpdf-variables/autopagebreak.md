@@ -12,15 +12,15 @@ autoPageBreak – Specify whether to allow automatic page breaks
 
 # Description
 
-void <b>autoPageBreak</b>
+void **autoPageBreak**
 
 Specify whether to allow automatic page breaks. By default, mPDF creates page breaks when required in the document. Setting the value to FALSE allows an oversized object (image etc.) to overwrite the footer and/or the bottom margin of the page.
 
 # Values
 
-<span class="parameter">autoPageBreak</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">autoPageBreak</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE </span>: enables automatic page breaks
 
@@ -67,5 +67,5 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This variable existed in the script before v3.1 but did not allow paging to be turned off. The variable was altered in mPDF 3.1 by making the first letter of the variable lowercase.</div>
+<div class="alert alert-info" role="alert">**Note:** This variable existed in the script before v3.1 but did not allow paging to be turned off. The variable was altered in mPDF 3.1 by making the first letter of the variable lowercase.</div>
 

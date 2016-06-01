@@ -16,7 +16,7 @@ hyphens: none | manual | auto
 
 Default = manual
 
-The default can be changed by altering <code><span class="parameter">$defaultCSS</code></span> in <span class="filename">config.php</span>
+The default can be changed by altering `<span class="parameter">$defaultCSS`</span> in <span class="filename">config.php</span>
 
 hyphens: manual
 
@@ -50,7 +50,7 @@ Automatic hyphenation is based on the commonly used TeX algorithm and requires p
 
 <table class="table"> <tbody>
 <tr>
-<td><b>Language</b></td>
+<td>**Language**</td>
 <td><span class="parameter">$SHYlang</span></td>
 </tr>
 <tr>
@@ -101,9 +101,9 @@ Pattern checking can be fine-tuned by 4 variables if required:
 
 <table class="table"> <tbody>
 <tr>
-<td>&nbsp;</td>
+<td> </td>
 <td>Default value</td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td><span class="parameter">$SHYleftmin</span></td>

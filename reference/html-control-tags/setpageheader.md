@@ -12,11 +12,11 @@ setpageheader – Set a page header by a given name
 
 # Description
 
-&lt; <b>setpageheader</b> [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] [ <span class="parameter">show-this-page</span> ] /&gt;
+&lt; **setpageheader** [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] [ <span class="parameter">show-this-page</span> ] /&gt;
 
 Sets a page header that has previously been defined by name.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 
@@ -34,7 +34,7 @@ Specify whether to set the header for <span class="smallblock">ODD</span> or <sp
 
 Note: setting this value to <span class="smallblock">BLANK</span> will not clear the header; set <span class="parameter">value</span> to -1 or off to cancel the header
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 O or ODD - set the header for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 
@@ -52,13 +52,13 @@ Specify whether to start or stop showing the named header from the current posit
 
 </span>
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 1 or ON - start using this named header
 
 -1 or OFF - stop using a header
 
-<span class="smallblock">DEFAULT</span> -&nbsp; <span class="smallblock">BLANK</span> is ignored, making no changes to the current state
+<span class="smallblock">DEFAULT</span> -  <span class="smallblock">BLANK</span> is ignored, making no changes to the current state
 
 <span class="parameter">show-this-page</span>
 
@@ -66,7 +66,7 @@ If <span class="parameter">show-this-page</span> is set to "1" (or any positive 
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="parameter">show-this-page</span> forces the appropriate header to be written. If you have just defined an <span class="smallblock">ODD</span>-sided header and the document is currently writing to an <span class="smallblock">EVEN</span>-sided page, the <span class="smallblock">EVEN</span> header will be output.</div>
+<div class="alert alert-info" role="alert">**Note:** <span class="parameter">show-this-page</span> forces the appropriate header to be written. If you have just defined an <span class="smallblock">ODD</span>-sided header and the document is currently writing to an <span class="smallblock">EVEN</span>-sided page, the <span class="smallblock">EVEN</span> header will be output.</div>
 
 # Changelog
 

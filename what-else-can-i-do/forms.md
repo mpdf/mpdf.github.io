@@ -10,7 +10,7 @@ mPDF can generate a static view of HTML forms and their elements, or (from mPDF 
 
 # "Active" Forms
 
-Active forms can be generated which can either be printed, or the data submitted to a URI. The variable <code>$this-&gt;useActiveForms</code> should be set to <span class="smallblock">TRUE</span> either at run-time or in <span class="filename">config.php</span>
+Active forms can be generated which can either be printed, or the data submitted to a URI. The variable `$this->useActiveForms` should be set to <span class="smallblock">TRUE</span> either at run-time or in <span class="filename">config.php</span>
 
 ## Compatibility &amp; Limitations
 
@@ -66,9 +66,9 @@ If the export format is HTML, it is much more complicated. From a "core-fonts" o
 
 It is therefore recommend that you either use mPDF('c') and decode html POST from PDFDocEncoding, or use XFDF.
 
-The default HTML submit method is POST;&nbsp; GET only seems to work from a PDF document opened in a standalone Reader (not in the browser).
+The default HTML submit method is POST;  GET only seems to work from a PDF document opened in a standalone Reader (not in the browser).
 
-You can specify a mailto address as a URI e.g. <code>action="mailto:email@address"</code> but you may find that it is blocked by the user's computer if using the HTML format.
+You can specify a mailto address as a URI e.g. `action="mailto:email@address"` but you may find that it is blocked by the user's computer if using the HTML format.
 
 ## Radio buttons
 
@@ -76,23 +76,23 @@ Disabled: if one radio button is set as disabled, mPDF will disable the whole gr
 
 ## Javascript
 
-Javascript can be set for buttons using <code>onClick=""</code> but note this uses "Acrobat" Javascript. (You can download the Acrobat Javascript reference manual from the Adobe Developer's site).
+Javascript can be set for buttons using `onClick=""` but note this uses "Acrobat" Javascript. (You can download the Acrobat Javascript reference manual from the Adobe Developer's site).
 
-For select, text and textarea you can use <code>onChange=""</code> which is triggered after the value has been changed.
+For select, text and textarea you can use `onChange=""` which is triggered after the value has been changed.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 5.4, &lt;textarea&gt; and &lt;input type="text"&gt; will accept javascript as: <code>onKeystroke</code>, <code>onValidate</code>, <code>onCalculate</code> and <code>onFormat</code>.
+<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;= 5.4, &lt;textarea&gt; and &lt;input type="text"&gt; will accept javascript as: `onKeystroke`, `onValidate`, `onCalculate` and `onFormat`.
 
-<code>onChange</code> is depracated but works as <code>onCalculate</code> (for &lt;textarea&gt; and &lt;input&gt;).
+`onChange` is depracated but works as `onCalculate` (for &lt;textarea&gt; and &lt;input&gt;).
 
-Select still accepts <code>onChange</code>.</div>
+Select still accepts `onChange`.</div>
 
 Unicode characters in JavaScript must be written by typing a backslash, a lowercase "u", and then the four digit hexadecimal number corresponding to the character's encoding in the utf-16 character set e.g. \u2042
 
 ## Appearance of form fields
 
-Adobe Reader 10 largely ignores any control one tries to place on the appearance of some form fields, and does it's own thing. In general, the <code>font-size</code> set for the form field will determine its size, and for text/textarea and select fields, <code>color</code> will determine the font colour used. CSS values for <code>border-color</code> or <code>background-color</code> will work for (non-image) buttons, textarea and text fields. Other things like the border style and width can be altered by configurable variables in <span class="filename"><code>config.php</code></span> but the level of control is disappointing.
+Adobe Reader 10 largely ignores any control one tries to place on the appearance of some form fields, and does it's own thing. In general, the `font-size` set for the form field will determine its size, and for text/textarea and select fields, `color` will determine the font colour used. CSS values for `border-color` or `background-color` will work for (non-image) buttons, textarea and text fields. Other things like the border style and width can be altered by configurable variables in <span class="filename">`config.php`</span> but the level of control is disappointing.
 
-Radio buttons and check-boxes use Adobe Reader's own icons, but Foxit uses information provided by the PDF file. The variable <code>$this-&gt;formUseZapD</code> determines whether ZapfDingbat symbols are used, or mPDF's appearance streams designed to mimic Adobe Reader's appearance.
+Radio buttons and check-boxes use Adobe Reader's own icons, but Foxit uses information provided by the PDF file. The variable `$this->formUseZapD` determines whether ZapfDingbat symbols are used, or mPDF's appearance streams designed to mimic Adobe Reader's appearance.
 
-Some components of interactive forms may be output in RGB colorspace even if you have specified <code>restrictColorSpace</code>. Since restricted colorSpace is mainly used for PDFA/PDFX files - which cannot contain active form fields anyway - this shouldn't matter.
+Some components of interactive forms may be output in RGB colorspace even if you have specified `restrictColorSpace`. Since restricted colorSpace is mainly used for PDFA/PDFX files - which cannot contain active form fields anyway - this shouldn't matter.
 

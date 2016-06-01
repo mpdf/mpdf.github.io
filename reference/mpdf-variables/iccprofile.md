@@ -12,7 +12,7 @@ ICCProfile – Specify ICC colour profile to use when creating PDF/A1-b or PDF/X
 
 # Description
 
-void <b>ICCProfile</b>
+void **ICCProfile**
 
 Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a compliant documents. The file must exist in <span class="filename">/iccprofiles/</span> folder
 
@@ -24,11 +24,11 @@ Specify the name without the <span class="filename">.icc</span> extension. sRGB_
 
 # Values
 
-<span class="parameter">ICCProfile</span> =&nbsp; <span class="smallblock">STRING</span>
+<span class="parameter">ICCProfile</span> =  <span class="smallblock">STRING</span>
 
 Name of a valid ICC colour profile in the <span class="filename">/iccprofiles/</span> folder - without the <span class="filename">.icc</span> extension.
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>&nbsp;<span class="smallblock">&nbsp;</span>
+<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> <span class="smallblock"> </span>
 
 # Changelog
 

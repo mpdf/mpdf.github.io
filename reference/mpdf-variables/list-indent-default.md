@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:08+00:00
 
 # Description
 
-void <b>list_indent_default</b>
+void **list_indent_default**
 
 Define the default indentation of a list item, when in standard 'browser' list mode.
 
@@ -20,7 +20,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend
 
 <span class="parameter">list_indent_default</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">LENGTH</span>: Any valid CSS length value is permitted e.g. "10pt" or "3em"
 

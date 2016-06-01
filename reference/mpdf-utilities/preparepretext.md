@@ -12,11 +12,11 @@ PreparePreText – Prepares text to be output ignoring the HTML markup
 
 # Description
 
-string <b>preparePreText</b> ( string <span class="parameter">$text</span> [, string <span class="parameter">$formfeed</span> ])
+string **preparePreText** ( string <span class="parameter">$text</span> [, string <span class="parameter">$formfeed</span> ])
 
 Prepares text to be output ignoring the HTML markup. This is useful to output a large text file (e.g. a PHP script file) using <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>. This will surround the text with &lt;pre&gt; tags whilst preventing &lt;pre&gt;tags included in the text from being parsed. It also allows use of a text string marker (<span class="parameter">formfeed</span>) to be replaced by a formfeed in the output file.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 5.1 you should use the <span class="parameter">$mode </span>parameter of <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> as '2' to avoid parsing the text for style tags. See example below.</div>
+<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 5.1 you should use the <span class="parameter">$mode </span>parameter of <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> as '2' to avoid parsing the text for style tags. See example below.</div>
 
 # Parameters
 

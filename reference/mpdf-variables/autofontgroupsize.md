@@ -6,17 +6,17 @@ permalink: /reference/mpdf-variables/autofontgroupsize.html
 modification_time: 2015-08-05T12:01:39+00:00
 ---
 
-(mPDF &gt;= 2.3&nbsp; &lt;6.0)
+(mPDF &gt;= 2.3  &lt;6.0)
 
 autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont
 
 # Value
 
-void <b>autoFontGroupSize</b>
+void **autoFontGroupSize**
 
 Specify the chunk size of text to group when auto-detecting languages using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a>.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This variable is removed from mPDF v 6.0</div>
+<div class="alert alert-info" role="alert">**Note:** This variable is removed from mPDF v 6.0</div>
 
 Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage is that it may include bits of other languages either side, forcing them in the font used for the "foreign" language.
 
@@ -26,7 +26,7 @@ Smaller chunks (1) - analysing word by word - takes more processing time, and ca
 
 <span class="parameter">autoFontGroupSize</span>
 
-<b>Values</b>
+**Values**
 
 1: individual words are analysed
 

@@ -8,7 +8,7 @@ permalink: /user-s-guide/fonts-languages/default-font.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p><b>Default font &amp; font-size</b></p>
+<p>**Default font &amp; font-size**</p>
 <p>A default font and font-size are required for mPDF to function. These are determined by:</p>
 <p>Declared when instantiating the mPDF class (see Getting Started). These "provisional" default values will be active if you are using functions to write directly to the PDF file e.g.</p>
 
@@ -23,10 +23,10 @@ $mpdf-&gt;WriteCell(110,5,'Hallo World');
 <p>If you are using WriteHTML() these "provisional" default values are overridden, and defaults are set as follows:</p>
 <ul>
 <li>If mPDF('c') is set, the default font is set as 'helvetica', 'times' or 'courier'</li>
-<li>Otherwise the default font is set by the value in the default stylesheet <code>$default_CSS</code> in <span class="filename">config.php</span> </li>
-<li>NB The default font-<i>size</i> is also set by the value in the default stylesheet <code>$default_CSS</code></li>
+<li>Otherwise the default font is set by the value in the default stylesheet `$default_CSS` in <span class="filename">config.php</span> </li>
+<li>NB The default font-*size* is also set by the value in the default stylesheet `$default_CSS`</li>
 </ul>
-<p>&nbsp;</p>
+<p> </p>
 <p>If the secondary default CSS stylesheet <span class="filename">mpdf.css</span> contains values to define the BODY tag, these values will override the above e.g.</p>
 
 {% highlight php %}

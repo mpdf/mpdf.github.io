@@ -6,7 +6,7 @@ permalink: /tables/border-collapse.html
 modification_time: 2015-08-05T11:59:45+00:00
 ---
 
-In the border-collapse=collapse mode, the following rules determine which border style "wins" in case of a conflict (closely follows CSS 2.1 specifications i.e.&nbsp; width &gt;&gt; CSS dominance (cell&gt;table) &gt;&gt; Top/Left &gt; Bottom/Right):
+In the border-collapse=collapse mode, the following rules determine which border style "wins" in case of a conflict (closely follows CSS 2.1 specifications i.e.  width &gt;&gt; CSS dominance (cell&gt;table) &gt;&gt; Top/Left &gt; Bottom/Right):
 
 <ol>
 <li>Borders with the 'border-style' of 'hidden' take precedence over all other conflicting borders. </li>

@@ -18,16 +18,16 @@ permalink: /user-s-guide/fonts-languages/font-substitution-6-x.html
 &lt;p style="font-family: 'Trebuchet MS'; font-weight: bold;"&gt;
 {% endhighlight %}
 
-<p>The font requested (including style) is checked to see if it is available to mPDF: set by the array <code>$</code><code>available_unifonts</code>* :</p>
+<p>The font requested (including style) is checked to see if it is available to mPDF: set by the array `$``available_unifonts`* :</p>
 <ol>
-<li>If the font[style] exists - selected e.g. <code>trebuchetms['B']</code></li>
-<li>If the font[nostyle] exists - selected e.g. <code>trebuchetms['R']</code></li>
-<li>Looks up the font-family in the three arrays <code>sans_fonts, serif_fonts,</code> and <code>mono_fonts</code> defined in <span class="filename">mpdf_config.php</span> , in this case looking for '<code>trebuchetms</code>'. If found, substitutes a font of similar type (sans-serif, serif, or mono) - the first font in the <code>sans_fonts, serif_fonts,</code> or <code>mono_fonts</code> arrays is used.</li>
-<li>If no font has yet been selected, the first font in the array <code>$</code><code>available_unifonts</code>* is selected</li>
+<li>If the font[style] exists - selected e.g. `trebuchetms['B']`</li>
+<li>If the font[nostyle] exists - selected e.g. `trebuchetms['R']`</li>
+<li>Looks up the font-family in the three arrays `sans_fonts, serif_fonts,` and `mono_fonts` defined in <span class="filename">mpdf_config.php</span> , in this case looking for '`trebuchetms`'. If found, substitutes a font of similar type (sans-serif, serif, or mono) - the first font in the `sans_fonts, serif_fonts,` or `mono_fonts` arrays is used.</li>
+<li>If no font has yet been selected, the first font in the array `$``available_unifonts`* is selected</li>
 </ol>
-<p>* The array&nbsp; <code>$available_unifonts</code> is initially derived from <code>$this-&gt;fontdata</code> in the <span class="filename">config_fonts.php</span> file. (<code>trebuchetms['B']</code> will be converted to '<code>trebuchetmsB')</code></p>
+<p>* The array  `$available_unifonts` is initially derived from `$this->fontdata` in the <span class="filename">config_fonts.php</span> file. (`trebuchetms['B']` will be converted to '`trebuchetmsB')`</p>
 <h3>Core fonts</h3>
-<p>If core fonts only are specified by using <code>$mpdf = new mPDF('c')</code>, then all font requests will be substituted by Arial/Helvetica, Times or Courier i.e. the core PDF fonts. mPDF determines whether the requested font is a sans-serif, serif or monospace font (as above), and substitutes accordingly.&nbsp;</p>
+<p>If core fonts only are specified by using `$mpdf = new mPDF('c')`, then all font requests will be substituted by Arial/Helvetica, Times or Courier i.e. the core PDF fonts. mPDF determines whether the requested font is a sans-serif, serif or monospace font (as above), and substitutes accordingly. </p>
 <h3>Character (font) substitution</h3>
 <p>If some circumstances, individual characters are replaced by glyphs from another font - see <a href="/user-s-guide/fonts-languages/character-substitution.html">character (font) substitution</a>.</p>
 </div>

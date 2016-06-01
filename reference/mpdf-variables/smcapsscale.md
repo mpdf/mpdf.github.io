@@ -12,5 +12,5 @@ Control SmallCaps appearance
 
 Default set in config.php
 
-Default value: 0.75;&nbsp;&nbsp;&nbsp; // Factor of 1 to scale capital letters
+Default value: 0.75;    // Factor of 1 to scale capital letters
 

@@ -12,7 +12,7 @@ AliasNbPages – Defines the placeholder used to insert total number of pages in
 
 # Description
 
-void <b>AliasNbPages</b> ( string <span class="parameter">$text</span> )
+void **AliasNbPages** ( string <span class="parameter">$text</span> )
 
 Set the value for the variable string <a href="{{ "/reference/mpdf-variables/aliasnbpg.html" | prepend: site.baseurl }}">aliasNbPg</a> which is used as a placeholder used to insert total number of pages into the document.
 

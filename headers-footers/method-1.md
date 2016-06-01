@@ -28,7 +28,7 @@ $mpdf->Output();
 
 ## Variant #2 (Split string)
 
-Set a header/footer in three parts. The text string defines three strings divided by '|' which will set a header at the left/centre/right margin of the page on <span class="smallblock">ODD</span> pages and right/centre/left margin for <span class="smallblock">EVEN</span> pages (if&nbsp; <span class="smallblock">DOUBLE-SIDED</span> document), or left/centre/right margin for all pages. Note the use of {PAGENO} which can be used in any type of header or footer.
+Set a header/footer in three parts. The text string defines three strings divided by '|' which will set a header at the left/centre/right margin of the page on <span class="smallblock">ODD</span> pages and right/centre/left margin for <span class="smallblock">EVEN</span> pages (if  <span class="smallblock">DOUBLE-SIDED</span> document), or left/centre/right margin for all pages. Note the use of {PAGENO} which can be used in any type of header or footer.
 
 {% highlight php %}
 <?php
@@ -140,7 +140,7 @@ $mpdf->SetHeader($arr);
 
 ## Variant #5 (Array)
 
-Set a header/footer using an array of values. This allows greater control over styling.&nbsp; <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately using the second parameter of <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>.
+Set a header/footer using an array of values. This allows greater control over styling.  <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately using the second parameter of <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>.
 
 {% highlight php %}
 <?php
@@ -196,7 +196,7 @@ $arr = array (
 $mpdf->SetHeader($arr, 'O');  // E for Even header
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> When you are using the array form, any values that are not defined in the array use the document default values, not the defaultheader values (like the previous Simple form)&nbsp; i.e. an undefined font-size uses the document default of 10pt, not the <span class="parameter">$defaultheaderfontsize</span> of 8pt.</div>
+<div class="alert alert-info" role="alert">**Note:** When you are using the array form, any values that are not defined in the array use the document default values, not the defaultheader values (like the previous Simple form)  i.e. an undefined font-size uses the document default of 10pt, not the <span class="parameter">$defaultheaderfontsize</span> of 8pt.</div>
 
 Although this looks complex, you could change one value easily throughout a document:
 
@@ -340,7 +340,7 @@ $mpdf->setHeader($main_header_odd_array,'O');
 
 $mpdf->setHeader($main_header_even_array,'E');
 
-$mpdf->TOCpagebreak('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 
+$mpdf->TOCpagebreak('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
 
    $toc-preHTML, $toc-postHTML, $toc-bookmarkText, 1, 'A', 'off');    // sets numbering to start at A
 

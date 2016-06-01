@@ -12,13 +12,13 @@ DefHTMLFooterByName – Define an HTML page footer with a given name
 
 # Description
 
-void <b>DefHTMLFooterByName</b> ( string <span class="parameter">$name</span> [, string <span class="parameter">$html</span> ])
+void **DefHTMLFooterByName** ( string <span class="parameter">$name</span> [, string <span class="parameter">$html</span> ])
 
 Define an HTML page footer with a given name. Named footers can be referenced and set later in the document e.g. <a href="{{ "/reference/mpdf-functions/sethtmlfooterbyname.html" | prepend: site.baseurl }}">SetHTMLFooterByName()</a>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
+<div class="alert alert-info" role="alert">**Note:** Do not name any header or footer starting with html_   This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 

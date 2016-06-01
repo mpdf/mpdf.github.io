@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/line-height.html
 modification_time: 2015-08-05T12:00:05+00:00
 ---
 
-The line-height of text can be controlled using the CSS property <code>line-height</code> (since mPDF 4). This used a fixed value for the line-height when <code>normal</code> was specified (the default CSS value) -&nbsp; set by the configurable variable <code>normalLineheight</code>. It also used a fixed proportion to determine the position of the text baseline (non-configurable).
+The line-height of text can be controlled using the CSS property `line-height` (since mPDF 4). This used a fixed value for the line-height when `normal` was specified (the default CSS value) -  set by the configurable variable `normalLineheight`. It also used a fixed proportion to determine the position of the text baseline (non-configurable).
 
 Form mPDF 6, you can (optionally) use font metrics derived from each font file to:
 
@@ -15,7 +15,7 @@ Form mPDF 6, you can (optionally) use font metrics derived from each font file t
 <li>Determine the glyph baseline (previously a fixed value)</li>
 </ul>
 
-Options are set by configurable variables in the <code>config.php</code> file:
+Options are set by configurable variables in the `config.php` file:
 
 Default settings in mPDF versions 6 - recommended especially for complex scripts with marks used above or below characters:
 
@@ -47,7 +47,7 @@ $this->useFixedTextBaseline = true;
 $this->normalLineheight = 1.33;
 {% endhighlight %}
 
-## 
+##
 
 Using the font metrics will give approximately the same result as the fixed value for many standard Latin script fonts e.g. DejaVu Sans Condensed:
 
@@ -59,22 +59,22 @@ For more information on how complex normal lineheights are, see Eric Meyers' web
 
 From mPDF v 6.0 there are new controls for line-height using draft CSS3 properties. These can be set on all block level elements (P, DIV etc) and tables (TABLE/TD/TH).
 
-<b>line-stacking-strategy</b> = <code>inline-line-height | block-line-height | max-height | grid-height</code>
+**line-stacking-strategy** = `inline-line-height | block-line-height | max-height | grid-height`
 
 <ul>
-<li><code>inline-line-height</code> - [default] lineheight is initially calculated from the block-level font[-size]; the height is expanded by any inline content, including the calculated lineheight of that inline content;</li>
-<li><code>block-line-height</code> - lineheight is fixed as the lineheight of the block-level font[-size];</li>
-<li><code>max-height</code> - lineheight is initially calculated from the block-level font; the height is expanded by any inline content, EXCLUDING the calculated lineheight of that inline content;</li>
-<li><code>grid-height</code> - lineheight is initially calculated from the block-level font; the height is expanded - AS MULTIPLES OF INITIAL LINEHEIGHT - by any inline content, EXCLUDING the calculated lineheight of that inline content;</li>
+<li>`inline-line-height` - [default] lineheight is initially calculated from the block-level font[-size]; the height is expanded by any inline content, including the calculated lineheight of that inline content;</li>
+<li>`block-line-height` - lineheight is fixed as the lineheight of the block-level font[-size];</li>
+<li>`max-height` - lineheight is initially calculated from the block-level font; the height is expanded by any inline content, EXCLUDING the calculated lineheight of that inline content;</li>
+<li>`grid-height` - lineheight is initially calculated from the block-level font; the height is expanded - AS MULTIPLES OF INITIAL LINEHEIGHT - by any inline content, EXCLUDING the calculated lineheight of that inline content;</li>
 </ul>
 
-Note: XSL has a similar property with the same name, which uses different but equivalent values: <code>line-height</code> instead of <code>inline-line-height</code>, <code>font-height</code> instead of <code>block-line-height</code>. It also uses <code>max-height</code>. The value <code>grid-height</code> is new to the CSS3 property.
+Note: XSL has a similar property with the same name, which uses different but equivalent values: `line-height` instead of `inline-line-height`, `font-height` instead of `block-line-height`. It also uses `max-height`. The value `grid-height` is new to the CSS3 property.
 
-<b>line-stacking-shift</b> = <code>consider-shifts | disregard-shifts </code>
+**line-stacking-shift** = `consider-shifts | disregard-shifts `
 
 This property determines whether to include or disregard the adjusted top- and bottom-edge of any characters that have a baseline-shift (e.g. superscript) when calculating lineheight.
 
-Note: XSL has a similar property with a different name: <code>line-height-shift-adjustment</code> which uses the same values.
+Note: XSL has a similar property with a different name: `line-height-shift-adjustment` which uses the same values.
 
 For more details see the <a href="http://www.w3.org/TR/css3-linebox/#InlineBoxHeight">CSS3 draft specification</a>.
 
@@ -87,18 +87,18 @@ There are actually three possible metrics that can be used in a TrueType font fi
 <li>if the USE_TYPO_METRICS bit is set on fsSelection (OS/2 table), this is telling the font to use the sTypo values and not the usWinAscent values. NB this works as a fix with Cambria Math font to give a normal line-height; at present, this is the only font I have found with this bit set; although note that MS WordPad and Windows FireFox browser use the big line-height from usWinAscent, whilst MS Word 2007 observes the fSelection value.</li>
 </ul>
 
-You can change the font metrics used by mPDF, by editing the defined constant (<code>_FONT_DESCRIPTOR</code>) at the top of the <span>mpdf.php</span> file:
+You can change the font metrics used by mPDF, by editing the defined constant (`_FONT_DESCRIPTOR`) at the top of the <span>mpdf.php</span> file:
 
 <ul>
-<li>'<code>winTypo</code>' uses sTypoAscender etc from the OS/2 table and is the one officially recommended - BUT</li>
-<li>'<code>win</code>' use usWinAscent etc from OS/2 and in practice seems to be used most commonly in Windows environment; this is the default in mPDF;</li>
-<li>'<code>mac</code>' uses Ascender etc from hhea table, and may be used to give results consistent with a Mac/OSX environment.</li>
+<li>'`winTypo`' uses sTypoAscender etc from the OS/2 table and is the one officially recommended - BUT</li>
+<li>'`win`' use usWinAscent etc from OS/2 and in practice seems to be used most commonly in Windows environment; this is the default in mPDF;</li>
+<li>'`mac`' uses Ascender etc from hhea table, and may be used to give results consistent with a Mac/OSX environment.</li>
 </ul>
 
-Finally, you can override values for Ascent, Descent and Leading for any specific font, by setting values in <code>config_font.php</code> e.g.
+Finally, you can override values for Ascent, Descent and Leading for any specific font, by setting values in `config_font.php` e.g.
 
 {% highlight php %}
-"cambriamath" => array( 
+"cambriamath" => array(
 
     'R' => "cambria.ttc",
 
@@ -119,9 +119,9 @@ Note - The same values are used for all styles of the font-family. Descent value
 
 # Notes
 
-Remember that line-height for a TABLE has a default value (1.2) set in the <code>config.php defaultCSS</code>. This is left in for backwards compatability. You can change this value to 'normal' for results consistent with most browsers.
+Remember that line-height for a TABLE has a default value (1.2) set in the `config.php defaultCSS`. This is left in for backwards compatability. You can change this value to 'normal' for results consistent with most browsers.
 
-Line-height in a &lt;textarea&gt; is fixed and defined in <code>classes/mpdfform.php</code> (= 1.2)
+Line-height in a &lt;textarea&gt; is fixed and defined in `classes/mpdfform.php` (= 1.2)
 
-Details of the font metrics can be seen by inspecting the temporary font files e.g. <code>/ttfontdata/[fontname].mtx.php</code>.
+Details of the font metrics can be seen by inspecting the temporary font files e.g. `/ttfontdata/[fontname].mtx.php`.
 

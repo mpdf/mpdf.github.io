@@ -12,7 +12,7 @@ SetDisplayMode – Specify the initial Display Mode when the PDF file is opened 
 
 # Description
 
-void <b>SetDisplayMode</b> ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])
+void **SetDisplayMode** ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])
 
 Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.
 
@@ -22,7 +22,7 @@ Specify the initial Display Mode when the PDF file is opened in Adobe Reader. Wh
 
 This parameter specifies the magnification (zoom) of the display when the document is opened.
 
-<b>Values</b> (case-sensitive)
+**Values** (case-sensitive)
 
 fullpage: Fit a whole page in the screen
 
@@ -40,7 +40,7 @@ Specify the page layout to be used when the document is opened.
 
 <span class="smallblock">DEFAULT</span>: "continuous"
 
-<b>Values</b> (case-sensitive)
+**Values** (case-sensitive)
 
 single: Display one page at a time
 

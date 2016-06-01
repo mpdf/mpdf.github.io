@@ -11,22 +11,22 @@ The HTML lang attribute has a number of uses:
 <ul>
 <li>when OTL tables are being used for a font, the language from the lang attribute is used to select which OTL features are applied;</li>
 <li>used in conjunction with CSS :lang selector to allow CSS styles to be applied;</li>
-<li>can be used in conjunction with <code>autoLangToFont</code> and <code>autoScriptToLang</code> (cf.)</li>
+<li>can be used in conjunction with `autoLangToFont` and `autoScriptToLang` (cf.)</li>
 </ul>
 
-mPDF supports use of the <code>lang</code> selector in CSS. All of the following are supported:
+mPDF supports use of the `lang` selector in CSS. All of the following are supported:
 
 <ul>
-<li><code>:lang(fr)</code></li>
-<li><code>p:lang(fr)</code></li>
-<li><code>span:lang("syr")</code></li>
-<li><code>[lang="fr"]</code></li>
-<li><code>[lang='fr']</code></li>
-<li><code>p[lang=fr]</code></li>
-<li><code>p[lang="zh-TW"]</code></li>
+<li>`:lang(fr)`</li>
+<li>`p:lang(fr)`</li>
+<li>`span:lang("syr")`</li>
+<li>`[lang="fr"]`</li>
+<li>`[lang='fr']`</li>
+<li>`p[lang=fr]`</li>
+<li>`p[lang="zh-TW"]`</li>
 </ul>
 
-Note: <code>[lang=zh]</code> will match <code>lang="zh-TW"</code> and <code>lang="zh-HK"</code>
+Note: `[lang=zh]` will match `lang="zh-TW"` and `lang="zh-HK"`
 
 Limitation: class selectors and attribute selectors should be of equal specificity in CSS specification e.g.
 
@@ -36,9 +36,9 @@ Limitation: class selectors and attribute selectors should be of equal specifici
 .syriac { color: red; }
 {% endhighlight %}
 
-should be of equal specificity, and thus apply whichever comes later in the CSS stylesheet. mPDF however gives <code>:lang</code> priority over <code>.class</code>
+should be of equal specificity, and thus apply whichever comes later in the CSS stylesheet. mPDF however gives `:lang` priority over `.class`
 
-<b>The use of the lang attribute and CSS selector is the recommended method for handling multi-lingual documents</b>
+**The use of the lang attribute and CSS selector is the recommended method for handling multi-lingual documents**
 
 ## Language tags
 

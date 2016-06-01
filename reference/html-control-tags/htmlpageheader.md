@@ -12,13 +12,13 @@ htmlpageheader – Define an HTML page header with a given name
 
 # Description
 
-&lt;<b>htmlpageheader</b>&nbsp; <span class="parameter">name</span>&nbsp; &gt; <span class="parameter">html</span> &lt;/htmlpageheader&gt;
+&lt;**htmlpageheader**  <span class="parameter">name</span>  &gt; <span class="parameter">html</span> &lt;/htmlpageheader&gt;
 
 Define an HTML page header with a given name. Named headers can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt;
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
+<div class="alert alert-info" role="alert">**Note:** Do not name any header or footer starting with html_   This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Remember that, unlike most mPDF custom tags which are self-closing with /&gt;, htmlpageheader and htmlpagefooter require end tags. If you wish to make the HTML code compatible with browsers, see <a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a></div>
+<div class="alert alert-info" role="alert">**Note:** Remember that, unlike most mPDF custom tags which are self-closing with /&gt;, htmlpageheader and htmlpagefooter require end tags. If you wish to make the HTML code compatible with browsers, see <a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a></div>
 
 # Attributes
 

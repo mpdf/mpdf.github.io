@@ -12,17 +12,17 @@ PDFAauto – Specify whether to automatically fix issues to create PDF/A1-b comp
 
 # Description
 
-void <b>PDFAauto</b>
+void **PDFAauto**
 
 Specify whether to automatically fix issues to create PDF/A1-b compliant document
 
 # Values
 
-<span class="parameter">PDFAauto</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">PDFAauto</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
-<span class="smallblock">TRUE </span>:&nbsp; automatically fix issues to create PDF/A1-b compliant document&nbsp; 
+<span class="smallblock">TRUE </span>:  automatically fix issues to create PDF/A1-b compliant document 
 
 <span class="smallblock">FALSE</span>: show warning messages if changes are required for compliance
 

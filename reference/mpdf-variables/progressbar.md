@@ -17,18 +17,18 @@ bool `progressBar`
 Specify whether to show progress bars during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You should only change this variable in the configuration file <span class="filename">config.php</span>&nbsp;
+	**Note:** You should only change this variable in the configuration file <span class="filename">config.php</span> 
 	If you want to set this at runtime, use <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You may need to define _MPDF_URI if you are using progress bars -
+	**Note:** You may need to define _MPDF_URI if you are using progress bars -
 	see <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
 
 # Values
 
-<span class="parameter">progressBar</span> =&nbsp;&nbsp;<span class="smallblock"> </span>2 | 1 | <span class="smallblock">FALSE</span>
+<span class="parameter">progressBar</span> =  <span class="smallblock"> </span>2 | 1 | <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 2: display multiple progress bars for detailed examination of progress
 

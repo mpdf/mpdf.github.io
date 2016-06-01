@@ -33,7 +33,7 @@ PDF/A-1b has the objective of ensuring reliable reproduction of the visual appea
 
 A PDF/A document can be identified as such through PDF/A-specific metadata located in the "http://www.aiim.org/pdfa/ns/id/" namespace. However, claiming to be PDF/A and being so are not necessarily the same.
 
-<b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/A1-b compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.
+**Important**: mPDF is ***not guaranteed ***to produce fully PDF/A1-b compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.
 
 # mPDF and PDF/A1-b compliance
 
@@ -51,10 +51,10 @@ Some changes were made in mPDF 4.3 which affect all files (PDF/A or not) to impr
 <li>file version changed to PDF-1.4*</li>
 <li>newline removed at end of file after %%EOF</li>
 <li>an /ID object is added to the PDF trailer (this is optional in PDF-1.4. spec.) when the file is not encrypted</li>
-<li>a binary file marker&nbsp; (consisting of a comment line with 4 characters &gt; 127 ASCII) is added just after the first line (recommended n PDF-1.4 spec.)</li>
+<li>a binary file marker  (consisting of a comment line with 4 characters &gt; 127 ASCII) is added just after the first line (recommended n PDF-1.4 spec.)</li>
 </ul>
 
-* <i>The PDF file version was changed to 1.5 in previous versions when 'active forms were introduced as an experiment'. These are no longer viable, and the rest of mPDF generated files meet 1.4 specification.</i>
+* *The PDF file version was changed to 1.5 in previous versions when 'active forms were introduced as an experiment'. These are no longer viable, and the rest of mPDF generated files meet 1.4 specification.*
 
 ## Colorspaces and ICC Profiles
 
@@ -79,7 +79,7 @@ The ICC Color profile will likely change the appearance of colours in your docum
 <li><a href="http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html">http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html </a></li>
 </ul>
 
-You can change the color profile used by mPDF by adding a&nbsp; <span class="filename">*.icc</span> file to the <span class="filename">[mpdf]/iccprofiles/</span> folder. Then edit <span class="filename">config.php</span> e.g.
+You can change the color profile used by mPDF by adding a  <span class="filename">*.icc</span> file to the <span class="filename">[mpdf]/iccprofiles/</span> folder. Then edit <span class="filename">config.php</span> e.g.
 
 {% highlight php %}
 <?php
@@ -93,8 +93,8 @@ All fonts must be embedded in a PDF/A file. mPDF normally uses the core Adobe fo
 
 <ul>
 <li><span class="parameter">$useCoreFontsOnly</span> is not permitted</li>
-<li>lists <code>&lt;ul&gt;</code> cannot use Zapfdingbats font for bullets</li>
-<li>form element <code>&lt;select&gt;</code> cannot use Zapfdingbats character as the drop-down symbol</li>
+<li>lists `&lt;ul&gt;` cannot use Zapfdingbats font for bullets</li>
+<li>form element `&lt;select&gt;` cannot use Zapfdingbats character as the drop-down symbol</li>
 <li>ISBN/ISSN barcode cannot use Helvetica for the ISBN number (above the bar)</li>
 </ul>
 
@@ -112,7 +112,7 @@ Because PDF/A-1b has the objective of ensuring reliable reproduction of the visu
 
 # Making it happen!
 
-When <code>$this-&gt;PDFA</code> is set to true, the following changes will automatically and silently happen:
+When `$this->PDFA` is set to true, the following changes will automatically and silently happen:
 
 <ul>
 <li>list bullets will use the characters from the current font (if available) e.g. • ⚬ ▪ </li>
@@ -192,7 +192,7 @@ NB This may significantly change the colour and appearance of the image
 <td>Substitutes available sans-serif font</td>
 </tr>
 <tr>
-<td>Form element <code>&lt;select&gt;</code> which normally uses a Zapfdingbats character for the drop-down symbol.</td>
+<td>Form element `&lt;select&gt;` which normally uses a Zapfdingbats character for the drop-down symbol.</td>
 <td>An equal sign "=" will be substituted if ▼ is not available in the default sans-serif font.</td>
 </tr>
 </tbody> </table>

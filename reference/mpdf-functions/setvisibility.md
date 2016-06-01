@@ -15,7 +15,7 @@ SetVisibility – Set the visibility of subsequent objects
 
 # Description
 
-void <b>SetVisibility</b> ( string <span class="parameter">$visibility</span> )
+void **SetVisibility** ( string <span class="parameter">$visibility</span> )
 
 Set the visibility of subsequent objects
 
@@ -25,7 +25,7 @@ Set the visibility of subsequent objects
 
 This parameter specifies the visibility.
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">STRING</span> - One of the following:
 
@@ -61,13 +61,13 @@ Example #1
 
 ...
 
-$mpdf->SetVisibility('printonly'); 
+$mpdf->SetVisibility('printonly');
 
 $mpdf->WriteHTML('
 This text will only be visible when the document is printed
 ');
 
-$mpdf->SetVisibility('screenonly'); 
+$mpdf->SetVisibility('screenonly');
 
 $mpdf->WriteHTML('
 This text will only be visible on screen, and will not be included when the document is printed

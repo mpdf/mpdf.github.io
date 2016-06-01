@@ -43,8 +43,8 @@ aa
 Afar
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -57,8 +57,8 @@ ab
 Abkhazian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -71,8 +71,8 @@ af
 Afrikaans
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -85,8 +85,8 @@ ak
 Akan
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -99,8 +99,8 @@ sq
 Albanian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -113,8 +113,8 @@ am
 Amharic
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -128,7 +128,7 @@ Arabic
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -141,8 +141,8 @@ an
 Aragonese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -155,8 +155,8 @@ hy
 Armenian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -170,7 +170,7 @@ Assamese
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -183,8 +183,8 @@ av
 Avaric
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -197,8 +197,8 @@ ae
 Avestan
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -211,8 +211,8 @@ ay
 Aymara
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -225,8 +225,8 @@ az
 Azerbaijani
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -239,8 +239,8 @@ ba
 Bashkir
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -253,8 +253,8 @@ bm
 Bambara
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -267,8 +267,8 @@ eu
 Basque
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -281,8 +281,8 @@ be
 Belarusian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -296,7 +296,7 @@ Bengali
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -309,8 +309,8 @@ bh
 Bihari
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -323,8 +323,8 @@ bi
 Bislama
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -337,8 +337,8 @@ bo
 Tibetan
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -351,8 +351,8 @@ bs
 Bosnian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -365,8 +365,8 @@ br
 Breton
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -380,7 +380,7 @@ Bulgarian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -393,8 +393,8 @@ my
 Burmese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -408,7 +408,7 @@ Catalan; Valencian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -422,7 +422,7 @@ Czech
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -435,8 +435,8 @@ ch
 Chamorro
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -449,8 +449,8 @@ ce
 Chechen
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -464,7 +464,7 @@ Chinese
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -477,8 +477,8 @@ cv
 Chuvash
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -491,8 +491,8 @@ kw
 Cornish
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -505,8 +505,8 @@ co
 Corsican
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -519,8 +519,8 @@ cr
 Cree
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -534,7 +534,7 @@ Welsh
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -548,7 +548,7 @@ Czech
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -562,7 +562,7 @@ Danish
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -576,7 +576,7 @@ German
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -589,8 +589,8 @@ dv
 Divehi; Dhivehi; Maldivian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -604,7 +604,7 @@ Dutch; Flemish
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -617,8 +617,8 @@ dz
 Dzongkha
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -632,7 +632,7 @@ Greek, Modern (1453-)
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -646,7 +646,7 @@ English
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -659,8 +659,8 @@ eo
 Esperanto
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -674,7 +674,7 @@ Estonian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -688,7 +688,7 @@ Basque
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -701,8 +701,8 @@ ee
 Ewe
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -715,8 +715,8 @@ fo
 Faroese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -730,7 +730,7 @@ Persian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -743,8 +743,8 @@ fj
 Fijian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -758,7 +758,7 @@ Finnish
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -772,7 +772,7 @@ French
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -785,8 +785,8 @@ ff
 Fulah
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -799,8 +799,8 @@ ka
 Georgian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -814,7 +814,7 @@ German
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -827,8 +827,8 @@ gd
 Gaelic; Scottish Gaelic
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -842,7 +842,7 @@ Irish
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -855,8 +855,8 @@ gl
 Galician
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -869,8 +869,8 @@ gv
 Manx
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -884,7 +884,7 @@ Greek, Modern (1453-)
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -898,7 +898,7 @@ Gujarati
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -911,8 +911,8 @@ ht
 Haitian; Haitian Creole
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -925,8 +925,8 @@ ha
 Hausa
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -940,7 +940,7 @@ Hebrew
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -953,8 +953,8 @@ hz
 Herero
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -968,7 +968,7 @@ Hindi
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -981,8 +981,8 @@ ho
 Hiri Motu
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -996,7 +996,7 @@ Croatian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1010,7 +1010,7 @@ Hungarian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1023,8 +1023,8 @@ hy
 Armenian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1037,8 +1037,8 @@ ig
 Igbo
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1052,7 +1052,7 @@ Icelandic
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1065,8 +1065,8 @@ io
 Ido
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1079,8 +1079,8 @@ ie
 Interlingue; Occidental
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1093,8 +1093,8 @@ ia
 Interlingua
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1107,8 +1107,8 @@ id
 Indonesian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1121,8 +1121,8 @@ ik
 Inupiaq
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1136,7 +1136,7 @@ Icelandic
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1150,7 +1150,7 @@ Italian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1163,8 +1163,8 @@ jv
 Javanese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1178,7 +1178,7 @@ Japanese
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1192,7 +1192,7 @@ Kalaallisut; Greenlandic
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1206,7 +1206,7 @@ Kannada
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1220,7 +1220,7 @@ Kashmiri
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1233,8 +1233,8 @@ ka
 Georgian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1247,8 +1247,8 @@ kr
 Kanuri
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1261,8 +1261,8 @@ kk
 Kazakh
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1275,8 +1275,8 @@ km
 Central Khmer
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1289,8 +1289,8 @@ ki
 Kikuyu; Gikuyu
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1303,8 +1303,8 @@ rw
 Kinyarwanda
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1317,8 +1317,8 @@ ky
 Kirghiz; Kyrgyz
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1331,8 +1331,8 @@ kv
 Komi
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1345,8 +1345,8 @@ kg
 Kongo
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1360,7 +1360,7 @@ Korean
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1373,8 +1373,8 @@ kj
 Kuanyama; Kwanyama
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1387,8 +1387,8 @@ ku
 Kurdish
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1401,8 +1401,8 @@ lo
 Lao
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1415,8 +1415,8 @@ la
 Latin
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1430,7 +1430,7 @@ Latvian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1443,8 +1443,8 @@ li
 Limburgan; Limburger; Limburgish
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1457,8 +1457,8 @@ ln
 Lingala
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1472,7 +1472,7 @@ Lithuanian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1485,8 +1485,8 @@ lb
 Luxembourgish; Letzeburgesch
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1499,8 +1499,8 @@ lu
 Luba-Katanga
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1513,8 +1513,8 @@ lg
 Ganda
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1528,7 +1528,7 @@ Macedonian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1541,8 +1541,8 @@ mh
 Marshallese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1556,7 +1556,7 @@ Malayalam
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1569,8 +1569,8 @@ mi
 Maori
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1583,8 +1583,8 @@ mr
 Marathi
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1597,8 +1597,8 @@ ms
 Malay
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1612,7 +1612,7 @@ Macedonian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1625,8 +1625,8 @@ mg
 Malagasy
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1639,8 +1639,8 @@ mt
 Maltese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1653,8 +1653,8 @@ mn
 Mongolian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1667,8 +1667,8 @@ mi
 Maori
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1681,8 +1681,8 @@ ms
 Malay
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1695,8 +1695,8 @@ my
 Burmese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1709,8 +1709,8 @@ na
 Nauru
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1723,8 +1723,8 @@ nv
 Navajo; Navaho
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1737,8 +1737,8 @@ nr
 Ndebele, South; South Ndebele
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1751,8 +1751,8 @@ nd
 Ndebele, North; North Ndebele
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1765,8 +1765,8 @@ ng
 Ndonga
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1780,7 +1780,7 @@ Nepali
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1794,7 +1794,7 @@ Dutch; Flemish
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1807,8 +1807,8 @@ nn
 Norwegian Nynorsk
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1821,8 +1821,8 @@ nb
 Bokmål, Norwegian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1836,7 +1836,7 @@ Norwegian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1849,8 +1849,8 @@ ny
 Chichewa; Chewa; Nyanja
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1863,8 +1863,8 @@ oc
 Occitan
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1877,8 +1877,8 @@ oj
 Ojibwa
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1892,7 +1892,7 @@ Oriya
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1905,8 +1905,8 @@ om
 Oromo
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1919,8 +1919,8 @@ os
 Ossetian; Ossetic
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1934,7 +1934,7 @@ Panjabi; Punjabi
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1948,7 +1948,7 @@ Persian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1961,8 +1961,8 @@ pi
 Pali
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1976,7 +1976,7 @@ Polish
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -1990,7 +1990,7 @@ Portuguese
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2004,7 +2004,7 @@ Pushto; Pashto
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2017,8 +2017,8 @@ qu
 Quechua
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2031,8 +2031,8 @@ rm
 Romansh
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2046,7 +2046,7 @@ Romanian; Moldavian; Moldovan
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2059,8 +2059,8 @@ rn
 Rundi
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2074,7 +2074,7 @@ Russian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2087,8 +2087,8 @@ sg
 Sango
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2101,8 +2101,8 @@ sa
 Sanskrit
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2115,8 +2115,8 @@ si
 Sinhala; Sinhalese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2130,7 +2130,7 @@ Slovak
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2144,7 +2144,7 @@ Slovenian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2157,8 +2157,8 @@ se
 Northern Sami
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2171,8 +2171,8 @@ sm
 Samoan
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2185,8 +2185,8 @@ sn
 Shona
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2215,8 +2215,8 @@ so
 Somali
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2229,8 +2229,8 @@ st
 Sotho, Southern
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2244,7 +2244,7 @@ Spanish; Castilian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2257,8 +2257,8 @@ sq
 Albanian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2271,8 +2271,8 @@ sc
 Sardinian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2286,7 +2286,7 @@ Serbian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2299,8 +2299,8 @@ ss
 Swati
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2313,8 +2313,8 @@ su
 Sundanese
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2327,8 +2327,8 @@ sw
 Swahili
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2342,7 +2342,7 @@ Swedish
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2355,8 +2355,8 @@ ty
 Tahitian
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2370,7 +2370,7 @@ Tamil
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2383,8 +2383,8 @@ tt
 Tatar
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2398,7 +2398,7 @@ Telugu
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2411,8 +2411,8 @@ tg
 Tajik
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2425,8 +2425,8 @@ tl
 Tagalog
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2440,7 +2440,7 @@ Thai
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2453,8 +2453,8 @@ bo
 Tibetan
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2467,8 +2467,8 @@ ti
 Tigrinya
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2481,8 +2481,8 @@ to
 Tonga (Tonga Islands)
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2495,8 +2495,8 @@ tn
 Tswana
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2509,8 +2509,8 @@ ts
 Tsonga
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2523,8 +2523,8 @@ tk
 Turkmen
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2538,7 +2538,7 @@ Turkish
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2551,8 +2551,8 @@ tw
 Twi
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2565,8 +2565,8 @@ ug
 Uighur; Uyghur
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2580,7 +2580,7 @@ Ukrainian
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2594,7 +2594,7 @@ Urdu
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2607,8 +2607,8 @@ uz
 Uzbek
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2621,8 +2621,8 @@ ve
 Venda
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2636,7 +2636,7 @@ Vietnamese
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2649,8 +2649,8 @@ vo
 Volapük
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2664,7 +2664,7 @@ Welsh
 
 </td>
 <td><span class="smallblock">YES</span></td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2677,8 +2677,8 @@ wa
 Walloon
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2691,8 +2691,8 @@ wo
 Wolof
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2705,8 +2705,8 @@ xh
 Xhosa
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2719,8 +2719,8 @@ yi
 Yiddish
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2733,8 +2733,8 @@ yo
 Yoruba
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2747,8 +2747,8 @@ za
 Zhuang; Chuang
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr>
 <td>
@@ -2775,8 +2775,8 @@ zu
 Zulu
 
 </td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 </tbody> </table>
 

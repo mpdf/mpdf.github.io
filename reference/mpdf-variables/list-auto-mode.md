@@ -10,9 +10,9 @@ modification_time: 2015-08-05T12:02:07+00:00
 
 # Description
 
-void <b>list_auto_mode</b>
+void **list_auto_mode**
 
-Specify whether to use mPDF custom method of automatic indentation of lists, or standard browser-compatible. The custom mPDF method is ignored if <code>list-style-position: inside</code>, or image used for marker (or custom U+).
+Specify whether to use mPDF custom method of automatic indentation of lists, or standard browser-compatible. The custom mPDF method is ignored if `list-style-position: inside`, or image used for marker (or custom U+).
 
 For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists</a>.
 
@@ -20,7 +20,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend
 
 <span class="parameter">list_auto_mode</span>
 
-<b>Values</b>
+**Values**
 
 browser - list display will conform to standard browser behaviour for automatic indentation of lists
 

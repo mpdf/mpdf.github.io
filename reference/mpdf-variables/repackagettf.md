@@ -10,7 +10,7 @@ When Embedding full TTF font files, setting this variable to TRUE forces mPDF to
 
 This may improve function with some PostScript printers (GhostScript/GSView)
 
-$this-&gt;repackageTTF = false;(default)
+$this->repackageTTF = false;(default)
 
 Does not work with TTC font collections
 

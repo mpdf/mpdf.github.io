@@ -31,9 +31,9 @@ If kerning is set to be active (by either of the CSS methods):
 <li>if not, then the separate kern table will be used - if it exists.</li>
 </ul>
 
-In Latin script, kerning will only be applied if specified by CSS. The configurable variable <code>useKerning</code> determines behaviour if <code>font-kerning: auto</code> is used (the default).
+In Latin script, kerning will only be applied if specified by CSS. The configurable variable `useKerning` determines behaviour if `font-kerning: auto` is used (the default).
 
 When using OTL tables, kerning is set to be on by default for non-LATIN script; this is because a number of fonts use information in the kern feature to reposition glyphs which are essential for correct display in complex scripts.
 
-<i>Limitation: if useOTL is set, but not for Latin script (e.g. = 0x02), and the text string contains more than one script, then kerning will not be applied to the Latin script text e.g. <span>[Cyrillic text][Latin text][Cyrillic text]</span>. This is because mPDF uses the presence of any repositioning applied to determine if kerning has been applied, otherwise using the alternative kern tables.</i>
+*Limitation: if useOTL is set, but not for Latin script (e.g. = 0x02), and the text string contains more than one script, then kerning will not be applied to the Latin script text e.g. <span>[Cyrillic text][Latin text][Cyrillic text]</span>. This is because mPDF uses the presence of any repositioning applied to determine if kerning has been applied, otherwise using the alternative kern tables.*
 

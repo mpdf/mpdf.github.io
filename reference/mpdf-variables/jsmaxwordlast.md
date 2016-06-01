@@ -10,5 +10,5 @@ Maximum word spacing allowed (carried over) when finishing a last line.
 
 Default set in config.php
 
-$this-&gt;jSmaxWordLast = 2;
+$this->jSmaxWordLast = 2;
 

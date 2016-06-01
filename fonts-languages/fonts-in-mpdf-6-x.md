@@ -23,7 +23,7 @@ You have 2 font files "Frutiger-Normal.ttf" and "FrutigerObl-Normal.ttf" which y
 
 1. Upload the 2 files to the fonts directory (<span class="filename">/ttfonts</span>)
 
-2. In the configuration file (<span class="filename">config_fonts.php</span>) add this to the array <code>$this-&gt;fontdata</code>:
+2. In the configuration file (<span class="filename">config_fonts.php</span>) add this to the array `$this->fontdata`:
 
 {% highlight php %}
    "frutiger" => array(
@@ -69,7 +69,7 @@ For fonts which handle complex scripts and/or right-to-left text, see <a href="{
       CASE "th":  $unifont = "frutiger";  break;
 {% endhighlight %}
 
-This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable <code>autoLangToFont</code> is set to <code>true</code>:
+This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable `autoLangToFont` is set to `true`:
 
 {% highlight php %}
 
@@ -87,13 +87,13 @@ The DejaVu fonts distributed with mPDF contain an extensive set of characters - 
 
 Arabic languages and Hebrew are written in a right-to-left direction (RTL). mPDF recognises both Arabic and Hebrew languages and reverses text direction automatically.
 
-ألسّلام عليكم &nbsp; &nbsp; שלום
+ألسّلام عليكم     שלום
 
 Arabic languages (but not Hebrew) also change the form of the letter depending on its position in the text e.g. these are the initial, medial, final, and isolated forms of arabic letter 'ain':
 
 ع ـع ـعـ عـ
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly display right-to-left scripts.</div>
+<div class="alert alert-info" role="alert">**Note:** You must enable OpenType layout (OTL) features for a font to correctly display right-to-left scripts.</div>
 
 ## Indic languages, Lao, Tibetan etc.
 
@@ -107,7 +107,7 @@ Consonant conjuncts are where two adjacent characters are written as a single 'c
 
 प + ॡ = पॣ
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly display complex scripts.</div>
+<div class="alert alert-info" role="alert">**Note:** You must enable OpenType layout (OTL) features for a font to correctly display complex scripts.</div>
 
 ## Vertical writing
 
@@ -129,9 +129,9 @@ mPDF supports fonts containing characters from all Unicode Planes. By choosing t
 
 The Unicode Supplementary Multilingual Plane contains ranges such as Gothic text and Egyptian Hieroglyphics. as well as other (mainly) ancient scripts - see <a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode coverage of free fonts</a> for full list.
 
-mPDF uses a different method to embed fonts in the PDF file if they include characters from SMP or SIP, because the characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less eficient than the default method, and it can be suppressed by adding the font name to the array <code>BMPonly</code> in the <span class="filename">config_fonts.php</span> configuration file.
+mPDF uses a different method to embed fonts in the PDF file if they include characters from SMP or SIP, because the characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less eficient than the default method, and it can be suppressed by adding the font name to the array `BMPonly` in the <span class="filename">config_fonts.php</span> configuration file.
 
-Note that the DejaVu fonts&nbsp; distributed with mPDF do contain a few characters in the SMP plane, but most users will not require them and by default they are added to the array <code>BMPonly</code>.
+Note that the DejaVu fonts  distributed with mPDF do contain a few characters in the SMP plane, but most users will not require them and by default they are added to the array `BMPonly`.
 
 # Using CJK fonts in mPDF
 
@@ -179,7 +179,7 @@ This is a sample of HTML code containing CJK characters in both BMP and SIP - no
 
 # TrueType Collections
 
-TrueType Collections (.ttc files) contain more than one font. mPDF treats each font separately by defining the <code>TTCfontID</code> array in the <span class="filename">config_fonts.php</span> configuration file.
+TrueType Collections (.ttc files) contain more than one font. mPDF treats each font separately by defining the `TTCfontID` array in the <span class="filename">config_fonts.php</span> configuration file.
 
 This example uses the Windows MingLiU fonts, which consist of 2 files containing 6 fonts (note that mingliub is not a Bold variant):
 
@@ -294,9 +294,9 @@ $this->fontdata = array(
 This is an example of HTML code containing CJK characters from both BMP and SIP, and selecting the different fonts:
 
 {% highlight php %}
-<div style="font-family:mingliu;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div> 
+<div style="font-family:mingliu;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
 
-<div style="font-family:mingliu_hkscs;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div> 
+<div style="font-family:mingliu_hkscs;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
 
 <div style="font-family:pmingliu;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
 {% endhighlight %}

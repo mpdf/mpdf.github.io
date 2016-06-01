@@ -23,19 +23,19 @@ A variety of barcodes can be produced with mPDF. Please see the example file for
 </tr>
 <tr> <th>
 
-<b>Left
+**Left
 
-</b>
+**
 
 </th>
 <td>
 
-<b>Right</b>
+**Right**
 
 </td>
 <td>
 
-<b>Top/bottom</b>
+**Top/bottom**
 
 </td>
 </tr>
@@ -50,8 +50,8 @@ EAN-13
 <td>11X</td>
 <td>7X</td>
 <td>0</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr> <th>
 
@@ -64,8 +64,8 @@ UPC-A
 <td>9X</td>
 <td>9X</td>
 <td>0</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr> <th>
 
@@ -78,8 +78,8 @@ UPC-E
 <td>9X</td>
 <td>7X</td>
 <td>0</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr> <th>
 
@@ -92,8 +92,8 @@ EAN-8
 <td>7X</td>
 <td>7X</td>
 <td>0</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 </tr>
 <tr> <th>Intelligent Mail barcode</th>
 <td>IMB</td>
@@ -133,7 +133,7 @@ EAN-8
 <td>3.175</td>
 <td>1.016</td>
 <td>5:2</td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr> <th>PLANET</th>
 <td>PLANET</td>
@@ -143,7 +143,7 @@ EAN-8
 <td>3.175</td>
 <td>1.016</td>
 <td>5:2</td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 <tr> <th>Code 128</th>
 <td>C128A, C128B, C128C</td>
@@ -152,7 +152,7 @@ EAN-8
 <td>10X</td>
 <td>10X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>-</td>
 </tr>
 <tr> <th>UCC/EAN-128 (GS1-128)</th>
@@ -162,7 +162,7 @@ EAN-8
 <td>10X</td>
 <td>10X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>-</td>
 </tr>
 <tr> <th>Code 39 (Code 3 of 9)</th>
@@ -172,7 +172,7 @@ EAN-8
 <td>10X</td>
 <td>10X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>
 
 2.5<sup>[1]</sup>
@@ -186,7 +186,7 @@ EAN-8
 <td>10X</td>
 <td>10X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>
 
 3<sup>[2]</sup>
@@ -200,7 +200,7 @@ EAN-8
 <td>10X</td>
 <td>10X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>
 
 2.5<sup>[1]</sup>
@@ -214,7 +214,7 @@ EAN-8
 <td>10X</td>
 <td>10X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>-</td>
 </tr>
 <tr> <th>MSI (Modified Plessey)</th>
@@ -224,7 +224,7 @@ EAN-8
 <td>12X</td>
 <td>12X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>-</td>
 </tr>
 <tr> <th>CODABAR</th>
@@ -234,7 +234,7 @@ EAN-8
 <td>10X</td>
 <td>10X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>
 
 2.5<sup>[1]</sup>
@@ -248,7 +248,7 @@ EAN-8
 <td>10X</td>
 <td>10X</td>
 <td>0</td>
-<td>&nbsp;</td>
+<td> </td>
 <td>3<sup>[3]</sup></td>
 </tr>
 </tbody> </table>

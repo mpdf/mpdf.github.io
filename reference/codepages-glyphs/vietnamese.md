@@ -24,7 +24,7 @@ modification_time: 2015-08-05T12:02:50+00:00
 
 Ơ ơ Ư ư
 
-<span>Latin Extended Additional&nbsp; </span>{U+1EA0 - U+1EF1}
+<span>Latin Extended Additional  </span>{U+1EA0 - U+1EF1}
 
 Ạ ạ Ả ả Ấ ấ Ầ ầ Ẩ ẩ Ẫ ẫ Ậ ậ Ắ ắ Ằ ằ Ẳ ẳ Ẵ ẵ Ặ ặ
 
@@ -34,5 +34,5 @@ modification_time: 2015-08-05T12:02:50+00:00
 
 Ụ ụ Ủ ủ Ứ ứ Ừ ừ Ử ử Ữ ữ Ự ự
 
-<span>The Vietnamese <i>đồng</i> currency symbol is ₫ (U+20AB).</span>
+<span>The Vietnamese *đồng* currency symbol is ₫ (U+20AB).</span>
 

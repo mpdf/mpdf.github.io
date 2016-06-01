@@ -12,19 +12,19 @@ watermarkImgBehind – Specify whether to place watermark images behind page con
 
 # Description
 
-void <b>watermarkImgBehind</b>
+void **watermarkImgBehind**
 
 Specify whether to place watermark images behind page contents
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This variable can be changed either in the configuration file <span class="filename">config.php</span>&nbsp; or at runtime</div>
+<div class="alert alert-info" role="alert">**Note:** This variable can be changed either in the configuration file <span class="filename">config.php</span>  or at runtime</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This variable was unintentionally set to <span class="smallblock">TRUE</span> in the <span class="filename">config.php</span> file released with mPDF 4.4 In version 4.5 it was changed to <span class="smallblock">FALSE</span></div>
+<div class="alert alert-info" role="alert">**Note:** This variable was unintentionally set to <span class="smallblock">TRUE</span> in the <span class="filename">config.php</span> file released with mPDF 4.4 In version 4.5 it was changed to <span class="smallblock">FALSE</span></div>
 
 # Values
 
-<span class="parameter">watermarkImgBehind</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">watermarkImgBehind</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE </span>: place watermark images behind page contents
 

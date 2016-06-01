@@ -10,7 +10,7 @@ mPDF &gt;= 4.0
 
 # Position
 
-The CSS property "position" is <b>partially</b> supported in mPDF, allowing a block element (div etc.) to be placed at a fixed position on the page.
+The CSS property "position" is **partially** supported in mPDF, allowing a block element (div etc.) to be placed at a fixed position on the page.
 
 {% highlight php %}
 position: fixed|absolute
@@ -42,7 +42,7 @@ Limitations:
 <li>Position is overridden if it would be off the page, so that the element displays within the containing element
 
 </li>
-<li>Overflow:auto causes text to autofit within the block size (additionally constrained if necessary to page edges). 
+<li>Overflow:auto causes text to autofit within the block size (additionally constrained if necessary to page edges).
 
 </li>
 <li>Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported</li>
@@ -52,9 +52,9 @@ Limitations:
 </li>
 </ul>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left -right -top -bottom, are all supported.</div>
+<div class="alert alert-info" role="alert">**Note:** width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left -right -top -bottom, are all supported.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML reiteratively until it finds a reasonable fit to the available size.</div>
+<div class="alert alert-info" role="alert">**Note:** Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML reiteratively until it finds a reasonable fit to the available size.</div>
 
 ## Overflow
 
@@ -92,11 +92,11 @@ Example #2 - Centres a block in the middle of the page
 {% highlight php %}
 <style>
 
-.myfixed { 
+.myfixed {
 
-    position: absolute; 
+    position: absolute;
 
-    overflow: visible; 
+    overflow: visible;
 
     left: 0;
 
@@ -104,17 +104,17 @@ Example #2 - Centres a block in the middle of the page
 
     width: 100mm;   /* you must specify a width */
 
-    margin-top: auto; 
+    margin-top: auto;
 
-    margin-bottom: auto; 
+    margin-bottom: auto;
 
-    margin-left: auto; 
+    margin-left: auto;
 
-    margin-right: auto; 
+    margin-right: auto;
 
-    border: 1px solid #000088; 
+    border: 1px solid #000088;
 
-    background-color: #EEDDFF; 
+    background-color: #EEDDFF;
 
 }
 

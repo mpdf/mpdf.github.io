@@ -12,11 +12,11 @@ pagefooter – Define a page footer with a given name
 
 # Description
 
-&lt;<b>pagefooter</b> [ <span class="parameter">name</span> ] [ <span class="parameter">content-left</span> ] [ <span class="parameter">content-center</span> ] [ <span class="parameter">content-right</span> ] [ <span class="parameter">footer-style</span> ] [ <span class="parameter">footer-style-left</span> ] [ <span class="parameter">footer-style-center</span> ] [ <span class="parameter">footer-style-right</span> ] [ <span class="parameter">line</span> ] /&gt;
+&lt;**pagefooter** [ <span class="parameter">name</span> ] [ <span class="parameter">content-left</span> ] [ <span class="parameter">content-center</span> ] [ <span class="parameter">content-right</span> ] [ <span class="parameter">footer-style</span> ] [ <span class="parameter">footer-style-left</span> ] [ <span class="parameter">footer-style-center</span> ] [ <span class="parameter">footer-style-right</span> ] [ <span class="parameter">line</span> ] /&gt;
 
 Define a page footer with a given name. Named footers can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
+<div class="alert alert-info" role="alert">**Note:** Do not name any header or footer starting with html_   This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
 # Attributes
 
@@ -36,7 +36,7 @@ Defines the text to appear in the page footer.
 
 At least one 'content-' must be defined.
 
-<b>Values</b> 
+**Values**
 
 <span class="parameter">content-left</span>: Text to appear at left margin
 
@@ -54,9 +54,9 @@ footer-style-left
 
 This attribute can optionally set CSS style properties for the page footer.
 
-<span class="parameter">footer-style</span> will set the same style for left, right and center content, whereas <span class="parameter">footer-style-left</span>, <span class="parameter">footer-style-center</span> and&nbsp; <span class="parameter">footer-style-right</span> set the style for one part of the content only.
+<span class="parameter">footer-style</span> will set the same style for left, right and center content, whereas <span class="parameter">footer-style-left</span>, <span class="parameter">footer-style-center</span> and  <span class="parameter">footer-style-right</span> set the style for one part of the content only.
 
-<b>Values</b>
+**Values**
 
 Valid CSS inline style declaration but only 5 properties can be set:
 
@@ -74,7 +74,7 @@ color
 
 <span class="parameter">line</span>
 
-If set to "1" or any positive value, a line will be drawn above the footer<b>.</b>
+If set to "1" or any positive value, a line will be drawn above the footer**.**
 
 # Changelog
 

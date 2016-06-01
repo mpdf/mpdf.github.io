@@ -56,9 +56,9 @@ The id is "0" for root/un-named ToC; otherwise it is lowercase of the name="" us
 
 An example CSS stylesheet for this:
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF v 6.0 this example stylesheet for ToCs was added to the file <span class="filename">mpdf.css</span> which is read by default as a secondary default CSS stylesheet</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF v 6.0 this example stylesheet for ToCs was added to the file <span class="filename">mpdf.css</span> which is read by default as a secondary default CSS stylesheet</div>
 
-{% highlight php %}
+{% highlight css %}
 div.mpdf_toc {font-family: sans-serif; font-size: 11pt;}
 
 a.mpdf_toc_a  {text-decoration: none; color: black;}
@@ -108,17 +108,17 @@ span.mpdf_toc_p_level_2 {}
 
 For additional ToCs, these will have &lt;toc name=""&gt; attribute. Use the lowercase e.g. for name="Figures"
 
-{% highlight php %}
+{% highlight css %}
 #mpdf_toc_figures {font-family:Calibri; font-size: 10pt;}
 
 #mpdf_toc_figures span.mpdf_toc_t_level_0 {color: red; }
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> If you have 2 ToCs immediately following each other, and wish to use pagenumstyle or suppress to control the following text, then you need to set those values on both of the &lt;tocpagebreak&gt; elements.</div>
+<div class="alert alert-info" role="alert">**Note:** If you have 2 ToCs immediately following each other, and wish to use pagenumstyle or suppress to control the following text, then you need to set those values on both of the &lt;tocpagebreak&gt; elements.</div>
 
 ## Automatically Generated ToC entries
 
-You can automatically generate ToC entries from h1 - h6 tags, by setting the variable <a href="{{ "/reference/mpdf-variables/h2toc.html" | prepend: site.baseurl }}"><code>h2toc</code></a>.
+You can automatically generate ToC entries from h1 - h6 tags, by setting the variable <a href="{{ "/reference/mpdf-variables/h2toc.html" | prepend: site.baseurl }}">`h2toc`</a>.
 
 Only the default ToC will be used if more than 1 ToCs are defined for the document.
 

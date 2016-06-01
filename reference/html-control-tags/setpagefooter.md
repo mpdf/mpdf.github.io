@@ -12,11 +12,11 @@ setpagefooter – Set a page footer by a given name
 
 # Description
 
-&lt; <b>setpagefooter</b> [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] /&gt;
+&lt; **setpagefooter** [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] /&gt;
 
 Sets a page footer that has previously been defined by name.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 
@@ -34,7 +34,7 @@ Specify whether to set the footer for <span class="smallblock">ODD</span> or <sp
 
 Note: setting this value to <span class="smallblock">BLANK</span> will not clear the footer; set <span class="parameter">value</span> to -1 or off to cancel the header
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 O or ODD - set the footer for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 
@@ -52,13 +52,13 @@ Specify whether to start or stop showing the named footer from the current posit
 
 </span>
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 1 or ON - start using this named footer
 
 -1 or OFF - stop using a footer
 
-<span class="smallblock">DEFAULT</span> -&nbsp; <span class="smallblock">BLANK</span> is ignored, making no changes to the current state
+<span class="smallblock">DEFAULT</span> -  <span class="smallblock">BLANK</span> is ignored, making no changes to the current state
 
 # Changelog
 

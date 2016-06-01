@@ -14,17 +14,17 @@ StartProgressBarOutput – Enable progress bars to be shown during file generati
 
 void `StartProgressBarOutput ( [ string <span class="parameter">$mode</span> ] )`
 
-Enable progress bars to be shown during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation. To set this value globally you can edit the value for <code>progressBar</code> in the configuration file <span class="filename">config.php</span>
+Enable progress bars to be shown during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation. To set this value globally you can edit the value for `progressBar` in the configuration file <span class="filename">config.php</span>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> You may need to define the constant _MPDF_URI if you use progress bars. The constant _MPDF_URI is needed to redirect the user to the PDF file (and prior to mPDF 5.0 to locate a javascript file within the progress bar script). It must be either a relative path (e.g. '../') or a full URI (e.g. 'http://www.mydomain.com/mpdf/'). If you do not define it before calling mPDF() mPDF will assign it the same value as _MPDF_PATH. This is fine if you have used a relative path. _MPDF_PATH requires either a relative path or a filesystem real path (e.g. '/homepages/27/d84233457/htdocs/')</div>
+<div class="alert alert-info" role="alert">**Note:** You may need to define the constant _MPDF_URI if you use progress bars. The constant _MPDF_URI is needed to redirect the user to the PDF file (and prior to mPDF 5.0 to locate a javascript file within the progress bar script). It must be either a relative path (e.g. '../') or a full URI (e.g. 'http://www.mydomain.com/mpdf/'). If you do not define it before calling mPDF() mPDF will assign it the same value as _MPDF_PATH. This is fine if you have used a relative path. _MPDF_PATH requires either a relative path or a filesystem real path (e.g. '/homepages/27/d84233457/htdocs/')</div>
 
 # Parameters
 
 <span class="parameter">mode</span>
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
-1 <i>or</i> <span class="smallblock">BLANK</span>&nbsp;or omitted: Shows 1 progress bar (simple form) = <span class="smallblock">DEFAULT</span>
+1 *or* <span class="smallblock">BLANK</span> or omitted: Shows 1 progress bar (simple form) = <span class="smallblock">DEFAULT</span>
 
 2: Shows multiple progress bars for detailed examination of progress
 

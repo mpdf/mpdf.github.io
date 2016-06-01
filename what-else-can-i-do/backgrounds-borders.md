@@ -15,7 +15,7 @@ Background colour (colour is the only property) can be set for in-line elements 
 <ul>
 <li>background color</li>
 <li>background images (including gradients using CSS3 spec.)</li>
-<li><i>background gradients (custom style for mPDF - not part of CSS specification - DEPRACATED)</i></li>
+<li>*background gradients (custom style for mPDF - not part of CSS specification - DEPRACATED)*</li>
 </ul>
 
 ## Background Images
@@ -28,7 +28,7 @@ Background-images are disabled in columns, and when "page-break-inside: avoid" i
 
 NB CSS2.1 states that the area for background-image should include the padding and the BORDER - IE7 does this, but Firefox 3 starts the tiling position 0 inside the border. mPDF complies with CSS and IE7.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Background-color and background-image set on the &lt;body&gt; element will cover the whole page i.e. not inside the "margins".&nbsp; (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</div>
+<div class="alert alert-info" role="alert">**Note:** Background-color and background-image set on the &lt;body&gt; element will cover the whole page i.e. not inside the "margins".  (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)</div>
 
 ## Gradients defined as background-image
 
@@ -82,11 +82,11 @@ The five numbers are coordinates in the form (x1, y1, x2, y2, r) where (x1, y1) 
 
 In addition to the standard CSS styles for borders, border-radius and background-clip are supported. these are defined in the <a href="http://www.w3.org/TR/2008/WD-css3-background-20080910/#layering">CSS3 draft specification</a>.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Border-radius does not work if Columns are being used, or if<span class="parameter"> <a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a> </span>is <span class="smallblock">TRUE</span> (keep-with-table).</div>
+<div class="alert alert-info" role="alert">**Note:** Border-radius does not work if Columns are being used, or if<span class="parameter"> <a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a> </span>is <span class="smallblock">TRUE</span> (keep-with-table).</div>
 
 The two length values of the ‘border-*-radius’ properties define the radii of a quarter ellipse that defines the shape of the corner of the outer border edge.
 
-The first value is the horizontal radius e.g. in ‘border-top-left-radius: 55pt 25pt’&nbsp; 55pt is radius of curve from top end of left border starting to go round to the top.
+The first value is the horizontal radius e.g. in ‘border-top-left-radius: 55pt 25pt’  55pt is radius of curve from top end of left border starting to go round to the top.
 
 If the second length is omitted it is equal to the first (and the corner is thus a quarter circle). If either length is zero, the corner is square, not rounded.
 
@@ -149,7 +149,7 @@ Example
 {% highlight php %}
 div.rounded {
 
-    border:1mm dashed #220044; 
+    border:1mm dashed #220044;
 
     background-color: #f0f2ff;
 

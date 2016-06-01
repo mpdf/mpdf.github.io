@@ -21,17 +21,17 @@ If you specify a header that extends further down the page than the top-margin, 
 
 # Alternative margin usage
 
-The variables <span class="parameter">$this-&gt;setAutoTopMargin</span> and <span class="parameter">$this-&gt;setAutoBottomMargin</span> can be set in the config.php file. Both default to <span class="smallblock">FALSE</span>.
+The variables <span class="parameter">$this->setAutoTopMargin</span> and <span class="parameter">$this->setAutoBottomMargin</span> can be set in the config.php file. Both default to <span class="smallblock">FALSE</span>.
 
 ## pad
 
-If <span class="parameter">$this-&gt;setAutoTopMargin</span> is set to '<b>pad</b>' then the value for margin-top is used to set a fixed distance in mm (padding) between the bottom of the header and top of the main text. The converse is true with <span class="parameter">$this-&gt;setAutoBottomMargin</span>.
+If <span class="parameter">$this->setAutoTopMargin</span> is set to '**pad**' then the value for margin-top is used to set a fixed distance in mm (padding) between the bottom of the header and top of the main text. The converse is true with <span class="parameter">$this->setAutoBottomMargin</span>.
 
 ## stretch
 
-If <span class="parameter">$this-&gt;setAutoTopMargin</span> is set to '<b>stretch</b>' then the margin-top sets a <b>minimum</b> distance in mm between the top of the page and the top of the main text, which expands if header is too large to fit. The value <span class="parameter">$this-&gt;autoMarginPadding</span> (default = 2, configurable in <span class="filename">config.php</span>) defines an additional distance in mm used as padding between the header and main text. This is the behaviour seen in Microsoft Word. 
+If <span class="parameter">$this->setAutoTopMargin</span> is set to '**stretch**' then the margin-top sets a **minimum** distance in mm between the top of the page and the top of the main text, which expands if header is too large to fit. The value <span class="parameter">$this->autoMarginPadding</span> (default = 2, configurable in <span class="filename">config.php</span>) defines an additional distance in mm used as padding between the header and main text. This is the behaviour seen in Microsoft Word.
 
-The converse is true with <span class="parameter">$this-&gt;setAutoBottomMargin</span>.
+The converse is true with <span class="parameter">$this->setAutoBottomMargin</span>.
 
 # Experimental!
 

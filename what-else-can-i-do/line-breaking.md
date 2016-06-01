@@ -20,9 +20,9 @@ Line breaks will be allowed at:
 <li>Between CJK characters, except CJK numerals, before "CJK-following" or after "CJK-leading" characters</li>
 </ul>
 
-Lao, Thai and Khmer text does not have space between words. By default, mPDF uses word dictionaries to determine appropriate opportunites for line-breaks. Users may turn this function off using the configurable variable <code>useDictionaryLBR</code>.
+Lao, Thai and Khmer text does not have space between words. By default, mPDF uses word dictionaries to determine appropriate opportunites for line-breaks. Users may turn this function off using the configurable variable `useDictionaryLBR`.
 
 Alternatively users can insert the character U+200B (zero-width space) in the text to mark line-breaking opportunities manually.
 
-Similarly for Tibetan script, mPDF 6 uses a simple algorithm to identify line-breaking opportunities after the characters U+0F0B (Tsheg) or U+0F0D. This can be overriden using the configurable variable <code>useTibetanLBR</code>.
+Similarly for Tibetan script, mPDF 6 uses a simple algorithm to identify line-breaking opportunities after the characters U+0F0B (Tsheg) or U+0F0D. This can be overriden using the configurable variable `useTibetanLBR`.
 

@@ -15,17 +15,17 @@ PDFXauto – Specify whether to automatically fix issues to create PDF/X-1a comp
 
 # Description
 
-void <b>PDFXauto</b>
+void **PDFXauto**
 
 Specify whether to automatically fix issues to create PDF/X-1a compliant document
 
 # Values
 
-<span class="parameter">PDFXauto</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">PDFXauto</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
-<span class="smallblock">TRUE </span>:&nbsp; automatically fix issues to create PDF/X-1a compliant document&nbsp; 
+<span class="smallblock">TRUE </span>:  automatically fix issues to create PDF/X-1a compliant document 
 
 <span class="smallblock">FALSE</span>: show warning messages if changes are required for compliance
 

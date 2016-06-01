@@ -16,10 +16,10 @@ Installation:
 <li>Upload all of the files to the server, maintaining the folders as they are </li>
 <li>Ensure that you have write permissions set for the following folders:
 <ul>
-<li><span class="filename">/ttfontdata/</span> 
+<li><span class="filename">/ttfontdata/</span>
 
 </li>
-<li><span class="filename">/tmp/</span> 
+<li><span class="filename">/tmp/</span>
 
 </li>
 <li><span class="filename">/graph_cache/</span></li>
@@ -39,17 +39,17 @@ If you have problems, please read the section on <a href="{{ "/troubleshooting/k
 
 There is no upgrade package from v5 beta because so many of the files have had at least minor changes. You can overwrite most of the files, taking care to keep a note of your 3 configuration files.
 
-<b>Important:</b> You must delete all temporary files in the <span class="filename">/ttfontdata/</span> folder.
+**Important:** You must delete all temporary files in the <span class="filename">/ttfontdata/</span> folder.
 
 ## Changes from 5.0 Beta
 
 <ul>
 <li>config.php file has been changed (extra CJK characters to recognise CJK blocks)</li>
-<li><code>$this-&gt;backupSubsFont</code> (in <span class="filename">config_fonts.php</span>) optionally now takes an array</li>
-<li>no need to define <code>'cjk'=&gt;true</code> or <code>'sip|smp'=&gt;true</code> in <span class="filename">config_fonts.php</span> (ignored; cf. <code>$this-&gt;BMPonly</code>)</li>
+<li>`$this->backupSubsFont` (in <span class="filename">config_fonts.php</span>) optionally now takes an array</li>
+<li>no need to define `'cjk'=&gt;true` or `'sip|smp'=&gt;true` in <span class="filename">config_fonts.php</span> (ignored; cf. `$this->BMPonly`)</li>
 <li>Indic language fonts have been altered to add Latin and Latin-1 Supplement characters</li>
 <li>progress bars now has an external progbar.css and configurable main heading</li>
-<li>added initial parameter <code>new mPDF('+aCJK')</code> or <code>'-aCJK'</code> to override default useAdobeCJK at runtime</li>
+<li>added initial parameter `new mPDF('+aCJK')` or `'-aCJK'` to override default useAdobeCJK at runtime</li>
 <li>QRCode is not included in main download (but as an extra package)</li>
 </ul>
 
@@ -66,10 +66,10 @@ and not 'lucida'
 Configurable variables:
 
 <ul>
-<li><code>$mpdf-&gt;useSubstitutionsMB</code> is now depracated, but will work as an alias for <code>$mpdf-&gt;useSubstitutions</code></li>
-<li><code>$mpdf-&gt;useOnlyCoreFonts</code> is now depracated and is ignored. Use <code>new mPDF('c')</code></li>
-<li><code>$this-&gt;use_CJK_only</code> is now depracated and is ignored. See <code>$this-&gt;useAdobeCJK</code> and <code>new mPDF('+aCJK')</code> or <code>'-aCJK'</code></li>
+<li>`$mpdf-&gt;useSubstitutionsMB` is now depracated, but will work as an alias for `$mpdf-&gt;useSubstitutions`</li>
+<li>`$mpdf-&gt;useOnlyCoreFonts` is now depracated and is ignored. Use `new mPDF('c')`</li>
+<li>`$this->use_CJK_only` is now depracated and is ignored. See `$this->useAdobeCJK` and `new mPDF('+aCJK')` or `'-aCJK'`</li>
 </ul>
 
-The initial parameters e.g. <code>new mPDF('utf-8')</code> have all changed. Old ones may be recognised, or will be ignored.
+The initial parameters e.g. `new mPDF('utf-8')` have all changed. Old ones may be recognised, or will be ignored.
 

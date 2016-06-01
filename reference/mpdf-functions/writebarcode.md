@@ -12,23 +12,23 @@ mPDF – Write an EAN-13 (ISBN-13) barcode
 
 # Description
 
-void <b>writeBarcode</b> ( string <span class="parameter">$code</span> [, int <span class="parameter">$showisbn</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$size</span> [, float <span class="parameter">$border</span> [, float <span class="parameter">$padding_left</span> , float <span class="parameter">$padding_right</span> , float <span class="parameter">$padding_top</span> , float <span class="parameter">$padding_bottom</span> ]]]]]])
+void **writeBarcode** ( string <span class="parameter">$code</span> [, int <span class="parameter">$showisbn</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$size</span> [, float <span class="parameter">$border</span> [, float <span class="parameter">$padding_left</span> , float <span class="parameter">$padding_right</span> , float <span class="parameter">$padding_top</span> , float <span class="parameter">$padding_bottom</span> ]]]]]])
 
 Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specification can be found at <a href="http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf">http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf</a>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 
 <span class="parameter">code</span>
 
-This parameter specifies the EAN-13 (ISBN-13) code. Accepts 12 or 13 digits (i.e. with or without the check digit) and may optionally contain hyphens e.g. 978-09542-2461-5&nbsp; or&nbsp; 978095422461
+This parameter specifies the EAN-13 (ISBN-13) code. Accepts 12 or 13 digits (i.e. with or without the check digit) and may optionally contain hyphens e.g. 978-09542-2461-5  or  978095422461
 
 <span class="parameter">showisbn</span>
 
-Specif whether to show the EAN-13 (ISBN-13) code <b>above</b> the barcode. NB The numbers will always appear below the bars, but the code abive the bars is optional.
+Specif whether to show the EAN-13 (ISBN-13) code **above** the barcode. NB The numbers will always appear below the bars, but the code abive the bars is optional.
 
-<b>Values</b>
+**Values**
 
 1 (or any positive value): show the EAN-13 code
 
@@ -40,13 +40,13 @@ Specif whether to show the EAN-13 (ISBN-13) code <b>above</b> the barcode. NB Th
 
 Sets the <span class="parameter">x</span> (horizontal) position for the barcode.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses the current writing position in the document.
+<span class="smallblock">BLANK</span> or omitted uses the current writing position in the document.
 
 <span class="parameter">y</span>
 
 Sets the <span class="parameter">y</span> (vertical) position for the barcode.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses the current writing position in the document.
+<span class="smallblock">BLANK</span> or omitted uses the current writing position in the document.
 
 <span class="parameter">size</span>
 
@@ -58,7 +58,7 @@ This parameter specifies the size of the barcode relative to the standard. Value
 
 This parameter specifies whether or not to show a border around the barcode.
 
-<b>Values</b>
+**Values**
 
 1 or <span class="smallblock">TRUE</span> (or any positive value) will set a border
 
@@ -80,9 +80,9 @@ Sets the padding around the barcode.
 
 All values should be specified as <span class="smallblock">LENGTH</span> in millimetres
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses the default values.
+<span class="smallblock">BLANK</span> or omitted uses the default values.
 
-<span class="smallblock">DEFAULT</span> <b>Values</b>
+<span class="smallblock">DEFAULT</span> **Values**
 
 <span class="parameter">padding</span><span class="parameter">_left</span> 1
 

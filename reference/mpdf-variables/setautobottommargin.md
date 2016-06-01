@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:24+00:00
 
 # Description
 
-mixed <b>setAutoBottomMargin</b>
+mixed **setAutoBottomMargin**
 
 Specify the behaviour defining the bottom-margin of the document. When <span class="parameter"></span><span class="parameter">setAutoBottomMargin</span> is set to 'stretch' then <span class="parameter">autoMarginPadding</span> defines the minimum distance in mm that will be forced between the top of the footer and the bottom of the main text.
 
@@ -18,11 +18,11 @@ Specify the behaviour defining the bottom-margin of the document. When <span cla
 
 <span class="parameter">setAutoBottomMargin</span>
 
-<b>Values</b>
+**Values**
 
 pad - the value for margin-bottom is used to set a fixed distance in mm (padding) between the top of the footer and the bottom of the main text
 
-stretch -&nbsp; margin-bottom sets a <b>minimum</b> distance in mm between the bottom of the page and the bottom of the main text, which expands if the footer is too large to fit. 
+stretch -  margin-bottom sets a **minimum** distance in mm between the bottom of the page and the bottom of the main text, which expands if the footer is too large to fit.
 
 <span class="smallblock">FALSE</span> - the defined value for margin-bottom is respected even if the footer overlaps the main body of the document.
 

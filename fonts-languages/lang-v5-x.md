@@ -10,7 +10,7 @@ When creating a multilingual document containing Arabic, Indic, <acronym title="
 
 Marking up your HTML text using the lang attribute is one way to do this. The attribute can be used on any block or in-line tag e.g. &lt;div lang="zh-CN"&gt;....&lt;/div&gt; or &lt;span lang="ru"&gt;...&lt;/span&gt;. It is also recognised in &lt;body&gt; or &lt;html&gt; tags.
 
-<b>Important:</b> Support for the attribute <span class="parameter">lang</span> is only active when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span>).
+**Important:** Support for the attribute <span class="parameter">lang</span> is only active when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span>).
 
 The language codes supported are determined by <span class="filename">config_cp.php</span> :
 
@@ -37,7 +37,7 @@ When a language is set, the following happens (determined by function <span clas
 <li>justification type (<a href="index9a03.html?tid=203">$jSpacing</a>) is set when a block tag has the property <span class="parameter">text-align:justify</span>; for span/inline elements the justification is disabled for the enclosing block element.</li>
 </ul>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Automatic language detection using <span class="function">SetAutoFont()</span> will detect language use in the text passed to mPDF, and add <span class="filename">&lt;span lang="xx" class="lang_xx"&gt;..&lt;/span&gt;</span> tags to mark up. Using automatic language detection may add to the processing time when creating a large document.</div>
+<div class="alert alert-info" role="alert">**Note:** Automatic language detection using <span class="function">SetAutoFont()</span> will detect language use in the text passed to mPDF, and add <span class="filename">&lt;span lang="xx" class="lang_xx"&gt;..&lt;/span&gt;</span> tags to mark up. Using automatic language detection may add to the processing time when creating a large document.</div>
 
 # See Also
 

@@ -18,7 +18,7 @@ Many TrueType fonts contain OpenType Layout (OTL) tables. These Advanced Typogra
 <li>OTL fonts contain explicit script and language information, so a text-processing application can adjust its behavior accordingly.</li>
 </ul>
 
-mPDF 6 introduces the power and flexibility of the OpenType Layout font model into PDF. mPDF supports GSUB, GPOS and GDEF tables for now. mPDF does <i>not </i>support BASE and JSTF at present.
+mPDF 6 introduces the power and flexibility of the OpenType Layout font model into PDF. mPDF supports GSUB, GPOS and GDEF tables for now. mPDF does *not *support BASE and JSTF at present.
 
 Other mPDF features to enhance complex scripts:
 
@@ -32,7 +32,7 @@ Other mPDF features to enhance complex scripts:
 <li>separate algorithm for Tibetan line-breaking</li>
 </ul>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> There are other smart-font technologies around to deal with complex scripts, namely Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.</div>
+<div class="alert alert-info" role="alert">**Note:** There are other smart-font technologies around to deal with complex scripts, namely Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.</div>
 
 # What can OTL Fonts do?
 
@@ -54,8 +54,8 @@ OTL features allow:
 <li>Joining and Reordering</li>
 <li>Complex syllables</li>
 <li>Ligatures</li>
-<li>Language-dependent substitutions&nbsp;</li>
-<li>Font features - Optional substitutions Stylistic Alternatives (salt)&nbsp;</li>
+<li>Language-dependent substitutions </li>
+<li>Font features - Optional substitutions Stylistic Alternatives (salt) </li>
 <li>CSS control of discretionary OTL features</li>
 <li>Mark repositioning (and diacritics)</li>
 <li>Mark repositioning (and Contextual substitution)</li>
@@ -68,14 +68,14 @@ A full list of feature tags is at <a href="http://www.microsoft.com/typography/o
 In mPDF, the following features are on by default:
 
 <ul>
-<li>GSUB features: <code>locl ccmp pref blwf abvf pstf pres abvs blws psts haln rlig calt liga clig mset</code> (all scripts)</li>
-<li>GSUB features: <code>isol fina fin2 fin3 medi med2 init nukt akhn rphf rkrf half vatu cjct cfar</code> (for appropriate scripts e.g. Indic, Arabic)</li>
-<li>GPOS features: <code>abvm blwm mark mkmk curs cpsp dist requ</code> [<code>kern</code>]</li>
+<li>GSUB features: `locl ccmp pref blwf abvf pstf pres abvs blws psts haln rlig calt liga clig mset` (all scripts)</li>
+<li>GSUB features: `isol fina fin2 fin3 medi med2 init nukt akhn rphf rkrf half vatu cjct cfar` (for appropriate scripts e.g. Indic, Arabic)</li>
+<li>GPOS features: `abvm blwm mark mkmk curs cpsp dist requ` [`kern`]</li>
 </ul>
 
-NB '<code>requ</code>' is not listed in the Microsoft registry of Feature tags; however it is found in the Arial Unicode MS font (it repositions the baseline for punctuation in Kannada script).
+NB '`requ`' is not listed in the Microsoft registry of Feature tags; however it is found in the Arial Unicode MS font (it repositions the baseline for punctuation in Kannada script).
 
-<code>kern</code> is used in some fonts to reposition marks etc. and is essential for correct display, so in mPDF <code>kern</code> is on by default when any non-Latin script is used.
+`kern` is used in some fonts to reposition marks etc. and is essential for correct display, so in mPDF `kern` is on by default when any non-Latin script is used.
 
 Complex scripts require a "shaping engine" to re-order glyphs and apply the OTL features by syllable. MS Word and Wordpad run on the Windows platform use "Uniscribe", whereas some browsers such as FireFox and OpenOffice use Pango/HarfBuzz. The different shaping engines (and indeed different versions of them) can produce different results.
 
@@ -92,25 +92,25 @@ See <a href="http://www.w3.org/TR/css3-fonts/#font-rend-props">http://www.w3.org
 The following are supported in mPDF:
 
 <ul>
-<li><code>font-variant-position</code></li>
-<li><code>font-variant-caps</code></li>
-<li><code>font-variant-ligatures</code></li>
-<li><code>font-variant-numeric</code></li>
-<li><code>font-variant-alternates</code> - Only [<code>normal | historical-forms</code>] supported (i.e. most are NOT supported)
+<li>`font-variant-position`</li>
+<li>`font-variant-caps`</li>
+<li>`font-variant-ligatures`</li>
+<li>`font-variant-numeric`</li>
+<li>`font-variant-alternates` - Only [`normal | historical-forms`] supported (i.e. most are NOT supported)
 
-e.g. <code>stylistic, styleset, character-variant, swash, ornaments, annotation</code> (use <code>font-feature-settings</code> for these)</li>
-<li><code>font-variant</code> - as above, and except for: <code>east-asian-variant-values, east-asian-width-values, ruby</code></li>
-<li><code>font-language-override</code></li>
-<li><code>font-feature-settings</code></li>
+e.g. `stylistic, styleset, character-variant, swash, ornaments, annotation` (use `font-feature-settings` for these)</li>
+<li>`font-variant` - as above, and except for: `east-asian-variant-values, east-asian-width-values, ruby`</li>
+<li>`font-language-override`</li>
+<li>`font-feature-settings`</li>
 </ul>
 
-<code>font-variant-east-asian</code> is NOT supported
+`font-variant-east-asian` is NOT supported
 
-NB <code>@font-face</code> is NOT supported
+NB `@font-face` is NOT supported
 
-NB <code>@font-feature-values</code> is NOT supported
+NB `@font-feature-values` is NOT supported
 
-<b>Note:</b> <code>font-variant</code> specifies a single property in CSS2, whereas in CSS3 it has become a shorthand for all the other <code>font-variant-*</code> properties. <code>font-variant: small-caps</code> was the form supported in CSS2, and will work in mPDF.
+**Note:** `font-variant` specifies a single property in CSS2, whereas in CSS3 it has become a shorthand for all the other `font-variant-*` properties. `font-variant: small-caps` was the form supported in CSS2, and will work in mPDF.
 
 See notes later about font kerning.
 
@@ -158,7 +158,7 @@ font-feature-settings: "ss07";
 
 # How to use OTL in mPDF
 
-In <code>config_fonts.php</code> there are 2 variables which affect OTL features for each font family e.g.:
+In `config_fonts.php` there are 2 variables which affect OTL features for each font family e.g.:
 
 {% highlight php %}
 "dejavusanscondensed" => array(
@@ -239,7 +239,7 @@ useOTL should be set to an integer between 0 and 255. Each bit will enable OTL f
 </tr>
 </tbody> </table>
 
-Setting <code>useOTL</code> to 0 (or omitting it) will disable all OTL features. Setting <code>useOTL</code> to 255 or 0xFF will enable OTL for all scripts. Setting <code>useOTL</code> to 0x82 will enable OTL features for Cyrillic and complex scripts.
+Setting `useOTL` to 0 (or omitting it) will disable all OTL features. Setting `useOTL` to 255 or 0xFF will enable OTL for all scripts. Setting `useOTL` to 0x82 will enable OTL features for Cyrillic and complex scripts.
 
 In a font like Free Serif, it may be useful to enable OTL features for complex scripts, but disable OTL for Latin scripts (to save processing time). However, see above - this may disable kerning in Latin scripts in certain circumstances.
 
@@ -261,11 +261,11 @@ To add a font, first copy the font file to the <span class="filename">/ttfonts/<
 
 Then edit <span class="filename">config_fonts.php</span> to add. See the manual for details if you are not already familiar with this.
 
-If you wish to use this font with <code>autoLangToFont</code>, you also need to edit <span class="filename">config_lang2fonts.php</span>
+If you wish to use this font with `autoLangToFont`, you also need to edit <span class="filename">config_lang2fonts.php</span>
 
 ## Setting OTL use at runtime
 
-mPDF caches some font information in the <span class="filename">/ttfontdata/</span> folder to improve performance. This is regenerated if you change the value of <code>useOTL</code> for a font.
+mPDF caches some font information in the <span class="filename">/ttfontdata/</span> folder to improve performance. This is regenerated if you change the value of `useOTL` for a font.
 
 There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g. for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in <span class="filename">config_fonts.php</span>:
 

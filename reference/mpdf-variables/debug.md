@@ -12,15 +12,15 @@ debug – Turn on debugging messages
 
 # Description
 
-void <b>debug</b>
+void **debug**
 
-Specify whether to show debugging messages. If you are having problems with mPDF, set <span class="parameter">debug</span> to TRUE to show error and warning&nbsp; messages that may otherwise be suppressed.
+Specify whether to show debugging messages. If you are having problems with mPDF, set <span class="parameter">debug</span> to TRUE to show error and warning  messages that may otherwise be suppressed.
 
 # Values
 
-<span class="parameter">debug</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">debug</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE </span>: enable debugging
 
@@ -63,7 +63,7 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages inadvertently picked up suppressed errors such as those caused by @fopen()&nbsp; - even though the @ is deliberately there to prevent interruption of the script.</div>
+<div class="alert alert-info" role="alert">**Note:** This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages inadvertently picked up suppressed errors such as those caused by @fopen()  - even though the @ is deliberately there to prevent interruption of the script.</div>
 
 # See Also
 

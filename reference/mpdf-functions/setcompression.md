@@ -12,7 +12,7 @@ SetCompression – Specifies that mPDF should compress the data for the PDF file
 
 # Description
 
-void <b>SetCompression</b> ( boolean <span class="parameter">$flag</span> )
+void **SetCompression** ( boolean <span class="parameter">$flag</span> )
 
 Specifies that mPDF should compress the data for the PDF file. This makes a smaller PDF file and is set by default to <span class="smallblock">TRUE</span> on initialising the mPDF class.
 

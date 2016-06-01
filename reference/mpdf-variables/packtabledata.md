@@ -12,17 +12,17 @@ packTableData – Use binary packing of table data to reduce memory usage
 
 # Description
 
-void <b>packTableData</b>
+void **packTableData**
 
 Processing tables uses large amounts of internal memory, as the value are stored in an array. Enabling packTableData causes mPDF to pack the table data into a binary form saving considerable memory. However, the conversion to and from binary data takes a significant amount of time, and can increase processing time.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This variable can be changed either in the configuration file <span class="filename">config.php</span>&nbsp; or at runtime</div>
+<div class="alert alert-info" role="alert">**Note:** This variable can be changed either in the configuration file <span class="filename">config.php</span>  or at runtime</div>
 
 # Values
 
-<span class="parameter">packTableData</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">packTableData</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE </span>: use binary packing of table data
 

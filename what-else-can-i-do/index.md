@@ -13,7 +13,7 @@ mPDF can generate an index at the end of document using:
 <li>&lt;indexinsert ... /&gt; generates and inserts the Index at the end of document</li>
 </ul>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Indexes have been completely rewritten in mPDF 6. The notes below refer to mPDF v6.0+</div>
+<div class="alert alert-info" role="alert">**Note:** Indexes have been completely rewritten in mPDF 6. The notes below refer to mPDF v6.0+</div>
 <ul>
 <li>&lt;indexentry&gt; or IndexEntry() should be used to create Index entries during document writing.</li>
 <li>&lt;indexinsert&gt; or InsertIndex() should be used to generate the Index at the end of the document.</li>
@@ -60,9 +60,9 @@ div.mpdf_index_letter {
 
     text-transform: uppercase;
 
-    page-break-after: avoid; 
+    page-break-after: avoid;
 
-    margin-top: 0.3em; 
+    margin-top: 0.3em;
 
     margin-collapse: collapse;
 
@@ -78,9 +78,9 @@ div.mpdf_index_entry {
 
 }
 
-a.mpdf_index_link { 
+a.mpdf_index_link {
 
-    color: #000000; 
+    color: #000000;
 
     text-decoration: none;
 
@@ -93,15 +93,15 @@ A default stylesheet for Indexes is included in <span class="filename">mpdf.css<
 
 In order to generate an Index with non-ASCII characters, entries need to be sorted accordingly (collation), and non-ASCII characters should map to the appropriate Dividing letter e.g.:
 
-<b>A</b>
+**A**
 
 Alonso, Fernando
 
 Ãlvarez, Isaac
 
-Arroyo Molino, David 
+Arroyo Molino, David
 
-<b>B</b>
+**B**
 
 BenÃtez, Carlos
 
@@ -121,7 +121,7 @@ $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
 
 NB You should always choose a UTF-8 collation, even when you are using Core fonts or e.g. charset-in=win-1252, because mPDF handles all text internally as UTF-8 encoded.
 
-You can see which Locales are available on your (Unix) system: <code>&lt;?php system('locale -a') ?&gt;</code>
+You can see which Locales are available on your (Unix) system: `&lt;?php system('locale -a') ?&gt;`
 
 Note: Index collation will probably not work on Windows servers because of the problems setting Locales under Windows.
 
@@ -174,9 +174,9 @@ From mPDF 6.0, columns are not specified as part of the &lt;indexinsert&gt;, so 
 <indexentry content="Mammals:elephants" />
 {% endhighlight %}
 
-A shorthand way of displaying subentries is set by default, which suppresses the main entry if &gt; 1 subEntry. It can be disabled/enabled using the configurable variable $this-&gt;indexUseSubentries in config.php.
+A shorthand way of displaying subentries is set by default, which suppresses the main entry if &gt; 1 subEntry. It can be disabled/enabled using the configurable variable $this->indexUseSubentries in config.php.
 
-This is the default appearance, with $this-&gt;indexUseSubentries = false; -
+This is the default appearance, with $this->indexUseSubentries = false; -
 
 Mammals 73
 
@@ -200,15 +200,15 @@ which appears as:
 
 Mammals
 
-- <b>elephants</b>: breeding 15
+- **elephants**: breeding 15
 
-This is the appearance with $this-&gt;indexUseSubentries = false;
+This is the appearance with $this->indexUseSubentries = false;
 
 Mammals 73
 
 Mammals, elephants 142
 
-Mammals, <b>elephants</b>: breeding 15
+Mammals, **elephants**: breeding 15
 
 Mammals, humans 173
 

@@ -12,23 +12,23 @@ OverWrite – Replace specified text strings in an existing PDF file
 
 # Description
 
-mixed <b>OverWrite</b> ( string <span class="parameter">$sourcefile</span> , mixed <span class="parameter">$search</span> , mixed <span class="parameter">$replacement</span> [, string <span class="parameter">$dest</span> [, string <span class="parameter">$file_out</span> ]])
+mixed **OverWrite** ( string <span class="parameter">$sourcefile</span> , mixed <span class="parameter">$search</span> , mixed <span class="parameter">$replacement</span> [, string <span class="parameter">$dest</span> [, string <span class="parameter">$file_out</span> ]])
 
 Using the class extension mPDFI, an existing PDF file can be overwritten, replacing specified text with alternatives. For example you may have created a long complex PDF file, and you wish to produce copies with an individual number on each copy without having to re-generate the whole document each time.
 
 Overwrite() does not re-flow the text from the source file. If the <span class="parameter">replacement</span> string is longer than the <span class="parameter">search</span> string, it may overlap the following text.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <b>OverWrite()</b> has only been tested to work on PDF files produced by mPDF. It will work with encrpyted files, as long as the same encryption properties are used for the new document.</div>
+<div class="alert alert-info" role="alert">**Note:** **OverWrite()** has only been tested to work on PDF files produced by mPDF. It will work with encrpyted files, as long as the same encryption properties are used for the new document.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> If you want the final PDF file to be encrypted, you need to encrypt the original source file. Make sure that you specify a password otherwise mPDF uses a random password and <b>OverWrite()</b> will not be able to access the text.</div>
+<div class="alert alert-info" role="alert">**Note:** If you want the final PDF file to be encrypted, you need to encrypt the original source file. Make sure that you specify a password otherwise mPDF uses a random password and **OverWrite()** will not be able to access the text.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 5.3 a unique encryption key is generated each time you create a PDF file. So to use encryption you need to save variables when you create the original file. See Example 2.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;= 5.3 a unique encryption key is generated each time you create a PDF file. So to use encryption you need to save variables when you create the original file. See Example 2.</div>
 
 # Parameters
 
 <span class="parameter">sourcefile</span>
 
-This parameter specifies the source PDF file to use.&nbsp; <span class="parameter">sourcefile</span> should be a relative path to a local file.
+This parameter specifies the source PDF file to use.  <span class="parameter">sourcefile</span> should be a relative path to a local file.
 
 <span class="parameter">search</span>
 
@@ -48,7 +48,7 @@ If this parameter is a string and the <span class="parameter">search</span> para
 
 <span class="smallblock">DEFAULT</span>: "D"
 
-<b>Values</b>
+**Values**
 
 D: download the PDF file
 
@@ -68,7 +68,7 @@ This parameter specifies the filename for the output PDF file. No path should be
 
 # Return Value
 
-<b>OverWrite()</b> returns the PDF file as a string if <span class="parameter">dest</span> is set to "S".
+**OverWrite()** returns the PDF file as a string if <span class="parameter">dest</span> is set to "S".
 
 # Changelog
 

@@ -12,7 +12,7 @@ sethtmlpageheader – Set an HTML page header by a given name
 
 # Description
 
-&lt; <b>sethtmlpageheader</b> [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] [ <span class="parameter">show-this-page</span> ] /&gt;
+&lt; **sethtmlpageheader** [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ] [ <span class="parameter">show-this-page</span> ] /&gt;
 
 Sets an HTML page header that has previously been defined by name.
 
@@ -32,7 +32,7 @@ Specify whether to set the header for <span class="smallblock">ODD</span> or <sp
 
 Note: setting this value to <span class="smallblock">BLANK</span> will not clear the header; set <span class="parameter">value</span> to -1 or off to cancel the header
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 O or ODD - set the header for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 
@@ -50,13 +50,13 @@ Specify whether to start or stop showing the named header from the current posit
 
 </span>
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 1 or ON - start using this named header
 
 -1 or OFF - stop using a header
 
-<span class="smallblock">DEFAULT</span> -&nbsp; <span class="smallblock">BLANK</span> is ignored, making no changes to the current state
+<span class="smallblock">DEFAULT</span> -  <span class="smallblock">BLANK</span> is ignored, making no changes to the current state
 
 <span class="parameter">show-this-page</span>
 

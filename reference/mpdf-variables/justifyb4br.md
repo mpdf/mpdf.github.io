@@ -12,7 +12,7 @@ justifyB4br – Specify whether to justify line of text beofre a linebreak
 
 # Description
 
-void <b>justifyB4br</b>
+void **justifyB4br**
 
 Specify whether to justify line of text beofre a linebreak. This only makes a difference when the text-alignment of the current block is set as "text-align: justify".
 
@@ -20,9 +20,9 @@ In a justified text block, a &lt;br&gt; linebreak will not cause the preceding l
 
 # Values
 
-<span class="parameter">justifyB4br</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">justifyB4br</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE </span>: justify line of text beofre a linebreak
 

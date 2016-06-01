@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/writecell.html
 modification_time: 2015-08-05T12:01:15+00:00
 ---
 
-<code><b>WriteCell</b>(<b>float</b> w, <b>float</b> h, <b>string</b> text[, <b>mixed</b> border[, <b>integer</b> ln[, <b>string</b> align[, <b>integer</b> fill[, <b>mixed</b> link[, <b>float</b> returnx]]]]]])</code>
+`**WriteCell**(**float** w, **float** h, **string** text[, **mixed** border[, **integer** ln[, **string** align[, **integer** fill[, **mixed** link[, **float** returnx]]]]]])`
 
 Writes a single line of text directly to the PDF document at the current position.
 

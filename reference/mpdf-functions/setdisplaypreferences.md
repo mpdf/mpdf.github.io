@@ -12,7 +12,7 @@ SetDisplayPreferences – Defines the way the document shall be presented on the
 
 # Description
 
-void <b>SetDisplayPreferences</b> ( string <span class="parameter">$prefs</span> )
+void **SetDisplayPreferences** ( string <span class="parameter">$prefs</span> )
 
 Specify the way the document shall be presented on the screen when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.
 
@@ -22,7 +22,7 @@ Specify the way the document shall be presented on the screen when the PDF file 
 
 This parameter takes a string containing any one or more of the possible values separated by any characters (e.g. comma, forward slash or space). All the options start as <span class="smallblock">FALSE</span>, and can only be set <span class="smallblock">TRUE</span> by this command. Each setting is added to those previously set.
 
-<b>Values</b> (case-sensitive)
+**Values** (case-sensitive)
 
 FullScreen: Full-screen mode, with no menu bar, window controls, or any other window visible
 

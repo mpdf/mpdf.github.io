@@ -18,7 +18,7 @@ permalink: /user-s-guide/configuration/configuration-files-v5-x.html
 </tr>
 </thead> <tbody>
 <tr>
-<td><span class="filename">config.php</span> 
+<td><span class="filename">config.php</span>
 
 </td>
 <td>Configure most <a href="/user-s-guide/configuration/configuration-variables.html">variables</a> which affect mPDF. These values can be set at the beginning of individual scripts, but changes here will affect all of your PDF files.</td>
@@ -32,15 +32,15 @@ permalink: /user-s-guide/configuration/configuration-files-v5-x.html
 <td>This was contained in the function <span class="function">GetCodepage()</span> in the <span class="filename">htmltoolkit.php</span> file.</td>
 </tr>
 <tr>
-<td><span class="filename">config_fonts.php</span> 
+<td><span class="filename">config_fonts.php</span>
 
 </td>
 <td>Details of fonts installed in mPDF.</td>
 <td>Previously in <span class="filename">mpdf_config.php</span> file.</td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<p> </p>
+<p> </p>
 </div>
 </div>
 

@@ -12,11 +12,11 @@ Example of an HTML attribute: &lt;div <span class="parameter">align</span>="cent
 
 mPDF supports attribute values in single or double quotes e.g. &lt;div align="center"&gt; or &lt;div align='center'&gt;
 
-Minimised attributes are not supported e.g. &lt;input type="checkbox" <i>disabled</i> /&gt;
+Minimised attributes are not supported e.g. &lt;input type="checkbox" *disabled* /&gt;
 
 XHTML specification is recommended for best compliance with mPDF.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> The attributes <span class="parameter">class</span>, <span class="parameter">id</span> and <span class="parameter">style</span> are supported on most HTML tags: see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.</div>
+<div class="alert alert-info" role="alert">**Note:** The attributes <span class="parameter">class</span>, <span class="parameter">id</span> and <span class="parameter">style</span> are supported on most HTML tags: see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.</div>
 <table class="table"> <tbody>
 <tr>
 <td rowspan="2">HTML, BODY and ALL recognised tags
@@ -31,12 +31,12 @@ XHTML specification is recommended for best compliance with mPDF.
 </tr>
 <tr>
 <td>dir</td>
-<td>rtl | ltr&nbsp;&nbsp; (mPDF &gt;= 6.0)<span class="smallblock"></span></td>
+<td>rtl | ltr   (mPDF &gt;= 6.0)<span class="smallblock"></span></td>
 </tr>
 <tr>
 <td>HTML, BODY</td>
 <td>dir</td>
-<td>rtl | ltr&nbsp; (mPDF &gt;= 5.0)
+<td>rtl | ltr  (mPDF &gt;= 5.0)
 
 </td>
 </tr>
@@ -48,7 +48,7 @@ XHTML specification is recommended for best compliance with mPDF.
 </td>
 </tr>
 <tr>
-<td rowspan="10">TABLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td rowspan="10">TABLE       </td>
 <td>border</td>
 <td>1 | 0</td>
 </tr>
@@ -95,23 +95,23 @@ Added mPDF 5.7
 <td><span class="smallblock">LENGTH</span></td>
 </tr>
 <tr>
-<td><i>(repeat_header)</i></td>
-<td>1&nbsp;&nbsp; (removed from mPDF &gt;= 5.4; use &lt;thead&gt;)
+<td>*(repeat_header)*</td>
+<td>1   (removed from mPDF &gt;= 5.4; use &lt;thead&gt;)
 
 </td>
 </tr>
 <tr>
-<td><i>autosize</i></td>
+<td>*autosize*</td>
 <td>
 
-<span class="smallblock">FLOAT</span>&nbsp; value &gt;= 0
+<span class="smallblock">FLOAT</span>  value &gt;= 0
 
 Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be &gt;=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom attribute)
 
 </td>
 </tr>
 <tr>
-<td><i>rotate</i></td>
+<td>*rotate*</td>
 <td>90 | -90</td>
 </tr>
 <tr>
@@ -120,9 +120,9 @@ Shrinks a table to fit if width is too small to allow complete words to fit. The
 <td>#rrggbb</td>
 </tr>
 <tr>
-<td rowspan="8">TD, TH 
+<td rowspan="8">TD, TH
 
-&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </td>
 <td>width
 
 </td>
@@ -138,7 +138,7 @@ Shrinks a table to fit if width is too small to allow complete words to fit. The
 </tr>
 <tr>
 <td>valign</td>
-<td>top&nbsp; |middle | bottom</td>
+<td>top  |middle | bottom</td>
 </tr>
 <tr>
 <td>bgcolor</td>
@@ -159,7 +159,7 @@ Shrinks a table to fit if width is too small to allow complete words to fit. The
 <tr>
 <td>OL, UL</td>
 <td>font-size</td>
-<td><span class="smallblock">FONT-SIZE</span> 
+<td><span class="smallblock">FONT-SIZE</span>
 
 </td>
 </tr>
@@ -189,7 +189,7 @@ Shrinks a table to fit if width is too small to allow complete words to fit. The
 <td><span class="smallblock">LENGTH</span></td>
 </tr>
 <tr>
-<td><i>rotate</i></td>
+<td>*rotate*</td>
 <td>
 
 90 | -90 | 180
@@ -201,7 +201,7 @@ When width is specified e.g. width="3cm" this is applied to the rotated image i.
 </td>
 </tr>
 <tr>
-<td rowspan="3">HR&nbsp;
+<td rowspan="3">HR 
 
 </td>
 <td>width</td>
@@ -218,7 +218,7 @@ When width is specified e.g. width="3cm" this is applied to the rotated image i.
 <tr>
 <td rowspan="3">FONT</td>
 <td>face</td>
-<td><span class="smallblock">FONT-FAMILY</span> 
+<td><span class="smallblock">FONT-FAMILY</span>
 
 </td>
 </tr>
@@ -233,11 +233,11 @@ When width is specified e.g. width="3cm" this is applied to the rotated image i.
 <tr>
 <td rowspan="2">FORM</td>
 <td>method</td>
-<td>get | post&nbsp; (default=post)&nbsp; (mPDF &gt;= 5.3)</td>
+<td>get | post  (default=post)  (mPDF &gt;= 5.3)</td>
 </tr>
 <tr>
 <td>action</td>
-<td><span class="smallblock">URI</span>&nbsp; (mPDF &gt;= 5.3</td>
+<td><span class="smallblock">URI</span>  (mPDF &gt;= 5.3</td>
 </tr>
 <tr>
 <td rowspan="6">TEXTAREA</td>
@@ -254,7 +254,7 @@ When width is specified e.g. width="3cm" this is applied to the rotated image i.
 </tr>
 <tr>
 <td>required</td>
-<td>required&nbsp; [HTML5] (mPDF &gt;= 5.3)</td>
+<td>required  [HTML5] (mPDF &gt;= 5.3)</td>
 </tr>
 <tr>
 <td>spellcheck</td>
@@ -279,7 +279,7 @@ When width is specified e.g. width="3cm" this is applied to the rotated image i.
 <td>name</td>
 <td>
 
-<span class="smallblock">TEXT</span>&nbsp;&nbsp;
+<span class="smallblock">TEXT</span>  
 
 Field names in Active Forms must only contain letters, numbers, colon(:), undersore(_) or hyphen(-).
 
@@ -316,7 +316,7 @@ Only if also editable and size=1</td>
 <td>editable</td>
 <td>
 
-editable&nbsp; [HTML5] Default=false (mPDF &gt;= 5.3)
+editable  [HTML5] Default=false (mPDF &gt;= 5.3)
 
 Only if size=1
 
@@ -395,7 +395,7 @@ true | false [HTML5] Default=false (mPDF &gt;= 5.3)
 </tr>
 <tr>
 <td>INPUT (button, submit, reset)</td>
-<td><i>noprint</i></td>
+<td>*noprint*</td>
 <td>
 
 noprint
@@ -413,7 +413,7 @@ noprint
 </tr>
 <tr>
 <td>DOTTAB</td>
-<td><i>outdent</i></td>
+<td>*outdent*</td>
 <td><span class="smallblock">LENGTH</span> (mPDF &gt;= 5.7)</td>
 </tr>
 <tr>
@@ -442,18 +442,18 @@ value, max, min, low, high, optimum
 <td><span class="smallblock">LENGTH</span></td>
 </tr>
 <tr>
-<td><i>type</i></td>
+<td>*type*</td>
 <td>Any alphanumeric string. If present, will select custom progress/meter formats - IF they have been defined by the user by editing script <span class="filename">classes/meter.php</span></td>
 </tr>
 </tbody> </table>
 
 * <span class="parameter">lang</span> is only recognised when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</div>
+<div class="alert alert-info" role="alert">**Note:** Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in their formal/long form i.e. selected="selected"</div>
+<div class="alert alert-info" role="alert">**Note:** Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in their formal/long form i.e. selected="selected"</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.</div>
+<div class="alert alert-info" role="alert">**Note:** <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.</div>
 
 # Changelog
 
@@ -465,7 +465,7 @@ value, max, min, low, high, optimum
 <td>TD border="1" was supported &lt;= mPDF 1.3, but is not valid HTML and is now ignored</td>
 </tr>
 <tr>
-<td>&nbsp;</td>
+<td> </td>
 <td>TABLE align="..." with a rotated table - changed to set the alignment ignoring the rotation i.e. align=right sets the table to the right side of the page (looking as though it is bottom-aligned)</td>
 </tr>
 <tr>

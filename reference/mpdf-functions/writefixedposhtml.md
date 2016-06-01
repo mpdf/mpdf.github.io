@@ -12,7 +12,7 @@ WriteFixedPosHTML — Write HTML to a fixed position on the current page
 
 # Description
 
-void <b>WriteFixedPosHTML</b> ( string <span class="parameter">$html</span> , float <span class="parameter">$x</span> , float <span class="parameter">$y</span> , float <span class="parameter">$w</span> , float <span class="parameter">$h</span> [, string <span class="parameter">$overflow</span> ])
+void **WriteFixedPosHTML** ( string <span class="parameter">$html</span> , float <span class="parameter">$x</span> , float <span class="parameter">$y</span> , float <span class="parameter">$w</span> , float <span class="parameter">$h</span> [, string <span class="parameter">$overflow</span> ])
 
 Write HTML to a fixed position on the current page.
 
@@ -52,7 +52,7 @@ Specifies how to handle text which would not fit inside the block element, with 
 
 <span class="smallblock"></span>
 
-<b>Values</b>
+**Values**
 
 visible: show all text, even if it spills over outside the dimensions of the block element
 

@@ -10,17 +10,17 @@ modification_time: 2015-08-05T12:00:07+00:00
 
 Lists are handled as for other block level elements, so you can apply any CSS properties usable on blocks (e.g. border, background, padding) to UL/OL and LI tags.
 
-There is full support for CSS properties "<code>list-style</code>", "<code>list-style-image</code>", "<code>list-style-type</code>", and "<code>list-style-position</code>".
+There is full support for CSS properties "`list-style`", "`list-style-image`", "`list-style-type`", and "`list-style-position`".
 
 ## List Modes
 
-There are two modes for lists: "mpdf" mode and "browser" mode. Mode is set using the configurable variable <code>list_auto_mode</code> in <span class="filename">config.php</span>
+There are two modes for lists: "mpdf" mode and "browser" mode. Mode is set using the configurable variable `list_auto_mode` in <span class="filename">config.php</span>
 
-1) Browser mode gives the same display as most browsers. In this mode, the default list indentation is set by <code>padding "0 auto"</code> in the default CSS in <span class="filename">config.php</span>. "<code>auto</code>" equates to the value of <code>list_indent_default</code> in <span class="filename">config.php</span> - this is a "magic" value for padding, which is applied to either left or right depending on directionality of the list (rtl/ltr).
+1) Browser mode gives the same display as most browsers. In this mode, the default list indentation is set by `padding "0 auto"` in the default CSS in <span class="filename">config.php</span>. "`auto`" equates to the value of `list_indent_default` in <span class="filename">config.php</span> - this is a "magic" value for padding, which is applied to either left or right depending on directionality of the list (rtl/ltr).
 
-2) "mPDF" mode gives results compatible with versions of mPDF prior to v6.0. In this mode, the indentation is calculated differently: the outside edge of the list item is considered to be the outside edge of the bullet or number. For numbered lists, mPDF calculates the width of the largest number and this width is used to set the outside edge. The default list indentation of "<code>auto</code>" in mPDF mode is set by <code>list_indent_default_mpdf</code>. This value is added to the automatic calculated indentation. For backwards compatibility, <code>list_indent_first_level = 0;</code> can be used to prevent any indentation of the first list level.
+2) "mPDF" mode gives results compatible with versions of mPDF prior to v6.0. In this mode, the indentation is calculated differently: the outside edge of the list item is considered to be the outside edge of the bullet or number. For numbered lists, mPDF calculates the width of the largest number and this width is used to set the outside edge. The default list indentation of "`auto`" in mPDF mode is set by `list_indent_default_mpdf`. This value is added to the automatic calculated indentation. For backwards compatibility, `list_indent_first_level = 0;` can be used to prevent any indentation of the first list level.
 
-The automatic indentation only works for bullets or numbered lists, and is ignored if "<code>list-style-position: inside</code>" is set, or images are used for markers.
+The automatic indentation only works for bullets or numbered lists, and is ignored if "`list-style-position: inside`" is set, or images are used for markers.
 
 Browser mode is set as the default - for backwards compatibility, change this to "mpdf".
 
@@ -38,7 +38,7 @@ This style is included in file <span class="filename">mpdf.css</span>
 
 Versions of mPDF prior to v6.0 always added a top and bottom margin to the outermost list, (but no variation from this was possible). mPDF 6 is therefore backwards compatible re. the margins.
 
-[NB The CSS styles are included in <span class="filename">mpdf.css</span>, because the <code>defaultCSS</code> values set in <span class="filename">config.php</span> only works on basic elements, and cannot use selectors such as "<code>ol ol</code>".]
+[NB The CSS styles are included in <span class="filename">mpdf.css</span>, because the `defaultCSS` values set in <span class="filename">config.php</span> only works on basic elements, and cannot use selectors such as "`ol ol`".]
 
 ## Other configurable variables
 
@@ -72,19 +72,19 @@ $this->list_symbol_size = '0.31em';
 
 ## Notes on Lists
 
-The attribute <code>type</code> is case sensitive (whereas it is case insensitive in CSS). This allows the use of shorthand versions e.g. <code>type="A"</code> for uppercase alpha-numeric.
+The attribute `type` is case sensitive (whereas it is case insensitive in CSS). This allows the use of shorthand versions e.g. `type="A"` for uppercase alpha-numeric.
 
-"<code>list-style-type</code>" is only inherited to child LI (not to child UL/OL); <code>list-style-image</code> and <code>-position</code> are fully inherited.
+"`list-style-type`" is only inherited to child LI (not to child UL/OL); `list-style-image` and `-position` are fully inherited.
 
 Lists in tables are basic, as block-level elements are not supported inside tables.
 
-Properties like <code>text-align:justify</code> are inherited from surrounding elements, which will change the appearance of lists designed with earlier versions of mPDF.
+Properties like `text-align:justify` are inherited from surrounding elements, which will change the appearance of lists designed with earlier versions of mPDF.
 
-The attribute <code>start="3"</code> (integer) works for "OL"; it is an official (though depracated) HTML attribute.
+The attribute `start="3"` (integer) works for "OL"; it is an official (though depracated) HTML attribute.
 
-List bullets (<code>type = disc, circle </code>or<code> square</code>) are drawn rather than using font glyphs (from mPDF &gt;= v6.0), for better consistency.
+List bullets (`type = disc, circle `or` square`) are drawn rather than using font glyphs (from mPDF &gt;= v6.0), for better consistency.
 
-For maximum backwards comaptibility with older versions of mPDF, change the following configurable variables in the <code>config.php</code> file:
+For maximum backwards comaptibility with older versions of mPDF, change the following configurable variables in the `config.php` file:
 
 <table class="table"> <thead>
 <tr>
@@ -103,18 +103,18 @@ For maximum backwards comaptibility with older versions of mPDF, change the foll
 <td>Lists</td>
 <td>
 
-$this-&gt;list_auto_mode = 'browser';
+$this->list_auto_mode = 'browser';
 
-$this-&gt;list_marker_offset = '5.5pt';
+$this->list_marker_offset = '5.5pt';
 
-$this-&gt;list_symbol_size = '3.6pt';</td>
+$this->list_symbol_size = '3.6pt';</td>
 <td>
 
-$this-&gt;list_auto_mode = 'mpdf';
+$this->list_auto_mode = 'mpdf';
 
-$this-&gt;list_marker_offset = '0.45em';
+$this->list_marker_offset = '0.45em';
 
-$this-&gt;list_symbol_size = '0.31em';
+$this->list_symbol_size = '0.31em';
 
 </td>
 </tr>

@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:36+00:00
 
 # Description
 
-boolean <b>useFixedTextBaseline</b>
+boolean **useFixedTextBaseline**
 
 Specify whether to use a fixed value to set the position of the text baseline.
 
@@ -20,9 +20,9 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 <span class="parameter">useFixedTextBaseline= <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
 
-<b>Values</b>
+**Values**
 
-<i><span class="smallblock">FALSE</span></i>: <span class="smallblock">DEFAULT</span> use the font metrics to set the position of the text baseline.
+*<span class="smallblock">FALSE</span>*: <span class="smallblock">DEFAULT</span> use the font metrics to set the position of the text baseline.
 
 <span class="smallblock">TRUE</span>: use a fixed value to set the position of the text baseline.
 

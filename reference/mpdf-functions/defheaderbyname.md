@@ -12,13 +12,13 @@ DefHeaderByName – Define a page header with a given name
 
 # Description
 
-void <b>DefHeaderByName</b> ([ string <span class="parameter">$name</span> [, array <span class="parameter">$header</span> ]])
+void **DefHeaderByName** ([ string <span class="parameter">$name</span> [, array <span class="parameter">$header</span> ]])
 
 Define a page header with a given name. Named headers can be referenced and set later in the document e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name any header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
+<div class="alert alert-info" role="alert">**Note:** Do not name any header or footer starting with html_   This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 
@@ -34,11 +34,11 @@ This parameter specifies the content of the page header as an array.
 
 <span class="smallblock">DEFAULT</span>: array()
 
-<b>Values</b> in the array
+**Values** in the array
 
 <span class="parameter">content</span>: <span class="smallblock">TEXT STRING</span>
 
-<span class="parameter">font-size</span>: <span class="smallblock">FLOAT</span> font size in <b>pts</b>
+<span class="parameter">font-size</span>: <span class="smallblock">FLOAT</span> font size in **pts**
 
 <span class="parameter">font-style</span>: B|I|BI|<span class="smallblock">BLANK STRING</span>
 

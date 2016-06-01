@@ -15,7 +15,7 @@ permalink: /user-s-guide/fonts-languages/font-names.html
 {% highlight php %}
 <?php
 
-&nbsp;&nbsp;&nbsp; &lt;p style="font-family: 'Trebuchet MS';"&gt;
+    &lt;p style="font-family: 'Trebuchet MS';"&gt;
 {% endhighlight %}
 
 <h3>mPDF font-family name</h3>
@@ -25,19 +25,19 @@ permalink: /user-s-guide/fonts-languages/font-names.html
 {% highlight php %}
 <?php
 
-&nbsp;&nbsp;&nbsp; &lt;p style="font-family: trebuchetms;"&gt;
+    &lt;p style="font-family: trebuchetms;"&gt;
 {% endhighlight %}
 
-<p>Next it will look for a translation in <code>$this-&gt;fonttrans</code> in the <span class="filename">config_fonts.php</span> file. Imagine that we also wished to recognise 'Trebuchet', we would add:</p>
+<p>Next it will look for a translation in `$this->fonttrans` in the <span class="filename">config_fonts.php</span> file. Imagine that we also wished to recognise 'Trebuchet', we would add:</p>
 
 {% highlight php %}
 <?php
 
-$this-&gt;fonttrans = array(
+$this->fonttrans = array(
 
 ...
 
-&nbsp;&nbsp;&nbsp; 'trebuchet' =&gt; 'trebuchetms',
+    'trebuchet' =&gt; 'trebuchetms',
 
 ...
 
@@ -58,21 +58,21 @@ $this-&gt;fonttrans = array(
 {% highlight php %}
 <?php
 
-$this-&gt;fontdata = array(
+$this->fontdata = array(
 
 ...
 
-&nbsp;&nbsp;&nbsp; "trebuchetms" =&gt; array(
+    "trebuchetms" =&gt; array(
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'R' =&gt; "trebuc.ttf",
+        'R' =&gt; "trebuc.ttf",
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'B' =&gt; "trebucbd.ttf",
+        'B' =&gt; "trebucbd.ttf",
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'I' =&gt; "trebucit.ttf",
+        'I' =&gt; "trebucit.ttf",
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 'BI' =&gt; "trebucbi.ttf",
+        'BI' =&gt; "trebucbi.ttf",
 
-&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; ),
+        ),
 
 ...
 
@@ -80,8 +80,8 @@ $this-&gt;fontdata = array(
 {% endhighlight %}
 
 <p>Each font-family must have a Regular ['R'] file defined - the others (['B']old, ['I']talic, ['BI']bold-italic) are optional.</p>
-<p>mPDF will try to locate the font-file. If you have defined <code>_MPDF_SYSTEM_TTFONTS</code> at the top of the <span class="filename">config_fonts.php</span> file, it will first look for the font-file there. This is useful if you are running mPDF on a computer which already has a folder with TTF fonts in (e.g. on Windows)</p>
-<p>If the font-file is not there, or <code>_MPDF_SYSTEM_TTFONTS</code> is not defined, mPDF will look in the folder <span class="filename">/[your_path_to_mpdf]/ttfonts/</span></p>
+<p>mPDF will try to locate the font-file. If you have defined `_MPDF_SYSTEM_TTFONTS` at the top of the <span class="filename">config_fonts.php</span> file, it will first look for the font-file there. This is useful if you are running mPDF on a computer which already has a folder with TTF fonts in (e.g. on Windows)</p>
+<p>If the font-file is not there, or `_MPDF_SYSTEM_TTFONTS` is not defined, mPDF will look in the folder <span class="filename">/[your_path_to_mpdf]/ttfonts/</span></p>
 <p>Note that the font-file names are case-sensitive and can contain capitals.</p>
 </div>
 </div>

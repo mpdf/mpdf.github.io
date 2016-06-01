@@ -12,11 +12,11 @@ SetProtection – Encrypts and sets the PDF document permissions
 
 # Description
 
-void <b>SetProtection</b> ( array <span class="parameter">$permissions</span> [, string <span class="parameter">$user_password</span> [, string <span class="parameter">$owner_password</span> [, integer <span class="parameter">$length</span> ]]])
+void **SetProtection** ( array <span class="parameter">$permissions</span> [, string <span class="parameter">$user_password</span> [, string <span class="parameter">$owner_password</span> [, integer <span class="parameter">$length</span> ]]])
 
 Encrypts and sets the PDF document permissions for the PDF file, together with user and owner passwords.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> A default mPDF document is not encrypted, and grants full permissions to the end-user e.g. copying, printing, modifying.</div>
+<div class="alert alert-info" role="alert">**Note:** A default mPDF document is not encrypted, and grants full permissions to the end-user e.g. copying, printing, modifying.</div>
 
 # Parameters
 
@@ -24,13 +24,13 @@ Encrypts and sets the PDF document permissions for the PDF file, together with u
 
 This parameter is an array which specifies the permissions granted to the end-user.
 
-A blank array should be passed to deny all permissions to the user. The latter 4 permissions were added in mPDF &gt;=5.3&nbsp;
+A blank array should be passed to deny all permissions to the user. The latter 4 permissions were added in mPDF &gt;=5.3 
 
 Using any of these last 4 permissions require 128-bit encryption and will force this mode, regardless of any value set for <span class="parameter">length</span>.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> If 128-bit encryption is used (whether by specifying <span class="parameter">length</span>=128 or by using any of the 4 latter permissions), the use of <span class="parameter">print</span> will only allow low-resolution printing from the document; you must specify <span class="parameter">print-highres</span> to allow full resolution printing.</div>
+<div class="alert alert-info" role="alert">**Note:** If 128-bit encryption is used (whether by specifying <span class="parameter">length</span>=128 or by using any of the 4 latter permissions), the use of <span class="parameter">print</span> will only allow low-resolution printing from the document; you must specify <span class="parameter">print-highres</span> to allow full resolution printing.</div>
 
-<b>Values</b> (case-sensitive)
+**Values** (case-sensitive)
 
 An array including any, all or none of the following. The values included are those permissions allowed:
 
@@ -68,7 +68,7 @@ Specify the bit-length used for encryption. Two values are possible, 40 and 128.
 
 <span class="smallblock">DEFAULT</span>: 40 - use 40-bit encryption
 
-<b>VALUES</b>
+**VALUES**
 
 40
 
@@ -81,7 +81,7 @@ Specify the bit-length used for encryption. Two values are possible, 40 and 128.
 </thead> <tbody>
 <tr>
 <td>2.5</td>
-<td><b> </b><acronym title="Chinese-Japanese-Korean languages">CJK</acronym> files can be encrypted</td>
+<td>** **<acronym title="Chinese-Japanese-Korean languages">CJK</acronym> files can be encrypted</td>
 </tr>
 <tr>
 <td>3.2</td>

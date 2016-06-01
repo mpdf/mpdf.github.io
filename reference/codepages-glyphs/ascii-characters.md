@@ -10,13 +10,13 @@ modification_time: 2015-08-05T12:02:44+00:00
 
 <table class="table"> <tbody>
 <tr>
-<td>&nbsp;</td>
+<td> </td>
 <td>!</td>
 <td>"</td>
 <td>#</td>
 <td>$</td>
 <td>%</td>
-<td>&amp; 
+<td>&amp;
 
 </td>
 <td>'</td>
@@ -117,6 +117,6 @@ modification_time: 2015-08-05T12:02:44+00:00
 <td>|</td>
 <td>}</td>
 <td>~</td>
-<td>&nbsp;</td>
+<td> </td>
 </tr>
 </tbody> </table>

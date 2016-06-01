@@ -9,16 +9,16 @@ modification_time: 2015-08-05T11:59:34+00:00
 The following Open Source fonts are included with mPDF 5:
 
 <ul>
-<li><i>DejaVuSans, DejaVuSansCondensed, DejaVuSansMono, DejaVuSerif, DejaVuSerifCondensed</i></li>
-<li><i>Garuda</i> - Thai (sans-serif)</li>
-<li><i>Norasi</i> - Thai (serif)</li>
-<li><i>XBZar, XBRiyaz</i> - Arabic</li>
+<li>*DejaVuSans, DejaVuSansCondensed, DejaVuSansMono, DejaVuSerif, DejaVuSerifCondensed*</li>
+<li>*Garuda* - Thai (sans-serif)</li>
+<li>*Norasi* - Thai (serif)</li>
+<li>*XBZar, XBRiyaz* - Arabic</li>
 </ul>
 
 ## Coverage of included fonts
 
 <table class="table"> <thead>
-<tr> <th>&nbsp;</th><th>&nbsp;</th>
+<tr> <th> </th><th> </th>
 <td>
 
 DejaVuSans
@@ -118,49 +118,49 @@ Latvian, Lithuanian, Estonian, Greenlandic
 <td>-</td>
 <td>-</td>
 </tr>
-<tr> <th>Arabic</th><th>&nbsp;</th>
+<tr> <th>Arabic</th><th> </th>
 <td>Y</td>
 <td>Y</td>
 <td>-</td>
 <td>-</td>
 <td>Y</td>
 </tr>
-<tr> <th>Persian / Farsi</th><th>&nbsp;</th>
+<tr> <th>Persian / Farsi</th><th> </th>
 <td>Y</td>
 <td>Y</td>
 <td>-</td>
 <td>-</td>
 <td>Y</td>
 </tr>
-<tr> <th>Urdu</th><th>&nbsp;</th>
+<tr> <th>Urdu</th><th> </th>
 <td>[94%]</td>
 <td>[97%]</td>
 <td>-</td>
 <td>-</td>
 <td>Y</td>
 </tr>
-<tr> <th>Pashto</th><th>&nbsp;</th>
+<tr> <th>Pashto</th><th> </th>
 <td>[83%]</td>
 <td>[75%]</td>
 <td>-</td>
 <td>-</td>
 <td>Y</td>
 </tr>
-<tr> <th>Hebrew</th><th>&nbsp;</th>
+<tr> <th>Hebrew</th><th> </th>
 <td>Y</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
 <td>-</td>
 </tr>
-<tr> <th>Thai</th><th>&nbsp;</th>
+<tr> <th>Thai</th><th> </th>
 <td>-</td>
 <td>-</td>
 <td>-</td>
-<td><b>Y</b></td>
+<td>**Y**</td>
 <td>-</td>
 </tr>
-<tr> <th>Vietnamese</th><th>&nbsp;</th>
+<tr> <th>Vietnamese</th><th> </th>
 <td>Y</td>
 <td>[62%]</td>
 <td>[77%]</td>

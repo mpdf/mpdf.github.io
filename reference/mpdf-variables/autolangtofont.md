@@ -13,17 +13,17 @@ modification_time: 2015-08-05T12:01:39+00:00
 
 # Description
 
-boolean <b>autoLangToFont</b>
+boolean **autoLangToFont**
 
-When <span class="smallblock">TRUE</span>, selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code>
+When <span class="smallblock">TRUE</span>, selects the font to use, based on the HTML lang attribute, using configurable values in `config_lang2font.php`
 
 # Values
 
-<span class="parameter">autoLangToFont</span> = <i><span class="smallblock">TRUE</span></i>|<span class="smallblock">FALSE</span>
+<span class="parameter">autoLangToFont</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
-<i><span class="smallblock">TRUE</span></i>: <span class="smallblock">DEFAULT</span> selects the font to use, based on the HTML lang attribute, using configurable values in <code>config_lang2font.php</code>
+*<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> selects the font to use, based on the HTML lang attribute, using configurable values in `config_lang2font.php`
 
 <span class="smallblock">FALSE</span>: Font selection unaffected.
 

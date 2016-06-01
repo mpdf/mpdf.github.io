@@ -17,13 +17,13 @@ Default set in config_fonts.php
 
 Default value: [blank]
 
-Names used are as defined in $this-&gt;fontdata in config_fonts.php
+Names used are as defined in $this->fontdata in config_fonts.php
 
 Use a font like hannomb or sun-extb if available
 
 Example:
 
-$this-&gt;backupSIPFont = 'sun-extb';
+$this->backupSIPFont = 'sun-extb';
 
 </div>
 </div>

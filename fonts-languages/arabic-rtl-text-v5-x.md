@@ -6,7 +6,7 @@ permalink: /fonts-languages/arabic-rtl-text-v5-x.html
 modification_time: 2015-08-05T11:59:34+00:00
 ---
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1</div>
+<div class="alert alert-info" role="alert">**Note:** Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1</div>
 
 ## Document Directionality - RTL versus LTR
 
@@ -47,7 +47,7 @@ or
 div.right { direction: rtl; }
 {% endhighlight %}
 
-Block-level direction <i>may</i> affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
+Block-level direction *may* affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
 
 Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.
 
@@ -85,7 +85,7 @@ Arabic is a complex script requiring processing before output. However any appro
 
 2 fonts are bundled with mPDF: XB Zar and XB Riyaz. These are 2 of a number of fonts available from <a href="http://wiki.irmug.com/index.php/X_Series_2">http://wiki.irmug.com/index.php/X_Series_2</a>.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for Pashto/Sindhi/Urdu/Kurdish, especially for joining characters and added new presentation forms.</div>
+<div class="alert alert-info" role="alert">**Note:** The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for Pashto/Sindhi/Urdu/Kurdish, especially for joining characters and added new presentation forms.</div>
 
 ## Non-unicode characters
 
@@ -119,7 +119,7 @@ It seems that Initial and Medial forms are used in Koranic text.
 
 I have left options encoded in <span class="function">function InitArabic()</span> if you want to alter - to make it double-joining, it also needs to be added to <span class="parameter">$arabPrevLink</span> as "\xd9\x89"
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner, LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.</div>
+<div class="alert alert-info" role="alert">**Note:** mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner, LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.</div>
 
 # See Also
 

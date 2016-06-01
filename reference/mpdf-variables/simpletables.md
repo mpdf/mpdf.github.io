@@ -12,19 +12,19 @@ simpleTables – Disables complex table borders etc. to improve performance
 
 # Description
 
-void <b>simpleTables</b>
+void **simpleTables**
 
 Specify whether to disable complex table borders etc. to improve performance. The border for all table cells will be the same (although separate values can be used for -top, -left etc.). A separate table border may still be specified (if border-collapse is not used).
 
 This may improve performance considerably for large tables, reducing memory use and increasing processing speed by approximately 30%
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.4 using simpleTables also disabled padding, background-images, background-color and rotated text. These were re-introduced with almost no loss of performance.</div>
+<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 4.4 using simpleTables also disabled padding, background-images, background-color and rotated text. These were re-introduced with almost no loss of performance.</div>
 
 # Values
 
-<span class="parameter">simpleTables</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">simpleTables</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE </span>: disable complex table borders etc.
 

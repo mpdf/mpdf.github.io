@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:40+00:00
 
 # Description
 
-string <b>watermark_font</b>
+string **watermark_font**
 
 Specifies the font to use for the watermark on each page. The BOLD style of the font is used by default.
 

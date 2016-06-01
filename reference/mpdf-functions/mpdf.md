@@ -12,7 +12,7 @@ mPDF – Initialise an instance of mPDF class
 
 # Description
 
-class <b>mPDF</b> ([ string <span class="parameter">$mode</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])
+class **mPDF** ([ string <span class="parameter">$mode</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])
 
 Initialise an instance of mPDF class.
 
@@ -24,7 +24,7 @@ This parameter specifies the mode of the new document.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
-<b>Codepage Values</b> (case-insensitive)
+**Codepage Values** (case-insensitive)
 
 <span class="smallblock">BLANK</span>
 
@@ -42,17 +42,17 @@ where ... can be any string. Only language/country codes will have any effect, b
 
 Only some combinations make sense. See <a href="{{ "/fonts-languages/choosing-a-configuration-v5-x.html" | prepend: site.baseurl }}">Choosing a configuration</a> for more details.
 
-<b>Country/Language code values</b> (case-insensitive)
+**Country/Language code values** (case-insensitive)
 
 Country/language codes are defined in <span class="filename">config_cp.php</span>
 
-A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"<i><b>
+A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"***
 
-</b></i>
+***
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> If the <span class="parameter">mode</span> is set by passing a country/language string, this may also set: available fonts, text justification, and directionality <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (as determined by <span class="filename">config_cp.php</span>)</div>
+<div class="alert alert-info" role="alert">**Note:** If the <span class="parameter">mode</span> is set by passing a country/language string, this may also set: available fonts, text justification, and directionality <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (as determined by <span class="filename">config_cp.php</span>)</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a></div>
+<div class="alert alert-info" role="alert">**Note:** There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a></div>
 <ul> </li>
 </ul>
 
@@ -65,7 +65,7 @@ A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"<i><b>
 
 <span class="smallblock">DEFAULT</span>: "A4"
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 A0 - A10, B0 - B10, C0 - C10
 
@@ -89,9 +89,9 @@ If <span class="parameter">format</span> is defined as a string, the final <span
 
 <span class="parameter">default_font_size</span>
 
-Sets the default document font size in <b><i>points</i></b> (pt)
+Sets the default document font size in ***points*** (pt)
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the default value set in <span class="parameter">defaultCSS</span>.
+<span class="smallblock">BLANK</span> or omitted or 0 uses the default value set in <span class="parameter">defaultCSS</span>.
 
 <span class="parameter">default_font</span>
 
@@ -100,7 +100,7 @@ Sets the default document font size in <b><i>points</i></b> (pt)
 
 Sets the default font-family for the new document.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses default value set in <span class="parameter">defaultCSS</span> unless <span class="parameter">codepage</span> has been set to "win-1252". If <span class="parameter">codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. Helvetica, Times, or Courier.
+<span class="smallblock">BLANK</span> or omitted uses default value set in <span class="parameter">defaultCSS</span> unless <span class="parameter">codepage</span> has been set to "win-1252". If <span class="parameter">codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. Helvetica, Times, or Courier.
 
 <span class="parameter">margin_left</span>
 
@@ -120,9 +120,9 @@ All values should be specified as <span class="smallblock">LENGTH</span> in mill
 
 If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values specified will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses the default values.
+<span class="smallblock">BLANK</span> or omitted uses the default values.
 
-<span class="smallblock">DEFAULT</span> <b>Values</b>
+<span class="smallblock">DEFAULT</span> **Values**
 
 <span class="parameter">margin_left</span> 15
 
@@ -145,9 +145,9 @@ This attribute specifies the default page orientation of the new document if <sp
 
 <span class="smallblock">DEFAULT</span>: "P"
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
-<i>P:</i> <span class="smallblock">DEFAULT</span> Portrait
+*P:* <span class="smallblock">DEFAULT</span> Portrait
 
 L: Landscape
 
@@ -221,7 +221,7 @@ $mpdf = new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
 
 # Notes
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
+<div class="alert alert-info" role="alert">**Note:** <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
 
 # See Also
 

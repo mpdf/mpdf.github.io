@@ -12,13 +12,13 @@ CJK line-breaking is implemented in mPDF roughly according to accepted rules.
 
 Configurable variables allow fine control of behaviour:
 
-&nbsp;&nbsp;&nbsp; $this-&gt;CJKforceend = false; // Forces overflowng punctuation to hang outside right margin (used with CJK script)
+    $this->CJKforceend = false; // Forces overflowng punctuation to hang outside right margin (used with CJK script)
 
-&nbsp;&nbsp;&nbsp; $this-&gt;allowCJKorphans = true;&nbsp;&nbsp;&nbsp; // FALSE=always wrap to next line; TRUE=squeeze or overflow
+    $this->allowCJKorphans = true;    // FALSE=always wrap to next line; TRUE=squeeze or overflow
 
-&nbsp;&nbsp;&nbsp; $this-&gt;allowCJKoverflow = false; // FALSE=squeeze; TRUE=overflow (only selected)
+    $this->allowCJKoverflow = false; // FALSE=squeeze; TRUE=overflow (only selected)
 
-IF $this-&gt;allowCJKorphans == true AND $this-&gt;allowCJKoverflow == true AND $this-&gt;CJKforceend == true AND text-align:justify
+IF $this->allowCJKorphans == true AND $this->allowCJKoverflow == true AND $this->CJKforceend == true AND text-align:justify
 
 will force hanging punctuation to hang outside right margin.
 

@@ -10,25 +10,25 @@ modification_time: 2015-08-05T12:02:27+00:00
 
 # Description
 
-boolean <b>showWatermarkText</b>
+boolean **showWatermarkText**
 
 Specifies whether or not to show/print the watermark text on each page. The text for the watermark must be defined using <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a>. The watermark is added to the document at the end of each page.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This superceded TopicIsUnvalidated in mPDF 2.2 as an alias, and is now the preferred form.</div>
+<div class="alert alert-info" role="alert">**Note:** This superceded TopicIsUnvalidated in mPDF 2.2 as an alias, and is now the preferred form.</div>
 
 # Values
 
-<span class="parameter">showWatermarkText</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span>
+<span class="parameter">showWatermarkText</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
 
 If <span class="parameter">showWatermarkText</span> is <span class="smallblock">TRUE</span> or 1 the watermark text will be added to each page of the document.
 
 The value can be changed during the document to turn the watermark on and off on different pages.
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE</span>: Show/print the watermark text
 
-<span class="smallblock"><i>FALSE</i></span>: <span class="smallblock">DEFAULT</span> Do not show/print the watermark text
+<span class="smallblock">*FALSE*</span>: <span class="smallblock">DEFAULT</span> Do not show/print the watermark text
 
 Values of 1 or 0 can also be used
 

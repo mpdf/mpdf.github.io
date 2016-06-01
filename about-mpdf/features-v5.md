@@ -15,7 +15,7 @@ modification_time: 2015-08-05T11:59:20+00:00
 <li>CSS stylesheets</li>
 <li>Word spacing and character spacing for justification</li>
 <li>Nested block-level elements (e.g. P, DIV) including margins, borders, padding, line-height, background colours etc.</li>
-<li>Support (partial)&nbsp;for floating and fixed-position block-elements</li>
+<li>Support (partial) for floating and fixed-position block-elements</li>
 <li>Page layout and orientation</li>
 <li>Text-justification and hyphenation</li>
 <li>Page numbering</li>
@@ -40,7 +40,7 @@ modification_time: 2015-08-05T11:59:20+00:00
 
 mPDF has a number of enhancements over the original FPDF, HTML2FPDF and UPDF scripts:
 
-<b>UTF-8 encoded</b> HTML is accepted as the standard input.
+**UTF-8 encoded** HTML is accepted as the standard input.
 
 <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">Right-to-left languages</a> are supported, with automatic detection of RTL characters within a document. Transposes: tables, lists, text justification and table cell alignment, as well as full text reversal for RTL characters. Automatically detects non-RTL characters and displays these in original order.
 
@@ -50,23 +50,23 @@ A single CSS stylesheet can be used for all pages, with <a href="{{ "/fonts-lang
 
 <a href="{{ "/fonts-languages/character-substitution.html" | prepend: site.baseurl }}">Character substitution</a> can optionally be used to automatically replace any characters that do not exist in the current font.
 
-<a href="{{ "/what-else-can-i-do/text-justification.html" | prepend: site.baseurl }}">Word spacing and character spacing</a> are both used to justify text; works in unicode mode&nbsp;and CJK&nbsp;characters&nbsp;as well.
+<a href="{{ "/what-else-can-i-do/text-justification.html" | prepend: site.baseurl }}">Word spacing and character spacing</a> are both used to justify text; works in unicode mode and CJK characters as well.
 
-<b>Nested block-level elements</b> (e.g. P, DIV) are supported, with comprehensive CSS&nbsp;support e.g.&nbsp;margins, borders, padding, line-height, background colours etc.
+**Nested block-level elements** (e.g. P, DIV) are supported, with comprehensive CSS support e.g. margins, borders, padding, line-height, background colours etc.
 
 <a href="{{ "/css-stylesheets/introduction.html" | prepend: site.baseurl }}">CSS style attributes</a> now fully support font, font-size, color, and background color (for highlighting) plus many more.
 
 <a href="{{ "/tables/tables.html" | prepend: site.baseurl }}">Table</a> cell padding and borders are supported.
 
-<b>Text-indent for 1st line of paragraph</b>, and hanging indents are supported.
+**Text-indent for 1st line of paragraph**, and hanging indents are supported.
 
-<b>List indenting</b> can be defined.
+**List indenting** can be defined.
 
-<a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a> added&nbsp;- PAGEBREAK, COLUMNBREAK, INDEXENTRY
+<a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a> added - PAGEBREAK, COLUMNBREAK, INDEXENTRY
 
 <a href="{{ "/what-else-can-i-do/columns.html" | prepend: site.baseurl }}">Multiple columns</a> can be started and stopped anywhere on the page with column height adjusted (and optionally aligned to justify).
 
-<a href="{{ "/tables/tables.html" | prepend: site.baseurl }}">Tables</a> can be <b>rotated</b>,&nbsp;or <b>autosized</b> -&nbsp;font-size is reduced if required to fit the page. Background colour for TR rows is supported.
+<a href="{{ "/tables/tables.html" | prepend: site.baseurl }}">Tables</a> can be **rotated**, or **autosized** - font-size is reduced if required to fit the page. Background colour for TR rows is supported.
 
 <a href="{{ "/paging/double-sided-documents.html" | prepend: site.baseurl }}">Odd and even paging</a> can be used with inner and outer margins alternated.
 
@@ -76,7 +76,7 @@ A <a href="{{ "/what-else-can-i-do/table-of-contents.html" | prepend: site.baseu
 
 An <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Index</a> can be generated at the end of the document based on custom tags used throughout the HTML code.
 
-<b>Non-breaking space</b> &nbsp; is supported&nbsp;when using fonts that have a character representing chr(160) (not all of them).&nbsp;
+**Non-breaking space**   is supported when using fonts that have a character representing chr(160) (not all of them). 
 
 <a href="{{ "/what-else-can-i-do/watermarks.html" | prepend: site.baseurl }}">Watermarks</a> as text or images can be used e.g. for 'DRAFT', and will appear as a transparency over other elements.
 
@@ -84,7 +84,7 @@ Intelligent <a href="{{ "/what-else-can-i-do/text-justification.html" | prepend:
 
 Automatic hyphenation is optional.
 
-All <b>HTML entities</b> are supported, as well as decimal and hex e.g. &amp;apos;&nbsp;&amp;#8812; or &amp;#x21a4;
+All **HTML entities** are supported, as well as decimal and hex e.g. &amp;apos; &amp;#8812; or &amp;#x21a4;
 
 <a href="{{ "/setting-pdf-file-properties/password-protection.html" | prepend: site.baseurl }}">Password protection</a> can be set for the PDF file.
 

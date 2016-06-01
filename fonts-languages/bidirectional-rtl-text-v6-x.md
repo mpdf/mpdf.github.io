@@ -45,7 +45,7 @@ or
 div.right { direction: rtl; }
 {% endhighlight %}
 
-Block-level direction <i>may</i> affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
+Block-level direction *may* affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
 
 Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.
 
@@ -55,7 +55,7 @@ The default value for text-align is "a nameless value which is dependent on dire
 
 ## Text Bidirectionality
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</div>
+<div class="alert alert-info" role="alert">**Note:** <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</div>
 
 Bi-directional text is supported in mPDF.
 
@@ -165,9 +165,9 @@ Bi-directional text is supported in mPDF.
 <li>&lt;bdi&gt; (HTML5)</li>
 </ul>
 
-3) The CSS property "unicode-bidi" is supported with the following (CSS3) values: normal | embed | isolate | bidi-override | isolate-override | plaintext. 
+3) The CSS property "unicode-bidi" is supported with the following (CSS3) values: normal | embed | isolate | bidi-override | isolate-override | plaintext.
 
-See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w3.org/TR/css3-writing-modes/#unicode-bidi</a> for more details. 
+See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w3.org/TR/css3-writing-modes/#unicode-bidi</a> for more details.
 
 "unicode-bidi" is supported on block level elements as well as in-line elements, but note that:
 

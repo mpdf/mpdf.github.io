@@ -161,11 +161,11 @@ As of Unicode 5.1, The BMP includes the following scripts:
 </ul>
 
 <table class="table"> <tbody>
-<tr> <th>&nbsp; </th> <th> 0</th> <th> 1</th> <th> 2</th> <th> 3</th> <th> 4</th> <th> 5</th> <th> 6</th> <th> 7</th> <th> 8</th> <th> 9</th> <th> A</th> <th> B</th> <th> C</th> <th> D</th> <th> E</th> <th> F</th> </tr>
+<tr> <th>  </th> <th> 0</th> <th> 1</th> <th> 2</th> <th> 3</th> <th> 4</th> <th> 5</th> <th> 6</th> <th> 7</th> <th> 8</th> <th> 9</th> <th> A</th> <th> B</th> <th> C</th> <th> D</th> <th> E</th> <th> F</th> </tr>
 <tr> <th> 00 </th>
-<td colspan="2" class="control">C0&nbsp;Controls</td>
+<td colspan="2" class="control">C0 Controls</td>
 <td colspan="6" class="alloc"><a href="http://www.unicode.org/charts/PDF/U0000.pdf">Basic Latin</a></td>
-<td colspan="2" class="control">C1&nbsp;Controls</td>
+<td colspan="2" class="control">C1 Controls</td>
 <td colspan="6" class="alloc"><a href="http://www.unicode.org/charts/PDF/U0080.pdf">Latin 1 Supplement</a></td>
 </tr>
 <tr> <th> 01 </th>
@@ -772,12 +772,12 @@ As of Unicode 5.1, The BMP includes the following scripts:
 </tr>
 <tr> <th> AA </th>
 <td colspan="6" class="alloc"><a href="http://www.unicode.org/charts/PDF/UAA00.pdf">Cham</a></td>
-<td colspan="2" class="alloc"><a href="http://www.unicode.org/charts/PDF/UAA60.pdf">Mymr&nbsp;ExtA</a></td>
+<td colspan="2" class="alloc"><a href="http://www.unicode.org/charts/PDF/UAA60.pdf">Mymr ExtA</a></td>
 <td colspan="6" class="alloc"><a href="http://www.unicode.org/charts/PDF/UAA80.pdf">Tai Viet</a></td>
 <td colspan="2" class="accpt"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3478.pdf">(Mtei Ext)</a></td>
 </tr>
 <tr> <th> AB </th>
-<td colspan="3" class="accpt"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3572.pdf">(Ethiopic&nbsp;Ext-A)</a></td>
+<td colspan="3" class="accpt"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3572.pdf">(Ethiopic Ext-A)</a></td>
 <td colspan="4" class="prop"><a href="http://std.dkuug.dk/jtc1/sc2/wg2/docs/n3668.pdf">(Warang Citi)</a></td>
 <td class="unalloc">???</td>
 <td class="unalloc">???</td>
@@ -920,103 +920,103 @@ As of Unicode 5.1, The BMP includes the following scripts:
 <td colspan="5" class="alloc"><a href="http://www.unicode.org/charts/PDF/UD7B0.pdf">Hangul Jamo Extended-B</a></td>
 </tr>
 <tr> <th> D8 </th>
-<td colspan="16" class="alloc"><b>High-half zone of UTF-16</b></td>
+<td colspan="16" class="alloc">**High-half zone of UTF-16**</td>
 </tr>
 <tr> <th> D9 </th>
-<td colspan="16" class="alloc"><b>High-half zone of UTF-16</b></td>
+<td colspan="16" class="alloc">**High-half zone of UTF-16**</td>
 </tr>
 <tr> <th> DA </th>
-<td colspan="16" class="alloc"><b>High-half zone of UTF-16</b></td>
+<td colspan="16" class="alloc">**High-half zone of UTF-16**</td>
 </tr>
 <tr> <th> DB </th>
-<td colspan="16" class="alloc"><b>High-half zone of UTF-16</b></td>
+<td colspan="16" class="alloc">**High-half zone of UTF-16**</td>
 </tr>
 <tr> <th> DC </th>
-<td colspan="16" class="alloc"><b>Low-half zone of UTF-16</b></td>
+<td colspan="16" class="alloc">**Low-half zone of UTF-16**</td>
 </tr>
 <tr> <th> DD </th>
-<td colspan="16" class="alloc"><b>Low-half zone of UTF-16</b></td>
+<td colspan="16" class="alloc">**Low-half zone of UTF-16**</td>
 </tr>
 <tr> <th> DE </th>
-<td colspan="16" class="alloc"><b>Low-half zone of UTF-16</b></td>
+<td colspan="16" class="alloc">**Low-half zone of UTF-16**</td>
 </tr>
 <tr> <th> DF </th>
-<td colspan="16" class="alloc"><b>Low-half zone of UTF-16</b></td>
+<td colspan="16" class="alloc">**Low-half zone of UTF-16**</td>
 </tr>
 <tr> <th> E0 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E1 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E2 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E3 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E4 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E5 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E6 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E7 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E8 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> E9 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> EA </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> EB </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> EC </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> ED </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> EE </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> EF </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F0 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F1 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F2 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F3 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F4 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F5 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F6 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F7 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F8 </th>
-<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
+<td colspan="16" class="alloc">**Private Use Zone**</td>
 </tr>
 <tr> <th> F9 </th>
 <td colspan="16" class="alloc"><a href="http://www.unicode.org/charts/PDF/UF900.pdf">CJK Compatibility Ideographs</a></td>

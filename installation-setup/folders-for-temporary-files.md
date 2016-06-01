@@ -10,7 +10,7 @@ mPDF is configured to use <span class="filename">[your_path_to_mpdf]/tmp/</span>
 
 ## Images
 
-If you wish to use a different folder for temporary files, you should define the constant <code>_MPDF_TEMP_PATH</code> before including the <span class="filename">mpdf.php</span> file e.g.
+If you wish to use a different folder for temporary files, you should define the constant `_MPDF_TEMP_PATH` before including the <span class="filename">mpdf.php</span> file e.g.
 
 {% highlight php %}
 <?php
@@ -27,7 +27,7 @@ Images will still be processed without write permissions to this folder, but at 
 
 ## Fonts
 
-If you wish to use a different folder for temporary files, you should define the constant <code>_MPDF_TTFONTDATAPATH</code> before including the <span class="filename">mpdf.php</span> file
+If you wish to use a different folder for temporary files, you should define the constant `_MPDF_TTFONTDATAPATH` before including the <span class="filename">mpdf.php</span> file
 
 Fonts can still be used and embedded without write permissions to this folder, but at some cost in processing time and memory usage.
 

@@ -44,12 +44,12 @@ or
 div.right { direction: rtl; }
 {% endhighlight %}
 
-<p>Block-level direction <i>may</i> affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.</p>
+<p>Block-level direction *may* affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.</p>
 <p>Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.</p>
 <h3>Text alignment</h3>
 <p>The default value for text-align is "a nameless value which is dependent on direction". However, once text-align is specified, it is respected and inherited by all descendants.</p>
 <h3>Text Bidirectionality</h3>
-<p class="manual_block"><b>Note:</b> <a href="/user-s-guide/fonts-languages/opentype-layout-otl.html">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</p>
+<p class="manual_block">**Note:** <a href="/user-s-guide/fonts-languages/opentype-layout-otl.html">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</p>
 <p>Bi-directional text is supported in mPDF.</p>
 <p>1) The following Unicode characters are supported, and can be inserted directly in the text as HTML entities:</p>
 <table class="bpmTopic"> <tbody>
@@ -153,9 +153,9 @@ div.right { direction: rtl; }
 <li>&lt;bdo&gt; (NB the "dir" attribute is mandatory on &lt;bdo&gt;)</li>
 <li>&lt;bdi&gt; (HTML5)</li>
 </ul>
-<p>3) The CSS property "unicode-bidi" is supported with the following (CSS3) values: normal | embed | isolate | bidi-override | isolate-override | plaintext. 
+<p>3) The CSS property "unicode-bidi" is supported with the following (CSS3) values: normal | embed | isolate | bidi-override | isolate-override | plaintext.
 
-See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w3.org/TR/css3-writing-modes/#unicode-bidi</a> for more details. 
+See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w3.org/TR/css3-writing-modes/#unicode-bidi</a> for more details.
 
 "unicode-bidi" is supported on block level elements as well as in-line elements, but note that:</p>
 <ul>

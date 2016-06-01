@@ -10,19 +10,19 @@ modification_time: 2015-08-05T12:01:58+00:00
 
 # Description
 
-boolean <b>h2bookmarks</b>
+boolean **h2bookmarks**
 
-When a valid array is set, mPDF will automatically generate PDF Bookmarks from all heading elements (H1 - H6) written to the document using <code>WriteHTML()</code>.<code>&nbsp;</code>
+When a valid array is set, mPDF will automatically generate PDF Bookmarks from all heading elements (H1 - H6) written to the document using `WriteHTML()`.` `
 
 Any number of levels may be specified, but the first level should be 0 and other levels should be consecutive.
 
 # Values
 
-<span class="parameter">h2bookmarks</span><span class="smallblock"> 
+<span class="parameter">h2bookmarks</span><span class="smallblock">
 
 </span>
 
-<b>Values</b>
+**Values**
 
 An array should be specified mapping the headings to the required level of Bookmarks
 

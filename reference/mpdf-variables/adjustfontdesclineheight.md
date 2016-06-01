@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:01:32+00:00
 
 # Description
 
-void <b>adjustFontDescLineheight</b>
+void **adjustFontDescLineheight**
 
 Specify a factor by which to multiply the font metrics, when determining the text lineheight. When set to 1, the text linehieght will equal the values set in the font for Ascent + Descent.
 
@@ -20,7 +20,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 <span class="parameter">adjustFontDescLineheight</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">FLOAT </span>: use the when font metrics are being used to set the text line-height. Usual value between 1 and 1.2
 

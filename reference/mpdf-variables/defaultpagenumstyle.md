@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:01:54+00:00
 
 # Description
 
-void <b>defaultPageNumStyle</b>
+void **defaultPageNumStyle**
 
 Specifies a default page number style to use from the start of the document.
 
@@ -20,7 +20,7 @@ For more information, see <a href="{{ "/paging/page-numbering.html" | prepend: s
 
 <span class="parameter">defaultPageNumStyle</span>
 
-<b>Values</b>
+**Values**
 
 (Uses the same values as for list-style-type)
 

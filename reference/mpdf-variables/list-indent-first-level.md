@@ -8,7 +8,7 @@ modification_time: 2015-08-05T12:02:09+00:00
 
 # Description
 
-void <b>list_indent_first_level</b>
+void **list_indent_first_level**
 
 Specify whether to indent the first level of a list. From mPDF &gt;= 6.0, this will only apply if you are using the "mpdf" list mode.
 
@@ -16,9 +16,9 @@ For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend
 
 # Values
 
-<span class="parameter">list_indent_first_level= <i><span class="smallblock">1</span></i>|0</span>
+<span class="parameter">list_indent_first_level= *<span class="smallblock">1</span>*|0</span>
 
-<b>Values</b>
+**Values**
 
 1: <span class="smallblock">DEFAULT</span> - Indent the first level of a list (when using the "mpdf" list mode)
 

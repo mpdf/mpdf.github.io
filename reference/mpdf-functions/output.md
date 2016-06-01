@@ -12,7 +12,7 @@ Output – Finalise the document and send it to specified destination
 
 # Description
 
-string <b>Output</b> ([ string <span class="parameter">$filename</span> , string <span class="parameter">$dest</span> ])
+string **Output** ([ string <span class="parameter">$filename</span> , string <span class="parameter">$dest</span> ])
 
 Send the document to a given destination: browser, file or string. In the case of browser, the plug-in may be used (if present) or a download ("Save as" dialog box) may be forced.
 
@@ -38,7 +38,7 @@ F: save to a local file with the name given by <span class="parameter">filename<
 
 S: return the document as a string. <span class="parameter">filename</span> is ignored.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> You can use the 'S' option to e-mail a PDF file - see example under&nbsp;<a href="{{ "/real-life-examples/e-mail-a-pdf-file.html" | prepend: site.baseurl }}">E-mail a PDF file</a>.</div>
+<div class="alert alert-info" role="alert">**Note:** You can use the 'S' option to e-mail a PDF file - see example under <a href="{{ "/real-life-examples/e-mail-a-pdf-file.html" | prepend: site.baseurl }}">E-mail a PDF file</a>.</div>
 
 # Examples
 

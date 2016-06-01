@@ -6,7 +6,7 @@ permalink: /reference/codepages-glyphs/demo-pangrams.html
 modification_time: 2015-08-05T12:02:54+00:00
 ---
 
-Pangrams - (from Wikipedia)&nbsp;
+Pangrams - (from Wikipedia) 
 
 ## English
 
@@ -100,25 +100,25 @@ D'ḟuascail Íosa Úrṁac na hÓiġe Beannaiṫe pór Éaḃa agus Áḋaiṁ
 
 ## Japanese
 
-<i>Iroha Uta</i>
+*Iroha Uta*
 
 いろはにほへと　ちりぬるを　わかよたれそ　つねならむ　うゐのおくやま　けふこえて　あさきゆめみし　ゑひもせす
 
 色は匂へど　散りぬるを　我が世誰ぞ　常ならむ　有為の奥山　今日越えて　浅き夢見じ　酔ひもせず（ん）
 
-<i>Tori Naku Uta</i>
+*Tori Naku Uta*
 
 とりなくこゑす　ゆめさませ　みよあけわたる　ひんかしを　そらいろはえて　おきつへに　ほふねむれゐぬ　もやのうち
 
 鳥啼く声す　夢覚ませ　見よ明け渡る　東を　空色栄えて　沖つ辺に　帆船群れゐぬ　靄の中
 
-<i>Ametsuchi No Uta</i>
+*Ametsuchi No Uta*
 
 あめ つち ほし そら / やま かは みね たに / くも きり むろ こけ / ひと いぬ うへ すゑ / ゆわ さる おふ せよ / えのえ*を なれ ゐて
 
 天 地 星 空 / 山 川 峰 谷 / 雲 霧 室 苔 / 人 犬 上 末 / 硫黄 猿 生ふ 為よ / 榎の 枝を 馴れ 居て
 
-<i>Taini no Uta</i>
+*Taini no Uta*
 
 たゐにいて　なつむわれをそ　きみめすと　あさりおひゆく　やましろの　うちゑへるこら　もはほせよ　えふねかけぬ
 

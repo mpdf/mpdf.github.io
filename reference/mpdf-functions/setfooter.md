@@ -12,11 +12,11 @@ SetFooter – Sets a page header
 
 # Description
 
-void <b>SetFooter</b> ([ mixed <span class="parameter">$footer</span> [, string <span class="parameter">$side</span> ]])
+void **SetFooter** ([ mixed <span class="parameter">$footer</span> [, string <span class="parameter">$side</span> ]])
 
 Set a page footer.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 
@@ -26,7 +26,7 @@ This parameter specifies the content of the page footer. It can accept a string 
 
 <span class="smallblock">DEFAULT</span>: array()
 
-<b>Values</b>
+**Values**
 
 A simple text string is set as content for the <span class="smallblock">RIGHT</span> margin. If <span class="smallblock">DOUBLE-SIDED</span> document, this is mirrored on <span class="smallblock">EVEN</span> pages i.e. <span class="smallblock">LEFT</span> margin.
 
@@ -34,13 +34,13 @@ A text string containing 2 characters '|' - will be split into three strings and
 
 If <span class="smallblock">DOUBLE-SIDED</span> document, this is mirrored on <span class="smallblock">EVEN</span> pages i.e. right|centre|left.
 
-An array can be in two forms. The first form includes information for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> footers, and is the expected form if&nbsp; <span class="parameter">side</span> = <span class="smallblock">BLANK</span>. 
+An array can be in two forms. The first form includes information for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> footers, and is the expected form if  <span class="parameter">side</span> = <span class="smallblock">BLANK</span>.
 
-<b>Values</b>
+**Values**
 
 <span class="parameter">content</span>: <span class="smallblock">TEXT STRING</span>
 
-<span class="parameter">font-size</span>: <span class="smallblock">FLOAT</span> font size in <b>pts</b>
+<span class="parameter">font-size</span>: <span class="smallblock">FLOAT</span> font size in **pts**
 
 <span class="parameter">font-style</span>: B|I|BI|<span class="smallblock">BLANK STRING</span>
 
@@ -106,7 +106,7 @@ $footer = array (
 );
 {% endhighlight %}
 
-The second form includes information for either <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> footers, and must be accompanied by a valid value for <span class="parameter">side</span> =&nbsp;O|E
+The second form includes information for either <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> footers, and must be accompanied by a valid value for <span class="parameter">side</span> = O|E
 
 {% highlight php %}
 $footer = array (
@@ -164,7 +164,7 @@ Specify whether to set the footer for <span class="smallblock">ODD</span> or <sp
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
-<b>Values</b> (case-sensitive)
+**Values** (case-sensitive)
 
 O - set the footer for <span class="smallblock">ODD</span> pages
 

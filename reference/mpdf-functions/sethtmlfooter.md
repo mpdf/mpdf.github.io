@@ -12,7 +12,7 @@ SetHTMLFooter – Sets an HTML page footer
 
 # Description
 
-void <b>SetHTMLFooter</b> ( string <span class="parameter">$html</span> [, string <span class="parameter">$side</span> ])
+void **SetHTMLFooter** ( string <span class="parameter">$html</span> [, string <span class="parameter">$side</span> ])
 
 Set an HTML page footer.
 
@@ -30,7 +30,7 @@ Specify whether to set the footer for <span class="smallblock">ODD</span> or <sp
 
 <span class="smallblock">DEFAULT</span>: 'O'
 
-<b>Values</b> (case-sensitive)
+**Values** (case-sensitive)
 
 O - set the footer for <span class="smallblock">ODD</span> pages
 
@@ -38,7 +38,7 @@ E - set the footer for <span class="smallblock">EVEN</span> pages
 
 <span class="smallblock">BLANK</span> - set the footer for <span class="smallblock">ODD</span> pages
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; <b>SetHTMLHeader()</b> and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">side</span> - set <span class="smallblock">ODD</span> page header/footer only as default</div>
+<div class="alert alert-info" role="alert">**Note:** Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; **SetHTMLHeader()** and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">side</span> - set <span class="smallblock">ODD</span> page header/footer only as default</div>
 
 # Changelog
 

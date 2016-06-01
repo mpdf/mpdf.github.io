@@ -10,11 +10,11 @@ Bookmarks
 
 PDF document Bookmarks can be set in two ways:
 
-&lt;bookmark content="Buffalo" level="0"&nbsp;/&gt;&nbsp;&nbsp; or
+&lt;bookmark content="Buffalo" level="0" /&gt;   or
 
 $mpdf-&gt;Bookmark("Buffalo",0);
 
-<b>Bookmark</b>(<b>string</b>&nbsp;content[, <b>integer</b>&nbsp;level])
+**Bookmark**(**string** content[, **integer** level])
 
 <ul>
 <li>content

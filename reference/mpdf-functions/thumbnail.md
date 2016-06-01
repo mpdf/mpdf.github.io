@@ -12,7 +12,7 @@ Thumbnail – Create thumbnails of an external PDF file and insert in current do
 
 # Description
 
-void <b>Thumbnail</b> ( string <span class="parameter">$file</span> [, integer <span class="parameter">$numberperrow</span> [, float <span class="parameter">$spacing</span> ]])
+void **Thumbnail** ( string <span class="parameter">$file</span> [, integer <span class="parameter">$numberperrow</span> [, float <span class="parameter">$spacing</span> ]])
 
 Create thumbnails of an external PDF file and insert in current document.
 
@@ -20,11 +20,11 @@ Create thumbnails of an external PDF file and insert in current document.
 
 <span class="parameter">file</span>
 
-This parameter specifies the source PDF file to import.&nbsp; <span class="parameter">file</span> should be a relative path to a local file.
+This parameter specifies the source PDF file to import.  <span class="parameter">file</span> should be a relative path to a local file.
 
 <span class="parameter">numberperrow</span>
 
-<span class="parameter">number</span> specifies the number of thumbnails to print in each <b>row</b>.
+<span class="parameter">number</span> specifies the number of thumbnails to print in each **row**.
 
 <span class="smallblock">DEFAULT</span>: 3
 

@@ -43,7 +43,7 @@ Currently the following character encodings are supported by the mbstring module
 <li>KOI8-R</li>
 </ul>
 
-For the module to be enabled, php must have been compiled with <i>--enable-mbstring</i>&nbsp;<a href="phpinfo.html" target="_blank"></a>
+For the module to be enabled, php must have been compiled with *--enable-mbstring* <a href="phpinfo.html" target="_blank"></a>
 
 See <a href="http://uk.php.net/manual/en/ref.mbstring.php">http://uk.php.net/manual/en/ref.mbstring.php</a>
 

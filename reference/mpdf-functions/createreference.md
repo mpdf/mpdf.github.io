@@ -12,9 +12,9 @@ CreateRefence — Generate an Index - DEPRACATED / Removed in mPDF v6.0
 
 # Description
 
-void <b>CreateReference</b> ( )
+void **CreateReference** ( )
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <b>CreateReference()</b> is now depracated in favour of the better-named <a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a>.&nbsp;</div>
+<div class="alert alert-info" role="alert">**Note:** **CreateReference()** is now depracated in favour of the better-named <a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a>. </div>
 
 # Changelog
 

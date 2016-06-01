@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:11+00:00
 
 # Description
 
-void <b>list_symbol_size</b>
+void **list_symbol_size**
 
 Define the size of a list marker, when using "bullet" markers i.e. disc/circle/square.
 
@@ -20,7 +20,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend
 
 <span class="parameter">list_symbol_size</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">LENGTH</span>: Any valid CSS length value is permitted e.g. "10pt" or "3em"
 

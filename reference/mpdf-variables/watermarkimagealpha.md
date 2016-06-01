@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:40+00:00
 
 # Description
 
-string <b>watermarkTextAlpha</b>
+string **watermarkTextAlpha**
 
 Specifies the transparency (alpha value) to use for the watermark text on each page.
 

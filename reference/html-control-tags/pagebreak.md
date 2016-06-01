@@ -12,7 +12,7 @@ pagebreak — Add a new page
 
 # Description
 
-&lt;<b>pagebreak</b> [&nbsp;<span class="parameter">orientation</span> ] [&nbsp;<span class="parameter">type</span> ] [&nbsp;<span class="parameter">resetpagenum</span> ] [&nbsp;<span class="parameter">pagenumstyle</span> ] [&nbsp;<span class="parameter">suppress</span> ] 
+&lt;**pagebreak** [ <span class="parameter">orientation</span> ] [ <span class="parameter">type</span> ] [ <span class="parameter">resetpagenum</span> ] [ <span class="parameter">pagenumstyle</span> ] [ <span class="parameter">suppress</span> ]
 
 [ <span class="parameter">margin-left</span> ] [ <span class="parameter">margin-right</span> ] [ <span class="parameter">margin-top</span> ] [ <span class="parameter">margin-bottom</span> ] [ <span class="parameter">margin-header</span> ] [ <span class="parameter">margin-footer</span> ]
 
@@ -26,13 +26,13 @@ Number of pages added:
 
 <table class="table"> <tbody>
 <tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
+<td> </td>
+<td> </td>
 <td colspan="2"><span class="smallblock">DOUBLE-SIDED</span></td>
 </tr>
 <tr>
 <td><span class="parameter">type</span></td>
-<td><span class="smallblock">SINGLE-SIDED</span> 
+<td><span class="smallblock">SINGLE-SIDED</span>
 
 </td>
 <td>Currently
@@ -74,11 +74,11 @@ Number of pages added:
 </tr>
 </tbody> </table>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
+<div class="alert alert-info" role="alert">**Note:** If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> &lt;newpage&gt; and &lt;page_break&gt; are synonymous. &lt;pagebreak&gt; is the preferred form.</div>
+<div class="alert alert-info" role="alert">**Note:** &lt;newpage&gt; and &lt;page_break&gt; are synonymous. &lt;pagebreak&gt; is the preferred form.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 
 # Attributes
 
@@ -88,28 +88,28 @@ This attribute specifies the orientation of the new page.
 
 <span class="smallblock">BLANK</span> or omitted leaves the current orientation unchanged
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
-L <i>or</i> landscape: Landscape
+L *or* landscape: Landscape
 
-P <i>or</i> portrait:&nbsp;Portrait
+P *or* portrait: Portrait
 
 <span class="parameter">type</span> = E|O|even|odd|next-odd|next-even
 
 <ul> </li>
 </ul>
 
-If <span class="parameter">type</span> is specified when writiing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, the page-break is conditional; a new page will only be added if necessary to meet the specified condition.&nbsp;
+If <span class="parameter">type</span> is specified when writiing a <span class="smallblock">DOUBLE-SIDED</span> document, the page-break is conditional; a new page will only be added if necessary to meet the specified condition. 
 
-If&nbsp;not writing a&nbsp;<span class="smallblock">DOUBLE-SIDED</span> document, a page-break <span class="parameter">type</span>="E" will be ignored, whilst a page-break <span class="parameter">type</span>="O" will always force a new page.
+If not writing a <span class="smallblock">DOUBLE-SIDED</span> document, a page-break <span class="parameter">type</span>="E" will be ignored, whilst a page-break <span class="parameter">type</span>="O" will always force a new page.
 
 <span class="smallblock">BLANK</span> or omitted will force a new page unconditionally.
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
-O <i>or</i> odd: Add a new page if required to make current page an&nbsp;<span class="smallblock">ODD</span>&nbsp;one.
+O *or* odd: Add a new page if required to make current page an <span class="smallblock">ODD</span> one.
 
-E <i>or</i> even: Add a new page if required to make current page an&nbsp;<span class="smallblock">EVEN</span>&nbsp;one. 
+E *or* even: Add a new page if required to make current page an <span class="smallblock">EVEN</span> one.
 
 NEXT-ODD: Add one or two pages as required to make the current page <span class="smallblock">ODD</span>.
 
@@ -119,7 +119,7 @@ NEXT-EVEN: Add one or two pages as required to make the current page <span class
 
 Sets/resets the document page number to <span class="parameter">resetpagenum</span> starting on the new page. (The value must be a positive integer).
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the current&nbsp;page number sequence&nbsp;unchanged.
+<span class="smallblock">BLANK</span> or omitted or 0 leaves the current page number sequence unchanged.
 
 <span class="parameter">pagenumstyle</span> = 1|A|a|I|i|[+ any value supported for list-style-type]
 
@@ -128,9 +128,9 @@ Sets/resets the document page number to <span class="parameter">resetpagenum</sp
 
 Sets/resets the page numbering style (values as for cf. <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">lists</a>)
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;page number&nbsp;style&nbsp;unchanged.
+<span class="smallblock">BLANK</span> or omitted leaves the current page number style unchanged.
 
-<b>Values</b> (case-sensitive)
+**Values** (case-sensitive)
 
 1: Decimal - 1,2,3,4...
 
@@ -149,13 +149,13 @@ i: Roman lowercase - i, ii, iii, iv...
 
 <span class="parameter">suppress</span>=on will suppress document page numbers from the new page onwards (until <span class="parameter">suppress</span>=off is used)
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current&nbsp;condition unchanged.
+<span class="smallblock">BLANK</span> or omitted leaves the current condition unchanged.
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
-1 <i>or</i> on: Suppress (hide) page numbers from the new page forwards.
+1 *or* on: Suppress (hide) page numbers from the new page forwards.
 
-0 <i>or</i> off: Show page numbers from the new page forwards.
+0 *or* off: Show page numbers from the new page forwards.
 
 <span class="parameter">margin-left</span>
 
@@ -175,7 +175,7 @@ All values should be specified as <span class="smallblock">LENGTH</span> in any 
 
 If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the current margin unchanged. NB "0" (zero) will set the margin to zero.
+<span class="smallblock">BLANK</span> or omitted leaves the current margin unchanged. NB "0" (zero) will set the margin to zero.
 
 <span class="parameter">odd-header-name</span>
 
@@ -189,9 +189,9 @@ Selects a header or footer by name to use from the new page forwards. The header
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted leaves the header/footer unchanged. NB "" will not unset the header. Use <span class="parameter">odd-header-value</span> to turn the header off.
+<span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB "" will not unset the header. Use <span class="parameter">odd-header-value</span> to turn the header off.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
+<div class="alert alert-info" role="alert">**Note:** You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
 
 <span class="parameter">odd-header-value</span>
 
@@ -205,19 +205,19 @@ Specify whether to show or hide the named header or footer from the new page for
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 leaves the header/footer state unchanged.
+<span class="smallblock">BLANK</span> or omitted or 0 leaves the header/footer state unchanged.
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
-1 <i>or</i> on: Start using the selected header/footer from the new page onwards.
+1 *or* on: Start using the selected header/footer from the new page onwards.
 
--1 <i>or</i> off: Stop using the selected header from the new page onwards.
+-1 *or* off: Stop using the selected header from the new page onwards.
 
 <span class="parameter">page-selector</span>
 
 Select a named CSS @page.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or leaves the CSS page unchanged.
+<span class="smallblock">BLANK</span> or omitted or leaves the CSS page unchanged.
 
 See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information
 
@@ -227,7 +227,7 @@ See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @pag
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 A0 - A10, B0 - B10, C0 - C10
 
@@ -253,7 +253,7 @@ All of the pre-defined values can be suffixed with "-L" to force a Landscape pag
 
 <span class="parameter">clonebycss</span> - open elements which have the (custom) CSS property "box-decoration-break" set to "clone" are independently wrapped with their border and padding
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted - default page break type is used - as specified by <code>defaultPagebreakType</code>
+<span class="smallblock">BLANK</span> or omitted - default page break type is used - as specified by `defaultPagebreakType`
 
 # Changelog
 
@@ -266,13 +266,13 @@ All of the pre-defined values can be suffixed with "-L" to force a Landscape pag
 
 Values NEXT-ODD and NEXT-EVEN for <span class="parameter">type</span> were added.
 
-Parameters <span class="parameter">resetpagenum</span> , <span class="parameter">pagenumstyle</span> and <span class="parameter">suppress</span> were added.&nbsp;
+Parameters <span class="parameter">resetpagenum</span> , <span class="parameter">pagenumstyle</span> and <span class="parameter">suppress</span> were added. 
 
 </td>
 </tr>
 <tr>
 <td>2.0</td>
-<td>Parameters <span class="parameter">margin-left</span> , <span class="parameter">margin-right</span> , <span class="parameter">margin-top</span> , <span class="parameter">margin-bottom</span> , <span class="parameter">margin-header</span> , <span class="parameter">margin-footer</span> , <span class="parameter">odd-header-name</span> , <span class="parameter">odd-header-value</span> , <span class="parameter">even-header-name</span> , <span class="parameter">even-header-value</span> , <span class="parameter">odd-footer-name</span> , <span class="parameter">odd-footer-value</span> , <span class="parameter">even-footer-name</span> , <span class="parameter">even-footer-value</span>&nbsp; were added.
+<td>Parameters <span class="parameter">margin-left</span> , <span class="parameter">margin-right</span> , <span class="parameter">margin-top</span> , <span class="parameter">margin-bottom</span> , <span class="parameter">margin-header</span> , <span class="parameter">margin-footer</span> , <span class="parameter">odd-header-name</span> , <span class="parameter">odd-header-value</span> , <span class="parameter">even-header-name</span> , <span class="parameter">even-header-value</span> , <span class="parameter">odd-footer-name</span> , <span class="parameter">odd-footer-value</span> , <span class="parameter">even-footer-name</span> , <span class="parameter">even-footer-value</span>  were added.
 
 </td>
 </tr>
@@ -346,7 +346,7 @@ Example #3 - Changing headers/footers
 
 # Notes
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <b>pagebreak</b> can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
+<div class="alert alert-info" role="alert">**Note:** **pagebreak** can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
 
 # See Also
 

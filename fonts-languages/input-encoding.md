@@ -18,7 +18,7 @@ $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
 $mpdf->charset_in='windows-1252';
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="parameter">charset_in</span> requires codes recognised by the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> i.e. windows-1252 not win-1252</div>
+<div class="alert alert-info" role="alert">**Note:** <span class="parameter">charset_in</span> requires codes recognised by the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> i.e. windows-1252 not win-1252</div>
 
 If <span class="parameter">allow_charset_conversion</span> is <span class="smallblock">TRUE</span> mPDF will also read the charset from the HTML header if present e.g.
 
@@ -29,9 +29,9 @@ If <span class="parameter">allow_charset_conversion</span> is <span class="small
 Alternatively, you could convert the html to utf-8 encoding before passing it to mPDF, using any one of the PHP functions:
 
 <ul>
-<li><code>utf8_encode($ansi_encoded_html)</code> // only converts <span class="dc-title">ISO-8859-1 to UTF-8</span></li>
-<li><code>iconv('windows-1252', 'UTF-8', $ansi_encoded_html)</code></li>
-<li><code>mb_convert_encoding($ansi_encoded_html, 'UTF-8', 'windows-1252') </code></li>
+<li>`utf8_encode($ansi_encoded_html)` // only converts <span class="dc-title">ISO-8859-1 to UTF-8</span></li>
+<li>`iconv('windows-1252', 'UTF-8', $ansi_encoded_html)`</li>
+<li>`mb_convert_encoding($ansi_encoded_html, 'UTF-8', 'windows-1252') `</li>
 </ul>
 
 Note the different order of the parameters, and the different codepage names used by the different functions. The codepage names recongnised vary from platform to platform, and your PHP configuration.

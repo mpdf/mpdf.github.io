@@ -12,7 +12,7 @@ AliasNbPageGroups – Defines the placeholder used to insert total page number i
 
 # Description
 
-void <b>AliasNbPageGroups</b> ( string <span class="parameter">$text</span> )
+void **AliasNbPageGroups** ( string <span class="parameter">$text</span> )
 
 Set the value for the variable string <a href="{{ "/reference/mpdf-variables/aliasnbpggp.html" | prepend: site.baseurl }}">aliasNbPgGp</a> which is used as a placeholder used to insert total page number into the document. If you have reset the page numbering with <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; the total number of pages in the current page group will be used (up to where the numbering is reset) rather the total number of pages in the whole document.
 
@@ -63,7 +63,7 @@ $mpdf->aliasNbPgGp = '[pagetotal]';
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a>&nbsp;</li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a> </li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/aliasnbpagegroups.html" | prepend: site.baseurl }}">AliasNbPages()</a> - Sets the placeholder alias for the total number of pages in the document
 
 </li>

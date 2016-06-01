@@ -30,7 +30,7 @@ $mpdf->Output();
 
 # Notes
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. <code>define('_MPDF_PATH','../')</code>. From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
+<div class="alert alert-info" role="alert">**Note:** <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. `define('_MPDF_PATH','../')`. From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
 
-For details and options for the Output command, see&nbsp;<a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a>
+For details and options for the Output command, see <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a>
 

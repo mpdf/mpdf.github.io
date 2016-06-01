@@ -10,9 +10,9 @@ modification_time: 2015-08-05T12:02:36+00:00
 
 # Description
 
-boolean <b>useFixedNormalLineHeight</b>
+boolean **useFixedNormalLineHeight**
 
-Specify whether to use a fixed value for the line-height of text, when CSS property line-height is set to <code>normal</code> (default).
+Specify whether to use a fixed value for the line-height of text, when CSS property line-height is set to `normal` (default).
 
 For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a>.
 
@@ -20,11 +20,11 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 <span class="parameter">useFixedNormalLineHeight= <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
 
-<b>Values</b>
+**Values**
 
-<i><span class="smallblock">FALSE</span></i>: <span class="smallblock">DEFAULT</span> use the font metrics to determine the line-height of text, when CSS property line-height is set to <code>normal</code> (default).
+*<span class="smallblock">FALSE</span>*: <span class="smallblock">DEFAULT</span> use the font metrics to determine the line-height of text, when CSS property line-height is set to `normal` (default).
 
-<span class="smallblock">TRUE</span>: use a fixed value for the line-height of text, when CSS property line-height is set to <code>normal</code> (default).
+<span class="smallblock">TRUE</span>: use a fixed value for the line-height of text, when CSS property line-height is set to `normal` (default).
 
 # Changelog
 

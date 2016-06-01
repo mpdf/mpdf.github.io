@@ -12,11 +12,11 @@ SetImportUse – Enable the use of imported PDF files or templates
 
 # Description
 
-void <b>SetImportUse</b> ( )
+void **SetImportUse** ( )
 
 Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several functions allowing you to import PDF files into the document you are writing, and using templates.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use SetImportUse() to enable them.</div>
+<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated into the main mpdf.php file, but you must use SetImportUse() to enable them.</div>
 
 # Changelog
 

@@ -12,11 +12,11 @@ SetFooterByName – Sets a page footer by a given name
 
 # Description
 
-void <b>SetFooterByName</b> ( string <span class="parameter">$name</span> [, string <span class="parameter">$side</span> ])
+void **SetFooterByName** ( string <span class="parameter">$name</span> [, string <span class="parameter">$side</span> ])
 
 Sets a page footer that has previously been defined by name.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
 
 # Parameters
 
@@ -30,7 +30,7 @@ Specify whether to set the footer for <span class="smallblock">ODD</span> or <sp
 
 <span class="smallblock">DEFAULT</span>: 'O'
 
-<b>Values</b> (case-sensitive)
+**Values** (case-sensitive)
 
 O - set the footer for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 

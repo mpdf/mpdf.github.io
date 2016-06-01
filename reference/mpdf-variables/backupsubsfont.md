@@ -18,11 +18,11 @@ Only relevant when using subsets (otherwise would add very large file), and does
 
 More than 1 font can be specified but each will add to the processing time of the script
 
-Names used are as defined in $this-&gt;fontdata in config_fonts.php
+Names used are as defined in $this->fontdata in config_fonts.php
 
 Examples:
 
-$this-&gt;backupSubsFont = array('dejavusanscondensed','arialunicodems','sun-exta');&nbsp;&nbsp;&nbsp; // this will recognise most scripts
+$this->backupSubsFont = array('dejavusanscondensed','arialunicodems','sun-exta');    // this will recognise most scripts
 
-$this-&gt;backupSubsFont = array('dejavusanscondensed','arialunicodems');&nbsp;&nbsp;&nbsp; // good default - REQUIRES Arial Unicode MS
+$this->backupSubsFont = array('dejavusanscondensed','arialunicodems');    // good default - REQUIRES Arial Unicode MS
 

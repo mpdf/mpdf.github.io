@@ -59,7 +59,7 @@ $mpdf = new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a> - mPDF class constructor&nbsp;</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a> - mPDF class constructor </li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page</li>
 </ul>
 

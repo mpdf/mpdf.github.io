@@ -17,7 +17,7 @@ permalink: /user-s-guide/configuration/configuration-files-v6-x.html
 </tr>
 </thead> <tbody>
 <tr>
-<td><span class="filename">config.php</span> 
+<td><span class="filename">config.php</span>
 
 </td>
 <td>
@@ -31,7 +31,7 @@ permalink: /user-s-guide/configuration/configuration-files-v6-x.html
 </tr>
 <tr>
 <td><span class="filename"><span class="filename">config_lang2fonts.php </span></span></td>
-<td>Sets the options used for which fonts to use, when the text is defined by the <code>lang</code> attribute.</td>
+<td>Sets the options used for which fonts to use, when the text is defined by the `lang` attribute.</td>
 </tr>
 <tr>
 <td><span class="filename">config_script2lang.php</span>
@@ -42,7 +42,7 @@ permalink: /user-s-guide/configuration/configuration-files-v6-x.html
 </td>
 </tr>
 </tbody> </table>
-<p>&nbsp;</p>
+<p> </p>
 </div>
 </div>
 

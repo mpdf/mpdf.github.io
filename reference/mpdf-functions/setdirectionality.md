@@ -12,9 +12,9 @@ SetDirectionality – Set the document RTL state
 
 # Description
 
-void <b>SetDirectionality</b> ( string <span class="parameter">$dir</span> )
+void **SetDirectionality** ( string <span class="parameter">$dir</span> )
 
-Set the document RTL state. This defines the default alignment of tables, columns, text justification, page layout etc. See <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional Text</a> for more details. If SetDirectionality('rtl') is set, <i>Text Bidirectionality</i> is automatically turned on.
+Set the document RTL state. This defines the default alignment of tables, columns, text justification, page layout etc. See <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional Text</a> for more details. If SetDirectionality('rtl') is set, *Text Bidirectionality* is automatically turned on.
 
 # Parameters
 
@@ -24,7 +24,7 @@ Defines the directionality of the document
 
 BLANK or omitted (or any value other than RTL) sets the default of LTR
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 LTR
 

@@ -17,7 +17,7 @@ Four configuration files are included in the root folder of mPDF:
 </tr>
 </thead> <tbody>
 <tr>
-<td><span class="filename">config.php</span> 
+<td><span class="filename">config.php</span>
 
 </td>
 <td>
@@ -34,7 +34,7 @@ Also contains basic default CSS stylesheet properties.
 </tr>
 <tr>
 <td><span class="filename"><span class="filename">config_lang2fonts.php </span></span></td>
-<td>Sets the options used for which fonts to use, when the text is defined by the <code>lang</code> attribute.</td>
+<td>Sets the options used for which fonts to use, when the text is defined by the `lang` attribute.</td>
 </tr>
 <tr>
 <td><span class="filename">config_script2lang.php</span>

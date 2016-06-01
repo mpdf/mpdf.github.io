@@ -8,11 +8,11 @@ permalink: /user-s-guide/css-stylesheets/introduction.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>Default CSS styles are defined in <span class="filename">config.php</span> file (as <code>var $default_CSS</code>) which is based on the recommended default values for HTML4 - <a href="http://www.w3.org/TR/CSS21/sample.html">http://www.w3.org/TR/CSS21/sample.html</a> The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.</p>
+<p>Default CSS styles are defined in <span class="filename">config.php</span> file (as `var $default_CSS`) which is based on the recommended default values for HTML4 - <a href="http://www.w3.org/TR/CSS21/sample.html">http://www.w3.org/TR/CSS21/sample.html</a> The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.</p>
 <p>The following are supported (in order of ascending priority - lower ones in list overwrite higher):</p>
 <ul>
 <li>HTML attributes e.g. &lt;div align="center"&gt; (see <a href="/user-s-guide/html-support/html-attributes.html">supported HTML attributes</a>)</li>
-<li>CSS Stylesheets - included in header of HTML document or as &lt;link&nbsp; /&gt; or as @import()
+<li>CSS Stylesheets - included in header of HTML document or as &lt;link  /&gt; or as @import()
 <ul>
 <li>- html tags e.g. p { font-size:12pt; color:#880000; }</li>
 <li>- class e.g. .stylename { font-size:9pt; }</li>
@@ -70,15 +70,15 @@ $mpdf-&gt;WriteHTML($html,2);
 {% highlight php %}
 <?php
 
-@media print { 
+@media print {
 
-&nbsp;p { color: red; } 
+ p { color: red; }
 
 }
 
 &lt;style media="print"&gt;
 
-&nbsp;p { color: red; } 
+ p { color: red; }
 
 &lt;/style&gt;
 

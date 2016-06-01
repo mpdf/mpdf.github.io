@@ -18,17 +18,17 @@ incrementFPR4
 
 # Description
 
-void <b>incrementFPR1</b>
+void **incrementFPR1**
 
-When writing a block element with <code>position:fixed</code> and <code>overflow:auto</code>, mPDF scales it down to fit in the space by repeatedly rewriting it and making adjustments. These values give the adjustments used, depending how far out the previous guess was. The lower the number, the quicker it will finish, but the less accurate the fit may be.
+When writing a block element with `position:fixed` and `overflow:auto`, mPDF scales it down to fit in the space by repeatedly rewriting it and making adjustments. These values give the adjustments used, depending how far out the previous guess was. The lower the number, the quicker it will finish, but the less accurate the fit may be.
 
 FPR1 is for coarse adjustments, and FPR4 for fine adjustments when it is getting closer.
 
 # Values
 
-<span class="parameter">incrementFPR1 [1-4]</span>&nbsp;<span class="smallblock"></span>
+<span class="parameter">incrementFPR1 [1-4]</span> <span class="smallblock"></span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">INTEGER </span>: recommended between 10-100
 

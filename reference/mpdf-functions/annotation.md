@@ -12,15 +12,15 @@ Annotation – Add an Annotation to the document
 
 # Description
 
-void <b>Annotation</b> ( string <span class="parameter">$text</span> [, float <span class="parameter">$x</span> , float <span class="parameter">$y</span> [, string <span class="parameter">$icon</span> [, string <span class="parameter">$author</span> [, string <span class="parameter">$subject</span> [, float <span class="parameter">$opacity</span> [, array <span class="parameter">$colarray</span> [, mixed <span class="parameter">$popup</span> ]]]]]]])
+void **Annotation** ( string <span class="parameter">$text</span> [, float <span class="parameter">$x</span> , float <span class="parameter">$y</span> [, string <span class="parameter">$icon</span> [, string <span class="parameter">$author</span> [, string <span class="parameter">$subject</span> [, float <span class="parameter">$opacity</span> [, array <span class="parameter">$colarray</span> [, mixed <span class="parameter">$popup</span> ]]]]]]])
 
 Adds an Annotation to the document. An annotation is like a Tooltip on a webpage. The Annotation marker, like those of "Sticky Notes" in Adobe Reader. When the reader passes the cursor over, it will display a popup text box.
 
 The exact position on the page can be specified using <span class="parameter">x</span> and <span class="parameter">y</span>, or left to position automatically. If <span class="parameter">x</span> and <span class="parameter">y</span> are not specified, the Annotation will be inserted at the current position of writing in the document. The <span class="parameter">x</span> position (horizontal) can be overridden by the variable <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a>, which can be used to force the Annotation marker to display in the right margin.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> All text to do with an annotation (text, author, subject) is rendered with the system font and can therefore contain any Unicode character even if the document font restricts to a specific codepage.</div>
+<div class="alert alert-info" role="alert">**Note:** All text to do with an annotation (text, author, subject) is rendered with the system font and can therefore contain any Unicode character even if the document font restricts to a specific codepage.</div>
 
-<b>** SetUserRights was removed in mPDF 2.4 **</b>
+**** SetUserRights was removed in mPDF 2.4 ****
 
 Annotations cannot be moved or deleted by the reader
 
@@ -34,21 +34,21 @@ This parameter specifies the text to appear in the popup text box
 
 Sets the <span class="parameter">x</span> position of the (bottom left edge of the) Annotation marker, set in mm from the left of the page.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the current writing position on the page, unless overridden by <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">$annotMargin</a>.
+<span class="smallblock">BLANK</span> or omitted or 0 uses the current writing position on the page, unless overridden by <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">$annotMargin</a>.
 
 <span class="parameter">y</span>
 
 Sets the <span class="parameter">y</span> position of the (bottom left edge of the) Annotation marker, set in mm from the top of the page. When Annotation markers are used within the text (<a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a>=<span class="smallblock">FALSE</span>), the marker is raised by the current lineheight to appear above the text.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 uses the current writing position on the page.
+<span class="smallblock">BLANK</span> or omitted or 0 uses the current writing position on the page.
 
 <span class="parameter">icon</span>
 
 Sets the appearance of the Annotation marker.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses <span class="smallblock">DEFAULT</span> i.e. 'Note'
+<span class="smallblock">BLANK</span> or omitted uses <span class="smallblock">DEFAULT</span> i.e. 'Note'
 
-<b>Values</b> (case sensitive)
+**Values** (case sensitive)
 
 Note
 
@@ -66,7 +66,7 @@ Paragraph
 
 <span class="smallblock">DEFAULT:</span> Note
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> The default is "Comment" when using Annotations from HTML markup &lt;span title=""&gt; when <a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a> is <span class="smallblock">TRUE</span></div>
+<div class="alert alert-info" role="alert">**Note:** The default is "Comment" when using Annotations from HTML markup &lt;span title=""&gt; when <a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a> is <span class="smallblock">TRUE</span></div>
 
 <span class="parameter">author</span>
 
@@ -84,7 +84,7 @@ This specifies the text to appear in the Annotation properties.
 
 Sets the opacity of the Annotation marker. Values must be greater than 0 and &lt;= 1.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0: sets the opacity to the value of <a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a> (<span class="smallblock">DEFAULT</span> 0.5), unless <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a> forces the Annotations to appear in the margin, when the <span class="smallblock">DEFAULT</span> is 1
+<span class="smallblock">BLANK</span> or omitted or 0: sets the opacity to the value of <a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a> (<span class="smallblock">DEFAULT</span> 0.5), unless <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a> forces the Annotations to appear in the margin, when the <span class="smallblock">DEFAULT</span> is 1
 
 <span class="parameter">colarray</span>
 
@@ -96,7 +96,7 @@ An array containing RGB color specification, which determines the colour of the 
 
 Specify whether to show the popup box for the annotation when the PDF document is opened, and optional specify its dimensions and/or position.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted, 0 or "0"&nbsp; - the popup box is not shown.
+<span class="smallblock">BLANK</span> or omitted, 0 or "0"  - the popup box is not shown.
 
 Any other value forces the popup box to appear when the document is opened.
 
@@ -186,6 +186,6 @@ $mpdf->Output('filename.pdf');
 <ul>
 <li class="manual_boxlist"><a href="http://uk3.php.net/manual/en/function.explode.php"> </a><a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a> - Specify the x (horizontal) placement of Annotation markers</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a> - Specifiy the default opacity used for Annotation markers</li>
-<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/annotation.html" | prepend: site.baseurl }}">annotation</a>&gt; - Custom HTML tag - equivalent to <b>Annotation</b></li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/annotation.html" | prepend: site.baseurl }}">annotation</a>&gt; - Custom HTML tag - equivalent to **Annotation**</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a> - Convert all HTML element <span class="parameter">title</span> attributes to Annotations</li>
 </ul>

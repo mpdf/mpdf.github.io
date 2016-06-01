@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:32+00:00
 
 # Description
 
-int <b>tabSpaces</b>
+int **tabSpaces**
 
 Specifies the number of spaces to substitue for a <span class="smallblock">TAB</span> character when parsing HTML input between &lt;pre&gt;...&lt;/pre&gt; tags. The default value (8) is consistent with the HTML specification, but many programs including Windows NotePad uses a value of 6.
 
@@ -18,7 +18,7 @@ Specifies the number of spaces to substitue for a <span class="smallblock">TAB</
 
 <span class="parameter">tabSpaces</span>
 
-<b>Values</b>
+**Values**
 
 Integer value greater than 0
 

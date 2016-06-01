@@ -26,9 +26,9 @@ permalink: /introduction/introduction.html
 <li><a href="index496f.html?tid=33">Installing</a></li>
 <li><a href="/user-s-guide/getting-started/creating-your-first-file.html">Creating your first document</a></li>
 </ul>
-<p>&nbsp;</p>
+<p> </p>
 <p class="manual_block">Note: on each topic page in the manual, if you select "PDF file" from the drop-down box top right ("View another version of this Topic...") mPDF will create a PDF version of the page. It was for a site like this that I first developed mPDF.</p>
-<p>&nbsp;</p>
+<p> </p>
 <p>Ian Back</p>
 
 </div>

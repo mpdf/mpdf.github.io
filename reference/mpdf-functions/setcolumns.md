@@ -12,13 +12,13 @@ SetColumns – Control use of Columns on the page
 
 # Description
 
-void <b>SetColumns</b> ( int <span class="parameter">$nCols</span> [, string <span class="parameter">$vAlign</span> [, float <span class="parameter">$gap</span> ]])
+void **SetColumns** ( int <span class="parameter">$nCols</span> [, string <span class="parameter">$vAlign</span> [, float <span class="parameter">$gap</span> ]])
 
 Define, start or stop Columns in the document.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> The maximum ratio to adjust column height when justifying is set by <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - too large a value can give ugly results</div>
+<div class="alert alert-info" role="alert">**Note:** The maximum ratio to adjust column height when justifying is set by <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - too large a value can give ugly results</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() after commands like <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.</div>
+<div class="alert alert-info" role="alert">**Note:** If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() after commands like <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.</div>
 
 # Parameters
 
@@ -26,7 +26,7 @@ Define, start or stop Columns in the document.
 
 Set the number of (vertical) columns to use on a page
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted or 0 or 1 turns Columns OFF i.e. the whole page is used as one column.
+<span class="smallblock">BLANK</span> or omitted or 0 or 1 turns Columns OFF i.e. the whole page is used as one column.
 
 <span class="smallblock">DEFAULT</span>: 1
 
@@ -34,9 +34,9 @@ Set the number of (vertical) columns to use on a page
 
 Automatically adjusts height of columns to be equal if set to J or justify.
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted turns vertical-alignment OFF
+<span class="smallblock">BLANK</span> or omitted turns vertical-alignment OFF
 
-<b>Values</b> (case-insensitive)
+**Values** (case-insensitive)
 
 J or justify
 
@@ -46,7 +46,7 @@ J or justify
 
 Set the gap between columns in millimeters
 
-<span class="smallblock">BLANK</span>&nbsp;or omitted uses default value.
+<span class="smallblock">BLANK</span> or omitted uses default value.
 
 <span class="smallblock">DEFAULT</span>: 5 (mm)
 

@@ -13,7 +13,7 @@ In mPDF there are a number of ways to configure your set-up. There is often a tr
 Some of the things you can change are:
 
 <ul>
-<li>the initial parameter used to call mPDF e.g. <code>$mpdf = new mPDF('c')</code></li>
+<li>the initial parameter used to call mPDF e.g. `$mpdf = new mPDF('c')`</li>
 <li>configuration variables set in <span class="filename">config.php</span> see <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">mPDF Variables - Overview</a>
 
 (many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
@@ -34,11 +34,11 @@ Some of the major considerations are:
 
 # Core non-embedded fonts
 
-PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and&nbsp;Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not need to be embedded in the PDF document.
+PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not need to be embedded in the PDF document.
 
-<i>Advantages:</i> Small file size, fast processing, small memory usage.
+*Advantages:* Small file size, fast processing, small memory usage.
 
-<i>Disadvantages:</i> Limited choice of fonts for appearance. Will not display characters which are not in the <a href="{{ "/reference/codepages-glyphs/win-1252.html" | prepend: site.baseurl }}">win-1252</a>&nbsp; <a href="{{ "/reference/codepages-glyphs/symbols-adobe.html" | prepend: site.baseurl }}">Symbols</a>, or&nbsp; <a href="{{ "/reference/codepages-glyphs/zapfdingbats-adobe.html" | prepend: site.baseurl }}">Dingbats</a> codepages (suitable for most Western European languages).
+*Disadvantages:* Limited choice of fonts for appearance. Will not display characters which are not in the <a href="{{ "/reference/codepages-glyphs/win-1252.html" | prepend: site.baseurl }}">win-1252</a>  <a href="{{ "/reference/codepages-glyphs/symbols-adobe.html" | prepend: site.baseurl }}">Symbols</a>, or  <a href="{{ "/reference/codepages-glyphs/zapfdingbats-adobe.html" | prepend: site.baseurl }}">Dingbats</a> codepages (suitable for most Western European languages).
 
 To use core fonts only, use 'c' for the initial parameter:
 
@@ -56,13 +56,13 @@ The alternative (the default setup) uses TrueType Unicode fonts, and the only li
 
 Fonts with good coverage of all characters you may require can be very large. If you embed the whole font file in the PDF document, the file can become very large - especially if you use a number of fonts. mPDF can embed subsets of the fonts i.e. just including the characters used in the PDF document.
 
-<i>Advantages of subsetting:</i> Manageable file size (typically between 20-200kB)
+*Advantages of subsetting:* Manageable file size (typically between 20-200kB)
 
-<i>Disadvantages of subsetting:</i> Increase in processing time and memory usage (not always), as mPDF has to rebuild font files for each document.
+*Disadvantages of subsetting:* Increase in processing time and memory usage (not always), as mPDF has to rebuild font files for each document.
 
-By default, mPDF will embed subsets of fonts if less than 30% of the characters contained in the font are used in the document; otherwise it will embed the whole font file. You can override this by changing the configurable variable <code>$this-&gt;percentSubset</code>
+By default, mPDF will embed subsets of fonts if less than 30% of the characters contained in the font are used in the document; otherwise it will embed the whole font file. You can override this by changing the configurable variable `$this->percentSubset`
 
-For backwards compatibility, you can use '-s' or 's'&nbsp; in the initial parameter to override the <span class="filename">config.php</span> settings and force subsetting of all fonts e.g.
+For backwards compatibility, you can use '-s' or 's'  in the initial parameter to override the <span class="filename">config.php</span> settings and force subsetting of all fonts e.g.
 
 {% highlight php %}
 <?php
@@ -76,7 +76,7 @@ $mpdf = new mPDF('utf8-s'); // for backwards compatibility - the utf-8 does noth
 
 ## Using core non-embedded fonts in a Unicode document
 
-If your document uses Unicode fonts as above, you can force mPDF to use the core (non-embedded) PDF fonts in parts of the document by selecting the fontnames: <code>chelvetica</code>, <code>ccourier</code> and <code>ctimes</code> e.g.
+If your document uses Unicode fonts as above, you can force mPDF to use the core (non-embedded) PDF fonts in parts of the document by selecting the fontnames: `chelvetica`, `ccourier` and `ctimes` e.g.
 
 {% highlight php %}
 
@@ -84,7 +84,7 @@ This paragraph will use core fonts
 
 {% endhighlight %}
 
-You could force mPDF to always use core fonts when Arial/Helvetica/Courier are specified, by editing the font translation variable <code>$this-&gt;fonttrans</code> in <span class="filename">config_fonts.php</span> e.g.:
+You could force mPDF to always use core fonts when Arial/Helvetica/Courier are specified, by editing the font translation variable `$this->fonttrans` in <span class="filename">config_fonts.php</span> e.g.:
 
 {% highlight php %}
 <?php
@@ -126,7 +126,7 @@ There are a number of different ways to do this:
 
 {% endhighlight %}
 
-2) Use the <code>lang</code> attribute to define the language. This causes mPDF to use a font as specified in the <span class="filename">config_cp.php</span> file. The current font-family will be used if it is available in the list defined as <code>$unifonts</code>, otherwise the first font specified in the <code>$unifonts</code> list will be selected.
+2) Use the `lang` attribute to define the language. This causes mPDF to use a font as specified in the <span class="filename">config_cp.php</span> file. The current font-family will be used if it is available in the list defined as `$unifonts`, otherwise the first font specified in the `$unifonts` list will be selected.
 
 {% highlight php %}
 
@@ -152,7 +152,7 @@ $mpdf = new mPDF('ar');
 $mpdf = new mPDF('hi');
 {% endhighlight %}
 
-then mPDF will restrict the fonts you can use for the whole document<code>. </code>Any of the fonts defined in <code>$unifonts</code> can be used:
+then mPDF will restrict the fonts you can use for the whole document`. `Any of the fonts defined in `$unifonts` can be used:
 
 {% highlight php %}
 <?php
@@ -189,7 +189,7 @@ These paragraphs will appear in Garuda (a sans-serif font) and Norasi (serif) re
 <body lang="hi">
 {% endhighlight %}
 
-5) Use&nbsp;<a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> to automatically detect these languages. AutoFont inspects the HTML code and inserts&nbsp;a <code>span</code> element to mark text which is auto-detected e.g.
+5) Use <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> to automatically detect these languages. AutoFont inspects the HTML code and inserts a `span` element to mark text which is auto-detected e.g.
 
 {% highlight php %}
 <?php
@@ -211,11 +211,11 @@ This is Thai text: <span lang="th" class="lang_th">เป็นมนุษย�
 
 {% endhighlight %}
 
-The <code>lang</code> attribute means that mPDF will select a font as described above in 2). You can also use CSS stylesheets to apply additional styles e.g. changing the font-size.
+The `lang` attribute means that mPDF will select a font as described above in 2). You can also use CSS stylesheets to apply additional styles e.g. changing the font-size.
 
 Do not use AutoFont as well as methods (1) - (4).
 
-6) Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a> to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not represented in the current font, it will try to substitute it from one of the fonts defined in <code>$this-&gt;backupSubsFont</code> in <span class="filename">config_fonts.php</span>.
+6) Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a> to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not represented in the current font, it will try to substitute it from one of the fonts defined in `$this->backupSubsFont` in <span class="filename">config_fonts.php</span>.
 
 {% highlight php %}
 $this->backupSubsFont = array('dejavusanscondensed','norasi');
@@ -223,7 +223,7 @@ $this->backupSubsFont = array('dejavusanscondensed','norasi');
 
 # Which method should I use?
 
-Let us call Western and Eastern European languages, Cyrillic text, Baltic languages, Turkish, and Greek - <b>common languages</b>, and CJK and Indic languages, Vietnamese, Thai, and Arabic - <b>special languages</b>.
+Let us call Western and Eastern European languages, Cyrillic text, Baltic languages, Turkish, and Greek - **common languages**, and CJK and Indic languages, Vietnamese, Thai, and Arabic - **special languages**.
 
 ## Individually authored pages
 

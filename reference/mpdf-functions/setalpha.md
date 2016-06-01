@@ -12,7 +12,7 @@ SetAlpha – Set the opacity for Images
 
 # Description
 
-void <b>SetAlpha</b> ( float <span class="parameter">$alpha</span> [, integer <span class="parameter">$blend</span> ])
+void **SetAlpha** ( float <span class="parameter">$alpha</span> [, integer <span class="parameter">$blend</span> ])
 
 Set the opacity and blend mode for Images
 
@@ -22,7 +22,7 @@ Set the opacity and blend mode for Images
 
 This parameter specifies the opacity for any subsequent images written to the current document.
 
-<b>Values</b>
+**Values**
 
 Float: 0 (transparent) to 1 (opaque)
 
@@ -30,7 +30,7 @@ Float: 0 (transparent) to 1 (opaque)
 
 This parameter specifies the blend mode.
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">STRING</span> - One of the following:
 

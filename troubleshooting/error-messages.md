@@ -6,7 +6,7 @@ permalink: /troubleshooting/error-messages.html
 modification_time: 2015-08-05T12:00:32+00:00
 ---
 
-<b>"Output has already been sent from the script - PDF file generation aborted."</b>
+**"Output has already been sent from the script - PDF file generation aborted."**
 
 If you see this message it means that the script has sent output to the browser before starting to generate the PDF file.
 
@@ -14,7 +14,7 @@ Most likely causes are:
 
 <ul>
 <li>a PHP error message - this should be displayed in your browser giving details of the problem</li>
-<li>inadvertent whitespace in you PHP script files e.g. leaving space before or after the PHP tags &lt;?php&nbsp;&nbsp; ?&gt;</li>
+<li>inadvertent whitespace in you PHP script files e.g. leaving space before or after the PHP tags &lt;?php   ?&gt;</li>
 <li>you are using object_buffering to generate content for your PDF file - see below</li>
 </ul>
 

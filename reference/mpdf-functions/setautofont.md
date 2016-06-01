@@ -6,19 +6,19 @@ permalink: /reference/mpdf-functions/setautofont.html
 modification_time: 2015-08-05T12:00:55+00:00
 ---
 
-(mPDF &gt;= 2.3&nbsp;&nbsp; &lt;= 5.7)
+(mPDF &gt;= 2.3   &lt;= 5.7)
 
 SetAutoFont – Automatically detect language in the input HTML text and use appropriate fonts
 
 # Description
 
-void <b>SetAutoFont</b> ( int <span class="parameter">$flag</span> )
+void **SetAutoFont** ( int <span class="parameter">$flag</span> )
 
 Turns on the AutoFont function, which automatically detects language in the input HTML text and uses appropriate fonts.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This function was removed in mPDF 6.0&nbsp; Use <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}"><code>autoLangToFont</code></a> for the same results</div>
+<div class="alert alert-info" role="alert">**Note:** This function was removed in mPDF 6.0  Use <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">`autoLangToFont`</a> for the same results</div>
 
-AutoFont uses <code>&lt;span lang="" class="lang_xx"&gt;...&lt;/span&gt;</code> to mark text which is auto-detected. See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for further details, but note that SetAutoFont also:
+AutoFont uses `&lt;span lang="" class="lang_xx"&gt;...&lt;/span&gt;` to mark text which is auto-detected. See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for further details, but note that SetAutoFont also:
 
 <ul>
 <li>disables support for text-align=justify</li>
@@ -26,17 +26,17 @@ AutoFont uses <code>&lt;span lang="" class="lang_xx"&gt;...&lt;/span&gt;</code> 
 <li>sets <a href="{{ "/reference/mpdf-variables/bidirectional.html" | prepend: site.baseurl }}">$biDirectional</a>=<span class="smallblock">TRUE</span> (if AUTOFONT_RTL is set)</li>
 </ul>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Using automatic language detection adds considerable processing time when creating a large document.</div>
+<div class="alert alert-info" role="alert">**Note:** Using automatic language detection adds considerable processing time when creating a large document.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> It is better to mark the HTML text yourself using block tags e.g. <code>&lt;p lang=""</code> rather than relying on mPDF to set <code>&lt;span lang=""</code> if possible; when set at block level, it allows appropriate changes to text alignment, character spacing and text-justification.</div>
+<div class="alert alert-info" role="alert">**Note:** It is better to mark the HTML text yourself using block tags e.g. `&lt;p lang=""` rather than relying on mPDF to set `&lt;span lang=""` if possible; when set at block level, it allows appropriate changes to text alignment, character spacing and text-justification.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Automatic language detection is based on analysis of the characters in the text. It is therefore not precise, and in particular it may be difficult to distinguish between different arabic languages (arabic, farsi, urdu, pashto etc), CJK languages (even between Chinese and Japanese text in same text chunk).</div>
+<div class="alert alert-info" role="alert">**Note:** Automatic language detection is based on analysis of the characters in the text. It is therefore not precise, and in particular it may be difficult to distinguish between different arabic languages (arabic, farsi, urdu, pashto etc), CJK languages (even between Chinese and Japanese text in same text chunk).</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Chinese Traditional and Simplified Chinese share so many characters that mPDF does not even try to distinguish which is being used. If AutoFont is being used and a chinese languages is identified, it is marked as <code>&lt;span lang="zh"&gt;...&lt;/span&gt;</code>.
+<div class="alert alert-info" role="alert">**Note:** Chinese Traditional and Simplified Chinese share so many characters that mPDF does not even try to distinguish which is being used. If AutoFont is being used and a chinese languages is identified, it is marked as `&lt;span lang="zh"&gt;...&lt;/span&gt;`.
 
 The font actually used for default chinese is determined by the settings in function <span class="function">GetCodepage()</span> in <span class="filename">config_cp.php</span>; by default this is Chinese Simplified (GB, GBK).</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> SetAutoFont is only valid when using UTF-8 as the codepage for the document.</div>
+<div class="alert alert-info" role="alert">**Note:** SetAutoFont is only valid when using UTF-8 as the codepage for the document.</div>
 
 # Parameters
 
@@ -48,7 +48,7 @@ SetAutoFont(0) will turn off any auto-detection. Bitwise operators can be used w
 
 SetAutoFont(AUTOFONT_CJK | AUTOFONT_THAIVIET) will turn on autodetection for CJK languages and Thai and Vietnamese.
 
-<b>Values</b>
+**Values**
 
 AUTOFONT_CJK = 1 = Any CJK languages (Chinese - Japanese - Korean)
 
@@ -69,7 +69,7 @@ AUTOFONT_ALL = 15 = All of the above
 </thead> <tbody>
 <tr>
 <td>4.0</td>
-<td>AutoFont marks up the <code>&lt;span&gt;</code> with <code>class="lang_xx"</code> as well as&nbsp;&nbsp;<code>lang</code><code>="xx"</code></td>
+<td>AutoFont marks up the `&lt;span&gt;` with `class="lang_xx"` as well as  `lang``="xx"`</td>
 </tr>
 <tr>
 <td>2.3</td>

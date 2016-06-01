@@ -14,7 +14,7 @@ mPDF v5.7.1 minimum is required for PHP&gt;=5.5
 
 PHP requires the mb_string module to be enabled (including mbregex, which needs to be explicitly enabled in some environments)
 
-mPDF is <b>not</b> compatible with PHP function overloading (mbstring.func_overload)
+mPDF is **not** compatible with PHP function overloading (mbstring.func_overload)
 
 As for FPDF, PHP requires zlib for compression.
 

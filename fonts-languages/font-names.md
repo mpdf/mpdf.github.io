@@ -13,7 +13,7 @@ Every font family has a name which is defined in the font file. This is the name
 This is also the name used in CSS e.g.
 
 {% highlight php %}
-    
+
 
 {% endhighlight %}
 
@@ -24,11 +24,11 @@ This is also the name used in CSS e.g.
 This means that this will also work:
 
 {% highlight php %}
-    
+
 
 {% endhighlight %}
 
-<p>Next it will look for a translation in <code>$this-&gt;fonttrans</code> in the <span class="filename">config_fonts.php</span> file. Imagine that we also wished to recognise 'Trebuchet', we would add:
+<p>Next it will look for a translation in `$this->fonttrans` in the <span class="filename">config_fonts.php</span> file. Imagine that we also wished to recognise 'Trebuchet', we would add:
 
 {% highlight php %}
 <?php
@@ -86,9 +86,9 @@ $this->fontdata = array(
 
 Each font-family must have a Regular ['R'] file defined - the others (['B']old, ['I']talic, ['BI']bold-italic) are optional.
 
-mPDF will try to locate the font-file. If you have defined <code>_MPDF_SYSTEM_TTFONTS</code> at the top of the <span class="filename">config_fonts.php</span> file, it will first look for the font-file there. This is useful if you are running mPDF on a computer which already has a folder with TTF fonts in (e.g. on Windows)
+mPDF will try to locate the font-file. If you have defined `_MPDF_SYSTEM_TTFONTS` at the top of the <span class="filename">config_fonts.php</span> file, it will first look for the font-file there. This is useful if you are running mPDF on a computer which already has a folder with TTF fonts in (e.g. on Windows)
 
-If the font-file is not there, or <code>_MPDF_SYSTEM_TTFONTS</code> is not defined, mPDF will look in the folder <span class="filename">/[your_path_to_mpdf]/ttfonts/</span>
+If the font-file is not there, or `_MPDF_SYSTEM_TTFONTS` is not defined, mPDF will look in the folder <span class="filename">/[your_path_to_mpdf]/ttfonts/</span>
 
 Note that the font-file names are case-sensitive and can contain capitals.
 

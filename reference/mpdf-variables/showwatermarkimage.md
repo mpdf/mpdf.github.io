@@ -10,23 +10,23 @@ modification_time: 2015-08-05T12:02:27+00:00
 
 # Description
 
-boolean <b>showWatermarkImage</b>
+boolean **showWatermarkImage**
 
 Specifies whether or not to show/print the watermark image on each page. The file for the watermark must be defined using <a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a>. The watermark is added to the document at the end of each page.
 
 # Values
 
-<span class="parameter">showWatermarkImage</span> = <span class="smallblock">TRUE</span>|<span class="smallblock"><i>FALSE</i></span>
+<span class="parameter">showWatermarkImage</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
 
 If <span class="parameter">showWatermarkImage</span> is <span class="smallblock">TRUE</span> or 1 the watermark image will be added to each page of the document.
 
 The value can be changed during the document to turn the watermark on and off on different pages.
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE</span>: Show/print the watermark image
 
-<span class="smallblock"><i>FALSE</i></span>: <span class="smallblock">DEFAULT</span> Do not show/print the watermark image
+<span class="smallblock">*FALSE*</span>: <span class="smallblock">DEFAULT</span> Do not show/print the watermark image
 
 Values of 1 or 0 can also be used
 

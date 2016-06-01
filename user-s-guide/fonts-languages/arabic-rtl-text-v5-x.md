@@ -8,7 +8,7 @@ permalink: /user-s-guide/fonts-languages/arabic-rtl-text-v5-x.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p class="manual_block"><b>Note:</b> Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1</p>
+<p class="manual_block">**Note:** Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1</p>
 <h3>Document Directionality - RTL versus LTR</h3>
 <p>The document has a baseline direction which is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:</p>
 <ul>
@@ -45,7 +45,7 @@ or
 div.right { direction: rtl; }
 {% endhighlight %}
 
-<p>Block-level direction <i>may</i> affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.</p>
+<p>Block-level direction *may* affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.</p>
 <p>Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.</p>
 <h3>Text alignment</h3>
 <p>The default value for text-align is "a nameless value which is dependent on direction". However, once text-align is specified, it is respected and inherited by all descendants.</p>
@@ -71,7 +71,7 @@ english text &lt;span&gt;[arabic text]&lt;/span&gt; english text
 <h2>Fonts</h2>
 <p>Arabic is a complex script requiring processing before output. However any appropriate font can be used - as long as it contains the characters in Unicode blocks 'Arabic Presentation Forms' A and B (U+FB50 - U+FDFF, U+FE70 - U+FEFE). Note that quite a large number of fonts contain the isolated characters but not the presentation forms.</p>
 <p>2 fonts are bundled with mPDF: XB Zar and XB Riyaz. These are 2 of a number of fonts available from <a href="http://wiki.irmug.com/index.php/X_Series_2">http://wiki.irmug.com/index.php/X_Series_2</a>.</p>
-<p class="manual_block"><b>Note:</b> The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for Pashto/Sindhi/Urdu/Kurdish, especially for joining characters and added new presentation forms.</p>
+<p class="manual_block">**Note:** The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for Pashto/Sindhi/Urdu/Kurdish, especially for joining characters and added new presentation forms.</p>
 <h3>Non-unicode characters</h3>
 <p>Some characters in Pashto/Sindhi/Urdu/Kurdish do not have Unicode values for the final/initial/medial forms of the characters. However, some fonts include glyphs for these characters "un-mapped" to Unicode (including XB Zar and XB Riyaz, which are bundled with mPDF).</p>
 <p>By editing <span class="filename">config_fonts.php</span> and adding to appropriate fonts:</p>
@@ -98,7 +98,7 @@ So the final form is set in mPDF to show as FEF0; Initial and medial forms are s
 It seems that Initial and Medial forms are used in Koranic text.
 
 I have left options encoded in <span class="function">function InitArabic()</span> if you want to alter - to make it double-joining, it also needs to be added to <span class="parameter">$arabPrevLink</span> as "\xd9\x89"</p>
-<p class="manual_block"><b>Note:</b> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner, LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.</p>
+<p class="manual_block">**Note:** mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner, LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.</p>
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist"><a href="/reference/mpdf-variables/uselang.html">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>

@@ -145,7 +145,7 @@ closed/cloned and level 1 will be sliced; the opposite will occur at the top of 
 <td>&lt;pagebreak&gt;</td>
 <td>Always "cloneall" if a change in page size or margins is specified.
 
-Otherwise page break type is determined by value of configurable variable: $this-&gt;defaultPagebreakType. Default is "cloneall".
+Otherwise page break type is determined by value of configurable variable: $this->defaultPagebreakType. Default is "cloneall".
 
 Default can be overridden by attribute "page-break-type" e.g. &lt;pagebreak page-break-type="clonebycss" /&gt;</td>
 </tr>
@@ -153,7 +153,7 @@ Default can be overridden by attribute "page-break-type" e.g. &lt;pagebreak page
 <td>Page breaks forced by:
 
 page-break-before or page-break-after</td>
-<td>Page break type determined by value of configurable variable: $this-&gt;defaultPagebreakType. Default is "cloneall".</td>
+<td>Page break type determined by value of configurable variable: $this->defaultPagebreakType. Default is "cloneall".</td>
 </tr>
 </tbody> </table>
 

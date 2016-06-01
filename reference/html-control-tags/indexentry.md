@@ -12,11 +12,11 @@ indexentry – Insert an Index entry for the document
 
 # Description
 
-&lt;<b>indexentry</b>&nbsp; <span class="parameter">content</span> [ <span class="parameter">xref</span> ] /&gt;
+&lt;**indexentry**  <span class="parameter">content</span> [ <span class="parameter">xref</span> ] /&gt;
 
 Insert an Index entry for the document Index, referencing the current writing position in the document. If <span class="parameter">xref</span> is set, it will appear as a cross-referencing entry in the index as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
+<div class="alert alert-info" role="alert">**Note:** The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 
 # Attributes
 
@@ -24,7 +24,7 @@ Insert an Index entry for the document Index, referencing the current writing po
 
 This attribute sets the text as it will appear in the Index entry. Text should be UTF-8 encoded.
 
-<span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;indexentry content="&amp;lt; 40" /&gt;
+<span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;indexentry content="&amp;lt; 40" /&gt;
 
 It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
@@ -34,7 +34,7 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 This attribute sets the text used as a cross-reference. Text should be UTF-8 encoded.
 
-<span class="parameter">xref</span> cannot contain any of the characters: &lt; &gt; &amp; ' <i>or</i> " and must use the appropriate HTML entities e.g. &lt;indexentry xref="&amp;lt; 40" /&gt;
+<span class="parameter">xref</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;indexentry xref="&amp;lt; 40" /&gt;
 
 It is recommended that you use e.g. htmlspecialchars($xref, ENT_QUOTES) for this.
 
@@ -101,7 +101,7 @@ Dromedary - see Camel, types
 
 # Notes
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; may be a preferred form to <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>, as it will allow more precise identification of the position and page - the &lt;indexentry&gt; can be placed just next to the appropriate word.</div>
+<div class="alert alert-info" role="alert">**Note:** &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; may be a preferred form to <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>, as it will allow more precise identification of the position and page - the &lt;indexentry&gt; can be placed just next to the appropriate word.</div>
 
 ## Recommended placement
 

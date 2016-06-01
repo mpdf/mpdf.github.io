@@ -12,15 +12,15 @@ showStats – Display performance data for the generated PDF file
 
 # Value
 
-void <b>showStats</b>
+void **showStats**
 
 Specify whether to show performance data. Useful if you are developing with mPDF, and want to test different configurations.
 
 # Values
 
-<span class="parameter">showStats</span> =&nbsp; <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">showStats</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">TRUE </span>: enable display of data
 

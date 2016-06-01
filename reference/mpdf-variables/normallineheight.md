@@ -12,11 +12,11 @@ normalLineheight – Define the default line-height
 
 # Description
 
-void <b>normalLineheight</b>
+void **normalLineheight**
 
 This variable defines the default line-height used when the CSS property line-height is set to normal (default).
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> From mPDF v 6.0 onwards, this value will only be used when the variable <code>useFixedNormalLineHeight</code> is set to <span class="smallblock">TRUE</span></div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF v 6.0 onwards, this value will only be used when the variable `useFixedNormalLineHeight` is set to <span class="smallblock">TRUE</span></div>
 
 For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a>.
 
@@ -24,7 +24,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 <span class="parameter">normalLineheight</span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">FLOAT </span>: Usual value between 1.1 and 1.5
 

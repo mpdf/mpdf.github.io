@@ -14,7 +14,7 @@ Two key elements to this function are the requirement for PDF/X documents to be 
 
 A PDF/X document can be identified as such through PDF/X-specific metadata located in the document. However, claiming to be PDF/X compliant and being so are not necessarily the same.
 
-<b>Important</b>: mPDF is <b><i>not guaranteed </i></b>to produce fully PDF/X-1a compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.
+**Important**: mPDF is ***not guaranteed ***to produce fully PDF/X-1a compliant files in all circumstances. It is the users responsibility to check compliance if this is essential.
 
 # mPDF and PDF/X-1a compliance
 
@@ -47,7 +47,7 @@ Sources of free ICC profiles are:
 <li><a href="http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html">http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html </a></li>
 </ul>
 
-You can change the color profile used by mPDF by adding a&nbsp; <span class="filename">*.icc</span> file to the <span class="filename">[mpdf]/iccprofiles/</span> folder. It must be a 4-colour CMYK profile. Then edit <span class="filename">config.php</span> e.g.
+You can change the color profile used by mPDF by adding a  <span class="filename">*.icc</span> file to the <span class="filename">[mpdf]/iccprofiles/</span> folder. It must be a 4-colour CMYK profile. Then edit <span class="filename">config.php</span> e.g.
 
 {% highlight php %}
 <?php
@@ -61,8 +61,8 @@ All fonts must be embedded in a PDF/X file. mPDF normally uses the core Adobe fo
 
 <ul>
 <li><span class="parameter">$useCoreFontsOnly</span> is not permitted</li>
-<li>lists <code>&lt;ul&gt;</code> cannot use Zapfdingbats font for bullets</li>
-<li>form element <code>&lt;select&gt;</code> cannot use Zapfdingbats character as the drop-down symbol</li>
+<li>lists `&lt;ul&gt;` cannot use Zapfdingbats font for bullets</li>
+<li>form element `&lt;select&gt;` cannot use Zapfdingbats character as the drop-down symbol</li>
 <li>ISBN/ISSN barcode cannot use Helvetica for the ISBN number (above the bar)</li>
 </ul>
 
@@ -80,7 +80,7 @@ Because PDF/X-1a has the objective of ensuring reliable reproduction of the docu
 
 # Making it happen!
 
-When <code>$this-&gt;PDFX</code> is set to true, the following changes will automatically and silently happen:
+When `$this->PDFX` is set to true, the following changes will automatically and silently happen:
 
 <ul>
 <li>list bullets will use the characters from the current font (if available) e.g. • ⚬ ▪ </li>
@@ -150,7 +150,7 @@ NB GIF or PNG images with a simple transparency set (not alpha-channel mask) are
 <td>Substitutes available sans-serif font</td>
 </tr>
 <tr>
-<td>Form element <code>&lt;select&gt;</code> which normally uses a Zapfdingbats character for the drop-down symbol.</td>
+<td>Form element `&lt;select&gt;` which normally uses a Zapfdingbats character for the drop-down symbol.</td>
 <td>An equal sign "=" will be substituted if ▼ is not available in the default sans-serif font.</td>
 </tr>
 </tbody> </table>

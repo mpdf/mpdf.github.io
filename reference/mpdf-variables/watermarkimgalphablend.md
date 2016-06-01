@@ -12,17 +12,17 @@ watermarkImgAlphaBlend – Specify the blend mode for overlying watermark images
 
 # Description
 
-void <b>watermarkImgAlphaBlend</b>
+void **watermarkImgAlphaBlend**
 
 Specify the blend mode for overlying watermark images. Different blend modes work with different types of images. The blend modes are those specified in the <a href="{{ "/reference/pdf-files-adobe/pdf-reference.html" | prepend: site.baseurl }}">PDF reference</a>. The value of Normal gives acceptable results for most cases. 'Multiply' may produce better results with overlying WMF or SVG images.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> This variable can be changed either in the configuration file <span class="filename">config.php</span>&nbsp; or at runtime</div>
+<div class="alert alert-info" role="alert">**Note:** This variable can be changed either in the configuration file <span class="filename">config.php</span>  or at runtime</div>
 
 # Values
 
 <span class="parameter">watermarkImgAlphaBlend</span>
 
-<b>Values</b>
+**Values**
 
 Normal
 

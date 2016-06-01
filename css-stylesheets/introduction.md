@@ -6,13 +6,13 @@ permalink: /css-stylesheets/introduction.html
 modification_time: 2015-08-05T11:59:56+00:00
 ---
 
-Default CSS styles are defined in <span class="filename">config.php</span> file (as <code>var $default_CSS</code>) which is based on the recommended default values for HTML4 - <a href="http://www.w3.org/TR/CSS21/sample.html">http://www.w3.org/TR/CSS21/sample.html</a> The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.
+Default CSS styles are defined in <span class="filename">config.php</span> file (as `var $default_CSS`) which is based on the recommended default values for HTML4 - <a href="http://www.w3.org/TR/CSS21/sample.html">http://www.w3.org/TR/CSS21/sample.html</a> The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.
 
 The following are supported (in order of ascending priority - lower ones in list overwrite higher):
 
 <ul>
 <li>HTML attributes e.g. &lt;div align="center"&gt; (see <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">supported HTML attributes</a>)</li>
-<li>CSS Stylesheets - included in header of HTML document or as &lt;link&nbsp; /&gt; or as @import()
+<li>CSS Stylesheets - included in header of HTML document or as &lt;link  /&gt; or as @import()
 <ul>
 <li>- html tags e.g. p { font-size:12pt; color:#880000; }</li>
 <li>- class e.g. .stylename { font-size:9pt; }</li>
@@ -77,15 +77,15 @@ $mpdf->WriteHTML($html,2);
 mPDF supports media-dependent CSS styles as:
 
 {% highlight php %}
-@media print { 
+@media print {
 
- p { color: red; } 
+ p { color: red; }
 
 }
 
 <style media="print">
 
- p { color: red; } 
+ p { color: red; }
 
 </style>
 

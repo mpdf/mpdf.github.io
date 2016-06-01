@@ -52,7 +52,7 @@ permalink: /user-s-guide/fonts-languages/available-fonts-v6.html
 <td>Quivira</td>
 <td>http://www.quivira-font.com/</td>
 <td>
-<p><i><span>free for any use</span></i></p>
+<p>*<span>free for any use</span>*</p>
 </td>
 <td>
 <p>Coptic</p>
@@ -83,7 +83,7 @@ permalink: /user-s-guide/fonts-languages/available-fonts-v6.html
 
 </td>
 <td>http://opensiddur.org/tools/fonts/</td>
-<td>GNU GPL 2 
+<td>GNU GPL 2
 
 </td>
 <td>Hebrew</td>
@@ -104,7 +104,7 @@ permalink: /user-s-guide/fonts-languages/available-fonts-v6.html
 <tr>
 <td>Aegean</td>
 <td>http://users.teilar.gr/~g1951d/</td>
-<td><i><span>free for any use</span></i></td>
+<td>*<span>free for any use</span>*</td>
 <td>
 <p>Carian</p>
 <p>Lycian</p>
@@ -123,10 +123,10 @@ permalink: /user-s-guide/fonts-languages/available-fonts-v6.html
 </tr>
 <tr>
 <td>Lohitkannada</td>
-<td>https://fedorahosted.org/lohit/ 
+<td>https://fedorahosted.org/lohit/
 
 </td>
-<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a> 
+<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a>
 
 </td>
 <td>Kannada</td>
@@ -172,7 +172,7 @@ permalink: /user-s-guide/fonts-languages/available-fonts-v6.html
 <p>Google Fonts</p>
 <p>http://www.google.com/fonts/earlyaccess</p>
 </td>
-<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a> 
+<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a>
 
 </td>
 <td>Lao</td>
@@ -201,7 +201,7 @@ http://code.google.com/p/tharlon-font/</td>
 <tr>
 <td>Ayar fonts</td>
 <td>http://eng.ayarunicodegroup.org/</td>
-<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a> 
+<td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a>
 
 </td>
 <td>Myanmar</td>
@@ -268,12 +268,12 @@ No licence information available</td>
 <td>
 <p>Aboriginal Sans</p>
 </td>
-<td>http://www.languagegeek.com/font/fontdownload.html 
+<td>http://www.languagegeek.com/font/fontdownload.html
 
 </td>
 <td>
 <p>GNU GPL 3</p>
-<p>&nbsp;</p>
+<p> </p>
 </td>
 <td>
 <p>Cree</p>
@@ -284,7 +284,7 @@ No licence information available</td>
 <tr>
 <td>MPH 2B Damase</td>
 <td>http://www.alanwood.net/downloads/index.html</td>
-<td>(Public domain) 
+<td>(Public domain)
 
 </td>
 <td>
@@ -298,13 +298,13 @@ No licence information available</td>
 <tr>
 <td>Aegyptus</td>
 <td>http://users.teilar.gr/~g1951d/</td>
-<td><i><span>free for any use</span></i></td>
+<td>*<span>free for any use</span>*</td>
 <td>Egyptian Hieroglyphs</td>
 </tr>
 <tr>
 <td>Akkadian</td>
 <td>http://users.teilar.gr/~g1951d/</td>
-<td><i><span>free for any use</span></i></td>
+<td>*<span>free for any use</span>*</td>
 <td>Cuneiforn</td>
 </tr>
 <tr>

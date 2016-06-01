@@ -12,11 +12,11 @@ SetTitle – Set the document title
 
 # Description
 
-void <b>SetTitle</b> ( string <span class="parameter">$text</span> )
+void **SetTitle** ( string <span class="parameter">$text</span> )
 
 Set the title for the document. The title is displayed at the top of the Adobe Reader screen when viewing the PDF file, and is included in the document metadata, which can be seen when inspecting the document properties in Adobe Reader.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
+<div class="alert alert-info" role="alert">**Note:** Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
 
 Note: The <span class="parameter">title</span> tag from the header of an HTML document will override this value when you use <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.
 

@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:35+00:00
 
 # Description
 
-boolean <b>useDictionaryLBR</b>
+boolean **useDictionaryLBR**
 
 Specify whether to use mPDF word dictionaries to determine appropriate places for line breaks when using Lao, Thai or Khmer text.
 
@@ -20,9 +20,9 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-breaking.html" |
 
 <span class="parameter">useDictionaryLBR = <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
 
-<b>Values</b>
+**Values**
 
-<i><span class="smallblock">TRUE</span></i>: <span class="smallblock">DEFAULT</span> use mPDF word dictionaries to determine appropriate places for line breaks when using Lao, Thai or Khmer text.
+*<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> use mPDF word dictionaries to determine appropriate places for line breaks when using Lao, Thai or Khmer text.
 
 <span class="smallblock">FALSE</span>: word dictionaries not used. Line breaks will only be allowed according to usual line-breaking rules.
 

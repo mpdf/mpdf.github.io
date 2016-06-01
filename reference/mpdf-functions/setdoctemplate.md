@@ -12,7 +12,7 @@ SetDocTemplate – Specify an external PDF file to use as a template
 
 # Description
 
-void <b>SetDocTemplate</b> ( [ string <span class="parameter">$file</span> [, boolean <span class="parameter">$continue</span> ]])
+void **SetDocTemplate** ( [ string <span class="parameter">$file</span> [, boolean <span class="parameter">$continue</span> ]])
 
 Specify an external PDF file to use as a template. Each page of the external source PDF file will be used as a template for the corresponding page in your new document. If the current mPDF document has more pages than the external PDF source document, the last page will (optionally) continue to be used for any remaining pages.
 
@@ -20,7 +20,7 @@ Specify an external PDF file to use as a template. Each page of the external sou
 
 <span class="parameter">file</span>
 
-This parameter specifies the source PDF file used as the template document.&nbsp; <span class="parameter">file</span> should be a relative path to a local file.
+This parameter specifies the source PDF file used as the template document.  <span class="parameter">file</span> should be a relative path to a local file.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
@@ -30,7 +30,7 @@ If <span class="smallblock">TRUE</span> (or any positive value) it forces the la
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> If you want to turn the template off, just use <code>$mpdf-&gt;SetDocTemplate()</code> with no parameters.</div>
+<div class="alert alert-info" role="alert">**Note:** If you want to turn the template off, just use `$mpdf-&gt;SetDocTemplate()` with no parameters.</div>
 
 # Changelog
 

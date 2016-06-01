@@ -12,7 +12,7 @@ These use the same array values as <a href="{{ "/headers-footers/method-1.html" 
 
 Note that named headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when they are selected.
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> Do not name a header or footer starting with html_&nbsp;&nbsp; This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer.</div>
+<div class="alert alert-info" role="alert">**Note:** Do not name a header or footer starting with html_   This prefix is reserved to identify an <span class="smallblock">HTML</span> header/footer.</div>
 
 # Defining NAMED Headers/Footers
 
@@ -101,9 +101,9 @@ $mpdf->WriteHTML($html);
 <p>Once you have defined <span class="smallblock">NAMED</span> headers/footers for your document, you can reference them using:
 
 <ul>
-<li>Methods for <span class="smallblock">NON-HTML</span> headers/footers only - <b>Recommended</b> when setting the first page header/footer at the start of a document (although they can also be used to change headers/footers during the document).
+<li>Methods for <span class="smallblock">NON-HTML</span> headers/footers only - **Recommended** when setting the first page header/footer at the start of a document (although they can also be used to change headers/footers during the document).
 <ul>
-<li><a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a> - see Example #3&nbsp; </li>
+<li><a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a> - see Example #3  </li>
 <li><a href="{{ "/reference/mpdf-functions/setfooterbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a> - see Example #3
 
 </li>
@@ -120,7 +120,7 @@ $mpdf->WriteHTML($html);
 </li>
 </ul>
 <ul>
-<li>Methods to access any headers/footers (<span class="smallblock">HTML</span> or <span class="smallblock">NON-HTML</span>) - <b>Recommended</b> when changing header/footer during the document.
+<li>Methods to access any headers/footers (<span class="smallblock">HTML</span> or <span class="smallblock">NON-HTML</span>) - **Recommended** when changing header/footer during the document.
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - see Example #6
 

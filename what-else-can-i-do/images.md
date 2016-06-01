@@ -47,11 +47,11 @@ e.g. Firefox which support SVG, and <a href="index76c0.pdf?op=pdf&amp;op_target=
 </tr>
 </tbody> </table>
 
-<b>Debugging Errors:</b> If you are having trouble with images not displaying correctly, set the variable <span class="parameter">$mpdf-&gt;showImageErrors</span> = true.
+**Debugging Errors:** If you are having trouble with images not displaying correctly, set the variable <span class="parameter">$mpdf-&gt;showImageErrors</span> = true.
 
 Images are handled in mPDF as in-line elements.
 
-Unlike the HTML specification, the&nbsp;width and height attributes of IMG will additionally take different dimensions e.g. mm, pt etc.&nbsp;
+Unlike the HTML specification, the width and height attributes of IMG will additionally take different dimensions e.g. mm, pt etc. 
 
 {% highlight php %}
 <img src="image.jpg" width="90" /> // 90 pixels, just like HTML
@@ -65,7 +65,7 @@ Unlike the HTML specification, the&nbsp;width and height attributes of IMG will 
 <img src="image.jpg" style="width:90mm;" />  // Can also use CSS
 {% endhighlight %}
 
-Images for which the size is not defined&nbsp;are output at a default dpi set in the <span class="filename">config.php</span> file:
+Images for which the size is not defined are output at a default dpi set in the <span class="filename">config.php</span> file:
 
 {% highlight php %}
 $this->img_dpi = 96;
@@ -107,7 +107,7 @@ This can be achieved using HTML &amp; CSS like this:
 
 ## Float and Text wrapping
 
-mPDF partially supports the CSS style <code>float</code> with IMG elements. Text will wrap around these images, with certain limitations:
+mPDF partially supports the CSS style `float` with IMG elements. Text will wrap around these images, with certain limitations:
 
 <ul>
 <li>only 1 float:right and 1 float:left image are allowed at a time i.e. you cannot overlap 2 right or 2 left</li>

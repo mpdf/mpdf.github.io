@@ -114,55 +114,55 @@ Special processing required</td>
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">DEVANAGARI (U+0900-U+097F)
 
 Special processing required</td>
-<td><i>ind_hi_1_001</i></td>
+<td>*ind_hi_1_001*</td>
 </tr>
 <tr class="evenrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">BENGALI (U+0980-U+09FF)
 
 Special processing required</td>
-<td><i>ind_bn_1_001</i></td>
+<td>*ind_bn_1_001*</td>
 </tr>
 <tr class="oddrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">GURMUKHI (U+0A00-U+0A7F)
 
 Special processing required</td>
-<td><i>ind_pa_1_001</i></td>
+<td>*ind_pa_1_001*</td>
 </tr>
 <tr class="evenrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">GUJARATI (U+0A80-U+0AFF)
 
 Special processing required</td>
-<td><i>ind_gu_1_001</i></td>
+<td>*ind_gu_1_001*</td>
 </tr>
 <tr class="oddrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">ORIYA (U+0B00-U+0B7F)
 
 Special processing required</td>
-<td><i>ind_or_1_001</i></td>
+<td>*ind_or_1_001*</td>
 </tr>
 <tr class="evenrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">TAMIL (U+0B80-U+0BFF)
 
 Special processing required</td>
-<td><i>ind_ta_1_001</i></td>
+<td>*ind_ta_1_001*</td>
 </tr>
 <tr class="oddrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">TELUGU (U+0C00-U+0C7F)
 
 Special processing required</td>
-<td><i>ind_te_1_001</i></td>
+<td>*ind_te_1_001*</td>
 </tr>
 <tr class="evenrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">KANNADA (U+0C80-U+0CFF)
 
 Special processing required</td>
-<td><i>ind_kn_1_001</i></td>
+<td>*ind_kn_1_001*</td>
 </tr>
 <tr class="oddrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">MALAYALAM (U+0D00-U+0D7F)
 
 Special processing required</td>
-<td><i>ind_ml_1_001</i></td>
+<td>*ind_ml_1_001*</td>
 </tr>
 <tr class="evenrow">
 <td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">SINHALA (U+0D80-U+0DFF)
@@ -691,8 +691,8 @@ Special positioning required</td>
 <td>charissil, dejavu*, symbola</td>
 </tr>
 <tr class="oddrow">
-<td><b>Unicode Plane 1 (SMP) Supplementary Multilingual Plane</b></td>
-<td>&nbsp;</td>
+<td>**Unicode Plane 1 (SMP) Supplementary Multilingual Plane**</td>
+<td> </td>
 </tr>
 <tr class="evenrow">
 <td>LINEAR B SYLLABARY (U+10000-U+1007F)</td>
@@ -821,8 +821,8 @@ Special positioning required</td>
 <td>freeserif, quivira, symbola</td>
 </tr>
 <tr class="oddrow">
-<td><b>Unicode Plane 2 (SIP) Supplementary Ideographic Plane</b></td>
-<td>&nbsp;</td>
+<td>**Unicode Plane 2 (SIP) Supplementary Ideographic Plane**</td>
+<td> </td>
 </tr>
 <tr class="evenrow">
 <td>CJK UNIFIED IDEOGRAPHS EXTENSION B (U+20000-U+2A6DF)</td>
@@ -840,13 +840,13 @@ Special positioning required</td>
 
 <table class="table"> <thead>
 <tr>
-<td>&nbsp;Font name
+<td> Font name
 
 </td>
 <td>Font file
 
 </td>
-<td>Available from 
+<td>Available from
 
 </td>
 </tr>

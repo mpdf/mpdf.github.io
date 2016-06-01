@@ -17,7 +17,7 @@ As from mPDF 6.0.1 this file will be distribtued as compress.php.distr to avoid 
 As a guideline:
 
 <table class="table"> <thead>
-<tr> <th>&nbsp;Version 5.1
+<tr> <th> Version 5.1
 
 </th>
 <td>Size of mpdf.php file</td>
@@ -48,6 +48,6 @@ Follow the instructions on screen. This will produce (overwriting if necessary) 
 
 Do not delete the <span class="filename">mpdf_source</span> file, which will remain as your original.
 
-<div class="alert alert-success" role="alert"><strong>Tip:</strong> Consider setting <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not need complex table borders, or <span class="parameter">$mpdf-&gt;packTableData = true;</span> if you do not mind the extra processing time.</div>
+<div class="alert alert-success" role="alert">**Tip:** Consider setting <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not need complex table borders, or <span class="parameter">$mpdf-&gt;packTableData = true;</span> if you do not mind the extra processing time.</div>
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> mPDF&gt;=5.0 Ensure that you have set write permissions to <a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">temporary folders</a></div>
+<div class="alert alert-info" role="alert">**Note:** mPDF&gt;=5.0 Ensure that you have set write permissions to <a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">temporary folders</a></div>

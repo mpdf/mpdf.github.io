@@ -12,7 +12,7 @@ falseBoldWeight – Specify weight used for bold text when using an artificial (
 
 # Description
 
-void <b>falseBoldWeight</b>
+void **falseBoldWeight**
 
 Specify weight used for bold text when using an artificial (outline) bold. If bold text is set by &lt;b&gt; and the current font does not have a font file for the bold variant, an artificial bold is created by stroking the outline of the characters. This variable sets the width of the line and thus the "weight" of the bold text. Values between 0 and 10 are recommended.
 
@@ -20,7 +20,7 @@ Specify weight used for bold text when using an artificial (outline) bold. If bo
 
 <span class="parameter">falseBoldWeight</span><span class="smallblock"></span>
 
-<b>Values</b>
+**Values**
 
 <span class="smallblock">INTEGER </span>: set weight of bold text
 
@@ -54,12 +54,12 @@ $mpdf = new mPDF();
 
 $mpdf->falseBoldWeight = 8;
 
-$mpdf->WriteHTML('<p style="font-family: mysimplefont"><b>Hallo World</b><p>');
+$mpdf->WriteHTML('<p style="font-family: mysimplefont">**Hallo World**<p>');
 
 $mpdf->Output();
 
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert"><strong>Note:</strong> False bold text has the same character widths as the normal text.</div>
+<div class="alert alert-info" role="alert">**Note:** False bold text has the same character widths as the normal text.</div>
 
