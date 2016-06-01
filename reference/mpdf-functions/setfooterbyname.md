@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setfooterbyname.html
 modification_time: 2015-08-05T12:01:02+00:00
 ---
 
-(mPDF &gt;= 2.0)
+(mPDF >= 2.0)
 
 SetFooterByName – Sets a page footer by a given name
 

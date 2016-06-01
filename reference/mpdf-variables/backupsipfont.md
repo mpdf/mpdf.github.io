@@ -9,7 +9,7 @@ modification_time: 2015-08-05T12:01:43+00:00
 <div>
 <div>
 
-mPDF &gt;= 5.0
+mPDF >= 5.0
 
 Optional font name to use for CJK characters in Plane 2 Unicode (&gt; U+20000) when using useSubstitutions.
 

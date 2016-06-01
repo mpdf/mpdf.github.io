@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/collapseblockmargins.html
 modification_time: 2015-08-05T12:01:47+00:00
 ---
 
-(mPDF &gt;= 4.2)
+(mPDF >= 4.2)
 
 collapseBlockMargins – Specify whether to collapse (vertical) margins between block elements
 

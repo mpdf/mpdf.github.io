@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setcompression.html
 modification_time: 2015-08-05T12:00:56+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetCompression – Specifies that mPDF should compress the data for the PDF file
 

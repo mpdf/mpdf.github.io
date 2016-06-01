@@ -50,4 +50,4 @@ Do not delete the <span class="filename">mpdf_source</span> file, which will rem
 
 <div class="alert alert-success" role="alert">**Tip:** Consider setting <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not need complex table borders, or <span class="parameter">$mpdf-&gt;packTableData = true;</span> if you do not mind the extra processing time.</div>
 
-<div class="alert alert-info" role="alert">**Note:** mPDF&gt;=5.0 Ensure that you have set write permissions to <a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">temporary folders</a></div>
+<div class="alert alert-info" role="alert">**Note:** mPDF>=5.0 Ensure that you have set write permissions to <a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">temporary folders</a></div>

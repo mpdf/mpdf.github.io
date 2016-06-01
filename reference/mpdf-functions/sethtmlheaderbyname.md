@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/sethtmlheaderbyname.html
 modification_time: 2015-08-05T12:01:05+00:00
 ---
 
-(mPDF &gt;= 2.0)
+(mPDF >= 2.0)
 
 SetHTMLHeaderByName – Sets an HTML page header by a given name
 

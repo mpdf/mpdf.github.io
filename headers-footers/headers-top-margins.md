@@ -6,7 +6,7 @@ permalink: /headers-footers/headers-top-margins.html
 modification_time: 2015-08-05T11:59:53+00:00
 ---
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 In standard usage, mPDF sets the following:
 

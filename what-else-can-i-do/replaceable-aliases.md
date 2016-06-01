@@ -36,7 +36,7 @@ Example: <span class="parameter">{DATE j-m-Y H:m}</span>
 
 </span>
 
-Place in cell inside a table footer i.e. &lt;tfoot&gt;&lt;td&gt;. The total of values in the corresponding column will be output at the bottom of every page, and the end of the tale. Default output is an integer. An optional integer ***N*** after colsum will specify a fixed number of decimal places. (mPDF &gt;= 5.4)
+Place in cell inside a table footer i.e. &lt;tfoot&gt;&lt;td&gt;. The total of values in the corresponding column will be output at the bottom of every page, and the end of the tale. Default output is an integer. An optional integer ***N*** after colsum will specify a fixed number of decimal places. (mPDF >= 5.4)
 
 <span class="parameter">{iteration **varname**}
 

@@ -6,7 +6,7 @@ permalink: /fonts-languages/character-substitution.html
 modification_time: 2015-08-05T11:59:38+00:00
 ---
 
-(mPDF &gt;= 5.0)
+(mPDF >= 5.0)
 
 <div class="alert alert-info" role="alert">**Note:** Prior to mPDF 5.0 there were 2 configurable variables, `$this->useSubstitutions` and `$this->useSubstitutionsMB`. controlling behaviour of core fonts and unicode fonts respectively. From mPDF 5.0, character substitution using core fonts is always ON and cannot be disabled by configurable variables. `$this->useSubstitutionsMB` is depracated but it is recognised as an alias for `$this->useSubstitutions`. `$this->useSubstitutions` controls behaviour in Unicode font documents.</div>
 

@@ -9,7 +9,7 @@ modification_time: 2015-08-05T12:01:09+00:00
 <div>
 <div>
 
-(mPDF &gt;= 5.4)
+(mPDF >= 5.4)
 
 SetVisibility – Set the visibility of subsequent objects
 

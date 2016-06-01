@@ -6,7 +6,7 @@ permalink: /fonts-languages/automatic-font-selection.html
 modification_time: 2015-08-05T11:59:31+00:00
 ---
 
-<div class="alert alert-info" role="alert">**Note:** This describes automatic font selection in mPDF &gt;= v6.</div>
+<div class="alert alert-info" role="alert">**Note:** This describes automatic font selection in mPDF >= v6.</div>
 
 mPDF has two functions which can be used together or separately:
 

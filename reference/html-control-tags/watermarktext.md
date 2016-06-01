@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/watermarktext.html
 modification_time: 2015-08-05T12:01:31+00:00
 ---
 
-(mPDF &gt;= 3.0)
+(mPDF >= 3.0)
 
 watermarktext – Set the text to use as a Watermark
 

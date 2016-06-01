@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/h2toc.html
 modification_time: 2015-08-05T12:01:59+00:00
 ---
 
-(mPDF &gt;= 5.7)
+(mPDF >= 5.7)
 
 # Description
 

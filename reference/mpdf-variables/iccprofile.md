@@ -6,9 +6,9 @@ permalink: /reference/mpdf-variables/iccprofile.html
 modification_time: 2015-08-05T12:01:59+00:00
 ---
 
-(mPDF &gt;= 4.3)
+(mPDF >= 4.3)
 
-ICCProfile – Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a (mPDF &gt;= 5.1) compliant documents
+ICCProfile – Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a (mPDF >= 5.1) compliant documents
 
 # Description
 

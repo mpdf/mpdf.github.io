@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setpagetemplate.html
 modification_time: 2015-08-05T12:01:07+00:00
 ---
 
-(mPDF &gt;= 2.3)
+(mPDF >= 2.3)
 
 SetPageTemplate – Specify a page from an external PDF file to use as a template
 

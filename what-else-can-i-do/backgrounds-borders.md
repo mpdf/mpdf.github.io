@@ -32,7 +32,7 @@ NB CSS2.1 states that the area for background-image should include the padding a
 
 ## Gradients defined as background-image
 
-(mPDF &gt;= 5.1) Gradients can be defined as background-image: both the Mozilla or the draft CSS3 syntax are supported e.g.:
+(mPDF >= 5.1) Gradients can be defined as background-image: both the Mozilla or the draft CSS3 syntax are supported e.g.:
 
 {% highlight php %}
 background: -moz-repeating-linear-gradient(red, blue 20px, red 40px)

@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/sethtmlpagefooter.html
 modification_time: 2015-08-05T12:01:27+00:00
 ---
 
-(mPDF &gt;= 2.0)
+(mPDF >= 2.0)
 
 sethtmlpagefooter – Set an HTML page footer by a given name
 

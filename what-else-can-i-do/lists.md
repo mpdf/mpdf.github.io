@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/lists.html
 modification_time: 2015-08-05T12:00:07+00:00
 ---
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 Lists are handled as for other block level elements, so you can apply any CSS properties usable on blocks (e.g. border, background, padding) to UL/OL and LI tags.
 
@@ -82,7 +82,7 @@ Properties like `text-align:justify` are inherited from surrounding elements, wh
 
 The attribute `start="3"` (integer) works for "OL"; it is an official (though depracated) HTML attribute.
 
-List bullets (`type = disc, circle `or` square`) are drawn rather than using font glyphs (from mPDF &gt;= v6.0), for better consistency.
+List bullets (`type = disc, circle `or` square`) are drawn rather than using font glyphs (from mPDF >= v6.0), for better consistency.
 
 For maximum backwards comaptibility with older versions of mPDF, change the following configurable variables in the `config.php` file:
 

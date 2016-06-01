@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/settitle.html
 modification_time: 2015-08-05T12:01:09+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetTitle – Set the document title
 

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/usesubstitutions.html
 modification_time: 2015-08-05T12:02:39+00:00
 ---
 
-(mPDF &gt;= 4.2)
+(mPDF >= 4.2)
 
 useSubstitutions – Specify whether to substitute missing characters in UTF-8 (multibyte) documents
 
@@ -16,7 +16,7 @@ void **useSubstitutions**
 
 Specify whether to substitute missing characters in UTF-8(multibyte) documents. Characters which cannot be displayed in the current set font, will be substituted by characters in the Adobe core fonts (Symbol, Zapfdingbats etc.), or the backup font(s) specified in the variable in <span class="parameter">$this->backupSubsFont</span> the <span class="filename">config_fonts.php</span> configuration file.
 
-<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 5.0 useSubstitutions controlled the behaviour of character substitution when using Adobe core fonts, and useSubstitutionsMB was used for character susbstitution in multibyte/utf-8 documents. For mPDF &gt;= 5.0 character substitution for documents using core fonts is always enabled.</div>
+<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 5.0 useSubstitutions controlled the behaviour of character substitution when using Adobe core fonts, and useSubstitutionsMB was used for character susbstitution in multibyte/utf-8 documents. For mPDF >= 5.0 character substitution for documents using core fonts is always enabled.</div>
 
 # Values
 

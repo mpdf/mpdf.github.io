@@ -6,7 +6,7 @@ permalink: /paging/using-page.html
 modification_time: 2015-08-05T11:59:48+00:00
 ---
 
-(mPDF &gt;= 4.2)
+(mPDF >= 4.2)
 
 <div class="alert alert-info" role="alert">**Note:** If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.</div>
 

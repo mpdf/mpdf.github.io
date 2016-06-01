@@ -9,7 +9,7 @@ modification_time: 2015-08-05T12:00:39+00:00
 <div>
 <div>
 
-(mPDF &gt;= 5.1)
+(mPDF >= 5.1)
 
 AddSpotColor – Define a Spot colour
 

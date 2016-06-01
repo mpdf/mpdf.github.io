@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/toc-entry.html
 modification_time: 2015-08-05T12:01:13+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 TOC_Entry – Insert an entry for the Table of Contents
 

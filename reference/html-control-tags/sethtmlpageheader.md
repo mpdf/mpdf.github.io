@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/sethtmlpageheader.html
 modification_time: 2015-08-05T12:01:28+00:00
 ---
 
-(mPDF &gt;= 2.0)
+(mPDF >= 2.0)
 
 sethtmlpageheader – Set an HTML page header by a given name
 

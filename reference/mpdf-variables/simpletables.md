@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/simpletables.html
 modification_time: 2015-08-05T12:02:29+00:00
 ---
 
-(mPDF &gt;= 4.3)
+(mPDF >= 4.3)
 
 simpleTables – Disables complex table borders etc. to improve performance
 

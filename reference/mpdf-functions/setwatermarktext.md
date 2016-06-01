@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setwatermarktext.html
 modification_time: 2015-08-05T12:01:10+00:00
 ---
 
-(mPDF &gt;= 2.2)
+(mPDF >= 2.2)
 
 SetWatermarkText – Set the text to use as a Watermark
 

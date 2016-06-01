@@ -12,7 +12,7 @@ In addition to those, the custom tags &lt;ttz&gt; &lt;tts&gt; and &lt;tta&gt; ar
 
 # Invalid HTML?
 
-(mPDF &gt;= 2.2)
+(mPDF >= 2.2)
 
 If you want to hide mPDF custom tags from a browser, enclose any mPDF code within:
 

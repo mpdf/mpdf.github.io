@@ -8,7 +8,7 @@ permalink: /user-s-guide/fonts-languages/character-substitution.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>(mPDF &gt;= 5.0)</p>
+<p>(mPDF >= 5.0)</p>
 <p class="manual_block">**Note:** Prior to mPDF 5.0 there were 2 configurable variables, `$this->useSubstitutions` and `$this->useSubstitutionsMB`. controlling behaviour of core fonts and unicode fonts respectively. From mPDF 5.0, character substitution using core fonts is always ON and cannot be disabled by configurable variables. `$this->useSubstitutionsMB` is depracated but it is recognised as an alias for `$this->useSubstitutions`. `$this->useSubstitutions` controls behaviour in Unicode font documents.</p>
 <h3>Core fonts
 

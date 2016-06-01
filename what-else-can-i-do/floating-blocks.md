@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/floating-blocks.html
 modification_time: 2015-08-05T12:00:01+00:00
 ---
 
-mPDF &gt;= 3.0
+mPDF >= 3.0
 
 # Float
 

@@ -6,7 +6,7 @@ permalink: /paging/different-page-sizes.html
 modification_time: 2015-08-05T11:59:48+00:00
 ---
 
-(mPDF &gt;= 4.3)
+(mPDF >= 4.3)
 
 The page (sheet) size can be reset within the document.
 

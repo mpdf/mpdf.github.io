@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/tabspaces.html
 modification_time: 2015-08-05T12:02:32+00:00
 ---
 
-(mPDF &gt;= 2.3)
+(mPDF >= 2.3)
 
 # Description
 

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/max-colh-correction.html
 modification_time: 2015-08-05T12:02:12+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 max_colH_correction – Sets maximum ratio to allow when adjusting column heights
 

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/writefixedposhtml.html
 modification_time: 2015-08-05T12:01:16+00:00
 ---
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 WriteFixedPosHTML — Write HTML to a fixed position on the current page
 

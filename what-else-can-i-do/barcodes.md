@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/barcodes.html
 modification_time: 2015-08-05T12:00:12+00:00
 ---
 
-(mPDF &gt;=4.0)
+(mPDF >=4.0)
 
 A variety of barcodes can be produced with mPDF. Please see the example file for more information.
 

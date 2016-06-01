@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdefaultfontsize.html
 modification_time: 2015-08-05T12:00:59+00:00
 ---
 
-(mPDF &lt;= 2.2)
+(mPDF <= 2.2)
 
 SetDefaultFontSize — [depracated]
 

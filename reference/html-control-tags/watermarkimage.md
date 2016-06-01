@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/watermarkimage.html
 modification_time: 2015-08-05T12:01:31+00:00
 ---
 
-(mPDF &gt;= 3.0)
+(mPDF >= 3.0)
 
 watermarkimage – Set an image to use as a Watermark
 

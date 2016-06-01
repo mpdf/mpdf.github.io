@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/addpagebyarray.html
 modification_time: 2015-08-05T12:00:39+00:00
 ---
 
-(mPDF &gt;= 5.0)
+(mPDF >= 5.0)
 
 AddPageByArray — Add a new page using an array of parameters
 
@@ -70,9 +70,9 @@ Number of pages added:
 
 <div class="alert alert-info" role="alert">**Note:** If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 
-<div class="alert alert-info" role="alert">**Note:** The description below uses the same parameter names as used in AddPage(), but these were not recognised in mPDF &lt; 5.4  The examples use different parameter names. From mPDF &gt;=5.4 both are supported. See below for a list of alternatives.</div>
+<div class="alert alert-info" role="alert">**Note:** The description below uses the same parameter names as used in AddPage(), but these were not recognised in mPDF &lt; 5.4  The examples use different parameter names. From mPDF >=5.4 both are supported. See below for a list of alternatives.</div>
 
 # Parameters
 

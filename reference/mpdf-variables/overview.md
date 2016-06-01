@@ -466,7 +466,7 @@ The alias <span class="parameter">use_embeddedfonts_1252</span> was used before 
 <td>(4.0)</td>
 <td>
 
-NB Altered behaviour mPDF &gt;= 5.0
+NB Altered behaviour mPDF >= 5.0
 
 Default value <span class="smallblock">TRUE</span> before v4.0
 
@@ -736,7 +736,7 @@ Colorspaces
 <td>*<span class="smallblock">NULL</span>*</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td> </td>
-<td><span class="smallblock">DEPRACATED</span> from &gt;= 4.4</td>
+<td><span class="smallblock">DEPRACATED</span> from >= 4.4</td>
 </tr>
 <tr>
 <td> </td>
@@ -758,7 +758,7 @@ useDefaultCSS2
 <td> </td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td> </td>
-<td><span class="smallblock">DEPRACATED</span> from &gt;= 2.2</td>
+<td><span class="smallblock">DEPRACATED</span> from >= 2.2</td>
 </tr>
 <tr>
 <td>Page Headers &amp; Footers</td>
@@ -842,7 +842,7 @@ useDefaultCSS2
 </td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td> </td>
-<td><span class="smallblock">DEPRACATED</span> from &gt;= 4.0</td>
+<td><span class="smallblock">DEPRACATED</span> from >= 4.0</td>
 </tr>
 <tr>
 <td>Tables</td>
@@ -1036,7 +1036,7 @@ useDefaultCSS2
 <td>*<span class="smallblock">NULL</span>*</td>
 <td> </td>
 <td> </td>
-<td> <span class="smallblock">DEPRACATED</span> from &gt;= 5.1
+<td> <span class="smallblock">DEPRACATED</span> from >= 5.1
 
 </td>
 </tr>

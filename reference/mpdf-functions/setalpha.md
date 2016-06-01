@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setalpha.html
 modification_time: 2015-08-05T12:00:53+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetAlpha – Set the opacity for Images
 

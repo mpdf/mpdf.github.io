@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/aliasnbpages.html
 modification_time: 2015-08-05T12:00:40+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 AliasNbPages – Defines the placeholder used to insert total number of pages into the document
 

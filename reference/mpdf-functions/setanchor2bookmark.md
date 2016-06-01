@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setanchor2bookmark.html
 modification_time: 2015-08-05T12:00:54+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetAnchor2Bookmark – Specifies whether PDF Bookmarks are created automatically from HTML anchors
 

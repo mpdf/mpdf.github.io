@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdefaultbodycss.html
 modification_time: 2015-08-05T12:00:57+00:00
 ---
 
-(mPDF &gt;= 4.2)
+(mPDF >= 4.2)
 
 SetDefaultBodyCSS – Change default CSS properties at runtime
 

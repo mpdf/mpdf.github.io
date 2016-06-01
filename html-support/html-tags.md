@@ -119,7 +119,7 @@ The following HTML tags/elements are recognised and supported (to some extent) b
 <td> ** ✓**</td>
 <td><span class="smallblock">INLINE</span></td>
 <td> </td>
-<td>Isolates a part of text that might be formatted in a different direction from other text outside it. mPDF&gt;=6.0
+<td>Isolates a part of text that might be formatted in a different direction from other text outside it. mPDF>=6.0
 
 </td>
 </tr>
@@ -862,7 +862,7 @@ The following HTML tags/elements are recognised and supported (to some extent) b
 <td>   **✓**</td>
 <td> </td>
 <td> </td>
-<td>Defines a possible line-break (treated as identical to soft-hyphen) mPDF &gt;=5.7
+<td>Defines a possible line-break (treated as identical to soft-hyphen) mPDF >=5.7
 
 </td>
 </tr>

@@ -100,7 +100,7 @@ The following methods have HTML equivalents e,g, &lt;pagebreak /&gt; and AddPage
 
 <a href="{{ "/reference/mpdf-functions/createreference.html" | prepend: site.baseurl }}">CreateIndex</a> -Generate an Index for the document (mPDF &lt; v6.0)
 
-<a href="{{ "/reference/mpdf-functions/insertindex.html" | prepend: site.baseurl }}">InsertIndex</a> - Generate an Index for the document (mPDF &gt;= v6.0)
+<a href="{{ "/reference/mpdf-functions/insertindex.html" | prepend: site.baseurl }}">InsertIndex</a> - Generate an Index for the document (mPDF >= v6.0)
 
 <a href="index3e79.html?tid=145">IndexEntry</a> -Insert an Index entry for the document
 

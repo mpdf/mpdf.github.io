@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setbasepath.html
 modification_time: 2015-08-05T12:00:55+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetBasePath – Specifies a base URL for mPDF to interpret relative URLs
 

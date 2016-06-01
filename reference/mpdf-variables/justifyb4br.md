@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/justifyb4br.html
 modification_time: 2015-08-05T12:02:05+00:00
 ---
 
-(mPDF &gt;= 4.4)
+(mPDF >= 4.4)
 
 justifyB4br – Specify whether to justify line of text beofre a linebreak
 

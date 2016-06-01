@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/fixed-position-blocks.html
 modification_time: 2015-08-05T12:00:00+00:00
 ---
 
-mPDF &gt;= 4.0
+mPDF >= 4.0
 
 # Position
 

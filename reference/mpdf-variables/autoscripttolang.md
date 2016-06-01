@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:01:41+00:00
 <div>
 <div>
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 # Description
 

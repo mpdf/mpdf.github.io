@@ -30,7 +30,7 @@ A watermark image is set by default to print on top of the page contents. The op
 
 Set the watermark(s) to show using: <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkText</a> or <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;=3.0 you can alternatively use the CSS style for background-image on the &lt;body&gt; tag to create a sort of watermark, although this does not support opacity. The difference is that text, tables etc are written over the top of a background-image; a watermark is actually printed over the top of everything else, but is semi-transparent.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF >=3.0 you can alternatively use the CSS style for background-image on the &lt;body&gt; tag to create a sort of watermark, although this does not support opacity. The difference is that text, tables etc are written over the top of a background-image; a watermark is actually printed over the top of everything else, but is semi-transparent.</div>
 
 # See
 

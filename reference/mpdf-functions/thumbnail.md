@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/thumbnail.html
 modification_time: 2015-08-05T12:01:12+00:00
 ---
 
-(mPDFI &gt;= 2.3)
+(mPDFI >= 2.3)
 
 Thumbnail – Create thumbnails of an external PDF file and insert in current document
 

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/indexentrysee.html
 modification_time: 2015-08-05T12:00:48+00:00
 ---
 
-(mPDF &gt;= 2.2)
+(mPDF >= 2.2)
 
 IndexEntrySee – Insert a cross-reference entry for the document Index
 

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/tocpagebreak.html
 modification_time: 2015-08-05T12:01:12+00:00
 ---
 
-(mPDF &gt;= 2.0)
+(mPDF >= 2.0)
 
 TOCpagebreak — Insert a table of contents in the document
 
@@ -36,7 +36,7 @@ The initial parameters specify characteristics for the <acronym title="Table of 
 
 <span class="parameter">font </span>
 
-From mPDF &gt;= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any value set for this is ignored.
+From mPDF >= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any value set for this is ignored.
 
 Set the font-family for the <acronym title="Table of Contents">ToC</acronym>.
 
@@ -44,7 +44,7 @@ Set the font-family for the <acronym title="Table of Contents">ToC</acronym>.
 
 <span class="parameter">font-size</span>
 
-From mPDF &gt;= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any value set for this is ignored.
+From mPDF >= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any value set for this is ignored.
 
 Sets the font size for the <acronym title="Table of Contents">ToC</acronym> in ***points*** (pt)
 
@@ -52,7 +52,7 @@ Sets the font size for the <acronym title="Table of Contents">ToC</acronym> in *
 
 <span class="parameter">indent</span>
 
-From mPDF &gt;= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any value set for this is ignored.
+From mPDF >= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any value set for this is ignored.
 
 Sets the value in millimetres to indent each level of the <acronym title="Table of Contents">ToC</acronym> from the left margin.
 

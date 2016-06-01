@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/packtabledata.html
 modification_time: 2015-08-05T12:02:16+00:00
 ---
 
-(mPDF &gt;= 4.4)
+(mPDF >= 4.4)
 
 packTableData – Use binary packing of table data to reduce memory usage
 

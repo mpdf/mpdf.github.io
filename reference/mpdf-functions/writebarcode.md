@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/writebarcode.html
 modification_time: 2015-08-05T12:01:15+00:00
 ---
 
-(mPDF &gt;= 2.0)
+(mPDF >= 2.0)
 
 mPDF – Write an EAN-13 (ISBN-13) barcode
 

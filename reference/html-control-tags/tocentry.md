@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/tocentry.html
 modification_time: 2015-08-05T12:01:30+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 tocentry – Insert an entry for the Table of Contents
 

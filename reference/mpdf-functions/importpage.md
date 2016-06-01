@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/importpage.html
 modification_time: 2015-08-05T12:00:47+00:00
 ---
 
-(mPDF &gt;= 2.3)
+(mPDF >= 2.3)
 
 ImportPage – Import a page from an external PDF file
 

@@ -17,7 +17,7 @@ Consider the following:
 <li>turn off error_reporting() in PHP, including error_logging</li>
 <li>set <span class="parameter">$mpdf-&gt;useSubstitutions=false;</span> </li>
 <li>avoid using .gif image files if you do not have the GD library installed as part of PHP</li>
-<li>set <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not need complex table borders (mPDF &gt;= 4.3)</li>
+<li>set <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not need complex table borders (mPDF >= 4.3)</li>
 <li>consider if you can use core PDF fonts rather than embedded fonts</li>
 <li>avoid using CSS "page-break-inside:avoid"</li>
 </ul>

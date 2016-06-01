@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/tocpagebreakbyarray.html
 modification_time: 2015-08-05T12:01:13+00:00
 ---
 
-(mPDF &gt;= 5.0)
+(mPDF >= 5.0)
 
 TOCpagebreakByArray — Insert a table of contents in the document using an array of parameters
 

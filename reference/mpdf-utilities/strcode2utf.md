@@ -6,7 +6,7 @@ permalink: /reference/mpdf-utilities/strcode2utf.html
 modification_time: 2015-08-05T12:02:42+00:00
 ---
 
-(htmltoolkit &gt;=1.0)
+(htmltoolkit >=1.0)
 
 strcode2utf – Convert HTML numerical entities to UTF-8 encoded string
 

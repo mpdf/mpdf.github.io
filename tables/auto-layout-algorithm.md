@@ -45,7 +45,7 @@ This disregards the value of autosize.
 </li>
 </ol>
 
-If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v&gt;=4.6)
+If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v>=4.6)
 
 ## For rotated tables
 

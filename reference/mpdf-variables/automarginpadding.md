@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/automarginpadding.html
 modification_time: 2015-08-05T12:01:40+00:00
 ---
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 # Description
 

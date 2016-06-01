@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/formfeed.html
 modification_time: 2015-08-05T12:01:22+00:00
 ---
 
-(mPDF &gt;= 2.3)
+(mPDF >= 2.3)
 
 formfeed — Add a new page keeping current HTML tags/CSS styles active
 
@@ -76,7 +76,7 @@ Number of pages added:
 
 <div class="alert alert-info" role="alert">**Note:** If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 
 # Attributes
 

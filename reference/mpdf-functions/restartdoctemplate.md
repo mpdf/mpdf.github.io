@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/restartdoctemplate.html
 modification_time: 2015-08-05T12:00:51+00:00
 ---
 
-(mPDFI &gt;= 2.4)
+(mPDFI >= 2.4)
 
 RestartDocTemplate – Re-start the use of a Document template from the next page
 

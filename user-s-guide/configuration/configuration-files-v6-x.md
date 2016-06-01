@@ -8,7 +8,7 @@ permalink: /user-s-guide/configuration/configuration-files-v6-x.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>(mPDF &gt;= 6.0)</p>
+<p>(mPDF >= 6.0)</p>
 <p>Four configuration files are included in the root folder of mPDF:</p>
 <table class="bpmTopnTailClear"> <thead>
 <tr>

@@ -8,7 +8,7 @@ permalink: /user-s-guide/fonts-languages/automatic-font-selection.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p class="manual_block">**Note:** This describes automatice font selection in mPDF &gt;= v6.</p>
+<p class="manual_block">**Note:** This describes automatice font selection in mPDF >= v6.</p>
 <p>mPDF has two functions which can be used together or separately:</p>
 <p>`autoScriptToLang` - marks up HTML text using the lang attribute, based on the Unicode script block in question, and configurable values in `config_script2lang.php`.</p>
 <p>`autoLangToFont` - selects the font to use, based on the HTML lang attribute, using configurable values in `config_lang2font.php`.</p>

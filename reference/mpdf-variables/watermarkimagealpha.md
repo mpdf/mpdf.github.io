@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/watermarkimagealpha.html
 modification_time: 2015-08-05T12:02:40+00:00
 ---
 
-(mPDF &gt;= 2.2)
+(mPDF >= 2.2)
 
 # Description
 

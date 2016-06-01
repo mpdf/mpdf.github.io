@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/pdf-x-1a-compliance.html
 modification_time: 2015-08-05T12:00:20+00:00
 ---
 
-(mPDF &gt;= 5.1)
+(mPDF >= 5.1)
 
 PDF/X-1a is a file format to facilitate printing of electronic documents.
 

@@ -8,7 +8,7 @@ permalink: /user-s-guide/fonts-languages/choosing-a-configuration-v6-x.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>(mPDF &gt;= 6.0)</p>
+<p>(mPDF >= 6.0)</p>
 <p>In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at least in some form).</p>
 <p>Some of the things you can change are:</p>
 <ul>

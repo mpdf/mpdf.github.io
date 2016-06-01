@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/indexentry.html
 modification_time: 2015-08-05T12:01:24+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 indexentry – Insert an Index entry for the document
 

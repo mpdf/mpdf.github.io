@@ -6,7 +6,7 @@ permalink: /fonts-languages/font-substitution-5-x.html
 modification_time: 2015-08-05T11:59:37+00:00
 ---
 
-(mPDF &gt;= 5.0)
+(mPDF >= 5.0)
 
 If a font or default font is declared in mPDF (including the default stylesheet, and any CSS stylesheets etc.) the font that is actually set is determined by:
 

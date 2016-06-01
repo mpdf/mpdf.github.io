@@ -16,7 +16,7 @@ You can optionally:
 <li>define/change the style of the numbering - as for lists it can be roman, alphabetical or decimal</li>
 </ul>
 
-From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.
+From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.
 
 From mPDF 6.0 the page number style can include any of the values used for list-style-type
 

@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/pdf-a1-b-compliance.html
 modification_time: 2015-08-05T12:00:20+00:00
 ---
 
-(mPDF &gt;= 4.3)
+(mPDF >= 4.3)
 
 PDF/A1-b is a file format for the long-term archiving of electronic documents. It is based on the PDF Reference Version 1.4 from Adobe Systems Inc. and is defined by ISO 19005-1:2005
 

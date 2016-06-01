@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/dottab.html
 modification_time: 2015-08-05T12:01:21+00:00
 ---
 
-(mPDF &gt;= 4.3)
+(mPDF >= 4.3)
 
 dottab – Insert dots to following (right-aligned) text
 

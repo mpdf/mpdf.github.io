@@ -9,7 +9,7 @@ modification_time: 2015-08-05T12:02:03+00:00
 <div>
 <div>
 
-mPDF &gt;= 5.0
+mPDF >= 5.0
 
 Allow use of {iteration varname} in THEAD
 

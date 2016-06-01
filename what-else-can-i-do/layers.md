@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/layers.html
 modification_time: 2015-08-05T12:00:14+00:00
 ---
 
-(mPDF &gt;= 5.7)
+(mPDF >= 5.7)
 
 CSS "z-index" can be used to utilise layers in the PDF document.
 

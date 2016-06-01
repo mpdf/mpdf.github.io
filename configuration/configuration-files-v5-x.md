@@ -6,7 +6,7 @@ permalink: /configuration/configuration-files-v5-x.html
 modification_time: 2015-08-05T11:59:39+00:00
 ---
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 Three configuration files are included in the root folder of mPDF:
 
@@ -18,7 +18,7 @@ Three configuration files are included in the root folder of mPDF:
 </tr>
 </thead> <tbody>
 <tr>
-<td><span class="filename">config.php</span> 
+<td><span class="filename">config.php</span>
 
 </td>
 <td>Configure most <a href="{{ "/configuration/configuration-variables.html" | prepend: site.baseurl }}">variables</a> which affect mPDF. These values can be set at the beginning of individual scripts, but changes here will affect all of your PDF files.</td>
@@ -32,7 +32,7 @@ Three configuration files are included in the root folder of mPDF:
 <td>This was contained in the function <span class="function">GetCodepage()</span> in the <span class="filename">htmltoolkit.php</span> file.</td>
 </tr>
 <tr>
-<td><span class="filename">config_fonts.php</span> 
+<td><span class="filename">config_fonts.php</span>
 
 </td>
 <td>Details of fonts installed in mPDF.</td>

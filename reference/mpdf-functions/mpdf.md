@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/mpdf.html
 modification_time: 2015-08-05T12:00:37+00:00
 ---
 
-(mPDF &gt;= 5.0)
+(mPDF >= 5.0)
 
 mPDF – Initialise an instance of mPDF class
 

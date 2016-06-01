@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/annotation.html
 modification_time: 2015-08-05T12:00:41+00:00
 ---
 
-(mPDF &gt;= 2.2)
+(mPDF >= 2.2)
 
 Annotation – Add an Annotation to the document
 
@@ -82,7 +82,7 @@ This specifies the text to appear in the Annotation properties.
 
 <span class="parameter">opacity</span>
 
-Sets the opacity of the Annotation marker. Values must be greater than 0 and &lt;= 1.
+Sets the opacity of the Annotation marker. Values must be greater than 0 and <= 1.
 
 <span class="smallblock">BLANK</span> or omitted or 0: sets the opacity to the value of <a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a> (<span class="smallblock">DEFAULT</span> 0.5), unless <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a> forces the Annotations to appear in the margin, when the <span class="smallblock">DEFAULT</span> is 1
 

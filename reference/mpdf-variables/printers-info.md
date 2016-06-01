@@ -11,7 +11,7 @@ modification_time: 2015-08-05T12:02:20+00:00
 <div>
 <div>
 
-mPDF &gt;= 5.1
+mPDF >= 5.1
 
 Adds date and page info for printer when using @page and "marks:crop;"
 

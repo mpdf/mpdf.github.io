@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/showwatermarkimage.html
 modification_time: 2015-08-05T12:02:27+00:00
 ---
 
-(mPDF &gt;= 2.2)
+(mPDF >= 2.2)
 
 # Description
 

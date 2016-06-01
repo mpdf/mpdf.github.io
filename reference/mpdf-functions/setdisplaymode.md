@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdisplaymode.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetDisplayMode – Specify the initial Display Mode when the PDF file is opened in Adobe Reader
 
@@ -48,9 +48,9 @@ continuous: Display the pages in one column
 
 two: Display the pages in two columns (first page determined by document direction (e.g. RTL))
 
-twoleft: Display the pages in two columns, with the first page displayed on the left side (mPDF &gt;= 5.2)
+twoleft: Display the pages in two columns, with the first page displayed on the left side (mPDF >= 5.2)
 
-tworight: Display the pages in two columns, with the first page displayed on the right side (mPDF &gt;= 5.2)
+tworight: Display the pages in two columns, with the first page displayed on the right side (mPDF >= 5.2)
 
 default: User's default setting in Adobe Reader
 

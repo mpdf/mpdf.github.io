@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/createindex.html
 modification_time: 2015-08-05T12:00:43+00:00
 ---
 
-(mPDF &gt;= 2.2)
+(mPDF >= 2.2)
 
 CreateIndex — Generate an Index for the document
 

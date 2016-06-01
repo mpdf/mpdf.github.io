@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/forms.html
 modification_time: 2015-08-05T12:00:13+00:00
 ---
 
-mPDF can generate a static view of HTML forms and their elements, or (from mPDF &gt;=5.3) can produce an "Active Form".
+mPDF can generate a static view of HTML forms and their elements, or (from mPDF >=5.3) can produce an "Active Form".
 
 # "Active" Forms
 
@@ -80,7 +80,7 @@ Javascript can be set for buttons using `onClick=""` but note this uses "Acrobat
 
 For select, text and textarea you can use `onChange=""` which is triggered after the value has been changed.
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;= 5.4, &lt;textarea&gt; and &lt;input type="text"&gt; will accept javascript as: `onKeystroke`, `onValidate`, `onCalculate` and `onFormat`.
+<div class="alert alert-info" role="alert">**Note:** From mPDF >= 5.4, &lt;textarea&gt; and &lt;input type="text"&gt; will accept javascript as: `onKeystroke`, `onValidate`, `onCalculate` and `onFormat`.
 
 `onChange` is depracated but works as `onCalculate` (for &lt;textarea&gt; and &lt;input&gt;).
 

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/falseboldweight.html
 modification_time: 2015-08-05T12:01:56+00:00
 ---
 
-(mPDF &gt;= 4.2)
+(mPDF >= 4.2)
 
 falseBoldWeight – Specify weight used for bold text when using an artificial (outline) bold
 

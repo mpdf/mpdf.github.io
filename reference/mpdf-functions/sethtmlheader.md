@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/sethtmlheader.html
 modification_time: 2015-08-05T12:01:04+00:00
 ---
 
-(mPDF &gt;= 1.2)
+(mPDF >= 1.2)
 
 SetHTMLHeader – Sets an HTML page header
 

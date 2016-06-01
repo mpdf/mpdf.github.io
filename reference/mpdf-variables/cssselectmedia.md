@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/cssselectmedia.html
 modification_time: 2015-08-05T12:01:49+00:00
 ---
 
-(mPDF &gt;= 4.4)
+(mPDF >= 4.4)
 
 CSSselectMedia – Selects which media-dependent CSS stylesheets to use
 

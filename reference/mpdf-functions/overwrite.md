@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/overwrite.html
 modification_time: 2015-08-05T12:00:50+00:00
 ---
 
-(mPDFI &gt;= 2.3)
+(mPDFI >= 2.3)
 
 OverWrite – Replace specified text strings in an existing PDF file
 
@@ -22,7 +22,7 @@ Overwrite() does not re-flow the text from the source file. If the <span class="
 
 <div class="alert alert-info" role="alert">**Note:** If you want the final PDF file to be encrypted, you need to encrypt the original source file. Make sure that you specify a password otherwise mPDF uses a random password and **OverWrite()** will not be able to access the text.</div>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;= 5.3 a unique encryption key is generated each time you create a PDF file. So to use encryption you need to save variables when you create the original file. See Example 2.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF >= 5.3 a unique encryption key is generated each time you create a PDF file. So to use encryption you need to save variables when you create the original file. See Example 2.</div>
 
 # Parameters
 

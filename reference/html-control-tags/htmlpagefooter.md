@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/htmlpagefooter.html
 modification_time: 2015-08-05T12:01:23+00:00
 ---
 
-(mPDF &gt;= 2.0)
+(mPDF >= 2.0)
 
 htmlpagefooter – Define an HTML page footer with a given name
 

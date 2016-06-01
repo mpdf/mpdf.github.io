@@ -12,7 +12,7 @@ You can insert one or more tables of contents in the document using HTML or PHP 
 
 <a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">tocentry</a>&gt; can be used to mark entries for the <acronym title="Table of Contents">ToC</acronym> .
 
-From mPDF &gt;= 5.7, CSS styles can be used to control layout of the ToC.
+From mPDF >= 5.7, CSS styles can be used to control layout of the ToC.
 
 At the end of the document, the ToC is generated, creating HTML code (internally) which looks like this:
 

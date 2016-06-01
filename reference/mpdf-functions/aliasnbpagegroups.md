@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/aliasnbpagegroups.html
 modification_time: 2015-08-05T12:00:41+00:00
 ---
 
-(mPDF &gt;= 2.0)
+(mPDF >= 2.0)
 
 AliasNbPageGroups – Defines the placeholder used to insert total page number into the document
 

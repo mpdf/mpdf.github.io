@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setsubject.html
 modification_time: 2015-08-05T12:01:08+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetSubject – Set the document metadata Subject
 

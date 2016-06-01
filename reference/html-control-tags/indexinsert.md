@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/indexinsert.html
 modification_time: 2015-08-05T12:01:24+00:00
 ---
 
-(mPDF &gt;= 3.0)
+(mPDF >= 3.0)
 
 indexinsert  — Generate an Index for the document
 
@@ -14,7 +14,7 @@ indexinsert  — Generate an Index for the document
 
 &lt;**indexinsert** [ <span class="parameter">font</span> ] [ <span class="parameter">font-size</span> ] [ <span class="parameter">line-spacing</span> ] [ <span class="parameter">cols</span> ] [ <span class="parameter">gap</span> ] [ <span class="parameter">offset</span> ] [ <span class="parameter">links</span> ] [ <span class="parameter">usedivletters</span> ] [ <span class="parameter">div-font</span> ] [ <span class="parameter">div-font-size</span> ] /&gt;
 
-From mPDF v 6.0 onwards, the attributes have changed. See <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a> for more information. The following is for mPDF &gt;= v6.0:
+From mPDF v 6.0 onwards, the attributes have changed. See <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a> for more information. The following is for mPDF >= v6.0:
 
 &lt;**indexinsert** [ <span class="parameter">links</span> ] [ <span class="parameter">usedivletters</span> ] [ <span class="parameter">collation</span> ] [ <span class="parameter">collation-group</span> ] /&gt;
 

@@ -12,7 +12,7 @@ Default = {nb}
 
 You can assign this value directly, or use the function: <a href="{{ "/reference/mpdf-functions/aliasnbpages.html" | prepend: site.baseurl }}">AliasNbPages()</a>
 
-<div class="alert alert-info" role="alert">**Note:** This variable originally started with an uppercase letter (&lt;= mPDF 2.2). Support for the uppercase version was removed in mPDF &gt;= 6.0</div>
+<div class="alert alert-info" role="alert">**Note:** This variable originally started with an uppercase letter (<= mPDF 2.2). Support for the uppercase version was removed in mPDF >= 6.0</div>
 
 # See Also
 

@@ -18,9 +18,9 @@ The PHP function preg_replace() has a maximum string length it will parse (by de
 
 You may be able to increase the value of <a href="http://www.php.net/manual/en/pcre.configuration.php#ini.pcre.backtrack-limit">pcre.backtrack_limit</a> at runtime if your system allows; alternatively, break your HTML into chunks and pass them one at a time to WriteHTML()
 
-pcre.backtrack_limit is configurable from PHP &gt;= 5.2.0
+pcre.backtrack_limit is configurable from PHP >= 5.2.0
 
-The default value was increased from 100,000 to 1,000,000 from PHP &gt;= 5.3.7
+The default value was increased from 100,000 to 1,000,000 from PHP >= 5.3.7
 
 {% highlight php %}
 ini_set("pcre.backtrack_limit","1000000");
@@ -40,7 +40,7 @@ A timeout due to Apache configuration 'TimeOut' will cause the script to termina
 
 See also <a href="{{ "/troubleshooting/blank-screen.html" | prepend: site.baseurl }}">Blank screen</a> for a bug when using localhost
 
-# Problems fixed from mPDF &gt;= 5.0
+# Problems fixed from mPDF >= 5.0
 
 ## Indic Fonts - ASCII characters
 

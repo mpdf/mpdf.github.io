@@ -31,12 +31,12 @@ XHTML specification is recommended for best compliance with mPDF.
 </tr>
 <tr>
 <td>dir</td>
-<td>rtl | ltr   (mPDF &gt;= 6.0)<span class="smallblock"></span></td>
+<td>rtl | ltr   (mPDF >= 6.0)<span class="smallblock"></span></td>
 </tr>
 <tr>
 <td>HTML, BODY</td>
 <td>dir</td>
-<td>rtl | ltr  (mPDF &gt;= 5.0)
+<td>rtl | ltr  (mPDF >= 5.0)
 
 </td>
 </tr>
@@ -96,7 +96,7 @@ Added mPDF 5.7
 </tr>
 <tr>
 <td>*(repeat_header)*</td>
-<td>1   (removed from mPDF &gt;= 5.4; use &lt;thead&gt;)
+<td>1   (removed from mPDF >= 5.4; use &lt;thead&gt;)
 
 </td>
 </tr>
@@ -104,9 +104,9 @@ Added mPDF 5.7
 <td>*autosize*</td>
 <td>
 
-<span class="smallblock">FLOAT</span>  value &gt;= 0
+<span class="smallblock">FLOAT</span>  value >= 0
 
-Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be &gt;=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom attribute)
+Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be >=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom attribute)
 
 </td>
 </tr>
@@ -170,7 +170,7 @@ Shrinks a table to fit if width is too small to allow complete words to fit. The
 </tr>
 <tr>
 <td>start</td>
-<td><span class="smallblock">INTEGER</span> (mPDF &gt;= 5.7)</td>
+<td><span class="smallblock">INTEGER</span> (mPDF >= 5.7)</td>
 </tr>
 <tr>
 <td>UL</td>
@@ -233,11 +233,11 @@ When width is specified e.g. width="3cm" this is applied to the rotated image i.
 <tr>
 <td rowspan="2">FORM</td>
 <td>method</td>
-<td>get | post  (default=post)  (mPDF &gt;= 5.3)</td>
+<td>get | post  (default=post)  (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>action</td>
-<td><span class="smallblock">URI</span>  (mPDF &gt;= 5.3</td>
+<td><span class="smallblock">URI</span>  (mPDF >= 5.3</td>
 </tr>
 <tr>
 <td rowspan="6">TEXTAREA</td>
@@ -254,15 +254,15 @@ When width is specified e.g. width="3cm" this is applied to the rotated image i.
 </tr>
 <tr>
 <td>required</td>
-<td>required  [HTML5] (mPDF &gt;= 5.3)</td>
+<td>required  [HTML5] (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>spellcheck</td>
-<td>true | false [HTML5] Default=false (mPDF &gt;= 5.3)</td>
+<td>true | false [HTML5] Default=false (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>onChange</td>
-<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td rowspan="3">TEXTAREA, SELECT, INPUT
@@ -302,13 +302,13 @@ size = n rows visible. Default=1
 </tr>
 <tr>
 <td>required</td>
-<td>required [HTML5] (mPDF &gt;= 5.3)</td>
+<td>required [HTML5] (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>spellcheck</td>
 <td>
 
-true | false [HTML5] Default=false (mPDF &gt;= 5.3)
+true | false [HTML5] Default=false (mPDF >= 5.3)
 
 Only if also editable and size=1</td>
 </tr>
@@ -316,7 +316,7 @@ Only if also editable and size=1</td>
 <td>editable</td>
 <td>
 
-editable  [HTML5] Default=false (mPDF &gt;= 5.3)
+editable  [HTML5] Default=false (mPDF >= 5.3)
 
 Only if size=1
 
@@ -324,7 +324,7 @@ Only if size=1
 </tr>
 <tr>
 <td>onChange</td>
-<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td rowspan="2">OPTION</td>
@@ -366,19 +366,19 @@ Only if size=1
 </tr>
 <tr>
 <td>required</td>
-<td>required [HTML5] (mPDF &gt;= 5.3)</td>
+<td>required [HTML5] (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>spellcheck</td>
 <td>
 
-true | false [HTML5] Default=false (mPDF &gt;= 5.3)
+true | false [HTML5] Default=false (mPDF >= 5.3)
 
 </td>
 </tr>
 <tr>
 <td>onChange</td>
-<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td rowspan="3">INPUT (image, button, submit, reset)</td>
@@ -391,7 +391,7 @@ true | false [HTML5] Default=false (mPDF &gt;= 5.3)
 </tr>
 <tr>
 <td>onClick</td>
-<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>INPUT (button, submit, reset)</td>
@@ -400,7 +400,7 @@ true | false [HTML5] Default=false (mPDF &gt;= 5.3)
 
 noprint
 
-(mPDF &gt;= 5.3)
+(mPDF >= 5.3)
 
 </td>
 </tr>
@@ -414,7 +414,7 @@ noprint
 <tr>
 <td>DOTTAB</td>
 <td>*outdent*</td>
-<td><span class="smallblock">LENGTH</span> (mPDF &gt;= 5.7)</td>
+<td><span class="smallblock">LENGTH</span> (mPDF >= 5.7)</td>
 </tr>
 <tr>
 <td>METER</td>
@@ -462,7 +462,7 @@ value, max, min, low, high, optimum
 </thead> <tbody>
 <tr>
 <td>2.0</td>
-<td>TD border="1" was supported &lt;= mPDF 1.3, but is not valid HTML and is now ignored</td>
+<td>TD border="1" was supported <= mPDF 1.3, but is not valid HTML and is now ignored</td>
 </tr>
 <tr>
 <td> </td>

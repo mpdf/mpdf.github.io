@@ -6,7 +6,7 @@ permalink: /fonts-languages/opentype-layout-otl.html
 modification_time: 2015-08-05T11:59:27+00:00
 ---
 
-OpenType layout features were introduced in mPDF &gt;= 6.0
+OpenType layout features were introduced in mPDF >= 6.0
 
 # Advanced Typography
 

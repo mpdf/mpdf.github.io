@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/pagebreak.html
 modification_time: 2015-08-05T12:01:25+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 pagebreak — Add a new page
 
@@ -78,7 +78,7 @@ Number of pages added:
 
 <div class="alert alert-info" role="alert">**Note:** &lt;newpage&gt; and &lt;page_break&gt; are synonymous. &lt;pagebreak&gt; is the preferred form.</div>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF &gt;= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
 
 # Attributes
 

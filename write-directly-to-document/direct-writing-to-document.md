@@ -14,7 +14,7 @@ The methods Cell() and Text() from FPDF are still present, but should not be use
 
 All the methods described below handle UTF-8 encoded text, and all but AutosizeText() and watermark() will reverse RTL (right-to-left) text when appropriate.
 
-## Direct writing methods and OTL (updated: mPDF &gt;= 6.0)
+## Direct writing methods and OTL (updated: mPDF >= 6.0)
 
 <ul>
 <li>WriteText() WriteCell() Watermark() AutoSizeText() and ShadedBox() DO support complex scripts and right-to-left text (RTL).</li>

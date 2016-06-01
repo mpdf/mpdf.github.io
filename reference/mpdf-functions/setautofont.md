@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setautofont.html
 modification_time: 2015-08-05T12:00:55+00:00
 ---
 
-(mPDF &gt;= 2.3   &lt;= 5.7)
+(mPDF >= 2.3   <= 5.7)
 
 SetAutoFont – Automatically detect language in the input HTML text and use appropriate fonts
 

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/autovietnamese.html
 modification_time: 2015-08-05T12:01:42+00:00
 ---
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 # Description
 

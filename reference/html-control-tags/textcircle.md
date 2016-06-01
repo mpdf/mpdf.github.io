@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/textcircle.html
 modification_time: 2015-08-05T12:01:29+00:00
 ---
 
-(mPDF &gt;= 5.4)
+(mPDF >= 5.4)
 
 textcircle – Draw a circle using specified text
 
@@ -18,11 +18,11 @@ Draw a circle using specified text. One or both of top-text and/or bottom-text m
 
 <div class="alert alert-info" role="alert">**Note:** CSS style are not inherited from parent elements.</div>
 
-From mPDF &gt;= 5.6 the CSS property `<span class="parameter">font-size`</span> can be set to `auto`. This automatically sizes text to fill a semicircle (if both top and bottom set) or a full circle (if only one set).
+From mPDF >= 5.6 the CSS property `<span class="parameter">font-size`</span> can be set to `auto`. This automatically sizes text to fill a semicircle (if both top and bottom set) or a full circle (if only one set).
 
 Circular Text is displayed as though an in-line element. Automatic kerning will be applied to the text if <a href="{{ "/reference/mpdf-variables/usekerning.html" | prepend: site.baseurl }}">useKerning</a> is <span class="smallblock">TRUE</span>. 
 
-<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 5.6 the textcircle was displayed with a white background. in &gt;= 5.6 the background has been changed to transparent by default.</div>
+<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 5.6 the textcircle was displayed with a white background. in >= 5.6 the background has been changed to transparent by default.</div>
 
 # Parameters
 

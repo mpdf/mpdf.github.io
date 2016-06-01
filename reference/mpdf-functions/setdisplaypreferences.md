@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdisplaypreferences.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-(mPDF &gt;= 3.0)
+(mPDF >= 3.0)
 
 SetDisplayPreferences – Defines the way the document shall be presented on the screen
 
@@ -38,7 +38,7 @@ CenterWindow: whether to position the document’s window in the center of the s
 
 FitWindow: whether to resize the document’s window to fit the size of the first displayed page
 
-NoPrintScaling: overrides the user's default setting to scale the printing size (mPDF &gt;= 5.1)
+NoPrintScaling: overrides the user's default setting to scale the printing size (mPDF >= 5.1)
 
 # Examples
 

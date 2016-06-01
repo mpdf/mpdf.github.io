@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/hyphenation.html
 modification_time: 2015-08-05T12:00:01+00:00
 ---
 
-(mPDF &gt;= 2.5)
+(mPDF >= 2.5)
 
 Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)
 

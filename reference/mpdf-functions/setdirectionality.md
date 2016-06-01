@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdirectionality.html
 modification_time: 2015-08-05T12:00:59+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetDirectionality – Set the document RTL state
 

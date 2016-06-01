@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/writehtml.html
 modification_time: 2015-08-05T12:01:16+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 WriteHTML — Write HTML code to the document
 

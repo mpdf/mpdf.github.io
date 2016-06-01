@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/importing-files-templates.html
 modification_time: 2015-08-05T12:00:18+00:00
 ---
 
-(mPDF &gt;= 2.3)
+(mPDF >= 2.3)
 
 Using an extension of mPDF, pages from external PDF files can be imported into 'templates' and used throughout the current document. This can be used for:
 
@@ -17,7 +17,7 @@ Using an extension of mPDF, pages from external PDF files can be imported into '
 <li>create thumbnails as handouts etc. from a document you have produced</li>
 </ul>
 
-<div class="alert alert-info" role="alert">**Note:** On limited testing, mPDF appears to import any PDF file (with a version &lt;= 1.4, or one produced by mPDF) as long as it is not password protected. Text and images are imported, but links, bookmarks etc. are not. LZW encoding is supported from mPDF 4.3 onwards</div>
+<div class="alert alert-info" role="alert">**Note:** On limited testing, mPDF appears to import any PDF file (with a version <= 1.4, or one produced by mPDF) as long as it is not password protected. Text and images are imported, but links, bookmarks etc. are not. LZW encoding is supported from mPDF 4.3 onwards</div>
 
 <div class="alert alert-success" role="alert">**Tip:** mPDF imports all embedded fonts required for the document, even if they are the same as the ones used in the document being written. Try to keep the file size of the external source PDF file down to a minimum.</div>
 

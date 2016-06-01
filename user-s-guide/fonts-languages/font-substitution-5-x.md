@@ -8,7 +8,7 @@ permalink: /user-s-guide/fonts-languages/font-substitution-5-x.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p>(mPDF &gt;= 5.0)</p>
+<p>(mPDF >= 5.0)</p>
 <p>If a font or default font is declared in mPDF (including the default stylesheet, and any CSS stylesheets etc.) the font that is actually set is determined by:</p>
 <h3>Standard use</h3>
 <p>If called in HTML/CSS the font-family name is converted to an mPDF font-family name (see <a href="/user-s-guide/fonts-languages/font-names.html">Font names in 5.x</a>) e.g.</p>

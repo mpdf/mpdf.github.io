@@ -16,7 +16,7 @@ class mPDF {
 function mPDF(...)
 {% endhighlight %}
 
-This means it is still compatible with PHP4, and is backwards compatible using PHP5 - **UNLESS** you are using namespaces in PHP &gt;= 5.3
+This means it is still compatible with PHP4, and is backwards compatible using PHP5 - **UNLESS** you are using namespaces in PHP >= 5.3
 
 In this case you will need to rename:
 

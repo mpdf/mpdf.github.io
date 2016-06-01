@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/columnbreak.html
 modification_time: 2015-08-05T12:01:20+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 columnbreak – Start a new Column
 

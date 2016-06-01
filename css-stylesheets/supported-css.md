@@ -39,7 +39,7 @@ Also supported are:
 <li>spot(COLOR NAME, 100%). (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)</li>
 </ul>
 
-mPDF  &gt;= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);
+mPDF  >= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);
 
 *Alpha values (transparency) are only supported on background colours - not text color
 
@@ -55,7 +55,7 @@ mPDF  &gt;= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: 
 <td>direction
 
 </td>
-<td>rtl | ltr (mPDF &gt;= 5.0)</td>
+<td>rtl | ltr (mPDF >= 5.0)</td>
 </tr>
 <tr>
 <td><span class="smallblock">COMMON TEXT STYLES</span>
@@ -73,7 +73,7 @@ mPDF  &gt;= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: 
 <td>line-height</td>
 <td>Line height as a factor of font-height. Usual values around 1.2 or 1.3
 
-Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)</td>
+Also accepts px, pc, pt, cm, mm, in, em and % (mPDF >= 4.0)</td>
 </tr>
 <tr>
 <td>background, background-image, background-position, background-repeat, background-color</td>
@@ -81,7 +81,7 @@ Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)</td>
 
 background is parsed as per the CSS specification.
 
-background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).
+background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF >= 5.1).
 
 background-position is supported as per CSS2.1
 
@@ -101,7 +101,7 @@ See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" 
 
 normal | [ from-image
 
- &lt;dpi&gt; ]  (mPDF &gt;= 5.1)
+ &lt;dpi&gt; ]  (mPDF >= 5.1)
 
 Custom tag, but as for image-resolution in CSS3
 
@@ -201,7 +201,7 @@ Size style and colour e.g.
 
 <span class="smallblock">COLOR</span>
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 </td>
 </tr>
@@ -211,7 +211,7 @@ Size style and colour e.g.
 
 <span class="smallblock">LENGTH</span> 
 
-(mPDF &gt;= 4.0)</td>
+(mPDF >= 4.0)</td>
 </tr>
 <tr>
 <td>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</td>
@@ -219,7 +219,7 @@ Size style and colour e.g.
 
 solid|dotted|dashed|double
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 (double was added mPDF 4.2)
 
@@ -263,7 +263,7 @@ NB % is interpreted as % of printable page height (inside margins)
 </tr>
 <tr>
 <td>page-break-after</td>
-<td>auto | avoid | always | left | right (extended mPDF &gt;= 5.4)
+<td>auto | avoid | always | left | right (extended mPDF >= 5.4)
 
 </td>
 </tr>
@@ -281,7 +281,7 @@ NB % is interpreted as % of printable page height (inside margins)
 </tr>
 <tr>
 <td>visibility</td>
-<td>visible | hidden | *printonly* | *screenonly*  (mPDF &gt;= 5.4)
+<td>visible | hidden | *printonly* | *screenonly*  (mPDF >= 5.4)
 
 </td>
 </tr>
@@ -295,7 +295,7 @@ NB % is interpreted as % of printable page height (inside margins)
 
 Line height as a factor of font-height. Usual values around 1.2 or 1.3
 
-Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)
+Also accepts px, pc, pt, cm, mm, in, em and % (mPDF >= 4.0)
 
 'normal' also accepted (set by default to 1.3 in mPDF)
 
@@ -307,7 +307,7 @@ Also accepts px, pc, pt, cm, mm, in, em and % (mPDF &gt;= 4.0)
 
 inline-line-height | block-line-height | max-height | grid-height
 
-As per draft CSS3 spec. (mPDF &gt;= 6.0)
+As per draft CSS3 spec. (mPDF >= 6.0)
 
 Default = inline-line-height
 
@@ -319,7 +319,7 @@ Default = inline-line-height
 
 consider-shifts | disregard-shifts
 
-As per draft CSS3 spec. (mPDF &gt;= 6.0)
+As per draft CSS3 spec. (mPDF >= 6.0)
 
 Default = consider-shifts
 
@@ -331,7 +331,7 @@ Default = consider-shifts
 
 background is parsed as per the CSS specification.
 
-background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).
+background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF >= 5.1).
 
 background-position is supported as per CSS2.1
 
@@ -361,7 +361,7 @@ extended to include "content-box" from mPDF 5.7
 
 padding-box|content-box|border-box  (default padding-box)
 
-As per CSS3. mPDF &gt;= 5.7
+As per CSS3. mPDF >= 5.7
 
 </td>
 </tr>
@@ -371,7 +371,7 @@ As per CSS3. mPDF &gt;= 5.7
 
 [ &lt;length&gt; | &lt;percentage&gt; | auto ]{1,2} | cover | contain  (default = auto)
 
-As per CSS3. mPDF &gt;= 5.7
+As per CSS3. mPDF >= 5.7
 
 </td>
 </tr>
@@ -381,7 +381,7 @@ As per CSS3. mPDF &gt;= 5.7
 
 normal | [ from-image
 
- &lt;dpi&gt; ]  (mPDF &gt;= 5.1)
+ &lt;dpi&gt; ]  (mPDF >= 5.1)
 
 Custom tag, but as for image-resolution in CSS3
 
@@ -439,7 +439,7 @@ box-shadow
 
 As per CSS3 specification. 'inset' is not supported.
 
-(mPDF &gt;= 5.4)
+(mPDF >= 5.4)
 
 </td>
 </tr>
@@ -513,7 +513,7 @@ absolute - uses physical page as containing element;
 
 fixed - uses printable page (inside margins) as containing element.
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 NB Only supported for top-level elements i.e. where the parent element is &lt;body&gt;. Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported.
 
@@ -527,7 +527,7 @@ visible | hidden | auto
 
 Applies to block elements with position fixed or absolute. auto - causes text to autofit within the block size (constrained if necessary to page edges).
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 </td>
 </tr>
@@ -537,7 +537,7 @@ Applies to block elements with position fixed or absolute. auto - causes text to
 
 none | manual | auto (default = manual)
 
-As per CSS. (mPDF  &gt;= 5.7)
+As per CSS. (mPDF  >= 5.7)
 
 </td>
 </tr>
@@ -547,7 +547,7 @@ As per CSS. (mPDF  &gt;= 5.7)
 
 90 | -90
 
-Applies only to block elements with position fixed or absolute. (mPDF &gt;= 5.0)
+Applies only to block elements with position fixed or absolute. (mPDF >= 5.0)
 
 Sizing and layout of the block element using top, left, bottom, right, width and height are applied BEFORE the element is rotated. The top and left co-ordinates are respected for positioning, except when bottom or right are specified without respective top or left when the bottom/right co-ordinates are used.
 
@@ -561,7 +561,7 @@ Sizing and layout of the block element using top, left, bottom, right, width and
 
 Applies to block elements with position fixed or absolute.
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 </td>
 </tr>
@@ -587,7 +587,7 @@ NB Fixed-position or floating elements nested inside other fixed-position or flo
 </tr>
 <tr>
 <td>direction</td>
-<td>rtl | ltr (mPDF &gt;= 5.1)</td>
+<td>rtl | ltr (mPDF >= 5.1)</td>
 </tr>
 </tbody> </table>
 <table class="table"> <thead>
@@ -608,7 +608,7 @@ LIST tags: OL, UL
 
  'list-style-position'
 
- 'list-style-image' ]   mPDF &gt;= 6.0</td>
+ 'list-style-image' ]   mPDF >= 6.0</td>
 </tr>
 <tr>
 <td>list-style-type* *</td>
@@ -646,7 +646,7 @@ Custom list-style-type is recognised e.g.: U+263Argb(255,0,0);
 
 <span class="smallblock">&lt;URI&gt;</span>
 
-mPDF &gt;= 6.0
+mPDF >= 6.0
 
 </td>
 </tr>
@@ -656,7 +656,7 @@ mPDF &gt;= 6.0
 
 inside | outside  (default = outside)
 
-mPDF &gt;= 6.0
+mPDF >= 6.0
 
 </td>
 </tr>
@@ -676,7 +676,7 @@ LI
 
  'list-style-position'
 
- 'list-style-image' ]   mPDF &gt;= 6.0
+ 'list-style-image' ]   mPDF >= 6.0
 
 </td>
 </tr>
@@ -714,7 +714,7 @@ Custom list-style-type is recognised e.g.: U+263Argb(255,0,0);
 
 <span class="smallblock">&lt;URI&gt;</span>
 
-mPDF &gt;= 6.0</td>
+mPDF >= 6.0</td>
 </tr>
 <tr>
 <td>list-style-position</td>
@@ -722,7 +722,7 @@ mPDF &gt;= 6.0</td>
 
 inside | outside  (default = outside)
 
-mPDF &gt;= 6.0
+mPDF >= 6.0
 
 </td>
 </tr>
@@ -769,7 +769,7 @@ Size style and colour e.g.
 
 <span class="smallblock">LENGTH</span> solid|dotted|dashed|double <span class="smallblock">COLOR</span>
 
-(mPDF &gt;= 5.4)
+(mPDF >= 5.4)
 
 </td>
 </tr>
@@ -783,7 +783,7 @@ border-color*, border-top-color, border-right-color, border-bottom-color, border
 
 <span class="smallblock">COLOR</span>
 
-(mPDF &gt;= 5.4)
+(mPDF >= 5.4)
 
 </td>
 </tr>
@@ -797,7 +797,7 @@ border-width*, border-top-width, border-right-width, border-bottom-width, border
 
 <span class="smallblock">LENGTH</span> 
 
-(mPDF &gt;= 5.4)</td>
+(mPDF >= 5.4)</td>
 </tr>
 <tr>
 <td>
@@ -809,7 +809,7 @@ border-style*, border-top-style, border-right-style, border-bottom-style, border
 
 solid|dotted|dashed|double
 
-(mPDF &gt;= 5.4)
+(mPDF >= 5.4)
 
 </td>
 </tr>
@@ -821,7 +821,7 @@ solid|dotted|dashed|double
 </tr>
 <tr>
 <td>display</td>
-<td>none (mPDF &gt;= 5.0)</td>
+<td>none (mPDF >= 5.0)</td>
 </tr>
 <tr>
 <td>visibility</td>
@@ -829,7 +829,7 @@ solid|dotted|dashed|double
 
 hidden | visible | printonly | screenonly (default = visible)
 
-(mPDF &gt;= 5.7)
+(mPDF >= 5.7)
 
 </td>
 </tr>
@@ -839,7 +839,7 @@ hidden | visible | printonly | screenonly (default = visible)
 
 none | manual | auto (default = manual)
 
-As per CSS. (mPDF  &gt;= 5.7)</td>
+As per CSS. (mPDF  >= 5.7)</td>
 </tr>
 </tbody> </table>
 <table class="table"> <thead>
@@ -878,7 +878,7 @@ See note below. (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" 
 <td>background-image-resolution</td>
 <td>normal | [ from-image
 
- &lt;dpi&gt; ]  (mPDF &gt;= 5.1)</td>
+ &lt;dpi&gt; ]  (mPDF >= 5.1)</td>
 </tr>
 <tr>
 <td>*background-image-opacity*</td>
@@ -918,7 +918,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 <span class="smallblock">COLOR</span>
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 </td>
 </tr>
@@ -928,7 +928,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 <span class="smallblock">LENGTH</span> 
 
-(mPDF &gt;= 4.0)</td>
+(mPDF >= 4.0)</td>
 </tr>
 <tr>
 <td>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</td>
@@ -936,7 +936,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 </td>
 </tr>
@@ -946,7 +946,7 @@ double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | no
 
 <span class="smallblock">LENGTH</span>
 
-(mPDF &lt;= 1.3 incorrectly set cell-padding for all cells in table.)
+(mPDF <= 1.3 incorrectly set cell-padding for all cells in table.)
 
 Sets table padding (only relevant when border-collapse:separate)
 
@@ -998,7 +998,7 @@ Single or double values:
 <td>page-break-after</td>
 <td>left | right | always
 
-(mPDF &gt;= 5.4)</td>
+(mPDF >= 5.4)</td>
 </tr>
 <tr>
 <td>*rotate*</td>
@@ -1006,7 +1006,7 @@ Single or double values:
 </tr>
 <tr>
 <td>*autosize*</td>
-<td>Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be &gt;=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom property)</td>
+<td>Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be >=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom property)</td>
 </tr>
 <tr>
 <td>*topntail*</td>
@@ -1024,7 +1024,7 @@ Single or double values:
 <td>line-stacking-strategy</td>
 <td>inline-line-height | block-line-height | max-height | grid-height
 
-As per draft CSS3 spec. (mPDF &gt;= 6.0)
+As per draft CSS3 spec. (mPDF >= 6.0)
 
 Default = inline-line-height</td>
 </tr>
@@ -1032,7 +1032,7 @@ Default = inline-line-height</td>
 <td>line-stacking-shift</td>
 <td>consider-shifts | disregard-shifts
 
-As per draft CSS3 spec. (mPDF &gt;= 6.0)
+As per draft CSS3 spec. (mPDF >= 6.0)
 
 Default = consider-shifts</td>
 </tr>
@@ -1044,7 +1044,7 @@ Controls table layout if minimum width is too wide for page.</td>
 </tr>
 <tr>
 <td>direction</td>
-<td>rtl | ltr (mPDF &gt;= 5.1)</td>
+<td>rtl | ltr (mPDF >= 5.1)</td>
 </tr>
 <tr> <th>
 
@@ -1052,7 +1052,7 @@ CAPTION
 
 </th>
 <td>caption-side</td>
-<td>top | bottom (mPDF &gt;= 5.4) Right and left are not supported
+<td>top | bottom (mPDF >= 5.4) Right and left are not supported
 
 </td>
 </tr>
@@ -1113,7 +1113,7 @@ Size style and colour e.g.
 
 NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none (other block elements only support solid | dotted | dashed | double)
 
-(mPDF &gt;= 5.1)</td>
+(mPDF >= 5.1)</td>
 </tr>
 <tr>
 <td>border-color*, border-top-color, border-right-color, border-bottom-color, border-left-color</td>
@@ -1121,7 +1121,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 <span class="smallblock">COLOR</span>
 
-(mPDF &gt;= 5.1)
+(mPDF >= 5.1)
 
 </td>
 </tr>
@@ -1131,7 +1131,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 <span class="smallblock">LENGTH</span> 
 
-(mPDF &gt;= 5.1)</td>
+(mPDF >= 5.1)</td>
 </tr>
 <tr>
 <td>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</td>
@@ -1139,7 +1139,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none
 
-(mPDF &gt;= 5.1)
+(mPDF >= 5.1)
 
 </td>
 </tr>
@@ -1159,7 +1159,7 @@ As per CSS3 specification</td>
 
 background is parsed as per the CSS specification.
 
-background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF &gt;= 5.1).
+background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span> (mPDF >= 5.1).
 
 background-position is supported as per CSS2.1
 
@@ -1239,7 +1239,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 <span class="smallblock">COLOR</span>
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 </td>
 </tr>
@@ -1249,7 +1249,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 <span class="smallblock">LENGTH</span> 
 
-(mPDF &gt;= 4.0)</td>
+(mPDF >= 4.0)</td>
 </tr>
 <tr>
 <td>border-style*, border-top-style, border-right-style, border-bottom-style, border-left-style</td>
@@ -1257,7 +1257,7 @@ NB Table &amp; cell borders accept: double | solid | dashed | dotted | ridge | o
 
 double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | none
 
-(mPDF &gt;= 4.0)
+(mPDF >= 4.0)
 
 </td>
 </tr>
@@ -1275,7 +1275,7 @@ double | solid | dashed | dotted | ridge | outset | groove | inset | hidden | no
 </tr>
 <tr>
 <td>height</td>
-<td><span class="smallblock">LENGTH</span> (but not %) (mPDF &gt;= 4.0)
+<td><span class="smallblock">LENGTH</span> (but not %) (mPDF >= 4.0)
 
 </td>
 </tr>
@@ -1315,7 +1315,7 @@ text-align: '\66B' center;
 <td>line-stacking-strategy</td>
 <td>inline-line-height | block-line-height | max-height | grid-height
 
-As per draft CSS3 spec. (mPDF &gt;= 6.0)
+As per draft CSS3 spec. (mPDF >= 6.0)
 
 Default = inline-line-height</td>
 </tr>
@@ -1323,7 +1323,7 @@ Default = inline-line-height</td>
 <td>line-stacking-shift</td>
 <td>consider-shifts | disregard-shifts
 
-As per draft CSS3 spec. (mPDF &gt;= 6.0)
+As per draft CSS3 spec. (mPDF >= 6.0)
 
 Default = consider-shifts</td>
 </tr>
@@ -1333,7 +1333,7 @@ Default = consider-shifts</td>
 
 none | manual | auto (default = manual)
 
-As per CSS. (mPDF  &gt;= 5.7)</td>
+As per CSS. (mPDF  >= 5.7)</td>
 </tr>
 <tr>
 <td>:nth-child()  <span class="smallblock">SELECTOR</span></td>
@@ -1343,7 +1343,7 @@ As per CSS3 specification</td>
 </tr>
 <tr>
 <td>direction</td>
-<td>rtl | ltr (mPDF &gt;= 6.0)</td>
+<td>rtl | ltr (mPDF >= 6.0)</td>
 </tr>
 </tbody> </table>
 <table class="table"> <thead>
@@ -1422,7 +1422,7 @@ medium | thin | thick accepted for size
 </tr>
 <tr>
 <td>background-color</td>
-<td><span class="smallblock">COLOR</span>  (mPDF &gt;= 5.7.3)<span class="smallblock"> </span></td>
+<td><span class="smallblock">COLOR</span>  (mPDF >= 5.7.3)<span class="smallblock"> </span></td>
 </tr>
 <tr>
 <td>opacity</td>
@@ -1438,13 +1438,13 @@ Sets the opacity/transparency of the image.
 </tr>
 <tr>
 <td>image-orientation</td>
-<td><span class="smallblock">ANGLE</span> as deg, rad, or grad (as per draft CSS3)  mPDF &gt;= 5.1</td>
+<td><span class="smallblock">ANGLE</span> as deg, rad, or grad (as per draft CSS3)  mPDF >= 5.1</td>
 </tr>
 <tr>
 <td>image-resolution</td>
 <td>normal | [ from-image
 
- &lt;dpi&gt; ](as per draft CSS3)  mPDF &gt;= 5.1</td>
+ &lt;dpi&gt; ](as per draft CSS3)  mPDF >= 5.1</td>
 </tr>
 <tr>
 <td>image-rendering
@@ -1454,7 +1454,7 @@ Sets the opacity/transparency of the image.
 
 auto | crisp-edges | optimizequality | smooth  (as per draft CSS3)
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 Controls whether interpolation is on or off in PDF document. Once set for an image, subsequent use of the same image will use the initial setting for this property.
 
@@ -1470,7 +1470,7 @@ smooth - interpolation enabled
 </tr>
 <tr>
 <td>*gradient-mask*</td>
-<td><span class="smallblock">GRADIENT</span>  (see notes below)  mPDF &gt;= 5.1</td>
+<td><span class="smallblock">GRADIENT</span>  (see notes below)  mPDF >= 5.1</td>
 </tr>
 <tr>
 <td>display</td>
@@ -1478,7 +1478,7 @@ smooth - interpolation enabled
 </tr>
 <tr>
 <td>visibility</td>
-<td>visible | hidden | *printonly* | *screenonly*  (mPDF &gt;= 5.4)</td>
+<td>visible | hidden | *printonly* | *screenonly*  (mPDF >= 5.4)</td>
 </tr>
 <tr>
 <td>transform</td>
@@ -1522,7 +1522,7 @@ cf. <a href="http://www.w3.org/TR/css3-transforms/#typedef-transform-function">h
 <td>min-width, min-height, max-width, max-height
 
 </td>
-<td><span class="smallblock">LENGTH</span>. (mPDF &gt;= 5.6)
+<td><span class="smallblock">LENGTH</span>. (mPDF >= 5.6)
 
 </td>
 </tr>
@@ -1570,11 +1570,11 @@ top|middle|bottom|baseline|text-bottom|text-top
 </tr>
 <tr>
 <td>border-color</td>
-<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>background-color</td>
-<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr> <th>INPUT (type=IMAGE)</th>
 <td>width, height</td>
@@ -1582,23 +1582,23 @@ top|middle|bottom|baseline|text-bottom|text-top
 </tr>
 <tr> <th rowspan="5">INPUT (type=BUTTON|SUBMIT|RESET)</th>
 <td>font-family</td>
-<td><span class="smallblock">FONT-FAMILY</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">FONT-FAMILY</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>font-size</td>
-<td><span class="smallblock">FONT-SIZE</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">FONT-SIZE</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>color</td>
-<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>border-color</td>
-<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>background-color</td>
-<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr> <th rowspan="2">INPUT (type=CHECKBOX|RADIO)
 
@@ -1630,11 +1630,11 @@ top|middle|bottom|baseline|text-bottom|text-top
 </tr>
 <tr>
 <td>border-color</td>
-<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr>
 <td>background-color</td>
-<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF &gt;= 5.3)</td>
+<td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
 <tr> <th>BR
 
@@ -1648,7 +1648,7 @@ top|middle|bottom|baseline|text-bottom|text-top
 </tr>
 <tr> <th>DOTTAB</th>
 <td>*outdent*</td>
-<td><span class="smallblock">LENGTH</span>. (mPDF &gt;= 5.7)</td>
+<td><span class="smallblock">LENGTH</span>. (mPDF >= 5.7)</td>
 </tr>
 <tr> <th rowspan="4">
 
@@ -1690,7 +1690,7 @@ A named Header or Footer. HTML headers/footers must precede the name with <span 
 
 NB This was the original form, and still takes preference over header and footer which can be set using the pseudo-selectors e.g. :right
 
-The name *_default* can be used to allow the current non-HTML header to remain unchanged (mPDF &gt;= 5.1)
+The name *_default* can be used to allow the current non-HTML header to remain unchanged (mPDF >= 5.1)
 
 </td>
 </tr>
@@ -1846,7 +1846,7 @@ x, y and radius are values between 0 and 1
 </tr>
 <tr>
 <td>font</td>
-<td>Shorthand form, as per CSS2 specification (mPDF &gt;= 4.0)</td>
+<td>Shorthand form, as per CSS2 specification (mPDF >= 4.0)</td>
 </tr>
 <tr>
 <td>font-variant</td>
@@ -1874,7 +1874,7 @@ normal | none | [ &lt;common-lig-values&gt;
 
  slashed-zero ]
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 </td>
 </tr>
@@ -1886,7 +1886,7 @@ normal | none | [ &lt;common-lig-values&gt;
 
 normal | sub | super
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 </td>
 </tr>
@@ -1896,7 +1896,7 @@ normal | sub | super
 
 normal | small-caps | all-small-caps | petite-caps | all-petite-caps | unicase | titling-caps
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 </td>
 </tr>
@@ -1912,7 +1912,7 @@ normal | none | [ &lt;common-lig-values&gt;
 
  &lt;contextual-alt-values&gt; ]
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 &lt;common-lig-values&gt;       = [ common-ligatures | no-common-ligatures ]
 
@@ -1938,7 +1938,7 @@ normal | [ &lt;numeric-figure-values&gt;
 
  slashed-zero ]
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 </td>
 </tr>
@@ -1948,7 +1948,7 @@ normal | [ &lt;numeric-figure-values&gt;
 
 Only [normal | historical-forms] supported (i.e. most are NOT supported)
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 </td>
 </tr>
@@ -1956,7 +1956,7 @@ Only [normal | historical-forms] supported (i.e. most are NOT supported)
 <td>font-language-override</td>
 <td>3-letter case-sensitive OpenType language system tag
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 </td>
 </tr>
@@ -1968,7 +1968,7 @@ Comma separated list of &lt;feature-tag-value&gt; with the following syntax:
 
 &lt;feature-tag-value&gt; = &lt;string&gt; [ &lt;integer&gt; | on | off ]?
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 </td>
 </tr>
@@ -1976,7 +1976,7 @@ Comma separated list of &lt;feature-tag-value&gt; with the following syntax:
 <td>font-kerning</td>
 <td>
 
-auto | normal | none (mPDF &gt;= 5.1)
+auto | normal | none (mPDF >= 5.1)
 
 auto and normal both have the effect of turning kerning on, as long as
 
@@ -1986,15 +1986,15 @@ auto and normal both have the effect of turning kerning on, as long as
 </tr>
 <tr>
 <td>vertical-align</td>
-<td>super | sub | baseline | <span class="smallblock">LENGTH</span>  (mPDF &gt;= 5.7.3)</td>
+<td>super | sub | baseline | <span class="smallblock">LENGTH</span>  (mPDF >= 5.7.3)</td>
 </tr>
 <tr>
 <td>letter-spacing</td>
-<td>normal | <span class="smallblock">LENGTH</span>  (mPDF &gt;= 5.1)</td>
+<td>normal | <span class="smallblock">LENGTH</span>  (mPDF >= 5.1)</td>
 </tr>
 <tr>
 <td>word-spacing</td>
-<td>normal | <span class="smallblock">LENGTH</span>  (mPDF &gt;= 5.1)</td>
+<td>normal | <span class="smallblock">LENGTH</span>  (mPDF >= 5.1)</td>
 </tr>
 <tr>
 <td>color</td>
@@ -2004,9 +2004,9 @@ auto and normal both have the effect of turning kerning on, as long as
 <td>text-decoration</td>
 <td>
 
-underline | line-through | normal (line-through = strike-through)  (mPDF &gt;= 5.4)
+underline | line-through | normal (line-through = strike-through)  (mPDF >= 5.4)
 
-overline  (mPDF &gt;= 5.7.3)
+overline  (mPDF >= 5.7.3)
 
 </td>
 </tr>
@@ -2018,7 +2018,7 @@ Blur is not supported.
 
 As per CSS3
 
-(mPDF &gt;= 5.7) Supported in tables &gt;= 6.0
+(mPDF >= 5.7) Supported in tables >= 6.0
 
 </td>
 </tr>
@@ -2026,25 +2026,25 @@ As per CSS3
 <td>text-outline-width, *outline-width*</td>
 <td>Width of the outline. <span class="smallblock">LENGTH</span>
 
-(text-outline-width as from mPDF &gt;= 5.7) Supported in tables &gt;= 6.0</td>
+(text-outline-width as from mPDF >= 5.7) Supported in tables >= 6.0</td>
 </tr>
 <tr>
 <td>text-outline-color, *outline-color*</td>
 <td><span class="smallblock">COLOR</span>  = colour of the inner part of the text e.g. #rrggbb. 'INVERT' is also accepted.
 
-(text-outline-color as from mPDF &gt;= 5.7) Supported in tables &gt;= 6.0</td>
+(text-outline-color as from mPDF >= 5.7) Supported in tables >= 6.0</td>
 </tr>
 <tr>
 <td>text-shadow</td>
 <td>
 
-As per CSS3 specification. 'blur' is not supported.  (mPDF &gt;= 5.4)
+As per CSS3 specification. 'blur' is not supported.  (mPDF >= 5.4)
 
 </td>
 </tr>
 <tr>
 <td>text-transform</td>
-<td><span class="smallblock"> </span>capitalize | uppercase | lowercase  (mPDF &gt;= 5.4)</td>
+<td><span class="smallblock"> </span>capitalize | uppercase | lowercase  (mPDF >= 5.4)</td>
 </tr>
 <tr>
 <td>unicode-bidi</td>
@@ -2052,7 +2052,7 @@ As per CSS3 specification. 'blur' is not supported.  (mPDF &gt;= 5.4)
 
 normal | embed | isolate | bidi-override | isolate-override | plaintext
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 When used on block-level elements:
 
@@ -2074,7 +2074,7 @@ margin:1pt; will set all top, right, bottom and left values the same
 
 margin:1pt 2pt; will set top and bottom to 1pt, left and right to 2pt
 
-margin:1pt 2pt 3pt; will set top to 1pt, left and right to 2pt, and bottom to 3pt (mPDF &gt;= 4.0)
+margin:1pt 2pt 3pt; will set top to 1pt, left and right to 2pt, and bottom to 3pt (mPDF >= 4.0)
 
 margin:1pt 2pt 3pt 4pt; will set all values in order: top&gt;right&gt;bottom&gt;left
 

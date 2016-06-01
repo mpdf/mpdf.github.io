@@ -8,7 +8,7 @@ permalink: /user-s-guide/fonts-languages/indic-fonts-v5-x.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p class="manual_block">**Note:** From mPDF &gt;= 6.0 this has been superseded by the use of <a href="/user-s-guide/fonts-languages/opentype-layout-otl.html">OpenType layout (OTL)</a>.</p>
+<p class="manual_block">**Note:** From mPDF >= 6.0 this has been superseded by the use of <a href="/user-s-guide/fonts-languages/opentype-layout-otl.html">OpenType layout (OTL)</a>.</p>
 <p>Special fonts are provided for several Indic languages.</p>
 <table class="bpmTopnTailC"> <thead>
 <tr> <th> </th>

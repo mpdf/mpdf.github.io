@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/debug.html
 modification_time: 2015-08-05T12:01:50+00:00
 ---
 
-(mPDF &gt;= 3.1)
+(mPDF >= 3.1)
 
 debug – Turn on debugging messages
 

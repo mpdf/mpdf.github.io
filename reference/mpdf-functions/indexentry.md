@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/indexentry.html
 modification_time: 2015-08-05T12:00:48+00:00
 ---
 
-(mPDF &gt;= 2.2)
+(mPDF >= 2.2)
 
 IndexEntry – Insert an Index entry for the document
 

@@ -6,7 +6,7 @@ permalink: /fonts-languages/choosing-a-configuration-v6-x.html
 modification_time: 2015-08-05T11:59:30+00:00
 ---
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at least in some form).
 

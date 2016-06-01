@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdefaultfont.html
 modification_time: 2015-08-05T12:00:58+00:00
 ---
 
-(mPDF &lt;= 2.2)
+(mPDF <= 2.2)
 
 SetDefaultFont — [depracated]
 

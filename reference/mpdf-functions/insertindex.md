@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/insertindex.html
 modification_time: 2015-08-05T12:00:49+00:00
 ---
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 InsertIndex — Generate an Index for the document
 

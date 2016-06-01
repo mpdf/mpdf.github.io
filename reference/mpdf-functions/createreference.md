@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/createreference.html
 modification_time: 2015-08-05T12:00:44+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 CreateRefence — Generate an Index - DEPRACATED / Removed in mPDF v6.0
 

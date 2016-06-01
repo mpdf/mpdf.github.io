@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/uselang.html
 modification_time: 2015-08-05T12:02:38+00:00
 ---
 
-(mPDF &gt;= 2.3  &lt;= 5.7)
+(mPDF >= 2.3  <= 5.7)
 
 useLang – Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span>
 

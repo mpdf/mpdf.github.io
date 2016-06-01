@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/adjustfontdesclineheight.html
 modification_time: 2015-08-05T12:01:32+00:00
 ---
 
-(mPDF &gt;= 6.0)
+(mPDF >= 6.0)
 
 # Description
 

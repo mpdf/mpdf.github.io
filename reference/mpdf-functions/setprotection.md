@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setprotection.html
 modification_time: 2015-08-05T12:01:07+00:00
 ---
 
-(mPDF &gt;= 1.0)
+(mPDF >= 1.0)
 
 SetProtection – Encrypts and sets the PDF document permissions
 
@@ -24,7 +24,7 @@ Encrypts and sets the PDF document permissions for the PDF file, together with u
 
 This parameter is an array which specifies the permissions granted to the end-user.
 
-A blank array should be passed to deny all permissions to the user. The latter 4 permissions were added in mPDF &gt;=5.3 
+A blank array should be passed to deny all permissions to the user. The latter 4 permissions were added in mPDF >=5.3 
 
 Using any of these last 4 permissions require 128-bit encryption and will force this mode, regardless of any value set for <span class="parameter">length</span>.
 

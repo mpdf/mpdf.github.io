@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/usetemplate.html
 modification_time: 2015-08-05T12:01:14+00:00
 ---
 
-(mPDF &gt;= 2.3)
+(mPDF >= 2.3)
 
 UseTemplate – Insert an imported page from an external PDF file
 

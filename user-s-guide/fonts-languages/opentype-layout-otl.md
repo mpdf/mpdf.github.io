@@ -8,7 +8,7 @@ permalink: /user-s-guide/fonts-languages/opentype-layout-otl.html
 <div id="bpmbook" class="bpmbook" style="direction:ltr;">
 <div class="topic_user_field">
 <div id="U0">
-<p class="manual_block">OpenType layout features were introduced in mPDF &gt;= 6.0</p>
+<p class="manual_block">OpenType layout features were introduced in mPDF >= 6.0</p>
 <h2>Advanced Typography</h2>
 <p>Many TrueType fonts contain OpenType Layout (OTL) tables. These Advanced Typographic tables contain additional information that extend the capabilities of the fonts to support high-quality international typography:</p>
 <ul>
