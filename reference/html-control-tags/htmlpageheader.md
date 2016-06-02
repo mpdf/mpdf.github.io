@@ -59,7 +59,7 @@ For examples and further information please see:
 <ul>
 <li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a></li>
 <li class="manual_boxlist"> &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt; </li>
-<li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/sethtmlheaderbyname.html" | prepend: site.baseurl }}">SetHTMLHeaderByName()</a> </li>
+<li class="manual_boxlist"> <a href="{{ "/reference/mpdf-functions/sethtmlheaderbyname.html" | prepend: site.baseurl }}">SetHTMLHeaderByName()</a></li>
 <li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/sethtmlpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt; </li>
-<li class="manual_boxlist"> <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> </li>
+<li class="manual_boxlist"> <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a></li>
 </ul>

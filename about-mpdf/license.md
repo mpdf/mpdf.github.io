@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Licence
+title: License
 parent_title: About mPDF
-permalink: /about-mpdf/licence.html
+permalink: /about-mpdf/license.html
 modification_time: 2015-08-05T11:59:22+00:00
 ---
 

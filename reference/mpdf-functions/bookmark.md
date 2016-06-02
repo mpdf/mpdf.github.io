@@ -113,7 +113,5 @@ This will produce a Bookmark tree in Adobe Reader:
 # See Also
 
 <ul>
-<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/bookmark.html" | prepend: site.baseurl }}">bookmark</a>&gt; - Custom HTML tag - equivalent to Bookmark()
-
-</li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/bookmark.html" | prepend: site.baseurl }}">bookmark</a>&gt; - Custom HTML tag - equivalent to Bookmark()</li>
 </ul>

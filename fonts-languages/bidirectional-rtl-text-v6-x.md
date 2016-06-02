@@ -264,7 +264,5 @@ Using BDI will result in the following:
 <ul>
 <li class="manual_boxlist">
 
-<a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang
-
-</li>
+<a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
 </ul>

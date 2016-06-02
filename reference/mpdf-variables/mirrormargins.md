@@ -19,6 +19,6 @@ Default = 0
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="http://uk3.php.net/manual/en/function.explode.php"> </a><a href="{{ "/paging/double-sided-documents.html" | prepend: site.baseurl }}">Double-sided documents</a> </li>
+<li class="manual_boxlist"><a href="http://uk3.php.net/manual/en/function.explode.php"> </a><a href="{{ "/paging/double-sided-documents.html" | prepend: site.baseurl }}">Double-sided documents</a></li>
 </ul>
 

@@ -27,5 +27,5 @@ When <span class="smallblock">TRUE</span>, mPDF will support the CSS style <span
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/kerning.html" | prepend: site.baseurl }}">Kerning</a> </li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/kerning.html" | prepend: site.baseurl }}">Kerning</a></li>
 </ul>

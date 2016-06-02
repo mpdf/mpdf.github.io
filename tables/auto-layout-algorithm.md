@@ -15,19 +15,13 @@ modification_time: 2015-08-05T11:59:44+00:00
 
 (Minimum width is calculated when each cell accommodates longest word (allowing for nowrap / &amp;nbsp;))
 
-This disregards the value of autosize.
-
-</li>
+This disregards the value of autosize.</li>
 <li>If the height of the highest row is greater than a full page height, the table is resized to fit the highest row &lt; page height.
 
 (This is an approximation, as it scales the table size by a factor of less than sqrt(maxrow / pageheight) ).
 
-This disregards the value of autosize.
-
-</li>
-<li>The table is now printed - allowing it to break across pages - unless page-break-inside: avoid is set.
-
-</li>
+This disregards the value of autosize.</li>
+<li>The table is now printed - allowing it to break across pages - unless page-break-inside: avoid is set.</li>
 <li>If page-break-inside: avoid is set:
 <ul>
 <li>if table height is greater than a full page, the size is reduced to fit the table on a full page, and printed.
@@ -50,14 +44,10 @@ If there is a conflict between respecting <span class="parameter">page-break-ins
 ## For rotated tables
 
 <ol>
-<li>If the whole table fits into the remaining height left on the page, print as it is.
-
-</li>
+<li>If the whole table fits into the remaining height left on the page, print as it is.</li>
 <li>If the minimum width of the table is greater than the page height remaining, the table is resized to fit the minimum width = page height remaining, as long as the whole table fits, and the scaling factor is within the value of autosize.
 
-(Minimum width is calculated when each cell accommodates longest word - allowing for nowrap,  &amp;nbsp; etc.)
-
-</li>
+(Minimum width is calculated when each cell accommodates longest word - allowing for nowrap,  &amp;nbsp; etc.)</li>
 <li>Else a new page is started, and the algorithm above followed (obviously containing size width becomes height etc.)</li>
 </ol>
 

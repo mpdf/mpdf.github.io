@@ -44,8 +44,6 @@ Specify how to convert image sizes specified in "px" units (pixels). As a print 
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> - Specify conversion for other values set in pixels
-
-</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> - Specify conversion for other values set in pixels</li>
 </ul>
 

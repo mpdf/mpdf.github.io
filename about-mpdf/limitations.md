@@ -28,6 +28,4 @@ Blocks which are defined as position:absolute, fixed or float have only limited 
 
 # See Also
 
-<ul>
-<li><a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">Known issues</a></li>
-</ul>
+- <a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">Known issues</a>

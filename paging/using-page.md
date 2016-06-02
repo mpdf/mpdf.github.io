@@ -123,9 +123,7 @@ CSS pseudo-selectors :left :right and :first are recognised by mPDF and support 
 <ul>
 <li>size</li>
 <li>margin-left</li>
-<li>margin-right
-
-</li>
+<li>margin-right</li>
 <li>odd-header-name</li>
 <li>even-header-name</li>
 <li>odd-footer-name</li>

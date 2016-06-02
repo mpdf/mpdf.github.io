@@ -29,8 +29,6 @@ When <span class="smallblock">TRUE</span>, mPDF will ignore any content in the o
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="{{ "/troubleshooting/error-messages.html" | prepend: site.baseurl }}">Error Messages</a>
-
-</li>
+<li class="manual_boxlist"><a href="{{ "/troubleshooting/error-messages.html" | prepend: site.baseurl }}">Error Messages</a></li>
 </ul>
 

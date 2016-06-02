@@ -36,20 +36,12 @@ Limitations:
 
 <ul>
 <li>There is no equivalent concept of the viewport as in the browser (in CSS)</li>
-<li>All positioning is relative to the current page of the document being written
-
-</li>
-<li>Position is overridden if it would be off the page, so that the element displays within the containing element
-
-</li>
-<li>Overflow:auto causes text to autofit within the block size (additionally constrained if necessary to page edges).
-
-</li>
+<li>All positioning is relative to the current page of the document being written</li>
+<li>Position is overridden if it would be off the page, so that the element displays within the containing element</li>
+<li>Overflow:auto causes text to autofit within the block size (additionally constrained if necessary to page edges).</li>
 <li>Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported</li>
 <li>Probably INCOMPATIBLE with keep-with-table, columns etc.</li>
-<li>Annotations were disabled prior to mPDF 5.0
-
-</li>
+<li>Annotations were disabled prior to mPDF 5.0</li>
 </ul>
 
 <div class="alert alert-info" role="alert">**Note:** width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left -right -top -bottom, are all supported.</div>

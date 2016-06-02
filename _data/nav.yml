@@ -27,10 +27,10 @@
             slug: credits
             parent_title: 'About mPDF'
         -
-            title: Licence
+            title: License
             url: index1652.html
-            permalink: /about-mpdf/licence.html
-            slug: licence
+            permalink: /about-mpdf/license.html
+            slug: license
             parent_title: 'About mPDF'
 -
     title: 'Installation & Setup'

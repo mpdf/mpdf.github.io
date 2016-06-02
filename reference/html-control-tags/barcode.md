@@ -236,9 +236,7 @@ exit;
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">Barcodes</a> - More information on types of barcode
-
-</li>
+<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">Barcodes</a> - More information on types of barcode</li>
 </ul>
 
 <span class="jslink">

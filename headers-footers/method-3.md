@@ -104,33 +104,19 @@ $mpdf->WriteHTML($html);
 <li>Methods for <span class="smallblock">NON-HTML</span> headers/footers only - **Recommended** when setting the first page header/footer at the start of a document (although they can also be used to change headers/footers during the document).
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a> - see Example #3  </li>
-<li><a href="{{ "/reference/mpdf-functions/setfooterbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a> - see Example #3
-
-</li>
-<li><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> - see Example #5
-
-</li>
-<li>&lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt; - see Example #4
-
-</li>
-<li>&lt;<a href="{{ "/reference/html-control-tags/setpagefooter.html" | prepend: site.baseurl }}">setpagefooter</a>&gt; - see Example#4
-
-</li>
+<li><a href="{{ "/reference/mpdf-functions/setfooterbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a> - see Example #3</li>
+<li><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> - see Example #5</li>
+<li>&lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt; - see Example #4</li>
+<li>&lt;<a href="{{ "/reference/html-control-tags/setpagefooter.html" | prepend: site.baseurl }}">setpagefooter</a>&gt; - see Example#4</li>
 </ul>
 </li>
 </ul>
 <ul>
 <li>Methods to access any headers/footers (<span class="smallblock">HTML</span> or <span class="smallblock">NON-HTML</span>) - **Recommended** when changing header/footer during the document.
 <ul>
-<li><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - see Example #6
-
-</li>
-<li>&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; - see Example #7
-
-</li>
-<li><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> - see Example #5
-
-</li>
+<li><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - see Example #6</li>
+<li>&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; - see Example #7</li>
+<li><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a> - see Example #5</li>
 <li><a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> - see Example #8</li>
 <li>&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; - see Example #9</li>
 </ul>

@@ -64,7 +64,5 @@ $mpdf->aliasNbPgGp = '[pagetotal]';
 
 <ul>
 <li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a> </li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/aliasnbpagegroups.html" | prepend: site.baseurl }}">AliasNbPages()</a> - Sets the placeholder alias for the total number of pages in the document
-
-</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/aliasnbpagegroups.html" | prepend: site.baseurl }}">AliasNbPages()</a> - Sets the placeholder alias for the total number of pages in the document</li>
 </ul>

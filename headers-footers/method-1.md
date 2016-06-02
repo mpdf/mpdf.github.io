@@ -226,9 +226,7 @@ Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:
 
 <ul>
 <li>change the header before the page-break</li>
-<li>change the footer after the page-break
-
-</li>
+<li>change the footer after the page-break</li>
 </ul>
 
 {% highlight php %}

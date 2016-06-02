@@ -19,9 +19,7 @@ $mpdf->forcePortraitHeaders = true;
 This is a quick fix which rotates HTML headers and Footers (only - not normal ones) on landscape pages in the following conditions:
 
 <ul>
-<li>document orientation is portrait
-
-</li>
+<li>document orientation is portrait</li>
 <li>when adding a page, you must only call $mpdf-&gt;AddPage('L') or &lt;pagebreak orientaion="landscape" /&gt;</li>
 </ul>
 

@@ -1648,7 +1648,7 @@ As per CSS3
 <h2>See Also</h2>
 <ul>
 <li class="manual_boxlist"><a href="/user-s-guide/what-else-can-i-do/backgrounds-borders.html">Backgrounds &amp; Borders (including Gradients)</a></li>
-<li class="manual_boxlist"><a href="/user-s-guide/html-support/html-attributes.html">HTML supported attributes</a> </li>
+<li class="manual_boxlist"><a href="/user-s-guide/html-support/html-attributes.html">HTML supported attributes</a></li>
 </ul>
 </div>
 </div>

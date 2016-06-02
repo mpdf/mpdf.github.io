@@ -12,9 +12,7 @@ The security settings for the PDF file can be set in mPDF:
 <li>determine whether the document is encrypted</li>
 <li>if encrypted, what permissions are granted to the user e.g.print and/or copy</li>
 <li>determine whether a user requires a password to open the document</li>
-<li>determine whether a password is required to modify the document (owner's password)
-
-</li>
+<li>determine whether a password is required to modify the document (owner's password)</li>
 </ul>
 
 # See Also

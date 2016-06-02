@@ -11,6 +11,8 @@ github_username: mpdf
 # Build settings
 markdown: kramdown
 
+highlighter: rouge
+
 redcarpet:
     extensions: ['no_intra_emphasis', 'tables', 'autolink']
 
@@ -20,3 +22,5 @@ kramdown:
     header_offset:  1
     entity_output:  as_char
     smart_quotes:   lsquo,rsquo,ldquo,rdquo
+    input:          GFM
+    hard_wrap:      false

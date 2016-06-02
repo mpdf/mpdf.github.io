@@ -74,7 +74,7 @@ An ICC Color profile must be embedded in the file.
 The ICC Color profile will likely change the appearance of colours in your document. The ICC profile that is included with mPDF is an open licence color profile from the International Color Consortium (http://www.color.org) which seems to change colours a little as possible for an sRGB profile. Other sources of free ICC profiles are:
 
 <ul>
-<li><a href="http://www.eci.org/">http://www.eci.org</a> </li>
+<li><a href="http://www.eci.org/">http://www.eci.org</a></li>
 <li><a href="http://www.color.org/profiles2.xalter">http://www.color.org/profiles2.xalter </a></li>
 <li><a href="http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html">http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html </a></li>
 </ul>

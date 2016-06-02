@@ -36,8 +36,6 @@ See <jpgraph> for example
 
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}"></a>&lt;<a href="{{ "/reference/html-control-tags/jpgraph.html" | prepend: site.baseurl }}">jpgraph</a>&gt; - Write HTML code to document</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/charset-in.html" | prepend: site.baseurl }}">Graphs</a> - More about JPGraph and graphs
-
-</li>
+<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/charset-in.html" | prepend: site.baseurl }}">Graphs</a> - More about JPGraph and graphs</li>
 </ul>
 

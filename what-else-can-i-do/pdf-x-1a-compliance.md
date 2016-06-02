@@ -42,7 +42,7 @@ Sources of free ICC profiles are:
 
 <ul>
 <li><a href="http://www.color.org/">http://www.color.org</a></li>
-<li><a href="http://www.eci.org/">http://www.eci.org</a> </li>
+<li><a href="http://www.eci.org/">http://www.eci.org</a></li>
 <li><a href="http://www.color.org/profiles2.xalter">http://www.color.org/profiles2.xalter </a></li>
 <li><a href="http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html">http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html </a></li>
 </ul>

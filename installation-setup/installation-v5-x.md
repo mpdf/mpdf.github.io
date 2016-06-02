@@ -16,12 +16,8 @@ Installation:
 <li>Upload all of the files to the server, maintaining the folders as they are </li>
 <li>Ensure that you have write permissions set for the following folders:
 <ul>
-<li><span class="filename">/ttfontdata/</span>
-
-</li>
-<li><span class="filename">/tmp/</span>
-
-</li>
+<li><span class="filename">/ttfontdata/</span></li>
+<li><span class="filename">/tmp/</span></li>
 <li><span class="filename">/graph_cache/</span></li>
 </ul>
 </li>

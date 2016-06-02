@@ -53,8 +53,6 @@ $mpdf->Output();
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML code to document</li>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">allow_charset_conversion</a> - Activates character encoding conversion of input text</li>
-<li class="manual_boxlist"> <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> - list of values accepted for this variable
-
-</li>
+<li class="manual_boxlist"> <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> - list of values accepted for this variable</li>
 </ul>
 

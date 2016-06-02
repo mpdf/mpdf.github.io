@@ -13,5 +13,5 @@ This variable is set by mPDF when it detects characters from a script written in
 # See Also
 
 <ul>
-<li class="manual_boxlist"><a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a> </li>
+<li class="manual_boxlist"><a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a></li>
 </ul>

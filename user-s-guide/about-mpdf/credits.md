@@ -18,9 +18,7 @@ permalink: /user-s-guide/about-mpdf/credits.html
 </ul>
 <p>Including from FPDF extensions:</p>
 <ul>
-<li>Martin Hall-May  for WMF support
-
-</li>
+<li>Martin Hall-May  for WMF support</li>
 </ul>
 <p>Including from HTML2FPDF:</p>
 <ul>

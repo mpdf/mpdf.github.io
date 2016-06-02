@@ -23,7 +23,7 @@ $mpdf = new mPDF();
 
 // Define the Header/Footer before writing anything so they appear on the first page
 
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">My document</div>'); 
+$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">My document</div>');
 
 $mpdf->SetHTMLFooter('
 
@@ -57,7 +57,7 @@ $mpdf->useOddEven = 1;    // Use different Odd/Even headers and footers and mirr
 
 // Define the Headers before writing anything so they appear on the first page
 
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">My document</div>','O'); 
+$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">My document</div>','O');
 
 $mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">My document</div>','E');
 
@@ -108,9 +108,7 @@ Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:
 
 <ul>
 <li>change the header before the page-break</li>
-<li>change the footer after the page-break
-
-</li>
+<li>change the footer after the page-break</li>
 </ul>
 
 {% highlight php %}
@@ -130,7 +128,7 @@ $mpdf->SetHTMLHeader('<div style="text-align: right; border-bottom: 1px solid #0
 
 $mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;">Chapter 2</div>','E');
 
-    
+
 
 $mpdf->AddPage();
 
@@ -178,13 +176,13 @@ $mpdf->useOddEven = true;
 
 // Set the headers/footers for the Introduction
 
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Introduction</div>','O'); 
+$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Introduction</div>','O');
 
 $mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">Introduction</div>','E');
 
-$mpdf->SetHTMLFooter('<div style="font-weight: bold;">{PAGENO}</div>','O'); 
+$mpdf->SetHTMLFooter('<div style="font-weight: bold;">{PAGENO}</div>','O');
 
-$mpdf->SetHTMLFooter('<div style="text-align: right;">{PAGENO}</div>','E'); 
+$mpdf->SetHTMLFooter('<div style="text-align: right;">{PAGENO}</div>','E');
 
 $mpdf->AddPage('', '', 1, '', 'on');    // suppress page numbering for the introduction
 
@@ -192,17 +190,17 @@ $mpdf->WriteHTML('Introduction of document...');
 
 $mpdf->AddPage('','E');
 
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Main</div>','O'); 
+$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Main</div>','O');
 
 $mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">Main</div>','E');
 
-$mpdf->TOCpagebreak('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 
+$mpdf->TOCpagebreak('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
 
    $toc-preHTML, $toc-postHTML, $toc-bookmarkText, 1, 'A', 'off');    // sets numbering to start at A
 
-$mpdf->SetHTMLFooter('<div style="font-weight: bold;">Main - {PAGENO}</div>','O'); 
+$mpdf->SetHTMLFooter('<div style="font-weight: bold;">Main - {PAGENO}</div>','O');
 
-$mpdf->SetHTMLFooter('<div style="text-align: right;">Main - {PAGENO}</div>','E'); 
+$mpdf->SetHTMLFooter('<div style="text-align: right;">Main - {PAGENO}</div>','E');
 
 $mpdf->WriteHTML('Main part of document...');
 
@@ -220,13 +218,13 @@ $mpdf->useOddEven = true;
 
 // Set the headers/footers for the Introduction
 
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Introduction</div>','O'); 
+$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Introduction</div>','O');
 
 $mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">Introduction</div>','E');
 
-$mpdf->SetHTMLFooter('<div style="font-weight: bold;">{PAGENO}</div>','O'); 
+$mpdf->SetHTMLFooter('<div style="font-weight: bold;">{PAGENO}</div>','O');
 
-$mpdf->SetHTMLFooter('<div style="text-align: right;">{PAGENO}</div>','E'); 
+$mpdf->SetHTMLFooter('<div style="text-align: right;">{PAGENO}</div>','E');
 
 $mpdf->AddPage('', '', 1, '', 'on');    // suppress page numbering for the introduction
 
@@ -234,15 +232,15 @@ $mpdf->WriteHTML('Introduction of document...');
 
 $mpdf->AddPage('','E');
 
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Main</div>','O'); 
+$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Main</div>','O');
 
 $mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">Main</div>','E');
 
 $mpdf->AddPage('', '', 1, 'i', 'off');    // sets page numbering to start here at 1
 
-$mpdf->SetHTMLFooter('<div style="font-weight: bold;">Main - {PAGENO}</div>','O'); 
+$mpdf->SetHTMLFooter('<div style="font-weight: bold;">Main - {PAGENO}</div>','O');
 
-$mpdf->SetHTMLFooter('<div style="text-align: right;">Main - {PAGENO}</div>','E'); 
+$mpdf->SetHTMLFooter('<div style="text-align: right;">Main - {PAGENO}</div>','E');
 
 // Set some variables for the ToC - these are all now depracated
 

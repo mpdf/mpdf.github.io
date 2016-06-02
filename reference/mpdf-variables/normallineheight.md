@@ -48,7 +48,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 # Further reading
 
 <ul>
-<li><a href="http://office.microsoft.com/en-us/word/HP100165231033.aspx">http://office.microsoft.com/en-us/word/HP100165231033.aspx</a> </li>
+<li><a href="http://office.microsoft.com/en-us/word/HP100165231033.aspx">http://office.microsoft.com/en-us/word/HP100165231033.aspx</a></li>
 <li><a href="http://typophile.com/node/13081">http://typophile.com/node/13081</a></li>
 </ul>
 
