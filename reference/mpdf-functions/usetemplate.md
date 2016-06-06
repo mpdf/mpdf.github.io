@@ -17,9 +17,9 @@ array `UseTemplate` ( int <span class="parameter">$templateID</span> [, float <s
 
 Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the imported page as it is printed (see Example #1).
 
-<div class="alert alert-info" role="alert">**Note:** The template will be printed onto the page as the bottom 'layer' i.e. anything else written to that page by mPDF will be written on top of thie template. NB If you use WriteHTML() and have a background-color set on BODY this will hide the template from view e.g. &lt;body style="background-color:#FFFFFF;"&gt;</div>
+<div class="alert alert-info" role="alert">*Note* The template will be printed onto the page as the bottom 'layer' i.e. anything else written to that page by mPDF will be written on top of thie template. NB If you use WriteHTML() and have a background-color set on BODY this will hide the template from view e.g. &lt;body style="background-color:#FFFFFF;"&gt;</div>
 
-<div class="alert alert-info" role="alert">**Note:** If you are using automatic header-margins, you need to set the header before starting the first page; if you start the document with UseTemplate() this will move it to page 1, so the order needs to be:
+<div class="alert alert-info" role="alert">*Note* If you are using automatic header-margins, you need to set the header before starting the first page; if you start the document with UseTemplate() this will move it to page 1, so the order needs to be:
 
 {% highlight php %}
 <?php
@@ -38,6 +38,8 @@ $mpdf->UseTemplate($tplIdx);
 
 $mpdf->WriteHTML($html);
 {% endhighlight %}
+
+</div>
 
 # Parameters
 
