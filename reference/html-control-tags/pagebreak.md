@@ -296,9 +296,7 @@ Parameters <span class="parameter">$resetpagenum</span> , <span class="parameter
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <html>

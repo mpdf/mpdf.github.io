@@ -26,9 +26,7 @@ Defines the text to appear as Keywords. The text should be UTF-8 encoded, but sh
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -46,9 +44,7 @@ $mpdf->Output('filename.pdf');
 ?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

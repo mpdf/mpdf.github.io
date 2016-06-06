@@ -105,9 +105,7 @@ All values should be specified as <span class="smallblock">LENGTH</span> in mill
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

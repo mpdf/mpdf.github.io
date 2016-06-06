@@ -46,9 +46,7 @@ Returns a UTF-8 encoded string.
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

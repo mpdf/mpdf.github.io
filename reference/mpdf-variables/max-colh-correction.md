@@ -44,9 +44,7 @@ The maximum ratio to adjust column height when justifying - too large a value ca
 
 Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

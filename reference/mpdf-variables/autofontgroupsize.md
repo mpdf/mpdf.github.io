@@ -49,16 +49,13 @@ Smaller chunks (1) - analysing word by word - takes more processing time, and ca
 
 # Examples
 
-{% highlight php %}
 Example #1
-
-{% endhighlight %}
 
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF('utf-8');
 

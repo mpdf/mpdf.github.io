@@ -28,9 +28,7 @@ Defines the text to appear as a Title. The text should be UTF-8 encoded, but sho
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -48,9 +46,7 @@ $mpdf->Output('filename.pdf');
 ?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

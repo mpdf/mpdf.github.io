@@ -52,9 +52,7 @@ Set the gap between columns in millimeters
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

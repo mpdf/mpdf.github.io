@@ -14,12 +14,21 @@ UseTemplate – Insert an imported page from an external PDF file
 
 array `UseTemplate` ( int <span class="parameter">$templateID</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$width</span> [, float <span class="parameter">$height</span> ]]]])
 
+Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have
+already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>.
+The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the
+imported page as it is printed (see Example #1).
 
-Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the imported page as it is printed (see Example #1).
+<div class="alert alert-info" role="alert">
+	<strong>Note</strong> The template will be printed onto the page as the bottom 'layer' i.e.
+	anything else written to that page by mPDF will be written on top of thie template. NB If you use `WriteHTML()` and have
+	a background-color set on BODY this will hide the template from view e.g. `<body style="background-color:#FFFFFF;">`
+</div>
 
-<div class="alert alert-info" role="alert">*Note* The template will be printed onto the page as the bottom 'layer' i.e. anything else written to that page by mPDF will be written on top of thie template. NB If you use WriteHTML() and have a background-color set on BODY this will hide the template from view e.g. &lt;body style="background-color:#FFFFFF;"&gt;</div>
+<div class="alert alert-info" role="alert">
 
-<div class="alert alert-info" role="alert">*Note* If you are using automatic header-margins, you need to set the header before starting the first page; if you start the document with UseTemplate() this will move it to page 1, so the order needs to be:
+<strong>Note</strong> If you are using automatic header-margins, you need to set the header before starting the first page; if you start
+the document with `UseTemplate()` this will move it to page 1, so the order needs to be:
 
 {% highlight php %}
 <?php
@@ -81,18 +90,18 @@ Specifies the height for the template to appear on the page. Value should be spe
 
 # Return Value
 
-**UseTemplate()** returns an array of the calculated <span class="parameter">$width</span> and <span class="parameter">$height</span>.
+**`UseTemplate()`** returns an array of the calculated <span class="parameter">$width</span> and <span class="parameter">$height</span>.
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
-<tr>
-<td>2.3</td>
-<td>Function was added.</td>
-</tr>
-</tbody> </table>
+<table class="table">
+<thead>
+	<tr><th>Version</th><th>Description</th></tr>
+</thead>
+<tbody>
+	<tr>td>2.3</td><td>Function was added.</td></tr>
+</tbody>
+</table>
 
 # Examples
 
@@ -101,8 +110,8 @@ Example #1
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF();
 
@@ -137,8 +146,8 @@ Example #2 - Using a 'cropped' page
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF();
 

@@ -131,9 +131,7 @@ Pattern checking can be fine-tuned by 4 variables if required:
 </tr>
 </tbody> </table>
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

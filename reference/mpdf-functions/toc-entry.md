@@ -63,9 +63,7 @@ Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

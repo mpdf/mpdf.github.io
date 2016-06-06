@@ -41,9 +41,7 @@ Values of 1 or 0 can also be used
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

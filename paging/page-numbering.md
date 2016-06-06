@@ -24,9 +24,7 @@ Page numbering changes are made when adding a new page using <a href="{{ "/refer
 
 You could obviously also hide the page numbering by redefining a header or footer that does not include {PAGENO}.
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

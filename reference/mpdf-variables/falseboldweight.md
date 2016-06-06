@@ -39,16 +39,13 @@ Specify weight used for bold text when using an artificial (outline) bold. If bo
 
 # Examples
 
-{% highlight php %}
 Example #1
-
-{% endhighlight %}
 
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF();
 

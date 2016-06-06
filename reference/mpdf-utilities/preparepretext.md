@@ -47,15 +47,13 @@ Returns a text string.
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $text = file_get_contents('scriptfile.php');
 

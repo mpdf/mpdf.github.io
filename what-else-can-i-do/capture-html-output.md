@@ -11,8 +11,8 @@ One way of outputting a webpage to mPDF without re-writing your scripts too much
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF();
 

@@ -24,9 +24,7 @@ Define as any of the available font-families.
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

@@ -36,9 +36,7 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <html>
@@ -50,9 +48,7 @@ Example #1
 </html>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 

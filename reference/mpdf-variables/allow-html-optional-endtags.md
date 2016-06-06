@@ -28,9 +28,7 @@ When <span class="smallblock">TRUE</span>, mPDF will attempt to parse the input 
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

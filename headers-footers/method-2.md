@@ -111,9 +111,7 @@ Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:
 <li>change the footer after the page-break</li>
 </ul>
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

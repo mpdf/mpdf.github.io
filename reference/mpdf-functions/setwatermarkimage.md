@@ -75,9 +75,7 @@ array(<span class="parameter">$x</span>, <span class="parameter">$y</span>): Spe
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

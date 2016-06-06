@@ -36,9 +36,7 @@ http://www.mydomain.com/path/<span class="smallblock">
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

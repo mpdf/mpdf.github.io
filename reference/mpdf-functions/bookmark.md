@@ -44,9 +44,7 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -62,9 +60,7 @@ $mpdf->Output('filename.pdf');
 ?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

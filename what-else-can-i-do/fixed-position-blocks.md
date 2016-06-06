@@ -64,9 +64,7 @@ overflow: visible|hidden|auto  DEFAULT = visible
 
 # Example
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <div style="position: absolute; top: 50mm; left: 50mm; width: 100mm;">

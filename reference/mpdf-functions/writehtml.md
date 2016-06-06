@@ -123,9 +123,7 @@ Parses default CSS when using <span class="parameter">$mode</span> as 2</td>
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -145,9 +143,7 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

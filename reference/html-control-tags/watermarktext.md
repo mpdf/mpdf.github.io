@@ -47,9 +47,7 @@ This parameter defines the transparency value (alpha) to use for the watermark: 
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

@@ -12,9 +12,7 @@ When declaring an instance of <a href="{{ "/reference/mpdf-functions/mpdf.html" 
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -36,9 +34,7 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

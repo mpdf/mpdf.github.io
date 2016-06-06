@@ -97,9 +97,7 @@ Support for "font: auto" added.
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

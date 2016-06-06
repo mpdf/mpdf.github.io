@@ -18,9 +18,7 @@ Specify text to precede the page number when using {PAGENO} to insert page numbe
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

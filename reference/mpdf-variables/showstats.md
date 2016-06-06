@@ -41,16 +41,13 @@ Specify whether to show performance data. Useful if you are developing with mPDF
 
 # Examples
 
-{% highlight php %}
 Example #1
-
-{% endhighlight %}
 
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF();
 

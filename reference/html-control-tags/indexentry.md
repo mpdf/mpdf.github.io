@@ -55,9 +55,7 @@ Text entries passed in the form "Subject:Subcategory" will appear in the Index a
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -83,9 +81,7 @@ $mpdf=Output();
 ?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

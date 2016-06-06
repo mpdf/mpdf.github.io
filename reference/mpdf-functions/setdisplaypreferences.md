@@ -42,9 +42,7 @@ NoPrintScaling: overrides the user's default setting to scale the printing size 
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

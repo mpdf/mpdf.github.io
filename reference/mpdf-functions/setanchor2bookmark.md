@@ -43,9 +43,7 @@ Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

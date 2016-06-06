@@ -127,9 +127,7 @@ Note that the PDF Reader (e.g. Adobe Reader) may reposition the popup box as it 
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -151,9 +149,7 @@ $mpdf->Output('filename.pdf');
 ?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

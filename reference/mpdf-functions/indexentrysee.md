@@ -34,9 +34,7 @@ This parameter sets the text used as the cross-reference. Text should be UTF-8 e
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

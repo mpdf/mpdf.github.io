@@ -26,9 +26,7 @@ Any string value allowed which is valid for the PHP function <a href="{{ "/refer
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

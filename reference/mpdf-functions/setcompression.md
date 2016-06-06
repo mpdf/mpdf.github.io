@@ -26,9 +26,7 @@ TRUE or FALSE to specify whether mPDF should compress the data for the PDF file.
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

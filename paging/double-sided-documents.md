@@ -16,9 +16,7 @@ The first page in a document will be <span class="smallblock">ODD</span> i.e. pa
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

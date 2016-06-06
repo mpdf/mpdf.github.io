@@ -309,9 +309,7 @@ Parameters <span class="parameter">$pageselector</span>, <span class="parameter"
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

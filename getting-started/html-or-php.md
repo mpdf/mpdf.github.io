@@ -12,9 +12,7 @@ If you are new to mPDF, I would recommend using HTML/CSS for everything - you ca
 
 Example:
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -30,9 +28,7 @@ $mpdf->Output();
 ?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

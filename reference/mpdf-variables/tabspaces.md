@@ -26,9 +26,7 @@ Integer value greater than 0
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

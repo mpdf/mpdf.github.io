@@ -45,9 +45,7 @@ Takes any valid CSS <span class="smallblock">LENGTH</span>  e.g. "2em"
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -59,9 +57,7 @@ Chilli con carne <dottab />&amp;nbsp;£7.95
 $mpdf->WriteHTML($menuitem);
 {% endhighlight %}
 
-{% highlight php %}
 Example #2
-{% endhighlight %}
 
 {% highlight php %}
 <?php

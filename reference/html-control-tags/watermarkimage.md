@@ -75,9 +75,7 @@ F: Centred on the page print-area (frame) respecting page margins
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

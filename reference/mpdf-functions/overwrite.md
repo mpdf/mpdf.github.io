@@ -83,15 +83,13 @@ This parameter specifies the filename for the output PDF file. No path should be
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 // Must set codepage (e.g. UTF-8 or Core fonts) the same as for original document
 
@@ -134,8 +132,8 @@ Example #2  Using encryption
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF('');
 

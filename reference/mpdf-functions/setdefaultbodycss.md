@@ -32,9 +32,7 @@ Case-insensitive
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

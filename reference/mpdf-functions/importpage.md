@@ -77,8 +77,8 @@ Example #1 - Using a full page
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF();
 
@@ -93,20 +93,15 @@ $mpdf->UseTemplate($tplId);
 $mpdf->WriteHTML('Hallo World');
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
 
-{% highlight php %}
 Example #2 - Using a 'cropped' page
-
-{% endhighlight %}
 
 {% highlight php %}
 <?php
 
-include("// Require composer autoload
-require_once __DIR__ . '/vendor/autoload.php';");
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new mPDF();
 

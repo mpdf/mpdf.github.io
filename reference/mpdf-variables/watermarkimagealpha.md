@@ -24,9 +24,7 @@ Define as a value between 0 and 1.
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php
