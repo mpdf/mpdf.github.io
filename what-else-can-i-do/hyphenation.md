@@ -16,7 +16,7 @@ hyphens: none | manual | auto
 
 Default = manual
 
-The default can be changed by altering `<span class="parameter">$defaultCSS`</span> in <span class="filename">config.php</span>
+The default can be changed by altering <span class="parameter">$defaultCSS</span> in <span class="filename">config.php</span>
 
 hyphens: manual
 

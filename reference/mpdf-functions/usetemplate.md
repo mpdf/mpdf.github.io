@@ -22,7 +22,7 @@ imported page as it is printed (see Example #1).
 <div class="alert alert-info" role="alert">
 	<strong>Note</strong> The template will be printed onto the page as the bottom 'layer' i.e.
 	anything else written to that page by mPDF will be written on top of thie template. NB If you use `WriteHTML()` and have
-	a background-color set on BODY this will hide the template from view e.g. `<body style="background-color:#FFFFFF;">`
+	a background-color set on BODY this will hide the template from view e.g. `body style="background-color:#FFFFFF;"`
 </div>
 
 <div class="alert alert-info" role="alert">
