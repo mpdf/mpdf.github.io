@@ -19,8 +19,8 @@ $mpdf-&gt;allow_charset_conversion=true;  // Set by default to <span class="sma
 $mpdf-&gt;charset_in='windows-1252';
 {% endhighlight %}
 
-<p class="manual_block">**Note:** <span class="parameter">charset_in</span> requires codes recognised by the PHP function <a href="/reference/codepages-glyphs/iconv.html">iconv</a> i.e. windows-1252 not win-1252</p>
-<p>If <span class="parameter">allow_charset_conversion</span> is <span class="smallblock">TRUE</span> mPDF will also read the charset from the HTML header if present e.g.</p>
+<p class="manual_block">**Note:** <span class="parameter">$charset_in</span> requires codes recognised by the PHP function <a href="/reference/codepages-glyphs/iconv.html">iconv</a> i.e. windows-1252 not win-1252</p>
+<p>If <span class="parameter">$allow_charset_conversion</span> is <span class="smallblock">TRUE</span> mPDF will also read the charset from the HTML header if present e.g.</p>
 
 {% highlight php %}
 <?php

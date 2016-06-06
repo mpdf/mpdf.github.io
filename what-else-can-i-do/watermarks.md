@@ -24,9 +24,9 @@ $mpdf->watermarkTextAlpha = 0.1;
 $mpdf->watermarkImageAlpha = 0.5;
 {% endhighlight %}
 
-A watermark image is set by default to print on top of the page contents. The opacity setting will alter the appearance of the text behind the image. You can optionally set the watermark to appear behind the page contents using <span class="parameter">watermarkImgBehind</span>, but note that the image will be hidden by any background colour specified, including table cells and the page background.
+A watermark image is set by default to print on top of the page contents. The opacity setting will alter the appearance of the text behind the image. You can optionally set the watermark to appear behind the page contents using <span class="parameter">$watermarkImgBehind</span>, but note that the image will be hidden by any background colour specified, including table cells and the page background.
 
-<div class="alert alert-info" role="alert">**Note:** In version 4.4 <span class="parameter">watermarkImgBehind</span> was unintentionally set to <span class="smallblock">TRUE</span> in the <span class="filename">config.php</span> file</div>
+<div class="alert alert-info" role="alert">**Note:** In version 4.4 <span class="parameter">$watermarkImgBehind</span> was unintentionally set to <span class="smallblock">TRUE</span> in the <span class="filename">config.php</span> file</div>
 
 Set the watermark(s) to show using: <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkText</a> or <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a>
 

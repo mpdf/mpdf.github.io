@@ -46,7 +46,7 @@ See also <a href="{{ "/troubleshooting/blank-screen.html" | prepend: site.baseur
 
 The Indic fonts (added mPDF 4.0) do not contain the basic ASCII characters: a-z, A-Z, and in some: ` and $
 
-The font files have been edited to add these characters if you are using embedded font subsets (so all ASCII chars show), but they will not be available if you are not using subsets. In this case you need to mark up HTML text with <span class="parameter">lang</span> or <span class="parameter">font-family</span>.
+The font files have been edited to add these characters if you are using embedded font subsets (so all ASCII chars show), but they will not be available if you are not using subsets. In this case you need to mark up HTML text with <span class="parameter">$lang</span> or <span class="parameter">$font-family</span>.
 
 ## Adobe Reader 7 error reading file with embedded SVG image
 

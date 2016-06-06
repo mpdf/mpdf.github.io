@@ -26,7 +26,7 @@ FPR1 is for coarse adjustments, and FPR4 for fine adjustments when it is getting
 
 # Values
 
-<span class="parameter">incrementFPR1 [1-4]</span> <span class="smallblock"></span>
+<span class="parameter">$incrementFPR1 [1-4]</span> <span class="smallblock"></span>
 
 **Values**
 

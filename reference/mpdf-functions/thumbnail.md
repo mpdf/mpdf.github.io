@@ -18,19 +18,19 @@ Create thumbnails of an external PDF file and insert in current document.
 
 # Parameters
 
-<span class="parameter">file</span>
+<span class="parameter">$file</span>
 
-This parameter specifies the source PDF file to import.  <span class="parameter">file</span> should be a relative path to a local file.
+This parameter specifies the source PDF file to import.  <span class="parameter">$file</span> should be a relative path to a local file.
 
-<span class="parameter">numberperrow</span>
+<span class="parameter">$numberperrow</span>
 
-<span class="parameter">number</span> specifies the number of thumbnails to print in each **row**.
+<span class="parameter">$number</span> specifies the number of thumbnails to print in each **row**.
 
 <span class="smallblock">DEFAULT</span>: 3
 
-<span class="parameter">spacing</span>
+<span class="parameter">$spacing</span>
 
-<span class="parameter">S</span>pecifies the spacing (vertical and horizontal) between thumbnails in millimetres.
+<span class="parameter">$S</span>pecifies the spacing (vertical and horizontal) between thumbnails in millimetres.
 
 <span class="smallblock">DEFAULT</span>: 10
 

@@ -145,7 +145,7 @@ $mpdf->WriteHTML('Document text');
 $mpdf->Output();
 {% endhighlight %}
 
-In this example using custom HTML tags to set the <span class="smallblock">NON-HTML</span> header, notice that &lt;setpageheader&gt; has <span class="parameter">show-this-page</span> = 1. This is because as soon as you call WriteHTML(), mPDF has added the first page, so this fixes the problem by forcing the header to show on the first page:
+In this example using custom HTML tags to set the <span class="smallblock">NON-HTML</span> header, notice that &lt;setpageheader&gt; has <span class="parameter">$show-this-page</span> = 1. This is because as soon as you call WriteHTML(), mPDF has added the first page, so this fixes the problem by forcing the header to show on the first page:
 
 {% highlight php %}
 Example #4 - <setpageheader>

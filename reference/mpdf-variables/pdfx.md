@@ -21,7 +21,7 @@ Specify whether to create a PDF/X-1a compliant document.
 
 # Values
 
-<span class="parameter">PDFX</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$PDFX</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

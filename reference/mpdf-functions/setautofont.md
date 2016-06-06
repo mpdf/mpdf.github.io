@@ -40,7 +40,7 @@ The font actually used for default chinese is determined by the settings in func
 
 # Parameters
 
-<span class="parameter">flag</span>
+<span class="parameter">$flag</span>
 
 This parameter specifies which languages are auto-detected. Either an integer or one of the defined constants can be used.
 

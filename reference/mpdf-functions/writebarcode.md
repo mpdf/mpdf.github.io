@@ -20,11 +20,11 @@ Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specifica
 
 # Parameters
 
-<span class="parameter">code</span>
+<span class="parameter">$code</span>
 
 This parameter specifies the EAN-13 (ISBN-13) code. Accepts 12 or 13 digits (i.e. with or without the check digit) and may optionally contain hyphens e.g. 978-09542-2461-5  or  978095422461
 
-<span class="parameter">showisbn</span>
+<span class="parameter">$showisbn</span>
 
 Specif whether to show the EAN-13 (ISBN-13) code **above** the barcode. NB The numbers will always appear below the bars, but the code abive the bars is optional.
 
@@ -36,25 +36,25 @@ Specif whether to show the EAN-13 (ISBN-13) code **above** the barcode. NB The n
 
 <span class="smallblock">BLANK</span> or omitted: 1
 
-<span class="parameter">x</span>
+<span class="parameter">$x</span>
 
-Sets the <span class="parameter">x</span> (horizontal) position for the barcode.
-
-<span class="smallblock">BLANK</span> or omitted uses the current writing position in the document.
-
-<span class="parameter">y</span>
-
-Sets the <span class="parameter">y</span> (vertical) position for the barcode.
+Sets the <span class="parameter">$x</span> (horizontal) position for the barcode.
 
 <span class="smallblock">BLANK</span> or omitted uses the current writing position in the document.
 
-<span class="parameter">size</span>
+<span class="parameter">$y</span>
+
+Sets the <span class="parameter">$y</span> (vertical) position for the barcode.
+
+<span class="smallblock">BLANK</span> or omitted uses the current writing position in the document.
+
+<span class="parameter">$size</span>
 
 This parameter specifies the size of the barcode relative to the standard. Values between 0.8 and 2.0 (80% to 200%) are accepted.
 
 <span class="smallblock">DEFAULT</span>: 1
 
-<span class="parameter">border</span>
+<span class="parameter">$border</span>
 
 This parameter specifies whether or not to show a border around the barcode.
 
@@ -66,13 +66,13 @@ This parameter specifies whether or not to show a border around the barcode.
 
 <span class="smallblock">DEFAULT</span>: "0" i.e. No border
 
-<span class="parameter">padding_left</span>
+<span class="parameter">$padding_left</span>
 
-<span class="parameter">padding</span><span class="parameter">_right</span>
+<span class="parameter">$padding</span><span class="parameter">$_right</span>
 
-<span class="parameter">padding</span><span class="parameter">_top</span>
+<span class="parameter">$padding</span><span class="parameter">$_top</span>
 
-<span class="parameter">padding</span><span class="parameter">_bottom</span><span class="parameter">
+<span class="parameter">$padding</span><span class="parameter">$_bottom</span><span class="parameter">$
 
 </span>
 
@@ -84,13 +84,13 @@ All values should be specified as <span class="smallblock">LENGTH</span> in mill
 
 <span class="smallblock">DEFAULT</span> **Values**
 
-<span class="parameter">padding</span><span class="parameter">_left</span> 1
+<span class="parameter">$padding</span><span class="parameter">$_left</span> 1
 
-<span class="parameter">padding</span><span class="parameter">_right</span> 1
+<span class="parameter">$padding</span><span class="parameter">$_right</span> 1
 
-<span class="parameter">padding</span><span class="parameter">_top</span> 2
+<span class="parameter">$padding</span><span class="parameter">$_top</span> 2
 
-<span class="parameter">padding</span><span class="parameter">_bottom</span> 2
+<span class="parameter">$padding</span><span class="parameter">$_bottom</span> 2
 
 # Changelog
 

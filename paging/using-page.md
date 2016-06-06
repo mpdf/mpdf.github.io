@@ -84,7 +84,7 @@ The CSS `@page` selector is partially supported in mPDF with the following prope
 
 All properties except size are optional.
 
-Three values for the <span class="parameter">size</span> property set the page box to the same size as the sheet:
+Three values for the <span class="parameter">$size</span> property set the page box to the same size as the sheet:
 
 `auto`
 

@@ -20,7 +20,7 @@ Specify whether to substitute missing characters in UTF-8(multibyte) documents. 
 
 # Values
 
-<span class="parameter">useSubstitutions</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$useSubstitutions</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

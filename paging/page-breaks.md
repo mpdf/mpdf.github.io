@@ -31,7 +31,7 @@ the same time marking the position for a Table of Contents to be later inserted.
 
 # Forcing Page Breaks
 
-You can set the CSS value for <span class="parameter">page-break-before</span> to "always | left | right" for any block
+You can set the CSS value for <span class="parameter">$page-break-before</span> to "always | left | right" for any block
 element (p, div etc). This will force a page-break, but take care that any enclosing (outer) block elements will be
 'closed down' and their characteristics lost.
 
@@ -41,7 +41,7 @@ mPDF has limited scope to control when automatic page-breaks occur, and does not
 
 ## page-break-inside
 
-You can set the CSS value for <span class="parameter">page-break-inside</span> to "avoid" for any block element. mPDF
+You can set the CSS value for <span class="parameter">$page-break-inside</span> to "avoid" for any block element. mPDF
 will try to avoid a page-break within the block, but this only works across a maximum of 2 pages, and is not compatible
 with table autosize or table rotate
 
@@ -53,13 +53,13 @@ with table autosize or table rotate
 $mpdf->use_kwt = true;    // DEFAULT=false
 {% endhighlight %}
 
-If set to true, mPDF will automatically set <span class="parameter">page-break-inside</span>=avoid for any H1-H6 header
+If set to true, mPDF will automatically set <span class="parameter">$page-break-inside</span>=avoid for any H1-H6 header
 that *immediately* precedes a table, thus keeping the heading together with the table.
 
-- automatically sets the table to fit on one page (i.e. table:<span class="parameter">page-break-inside</span>=avoid) if
+- automatically sets the table to fit on one page (i.e. table:<span class="parameter">$page-break-inside</span>=avoid) if
 it is a rotated table
 
-- ignored when: columns on, <span class="parameter">page-break-inside</span>=avoid for surrounding element, active Forms
+- ignored when: columns on, <span class="parameter">$page-break-inside</span>=avoid for surrounding element, active Forms
 
 ## Tables
 

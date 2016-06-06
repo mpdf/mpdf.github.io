@@ -16,9 +16,9 @@ Specifies whether or not to show/print the watermark image on each page. The fil
 
 # Values
 
-<span class="parameter">showWatermarkImage</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
+<span class="parameter">$showWatermarkImage</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
 
-If <span class="parameter">showWatermarkImage</span> is <span class="smallblock">TRUE</span> or 1 the watermark image will be added to each page of the document.
+If <span class="parameter">$showWatermarkImage</span> is <span class="smallblock">TRUE</span> or 1 the watermark image will be added to each page of the document.
 
 The value can be changed during the document to turn the watermark on and off on different pages.
 

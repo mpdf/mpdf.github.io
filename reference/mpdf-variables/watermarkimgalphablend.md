@@ -20,7 +20,7 @@ Specify the blend mode for overlying watermark images. Different blend modes wor
 
 # Values
 
-<span class="parameter">watermarkImgAlphaBlend</span>
+<span class="parameter">$watermarkImgAlphaBlend</span>
 
 **Values**
 

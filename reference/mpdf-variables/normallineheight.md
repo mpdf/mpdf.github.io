@@ -22,7 +22,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 # Values
 
-<span class="parameter">normalLineheight</span>
+<span class="parameter">$normalLineheight</span>
 
 **Values**
 

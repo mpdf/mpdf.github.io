@@ -22,13 +22,13 @@ Define a page footer with a given name. Named footers can be referenced and set 
 
 # Parameters
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
-User-defined name for the footer. If <span class="parameter">name</span> = <span class="smallblock">BLANK</span> the name '_default' is used.<span class="smallblock">
+User-defined name for the footer. If <span class="parameter">$name</span> = <span class="smallblock">BLANK</span> the name '_default' is used.<span class="smallblock">
 
 </span>
 
-<span class="parameter">footer</span>
+<span class="parameter">$footer</span>
 
 This parameter specifies the content of the page footer as an array.
 
@@ -36,17 +36,17 @@ This parameter specifies the content of the page footer as an array.
 
 **Values** in the array
 
-<span class="parameter">content</span>: <span class="smallblock">TEXT STRING</span>
+<span class="parameter">$content</span>: <span class="smallblock">TEXT STRING</span>
 
-<span class="parameter">font-size</span>: <span class="smallblock">FLOAT</span> font size in **pts**
+<span class="parameter">$font-size</span>: <span class="smallblock">FLOAT</span> font size in **pts**
 
-<span class="parameter">font-style</span>: B|I|BI|<span class="smallblock">BLANK STRING</span>
+<span class="parameter">$font-style</span>: B|I|BI|<span class="smallblock">BLANK STRING</span>
 
-<span class="parameter">font-family</span>: Any available font-family
+<span class="parameter">$font-family</span>: Any available font-family
 
-<span class="parameter">color</span>: CSS '#RRGGBB' string
+<span class="parameter">$color</span>: CSS '#RRGGBB' string
 
-<span class="parameter">line</span>: 0|1 - specify whether to draw a line above the footer
+<span class="parameter">$line</span>: 0|1 - specify whether to draw a line above the footer
 
 {% highlight php %}
 $footer = array (

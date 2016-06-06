@@ -20,7 +20,7 @@ In a justified text block, a &lt;br&gt; linebreak will not cause the preceding l
 
 # Values
 
-<span class="parameter">justifyB4br</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$justifyB4br</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

@@ -18,7 +18,7 @@ For more information, see <a href="{{ "/paging/page-numbering.html" | prepend: s
 
 # Values
 
-<span class="parameter">defaultPageNumStyle</span>
+<span class="parameter">$defaultPageNumStyle</span>
 
 **Values**
 

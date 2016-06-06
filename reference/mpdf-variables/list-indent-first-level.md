@@ -16,7 +16,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend
 
 # Values
 
-<span class="parameter">list_indent_first_level= *<span class="smallblock">1</span>*|0</span>
+<span class="parameter">$list_indent_first_level= *<span class="smallblock">1</span>*|0</span>
 
 **Values**
 

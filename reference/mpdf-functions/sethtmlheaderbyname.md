@@ -20,11 +20,11 @@ Sets an HTML page header that has previously been defined by name.
 
 # Parameters
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
 This parameter specifies the name of a previously defined HTML page header. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page header exists.
 
-<span class="parameter">side</span>
+<span class="parameter">$side</span>
 
 Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
 
@@ -38,7 +38,7 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 
 <span class="smallblock">DEFAULT</span> - sets the header for <span class="smallblock">ODD</span> in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 
-<span class="parameter">write</span>
+<span class="parameter">$write</span>
 
 If <span class="smallblock">TRUE</span> it forces the Header to be written immediately to the current page. Use if the header is being set after the new page has been added.
 

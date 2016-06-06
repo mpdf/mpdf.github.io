@@ -24,7 +24,7 @@ Specify the name without the <span class="filename">.icc</span> extension. sRGB_
 
 # Values
 
-<span class="parameter">ICCProfile</span> =  <span class="smallblock">STRING</span>
+<span class="parameter">$ICCProfile</span> =  <span class="smallblock">STRING</span>
 
 Name of a valid ICC colour profile in the <span class="filename">/iccprofiles/</span> folder - without the <span class="filename">.icc</span> extension.
 

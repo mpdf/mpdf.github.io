@@ -22,11 +22,11 @@ Returns a UTF-8 encoded string.
 
 # Parameters
 
-<span class="parameter">text</span>
+<span class="parameter">$text</span>
 
 The input string, containing HTML numerical entities e.g. &amp;#8123; or &amp;#x2022;
 
-<span class="parameter">low</span>
+<span class="parameter">$low</span>
 
 Specifies whether to convert HTML numerical entities of ASCII characters (&lt;128).
 

@@ -22,7 +22,7 @@ Define, start or stop Columns in the document.
 
 # Parameters
 
-<span class="parameter">nCols</span>
+<span class="parameter">$nCols</span>
 
 Set the number of (vertical) columns to use on a page
 
@@ -30,7 +30,7 @@ Set the number of (vertical) columns to use on a page
 
 <span class="smallblock">DEFAULT</span>: 1
 
-<span class="parameter">vAlign</span>
+<span class="parameter">$vAlign</span>
 
 Automatically adjusts height of columns to be equal if set to J or justify.
 
@@ -42,7 +42,7 @@ J or justify
 
 <span class="smallblock">DEFAULT</span>: ""
 
-<span class="parameter">gap</span>
+<span class="parameter">$gap</span>
 
 Set the gap between columns in millimeters
 

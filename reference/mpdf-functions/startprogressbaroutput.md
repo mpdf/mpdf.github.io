@@ -20,7 +20,7 @@ Enable progress bars to be shown during file generation. Not recommended for gen
 
 # Parameters
 
-<span class="parameter">mode</span>
+<span class="parameter">$mode</span>
 
 **Values** (case-insensitive)
 

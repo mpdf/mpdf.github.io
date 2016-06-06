@@ -16,7 +16,7 @@ Specifies the font to use for the watermark on each page. The BOLD style of the 
 
 # Values
 
-<span class="parameter">watermark_font</span>
+<span class="parameter">$watermark_font</span>
 
 Define as any of the available font-families.
 

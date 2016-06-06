@@ -18,7 +18,7 @@ Set the document RTL state. This defines the default alignment of tables, column
 
 # Parameters
 
-<span class="parameter">dir</span>
+<span class="parameter">$dir</span>
 
 Defines the directionality of the document
 

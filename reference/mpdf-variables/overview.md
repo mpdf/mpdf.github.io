@@ -42,7 +42,7 @@ $mpdf->variablename = true;
 
 </td>
 <td>4.0</td>
-<td>The alias <span class="parameter">useOddEven</span> was used before v4.0
+<td>The alias <span class="parameter">$useOddEven</span> was used before v4.0
 
 </td>
 </tr>
@@ -246,7 +246,7 @@ Page numbering
 <td><span class="smallblock">FALSE</span></td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td>5.4</td>
-<td>Set to <span class="smallblock">TRUE</span> to enable CSS support for <span class="parameter">font-kerning</span></td>
+<td>Set to <span class="smallblock">TRUE</span> to enable CSS support for <span class="parameter">$font-kerning</span></td>
 </tr>
 <tr>
 <td> </td>
@@ -446,7 +446,7 @@ Removed mPDF 5.0 - Use
 
 `$mpdf = new mPDF('c');`
 
-The alias <span class="parameter">use_embeddedfonts_1252</span> was used before v4.0
+The alias <span class="parameter">$use_embeddedfonts_1252</span> was used before v4.0
 
 </td>
 </tr>

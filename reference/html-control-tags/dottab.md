@@ -12,7 +12,7 @@ dottab – Insert dots to following (right-aligned) text
 
 # Description
 
-&lt;**dottab** [ <span class="parameter">outdent</span> ] /&gt;
+&lt;**dottab** [ <span class="parameter">$outdent</span> ] /&gt;
 
 Insert a string of dots to fill the space to the text which follows &lt;dottab /&gt;, which is right-aligned. This gives the appearance seen in e.g. a table of contents, or a menu with prices. A minimum of 3 dots (with spaces either side) is inserted. If the text which follows the &lt;dottab /&gt; will not fit on a single line, the default tab of ' ... ' is added, and text is not right-aligned.
 
@@ -22,7 +22,7 @@ From mPDF 5.7+ CSS styles can be applied to &lt;dottab&gt; as for an inline elem
 
 # Attributes
 
-<span class="parameter">outdent</span>
+<span class="parameter">$outdent</span>
 
 Takes any valid CSS <span class="smallblock">LENGTH</span>  e.g. "2em"
 
@@ -39,7 +39,7 @@ Takes any valid CSS <span class="smallblock">LENGTH</span>  e.g. "2em"
 </tr>
 <tr>
 <td>5.7</td>
-<td><span class="parameter">outdent</span> was added</td>
+<td><span class="parameter">$outdent</span> was added</td>
 </tr>
 </tbody> </table>
 

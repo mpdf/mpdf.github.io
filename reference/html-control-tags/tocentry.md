@@ -12,27 +12,27 @@ tocentry – Insert an entry for the Table of Contents
 
 # Description
 
-&lt;**tocentry**  <span class="parameter">content</span> [ <span class="parameter">level</span> ] [ <span class="parameter">name</span> ] /&gt;
+&lt;**tocentry**  <span class="parameter">$content</span> [ <span class="parameter">$level</span> ] [ <span class="parameter">$name</span> ] /&gt;
 
 Insert an entry for the Table of Contents referencing the current writing position in the document.
 
 <div class="alert alert-info" role="alert">**Note:** The position for the Table of Contents must be specified using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF 2.3 you can use more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">name</span>.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF 2.3 you can use more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">$name</span>.</div>
 
 # Parameters
 
-<span class="parameter">content</span>
+<span class="parameter">$content</span>
 
 This parameter sets the text as it will appear in the ToC entry. Text should be UTF-8 encoded.
 
-<span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;tocentry content="&amp;lt; 40" /&gt;
+<span class="parameter">$content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;tocentry content="&amp;lt; 40" /&gt;
 
 It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 <span class="smallblock">REQUIRED</span>
 
-<span class="parameter">level</span>
+<span class="parameter">$level</span>
 
 Specify the level of this entry (i.e. like heading 1,2,3) as a positive integer 
 
@@ -40,9 +40,9 @@ Starts at level 0
 
 <span class="smallblock">DEFAULT</span>: 0
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
-Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry, if using more than one <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">name</span> can be any alphanumeric characters (except just "0") and is case-insensitive.
+Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry, if using more than one <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">$name</span> can be any alphanumeric characters (except just "0") and is case-insensitive.
 
 <span class="smallblock">BLANK</span> or omitted or 0 uses the default <acronym title="Table of Contents">ToC</acronym>.
 
@@ -57,7 +57,7 @@ Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry
 </thead> <tbody>
 <tr>
 <td>2.3</td>
-<td><span class="parameter">name</span> attribute was added.</td>
+<td><span class="parameter">$name</span> attribute was added.</td>
 </tr>
 </tbody> </table>
 

@@ -20,11 +20,11 @@ Inserts an Index for the document based on index entries made using &lt;<a href=
 
 <div class="alert alert-info" role="alert">**Note:** Prior to mPDF 2.2 the function CreateReference() was used. CreateIndex() is now the preferred form.</div>
 
-<div class="alert alert-info" role="alert">**Note:** <span class="parameter">uselinking</span> was added in mPDF 3.0</div>
+<div class="alert alert-info" role="alert">**Note:** <span class="parameter">$uselinking</span> was added in mPDF 3.0</div>
 
 # Parameters
 
-<span class="parameter">numberofcolumns</span>
+<span class="parameter">$numberofcolumns</span>
 
 Set the number of (vertical) columns to use for the Index
 
@@ -32,13 +32,13 @@ Set the number of (vertical) columns to use for the Index
 
 <span class="smallblock">DEFAULT</span>: 1
 
-<span class="parameter">fontsize</span>
+<span class="parameter">$fontsize</span>
 
 Sets the font size for the Index in ***points*** (pt)
 
 <span class="smallblock">BLANK</span> or omitted or 0 uses the default font-size for the document.
 
-<span class="parameter">linespacing</span>
+<span class="parameter">$linespacing</span>
 
 Sets the line-height used for index entries. Usual values between 1.0 and 1.4.
 
@@ -46,13 +46,13 @@ Sets the line-height used for index entries. Usual values between 1.0 and 1.4.
 
 <span class="smallblock">DEFAULT</span>: 1.2  (changed from 1.0 in mPDF &lt; 3.0)
 
-<span class="parameter">offset</span>
+<span class="parameter">$offset</span>
 
 Sets the text indent (in mm) for subsequent lines, if an index entry flows onto two or more lines.
 
 <span class="smallblock">BLANK</span> or omitted uses a default value of 3mm.
 
-<span class="parameter">usedivletters</span>
+<span class="parameter">$usedivletters</span>
 
 Defines whether to divide index entries starting with the same letter, using a (large) letter as a heading.
 
@@ -66,13 +66,13 @@ Defines whether to divide index entries starting with the same letter, using a (
 
 <span class="smallblock">BLANK</span> or omitted uses a default value of 1
 
-<span class="parameter">divlettersfontsize</span>
+<span class="parameter">$divlettersfontsize</span>
 
 Sets the font size for the dividing letters in ***points*** (pt)
 
 <span class="smallblock">BLANK</span> or omitted or 0 uses the 1.8 times the default font-size for the document.
 
-<span class="parameter">columngap</span>
+<span class="parameter">$columngap</span>
 
 Sets the gap between columns (if set) in millimeters.
 
@@ -80,19 +80,19 @@ Sets the gap between columns (if set) in millimeters.
 
 <span class="smallblock">DEFAULT</span>: 5 (mm)
 
-<span class="parameter">font </span>
+<span class="parameter">$font </span>
 
 Set the font-family for the Index.
 
 <span class="smallblock">BLANK</span> or omitted uses default font-family for the document.
 
-<span class="parameter">divletterfont </span>
+<span class="parameter">$divletterfont </span>
 
 Set the font-family for the dividing letters in the Index.
 
 <span class="smallblock">BLANK</span> or omitted uses default font-family for the document.
 
-<span class="parameter">uselinking</span>
+<span class="parameter">$uselinking</span>
 
 Specify whether to add hyperlinks (internal links) to the entries in the document Index.
 
@@ -117,11 +117,11 @@ Function was added as a synonym for CreateReference().
 </tr>
 <tr>
 <td>3.0</td>
-<td><span class="parameter">uselinking</span> parameter was added</td>
+<td><span class="parameter">$uselinking</span> parameter was added</td>
 </tr>
 <tr>
 <td>3.0</td>
-<td>Default value for <span class="parameter">linespacing</span> changed to 1.2</td>
+<td>Default value for <span class="parameter">$linespacing</span> changed to 1.2</td>
 </tr>
 </tbody> </table>
 

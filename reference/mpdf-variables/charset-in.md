@@ -12,11 +12,11 @@ modification_time: 2015-08-05T12:01:46+00:00
 
 string **charset_in**
 
-Defines the character encoding of any input HTML. Use it together with <span class="parameter">allow_charset_conversion</span> to manually set an input encoding.
+Defines the character encoding of any input HTML. Use it together with <span class="parameter">$allow_charset_conversion</span> to manually set an input encoding.
 
 # Values
 
-<span class="parameter">charset_in</span>
+<span class="parameter">$charset_in</span>
 
 **Values** (case-insensitive)
 

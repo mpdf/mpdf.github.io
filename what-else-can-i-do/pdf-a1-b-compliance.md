@@ -106,7 +106,7 @@ Because PDF/A-1b has the objective of ensuring reliable reproduction of the visu
 
 <ul>
 <li>watermarks text or images</li>
-<li>images with the CSS property <span class="parameter">opacity</span> set</li>
+<li>images with the CSS property <span class="parameter">$opacity</span> set</li>
 <li>annotation markers</li>
 </ul>
 

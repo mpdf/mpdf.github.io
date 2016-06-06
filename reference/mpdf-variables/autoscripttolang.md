@@ -20,7 +20,7 @@ When <span class="smallblock">TRUE</span>, `marks up HTML text using the lang at
 
 # Values
 
-<span class="parameter">autoScriptToLang</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
+<span class="parameter">$autoScriptToLang</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
 
 **Values**
 

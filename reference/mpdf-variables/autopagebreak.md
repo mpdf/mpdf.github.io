@@ -18,7 +18,7 @@ Specify whether to allow automatic page breaks. By default, mPDF creates page br
 
 # Values
 
-<span class="parameter">autoPageBreak</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$autoPageBreak</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

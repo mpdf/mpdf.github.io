@@ -18,7 +18,7 @@ Specify weight used for bold text when using an artificial (outline) bold. If bo
 
 # Values
 
-<span class="parameter">falseBoldWeight</span><span class="smallblock"></span>
+<span class="parameter">$falseBoldWeight</span><span class="smallblock"></span>
 
 **Values**
 

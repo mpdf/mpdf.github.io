@@ -14,31 +14,31 @@ WriteHTML — Write HTML code to the document
 
 void **WriteHTML** ( string <span class="parameter">$html</span> [, int <span class="parameter">$mode</span> [, boolean <span class="parameter">$initialise</span> [, boolean <span class="parameter">$close</span> ]]])
 
-Write <span class="parameter">html</span> code to the document.
+Write <span class="parameter">$html</span> code to the document.
 
-<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 4.2 a fatal error was caused if <span class="parameter">html</span> was passed as a <span class="smallblock">NULL</span> value, <span class="smallblock">FALSE</span> or an undefined variable.</div>
+<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 4.2 a fatal error was caused if <span class="parameter">$html</span> was passed as a <span class="smallblock">NULL</span> value, <span class="smallblock">FALSE</span> or an undefined variable.</div>
 
 # Parameters
 
-<span class="parameter">html</span>
+<span class="parameter">$html</span>
 
 UTF-8 encoded HTML code to write to the document.
 
-<span class="parameter">mode</span>
+<span class="parameter">$mode</span>
 
-Controls what parts of the <span class="parameter">html</span> code is parsed.
+Controls what parts of the <span class="parameter">$html</span> code is parsed.
 
 **Values**
 
-0 - Parses a whole <span class="parameter">html</span> document
+0 - Parses a whole <span class="parameter">$html</span> document
 
-1 - Parses the <span class="parameter">html</span> as styles and stylesheets only
+1 - Parses the <span class="parameter">$html</span> as styles and stylesheets only
 
-2 - Parses the <span class="parameter">html</span> as output elements only
+2 - Parses the <span class="parameter">$html</span> as output elements only
 
-3 - (For internal use only - parses the <span class="parameter">html</span> code without writing to document)
+3 - (For internal use only - parses the <span class="parameter">$html</span> code without writing to document)
 
-4 - (For internal use only - writes the <span class="parameter">html</span> code to a buffer)
+4 - (For internal use only - writes the <span class="parameter">$html</span> code to a buffer)
 
 <span class="smallblock">DEFAULT</span>: 0
 
@@ -68,9 +68,9 @@ The variable <span class="parameter">$disablePrintCSS</span> will determine whet
 
 Anything between &lt;style&gt; tags is then discarded.
 
-If &lt;body&gt; tags are found, all <span class="parameter">html</span> outside these tags are discarded, and the rest is parsed as content for the document.
+If &lt;body&gt; tags are found, all <span class="parameter">$html</span> outside these tags are discarded, and the rest is parsed as content for the document.
 
-If no &lt;body&gt; tags are found, all remaining <span class="parameter">html</span> is parsed as content.
+If no &lt;body&gt; tags are found, all remaining <span class="parameter">$html</span> is parsed as content.
 
 **Mode #1**
 
@@ -80,21 +80,21 @@ The code does not have to be surrounded by &lt;style&gt; tags, so you can pass t
 
 **Mode #2**
 
-If &lt;body&gt; tags are found, all <span class="parameter">html</span> outside these tags are discarded, and the rest is parsed as content for the document.
+If &lt;body&gt; tags are found, all <span class="parameter">$html</span> outside these tags are discarded, and the rest is parsed as content for the document.
 
-If no &lt;body&gt; tags are found, all <span class="parameter">html</span> is parsed as content.
+If no &lt;body&gt; tags are found, all <span class="parameter">$html</span> is parsed as content.
 
-Prior to mPDF 4.2 the default CSS was not parsed when using <span class="parameter">mode</span> #2
+Prior to mPDF 4.2 the default CSS was not parsed when using <span class="parameter">$mode</span> #2
 
-<span class="parameter">initialise</span>
+<span class="parameter">$initialise</span>
 
-Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span> to determine whether to initialise all buffers, starting all HTML elements from new. See example 2 for use. You must start with a WriteHTML() that calls <span class="parameter">initialise</span>=<span class="smallblock">TRUE</span>
+Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span> to determine whether to initialise all buffers, starting all HTML elements from new. See example 2 for use. You must start with a WriteHTML() that calls <span class="parameter">$initialise</span>=<span class="smallblock">TRUE</span>
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
 
-<span class="parameter">close</span>
+<span class="parameter">$close</span>
 
-Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span> to specify whether all HTML elements are closed, and buffers cleared. See example 2 for use. You must end with a WriteHTML() that calls <span class="parameter">close</span>=<span class="smallblock">TRUE</span>
+Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span> to specify whether all HTML elements are closed, and buffers cleared. See example 2 for use. You must end with a WriteHTML() that calls <span class="parameter">$close</span>=<span class="smallblock">TRUE</span>
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
 
@@ -107,17 +107,17 @@ Set <span class="smallblock">TRUE</span> or <span class="smallblock">FALSE</span
 </thead> <tbody>
 <tr>
 <td>2.0</td>
-<td>Using WriteHTML without the <span class="parameter">mode</span> parameter no longer clears any CSS styles already imported.</td>
+<td>Using WriteHTML without the <span class="parameter">$mode</span> parameter no longer clears any CSS styles already imported.</td>
 </tr>
 <tr>
 <td>2.1</td>
-<td>Parameters <span class="parameter">initialise</span> and <span class="parameter">close</span> introduced.</td>
+<td>Parameters <span class="parameter">$initialise</span> and <span class="parameter">$close</span> introduced.</td>
 </tr>
 <tr>
 <td>4.2</td>
 <td>Accepts <span class="smallblock">NULL</span> string as paramter without error.
 
-Parses default CSS when using <span class="parameter">mode</span> as 2</td>
+Parses default CSS when using <span class="parameter">$mode</span> as 2</td>
 </tr>
 </tbody> </table>
 

@@ -18,7 +18,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 # Values
 
-<span class="parameter">useFixedTextBaseline= <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
+<span class="parameter">$useFixedTextBaseline= <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
 
 **Values**
 

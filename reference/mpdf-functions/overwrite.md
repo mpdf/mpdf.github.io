@@ -16,7 +16,7 @@ mixed **OverWrite** ( string <span class="parameter">$sourcefile</span> , mixed 
 
 Using the class extension mPDFI, an existing PDF file can be overwritten, replacing specified text with alternatives. For example you may have created a long complex PDF file, and you wish to produce copies with an individual number on each copy without having to re-generate the whole document each time.
 
-Overwrite() does not re-flow the text from the source file. If the <span class="parameter">replacement</span> string is longer than the <span class="parameter">search</span> string, it may overlap the following text.
+Overwrite() does not re-flow the text from the source file. If the <span class="parameter">$replacement</span> string is longer than the <span class="parameter">$search</span> string, it may overlap the following text.
 
 <div class="alert alert-info" role="alert">**Note:** **OverWrite()** has only been tested to work on PDF files produced by mPDF. It will work with encrpyted files, as long as the same encryption properties are used for the new document.</div>
 
@@ -26,25 +26,25 @@ Overwrite() does not re-flow the text from the source file. If the <span class="
 
 # Parameters
 
-<span class="parameter">sourcefile</span>
+<span class="parameter">$sourcefile</span>
 
-This parameter specifies the source PDF file to use.  <span class="parameter">sourcefile</span> should be a relative path to a local file.
+This parameter specifies the source PDF file to use.  <span class="parameter">$sourcefile</span> should be a relative path to a local file.
 
-<span class="parameter">search</span>
+<span class="parameter">$search</span>
 
 The pattern to search for. It can be either a string or an array with strings. Must only contain only ASCII characters.
 
 If the document is utf-8 mode, the search patterns must not exist in text with justified alignment. (Justified text is achieved in mPDF by varying the character spacing for each <span class="smallblock">SPACE</span> between words; this breaks up the text in the PDF file.)
 
-<span class="parameter">replacement</span>
+<span class="parameter">$replacement</span>
 
-The string or an array with strings to replace. <span class="parameter">replacement</span> can contain any utf-8 encoded characters.
+The string or an array with strings to replace. <span class="parameter">$replacement</span> can contain any utf-8 encoded characters.
 
-If this parameter is a string and the <span class="parameter">search</span> parameter is an array, only the first <span class="parameter">search</span> element will be replaced by the <span class="parameter">replacement</span> string, any extra <span class="parameter">search</span> s will be replaced by an empty string. If both <span class="parameter">search</span> and <span class="parameter">replacement</span> parameters are arrays, each <span class="parameter">search</span> will be replaced by the <span class="parameter">replacement</span> counterpart. If there are fewer elements in the <span class="parameter">replacement</span> array than in the <span class="parameter">search</span> array, any extra <span class="parameter">search</span> s will be replaced by an empty string.
+If this parameter is a string and the <span class="parameter">$search</span> parameter is an array, only the first <span class="parameter">$search</span> element will be replaced by the <span class="parameter">$replacement</span> string, any extra <span class="parameter">$search</span> s will be replaced by an empty string. If both <span class="parameter">$search</span> and <span class="parameter">$replacement</span> parameters are arrays, each <span class="parameter">$search</span> will be replaced by the <span class="parameter">$replacement</span> counterpart. If there are fewer elements in the <span class="parameter">$replacement</span> array than in the <span class="parameter">$search</span> array, any extra <span class="parameter">$search</span> s will be replaced by an empty string.
 
-<span class="parameter">dest</span>
+<span class="parameter">$dest</span>
 
-<span class="parameter">dest</span> specifies the destination for the generated PDF document.
+<span class="parameter">$dest</span> specifies the destination for the generated PDF document.
 
 <span class="smallblock">DEFAULT</span>: "D"
 
@@ -56,19 +56,19 @@ I: serves in-line to the browser
 
 S: returns the PDF document as a string
 
-F: save as file <span class="parameter">file_out
+F: save as file <span class="parameter">$file_out
 
 </span>
 
-<span class="parameter">sourcefile</span>
+<span class="parameter">$sourcefile</span>
 
-This parameter specifies the filename for the output PDF file. No path should be included unless <span class="parameter">dest</span> is set as "F".
+This parameter specifies the filename for the output PDF file. No path should be included unless <span class="parameter">$dest</span> is set as "F".
 
 <span class="smallblock">DEFAULT</span>: "mpdf.pdf"
 
 # Return Value
 
-**OverWrite()** returns the PDF file as a string if <span class="parameter">dest</span> is set to "S".
+**OverWrite()** returns the PDF file as a string if <span class="parameter">$dest</span> is set to "S".
 
 # Changelog
 

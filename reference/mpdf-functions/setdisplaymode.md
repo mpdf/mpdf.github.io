@@ -18,7 +18,7 @@ Specify the initial Display Mode when the PDF file is opened in Adobe Reader. Wh
 
 # Parameters
 
-<span class="parameter">zoom</span>
+<span class="parameter">$zoom</span>
 
 This parameter specifies the magnification (zoom) of the display when the document is opened.
 
@@ -34,7 +34,7 @@ default: User's default setting in Adobe Reader
 
 <span class="smallblock">INTEGER</span> : Display at a percentage zoom (e.g. 90 will display at 90% zoom)
 
-<span class="parameter">layout</span>
+<span class="parameter">$layout</span>
 
 Specify the page layout to be used when the document is opened.
 

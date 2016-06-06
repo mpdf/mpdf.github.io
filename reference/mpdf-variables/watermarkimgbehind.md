@@ -22,7 +22,7 @@ Specify whether to place watermark images behind page contents
 
 # Values
 
-<span class="parameter">watermarkImgBehind</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$watermarkImgBehind</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

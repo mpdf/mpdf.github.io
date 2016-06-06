@@ -20,13 +20,13 @@ Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="
 
 # Parameters
 
-<span class="parameter">mode</span>
+<span class="parameter">$mode</span>
 
 **Values**
 
 0 - does not generate a bookmark
 
-1 - generate a bookmark using the text value of the <span class="parameter">name</span> attribute
+1 - generate a bookmark using the text value of the <span class="parameter">$name</span> attribute
 
 <span class="smallblock">DEFAULT</span>: 0<span class="smallblock"> </span>
 
@@ -37,7 +37,7 @@ Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="
 </thead> <tbody>
 <tr>
 <td>3.0</td>
-<td><span class="parameter">mode</span> = 2 removed</td>
+<td><span class="parameter">$mode</span> = 2 removed</td>
 </tr>
 </tbody> </table>
 
@@ -65,4 +65,4 @@ This will create a Bookmark in the PDF document: "Section 1"
 
 # Notes
 
-<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 3.0 you could specify <span class="parameter">mode</span> = 2 which added the page number to the bookmark e.g. Introduction (p.32). This was removed as it did not accurately handle pagebreaks etc.</div>
+<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 3.0 you could specify <span class="parameter">$mode</span> = 2 which added the page number to the bookmark e.g. Introduction (p.32). This was removed as it did not accurately handle pagebreaks etc.</div>

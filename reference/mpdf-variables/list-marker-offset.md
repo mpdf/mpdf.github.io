@@ -18,7 +18,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend
 
 # Values
 
-<span class="parameter">list_marker_offset</span>
+<span class="parameter">$list_marker_offset</span>
 
 **Values**
 

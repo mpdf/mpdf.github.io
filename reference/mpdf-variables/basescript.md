@@ -16,7 +16,7 @@ Tells mPDF which Script to ignore when using `autoScriptToLang`.
 
 # Values
 
-<span class="parameter">baseScript</span> = *<span class="smallblock">INTEGER</span>*<span class="smallblock"> </span>
+<span class="parameter">$baseScript</span> = *<span class="smallblock">INTEGER</span>*<span class="smallblock"> </span>
 
 **Values**
 

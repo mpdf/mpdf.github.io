@@ -20,23 +20,23 @@ Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to spe
 
 # Parameters
 
-<span class="parameter">content</span>
+<span class="parameter">$content</span>
 
 Specifies the text to appear as a Bookmark.
 
-<span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;annotation content="This is &amp;lt; 40" /&gt;
+<span class="parameter">$content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;annotation content="This is &amp;lt; 40" /&gt;
 
 It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
-<span class="parameter">level</span>
+<span class="parameter">$level</span>
 
-<span class="parameter">level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 below. Accepts an integer from 0 to the maximum depth you wish.
+<span class="parameter">$level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 below. Accepts an integer from 0 to the maximum depth you wish.
 
 <span class="smallblock">DEFAULT</span>: 0
 
-<span class="parameter">y</span>
+<span class="parameter">$y</span>
 
-<span class="parameter">y</span> specifies the y-coordinate on the page for the Bookmark. The top of the page is 0. The default is the current writing position on the page.
+<span class="parameter">$y</span> specifies the y-coordinate on the page for the Bookmark. The top of the page is 0. The default is the current writing position on the page.
 
 <span class="smallblock"></span>
 
@@ -108,7 +108,7 @@ This will produce a Bookmark tree in Adobe Reader:
 
 # Notes
 
-<div class="alert alert-info" role="alert">**Note:** To set the Bookmark for a Table of Contents, see <span class="parameter">toc-bookmarkText</span> in <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>.</div>
+<div class="alert alert-info" role="alert">**Note:** To set the Bookmark for a Table of Contents, see <span class="parameter">$toc-bookmarkText</span> in <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>.</div>
 
 # See Also
 

@@ -18,7 +18,7 @@ Specify whether to show performance data. Useful if you are developing with mPDF
 
 # Values
 
-<span class="parameter">showStats</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$showStats</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

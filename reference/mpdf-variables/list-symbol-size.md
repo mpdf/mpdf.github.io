@@ -18,7 +18,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend
 
 # Values
 
-<span class="parameter">list_symbol_size</span>
+<span class="parameter">$list_symbol_size</span>
 
 **Values**
 

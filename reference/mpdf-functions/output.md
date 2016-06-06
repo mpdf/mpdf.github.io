@@ -18,25 +18,25 @@ Send the document to a given destination: browser, file or string. In the case o
 
 # Parameters
 
-<span class="parameter">filename</span>
+<span class="parameter">$filename</span>
 
 The name of the file. If not specified, the document will be sent to the browser (destination I).
 
 <span class="smallblock">BLANK</span> or omitted: "doc.pdf"
 
-<span class="parameter">dest</span>
+<span class="parameter">$dest</span>
 
 Destination where to send the document.
 
 <span class="smallblock">DEFAULT</span>: "I" i.e. Browser
 
-I: send the file inline to the browser. The plug-in is used if available. The name given by <span class="parameter">filename</span> is used when one selects the "Save as" option on the link generating the PDF.
+I: send the file inline to the browser. The plug-in is used if available. The name given by <span class="parameter">$filename</span> is used when one selects the "Save as" option on the link generating the PDF.
 
-D: send to the browser and force a file download with the name given by <span class="parameter">filename</span>.
+D: send to the browser and force a file download with the name given by <span class="parameter">$filename</span>.
 
-F: save to a local file with the name given by <span class="parameter">filename</span> (may include a path).
+F: save to a local file with the name given by <span class="parameter">$filename</span> (may include a path).
 
-S: return the document as a string. <span class="parameter">filename</span> is ignored.
+S: return the document as a string. <span class="parameter">$filename</span> is ignored.
 
 <div class="alert alert-info" role="alert">**Note:** You can use the 'S' option to e-mail a PDF file - see example under <a href="{{ "/real-life-examples/e-mail-a-pdf-file.html" | prepend: site.baseurl }}">E-mail a PDF file</a>.</div>
 

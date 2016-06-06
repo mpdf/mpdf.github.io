@@ -12,7 +12,7 @@ modification_time: 2015-08-05T12:02:34+00:00
 
 boolean **useAdobeCJK**
 
-When <span class="smallblock">TRUE</span>, forces mPDF to use the free Adobe CJK Asian fonts, thus keeping the PDF file size to a minimum. This affects text defines using the CSS <span class="parameter">lang</span> property, which includes the use of AutoFont. Thus a CSS stylesheet defining `lang="ja"` will be substituted by the Adobe Japanes font. (This will not prevent the use of other CJK fonts if specified by font-family.)
+When <span class="smallblock">TRUE</span>, forces mPDF to use the free Adobe CJK Asian fonts, thus keeping the PDF file size to a minimum. This affects text defines using the CSS <span class="parameter">$lang</span> property, which includes the use of AutoFont. Thus a CSS stylesheet defining `lang="ja"` will be substituted by the Adobe Japanes font. (This will not prevent the use of other CJK fonts if specified by font-family.)
 
 The precise effect it has on different languages/fonts will be specified in the <span class="filename">config_cp.php</span> configuration file.
 
@@ -20,7 +20,7 @@ The precise effect it has on different languages/fonts will be specified in the 
 
 # Values
 
-<span class="parameter">useAdobeCJK</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
+<span class="parameter">$useAdobeCJK</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
 
 **Values**
 

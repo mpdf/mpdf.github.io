@@ -18,7 +18,7 @@ Specifies whether or not to restore open HTML block elements after a forced page
 
 # Values
 
-<span class="parameter">restoreBlockPageBreaks</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
+<span class="parameter">$restoreBlockPageBreaks</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
 
 **Values**
 
@@ -69,5 +69,5 @@ Hallo World
 
 <ul>
 <li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML code to the document</li>
-<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">formfeed</a>&gt; - Equivalent to pagebreak with <span class="parameter">restoreBlockPageBreaks</span> set to <span class="smallblock">TRUE</span> </li>
+<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">formfeed</a>&gt; - Equivalent to pagebreak with <span class="parameter">$restoreBlockPageBreaks</span> set to <span class="smallblock">TRUE</span> </li>
 </ul>

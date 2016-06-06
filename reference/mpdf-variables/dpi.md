@@ -12,15 +12,15 @@ modification_time: 2015-08-05T12:01:55+00:00
 
 void **dpi**
 
-Specify how to convert sizes specified in "px" units (pixels). As a print medium, PDF documents do not have any inherent size for pixels. Any values set for e.g. font-size, border-width etc. need to be converted to a real length. The dots-per-inch (dpi) affects all conversions from pixels ***except images***, which are set by a separate variable <span class="parameter">img_dpi</span>
+Specify how to convert sizes specified in "px" units (pixels). As a print medium, PDF documents do not have any inherent size for pixels. Any values set for e.g. font-size, border-width etc. need to be converted to a real length. The dots-per-inch (dpi) affects all conversions from pixels ***except images***, which are set by a separate variable <span class="parameter">$img_dpi</span>
 
-<div class="alert alert-info" role="alert">**Note:** It is recommended that the values for <span class="parameter">dpi</span> and <span class="parameter">img_dpi</span> are the same.</div>
+<div class="alert alert-info" role="alert">**Note:** It is recommended that the values for <span class="parameter">$dpi</span> and <span class="parameter">$img_dpi</span> are the same.</div>
 
 <div class="alert alert-info" role="alert">**Note:** This variable can be changed in the configuration file <span class="filename">config.php</span></div>
 
 # Values
 
-<span class="parameter">dpi</span>
+<span class="parameter">$dpi</span>
 
 **Values**
 

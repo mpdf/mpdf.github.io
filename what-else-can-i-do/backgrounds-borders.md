@@ -82,7 +82,7 @@ The five numbers are coordinates in the form (x1, y1, x2, y2, r) where (x1, y1) 
 
 In addition to the standard CSS styles for borders, border-radius and background-clip are supported. these are defined in the <a href="http://www.w3.org/TR/2008/WD-css3-background-20080910/#layering">CSS3 draft specification</a>.
 
-<div class="alert alert-info" role="alert">**Note:** Border-radius does not work if Columns are being used, or if<span class="parameter"> <a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a> </span>is <span class="smallblock">TRUE</span> (keep-with-table).</div>
+<div class="alert alert-info" role="alert">**Note:** Border-radius does not work if Columns are being used, or if<span class="parameter">$ <a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a> </span>is <span class="smallblock">TRUE</span> (keep-with-table).</div>
 
 The two length values of the ‘border-*-radius’ properties define the radii of a quarter ellipse that defines the shape of the corner of the outer border edge.
 

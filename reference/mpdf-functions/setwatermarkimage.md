@@ -18,19 +18,19 @@ Set an image to use as a Watermark. The watermark is a semi-transparent backgrou
 
 # Parameters
 
-<span class="parameter">src</span>
+<span class="parameter">$src</span>
 
 This parameter specifies the image file to use for the watermark. This can be a full URI or use a relative path<span class="smallblock">
 
 </span>
 
-<span class="parameter">alpha</span>
+<span class="parameter">$alpha</span>
 
 This parameter defines the transparency value (alpha) to use for the watermark. The Value should be between 0 and 1.
 
 <span class="smallblock">DEFAULT</span>: 0.2
 
-<span class="parameter">size</span>
+<span class="parameter">$size</span>
 
 This parameter takes either a pre-defined string, an integer, or an array of width and height. Defines the size of the watermark.
 
@@ -48,9 +48,9 @@ array(<span class="parameter">$width</span>, <span class="parameter">$height</sp
 
 <span class="smallblock">DEFAULT</span>: "D"
 
-<span class="parameter">position</span>
+<span class="parameter">$position</span>
 
-This parameter takes either a pre-defined string or an array of <span class="parameter">x</span> and <span class="parameter">y</span>. Defines the position of the watermark on the page.
+This parameter takes either a pre-defined string or an array of <span class="parameter">$x</span> and <span class="parameter">$y</span>. Defines the position of the watermark on the page.
 
 **Values**
 

@@ -16,15 +16,15 @@ The CSS property "position" is **partially** supported in mPDF, allowing a block
 position: fixed|absolute
 {% endhighlight %}
 
-<span class="parameter">absolute</span> - treats the whole physical page as the containing element
+<span class="parameter">$absolute</span> - treats the whole physical page as the containing element
 
-<span class="parameter">fixed</span> - treats the 'printable page' (inside the margins) as the containing element
+<span class="parameter">$fixed</span> - treats the 'printable page' (inside the margins) as the containing element
 
 {% highlight php %}
 top|left|bottom|right: LENGTH (any valid length unit: em, mm, px, % etc.) DEFAULT = auto
 {% endhighlight %}
 
-<span class="parameter">rotate</span> - (introduced mPDF 5.0) rotates the block element 90 degrees clockwise or anticlockwise
+<span class="parameter">$rotate</span> - (introduced mPDF 5.0) rotates the block element 90 degrees clockwise or anticlockwise
 
 top|left|bottom|right|width|height are all used to set the size of the block element BEFORE rotation i.e. if the width is not specified, the lft and right margins will be used to calculate the width. After rotation, left|top are used to position the top left corner of the (rotated) element. There is an exception if bottom or right are specified without the respective top or left values; in this case these values are used to position the bottom or right edge of the (rotated) element.
 
@@ -56,11 +56,11 @@ The CSS property "overflow" determines how text is displayed if the block elemen
 overflow: visible|hidden|auto  DEFAULT = visible
 {% endhighlight %}
 
-<span class="parameter">visible</span> - all text will show, even if it lies outside the defined block element
+<span class="parameter">$visible</span> - all text will show, even if it lies outside the defined block element
 
-<span class="parameter">hidden</span> - text will be 'clipped' so that overflowing text is not visible
+<span class="parameter">$hidden</span> - text will be 'clipped' so that overflowing text is not visible
 
-<span class="parameter">auto</span> - text will be automatically reduced in size if required to fit inside the block element
+<span class="parameter">$auto</span> - text will be automatically reduced in size if required to fit inside the block element
 
 # Example
 

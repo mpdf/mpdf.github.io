@@ -12,29 +12,29 @@ indexentry – Insert an Index entry for the document
 
 # Description
 
-&lt;**indexentry**  <span class="parameter">content</span> [ <span class="parameter">xref</span> ] /&gt;
+&lt;**indexentry**  <span class="parameter">$content</span> [ <span class="parameter">$xref</span> ] /&gt;
 
-Insert an Index entry for the document Index, referencing the current writing position in the document. If <span class="parameter">xref</span> is set, it will appear as a cross-referencing entry in the index as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
+Insert an Index entry for the document Index, referencing the current writing position in the document. If <span class="parameter">$xref</span> is set, it will appear as a cross-referencing entry in the index as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
 
 <div class="alert alert-info" role="alert">**Note:** The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 
 # Attributes
 
-<span class="parameter">content</span>
+<span class="parameter">$content</span>
 
 This attribute sets the text as it will appear in the Index entry. Text should be UTF-8 encoded.
 
-<span class="parameter">content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;indexentry content="&amp;lt; 40" /&gt;
+<span class="parameter">$content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;indexentry content="&amp;lt; 40" /&gt;
 
 It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 <span class="smallblock">REQUIRED</span>
 
-<span class="parameter">xref</span>
+<span class="parameter">$xref</span>
 
 This attribute sets the text used as a cross-reference. Text should be UTF-8 encoded.
 
-<span class="parameter">xref</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;indexentry xref="&amp;lt; 40" /&gt;
+<span class="parameter">$xref</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;indexentry xref="&amp;lt; 40" /&gt;
 
 It is recommended that you use e.g. htmlspecialchars($xref, ENT_QUOTES) for this.
 
@@ -49,7 +49,7 @@ Text entries passed in the form "Subject:Subcategory" will appear in the Index a
 </thead> <tbody>
 <tr>
 <td>3.0</td>
-<td><span class="parameter">xref</span> attribute added.</td>
+<td><span class="parameter">$xref</span> attribute added.</td>
 </tr>
 </tbody> </table>
 

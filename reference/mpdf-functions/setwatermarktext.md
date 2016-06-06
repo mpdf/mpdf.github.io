@@ -20,13 +20,13 @@ Set the text to use as a Watermark. The watermark is a semi-transparent backgrou
 
 # Parameters
 
-<span class="parameter">text</span>
+<span class="parameter">$text</span>
 
 This parameter defines the text to use for the watermark. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. If the text is blank, it will clear the watermark text, so nothing appears.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
-<span class="parameter">alpha</span>
+<span class="parameter">$alpha</span>
 
 This parameter defines the transparency value (alpha) to use for the watermark: either text or image. The Value should be between 0 and 1.
 
@@ -43,11 +43,11 @@ This parameter defines the transparency value (alpha) to use for the watermark: 
 </tr>
 <tr>
 <td>2.2</td>
-<td>Parameter <span class="parameter">alpha</span> was added</td>
+<td>Parameter <span class="parameter">$alpha</span> was added</td>
 </tr>
 <tr>
 <td>3.0</td>
-<td>Parameter <span class="parameter">text</span> changed to be optional
+<td>Parameter <span class="parameter">$text</span> changed to be optional
 
 </td>
 </tr>

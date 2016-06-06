@@ -18,7 +18,7 @@ Restart the use of a document template (set by <a href="{{ "/reference/mpdf-func
 
 # Parameters
 
-<span class="parameter">none</span>
+<span class="parameter">$none</span>
 
 # Changelog
 

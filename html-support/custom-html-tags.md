@@ -20,7 +20,7 @@ If you want to hide mPDF custom tags from a browser, enclose any mPDF code withi
 <!--mpdf  ..  anything you want to write ...  mpdf-->
 {% endhighlight %}
 
-As these are the standard comment tags recognised by every browser, this will create valid HTML which should output correctly in any circumstances. mPDF will strip away the <span class="parameter">&lt;!--mpdf</span> tag and any following spaces, and the <span class="parameter">mpdf--&gt;</span> tag and any preceeding spaces, and process all enclosed code.
+As these are the standard comment tags recognised by every browser, this will create valid HTML which should output correctly in any circumstances. mPDF will strip away the <span class="parameter">$&lt;!--mpdf</span> tag and any following spaces, and the <span class="parameter">$mpdf--&gt;</span> tag and any preceeding spaces, and process all enclosed code.
 
 <div class="alert alert-info" role="alert">**Note:** Almost all mPDF custom tags are self closing e.g. &lt;pagebreak /&gt;. If you do not use self-closing tags, the HTML may not show correctly in a browser unless you hide the tags in special comments as above.</div>
 

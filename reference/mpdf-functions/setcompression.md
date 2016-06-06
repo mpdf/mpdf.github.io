@@ -18,7 +18,7 @@ Specifies that mPDF should compress the data for the PDF file. This makes a smal
 
 # Parameters
 
-<span class="parameter">flag</span>
+<span class="parameter">$flag</span>
 
 TRUE or FALSE to specify whether mPDF should compress the data for the PDF file.
 

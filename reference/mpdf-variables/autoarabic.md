@@ -18,7 +18,7 @@ Analysis of the text will attempt to distinguish Arabic, Farsi, Pashto, Urdu and
 
 # Values
 
-<span class="parameter">autoArabic</span> = *<span class="smallblock">TRUE|FALSE</span>*<span class="smallblock">
+<span class="parameter">$autoArabic</span> = *<span class="smallblock">TRUE|FALSE</span>*<span class="smallblock">
 
 </span>
 

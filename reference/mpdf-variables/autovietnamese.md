@@ -22,7 +22,7 @@ Note: If `autoVietnamese` is <span class="smallblock">TRUE</span> mPDF will mark
 
 # Values
 
-<span class="parameter">autoVietnamese</span> = *<span class="smallblock">TRUE|FALSE</span>*<span class="smallblock">
+<span class="parameter">$autoVietnamese</span> = *<span class="smallblock">TRUE|FALSE</span>*<span class="smallblock">
 
 </span>
 

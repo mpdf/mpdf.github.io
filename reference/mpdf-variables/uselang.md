@@ -8,13 +8,13 @@ modification_time: 2015-08-05T12:02:38+00:00
 
 (mPDF >= 2.3  <= 5.7)
 
-useLang – Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span>
+useLang – Specify whether to recognise/support the HTML attribute <span class="parameter">$lang</span>
 
 # Description
 
 void **useLang**
 
-Specify whether to recognise/support the HTML attribute <span class="parameter">lang</span>.
+Specify whether to recognise/support the HTML attribute <span class="parameter">$lang</span>.
 
 See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for more details.
 
@@ -22,17 +22,17 @@ See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">la
 
 <div class="alert alert-info" role="alert">**Note:** The default value was changed to <span class="smallblock">TRUE </span>in version 4.0</div>
 
-**Note:** <span class="parameter">lang</span> is a useful way to select appropriate fonts for some languages. Automatic font selection using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the HTML with the <span class="parameter">lang</span> attribute, so useLang is required. Using automatic font selection adds considerable processing time when creating a large document. Automatic font selection is only valid when using UTF-8 as the codepage for the document.
+**Note:** <span class="parameter">$lang</span> is a useful way to select appropriate fonts for some languages. Automatic font selection using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the HTML with the <span class="parameter">$lang</span> attribute, so useLang is required. Using automatic font selection adds considerable processing time when creating a large document. Automatic font selection is only valid when using UTF-8 as the codepage for the document.
 
 # Values
 
-<span class="parameter">useLang</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$useLang</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 
-<span class="smallblock">TRUE </span>: recognise/support the HTML attribute <span class="parameter">lang</span>.
+<span class="smallblock">TRUE </span>: recognise/support the HTML attribute <span class="parameter">$lang</span>.
 
-<span class="smallblock">FALSE</span>: does not recognise/support the HTML attribute <span class="parameter">lang</span>.
+<span class="smallblock">FALSE</span>: does not recognise/support the HTML attribute <span class="parameter">$lang</span>.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
 

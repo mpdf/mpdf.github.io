@@ -18,39 +18,39 @@ Import a page, or part of a page, from an external PDF file. The external source
 
 # Parameters
 
-<span class="parameter">pageno</span>
+<span class="parameter">$pageno</span>
 
-This parameter specifies the page number from the source PDF file to import.  <span class="parameter">pageno</span> should be a positive integer value.
+This parameter specifies the page number from the source PDF file to import.  <span class="parameter">$pageno</span> should be a positive integer value.
 
 <span class="smallblock">DEFAULT</span>: 1
 
-<span class="parameter">crop_x</span>
+<span class="parameter">$crop_x</span>
 
 Specifies the x-coordinate (abscissa) for the page of the source PDF file, when importing a 'cropped' page into the template. Value in millimetres.
 
 <span class="smallblock">DEFAULT</span>: 0
 
-<span class="parameter">crop_y</span>
+<span class="parameter">$crop_y</span>
 
 Specifies the y-coordinate (ordinate) for the page of the source PDF file, when importing a 'cropped' page into the template. Value in millimetres.
 
 <span class="smallblock">DEFAULT</span>: 0
 
-<span class="parameter">crop_w</span>
+<span class="parameter">$crop_w</span>
 
 Specifies the width in millimetres when importing a 'cropped' page into the template.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page width from the source file
 
-<span class="parameter">crop_h</span>
+<span class="parameter">$crop_h</span>
 
 Specifies the height in millimetres when importing a 'cropped' page into the template.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page height from the source file
 
-<span class="parameter">boxname</span>
+<span class="parameter">$boxname</span>
 
-<span class="parameter">boxname</span> is currently not used.
+<span class="parameter">$boxname</span> is currently not used.
 
 # Return Value
 

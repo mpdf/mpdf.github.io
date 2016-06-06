@@ -71,7 +71,7 @@ Images for which the size is not defined are output at a default dpi set in the
 $this->img_dpi = 96;
 {% endhighlight %}
 
-In addition, many CSS style properties are supported including <span class="parameter">vertical-align</span>, as well as some custom attributes such as <span class="parameter">opacity</span> and <span class="parameter">rotate</span>. (See <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> and <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)
+In addition, many CSS style properties are supported including <span class="parameter">$vertical-align</span>, as well as some custom attributes such as <span class="parameter">$opacity</span> and <span class="parameter">$rotate</span>. (See <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> and <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)
 
 Images can be used in:
 

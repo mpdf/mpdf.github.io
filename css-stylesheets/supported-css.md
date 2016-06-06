@@ -1686,7 +1686,7 @@ Length values are width and height e.g. size: 8.5in 11in; Any of the standard sh
 <td>odd-header-name, even-header-name, odd-footer-name, even-footer-name</td>
 <td>
 
-A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">html_</span>
+A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">$html_</span>
 
 NB This was the original form, and still takes preference over header and footer which can be set using the pseudo-selectors e.g. :right
 
@@ -1742,7 +1742,7 @@ From mPDF 5.1 crop and cross can be used together.
 </tr>
 <tr>
 <td>header, footer</td>
-<td>A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">html_</span> (from mPDF 4.2)</td>
+<td>A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">$html_</span> (from mPDF 4.2)</td>
 </tr>
 <tr>
 <td>background, background-image, background-position, background-repeat, background-color</td>

@@ -12,7 +12,7 @@ htmlpagefooter – Define an HTML page footer with a given name
 
 # Description
 
-&lt;**htmlpagefooter**  <span class="parameter">name</span>  &gt; <span class="parameter">html</span> &lt;/htmlpagefooter&gt;
+&lt;**htmlpagefooter**  <span class="parameter">$name</span>  &gt; <span class="parameter">$html</span> &lt;/htmlpagefooter&gt;
 
 Define an HTML page footer with a given name. Named footer can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;
 
@@ -22,7 +22,7 @@ Define an HTML page footer with a given name. Named footer can be referenced and
 
 # Attributes
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
 This attribute is a text string to use as the name for this footer.
 
@@ -30,7 +30,7 @@ If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_defa
 
 # Content
 
-<span class="parameter">html</span>
+<span class="parameter">$html</span>
 
 Any valid HTML code can be enclosed between the tags, and will be parsed by mPDF as for any other content.
 

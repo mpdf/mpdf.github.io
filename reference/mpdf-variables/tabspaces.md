@@ -16,7 +16,7 @@ Specifies the number of spaces to substitue for a <span class="smallblock">TAB</
 
 # Values
 
-<span class="parameter">tabSpaces</span>
+<span class="parameter">$tabSpaces</span>
 
 **Values**
 

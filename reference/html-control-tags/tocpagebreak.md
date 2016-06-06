@@ -12,33 +12,33 @@ tocpagebreak — Insert a table of contents
 
 # Description
 
-&lt;**tocpagebreak** [ <span class="parameter">paging</span> ] [ <span class="parameter">links</span> ] [ <span class="parameter">toc-orientation</span> ] [ <span class="parameter">toc-margin-left</span> ] [ <span class="parameter">toc-margin-right</span> ] [ <span class="parameter">toc-margin-top</span> ] [ <span class="parameter">toc-margin-bottom</span> ] [ <span class="parameter">toc-margin-header</span> ] [ <span class="parameter">toc-margin-footer</span> ] [ <span class="parameter">toc-odd-header-name</span> ] [ <span class="parameter">toc-even-header-name</span> ] [ <span class="parameter">toc-odd-footer-name</span> ] [ <span class="parameter">toc-even-footer-name</span> ] [ <span class="parameter">toc-odd-header-value</span> ] [ <span class="parameter">toc-even-header-value</span> ] [ <span class="parameter">toc-odd-footer-value</span> ] [ <span class="parameter">toc-even-footer-value</span> ] [ <span class="parameter">toc-preHTML</span> ] [ <span class="parameter">toc-postHTML</span> ] [ <span class="parameter">toc-bookmarkText</span> ] [ <span class="parameter">name</span> ] [ <span class="parameter">toc-page-selector</span> ] [ <span class="parameter">toc-sheet-size</span> ] [ <span class="parameter">toc-resetpagenum</span> ] [ <span class="parameter">toc-pagenumstyle</span> ] [ <span class="parameter">toc-suppress</span> ]
+&lt;**tocpagebreak** [ <span class="parameter">$paging</span> ] [ <span class="parameter">$links</span> ] [ <span class="parameter">$toc-orientation</span> ] [ <span class="parameter">$toc-margin-left</span> ] [ <span class="parameter">$toc-margin-right</span> ] [ <span class="parameter">$toc-margin-top</span> ] [ <span class="parameter">$toc-margin-bottom</span> ] [ <span class="parameter">$toc-margin-header</span> ] [ <span class="parameter">$toc-margin-footer</span> ] [ <span class="parameter">$toc-odd-header-name</span> ] [ <span class="parameter">$toc-even-header-name</span> ] [ <span class="parameter">$toc-odd-footer-name</span> ] [ <span class="parameter">$toc-even-footer-name</span> ] [ <span class="parameter">$toc-odd-header-value</span> ] [ <span class="parameter">$toc-even-header-value</span> ] [ <span class="parameter">$toc-odd-footer-value</span> ] [ <span class="parameter">$toc-even-footer-value</span> ] [ <span class="parameter">$toc-preHTML</span> ] [ <span class="parameter">$toc-postHTML</span> ] [ <span class="parameter">$toc-bookmarkText</span> ] [ <span class="parameter">$name</span> ] [ <span class="parameter">$toc-page-selector</span> ] [ <span class="parameter">$toc-sheet-size</span> ] [ <span class="parameter">$toc-resetpagenum</span> ] [ <span class="parameter">$toc-pagenumstyle</span> ] [ <span class="parameter">$toc-suppress</span> ]
 
-[ <span class="parameter">orientation</span> ] [ <span class="parameter">resetpagenum</span> ] [ <span class="parameter">pagenumstyle</span> ] [ <span class="parameter">suppress</span> ]
+[ <span class="parameter">$orientation</span> ] [ <span class="parameter">$resetpagenum</span> ] [ <span class="parameter">$pagenumstyle</span> ] [ <span class="parameter">$suppress</span> ]
 
-[ <span class="parameter">margin-left</span> ] [ <span class="parameter">margin-right</span> ] [ <span class="parameter">margin-top</span> ] [ <span class="parameter">margin-bottom</span> ] [ <span class="parameter">margin-header</span> ] [ <span class="parameter">margin-footer</span> ]
+[ <span class="parameter">$margin-left</span> ] [ <span class="parameter">$margin-right</span> ] [ <span class="parameter">$margin-top</span> ] [ <span class="parameter">$margin-bottom</span> ] [ <span class="parameter">$margin-header</span> ] [ <span class="parameter">$margin-footer</span> ]
 
-[ <span class="parameter">odd-header-name</span> ] [ <span class="parameter">odd-header-value</span> ] [ <span class="parameter">even-header-name</span> ] [ <span class="parameter">even-header-value</span> ] [ <span class="parameter">odd-footer-name</span> ] [ <span class="parameter">odd-footer-value</span> ] [ <span class="parameter">even-footer-name</span> ] [ <span class="parameter">even-footer-value</span> ] [ <span class="parameter">page-selector</span> ] [ <span class="parameter">sheet-size</span> ] [ <span class="parameter">outdent</span> ] /&gt;
+[ <span class="parameter">$odd-header-name</span> ] [ <span class="parameter">$odd-header-value</span> ] [ <span class="parameter">$even-header-name</span> ] [ <span class="parameter">$even-header-value</span> ] [ <span class="parameter">$odd-footer-name</span> ] [ <span class="parameter">$odd-footer-value</span> ] [ <span class="parameter">$even-footer-name</span> ] [ <span class="parameter">$even-footer-value</span> ] [ <span class="parameter">$page-selector</span> ] [ <span class="parameter">$sheet-size</span> ] [ <span class="parameter">$outdent</span> ] /&gt;
 
 Add a new page to the document, marking the point at which a Table of Contents (<acronym title="Table of Contents">ToC</acronym>) will be inserted in the document at the end of writing. The numerous parameters specify both paging details for the continuing document, and for the <acronym title="Table of Contents">ToC</acronym> when it is generated.
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF 5.7 the layout of a table of contents can be controlled using CSS. <span class="parameter">font</span> <span class="parameter">font-size</span> and <span class="parameter">indent</span> have become redundant.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF 5.7 the layout of a table of contents can be controlled using CSS. <span class="parameter">$font</span> <span class="parameter">$font-size</span> and <span class="parameter">$indent</span> have become redundant.</div>
 
-<div class="alert alert-info" role="alert">**Note:** When writing a <span class="smallblock">DOUBLE-SIDED</span> document, the <acronym title="Table of Contents">ToC</acronym> will always start on an <span class="smallblock">ODD</span> page. Therefore there is no option to specifiy the pagebreak <span class="parameter">type </span>as in &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - using **&lt;tocpagebreak&gt;** will always continue the document on an <span class="smallblock">ODD</span> page.</div>
+<div class="alert alert-info" role="alert">**Note:** When writing a <span class="smallblock">DOUBLE-SIDED</span> document, the <acronym title="Table of Contents">ToC</acronym> will always start on an <span class="smallblock">ODD</span> page. Therefore there is no option to specifiy the pagebreak <span class="parameter">$type </span>as in &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - using **&lt;tocpagebreak&gt;** will always continue the document on an <span class="smallblock">ODD</span> page.</div>
 
 <div class="alert alert-info" role="alert">**Note:** Page numbering was suppressed in the <acronym title="Table of Contents">ToC</acronym> prior to mPDF v 6.0. From v6.0 onwards, you can specify the page numbering throughout the <acronym title="Table of Contents">ToC</acronym> .</div>
 
 <div class="alert alert-info" role="alert">**Note:** The <acronym title="Table of Contents">ToC</acronym> is generated at the end of the document. Unless otherwise specified, the <acronym title="Table of Contents">ToC</acronym> will inherit the page margins, headers/footers and orientation of the last page written to the document.</div>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF 2.3 you can include more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">name</span>.</div>
+<div class="alert alert-info" role="alert">**Note:** From mPDF 2.3 you can include more than one <acronym title="Table of Contents">ToC</acronym> in the document using the attribute <span class="parameter">$name</span>.</div>
 
-<div class="alert alert-info" role="alert">**Note:** If **&lt;tocpagebreak&gt;** occurs at the start of a blank (<span class="smallblock">ODD</span>) page, no new page(s) will be added. This was added in mPDF 2.3 to allow a <acronym title="Table of Contents">ToC</acronym> to be placed on the first page, or to allow a <acronym title="Table of Contents">ToC</acronym> to follow another <acronym title="Table of Contents">ToC</acronym>. In this case, any properties for the continuing document are ignored. If you define several <acronym title="Table of Contents">ToC</acronym>s following immediately on from one another, set the properties in the first <acronym title="Table of Contents">ToC</acronym> you define (including the <span class="parameter">resetpagenum</span>).</div>
+<div class="alert alert-info" role="alert">**Note:** If **&lt;tocpagebreak&gt;** occurs at the start of a blank (<span class="smallblock">ODD</span>) page, no new page(s) will be added. This was added in mPDF 2.3 to allow a <acronym title="Table of Contents">ToC</acronym> to be placed on the first page, or to allow a <acronym title="Table of Contents">ToC</acronym> to follow another <acronym title="Table of Contents">ToC</acronym>. In this case, any properties for the continuing document are ignored. If you define several <acronym title="Table of Contents">ToC</acronym>s following immediately on from one another, set the properties in the first <acronym title="Table of Contents">ToC</acronym> you define (including the <span class="parameter">$resetpagenum</span>).</div>
 
 # Attributes
 
 The first set of attributes specify characteristics for the <acronym title="Table of Contents">ToC</acronym>, which is generated automatically at the end of the document when <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.
 
-<span class="parameter">paging</span> = 1|on|0|off
+<span class="parameter">$paging</span> = 1|on|0|off
 
 Specify whether to show page numbers in the <acronym title="Table of Contents">ToC</acronym>.
 
@@ -52,7 +52,7 @@ ON *or* 1: show page numbers in the <acronym title="Table of Contents">ToC</acro
 
 OFF *or* 0: do not show page numbers in the <acronym title="Table of Contents">ToC</acronym>.
 
-<span class="parameter">links </span> = 1|on|0|off
+<span class="parameter">$links </span> = 1|on|0|off
 
 Specify whether to generate hyperlinks in the <acronym title="Table of Contents">ToC</acronym>.
 
@@ -66,7 +66,7 @@ ON *or* 1: show hyperlinks in the <acronym title="Table of Contents">ToC</acrony
 
 OFF *or* 0: do not show hyperlinks in the <acronym title="Table of Contents">ToC</acronym>.
 
-<span class="parameter">toc-orientation </span>
+<span class="parameter">$toc-orientation </span>
 
 This attribute specifies the orientation of the <acronym title="Table of Contents">ToC</acronym> pages.
 
@@ -78,15 +78,15 @@ L *or* landscape: Landscape
 
 P *or* portrait: Portrait
 
-<span class="parameter">toc-margin-left
+<span class="parameter">$toc-margin-left
 
 toc-margin-right
 
-</span><span class="parameter">toc-margin-top
+</span><span class="parameter">$toc-margin-top
 
 toc-margin-bottom
 
-</span><span class="parameter">toc-margin-header
+</span><span class="parameter">$toc-margin-header
 
 toc-margin-footer</span>
 
@@ -100,27 +100,27 @@ If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the 
 
 "0" (zero) will set the margin to zero.
 
-<span class="parameter">toc-odd-header-name
+<span class="parameter">$toc-odd-header-name
 
-toc-even-header-name</span><span class="parameter">
+toc-even-header-name</span><span class="parameter">$
 
 toc-odd-footer-name
 
-</span><span class="parameter">toc-even-footer-name</span>
+</span><span class="parameter">$toc-even-footer-name</span>
 
 Selects a header or footer by name to use for the <acronym title="Table of Contents">ToC</acronym>. The header/footer must already have been defined using <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">defHeaderByName()</a>, <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">defFooterByName()</a>, <a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">defHTMLHeaderByName()</a>, or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">defHTMLFooterByName()</a>.
 
 If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
-<span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">toc-</span><span class="parameter">odd-header-value</span> to -1 to turn the header off.
+<span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">$toc-</span><span class="parameter">$odd-header-value</span> to -1 to turn the header off.
 
 <div class="alert alert-info" role="alert">**Note:** You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
 
-<span class="parameter">toc-odd-header-value</span><span class="parameter">
+<span class="parameter">$toc-odd-header-value</span><span class="parameter">$
 
 toc-even-header-value
 
-toc-odd-footer-value</span><span class="parameter">
+toc-odd-footer-value</span><span class="parameter">$
 
 toc-even-footer-value</span>
 
@@ -136,7 +136,7 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 -1 *or* off: Hide the selected header/footer in the <acronym title="Table of Contents">ToC</acronym>.
 
-<span class="parameter">toc-preHTML</span>
+<span class="parameter">$toc-preHTML</span>
 
 Specify the HTML code to appear before the <acronym title="Table of Contents">ToC</acronym>.
 
@@ -146,7 +146,7 @@ It is recommended that you use htmlspecialchars('Your html code', ENT_QUOTES) fo
 
 <span class="smallblock">BLANK</span> or omitted will enter no text
 
-<span class="parameter">toc-postHTML</span>
+<span class="parameter">$toc-postHTML</span>
 
 Specify the HTML code to appear after the <acronym title="Table of Contents">ToC</acronym>.
 
@@ -156,7 +156,7 @@ It is recommended that you use htmlspecialchars('Your html code', ENT_QUOTES) fo
 
 <span class="smallblock">BLANK</span> or omitted will enter no text.
 
-<span class="parameter">toc-bookmarkText </span>
+<span class="parameter">$toc-bookmarkText </span>
 
 Specify the text as it will appear as a <span class="smallblock">BOOKMARK</span> for the <acronym title="Table of Contents">ToC</acronym>  e.g. 'Content list'.
 
@@ -166,13 +166,13 @@ It is recommended that you use htmlspecialchars('Your bookmark text', ENT_QUOTES
 
 <span class="smallblock">BLANK</span> or omitted will not create a <span class="smallblock">BOOKMARK</span>.
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
-Specify which <acronym title="Table of Contents">ToC</acronym> to include at this point, if using more than one <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">name</span> can be any alphanumeric characters (except just "0") and is case-insensitive.
+Specify which <acronym title="Table of Contents">ToC</acronym> to include at this point, if using more than one <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">$name</span> can be any alphanumeric characters (except just "0") and is case-insensitive.
 
 <span class="smallblock">BLANK</span> or omitted or 0 uses the default <acronym title="Table of Contents">ToC</acronym>.
 
-<span class="parameter">toc-page-selector</span>
+<span class="parameter">$toc-page-selector</span>
 
 Select a named CSS @page for the <acronym title="Table of Contents">ToC</acronym>.
 
@@ -180,9 +180,9 @@ Select a named CSS @page for the <acronym title="Table of Contents">ToC</acronym
 
 See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information
 
-<span class="parameter">toc-sheet-size</span>
+<span class="parameter">$toc-sheet-size</span>
 
-<span class="parameter">toc-sheet-size</span> can be specified either as a pre-defined page size, or as two <span class="smallblock">LENGTH</span> values separated by a space, representing width and height e.g. '210mm 297mm'. em, ex and % are not accepted. Note that this is different from the 'size' property of the page-box used with the CSS @page selector.
+<span class="parameter">$toc-sheet-size</span> can be specified either as a pre-defined page size, or as two <span class="smallblock">LENGTH</span> values separated by a space, representing width and height e.g. '210mm 297mm'. em, ex and % are not accepted. Note that this is different from the 'size' property of the page-box used with the CSS @page selector.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
 
@@ -204,13 +204,13 @@ B (Type B paperback 128x198mm)
 
 All of the pre-defined values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L"
 
-<span class="parameter">toc-resetpagenum</span> = 1 - ∞
+<span class="parameter">$toc-resetpagenum</span> = 1 - ∞
 
-Sets/resets the document page number to <span class="parameter">resetpagenum</span> starting on the <acronym title="Table of Contents">ToC</acronym>. (The value must be a positive integer).
+Sets/resets the document page number to <span class="parameter">$resetpagenum</span> starting on the <acronym title="Table of Contents">ToC</acronym>. (The value must be a positive integer).
 
 <span class="smallblock">BLANK</span> or omitted or 0 leaves the preceding page number sequence unchanged.
 
-<span class="parameter">toc-pagenumstyle</span> = 1|A|a|I|i|[+ any value supported for list-style-type]
+<span class="parameter">$toc-pagenumstyle</span> = 1|A|a|I|i|[+ any value supported for list-style-type]
 
 Sets/resets the page numbering style to use in the <acronym title="Table of Contents">ToC</acronym> (values as for cf. <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">lists</a>)
 
@@ -228,9 +228,9 @@ I: Roman uppercase - I, II, III, IV...
 
 i: Roman lowercase - i, ii, iii, iv...
 
-<span class="parameter">toc-suppress</span> = on|off|1|0
+<span class="parameter">$toc-suppress</span> = on|off|1|0
 
-<span class="parameter">suppress</span>=on will suppress document page numbers in the <acronym title="Table of Contents">ToC</acronym>
+<span class="parameter">$suppress</span>=on will suppress document page numbers in the <acronym title="Table of Contents">ToC</acronym>
 
 <span class="smallblock">BLANK</span> or omitted leaves the current condition unchanged.
 
@@ -255,23 +255,23 @@ Please refer to &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | 
 </tr>
 <tr>
 <td>2.2</td>
-<td>Default values for <span class="parameter">font-size</span>, <span class="parameter">paging</span> and <span class="parameter">links</span> were redefined.</td>
+<td>Default values for <span class="parameter">$font-size</span>, <span class="parameter">$paging</span> and <span class="parameter">$links</span> were redefined.</td>
 </tr>
 <tr>
 <td>2.3</td>
-<td><span class="parameter">name</span> attribute was added.</td>
+<td><span class="parameter">$name</span> attribute was added.</td>
 </tr>
 <tr>
 <td>3.0</td>
-<td><span class="parameter">toc-bookmarkText</span> changed to decode htmlspecialchars</td>
+<td><span class="parameter">$toc-bookmarkText</span> changed to decode htmlspecialchars</td>
 </tr>
 <tr>
 <td>4.3</td>
 <td>
 
-Parameters <span class="parameter">page-selector</span>, <span class="parameter">sheet-size</span>,
+Parameters <span class="parameter">$page-selector</span>, <span class="parameter">$sheet-size</span>,
 
-<span class="parameter">toc-page-selector</span> and <span class="parameter">toc-sheet-size</span> were added
+<span class="parameter">$toc-page-selector</span> and <span class="parameter">$toc-sheet-size</span> were added
 
 </td>
 </tr>
@@ -279,15 +279,15 @@ Parameters <span class="parameter">page-selector</span>, <span class="parameter"
 <td>5.7</td>
 <td>
 
-<span class="parameter">outdent</span> parameter added
+<span class="parameter">$outdent</span> parameter added
 
-<span class="parameter">font</span>, <span class="parameter">font-size</span> and <span class="parameter">indent</span> redundant
+<span class="parameter">$font</span>, <span class="parameter">$font-size</span> and <span class="parameter">$indent</span> redundant
 
 </td>
 </tr>
 <tr>
 <td>6.0</td>
-<td>Parameters added:  <span class="parameter">toc-resetpagenum</span> | <span class="parameter">toc-pagenumstyle</span> | <span class="parameter">toc-suppress</span>
+<td>Parameters added:  <span class="parameter">$toc-resetpagenum</span> | <span class="parameter">$toc-pagenumstyle</span> | <span class="parameter">$toc-suppress</span>
 
 </td>
 </tr>

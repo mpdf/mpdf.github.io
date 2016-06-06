@@ -12,7 +12,7 @@ sethtmlpagefooter – Set an HTML page footer by a given name
 
 # Description
 
-&lt; **sethtmlpagefooter** [ <span class="parameter">name</span> ] [ <span class="parameter">page</span> ] [ <span class="parameter">value</span> ]  /&gt;
+&lt; **sethtmlpagefooter** [ <span class="parameter">$name</span> ] [ <span class="parameter">$page</span> ] [ <span class="parameter">$value</span> ]  /&gt;
 
 Sets an HTML page footer that has previously been defined by name.
 
@@ -20,19 +20,19 @@ Sets an HTML page footer that has previously been defined by name.
 
 # Parameters
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
 This parameter specifies the name of a previously defined HTML page footer. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page footer exists.
 
-The <span class="parameter">name</span> does not need to be defined if you are setting the value to -1 or 'off'
+The <span class="parameter">$name</span> does not need to be defined if you are setting the value to -1 or 'off'
 
-<span class="parameter">page</span>
+<span class="parameter">$page</span>
 
 Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
 
 <span class="smallblock">DEFAULT</span>: 'ODD'
 
-Note: setting this value to <span class="smallblock">BLANK</span> will not clear the footer; set <span class="parameter">value</span> to -1 or off to cancel the header
+Note: setting this value to <span class="smallblock">BLANK</span> will not clear the footer; set <span class="parameter">$value</span> to -1 or off to cancel the header
 
 **Values** (case-insensitive)
 
@@ -42,9 +42,9 @@ E or EVEN - set the footer for <span class="smallblock">EVEN</span> pages
 
 ALL - sets the footer for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.
 
-If the <span class="parameter">page</span> value is <span class="smallblock">BLANK</span> or omitted - sets the footer for <span class="smallblock">ODD</span> in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
+If the <span class="parameter">$page</span> value is <span class="smallblock">BLANK</span> or omitted - sets the footer for <span class="smallblock">ODD</span> in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 
-<span class="parameter">value</span>
+<span class="parameter">$value</span>
 
 Specify whether to start or stop showing the named footer from the current position in the document.<span class="smallblock">
 

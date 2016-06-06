@@ -8,7 +8,7 @@ modification_time: 2015-08-05T11:59:42+00:00
 
 # HTML tag Attributes (in-line) supported
 
-Example of an HTML attribute: &lt;div <span class="parameter">align</span>="center"&gt;
+Example of an HTML attribute: &lt;div <span class="parameter">$align</span>="center"&gt;
 
 mPDF supports attribute values in single or double quotes e.g. &lt;div align="center"&gt; or &lt;div align='center'&gt;
 
@@ -16,7 +16,7 @@ Minimised attributes are not supported e.g. &lt;input type="checkbox" *disabled*
 
 XHTML specification is recommended for best compliance with mPDF.
 
-<div class="alert alert-info" role="alert">**Note:** The attributes <span class="parameter">class</span>, <span class="parameter">id</span> and <span class="parameter">style</span> are supported on most HTML tags: see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.</div>
+<div class="alert alert-info" role="alert">**Note:** The attributes <span class="parameter">$class</span>, <span class="parameter">$id</span> and <span class="parameter">$style</span> are supported on most HTML tags: see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.</div>
 <table class="table"> <tbody>
 <tr>
 <td rowspan="2">HTML, BODY and ALL recognised tags
@@ -447,13 +447,13 @@ value, max, min, low, high, optimum
 </tr>
 </tbody> </table>
 
-* <span class="parameter">lang</span> is only recognised when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)
+* <span class="parameter">$lang</span> is only recognised when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)
 
 <div class="alert alert-info" role="alert">**Note:** Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</div>
 
 <div class="alert alert-info" role="alert">**Note:** Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in their formal/long form i.e. selected="selected"</div>
 
-<div class="alert alert-info" role="alert">**Note:** <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.</div>
+<div class="alert alert-info" role="alert">**Note:** <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">$lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.</div>
 
 # Changelog
 
@@ -470,15 +470,15 @@ value, max, min, low, high, optimum
 </tr>
 <tr>
 <td>2.3</td>
-<td><span class="parameter">lang</span> was added.</td>
+<td><span class="parameter">$lang</span> was added.</td>
 </tr>
 <tr>
 <td>4.0</td>
-<td>Default value of <span class="parameter">lang</span> changed to <span class="smallblock">TRUE</span></td>
+<td>Default value of <span class="parameter">$lang</span> changed to <span class="smallblock">TRUE</span></td>
 </tr>
 <tr>
 <td>5.0</td>
-<td><span class="parameter">dir</span> was added to HTML and BODY
+<td><span class="parameter">$dir</span> was added to HTML and BODY
 
 </td>
 </tr>

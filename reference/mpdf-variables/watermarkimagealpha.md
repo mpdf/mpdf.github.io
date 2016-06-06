@@ -16,7 +16,7 @@ Specifies the transparency (alpha value) to use for the watermark text on each p
 
 # Values
 
-<span class="parameter">watermarkTextAlpha</span>
+<span class="parameter">$watermarkTextAlpha</span>
 
 Define as a value between 0 and 1.
 

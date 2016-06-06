@@ -14,19 +14,19 @@ PreparePreText – Prepares text to be output ignoring the HTML markup
 
 string **preparePreText** ( string <span class="parameter">$text</span> [, string <span class="parameter">$formfeed</span> ])
 
-Prepares text to be output ignoring the HTML markup. This is useful to output a large text file (e.g. a PHP script file) using <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>. This will surround the text with &lt;pre&gt; tags whilst preventing &lt;pre&gt;tags included in the text from being parsed. It also allows use of a text string marker (<span class="parameter">formfeed</span>) to be replaced by a formfeed in the output file.
+Prepares text to be output ignoring the HTML markup. This is useful to output a large text file (e.g. a PHP script file) using <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>. This will surround the text with &lt;pre&gt; tags whilst preventing &lt;pre&gt;tags included in the text from being parsed. It also allows use of a text string marker (<span class="parameter">$formfeed</span>) to be replaced by a formfeed in the output file.
 
 <div class="alert alert-info" role="alert">**Note:** Prior to mPDF 5.1 you should use the <span class="parameter">$mode </span>parameter of <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> as '2' to avoid parsing the text for style tags. See example below.</div>
 
 # Parameters
 
-<span class="parameter">text</span>
+<span class="parameter">$text</span>
 
 This parameter specifies the text string to prepare.
 
-<span class="parameter">formfeed</span>
+<span class="parameter">$formfeed</span>
 
-<span class="parameter">formfeed</span> specifies the string to be replaced by a formfeed in the output file.
+<span class="parameter">$formfeed</span> specifies the string to be replaced by a formfeed in the output file.
 
 <span class="smallblock">DEFAULT</span>: "//FF//"
 
@@ -87,6 +87,6 @@ exit;
 <ul>
 <li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML code to a PDF file</li>
 <li><a href="{{ "/reference/mpdf-variables/tabspaces.html" | prepend: site.baseurl }}">tabSpaces</a> - Specifies the number of spaces to substitue for a <span class="smallblock">TAB</span> character</li>
-<li><a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">allow_charset_conversion</a> - Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">charset_in</span> </li>
+<li><a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">allow_charset_conversion</a> - Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">$charset_in</span> </li>
 <li><a href="{{ "/reference/mpdf-variables/charset-in.html" | prepend: site.baseurl }}">charset_in</a> - Define the character encoding of any input HTML</li>
 </ul>

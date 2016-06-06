@@ -14,11 +14,11 @@ boolean **allow_output_buffering**
 
 When <span class="smallblock">TRUE</span>, mPDF will ignore any content in the object buffer - ob_get_contents() - when outputting the PDF file. By default, any buffered output will be treated as an error message and will abort the PDF file output and display any errors to the browser.
 
-<div class="alert alert-info" role="alert">**Note:** If the variable <span class="parameter">debug</span> is set to <span class="smallblock">FALSE</span> (default) this variable has no effect.</div>
+<div class="alert alert-info" role="alert">**Note:** If the variable <span class="parameter">$debug</span> is set to <span class="smallblock">FALSE</span> (default) this variable has no effect.</div>
 
 # Values
 
-<span class="parameter">allow_output_buffering</span> = *<span class="smallblock">FALSE</span>*|<span class="smallblock">TRUE</span>
+<span class="parameter">$allow_output_buffering</span> = *<span class="smallblock">FALSE</span>*|<span class="smallblock">TRUE</span>
 
 **Values**
 

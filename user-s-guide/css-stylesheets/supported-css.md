@@ -1331,7 +1331,7 @@ Length values are width and height e.g. size: 8.5in 11in; or one value for a squ
 <tr>
 <td>odd-header-name, even-header-name, odd-footer-name, even-footer-name</td>
 <td>
-<p>A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">html_</span></p>
+<p>A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">$html_</span></p>
 <p>NB This was the original form, and still takes preference over header and footer which can be set using the pseudo-selectors e.g. :right</p>
 <p>The name *_default* can be used to allow the current non-HTML header to remain unchanged (mPDF >= 5.1)</p>
 </td>
@@ -1372,7 +1372,7 @@ margin-footer*</td>
 </tr>
 <tr>
 <td>header, footer</td>
-<td>A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">html_</span> (from mPDF 4.2)</td>
+<td>A named Header or Footer. HTML headers/footers must precede the name with <span class="parameter">$html_</span> (from mPDF 4.2)</td>
 </tr>
 <tr>
 <td>background, background-image, background-position, background-repeat, background-color</td>

@@ -18,9 +18,9 @@ Specify the source PDF file used to import pages into the document.
 
 # Parameters
 
-<span class="parameter">file</span>
+<span class="parameter">$file</span>
 
-This parameter specifies the source PDF file used to import pages into the document. **Note:  <span class="parameter">file</span> should be a relative path to a local file.**
+This parameter specifies the source PDF file used to import pages into the document. **Note:  <span class="parameter">$file</span> should be a relative path to a local file.**
 
 # Return Value
 

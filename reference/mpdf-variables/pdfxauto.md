@@ -21,7 +21,7 @@ Specify whether to automatically fix issues to create PDF/X-1a compliant documen
 
 # Values
 
-<span class="parameter">PDFXauto</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$PDFXauto</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

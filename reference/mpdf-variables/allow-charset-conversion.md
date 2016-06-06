@@ -12,15 +12,15 @@ modification_time: 2015-08-05T12:01:34+00:00
 
 boolean **allow_charset_conversion**
 
-When <span class="smallblock">TRUE</span>, mPDF will attempt to parse the character set of any input HTML. You can also use it together with <span class="parameter">charset_in</span> to manually set an input encoding.
+When <span class="smallblock">TRUE</span>, mPDF will attempt to parse the character set of any input HTML. You can also use it together with <span class="parameter">$charset_in</span> to manually set an input encoding.
 
 # Values
 
-<span class="parameter">allow_charset_conversion</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
+<span class="parameter">$allow_charset_conversion</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
 
 **Values**
 
-*<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">charset_in</span>
+*<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> Parse the character set of any input text from the HTML, or allow setting of the value <span class="parameter">$charset_in</span>
 
 <span class="smallblock">FALSE</span>: Expect all text input as UTF-8 encoding.
 

@@ -18,7 +18,7 @@ Specify the way the document shall be presented on the screen when the PDF file 
 
 # Parameters
 
-<span class="parameter">prefs</span>
+<span class="parameter">$prefs</span>
 
 This parameter takes a string containing any one or more of the possible values separated by any characters (e.g. comma, forward slash or space). All the options start as <span class="smallblock">FALSE</span>, and can only be set <span class="smallblock">TRUE</span> by this command. Each setting is added to those previously set.
 

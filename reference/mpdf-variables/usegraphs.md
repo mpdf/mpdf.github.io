@@ -18,7 +18,7 @@ When <span class="smallblock">TRUE</span>, mPDF will parse table data and allow 
 
 # Values
 
-<span class="parameter">useGraphs</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
+<span class="parameter">$useGraphs</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
 
 **Values**
 

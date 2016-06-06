@@ -18,7 +18,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 # Values
 
-<span class="parameter">adjustFontDescLineheight</span>
+<span class="parameter">$adjustFontDescLineheight</span>
 
 **Values**
 

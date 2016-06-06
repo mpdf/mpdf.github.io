@@ -20,7 +20,7 @@ Set the Subject for the document. This metadata can be seen when inspecting the 
 
 # Parameters
 
-<span class="parameter">text</span>
+<span class="parameter">$text</span>
 
 Defines the text to appear as the document Subject. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.
 

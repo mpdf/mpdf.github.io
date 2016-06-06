@@ -18,7 +18,7 @@ When <span class="smallblock">TRUE</span>, mPDF will attempt to parse the input 
 
 # Values
 
-<span class="parameter">allow_html_optional_endtags</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
+<span class="parameter">$allow_html_optional_endtags</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
 
 **Values**
 

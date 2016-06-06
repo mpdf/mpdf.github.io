@@ -28,5 +28,5 @@ $mpdf->Output();
 
 ## Adding exit
 
-A number of errors can be caused by not explicitly ending your script with <span class="parameter">exit;</span>
+A number of errors can be caused by not explicitly ending your script with <span class="parameter">$exit;</span>
 

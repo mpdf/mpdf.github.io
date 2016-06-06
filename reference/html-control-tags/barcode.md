@@ -12,7 +12,7 @@ barcode – Add a Barcode to the document
 
 # Description
 
-&lt;**barcode**  <span class="parameter">code</span> [ <span class="parameter">type</span> ] [ <span class="parameter">text</span> ] [ <span class="parameter">size</span> ] [ <span class="parameter">height</span> ] [ <span class="parameter">pr</span> ] /&gt;
+&lt;**barcode**  <span class="parameter">$code</span> [ <span class="parameter">$type</span> ] [ <span class="parameter">$text</span> ] [ <span class="parameter">$size</span> ] [ <span class="parameter">$height</span> ] [ <span class="parameter">$pr</span> ] /&gt;
 
 Add a Barcode to the document.
 
@@ -20,19 +20,19 @@ Add a Barcode to the document.
 
 # Attributes
 
-<span class="parameter">code</span>
+<span class="parameter">$code</span>
 
 Specifies the code to translate to a barcode.
 
-<span class="parameter">code</span> for EAN13 / ISBN / ISSN / UPCA / UPCE can contain hyphens '-' but no other characters are allowed.
+<span class="parameter">$code</span> for EAN13 / ISBN / ISSN / UPCA / UPCE can contain hyphens '-' but no other characters are allowed.
 
 Check-digits can be optionally included for EAN13 / ISBN / ISSN / UPCA / UPCE
 
 <span class="smallblock">REQUIRED</span>
 
-<span class="parameter">type</span>
+<span class="parameter">$type</span>
 
-<span class="parameter">type</span> specifies the type of barcode required.
+<span class="parameter">$type</span> specifies the type of barcode required.
 
 <span class="smallblock">DEFAULT</span>: EAN13
 
@@ -44,7 +44,7 @@ EAN13P2, ISBNP2, ISSNP2, UPCAP2, UPCEP2, EAN8P2 (with EAN-2 supplement code i.e.
 
 EAN13P5, ISBNP5, ISSNP5, UPCAP5, UPCEP5, EAN8P5  (with EAN-5 supplement code e.g. 90000 )
 
-(UPCE needs the UPCA <span class="parameter">code</span> entered)
+(UPCE needs the UPCA <span class="parameter">$code</span> entered)
 
 IMB, RM4SCC, KIX, POSTNET, PLANET
 
@@ -66,7 +66,7 @@ CODE11
 
 Note: Type with a + at the end includes check-digits.
 
-<span class="parameter">text</span>
+<span class="parameter">$text</span>
 
 **EAN13 only**
 
@@ -78,33 +78,33 @@ Values: 1 or 0
 
 <span class="smallblock">DEFAULT</span>: 0
 
-<span class="parameter">size</span>
+<span class="parameter">$size</span>
 
 Specifies the size of the barcode.
 
-<span class="parameter">size (float)</span> will scale the nominal size of the barcode as a factor of 1
+<span class="parameter">$size (float)</span> will scale the nominal size of the barcode as a factor of 1
 
-<span class="parameter">size="1.5"</span> will generate a barcode one and half times the height and width of the nominal size set in mPDF
+<span class="parameter">$size="1.5"</span> will generate a barcode one and half times the height and width of the nominal size set in mPDF
 
 NB Sizes between 0.8 and 2.0 are recommended for EAN13 and similar barcodes.
 
 <span class="smallblock">DEFAULT</span>: 1
 
-<span class="parameter">height</span>
+<span class="parameter">$height</span>
 
 Specifies the height of the barcode.
 
-<span class="parameter">height (float)</span> will determine the relative height of the barcode as a factor of 1
+<span class="parameter">$height (float)</span> will determine the relative height of the barcode as a factor of 1
 
-The height factor is applied after the <span class="parameter">size </span>
+The height factor is applied after the <span class="parameter">$size </span>
 
-<span class="parameter">size="2" height="0.5"</span> will generate a barcode of twice the nominal width, but with the nominal height.
+<span class="parameter">$size="2" height="0.5"</span> will generate a barcode of twice the nominal width, but with the nominal height.
 
 NB Ignored for Postcode barcodes
 
 <span class="smallblock">DEFAULT</span>: 1<span class="smallblock"></span>
 
-<span class="parameter">pr</span>
+<span class="parameter">$pr</span>
 
 Specifies the print ratio i.e. narrow:wide bar width for some types of barcode.
 

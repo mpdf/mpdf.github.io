@@ -74,7 +74,7 @@ Because PDF/X-1a has the objective of ensuring reliable reproduction of the docu
 
 <ul>
 <li>watermarks text or images</li>
-<li>images with the CSS property <span class="parameter">opacity</span> set</li>
+<li>images with the CSS property <span class="parameter">$opacity</span> set</li>
 <li>annotation markers</li>
 </ul>
 

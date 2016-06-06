@@ -26,7 +26,7 @@ Specify whether to show progress bars during file generation. Not recommended fo
 
 # Values
 
-<span class="parameter">progressBar</span> =  <span class="smallblock"> </span>2 | 1 | <span class="smallblock">FALSE</span>
+<span class="parameter">$progressBar</span> =  <span class="smallblock"> </span>2 | 1 | <span class="smallblock">FALSE</span>
 
 **Values**
 

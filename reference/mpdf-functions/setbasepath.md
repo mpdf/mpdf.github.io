@@ -14,7 +14,7 @@ SetBasePath – Specifies a base URL for mPDF to interpret relative URLs
 
 void **SetBasePath** ( string <span class="parameter">$url</span> )
 
-Specifies that mPDF should interpret any URLs in the HTML code relative to this <span class="parameter">url</span>. Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, and images.
+Specifies that mPDF should interpret any URLs in the HTML code relative to this <span class="parameter">$url</span>. Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, and images.
 
 <div class="alert alert-info" role="alert">**Note:** From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.</div>
 
@@ -22,7 +22,7 @@ Specifies that mPDF should interpret any URLs in the HTML code relative to this 
 
 # Parameters
 
-<span class="parameter">url</span>
+<span class="parameter">$url</span>
 
 A full URL should be provided, but the following will all work:
 

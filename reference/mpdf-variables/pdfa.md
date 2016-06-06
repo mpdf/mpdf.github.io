@@ -18,7 +18,7 @@ Specify whether to create a PDF/A1-b compliant document.
 
 # Values
 
-<span class="parameter">PDFA</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$PDFA</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

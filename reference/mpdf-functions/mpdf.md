@@ -18,7 +18,7 @@ Initialise an instance of mPDF class.
 
 # Parameters
 
-<span class="parameter">mode</span>
+<span class="parameter">$mode</span>
 
 This parameter specifies the mode of the new document.
 
@@ -50,18 +50,18 @@ A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"***
 
 ***
 
-<div class="alert alert-info" role="alert">**Note:** If the <span class="parameter">mode</span> is set by passing a country/language string, this may also set: available fonts, text justification, and directionality <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (as determined by <span class="filename">config_cp.php</span>)</div>
+<div class="alert alert-info" role="alert">**Note:** If the <span class="parameter">$mode</span> is set by passing a country/language string, this may also set: available fonts, text justification, and directionality <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (as determined by <span class="filename">config_cp.php</span>)</div>
 
 <div class="alert alert-info" role="alert">**Note:** There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a></div>
 <ul> </li>
 </ul>
 
-<span class="parameter">format</span>
+<span class="parameter">$format</span>
 
 <ul> </li>
 </ul>
 
-<span class="parameter">format</span> can be specified either as a pre-defined page size, or as an array of width and height in millimetres (see Example #2 below).
+<span class="parameter">$format</span> can be specified either as a pre-defined page size, or as an array of width and height in millimetres (see Example #2 below).
 
 <span class="smallblock">DEFAULT</span>: "A4"
 
@@ -83,36 +83,36 @@ Ledger, Tabloid*
 
 All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L".
 
-If <span class="parameter">format</span> is defined as a string, the final <span class="parameter">orientation</span> parameter will be ignored.
+If <span class="parameter">$format</span> is defined as a string, the final <span class="parameter">$orientation</span> parameter will be ignored.
 
 *Ledger and Tabloid are standard formats with the same page size but different orientation (Ledger is landscape, and Tabloid is portrait). mPDF treats these identically; if you wish to use Ledger, you should specify "Ledger-L" for landscape.
 
-<span class="parameter">default_font_size</span>
+<span class="parameter">$default_font_size</span>
 
 Sets the default document font size in ***points*** (pt)
 
-<span class="smallblock">BLANK</span> or omitted or 0 uses the default value set in <span class="parameter">defaultCSS</span>.
+<span class="smallblock">BLANK</span> or omitted or 0 uses the default value set in <span class="parameter">$defaultCSS</span>.
 
-<span class="parameter">default_font</span>
+<span class="parameter">$default_font</span>
 
 <ul> </li>
 </ul>
 
 Sets the default font-family for the new document.
 
-<span class="smallblock">BLANK</span> or omitted uses default value set in <span class="parameter">defaultCSS</span> unless <span class="parameter">codepage</span> has been set to "win-1252". If <span class="parameter">codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. Helvetica, Times, or Courier.
+<span class="smallblock">BLANK</span> or omitted uses default value set in <span class="parameter">$defaultCSS</span> unless <span class="parameter">$codepage</span> has been set to "win-1252". If <span class="parameter">$codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. Helvetica, Times, or Courier.
 
-<span class="parameter">margin_left</span>
+<span class="parameter">$margin_left</span>
 
-<span class="parameter">margin_right</span>
+<span class="parameter">$margin_right</span>
 
-<span class="parameter">margin_top</span>
+<span class="parameter">$margin_top</span>
 
-<span class="parameter">margin_bottom</span>
+<span class="parameter">$margin_bottom</span>
 
-<span class="parameter">margin_header</span>
+<span class="parameter">$margin_header</span>
 
-<span class="parameter">margin_footer</span>
+<span class="parameter">$margin_footer</span>
 
 Sets the page margins for the new document.
 
@@ -124,24 +124,24 @@ If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the
 
 <span class="smallblock">DEFAULT</span> **Values**
 
-<span class="parameter">margin_left</span> 15
+<span class="parameter">$margin_left</span> 15
 
-<span class="parameter">margin_right</span> 15
+<span class="parameter">$margin_right</span> 15
 
-<span class="parameter">margin_top</span> 16
+<span class="parameter">$margin_top</span> 16
 
-<span class="parameter">margin_bottom</span> 16
+<span class="parameter">$margin_bottom</span> 16
 
-<span class="parameter">margin_header</span> 9
+<span class="parameter">$margin_header</span> 9
 
-<span class="parameter">margin_footer</span> 9
+<span class="parameter">$margin_footer</span> 9
 
-<span class="parameter">orientation</span>
+<span class="parameter">$orientation</span>
 
 <ul> </li>
 </ul>
 
-This attribute specifies the default page orientation of the new document if <span class="parameter">format</span> is defined as an array. This value will be ignored if <span class="parameter">format</span> is a string value.
+This attribute specifies the default page orientation of the new document if <span class="parameter">$format</span> is defined as an array. This value will be ignored if <span class="parameter">$format</span> is a string value.
 
 <span class="smallblock">DEFAULT</span>: "P"
 
@@ -158,11 +158,11 @@ L: Landscape
 </thead> <tbody>
 <tr>
 <td>2.0</td>
-<td>The <span class="parameter">orientation</span> parameter was added.</td>
+<td>The <span class="parameter">$orientation</span> parameter was added.</td>
 </tr>
 <tr>
 <td>5.0</td>
-<td>The <span class="parameter">mode</span> parameter renamed (from <span class="parameter">codepage</span>), and recognised values changed</td>
+<td>The <span class="parameter">$mode</span> parameter renamed (from <span class="parameter">$codepage</span>), and recognised values changed</td>
 </tr>
 </tbody> </table>
 

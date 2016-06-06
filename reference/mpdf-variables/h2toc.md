@@ -18,7 +18,7 @@ Any number of levels may be specified, but the first level should be 0 and other
 
 # Values
 
-<span class="parameter">h2toc</span>
+<span class="parameter">$h2toc</span>
 
 **Values**
 

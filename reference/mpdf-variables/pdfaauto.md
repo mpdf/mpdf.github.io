@@ -18,7 +18,7 @@ Specify whether to automatically fix issues to create PDF/A1-b compliant documen
 
 # Values
 
-<span class="parameter">PDFAauto</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$PDFAauto</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

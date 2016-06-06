@@ -22,7 +22,7 @@ This may improve performance considerably for large tables, reducing memory use 
 
 # Values
 
-<span class="parameter">simpleTables</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$simpleTables</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

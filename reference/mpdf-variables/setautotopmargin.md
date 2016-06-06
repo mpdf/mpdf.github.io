@@ -12,11 +12,11 @@ modification_time: 2015-08-05T12:02:25+00:00
 
 mixed **setAutoTopMargin**
 
-Specify the behaviour defining the top-margin of the document. When <span class="parameter">setAutoTopMargin</span> is set to 'stretch' then <span class="parameter">autoMarginPadding</span> defines the minimum distance in mm that will be forced between the bottom of the header and the top of the main text.
+Specify the behaviour defining the top-margin of the document. When <span class="parameter">$setAutoTopMargin</span> is set to 'stretch' then <span class="parameter">$autoMarginPadding</span> defines the minimum distance in mm that will be forced between the bottom of the header and the top of the main text.
 
 # Values
 
-<span class="parameter">setAutoTopMargin</span>
+<span class="parameter">$setAutoTopMargin</span>
 
 **Values**
 

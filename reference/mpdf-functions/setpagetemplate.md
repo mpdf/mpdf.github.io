@@ -18,7 +18,7 @@ Specify a page from an external PDF file to use as a template. The page must hav
 
 # Parameters
 
-<span class="parameter">templateID</span>
+<span class="parameter">$templateID</span>
 
 This parameter specifies the ID of the page template to use. Value must be a valid template ID from <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>.
 

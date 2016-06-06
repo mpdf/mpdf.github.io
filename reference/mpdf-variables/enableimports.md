@@ -22,7 +22,7 @@ Enable the use of imported PDF files or templates. This causes additional files 
 
 # Values
 
-<span class="parameter">enableImports</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$enableImports</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

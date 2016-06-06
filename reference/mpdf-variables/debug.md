@@ -14,11 +14,11 @@ debug – Turn on debugging messages
 
 void **debug**
 
-Specify whether to show debugging messages. If you are having problems with mPDF, set <span class="parameter">debug</span> to TRUE to show error and warning  messages that may otherwise be suppressed.
+Specify whether to show debugging messages. If you are having problems with mPDF, set <span class="parameter">$debug</span> to TRUE to show error and warning  messages that may otherwise be suppressed.
 
 # Values
 
-<span class="parameter">debug</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$debug</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

@@ -56,7 +56,7 @@ If you want to hide mPDF custom tags from a browser, enclose any mPDF code withi
 <!--mpdf  ..  anything you want to write ...  mpdf-->
 {% endhighlight %}
 
-mPDF will strip away the <span class="parameter">&lt;!--mpdf</span> tag and any following spaces, and the <span class="parameter">mpdf--&gt;</span> tag and any preceeding spaces, and process all enclosed code e.g.
+mPDF will strip away the <span class="parameter">$&lt;!--mpdf</span> tag and any following spaces, and the <span class="parameter">$mpdf--&gt;</span> tag and any preceeding spaces, and process all enclosed code e.g.
 
 {% highlight php %}
 <!--mpdf  <htmlheader id="header1"><h2>Section 2</h2></htmlheader>  mpdf-->

@@ -12,7 +12,8 @@ UseTemplate – Insert an imported page from an external PDF file
 
 # Description
 
-array **UseTemplate** ( int <span class="parameter">$templateID</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$width</span> [, float <span class="parameter">$height</span> ]]]])
+array `UseTemplate` ( int <span class="parameter">$templateID</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$width</span> [, float <span class="parameter">$height</span> ]]]])
+
 
 Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the imported page as it is printed (see Example #1).
 
@@ -20,61 +21,65 @@ Insert an imported page/template from an external PDF file into the current docu
 
 <div class="alert alert-info" role="alert">**Note:** If you are using automatic header-margins, you need to set the header before starting the first page; if you start the document with UseTemplate() this will move it to page 1, so the order needs to be:
 
-`$mpdf = new mPDF();
+{% highlight php %}
+<?php
 
-$mpdf-&gt;SetImportUse();
+$mpdf = new mPDF();
 
-$mpdf-&gt;SetHTMLHeader($header);
+$mpdf->SetImportUse();
 
-$pagecount = $mpdf-&gt;SetSourceFile('logoheader.pdf');
+$mpdf->SetHTMLHeader($header);
 
-$tplIdx = $mpdf-&gt;ImportPage($pagecount);
+$pagecount = $mpdf->SetSourceFile('logoheader.pdf');
 
-$mpdf-&gt;UseTemplate($tplIdx);
+$tplIdx = $mpdf->ImportPage($pagecount);
 
-$mpdf-&gt;WriteHTML($html);`</div>
+$mpdf->UseTemplate($tplIdx);
+
+$mpdf->WriteHTML($html);
+{% endhighlight %}
 
 # Parameters
 
-<span class="parameter">templateID</span>
+<span class="parameter">$templateID</span>
 
 This parameter specifies the ID of the page template to insert.
 
-<span class="parameter">x</span>
+<span class="parameter">$x</span>
 
-Sets the <span class="parameter">x</span> co-ordinate (abscissa) to output the template. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
+Sets the <span class="parameter">$x</span> co-ordinate (abscissa) to output the template. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-<span class="smallblock">DEFAULT</span> <span class="smallblock">NULL</span> - Sets <span class="parameter">x</span> co-ordinate to 0
-
-<span class="smallblock">BLANK</span> or omitted - uses default (0)
-
--1: Uses current writing position in document
-
-<span class="parameter">y</span>
-
-Sets the <span class="parameter">y</span> co-ordinate (ordinate) to output the template. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
-
-<span class="smallblock">DEFAULT</span> <span class="smallblock">NULL</span> - Sets <span class="parameter">y</span> co-ordinate to 0
+<span class="smallblock">DEFAULT</span> <span class="smallblock">NULL</span> - Sets <span class="parameter">$x</span> co-ordinate to 0
 
 <span class="smallblock">BLANK</span> or omitted - uses default (0)
 
 -1: Uses current writing position in document
 
-<span class="parameter">width</span>
+<span class="parameter">$y</span>
+
+Sets the <span class="parameter">$y</span> co-ordinate (ordinate) to output the template. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
+
+<span class="smallblock">DEFAULT</span> <span class="smallblock">NULL</span> - Sets <span class="parameter">$y</span> co-ordinate to 0
+
+<span class="smallblock">BLANK</span> or omitted - uses default (0)
+
+-1: Uses current writing position in document
+
+<span class="parameter">$width</span>
 
 Specifies the width for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-<span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">width</span> nor <span class="parameter">height</span> are set) or if <span class="parameter">height</span> is set, the <span class="parameter">width</span> is automatically set to ouput the template in proportion to the original.
+<span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">$width</span> nor <span class="parameter">$height</span> are set) or if <span class="parameter">$height</span> is set, the <span class="parameter">$width</span> is automatically set to ouput the template in proportion to the original.
 
-<span class="parameter">height</span>
+<span class="parameter">$height</span>
 
 Specifies the height for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-<span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">width</span> nor <span class="parameter">height</span> are set) or if <span class="parameter">width</span> is set, the <span class="parameter">height</span> is automatically set to ouput the template in proportion to the original.
+<span class="smallblock">DEFAULT</span> or 0 will output the template at the original size (if neither <span class="parameter">$width</span> nor <span class="parameter">$height</span> are set) or if <span class="parameter">$width</span> is set, the <span class="parameter">$height</span> is automatically set to ouput the template in proportion to the original.
 
 # Return Value
 
-**UseTemplate()** returns an array of the calculated <span class="parameter">width</span> and <span class="parameter">height</span>.
+**UseTemplate()** returns an array of the calculated <span class="parameter">$width</span> and <span class="parameter">$height</span>.
 
 # Changelog
 
@@ -89,9 +94,7 @@ Specifies the height for the template to appear on the page. Value should be spe
 
 # Examples
 
-{% highlight php %}
 Example #1
-{% endhighlight %}
 
 {% highlight php %}
 <?php

@@ -18,13 +18,13 @@ Set an HTML page footer.
 
 # Parameters
 
-<span class="parameter">header</span>
+<span class="parameter">$header</span>
 
 This parameter specifies the content of the page footer as a string of valid HTML code.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
-<span class="parameter">side</span>
+<span class="parameter">$side</span>
 
 Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
 
@@ -38,7 +38,7 @@ E - set the footer for <span class="smallblock">EVEN</span> pages
 
 <span class="smallblock">BLANK</span> - set the footer for <span class="smallblock">ODD</span> pages
 
-<div class="alert alert-info" role="alert">**Note:** Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; **SetHTMLHeader()** and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">side</span> - set <span class="smallblock">ODD</span> page header/footer only as default</div>
+<div class="alert alert-info" role="alert">**Note:** Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">$side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; **SetHTMLHeader()** and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">$side</span> - set <span class="smallblock">ODD</span> page header/footer only as default</div>
 
 # Changelog
 

@@ -20,7 +20,7 @@ NB Firefox does not collapse margins above and below tables, but IE8 does.
 
 # Values
 
-<span class="parameter">collapseBlockMargins</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$collapseBlockMargins</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

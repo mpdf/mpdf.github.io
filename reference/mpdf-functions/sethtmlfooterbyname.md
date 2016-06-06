@@ -20,11 +20,11 @@ Sets an HTML page footer that has previously been defined by name.
 
 # Parameters
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
 This parameter specifies the name of a previously defined HTML page footer. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page footer exists.
 
-<span class="parameter">side</span>
+<span class="parameter">$side</span>
 
 Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
 

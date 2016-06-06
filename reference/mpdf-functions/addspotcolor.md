@@ -21,13 +21,13 @@ Define a Spot colour which can be used in the document. Spot colours need to be 
 
 # Parameters
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
 Specifies the name used for the spot colour.
 
-<span class="parameter">c, m, y, k</span>
+<span class="parameter">$c, m, y, k</span>
 
-<span class="parameter">S</span>pecifies the CMYK values to be used to display in the document or if the spot colour is not available.
+<span class="parameter">$S</span>pecifies the CMYK values to be used to display in the document or if the spot colour is not available.
 
 <span class="smallblock">DEFAULT</span>: 0
 

@@ -18,11 +18,11 @@ Set the title for the document. The title is displayed at the top of the Adobe R
 
 <div class="alert alert-info" role="alert">**Note:** Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.</div>
 
-Note: The <span class="parameter">title</span> tag from the header of an HTML document will override this value when you use <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.
+Note: The <span class="parameter">$title</span> tag from the header of an HTML document will override this value when you use <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.
 
 # Parameters
 
-<span class="parameter">text</span>
+<span class="parameter">$text</span>
 
 Defines the text to appear as a Title. The text should be UTF-8 encoded, but should not contain HTML mark-up tags. <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.
 

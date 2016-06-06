@@ -19,7 +19,7 @@ When <span class="smallblock">TRUE</span>, selects the font to use, based on the
 
 # Values
 
-<span class="parameter">autoLangToFont</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
+<span class="parameter">$autoLangToFont</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
 
 **Values**
 

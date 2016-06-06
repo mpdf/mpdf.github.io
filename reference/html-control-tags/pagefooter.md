@@ -12,7 +12,7 @@ pagefooter – Define a page footer with a given name
 
 # Description
 
-&lt;**pagefooter** [ <span class="parameter">name</span> ] [ <span class="parameter">content-left</span> ] [ <span class="parameter">content-center</span> ] [ <span class="parameter">content-right</span> ] [ <span class="parameter">footer-style</span> ] [ <span class="parameter">footer-style-left</span> ] [ <span class="parameter">footer-style-center</span> ] [ <span class="parameter">footer-style-right</span> ] [ <span class="parameter">line</span> ] /&gt;
+&lt;**pagefooter** [ <span class="parameter">$name</span> ] [ <span class="parameter">$content-left</span> ] [ <span class="parameter">$content-center</span> ] [ <span class="parameter">$content-right</span> ] [ <span class="parameter">$footer-style</span> ] [ <span class="parameter">$footer-style-left</span> ] [ <span class="parameter">$footer-style-center</span> ] [ <span class="parameter">$footer-style-right</span> ] [ <span class="parameter">$line</span> ] /&gt;
 
 Define a page footer with a given name. Named footers can be referenced and set later in the document e.g. &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;
 
@@ -20,13 +20,13 @@ Define a page footer with a given name. Named footers can be referenced and set 
 
 # Attributes
 
-<span class="parameter">name</span>
+<span class="parameter">$name</span>
 
 This attribute is a text string to use as the name for this footer.
 
 If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_default'.
 
-<span class="parameter">content-left
+<span class="parameter">$content-left
 
 content-center
 
@@ -38,29 +38,29 @@ At least one 'content-' must be defined.
 
 **Values**
 
-<span class="parameter">content-left</span>: Text to appear at left margin
+<span class="parameter">$content-left</span>: Text to appear at left margin
 
-<span class="parameter">content-center</span>: Text to appear in centre of page
+<span class="parameter">$content-center</span>: Text to appear in centre of page
 
-<span class="parameter">content-right</span>: Text to appear at right margin
+<span class="parameter">$content-right</span>: Text to appear at right margin
 
-<span class="parameter">footer-style
+<span class="parameter">$footer-style
 
 footer-style-left
 
-</span><span class="parameter">footer-style-center
+</span><span class="parameter">$footer-style-center
 
-</span><span class="parameter">footer-style-right</span>
+</span><span class="parameter">$footer-style-right</span>
 
 This attribute can optionally set CSS style properties for the page footer.
 
-<span class="parameter">footer-style</span> will set the same style for left, right and center content, whereas <span class="parameter">footer-style-left</span>, <span class="parameter">footer-style-center</span> and  <span class="parameter">footer-style-right</span> set the style for one part of the content only.
+<span class="parameter">$footer-style</span> will set the same style for left, right and center content, whereas <span class="parameter">$footer-style-left</span>, <span class="parameter">$footer-style-center</span> and  <span class="parameter">$footer-style-right</span> set the style for one part of the content only.
 
 **Values**
 
 Valid CSS inline style declaration but only 5 properties can be set:
 
-<span class="parameter">font-family
+<span class="parameter">$font-family
 
 font-size
 
@@ -72,7 +72,7 @@ color
 
 </span>If style is not set, the default values for the document are used.
 
-<span class="parameter">line</span>
+<span class="parameter">$line</span>
 
 If set to "1" or any positive value, a line will be drawn above the footer**.**
 

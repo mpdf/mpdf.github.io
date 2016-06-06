@@ -37,13 +37,13 @@ If you wish to maintain the relative proportions of the table, set <span class="
 
 <span class="parameter">$ignore_table_percents</span>
 
-Table and cell widths set as a percent value are respected when possible by mPDF - as long as the table layout meets the other constraints. This can lead to an ugly or inefficiently laid out table for a printed document. Setting <span class="parameter">$</span><span class="parameter">ignore_table_percents</span> = <span class="smallblock">TRUE</span>; will force mPDF to ignore any table or cell widths set as percent values.
+Table and cell widths set as a percent value are respected when possible by mPDF - as long as the table layout meets the other constraints. This can lead to an ugly or inefficiently laid out table for a printed document. Setting <span class="parameter">$</span><span class="parameter">$ignore_table_percents</span> = <span class="smallblock">TRUE</span>; will force mPDF to ignore any table or cell widths set as percent values.
 
 <span class="parameter">$ignore_table_width</span>
 
-Table widths set as absolute length values are respected when possible by mPDF - as long as the table layout meets the other constraints. This can lead to an ugly or inefficiently laid out table for a printed document. Setting <span class="parameter">$</span><span class="parameter">ignore_table_</span><span class="parameter">width</span> = <span class="smallblock">TRUE</span>; will force mPDF to ignore any table widths set as absolute length values.
+Table widths set as absolute length values are respected when possible by mPDF - as long as the table layout meets the other constraints. This can lead to an ugly or inefficiently laid out table for a printed document. Setting <span class="parameter">$</span><span class="parameter">$ignore_table_</span><span class="parameter">$width</span> = <span class="smallblock">TRUE</span>; will force mPDF to ignore any table widths set as absolute length values.
 
 <span class="parameter">$tableMinSizePriority</span>
 
-If there is a conflict between respecting <span class="parameter">page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">autosize</span>, the configurable variable <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v>=4.6)
+If there is a conflict between respecting <span class="parameter">$page-break-inside:avoid</span> and respecting the maximum value allowed for <span class="parameter">$autosize</span>, the configurable variable <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a> will determine which factor takes priority. (mPDF v>=4.6)
 

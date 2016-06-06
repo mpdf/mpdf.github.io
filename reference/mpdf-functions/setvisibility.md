@@ -21,7 +21,7 @@ Set the visibility of subsequent objects
 
 # Parameters
 
-<span class="parameter">visibility</span>
+<span class="parameter">$visibility</span>
 
 This parameter specifies the visibility.
 

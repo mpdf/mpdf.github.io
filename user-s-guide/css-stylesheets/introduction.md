@@ -39,8 +39,8 @@ permalink: /user-s-guide/css-stylesheets/introduction.html
 
 &lt;span style="outline-width:thin|medium|thick; outline-color:#rrggbb|invert"&gt;</p>
 <h2>Using a stylesheet</h2>
-<p>The WriteHTML() method takes second parameter i.e. <span class="parameter">mode</span>. See <a href="/reference/mpdf-functions/writehtml.html">WriteHTML()</a> for details of this and other parameters.</p>
-<p><span class="parameter">mode</span>
+<p>The WriteHTML() method takes second parameter i.e. <span class="parameter">$mode</span>. See <a href="/reference/mpdf-functions/writehtml.html">WriteHTML()</a> for details of this and other parameters.</p>
+<p><span class="parameter">$mode</span>
 
 0 - Use this (default) if the text you pass is a complete HTML page including head and body and style definitions.
 

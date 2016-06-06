@@ -14,7 +14,7 @@ A variety of barcodes can be produced with mPDF. Please see the example file for
 
 <table class="table"> <tbody>
 <tr> <th rowspan="2" class="pmhBottomCenter" style="font-weight: bold;">Barcode type</th>
-<td rowspan="2" class="pmhBottomCenter" style="font-weight: bold;"><span class="parameter">code</span></td>
+<td rowspan="2" class="pmhBottomCenter" style="font-weight: bold;"><span class="parameter">$code</span></td>
 <td rowspan="2" class="pmhBottomCenter" style="font-weight: bold;">X-dim</td>
 <td rowspan="2" class="pmhBottomCenter" style="font-weight: bold;">H-dim</td>
 <td colspan="3" class="pmhBottomCenter" style="font-weight: bold;">Light margin / Quiet zone</td>

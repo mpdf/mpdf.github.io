@@ -24,7 +24,7 @@ Smaller chunks (1) - analysing word by word - takes more processing time, and ca
 
 # Values
 
-<span class="parameter">autoFontGroupSize</span>
+<span class="parameter">$autoFontGroupSize</span>
 
 **Values**
 

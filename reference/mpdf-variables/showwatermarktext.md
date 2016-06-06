@@ -18,9 +18,9 @@ Specifies whether or not to show/print the watermark text on each page. The text
 
 # Values
 
-<span class="parameter">showWatermarkText</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
+<span class="parameter">$showWatermarkText</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
 
-If <span class="parameter">showWatermarkText</span> is <span class="smallblock">TRUE</span> or 1 the watermark text will be added to each page of the document.
+If <span class="parameter">$showWatermarkText</span> is <span class="smallblock">TRUE</span> or 1 the watermark text will be added to each page of the document.
 
 The value can be changed during the document to turn the watermark on and off on different pages.
 

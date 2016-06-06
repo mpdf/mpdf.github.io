@@ -39,7 +39,7 @@ Use of this function is probably best considered experimental. It is incompatibl
 
 - Using either pad or stretch, the values are set for the whole document - changes during the document will produce unpredictable results
 
-- Incompatible with orientation changes, <span class="parameter">forceportraitheaders</span> or <span class="parameter">forceportraitmargins</span>
+- Incompatible with orientation changes, <span class="parameter">$forceportraitheaders</span> or <span class="parameter">$forceportraitmargins</span>
 
 - Does not work with "write to current page" options for Headers
 

@@ -20,7 +20,7 @@ Processing tables uses large amounts of internal memory, as the value are stored
 
 # Values
 
-<span class="parameter">packTableData</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$packTableData</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 

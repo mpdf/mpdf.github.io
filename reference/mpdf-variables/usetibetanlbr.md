@@ -20,7 +20,7 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-breaking.html" |
 
 # Values
 
-<span class="parameter">useTibetanLBR = <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
+<span class="parameter">$useTibetanLBR = <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
 
 **Values**
 

@@ -23,7 +23,7 @@ In some circumstances, you may wish to create a PDF file with restricted colorSp
 
 # Values
 
-<span class="parameter">restrictColorSpace</span> =  1|2|3
+<span class="parameter">$restrictColorSpace</span> =  1|2|3
 
 **Values**
 
