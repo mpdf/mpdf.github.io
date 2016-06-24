@@ -37,7 +37,7 @@ Enable progress bars to be shown during file generation. Not recommended for gen
 
 define('_MPDF_URI','../');     // must be  a relative or absolute URI - not a file system path
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->StartProgressBarOutput(2);
 

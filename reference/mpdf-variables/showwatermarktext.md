@@ -50,14 +50,14 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetWatermarkText('DRAFT');
 
 $mpdf->showWatermarkText = true;
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 // As showWatermark is true when the first page is finished, a watermark is added
@@ -69,7 +69,7 @@ $mpdf->AddPage();
 $mpdf->showWatermarkText = false;
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 ?>

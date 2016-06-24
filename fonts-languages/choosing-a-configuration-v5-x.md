@@ -14,9 +14,7 @@ Some of the things you can change are:
 
 <ul>
 <li>the initial parameter used to call mPDF e.g. `$mpdf = new mPDF('c')`</li>
-<li>configuration variables set in <span class="filename">config.php</span> see <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">mPDF Variables - Overview</a>
-
-(many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
+<li>configuration variables set in <span class="filename">config.php</span> see <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">mPDF Variables - Overview</a> (many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
 <li>font details in <span class="filename">config_fonts.php</span></li>
 <li>language/font details in <span class="filename">config_cp.php</span></li>
 <li>initial style settings in <span class="filename">config.php</span> or <span class="filename">mpdf.css</span></li>
@@ -45,7 +43,7 @@ To use core fonts only, use 'c' for the initial parameter:
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF('c');
+$mpdf = new mPDF(['mode' => 'c']);
 {% endhighlight %}
 
 # Embedded Unicode fonts
@@ -261,10 +259,8 @@ $mpdf = new mPDF('ru-x');     // behaves as though ('ru') called (Russian)
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a></li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Automatically detect language in the input HTML text and use appropriate fonts</li>
-</ul>
+- <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a>
+- <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Automatically detect language in the input HTML text and use appropriate fonts
 
 There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a>.
 

@@ -49,7 +49,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->Bookmark('Start of the document');
 
@@ -65,7 +65,7 @@ Example #2
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->Bookmark('Section 1', 0);
 

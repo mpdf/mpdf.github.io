@@ -14,7 +14,7 @@ This example shows how to create a PDF file and e-mail it:
 // require composer autoload
 require __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF(); // Create new mPDF Document
+$mpdf = new \Mpdf\Mpdf(); // Create new mPDF Document
 
 // Beginning Buffer to save PHP variables and HTML tags
 

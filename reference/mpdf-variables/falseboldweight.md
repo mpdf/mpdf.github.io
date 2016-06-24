@@ -47,11 +47,11 @@ Example #1
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->falseBoldWeight = 8;
 
-$mpdf->WriteHTML('<p style="font-family: mysimplefont">**Hallo World**<p>');
+$mpdf->WriteHTML('<p style="font-family: mysimplefont">**Hello World**<p>');
 
 $mpdf->Output();
 

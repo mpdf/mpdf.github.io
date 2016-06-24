@@ -17,21 +17,15 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF('', 'Legal');
+$mpdf = new \Mpdf\Mpdf(['format' => 'Legal']);
 
-$mpdf->WriteHTML('
-Hallo World
-');
+$mpdf->WriteHTML('Hello World');
 
 $mpdf->AddPage('L'); // Adds a new page in Landscape orientation
 
-$mpdf->WriteHTML('
-Hallo World
-');
+$mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
 
 Example #2
@@ -41,21 +35,21 @@ Example #2
 
 // Define a default Landscape page size/format by name
 
-$mpdf = new mPDF('utf-8', 'A4-L');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-L');
 
 // Define a default page size/format by array - page will be 190mm wide x 236mm height
 
-$mpdf = new mPDF('utf-8', array(190,236));
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'utf-8', [190, 236]);
 
 // Define a default page using all default values except "L" for Landscape orientation
 
-$mpdf = new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
+$mpdf = new \Mpdf\Mpdf([
+	'orientation' => 'L'
+]);
 {% endhighlight %}
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a> - mPDF class constructor </li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page</li>
-</ul>
+- <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a> - mPDF class constructor
+- <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page
 

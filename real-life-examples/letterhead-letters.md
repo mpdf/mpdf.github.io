@@ -77,7 +77,7 @@ Contents of your letter...
 
 require __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML($header);
 $mpdf->WriteHTML($letter);
@@ -162,7 +162,7 @@ Contents of your letter...
 
 require __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML($header);
 $mpdf->WriteHTML($firstletter);

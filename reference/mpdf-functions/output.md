@@ -49,10 +49,10 @@ Example #1
 
 // Sends output inline to browser
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output();
@@ -67,10 +67,10 @@ Example #2
 
 // Saves file on the server as 'filename.pdf'
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output('filename.pdf','F');
@@ -85,7 +85,7 @@ Example #3 - Sending file as e-mail (and also to browser)
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML($html);
 

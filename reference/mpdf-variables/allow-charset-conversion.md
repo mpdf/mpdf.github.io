@@ -53,7 +53,7 @@ $html = '
 
 </html>';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->allow_charset_conversion = true;
 
@@ -71,7 +71,7 @@ Example #2
 
 $html = '... the body of the document encoded in ISO-8859-4 ...';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->allow_charset_conversion = true;
 

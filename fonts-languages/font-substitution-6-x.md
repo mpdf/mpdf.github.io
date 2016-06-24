@@ -29,7 +29,7 @@ If called in HTML/CSS the font-family name is converted to an mPDF font-family n
 
 ## Core fonts
 
-If core fonts only are specified by using `$mpdf = new mPDF('c')`, then all font requests will be substituted by Arial/Helvetica, Times or Courier i.e. the core PDF fonts. mPDF determines whether the requested font is a sans-serif, serif or monospace font (as above), and substitutes accordingly. 
+If core fonts only are specified by using `$mpdf = new \Mpdf\Mpdf(['mode' => 'c'])`, then all font requests will be substituted by Arial/Helvetica, Times or Courier i.e. the core PDF fonts. mPDF determines whether the requested font is a sans-serif, serif or monospace font (as above), and substitutes accordingly. 
 
 ## Character (font) substitution
 

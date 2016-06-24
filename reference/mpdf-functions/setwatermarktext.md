@@ -68,14 +68,14 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetWatermarkText('DRAFT');
 
 $mpdf->showWatermarkText = true;
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 ?>
@@ -86,7 +86,7 @@ Example #2
 {% highlight php %}
 <?php
 
-// htmltoolkit contains a function strcode2utf() to convert htmlentities to UTF-8 encoded text$mpdf = new mPDF();
+// htmltoolkit contains a function strcode2utf() to convert htmlentities to UTF-8 encoded text$mpdf = new \Mpdf\Mpdf();
 
 $wm = strcode2utf("&amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575; &amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575;");
 
@@ -95,7 +95,7 @@ $mpdf->SetWatermarkText($wm, 0.1);
 $mpdf->showWatermarkText = true;
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 ?>

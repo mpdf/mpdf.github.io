@@ -305,7 +305,7 @@ You could then either use this second font name in your stylesheets e.g.
 
 {% highlight php %}
 
-Hallo World (in Arabic)
+Hello World (in Arabic)
 
 {% endhighlight %}
 

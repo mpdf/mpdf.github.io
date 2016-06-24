@@ -31,7 +31,7 @@ Example #1
 
 <?
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Set a simple Footer including the page number
 
@@ -71,7 +71,7 @@ Example #2 In a complex document you could suppress the page numbering from the 
 
 <?
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Double-side document - mirror margins
 

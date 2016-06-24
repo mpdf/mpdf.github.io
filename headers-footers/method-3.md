@@ -81,7 +81,7 @@ Example #2 - Using Custom HTML tags
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Define the Headers and Footers with names
 
@@ -134,7 +134,7 @@ Example #3 - SetHeaderByName()
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Define a header named 'MyHeader1' here (as Example #1)
 
@@ -154,7 +154,7 @@ Example #4 - <setpageheader>
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $html = '
 
@@ -180,7 +180,7 @@ Example #5 - @page
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $html = '
 
@@ -318,7 +318,7 @@ Example #8 - TOCpagebreak()
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Define headers here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 'MyHeader2', 'MyFooter2' (as Example #1)
 

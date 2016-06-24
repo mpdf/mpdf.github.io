@@ -33,15 +33,15 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->allow_html_optional_endtags = true;
 
-$mpdf->WriteHTML('<p>Hallo World');
+$mpdf->WriteHTML('<p>Hello World');
 
-$mpdf->WriteHTML('<p>Hallo World');
+$mpdf->WriteHTML('<p>Hello World');
 
-$mpdf->WriteHTML('<p>Hallo World');
+$mpdf->WriteHTML('<p>Hello World');
 
 $mpdf->Output();
 
