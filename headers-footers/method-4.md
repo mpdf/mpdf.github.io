@@ -23,7 +23,7 @@ Example #1 - Using PHP
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->DefHTMLHeaderByName('Chapter2Header','<div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;">Chapter 2</div>');
 
@@ -37,7 +37,7 @@ Example #2 - Using Custom HTML tags
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $html = '
 
@@ -126,7 +126,7 @@ Example #3 - SetHTMLHeaderByName()
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Define an HTML header named 'MyHeader1' here (as Example #1)
 
@@ -146,7 +146,7 @@ Example #4 - <sethtmlpageheader>
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $html = '
 
@@ -192,7 +192,7 @@ Example #5 - @page
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $html = '
 
@@ -367,7 +367,7 @@ Example #8 - TOCpagebreak()
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Define HTML headers here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 'MyHeader2', 'MyFooter2' (as Example #1)
 

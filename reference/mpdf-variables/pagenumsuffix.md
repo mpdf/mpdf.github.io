@@ -23,7 +23,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->pagenumPrefix = 'Page number ';
 
@@ -35,7 +35,7 @@ $mpdf->nbpgSuffix = ' pages';
 
 $mpdf->SetHeader('{PAGENO}{nbpg}');
 
-$mpdf->WriteHTML("Hallo World");
+$mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
 

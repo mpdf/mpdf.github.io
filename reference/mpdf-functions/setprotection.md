@@ -104,7 +104,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Encrypt the file and grant no permissions to the user to copy, print etc.
 
@@ -115,7 +115,7 @@ $mpdf = new mPDF();
 $mpdf->SetProtection(array());
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output('filename.pdf');

@@ -79,4 +79,7 @@ Recommended ways to use multiple languages in mPDF:
 
 It is preferable not to use `autoScriptToLang` and `autoLangToFont` unless they are necessary: they will result in increased processing time, and OTL tables will not be able to use language dependent substitutions when undefined languages are set e.g "`und-Cyrl`".
 
-<div class="alert alert-info" role="alert">**Note:** As from mPDF 6.0 automatic font selection can be used within an SVG image. Control is separate from that of the rest of the document. For details, see the defined constants at the top of classes/svg.php file.</div>
+<div class="alert alert-info" role="alert">
+	**Note:** As from mPDF 6.0 automatic font selection can be used within an SVG image. Control is separate from that
+	of the rest of the document. For details, see the defined constants at the top of Svg.php file.
+</div>

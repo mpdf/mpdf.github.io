@@ -338,7 +338,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('Your Introduction');
 
@@ -356,7 +356,7 @@ Example #2 - Resetting page numbering with a new style
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = 1;
 
@@ -382,7 +382,7 @@ Example #3 - Defining new margins and page orientation
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('Your Introduction');
 
@@ -416,7 +416,7 @@ Example #4 - Changing headers/footers
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = 1;
 
@@ -486,7 +486,7 @@ Example #5 - Blank template as example
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('Introduction');
 

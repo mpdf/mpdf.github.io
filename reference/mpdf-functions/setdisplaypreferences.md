@@ -47,12 +47,12 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetDisplayPreferences('/HideMenubar/HideToolbar/DisplayDocTitle');
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output('filename.pdf');

@@ -166,7 +166,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $html = '
 This is a paragraph about violas<annotation content="Violas are like big violins" /> about which I know very little.
@@ -184,7 +184,7 @@ Example #2
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // The Annotation markers will appear 10mm in from the right margin of the page
 

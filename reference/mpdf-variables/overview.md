@@ -298,7 +298,7 @@ Page numbering
 <td>5.0</td>
 <td>* You must only change this variable in the <span class="filename">config.php</span> file.
 
-Use initial parameter to change at runtime e.g. `$mpdf = new mPDF('+aCJK');`
+Use initial parameter to change at runtime e.g. `$mpdf = new \Mpdf\Mpdf(['mode' => '+aCJK']);`
 
 </td>
 </tr>
@@ -444,7 +444,7 @@ Replaces useLang
 
 Removed mPDF 5.0 - Use
 
-`$mpdf = new mPDF('c');`
+`$mpdf = new \Mpdf\Mpdf(['mode' => 'c']);`
 
 The alias <span class="parameter">$use_embeddedfonts_1252</span> was used before v4.0
 

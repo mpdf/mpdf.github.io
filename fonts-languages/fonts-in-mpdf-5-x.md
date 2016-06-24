@@ -56,7 +56,7 @@ This will enable the Frutiger font in all of the following:
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF('th');
+$mpdf = new \Mpdf\Mpdf('th');
 {% endhighlight %}
 
 {% highlight php %}

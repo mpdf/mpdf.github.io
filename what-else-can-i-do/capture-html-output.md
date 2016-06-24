@@ -14,7 +14,7 @@ One way of outputting a webpage to mPDF without re-writing your scripts too much
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Buffer the following html with PHP so we can store it to a variable later
 

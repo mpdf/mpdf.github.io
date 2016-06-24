@@ -61,7 +61,7 @@ Example #1
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('utf-8');
+$mpdf = new \Mpdf\Mpdf('utf-8');
 
 $html = '
 

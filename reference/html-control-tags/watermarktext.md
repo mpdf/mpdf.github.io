@@ -52,14 +52,14 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->showWatermarkText = true;
 
 $mpdf->WriteHTML('<watermarktext content="DRAFT" alpha="0.4" />');
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 ?>

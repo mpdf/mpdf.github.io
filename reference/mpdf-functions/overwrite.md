@@ -51,14 +51,9 @@ If this parameter is a string and the <span class="parameter">$search</span> par
 **Values**
 
 D: download the PDF file
-
 I: serves in-line to the browser
-
 S: returns the PDF document as a string
-
-F: save as file <span class="parameter">$file_out
-
-</span>
+F: save as file <span class="parameter">$file_out</span>
 
 <span class="parameter">$sourcefile</span>
 
@@ -83,7 +78,7 @@ This parameter specifies the filename for the output PDF file. No path should be
 
 # Examples
 
-Example #1
+## Example #1
 
 {% highlight php %}
 <?php
@@ -95,7 +90,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 // The rest of the parameters do nothing
 
-$mpdf = new mPDFI('');
+$mpdf = new \Mpdf\MpdfI('');
 
 $mpdf->SetImportUse();
 
@@ -104,19 +99,13 @@ $mpdf->SetImportUse();
 $mpdf->percentSubset = 0;
 
 $search = array(
-
-        'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-
-        'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXZZZZZZZZ'
-
+	'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+	'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXZZZZZZZZ'
 );
 
 $replacement = array(
-
-        "personalised for Jos\xc3\xa9 Bloggs",
-
-        "COPYRIGHT: Licensed to Jos\xc3\xa9 Bloggs"
-
+	"personalised for Jos\xc3\xa9 Bloggs",
+	"COPYRIGHT: Licensed to Jos\xc3\xa9 Bloggs"
 );
 
 $mpdf->OverWrite('test.pdf', $search, $replacement, 'I', 'mpdf.pdf' ) ;
@@ -124,10 +113,7 @@ $mpdf->OverWrite('test.pdf', $search, $replacement, 'I', 'mpdf.pdf' ) ;
 ?>
 {% endhighlight %}
 
-{% highlight php %}
-Example #2  Using encryption
-
-{% endhighlight %}
+## Example #2  Using encryption
 
 {% highlight php %}
 <?php
@@ -135,84 +121,71 @@ Example #2  Using encryption
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('');
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->percentSubset = 0;
 
-$mpdf->SetProtection(array(),'','bread');   // Need to specify a password
+$mpdf->SetProtection(array(), '', 'bread');   // Need to specify a password
 
-$mpdf->WriteHTML('
-This copy is XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-');
+$mpdf->WriteHTML('This copy is XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX');
 
 $mpdf->Output('test.pdf','F');
 
-    // Have to save various encryption keys, which are uniquely generated each document
+	// Have to save various encryption keys, which are uniquely generated each document
 
-    $uid = $mpdf->uniqid;
+$uid = $mpdf->uniqid;
 
-    $oval = $mpdf->Ovalue;
+$oval = $mpdf->Ovalue;
 
-    $encKey = $mpdf->encryption_key;
+$encKey = $mpdf->encryption_key;
 
-    $uval = $mpdf->Uvalue;
+$uval = $mpdf->Uvalue;
 
-    $pval = $mpdf->Pvalue;
+$pval = $mpdf->Pvalue;
 
-    $RC128 = $mpdf->useRC128encryption;
+$RC128 = $mpdf->useRC128encryption;
 
-unset( $mpdf );
+unset($mpdf);
 
 //==============================================================
 
-$mpdf = new mPDF('');
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetImportUse();
 
-    // Re-instate saved encryption keys from original document
+// Re-instate saved encryption keys from original document
 
-    $mpdf->encrypted = true;
+$mpdf->encrypted = true;
 
-    $mpdf->useRC128encryption = $RC128;
+$mpdf->useRC128encryption = $RC128;
 
-    $mpdf->uniqid = $uid ;
+$mpdf->uniqid = $uid ;
 
-    $mpdf->Ovalue = $oval ;
+$mpdf->Ovalue = $oval ;
 
-    $mpdf->encryption_key = $encKey ;
+$mpdf->encryption_key = $encKey ;
 
-    $mpdf->Uvalue = $uval ;
+$mpdf->Uvalue = $uval ;
 
-    $mpdf->Pvalue = $pval ;
+$mpdf->Pvalue = $pval ;
 
 $search = array(
-
-        'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-
+	'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 );
 
 $replacement = array(
-
-        "personalised for Jos\xc3\xa9 Bloggs"
-
+	"personalised for Jos\xc3\xa9 Bloggs"
 );
 
 $mpdf->OverWrite('test.pdf', $search, $replacement, 'I', 'mpdf.pdf' ) ;
-
-exit;
-
-?>
 {% endhighlight %}
 
 # See Also
 
-<ul>
-<li><a href="index4a46.html?tid=348">mPDFI()</a> - Class constructor for importing files and templates</li>
-<li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file</li>
-<li><a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document</li>
-<li><a href="{{ "/reference/mpdf-functions/importpage.html" | prepend: site.baseurl }}">ImportPage()</a> - Import a page from an external PDF file</li>
-<li><a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> - Insert an imported page from an external PDF file</li>
-<li><a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template</li>
-<li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li>
-<li><a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li>
-</ul>
+- <a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
+- <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document
+- <a href="{{ "/reference/mpdf-functions/importpage.html" | prepend: site.baseurl }}">ImportPage()</a> - Import a page from an external PDF file
+- <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> - Insert an imported page from an external PDF file
+- <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template
+- <a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template
+- <a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page

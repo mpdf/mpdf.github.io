@@ -57,7 +57,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mPDF->SetColumns(2, 'J', 3);
 

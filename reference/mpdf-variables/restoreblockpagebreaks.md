@@ -46,18 +46,18 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->restoreBlockPageBreaks = true;
 
 $mpdf->WriteHTML('<div class="firstlevel"><div class="secondlevel">
-Hallo World
+Hello World
 ');
 
 $mpdf->AddPage();
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 </div></div>');
 
 ?>

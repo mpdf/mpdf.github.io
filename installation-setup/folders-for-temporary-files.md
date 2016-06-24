@@ -20,7 +20,7 @@ define("_MPDF_TEMP_PATH", '../../common/tempfiles/');
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 {% endhighlight %}
 
 Images will still be processed without write permissions to this folder, but at considerable cost in processing time and memory usage.

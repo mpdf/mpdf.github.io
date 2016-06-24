@@ -79,7 +79,7 @@ Example of 1st part of example_test.php
 
 // calls on this script from external websites!
 
-$mpdf = new mPDF('');
+$mpdf = new \Mpdf\Mpdf('');
 
 $html = $_POST['bodydata'];
 

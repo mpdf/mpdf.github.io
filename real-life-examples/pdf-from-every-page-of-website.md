@@ -48,7 +48,7 @@ Now create a file e.g. <span class="filename">makepdf.php</span> and add the fol
 // require composer autoload
 require __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $url = urldecode($_REQUEST['url']);
 
@@ -85,7 +85,7 @@ if (count($_POST) > 0) {
     curl_close($ch);
 }
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useSubstitutions = true; // optional - just as an example
 $mpdf->SetHeader($url . "\n\n" . 'Page {PAGENO}');  // optional - just as an example

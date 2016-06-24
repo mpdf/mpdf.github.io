@@ -47,7 +47,7 @@ Example #1
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetImportUse();
 
@@ -59,7 +59,7 @@ $tplId = $mpdf->ImportPage($pagecount);
 
 $mpdf->UseTemplate($tplId);
 
-$mpdf->WriteHTML('Hallo World');
+$mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
 

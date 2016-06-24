@@ -68,7 +68,7 @@ example_userinput3.php
 
 require __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $html ='<html>
 <body>

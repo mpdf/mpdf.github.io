@@ -36,7 +36,7 @@ The paged media model of CSS (http://www.w3.org/TR/1998/REC-CSS2-19980512/page.h
 
 {% endhighlight %}
 
-The dimensions set when calling a new mPDF() set the Sheet size.
+The dimensions set when calling a new \Mpdf\Mpdf() set the Sheet size.
 
 The Page-box size is assumed to be the same as the sheet size by default.
 
@@ -106,7 +106,7 @@ If a header/Footer name is set as _blank (or any name that hasn't been defined) 
 
 Crop marks indicate where the page should be cut. Cross marks (also known as register marks or registration marks) are used to align sheets.
 
-If you have defined @page {} in the CSS, then the values for the margins will override the ones set calling a new mPDF().
+If you have defined @page {} in the CSS, then the values for the margins will override the ones set calling a new \Mpdf\Mpdf().
 
 IMPORTANT - if you define a @page {} but don't specifiy margins, they will be set to the initial margin values of mPDF.
 
@@ -198,7 +198,7 @@ So, for example, `page-break-before: right` is equivalent of `AddPage(... 'NEXT-
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = 1;
 
@@ -338,7 +338,7 @@ div.noheader {
 
 </htmlpagefooter>
 
-Hallo World
+Hello World
 
 <div class="chapter2">Text of Chapter 2</div>
 
