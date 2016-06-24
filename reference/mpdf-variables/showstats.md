@@ -49,11 +49,11 @@ Example #1
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->showStats = true;
 
-$mpdf->WriteHTML("Hallo World");
+$mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
 

@@ -2,17 +2,17 @@
 layout: page
 title: mPDF()
 parent_title: mPDF functions
-permalink: /reference/mpdf-functions/mpdf.html
-modification_time: 2015-08-05T12:00:37+00:00
+permalink: /reference/mpdf-functions/__construct.html
+modification_time: 2016-06-24T15:36:37+02:00
 ---
 
-(mPDF >= 5.0)
+(mPDF >= 7.0)
 
-mPDF – Initialise an instance of mPDF class
+__construct – Initialise an instance of mPDF class
 
 # Description
 
-class **mPDF** ([ string <span class="parameter">$mode</span> [, mixed <span class="parameter">$format</span> [, float <span class="parameter">$default_font_size</span> [, string <span class="parameter">$default_font</span> [, float <span class="parameter">$margin_left</span> , float <span class="parameter">$margin_right</span> , float <span class="parameter">$margin_top</span> , float <span class="parameter">$margin_bottom</span> , float <span class="parameter">$margin_header</span> , float <span class="parameter">$margin_footer</span> [, string <span class="parameter">$orientation</span> ]]]]]])
+\Mpdf\Mpdf::__construct([array $config = []])
 
 Initialise an instance of mPDF class.
 
@@ -176,17 +176,11 @@ Example #1
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
-$mpdf->WriteHTML('
-Hallo World
-');
+$mpdf->WriteHTML('Hello World');
 
 $mpdf->Output('filename.pdf');
-
-exit;
-
-?>
 {% endhighlight %}
 
 Example #2
@@ -194,34 +188,31 @@ Example #2
 {% highlight php %}
 <?php
 
-// Define a new mPDF document using utf-8 fonts
+// Define a new \Mpdf\Mpdf document using utf-8 fonts
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8']);
 
-$mpdf = new mPDF('utf-8');
-
-// Define a new mPDF document using win-1252 fonts based on a language/country code
-
-$mpdf = new mPDF('en-GB');
+// Define a new \Mpdf\Mpdf document using win-1252 fonts based on a language/country code
+$mpdf = new \Mpdf\Mpdf(['mode' => 'en-GB']);
 
 // Define a Landscape page size/format by name
-
-$mpdf = new mPDF('utf-8', 'A4-L');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-L']);
 
 // Define a page size/format by array - page will be 190mm wide x 236mm height
-
-$mpdf = new mPDF('utf-8', array(190,236));
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [190, 236]]);
 
 // Define a page using all default values except "L" for Landscape orientation
-
-$mpdf = new mPDF('','', 0, '', 15, 15, 16, 16, 9, 9, 'L');
+$mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
 {% endhighlight %}
 
 # Notes
 
-<div class="alert alert-info" role="alert">**Note:** <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.</div>
+<div class="alert alert-info" role="alert">
+	**Note:** <span class="smallblock">_MPDF_PATH</span> was required to be
+	defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically
+	defined by the script itself when including the mpdf.php file.
+</div>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML to the document</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> - Finalise and output the document</li>
-</ul>
+- <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML to the document
+- <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> - Finalise and output the document

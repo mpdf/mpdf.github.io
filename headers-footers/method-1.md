@@ -17,7 +17,7 @@ Use a single command with a string as parameter, to set a header/footer at the r
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetHeader('Document Title');
 
@@ -33,7 +33,7 @@ Set a header/footer in three parts. The text string defines three strings divide
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetHeader('Document Title|Center Text|{PAGENO}');
 
@@ -51,7 +51,7 @@ This is the same as Variant #2, but you can control some aspects of style for th
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetHeader('Document Title|Center Text|{PAGENO}');
 
@@ -232,7 +232,7 @@ Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetHeader('First section header');
 
@@ -260,7 +260,7 @@ It gets even more complicated if you are using <span class="smallblock">DOUBLE-S
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = true;
 
@@ -294,7 +294,7 @@ Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Co
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = true;
 
@@ -356,7 +356,7 @@ $mpdf->Output();
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = true;
 

@@ -33,7 +33,7 @@ the document with `UseTemplate()` this will move it to page 1, so the order need
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetImportUse();
 
@@ -113,7 +113,7 @@ Example #1
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetImportUse();
 
@@ -131,7 +131,7 @@ $actualsize = $mpdf->UseTemplate($tplId);
 
 // The width of the template as it was printed is returned as $actualsize['w']
 
-$mpdf->WriteHTML('Hallo World');
+$mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
 
@@ -149,7 +149,7 @@ Example #2 - Using a 'cropped' page
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetImportUse();
 

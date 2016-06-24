@@ -15,7 +15,7 @@ To show error message(s):
 
 <?
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->debug = true;
 

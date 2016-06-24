@@ -77,7 +77,7 @@ The following functions have been removed:
 
 ## Default style sheet
 
-A new mpdf.css file includes defaults for LISTS top/bottom margins, and also examples for Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing.
+A new \Mpdf\Mpdf.css file includes defaults for LISTS top/bottom margins, and also examples for Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing.
 
 ## Direct writing methods and OTL
 
@@ -127,7 +127,7 @@ CSS "text-outline" is now supported on TD/TH tags
 
 Text wrapping in tables has been improved when using CJK scripts (chinese-japanese-korean).
 
-Text underline and strikethrough can be used together: <span>Hallo world</span>. Either &lt;u&gt;&lt;s&gt;...&lt;/s&gt;&lt;/u&gt; or &lt;span style="text-decoration:underline line-through;"&gt;...&lt;/span&gt; can be used
+Text underline and strikethrough can be used together: <span>Hello World</span>. Either &lt;u&gt;&lt;s&gt;...&lt;/s&gt;&lt;/u&gt; or &lt;span style="text-decoration:underline line-through;"&gt;...&lt;/span&gt; can be used
 
 Added support for style="opacity:0.6;" in SVG - equivalent to: style="fill-opacity:0.6; stroke-opacity: 0.6;"
 

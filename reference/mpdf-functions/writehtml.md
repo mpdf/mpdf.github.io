@@ -128,14 +128,14 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $stylesheet = file_get_contents('style.css');
 
 $mpdf->WriteHTML($stylesheet,1);
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ', 2);
 
 $mpdf->Output();

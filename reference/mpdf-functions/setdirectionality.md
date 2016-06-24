@@ -34,21 +34,15 @@ RTL
 
 # Examples
 
-Example #1
-
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF('utf-8');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8']);
 
 $mpdf->SetDirectionality('rtl');
 
-$mpdf->WriteHTML('
-דג סקרן שט בים מאוכזב ולפתע מצא חברה
-');
+$mpdf->WriteHTML('דג סקרן שט בים מאוכזב ולפתע מצא חברה');
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
 

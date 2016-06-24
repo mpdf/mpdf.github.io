@@ -132,16 +132,16 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Annotation("Text annotation example");
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output('filename.pdf');
@@ -154,7 +154,7 @@ Example #2
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // The Annotation markers will appear 10mm in from the right margin of the page
 
@@ -165,13 +165,13 @@ $mpdf->annotMargin = 10;
 $mpdf->annotOpacity = 1;
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Annotation("Text annotation example\nCharacters test:\xd1\x87\xd0\xb5 \xd0\xbf\xd1\x83\xd1\x85\xd1\x8a\xd1\x82", 145, 24, 'Comment', "Ian Back", "My Subject", 0.7, array(127, 127, 255));
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output('filename.pdf');

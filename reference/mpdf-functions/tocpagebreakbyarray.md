@@ -230,7 +230,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('Introduction');
 
@@ -252,7 +252,7 @@ Example #2 - Blank template as example
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('Introduction');
 

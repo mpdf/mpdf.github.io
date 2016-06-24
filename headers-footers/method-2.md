@@ -19,7 +19,7 @@ Example #1 - Single-sided document
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Define the Header/Footer before writing anything so they appear on the first page
 
@@ -39,7 +39,7 @@ $mpdf->SetHTMLFooter('
 
 ');
 
-$mpdf->WriteHTML('Hallo World');
+$mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
 {% endhighlight %}
@@ -51,7 +51,7 @@ Example #2 - Double-sided document
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = 1;    // Use different Odd/Even headers and footers and mirror margins
 
@@ -89,7 +89,7 @@ $mpdf->SetHTMLFooter('
 
 ', 'E');
 
-$mpdf->WriteHTML('Hallo World');
+$mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
 {% endhighlight %}
@@ -168,7 +168,7 @@ Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Co
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = true;
 
@@ -210,7 +210,7 @@ $mpdf->Output();
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = true;
 

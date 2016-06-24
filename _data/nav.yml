@@ -4,15 +4,13 @@
     items:
         -
             title: 'Features'
-            url: index0f5a.html
-            permalink: /about-mpdf/features-v5.html
+            permalink: /about-mpdf/features-v7.html
             slug: features
             parent_title: 'About mPDF'
         -
-            title: 'Requirements v5'
-            url: index969a.html
-            permalink: /about-mpdf/requirements-v5.html
-            slug: requirements-v5
+            title: 'Requirements v7'
+            permalink: /about-mpdf/requirements-v7.html
+            slug: requirements-v7
             parent_title: 'About mPDF'
         -
             title: Limitations
@@ -786,10 +784,10 @@
             slug: mpdf-functions
             items:
                 -
-                    title: mPDF()
+                    title: __construct()
                     url: index7d44.html
-                    permalink: /reference/mpdf-functions/mpdf.html
-                    slug: mpdf
+                    permalink: /reference/mpdf-functions/__construct.html
+                    slug: __construct
                     parent_title: 'mPDF functions'
                 -
                     title: Overview

@@ -31,12 +31,12 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetSubject('My Subject');
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output('filename.pdf');
@@ -49,14 +49,14 @@ Example #2
 {% highlight php %}
 <?php
 
-// htmltoolkit contains a function strcode2utf() to convert htmlentities to UTF-8 encoded text$mpdf = new mPDF();
+// htmltoolkit contains a function strcode2utf() to convert htmlentities to UTF-8 encoded text$mpdf = new \Mpdf\Mpdf();
 
 $md = strcode2utf("&amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575; &amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575;");
 
 $mpdf->SetSubject($md);
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output('filename.pdf');

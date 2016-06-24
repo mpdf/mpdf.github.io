@@ -29,7 +29,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetColumns(2);
 

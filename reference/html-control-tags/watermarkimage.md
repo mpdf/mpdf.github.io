@@ -80,14 +80,14 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->showWatermarkText = true;
 
 $mpdf->WriteHTML('<watermarkimage src="images/background.png" alpha="0.4" size="200,250" />');
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 ?>

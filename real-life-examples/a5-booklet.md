@@ -16,7 +16,15 @@ it prints a landscape booklet.
 // require composer autoload
 require __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('', 'A4-L', '', '', 0, 0, 0, 0, 0, 0);
+$mpdf = new \Mpdf\Mpdf([
+    'format' => 'A4-L',
+    'margin_left' => 0,
+    'margin_right' => 0,
+    'margin_top' => 0,
+    'margin_bottom' => 0,
+    'margin_header' => 0,
+    'margin_footer' => 0,
+]);
 
 $mpdf->SetImportUse();
 

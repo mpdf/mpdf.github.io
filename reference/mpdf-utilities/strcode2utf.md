@@ -51,7 +51,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $wm = strcode2utf("&amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575; &amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575;");
 
@@ -60,7 +60,7 @@ $mpdf->SetWatermarkText($wm);
 $mpdf->showWatermark = true;
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 ?>

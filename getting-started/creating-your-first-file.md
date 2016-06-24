@@ -17,7 +17,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 Create an instance of the class:
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Write some HTML code:
 

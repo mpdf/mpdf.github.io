@@ -29,7 +29,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetWatermarkText('DRAFT');
 
@@ -38,7 +38,7 @@ $mpdf->showWatermarkText = true;
 $mpdf->watermark_font = 'DejaVuSansCondensed';
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 ?>

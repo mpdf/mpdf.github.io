@@ -57,7 +57,7 @@ Example #1
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('utf-8');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8']);
 
 $html = "
 
@@ -93,23 +93,18 @@ $html2 = "
 In this example, the word boundaries from different languages are already defined by marking with &amp;lt;span&amp;gt; tags
 
 Most of this text is in English, but has occasional words in Chinese:<span>来自商务</span> or Vietnamese: <span>Một khảo sát mới cho biết</span>, or maybe even Arabic: <span>الابيض</span>
-
 ";
 
 $mpdf->WriteHTML($html2);
 
 $mpdf->Output();
 
-?>
-
-See the result of this as a PDF file
+// See the result of this as a PDF file
 {% endhighlight %}
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>
-<li class="manual_boxlist"><a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li>
-<li class="manual_boxlist"><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
-</ul>
+- <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">useLang</a> - Specify whether to recognise and support the HTML attribute lang
+- <a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input
+- <a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents
+- <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang

@@ -57,11 +57,11 @@ Example #1
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF('UTF-8');
+$mpdf = new \Mpdf\Mpdf('UTF-8');
 
 $mpdf->useSubstitutions = true;
 
-$mpdf->WriteHTML("Hallo World");
+$mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
 

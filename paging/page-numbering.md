@@ -34,7 +34,7 @@ You could obviously also hide the page numbering by redefining a header or foote
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Set a simple Footer including the page number
 
@@ -79,7 +79,7 @@ style to decimal for the rest of the document:
 {% highlight php %}
 <?php
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 // Double-side document - mirror margins
 
