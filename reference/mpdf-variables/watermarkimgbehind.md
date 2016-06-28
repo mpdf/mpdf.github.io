@@ -17,8 +17,8 @@ void **watermarkImgBehind**
 Specify whether to place watermark images behind page contents
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed either in the
-	configuration file <span class="filename">config.php</span> or at runtime
+	<strong>Note:</strong> This variable can be changed as any other
+	<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 
 <div class="alert alert-info" role="alert">

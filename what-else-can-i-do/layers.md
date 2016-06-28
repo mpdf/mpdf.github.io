@@ -39,7 +39,9 @@ Note:
 
 ## Display the Layers pane in PDF document viewer
 
-`$mpdf-&gt;open_layer_pane` (set by default as `$this->open_layer_pane=false` in <span class="filename">config.php</span>) can be set to open the layers pane in the browser when the document is opened.
+`$mpdf->open_layer_pane` (set by default as `'open_layer_pane' => false` as a 
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>) 
+can be set to open the layers pane in the browser when the document is opened.
 
 {% highlight php %}
 <?php

@@ -25,7 +25,8 @@ separate variable <span class="parameter">$dpi</span>
 </div>
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed in the configuration file <span class="filename">config.php</span>
+	<strong>Note:</strong> This variable can be changed as any
+    <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 
 # Values

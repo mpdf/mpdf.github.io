@@ -19,8 +19,8 @@ causes mPDF to pack the table data into a binary form saving considerable memory
 binary data takes a significant amount of time, and can increase processing time.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed either in the
-	configuration file <span class="filename">config.php</span>  or at runtime
+	<strong>Note:</strong> This variable can be changed as any
+	<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 
 # Values

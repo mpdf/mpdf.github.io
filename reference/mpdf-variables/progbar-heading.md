@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:02:22+00:00
 
 Customisable Progress bar
 
-Default set in config.php
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
 Default value: 'mPDF file progress'
 

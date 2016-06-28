@@ -167,6 +167,3 @@ but it appears that it may be withdrawn. Default is "slice"; it is not inherited
 "page-break-before|after" is ignored if set on block elements inside a table.
 
 Background images and gradients are not sliced (always cloned).
-
-$this->restoreBlockPagebreaks in config.php is now redundant.
-

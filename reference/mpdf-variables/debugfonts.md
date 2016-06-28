@@ -13,7 +13,7 @@ mPDF >= 5.0
 
 Show errors and warning notes for fonts.
 
-Default set in config.php
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
 Default value: False
 

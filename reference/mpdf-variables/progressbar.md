@@ -22,11 +22,14 @@ Specify whether to show progress bars during file generation. Not recommended fo
 
 <div class="alert alert-info" role="alert">
 	<strong>Note:</strong> You should only change this variable in the configuration file <span class="filename">config.php</span> 
-	If you want to set this at runtime, use <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
+	If you want to set this at runtime, use 
+	<a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a>
+</div>
 
 <div class="alert alert-info" role="alert">
 	<strong>Note:</strong> You may need to define _MPDF_URI if you are using progress bars -
-	see <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a></div>
+	see <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a>
+</div>
 
 # Values
 
