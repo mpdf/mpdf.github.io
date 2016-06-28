@@ -8,9 +8,13 @@ modification_time: 2015-08-05T12:00:15+00:00
 
 You can insert one or more tables of contents in the document using HTML or PHP code - see:
 
-<a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; will insert a Table of Contents (ToC) at the current position.
+<a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or
+&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;
+will insert a Table of Contents (ToC) at the current position.
 
-<a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> or &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">tocentry</a>&gt; can be used to mark entries for the <acronym title="Table of Contents">ToC</acronym> .
+<a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> or
+&lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">tocentry</a>&gt; can be used
+to mark entries for the <acronym title="Table of Contents">ToC</acronym> .
 
 From mPDF >= 5.7, CSS styles can be used to control layout of the ToC.
 
@@ -56,7 +60,11 @@ The id is "0" for root/un-named ToC; otherwise it is lowercase of the name="" us
 
 An example CSS stylesheet for this:
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF v 6.0 this example stylesheet for ToCs was added to the file <span class="filename">mpdf.css</span> which is read by default as a secondary default CSS stylesheet</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> From mPDF v 6.0 this example stylesheet for ToCs
+    was added to the file <span class="filename">mpdf.css</span> which is read by default as a secondary default
+    CSS stylesheet
+</div>
 
 {% highlight css %}
 div.mpdf_toc {font-family: sans-serif; font-size: 11pt;}
@@ -114,11 +122,16 @@ For additional ToCs, these will have &lt;toc name=""&gt; attribute. Use the lowe
 #mpdf_toc_figures span.mpdf_toc_t_level_0 {color: red; }
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">**Note:** If you have 2 ToCs immediately following each other, and wish to use pagenumstyle or suppress to control the following text, then you need to set those values on both of the &lt;tocpagebreak&gt; elements.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> If you have 2 ToCs immediately following each other,
+    and wish to use pagenumstyle or suppress to control the following text, then you need to set those values on both
+    of the &lt;tocpagebreak&gt; elements.
+</div>
 
 ## Automatically Generated ToC entries
 
-You can automatically generate ToC entries from h1 - h6 tags, by setting the variable <a href="{{ "/reference/mpdf-variables/h2toc.html" | prepend: site.baseurl }}">`h2toc`</a>.
+You can automatically generate ToC entries from h1 - h6 tags, by setting the variable
+<a href="{{ "/reference/mpdf-variables/h2toc.html" | prepend: site.baseurl }}">`h2toc`</a>.
 
 Only the default ToC will be used if more than 1 ToCs are defined for the document.
 
@@ -132,5 +145,6 @@ Example:
 $mpdf->h2toc = array('H1'=>0, 'H2'=>1, 'H3'=>2);
 {% endhighlight %}
 
-NB This will ignores calls from inside ToC e.g. if &lt;tocpagebreak toc-prehtml="&lt;h3&gt;Table of Contents&lt;/h3&gt;" and H3 is set to auto-generate a ToC entry - these will be ignored.
+NB This will ignores calls from inside ToC e.g. if &lt;tocpagebreak toc-prehtml="&lt;h3&gt;Table of Contents&lt;/h3&gt;"
+and H3 is set to auto-generate a ToC entry - these will be ignored.
 

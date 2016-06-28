@@ -10,18 +10,13 @@ modification_time: 2015-08-05T11:59:23+00:00
 
 Installation:
 
-<ul>
-<li>Download the .zip file and unzip it</li>
-<li>Create a folder e.g. <span class="filename">/mpdf</span> on your server </li>
-<li>Upload all of the files to the server, maintaining the folders as they are </li>
-<li>Ensure that you have write permissions set for the following folders:
-<ul>
-<li><span class="filename">/ttfontdata/</span></li>
-<li><span class="filename">/tmp/</span></li>
-<li><span class="filename">/graph_cache/</span></li>
-</ul>
-</li>
-</ul>
+- Download the .zip file and unzip it
+- Create a folder e.g. <span class="filename">/mpdf</span> on your server 
+- Upload all of the files to the server, maintaining the folders as they are 
+- Ensure that you have write permissions set for the following fol
+    - <span class="filename">/ttfontdata/</span>
+    - <span class="filename">/tmp/</span>
+    - <span class="filename">/graph_cache/</span>
 
 To test the installation, point your browser to the example files folder e.g.
 <span class="filename">[path_to_mpdf_folder]/mpdf/examples/</span>
@@ -48,7 +43,8 @@ most of the files, taking care to keep a note of your 3 configuration files.
 
 - config.php file has been changed (extra CJK characters to recognise CJK blocks)</li>
 - `$this->backupSubsFont` (in <span class="filename">config_fonts.php</span>) optionally now takes an array</li>
-- no need to define `'cjk'=&gt;true` or `'sip|smp'=&gt;true` in <span class="filename">config_fonts.php</span> (ignored; cf. `$this->BMPonly`)</li>
+- no need to define `'cjk'=&gt;true` or `'sip|smp'=&gt;true` in <span class="filename">config_fonts.php</span> 
+  (ignored; cf. `$this->BMPonly`)</li>
 - Indic language fonts have been altered to add Latin and Latin-1 Supplement characters</li>
 - progress bars now has an external progbar.css and configurable main heading</li>
 - added initial parameter `new mPDF('+aCJK')` or `'-aCJK'` to override default useAdobeCJK at runtime</li>
@@ -59,13 +55,14 @@ most of the files, taking care to keep a note of your 3 configuration files.
 If you have been using earlier versions of mPDF, most scripts should work as before. But note:
 
 - Arial, Helvetica, Times and Courier are now treated like any other font
-- the whole CSS font string is parsed e.g. style="font-family:'Lucida Grande';" will look for a font 'lucidagrande' and not 'lucida'
+- the whole CSS font string is parsed e.g. style="font-family:'Lucida Grande';" will look for a font   
+  'lucidagrande' and not 'lucida'
 
 Configurable variables:
 
-- `$mpdf->useSubstitutionsMB` is now depracated, but will work as an alias for `$mpdf->useSubstitutions`
-- `$mpdf->useOnlyCoreFonts` is now depracated and is ignored. Use `new mPDF('c')`
-- `$this->use_CJK_only` is now depracated and is ignored. See `$this->useAdobeCJK` and `new mPDF('+aCJK')` or `'-aCJK'`
+- `$mpdf->useSubstitutionsMB` is now deprecated, but will work as an alias for `$mpdf->useSubstitutions`
+- `$mpdf->useOnlyCoreFonts` is now deprecated and is ignored. Use `new mPDF('c')`
+- `$this->use_CJK_only` is now deprecated and is ignored. See `$this->useAdobeCJK` and `new mPDF('+aCJK')` or `'-aCJK'`
 
 The initial parameters e.g. `new mPDF('utf-8')` have all changed. Old ones may be recognised, or will be ignored.
 

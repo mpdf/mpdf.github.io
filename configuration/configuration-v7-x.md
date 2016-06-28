@@ -14,4 +14,4 @@ Configuration of mPDF is handled via `$config` array parameter of <code>
 All <a href="{{ "/configuration/configuration-variables.html" | prepend: site.baseurl }}">configuration variables</a>
 can be passed to the parameter.
 
-Default values of configuration keys are specified in `ConfigVariables` a `FontConfigVariables` classes.
+Default values of configuration keys are specified in `ConfigVariables` and `FontConfigVariables` classes.

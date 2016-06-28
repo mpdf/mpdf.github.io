@@ -10,34 +10,42 @@ modification_time: 2015-08-05T11:59:56+00:00
 
 Unless otherwise stated, the following values are supported:
 
-<span class="smallblock">LENGTH</span>: px, pc, pt, cm, mm, in, em, rem, ex and % (where appropriate) are supported. Default if no unit given is px.
+<span class="smallblock">LENGTH</span>: px, pc, pt, cm, mm, in, em, rem, ex and % (where appropriate) are supported. 
+Default if no unit given is px.
 
-<span class="smallblock">FONT-SIZE</span>: px, pc, pt, em, rem, ex, %, small, medium, large, x-small, x-large  are supported. Default if no unit given is px.
+<span class="smallblock">FONT-SIZE</span>: px, pc, pt, em, rem, ex, %, small, medium, large, x-small, x-large are 
+supported. Default if no unit given is px.
 
-<div class="alert alert-info" role="alert">**Note:** Support for "rem" was added mPDF 5.7  Unlike the CSS3 specification, the basic size used for rem in the document is based on the font-size set on the &lt;body&gt; element (rather than the &lt;html&gt; element).</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> Support for "rem" was added mPDF 5.7  Unlike the CSS3 specification, the basic size used for 
+    rem in the document is based on the font-size set on the &lt;body&gt; element (rather than the &lt;html&gt; element).
+</div>
 
-Conversion from "px" is determined by the configurable variables <a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a>
+Conversion from "px" is determined by the configurable variables 
+<a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> 
+and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a>
 
 "ex" uses an approximation of half the font height
 
-<span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as *sans*, *sans-serif*, *serif* or *monospace*.
+<span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as 
+*sans*, *sans-serif*, *serif* or *monospace*.
 
-<span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g. 'black', 'gray' are supported.
+<span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or 
+<a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g. 
+'black', 'gray' are supported.
 
 Also supported are:
 
-<ul>
-<li>rgb(255,255,255)</li>
-<li>rgba(255,255,255,1) *[last value is transparency (alpha) - between 0-1]**</li>
-<li>rgb(100%,100%,100%)</li>
-<li>hsl(360,100%,100%)</li>
-<li>hsla(360,100%,100%,1) *[last value is transparency (alpha) - between 0-1]**</li>
-<li>cmyk(100,100,100,100) *[or 0-100%]*</li>
-<li>cmyka(100,100,100,100,1) *[or 0-100%; last value is transparency (alpha) - between 0-1]**</li>
-<li>device-cmyk(100,100,100,100) *[or 0-100%]*</li>
-<li>*device-cmyka*(100,100,100,100,1) *[or 0-100%; last value is transparency (alpha) - between 0-1]**</li>
-<li>spot(COLOR NAME, 100%). (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)</li>
-</ul>
+- rgb(255,255,255)
+- rgba(255,255,255,1) *[last value is transparency (alpha) - between 0-1]**
+- rgb(100%,100%,100%)
+- hsl(360,100%,100%)
+- hsla(360,100%,100%,1) *[last value is transparency (alpha) - between 0-1]**
+- cmyk(100,100,100,100) *[or 0-100%]*
+- cmyka(100,100,100,100,1) *[or 0-100%; last value is transparency (alpha) - between 0-1]**
+- device-cmyk(100,100,100,100) *[or 0-100%]*
+- *device-cmyka*(100,100,100,100,1) *[or 0-100%; last value is transparency (alpha) - between 0-1]**
+- spot(COLOR NAME, 100%). (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)
 
 mPDF  >= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);
 
@@ -239,7 +247,8 @@ NB Use of $autoPadding which can automatically increase padding in block element
 
 <span class="smallblock">LENGTH</span>
 
-mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
+mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be 
+contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
 
 </td>
 </tr>
@@ -249,9 +258,11 @@ mPDF does not support nested block elements which overlap (horizontally or verti
 
 <span class="smallblock">LENGTH</span> 
 
-mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
+mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be 
+contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
 
-(Prior to mPDF v5.1: only supported if whole block is all on one page; will extend a block but not shorten it; will not force a pagebreak even if height should move onto next page.)
+(Prior to mPDF v5.1: only supported if whole block is all on one page; will extend a block but not shorten it; will 
+not force a pagebreak even if height should move onto next page.)
 
 NB % is interpreted as % of printable page height (inside margins)
 
@@ -269,7 +280,10 @@ NB % is interpreted as % of printable page height (inside margins)
 </tr>
 <tr>
 <td>page-break-inside</td>
-<td>avoid (avoids a page-break within the block - only works across max. of 2 pages; not compatible with table autosize or table rotate)</td>
+<td>
+    avoid (avoids a page-break within the block - only works across max. of 2 pages; not compatible with table 
+    autosize or table rotate)
+</td>
 </tr>
 <tr>
 <td>page-break-before</td>
@@ -515,7 +529,8 @@ fixed - uses printable page (inside margins) as containing element.
 
 (mPDF >= 4.0)
 
-NB Only supported for top-level elements i.e. where the parent element is &lt;body&gt;. Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported.
+NB Only supported for top-level elements i.e. where the parent element is &lt;body&gt;. Fixed-position or floating 
+elements nested inside other fixed-position or floating elements are not supported.
 
 </td>
 </tr>
@@ -525,7 +540,8 @@ NB Only supported for top-level elements i.e. where the parent element is &lt;bo
 
 visible | hidden | auto
 
-Applies to block elements with position fixed or absolute. auto - causes text to autofit within the block size (constrained if necessary to page edges).
+Applies to block elements with position fixed or absolute. auto - causes text to autofit within the block size 
+(constrained if necessary to page edges).
 
 (mPDF >= 4.0)
 
@@ -549,7 +565,9 @@ As per CSS. (mPDF  >= 5.7)
 
 Applies only to block elements with position fixed or absolute. (mPDF >= 5.0)
 
-Sizing and layout of the block element using top, left, bottom, right, width and height are applied BEFORE the element is rotated. The top and left co-ordinates are respected for positioning, except when bottom or right are specified without respective top or left when the bottom/right co-ordinates are used.
+Sizing and layout of the block element using top, left, bottom, right, width and height are applied BEFORE the 
+element is rotated. The top and left co-ordinates are respected for positioning, except when bottom or right are 
+specified without respective top or left when the bottom/right co-ordinates are used.
 
 </td>
 </tr>
@@ -2086,7 +2104,5 @@ medium|thin|thick are accepted for size - converted to 1px, 3px, 5px
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; Borders (including Gradients)</a></li>
-<li class="manual_boxlist"><a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML supported attributes</a></li>
-</ul>
+- <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; Borders (including Gradients)</a>
+- <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML supported attributes</a>

@@ -10,7 +10,8 @@ mPDF >= 4.0
 
 # Position
 
-The CSS property "position" is **partially** supported in mPDF, allowing a block element (div etc.) to be placed at a fixed position on the page.
+The CSS property "position" is **partially** supported in mPDF, allowing a block element (div etc.) to be placed at a
+fixed position on the page.
 
 {% highlight php %}
 position: fixed|absolute
@@ -24,29 +25,38 @@ position: fixed|absolute
 top|left|bottom|right: LENGTH (any valid length unit: em, mm, px, % etc.) DEFAULT = auto
 {% endhighlight %}
 
-<span class="parameter">$rotate</span> - (introduced mPDF 5.0) rotates the block element 90 degrees clockwise or anticlockwise
+<span class="parameter">$rotate</span> - (introduced mPDF 5.0) rotates the block element 90 degrees clockwise or
+counterclockwise
 
-top|left|bottom|right|width|height are all used to set the size of the block element BEFORE rotation i.e. if the width is not specified, the lft and right margins will be used to calculate the width. After rotation, left|top are used to position the top left corner of the (rotated) element. There is an exception if bottom or right are specified without the respective top or left values; in this case these values are used to position the bottom or right edge of the (rotated) element.
+top|left|bottom|right|width|height are all used to set the size of the block element BEFORE rotation i.e. if the width
+is not specified, the lft and right margins will be used to calculate the width. After rotation, left|top are used to
+position the top left corner of the (rotated) element. There is an exception if bottom or right are specified without
+the respective top or left values; in this case these values are used to position the bottom or right edge of the
+(rotated) element.
 
 {% highlight php %}
 90|-90 DEFAULT = BLANK
 {% endhighlight %}
 
-Limitations:
+## Limitations:
 
-<ul>
-<li>There is no equivalent concept of the viewport as in the browser (in CSS)</li>
-<li>All positioning is relative to the current page of the document being written</li>
-<li>Position is overridden if it would be off the page, so that the element displays within the containing element</li>
-<li>Overflow:auto causes text to autofit within the block size (additionally constrained if necessary to page edges).</li>
-<li>Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported</li>
-<li>Probably INCOMPATIBLE with keep-with-table, columns etc.</li>
-<li>Annotations were disabled prior to mPDF 5.0</li>
-</ul>
+- There is no equivalent concept of the viewport as in the browser (in CSS)
+- All positioning is relative to the current page of the document being written
+- Position is overridden if it would be off the page, so that the element displays within the containing element
+- Overflow:auto causes text to autofit within the block size (additionally constrained if necessary to page edges).
+- Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported
+- Probably INCOMPATIBLE with keep-with-table, columns etc.
+- Annotations were disabled prior to mPDF 5.0
 
-<div class="alert alert-info" role="alert">**Note:** width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left -right -top -bottom, are all supported.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left
+    -right -top -bottom, are all supported.
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML reiteratively until it finds a reasonable fit to the available size.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML
+    reiteratively until it finds a reasonable fit to the available size.
+</div>
 
 ## Overflow
 
@@ -62,11 +72,11 @@ overflow: visible|hidden|auto  DEFAULT = visible
 
 <span class="parameter">$auto</span> - text will be automatically reduced in size if required to fit inside the block element
 
-# Example
+## Examples
 
-Example #1
+### Example #1
 
-{% highlight php %}
+{% highlight html %}
 <div style="position: absolute; top: 50mm; left: 50mm; width: 100mm;">
 
 This is text in a fixed position block element.
@@ -74,12 +84,9 @@ This is text in a fixed position block element.
 </div>
 {% endhighlight %}
 
-{% highlight php %}
-Example #2 - Centres a block in the middle of the page
+### Example #2 - Centres a block in the middle of the page
 
-{% endhighlight %}
-
-{% highlight php %}
+{% highlight html %}
 <style>
 
 .myfixed {
@@ -113,15 +120,11 @@ Example #2 - Centres a block in the middle of the page
 <div class="myfixed">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec mattis lacus ac purus feugiat semper. Donec aliquet nunc odio, vitae pellentesque diam. Pellentesque sed velit lacus. Duis quis dui quis sem consectetur sollicitudin. Cras dolor quam, dapibus et pretium sit amet, elementum vel arcu.</div>
 {% endhighlight %}
 
-{% highlight php %}
-Example #3 - Rotated barcode at the bottom right corner of the page
-{% endhighlight %}
+### Example #3 - Rotated barcode at the bottom right corner of the page
 
-{% highlight php %}
+{% highlight html %}
 <div style="position: fixed; right: 0mm; bottom: 0mm; rotate: -90;">
-
-<barcode code="978-0-9542246-0" class="barcode" />
-
+    <barcode code="978-0-9542246-0" class="barcode" />
 </div>
 {% endhighlight %}
 

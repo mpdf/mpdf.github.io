@@ -14,11 +14,19 @@ SetBasePath – Specifies a base URL for mPDF to interpret relative URLs
 
 void **SetBasePath** ( string <span class="parameter">$url</span> )
 
-Specifies that mPDF should interpret any URLs in the HTML code relative to this <span class="parameter">$url</span>. Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, and images.
+Specifies that mPDF should interpret any URLs in the HTML code relative to this <span class="parameter">$url</span>. 
+Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, 
+and images.
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
+    As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is 
+    recommended where possible to use the preferred spelling.
+</div>
 
 # Parameters
 
@@ -30,13 +38,9 @@ http://www.mydomain.com
 
 http://www.mydomain.com/index.php
 
-http://www.mydomain.com/path/<span class="smallblock">
-
-</span>
+http://www.mydomain.com/path/
 
 # Examples
-
-Example #1
 
 {% highlight php %}
 <?php
@@ -49,14 +53,9 @@ $html = file_get_contents($url);
 
 $mpdf->setBasePath($url);
 
-// Now any relative paths e.g. <img src="../picture.jpg" /> will be parsed relative to a
-
-   base path of "http://www.php.net/manual/en/"
+// Now any relative paths e.g. <img src="../picture.jpg" /> will be parsed relative to a base path of "http://www.php.net/manual/en/"
 
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
-

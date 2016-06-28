@@ -8,41 +8,42 @@ modification_time: 2015-08-05T12:00:01+00:00
 
 mPDF >= 3.0
 
-# Float
+The CSS property "float" is **partially** supported in mPDF, allowing block elements (p, div etc.) to be placed
+alongside one another. They can also be used to create "columns" that span more than one page.
 
-The CSS property "float" is **partially** supported in mPDF, allowing block elements (p, div etc.) to be placed alongside one another. They can also be used to create "columns" that span more than one page.
-
-{% highlight php %}
+{% highlight css %}
 float: right|left
 {% endhighlight %}
 
-Limitations:
+## Limitations:
 
-<ul>
-<li>Float only works properly if a width is set for the float</li>
-<li>If no width is set, the width is set to the maximum available (full width, or less if floats already set)</li>
-<li>A block element next to a float has the padding adjusted so that content fits in the remaining width.</li>
-<li>Text next to float should wrap correctly, but backgrounds and borders will overlap and/or lie under the floats in a mess</li>
-<li>Does not work if Columns are being used.</li>
-<li>You cannot change the page margins/orientation etc. in middle of using floats</li>
-<li>Float is only supported on block elements (i.e. not SPAN etc.)</li>
-</ul>
+- Float only works properly if a width is set for the float
+- If no width is set, the width is set to the maximum available (full width, or less if floats already set)
+- A block element next to a float has the padding adjusted so that content fits in the remaining width.
+- Text next to float should wrap correctly, but backgrounds and borders will overlap and/or lie under the floats in a mess
+- Does not work if Columns are being used.
+- You cannot change the page margins/orientation etc. in middle of using floats
+- Float is only supported on block elements (i.e. not SPAN etc.)
 
 Margin-right can still be set for a float:right and vice-versa.
 
-<div class="alert alert-info" role="alert">**Note:** The width that is set defines the width of the content-box. So if you have two floats with width=50% and either of them has padding, margin or border, they will not fit together on the page.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> The width that is set defines the width of the
+	content-box. So if you have two floats with width=50% and either of them has padding, margin or border, they
+	will not fit together on the page.
+</div>
 
-# Clear
+## Clear
 
 The CSS property "clear" can be set on any block element (p, div etc.), and also &lt;hr&gt; or &lt;br&gt; elements.
 
-{% highlight php %}
+{% highlight html %}
 clear: right|left|both
 {% endhighlight %}
 
-# Example
+## Examples
 
-{% highlight php %}
+{% highlight html %}
 <h4>CSS Float</h4>
 
 <div>

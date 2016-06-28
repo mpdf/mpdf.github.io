@@ -12,15 +12,40 @@ formfeed — Add a new page keeping current HTML tags/CSS styles active
 
 # Description
 
-&lt;**formfeed** [ <span class="parameter">$orientation</span> ] [ <span class="parameter">$type</span> ] [ <span class="parameter">$resetpagenum</span> ] [ <span class="parameter">$pagenumstyle</span> ] [ <span class="parameter">$suppress</span> ]
+&lt;**formfeed** 
+[ <span class="parameter">$orientation</span> ] 
+[ <span class="parameter">$type</span> ] 
+[ <span class="parameter">$resetpagenum</span> ] 
+[ <span class="parameter">$pagenumstyle</span> ] 
+[ <span class="parameter">$suppress</span> ]
 
-[ <span class="parameter">$margin-left</span> ] [ <span class="parameter">$margin-right</span> ] [ <span class="parameter">$margin-top</span> ] [ <span class="parameter">$margin-bottom</span> ] [ <span class="parameter">$margin-header</span> ] [ <span class="parameter">$margin-footer</span> ]
+[ <span class="parameter">$margin-left</span> ] 
+[ <span class="parameter">$margin-right</span> ] 
+[ <span class="parameter">$margin-top</span> ] 
+[ <span class="parameter">$margin-bottom</span> ] 
+[ <span class="parameter">$margin-header</span> ] 
+[ <span class="parameter">$margin-footer</span> ]
 
-[ <span class="parameter">$odd-header-name</span> ] [ <span class="parameter">$odd-header-value</span> ] [ <span class="parameter">$even-header-name</span> ] [ <span class="parameter">$even-header-value</span> ] [ <span class="parameter">$odd-footer-name</span> ] [ <span class="parameter">$odd-footer-value</span> ] [ <span class="parameter">$even-footer-name</span> ] [ <span class="parameter">$even-footer-value</span> ] [ <span class="parameter">$page-selector</span> ] /&gt;
+[ <span class="parameter">$odd-header-name</span> ] 
+[ <span class="parameter">$odd-header-value</span> ] 
+[ <span class="parameter">$even-header-name</span> ] 
+[ <span class="parameter">$even-header-value</span> ] 
+[ <span class="parameter">$odd-footer-name</span> ] 
+[ <span class="parameter">$odd-footer-value</span> ] 
+[ <span class="parameter">$even-footer-name</span> ] 
+[ <span class="parameter">$even-footer-value</span> ] 
+[ <span class="parameter">$page-selector</span> ] /&gt;
 
-Add a new page to the document. The attributes are the same as for &lt;pagebreak&gt;, but whereas pagebreak by default closes any open HTML tags, and does not continue CSS styles after the pagebreak, formfeed reinstates the active properties and styles on the new page.
+Add a new page to the document. The attributes are the same as for &lt;pagebreak&gt;, but whereas pagebreak by 
+default closes any open HTML tags, and does not continue CSS styles after the pagebreak, formfeed reinstates the 
+active properties and styles on the new page.
 
-The attribute <span class="parameter">$type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional formfeed (<span class="parameter">$type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a formfeed with <span class="parameter">$type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).
+The attribute <span class="parameter">$type</span> can specify certain conditions which determine how many pages are 
+added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional formfeed 
+(<span class="parameter">$type</span>="E" or "O") will add a new page only if required to make the current page match 
+the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a formfeed with 
+<span class="parameter">$type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make 
+the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).
 
 Number of pages added:
 
@@ -74,9 +99,16 @@ Number of pages added:
 </tr>
 </tbody> </table>
 
-<div class="alert alert-info" role="alert">**Note:** If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
+<div class="alert alert-info" role="alert">
+    strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page 
+    numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, 
+    margins and headers/footers will start on the final added page.
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
+<div class="alert alert-info" role="alert">
+    strong>Note:</strong> From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, 
+    it was only possible to reset it to 1.
+</div>
 
 # Attributes
 
@@ -94,9 +126,11 @@ P *or* portrait: Portrait
 
 <span class="parameter">$type</span> = E|O|even|odd|next-odd|next-even
 
-If <span class="parameter">$type</span> is specified when writiing a <span class="smallblock">DOUBLE-SIDED</span> document, the formfeed is conditional; a new page will only be added if necessary to meet the specified condition. 
+If <span class="parameter">$type</span> is specified when writiing a <span class="smallblock">DOUBLE-SIDED</span> 
+document, the formfeed is conditional; a new page will only be added if necessary to meet the specified condition. 
 
-If not writing a <span class="smallblock">DOUBLE-SIDED</span> document, a formfeed <span class="parameter">$type</span>="E" will be ignored, whilst a formfeed <span class="parameter">$type</span>="O" will always force a new page.
+If not writing a <span class="smallblock">DOUBLE-SIDED</span> document, a formfeed <span class="parameter">$type</span>
+="E" will be ignored, whilst a formfeed <span class="parameter">$type</span>="O" will always force a new page.
 
 <span class="smallblock">BLANK</span> or omitted will force a new page unconditionally.
 
@@ -112,7 +146,8 @@ NEXT-EVEN: Add one or two pages as required to make the current page <span class
 
 <span class="parameter">$resetpagenum</span> = 1 - ∞
 
-Sets/resets the document page number to <span class="parameter">$resetpagenum</span> starting on the new page. (The value must be a positive integer).
+Sets/resets the document page number to <span class="parameter">$resetpagenum</span> starting on the new page. 
+(The value must be a positive integer).
 
 <span class="smallblock">BLANK</span> or omitted or 0 leaves the current page number sequence unchanged.
 
@@ -136,7 +171,8 @@ i: Roman lowercase - i, ii, iii, iv...
 
 <span class="parameter">$suppress</span> = on|off|1|0
 
-<span class="parameter">$suppress</span>=on will suppress document page numbers from the new page onwards (until <span class="parameter">$suppress</span>=off is used)
+<span class="parameter">$suppress</span>=on will suppress document page numbers from the new page onwards 
+(until <span class="parameter">$suppress</span>=off is used)
 
 <span class="smallblock">BLANK</span> or omitted leaves the current condition unchanged.
 
@@ -162,7 +198,9 @@ Sets the page margins from the new page forwards.
 
 All values should be specified as <span class="smallblock">LENGTH</span> in any valid CSS form.
 
-If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
+If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for 
+<span class="smallblock">ODD</span> pages; left and right margins will be mirrored for 
+<span class="smallblock">EVEN</span> pages.
 
 <span class="smallblock">BLANK</span> or omitted leaves the current margin unchanged. NB "0" (zero) will set the margin to zero.
 
@@ -174,13 +212,22 @@ If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the 
 
 <span class="parameter">$even-footer-name</span>
 
-Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
+Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined 
+using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, 
+&lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, 
+&lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, 
+or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
 
-If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
+If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for 
+<span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span>
+will be ignored.
 
-<span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB "" will not unset the header. Use <span class="parameter">$odd-header-value</span> to turn the header off.
+<span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB "" will not unset the header. 
+Use <span class="parameter">$odd-header-value</span> to turn the header off.
 
-<div class="alert alert-info" role="alert">**Note:** You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.
+</div>
 
 <span class="parameter">$odd-header-value</span>
 
@@ -190,9 +237,16 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 <span class="parameter">$even-footer-</span><span class="parameter">$value</span>
 
-Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using &lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
+Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already 
+have been defined using 
+&lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;, 
+&lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;, 
+&lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;, 
+or &lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;.
 
-If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
+If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for 
+<span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> 
+will be ignored.
 
 <span class="smallblock">BLANK</span> or omitted or 0 leaves the header/footer state unchanged.
 
@@ -204,15 +258,11 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 <span class="parameter">$pageselector</span>
 
-#
-
 Select a named CSS @page.
 
 <span class="smallblock">BLANK</span> or omitted or leaves the CSS page unchanged.
 
 See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information
-
-#
 
 # Changelog
 
@@ -239,28 +289,31 @@ Function was added. 
 
 # Examples
 
-Example #1
-
 {% highlight php %}
 <html>
 
-<div style="border:1px solid blue; font-size: 14pt">Text of introduction...
-
-<formfeed />
-
-This text will start on a new page, and will also have a blue border etc...</div>
+<div>
+    Text of introduction...
+    <formfeed />
+    This text will start on a new page, and will also have a blue border etc...
+</div>
 
 </html>
 {% endhighlight %}
 
 # Notes
 
-<div class="alert alert-info" role="alert">**Note:** See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for further examples using the attributes. There is no PHP equivalent of &lt;formfeed&gt; but you can use <a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}"><span class="parameter">$restoreBlockPagebreaks</span></a></div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> See 
+    &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; 
+    for further examples using the attributes. There is no PHP equivalent of &lt;formfeed&gt; but you can use 
+    <a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}">
+        <span class="parameter">$restoreBlockPagebreaks</span>
+    </a>
+</div>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add one or more (conditional) pages to the document</li>
-<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Forces a new page</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}">restoreBlockPagebreaks</a> - forces &lt;pagebreak&gt; to act in the same way as &lt;formfeed&gt;</li>
-</ul>
+- <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add one or more (conditional) pages to the document
+- &lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Forces a new page
+- <a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}">restoreBlockPagebreaks</a> - forces &lt;pagebreak&gt; to act in the same way as &lt;formfeed&gt;

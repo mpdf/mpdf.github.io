@@ -12,21 +12,34 @@ mPDF – Write an EAN-13 (ISBN-13) barcode
 
 # Description
 
-void **writeBarcode** ( string <span class="parameter">$code</span> [, int <span class="parameter">$showisbn</span> [, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float <span class="parameter">$size</span> [, float <span class="parameter">$border</span> [, float <span class="parameter">$padding_left</span> , float <span class="parameter">$padding_right</span> , float <span class="parameter">$padding_top</span> , float <span class="parameter">$padding_bottom</span> ]]]]]])
+void **writeBarcode** ( string <span class="parameter">$code</span> [, int <span class="parameter">$showisbn</span>
+[, float <span class="parameter">$x</span> [, float <span class="parameter">$y</span> [, float
+<span class="parameter">$size</span> [, float <span class="parameter">$border</span> [, float
+<span class="parameter">$padding_left</span> , float <span class="parameter">$padding_right</span> ,
+float <span class="parameter">$padding_top</span> , float <span class="parameter">$padding_bottom</span> ]]]]]])
 
-Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specification can be found at <a href="http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf">http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf</a>
+Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specification can be found at
+<a href="http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf">
+	http://www.gs1uk.org/downloads/bar_code/Bar coding getting it right.pdf
+</a>
 
-<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This function/method was altered in mPDF 2.2 by
+	capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive,
+	this should not cause any problems, but it is recommended where possible to use the preferred spelling.
+</div>
 
 # Parameters
 
 <span class="parameter">$code</span>
 
-This parameter specifies the EAN-13 (ISBN-13) code. Accepts 12 or 13 digits (i.e. with or without the check digit) and may optionally contain hyphens e.g. 978-09542-2461-5  or  978095422461
+This parameter specifies the EAN-13 (ISBN-13) code. Accepts 12 or 13 digits (i.e. with or without the check digit)
+and may optionally contain hyphens e.g. 978-09542-2461-5  or  978095422461
 
 <span class="parameter">$showisbn</span>
 
-Specif whether to show the EAN-13 (ISBN-13) code **above** the barcode. NB The numbers will always appear below the bars, but the code abive the bars is optional.
+Specif whether to show the EAN-13 (ISBN-13) code **above** the barcode. NB The numbers will always appear below the
+bars, but the code abive the bars is optional.
 
 **Values**
 
@@ -105,8 +118,6 @@ All values should be specified as <span class="smallblock">LENGTH</span> in mill
 
 # Examples
 
-Example #1
-
 {% highlight php %}
 <?php
 
@@ -115,7 +126,5 @@ $mpdf = new \Mpdf\Mpdf();
 $mpdf->writeBarcode('978-1234-567-890');
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
 

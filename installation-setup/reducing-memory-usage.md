@@ -6,39 +6,34 @@ permalink: /installation-setup/reducing-memory-usage.html
 modification_time: 2015-08-05T11:59:24+00:00
 ---
 
+mPDF <7.0
+
 # mPDF "Lite"
 
-The mPDF main file <span class="filename">mpdf.php</span> is over 1MB in size. Simply to parse the mPDF class requires over 10MB of memory in PHP. This may not be a problem, but if your PHP configuration does not allow you to increase memory, or you envisage multiple calls on your server at the same time, you can consider producing a 'Lite' form of the mpdf.php script.
+The mPDF main file <span class="filename">mpdf.php</span> is over 1MB in size. Simply to parse the mPDF class requires
+over 10MB of memory in PHP. This may not be a problem, but if your PHP configuration does not allow you to increase
+memory, or you envisage multiple calls on your server at the same time, you can consider producing a 'Lite' form of
+the mpdf.php script.
 
-A utility script <span class="filename">compress.php</span> is included in mPDF in the root folder. This generates a new <span class="filename">mpdf.php</span> script omitting functions which you do not require. (It does not actually compress the file)
+A utility script <span class="filename">compress.php</span> is included in mPDF in the root folder. This generates a
+new <span class="filename">mpdf.php</span> script omitting functions which you do not require. (It does not actually
+compress the file)
 
-As from mPDF 6.0.1 this file will be distribtued as compress.php.distr to avoid other users running the file unwantedly. To use compress, just rename the file compress.php (and remember to delete or rename it after you have finished using it).
+As from mPDF 6.0.1 this file will be distribtued as compress.php.distr to avoid other users running the file unwantedly.
+To use compress, just rename the file compress.php (and remember to delete or rename it after you have finished using it).
 
 As a guideline:
 
-<table class="table"> <thead>
-<tr> <th> Version 5.1
-
-</th>
-<td>Size of mpdf.php file</td>
-<td>Memory usage in PHP</td>
-</tr>
-</thead> <tbody>
-<tr> <th>Full script</th>
-<td>1170kB</td>
-<td>12.75MB</td>
-</tr>
-<tr> <th>Omitting functions, but including:
-
-Tables, lists and images</th>
-<td>697kB</td>
-<td>7.0MB</td>
-</tr>
-<tr> <th>Omitting all optional functions</th>
-<td>496kB</td>
-<td>5.25MB</td>
-</tr>
-</tbody> </table>
+<table class="table">
+	<thead>
+		<tr><th>Version 5.1</th><td>Size of mpdf.php file</td><td>Memory usage in PHP</td></tr>
+	</thead>
+	<tbody>
+		<tr><th>Full script</th><td>1170kB</td><td>12.75MB</td></tr>
+		<tr><th>Omitting functions, but including: Tables, lists and images</th><td>697kB</td><td>7.0MB</td></tr>
+		<tr><th>Omitting all optional functions</th><td>496kB</td><td>5.25MB</td></tr>
+	</tbody>
+</table>
 
 Firstly, rename the <span class="filename">mpdf.php</span> file as <span class="filename">mpdf_source.php</span>
 
@@ -48,6 +43,13 @@ Follow the instructions on screen. This will produce (overwriting if necessary) 
 
 Do not delete the <span class="filename">mpdf_source</span> file, which will remain as your original.
 
-<div class="alert alert-success" role="alert">**Tip:** Consider setting <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not need complex table borders, or <span class="parameter">$mpdf-&gt;packTableData = true;</span> if you do not mind the extra processing time.</div>
+<div class="alert alert-success" role="alert">
+	<strong>Tip:</strong> Consider setting <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not
+	need complex table borders, or <span class="parameter">$mpdf-&gt;packTableData = true;</span> if you do not mind
+	the extra processing time.
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** mPDF>=5.0 Ensure that you have set write permissions to <a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">temporary folders</a></div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> mPDF>=5.0 Ensure that you have set write permissions to
+	<a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">temporary folders</a>
+</div>

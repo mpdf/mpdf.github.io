@@ -14,9 +14,16 @@ indexentry – Insert an Index entry for the document
 
 &lt;**indexentry**  <span class="parameter">$content</span> [ <span class="parameter">$xref</span> ] /&gt;
 
-Insert an Index entry for the document Index, referencing the current writing position in the document. If <span class="parameter">$xref</span> is set, it will appear as a cross-referencing entry in the index as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
+Insert an Index entry for the document Index, referencing the current writing position in the document. If 
+<span class="parameter">$xref</span> is set, it will appear as a cross-referencing entry in the index as for 
+<a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
 
-<div class="alert alert-info" role="alert">**Note:** The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> The Index must be generated explicity at the end of the document using 
+    <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> 
+    at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> 
+    is called.
+</div>
 
 # Attributes
 
@@ -24,7 +31,8 @@ Insert an Index entry for the document Index, referencing the current writing po
 
 This attribute sets the text as it will appear in the Index entry. Text should be UTF-8 encoded.
 
-<span class="parameter">$content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;indexentry content="&amp;lt; 40" /&gt;
+<span class="parameter">$content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use 
+the appropriate HTML entities e.g. &lt;indexentry content="&amp;lt; 40" /&gt;
 
 It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
@@ -34,7 +42,8 @@ It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
 
 This attribute sets the text used as a cross-reference. Text should be UTF-8 encoded.
 
-<span class="parameter">$xref</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the appropriate HTML entities e.g. &lt;indexentry xref="&amp;lt; 40" /&gt;
+<span class="parameter">$xref</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use the 
+appropriate HTML entities e.g. &lt;indexentry xref="&amp;lt; 40" /&gt;
 
 It is recommended that you use e.g. htmlspecialchars($xref, ENT_QUOTES) for this.
 
@@ -55,20 +64,15 @@ Text entries passed in the form "Subject:Subcategory" will appear in the Index a
 
 # Examples
 
-Example #1
+## Example #1
 
 {% highlight php %}
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
 
-$mpdf->WriteHTML('
-Beginning bit of document...
-');
-
-$mpdf->WriteHTML('
-Your text which refers to a buffalo,<indexentry content="Buffalo" /> which you would like to see in the Index
-');
+$mpdf->WriteHTML('Beginning bit of document...');
+$mpdf->WriteHTML('Your text which refers to a buffalo,<indexentry content="Buffalo" /> which you would like to see in the Index');
 
 $mpdf->AddPage();
 
@@ -76,52 +80,52 @@ $mpdf->WriteHTML('<h2>Index</h2>',2);
 
 $mpdf->CreateIndex(2, '', '', 3, 1, '', 5, 'serif','sans-serif');
 
-$mpdf=Output();
-
-?>
+$mpdf->Output();
 {% endhighlight %}
 
-Example #2
+## Example #2
 
 {% highlight php %}
 <?php
 
-$mpdf->WriteHTML('
-<indexentry content="Dromedary" xref="Camel:types" />The dromedary is atype of camel
-');
+$mpdf->WriteHTML('<indexentry content="Dromedary" xref="Camel:types" />The dromedary is a type of camel');
 
 // This will produce an entry in the Index under 'Dromedary' appearing as:
-
-Dromedary - see Camel, types
+// Dromedary - see Camel, types
 {% endhighlight %}
 
 # Notes
 
-<div class="alert alert-info" role="alert">**Note:** &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; may be a preferred form to <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>, as it will allow more precise identification of the position and page - the &lt;indexentry&gt; can be placed just next to the appropriate word.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> 
+    &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; 
+    may be a preferred form to 
+    <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>, 
+    as it will allow more precise identification of the position and page - the &lt;indexentry&gt; can be placed 
+    just next to the appropriate word.
+</div>
 
 ## Recommended placement
 
 Recommended placement of Index Entries is just after the first word following the opening tag of the block element:
 
 {% highlight php %}
-<h2>First<indexentry... /> word of a heading or block</h2>
+    <h2>First<indexentry... /> word of a heading or block</h2>
 {% endhighlight %}
 
 or alternatively just after the opening tag of the block element:
 
 {% highlight php %}
-<h2><indexentry... />Heading or block</h2>
+    <h2><indexentry... />Heading or block</h2>
 {% endhighlight %}
 
 or just after a word to be marked:
 
 {% highlight php %}
-... this is a word<indexentry... /> in the middle of text to be marked ...
+    ... this is a word<indexentry... /> in the middle of text to be marked ...
 {% endhighlight %}
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a> - Mark an Index entry in the document </li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> - Generate a document Index</li>
-</ul>
+- <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a> - Mark an Index entry in the document
+- <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> - Generate a document Index

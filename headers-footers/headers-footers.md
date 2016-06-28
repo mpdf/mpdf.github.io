@@ -6,21 +6,36 @@ permalink: /headers-footers/headers-footers.html
 modification_time: 2015-08-05T11:59:49+00:00
 ---
 
-Page headers and page footers can be set for mPDF documents in a number of different ways. As mPDF has evolved, new methods have been added.
+Page headers and page footers can be set for mPDF documents in a number of different ways. As mPDF has evolved, new 
+methods have been added.
 
-<div class="alert alert-info" role="alert">**Note:** As from mPDF v6.0 Headers and Footers are all now written internally as HTMLheaders/footers. The use of non-HTML headers and footers (methods 1 &amp; 3) is depracated, but remains supported. Non-HTML headers and footers are converted in mPDF to HTML equivalents. Default non-HTML headers will not clash with HTML headers, but named non-HTML headers WILL clash with (and overwrite) HTML headers of the same (equivalent) name e.g. html_MyFooter == MyFooter (non-HTML).</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> As from mPDF v6.0 Headers and Footers are all now 
+    written internally as HTMLheaders/footers. The use of non-HTML headers and footers (methods 1 &amp; 3) is 
+    deprecated, but remains supported. Non-HTML headers and footers are converted in mPDF to HTML equivalents. 
+    Default non-HTML headers will not clash with HTML headers, but named non-HTML headers WILL clash with 
+    (and overwrite) HTML headers of the same (equivalent) name e.g. html_MyFooter == MyFooter (non-HTML).
+</div>
 
 # Types
 
-**RUNTIME** - <span class="smallblock">RUNTIME</span> headers/footers are set as they are required throughout the document.
+**RUNTIME** - <span class="smallblock">RUNTIME</span> headers/footers are set as they are required throughout 
+the document.
 
-**NAMED** - <span class="smallblock">NAMED</span> headers/footers are defined at any time (before they are used) and given a 'name'; they can then be used/re-used by reference to that name at any time. They can be defined by either PHP script or custom HTML tags.
+**NAMED** - <span class="smallblock">NAMED</span> headers/footers are defined at any time (before they are used) and 
+given a 'name'; they can then be used/re-used by reference to that name at any time. They can be defined by either PHP 
+script or custom HTML tags.
 
-**Non-HTML** - <span class="smallblock">NON-HTML</span> headers/footers are set by text strings with no HTML mark up to define styles. Style changes (font-size, font-family, color) can be defined by changing mPDF variables.
+**Non-HTML** - <span class="smallblock">NON-HTML</span> headers/footers are set by text strings with no HTML mark up 
+to define styles. Style changes (font-size, font-family, color) can be defined by changing mPDF variables.
 
-**HTML** - <span class="smallblock">HTML</span> headers/footers are written in standard HTML code. They can only be defined outside HTML block tags (except &lt;body&gt;).
+**HTML** - <span class="smallblock">HTML</span> headers/footers are written in standard HTML code. They can only be 
+defined outside HTML block tags (except &lt;body&gt;).
 
-<div class="alert alert-info" role="alert">**Note:**   **HTML** headers/footers are more intensive of processing time and memory. This probably makes little difference for an average/short document, but may be important for long/complex documents.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> **HTML** headers/footers are more intensive of processing time and memory. This probably
+    makes little difference for an average/short document, but may be important for long/complex documents.
+</div>
 
 # Methods
 
@@ -38,15 +53,17 @@ Page headers and page footers can be set for mPDF documents in a number of diffe
 </td>
 <td>
 
-**<a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a>**
+## <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a>
 
-*This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control over styling.*
+This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control 
+over styling.
 
 <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>
 
 <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a>
 
-There are several variants of this method, using string or array. The simplest form does not allow different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.
+There are several variants of this method, using string or array. The simplest form does not allow different 
+header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.
 
 Style can be defined by variables:
 
@@ -65,9 +82,10 @@ Style can be defined by variables:
 </td>
 <td>
 
-**<a href="{{ "/headers-footers/method-2.html" | prepend: site.baseurl }}">Method 2</a>**
+## <a href="{{ "/headers-footers/method-2.html" | prepend: site.baseurl }}">Method 2</a>
 
-*T**he simplest &amp; quickest way to program a header/footer once for the whole document that includes images or uses more complex layout styles.*
+The simplest &amp; quickest way to program a header/footer once for the whole document that includes images or 
+uses more complex layout styles.
 
 <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader() </a>
 
@@ -80,9 +98,10 @@ Style can be defined by variables:
 <td>Define</td>
 <td>
 
-**<a href="{{ "/headers-footers/method-3.html" | prepend: site.baseurl }}">Method 3</a>**
+## <a href="{{ "/headers-footers/method-3.html" | prepend: site.baseurl }}">Method 3</a>
 
-*This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers throughout the document**.*
+This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers 
+throughout the document**.
 
 <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>
 
@@ -95,9 +114,10 @@ Style can be defined by variables:
 </td>
 <td>
 
-**<a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Method 4</a>**
+## <a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Method 4</a>
 
-*This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the headers/footers at any time during the document.*
+This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the 
+headers/footers at any time during the document.
 
 <a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>
 
@@ -115,9 +135,7 @@ Style can be defined by variables:
 </td>
 <td>
 
-*These methods are recommended when setting the header/footer at the start of a document.
-
-*
+These methods are recommended when setting the header/footer at the start of a document.
 
 <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a>
 
@@ -132,7 +150,7 @@ Style can be defined by variables:
 </td>
 <td>
 
-*These methods are recommended when setting the header/footer at the start of a document.*
+These methods are recommended when setting the header/footer at the start of a document.
 
 <a href="{{ "/reference/mpdf-functions/sethtmlheaderbyname.html" | prepend: site.baseurl }}">SetHTMLHeaderByName()</a>
 
@@ -146,12 +164,14 @@ Style can be defined by variables:
 
 </td>
 </tr>
+
 <tr>
 <td colspan="2" class="pmhTopCenter">
 
-*Recommended when you wish to change the headers/footers during the document.*
+Recommended when you wish to change the headers/footers during the document.
 
-These methods can reference any <span class="smallblock">NAMED</span> header or footer (<span class="smallblock">NON-HTML</span> or <span class="smallblock">HTML</span>)
+These methods can reference any <span class="smallblock">NAMED</span> header or footer 
+(<span class="smallblock">NON-HTML</span> or <span class="smallblock">HTML</span>)
 
 <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>
 
@@ -167,7 +187,9 @@ These methods can reference any <span class="smallblock">NAMED</span> header or 
 </tr>
 </tbody> </table>
 
-In any of the options, {PAGENO} or {DATE j-m-Y} can be used - which will be replaced by the page number or current date. j-m-Y can be replaced by any of the valid formats used in the php <a href="http://www.php.net/manual/en/function.date.php" target="_blank">date()</a> function.
+In any of the options, {PAGENO} or {DATE j-m-Y} can be used - which will be replaced by the page number or current date. 
+j-m-Y can be replaced by any of the valid formats used in the php 
+<a href="http://www.php.net/manual/en/function.date.php" target="_blank">date()</a> function.
 
 See also: <a href="{{ "/reference/mpdf-variables/forceportraitheaders.html" | prepend: site.baseurl }}">forcePortraitHeaders</a>
 
