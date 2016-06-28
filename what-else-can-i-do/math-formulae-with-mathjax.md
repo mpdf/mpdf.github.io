@@ -79,5 +79,5 @@ exit;
 
 {% endhighlight %}
 
-See an example of output: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a>
+See an example of output: <a href="https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm">https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm</a>
 
