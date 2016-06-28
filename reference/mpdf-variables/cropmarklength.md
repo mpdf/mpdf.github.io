@@ -10,7 +10,7 @@ mPDF >= 5.1
 
 Default length in mm of crop line
 
-Default set in config.php
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
 Default value: 18
 

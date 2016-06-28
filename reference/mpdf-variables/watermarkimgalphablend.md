@@ -20,8 +20,8 @@ The blend modes are those specified in the
 Normal gives acceptable results for most cases. 'Multiply' may produce better results with overlying WMF or SVG images.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed either in the configuration
-	file <span class="filename">config.php</span> or at runtime
+	<strong>Note:</strong> This variable can be changed as any other
+    <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 
 # Values

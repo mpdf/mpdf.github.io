@@ -63,13 +63,17 @@ Unlike the HTML specification, the width and height attributes of IMG will addi
 <img src="image.jpg" style="width:90mm;" />  // Can also use CSS
 {% endhighlight %}
 
-Images for which the size is not defined are output at a default dpi set in the <span class="filename">config.php</span> file:
+Images for which the size is not defined are output at a default dpi set in by the img_dpi
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>:
 
 {% highlight php %}
-$this->img_dpi = 96;
+$mpdf->img_dpi = 96;
 {% endhighlight %}
 
-In addition, many CSS style properties are supported including <span class="parameter">$vertical-align</span>, as well as some custom attributes such as <span class="parameter">$opacity</span> and <span class="parameter">$rotate</span>. (See <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> and <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)
+In addition, many CSS style properties are supported including <span class="parameter">$vertical-align</span>, as well
+ as some custom attributes such as <span class="parameter">$opacity</span> and <span class="parameter">$rotate</span>.
+ (See <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a>
+ and <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)
 
 Images can be used in:
 
@@ -79,21 +83,21 @@ Images can be used in:
 
 ## Size constraint
 
-When writing HTML, image size is automatically constrained to current margins and page position. An extra parameter added to end of the Image() function allows you to override this:
+When writing HTML, image size is automatically constrained to current margins and page position. An extra parameter
+added to end of the Image() function allows you to override this:
 
 {% highlight php %}
 <?php
 
-$mpdf->Image('files/images/frontcover.jpg',0,0,210,297,'jpg','',true, false);
-
 // the last "false" allows a full page picture
+$mpdf->Image('files/images/frontcover.jpg', 0, 0, 210, 297, 'jpg', '', true, false);
 {% endhighlight %}
 
 This is useful for e.g. a cover page for your document.
 
 This can be achieved using HTML &amp; CSS like this:
 
-{% highlight php %}
+{% highlight html %}
 <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
 
 <img src="/files/images/frontcover.jpg" style="width: 210mm; height: 297mm; margin: 0;" />
@@ -105,12 +109,10 @@ This can be achieved using HTML &amp; CSS like this:
 
 mPDF partially supports the CSS style `float` with IMG elements. Text will wrap around these images, with certain limitations:
 
-<ul>
-<li>only 1 float:right and 1 float:left image are allowed at a time i.e. you cannot overlap 2 right or 2 left</li>
-<li>the containing HTML element is extended at the bottom if necessary to enclose the last image (unlike your browser)</li>
-<li>the float is ignored if the image is too wide, inside a table, columns are on, or div page-break-inside: avoid is set</li>
-<li>disabled when columns are being used</li>
-</ul>
+- only 1 float:right and 1 float:left image are allowed at a time i.e. you cannot overlap 2 right or 2 left
+- the containing HTML element is extended at the bottom if necessary to enclose the last image (unlike your browser)
+- the float is ignored if the image is too wide, inside a table, columns are on, or div page-break-inside: avoid is set
+- disabled when columns are being used
 
 If ignored, the image is output as a normal in-line element.
 
@@ -126,7 +128,8 @@ GIF images with GD library installed are quite fast.
 
 PNG images which are interlaced or have alpha channel transparency, and GIF images use the GD library if it is installed.
 
-Any process that requires the GD library uses a large amount of memory - to create a GD image in memory can use up to 10 x the file size (e.g. a 690K GIF file read into imagecreatefromstring() used about 5MB of PHP memory).
+Any process that requires the GD library uses a large amount of memory - to create a GD image in memory can use up to
+10× the file size (e.g. a 690K GIF file read into imagecreatefromstring() used about 5MB of PHP memory).
 
 ## Dynamically generated Images
 
@@ -160,7 +163,8 @@ A PHP variable containing image data can be passed directly to mPDF. You need to
 $mpdf->myvariable = file_get_contents('alpha.png');
 {% endhighlight %}
 
-The image can then be referred to by use of "var:varname" instead of a file name, either in src="" or direct to Image() function e.g.
+The image can then be referred to by use of "var:varname" instead of a file name, either in src="" or direct to Image()
+function e.g.
 
 {% highlight php %}
 <?php
@@ -180,7 +184,7 @@ $mpdf->Image('var: myvariable',0,0);
 
 mPDF partially supports SVG images, including as embedded HTML e.g.:
 
-{% highlight php %}
+{% highlight html %}
 
 This is an embedded SVG image:
 
@@ -201,69 +205,48 @@ If none of these are present, the intrinsic size will be set as the width of con
 
 ## Partially supported
 
-<ul>
-<li>embedded images (but not embedded SVG/WMF [vector] images)</li>
-<li>tspan, tref</li>
-<li>&lt;use ../&gt;</li>
-<li>gradient on text (fill)</li>
-<li>&lt;clipPath&gt;</li>
-<li>embedded &lt;style&gt; elements*</li>
-<li>automatic font selection for text*</li>
-</ul>
+- embedded images (but not embedded SVG/WMF [vector] images)
+- tspan, tref
+- &lt;use ../&gt;
+- gradient on text (fill)
+- &lt;clipPath&gt;
+- embedded &lt;style&gt; elements*
+- automatic font selection for text*
 
-* As from mPDF 6.0 there is limited support for CSS classes and for automatic font selection (see the defined constants at the top of classes/svg.php file).
+As from mPDF 6.0 there is limited support for CSS classes and for automatic font selection (see the defined constants
+at the top of classes/svg.php file).
 
 ## Not supported
 
-<ul>
-<li>filters</li>
-<li>&lt;marker&gt;</li>
-<li>DOM</li>
-<li>&lt;pattern&gt;</li>
-<li>textlength, lengthadjust, toap or textPath</li>
-<li>gradient on stroke</li>
-</ul>
+- filters
+- &lt;marker&gt;
+- DOM
+- &lt;pattern&gt;
+- textlength, lengthadjust, toap or textPath
+- gradient on stroke
 
-Note: SVG images can be embedded within the HTML code. They may be a useful way to deal with some presentation issues not supported by HTML/CSS e.g. Text used with a transformation, or text used as a clipPath e.g.
+Note: SVG images can be embedded within the HTML code. They may be a useful way to deal with some presentation issues
+not supported by HTML/CSS e.g. Text used with a transformation, or text used as a clipPath e.g.
 
-{% highlight php %}
+{% highlight html %}
 <body>
-
 <div>
 
-...
-
 <svg width="100%" height="100%" viewBox="0 0 480 360">
-
    <text x="100" y="-100" transform="rotate(60)" font-size="35">ROTATE</text>
-
    <rect id="test-frame" x="1" y="1" width="478" height="358" fill="none" stroke="#000000"/>
-
 </svg>
-
-...
 
 <svg width="100%" height="100%" viewBox="0 0 480 360">
-
    <defs>
-
-         <clipPath id="sample" clipPathUnits="userSpaceOnUse">
-
+        <clipPath id="sample" clipPathUnits="userSpaceOnUse">
             <text x="45" y="270" font-size="100" font-family="Impact">Clip Test</text>
-
-         </clipPath>
-
+        </clipPath>
    </defs>
-
    <image xlink:href="bluesquidj.png" preserveAspectRatio="none" x="20" y="170" width="410" height="160" clip-path="url(#sample)"/>
-
    <rect id="test-frame" x="1" y="1" width="478" height="358" fill="none" stroke="#000000"/>
-
 </svg>
-
-...
 
 </div>
-
 </body>
 {% endhighlight %}

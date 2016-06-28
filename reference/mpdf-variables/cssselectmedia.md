@@ -19,8 +19,8 @@ media property is set to "all", or matches the value of <span class="parameter">
 <span class="parameter">$@media</span> selector within stylesheets is also supported.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed either in the
-	configuration file <span class="filename">config.php</span>  or at runtime
+	<strong>Note:</strong> This variable can be changed as a
+    <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 
 # Values

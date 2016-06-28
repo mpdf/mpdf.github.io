@@ -19,7 +19,8 @@ If you specify a header that extends further down the page than the margin-top, 
 
 # Alternative margin usage
 
-The variables `$this->setAutoTopMargin` and `$this->setAutoBottomMargin` can be set in the config.php file. Both default to `FALSE`.
+The <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>
+`setAutoTopMargin` and `setAutoBottomMargin` can be set. Both default to <span class="smallblock">FALSE</span>.
 
 ## pad
 
@@ -46,7 +47,7 @@ functionality in mPDF, and has some limitations:
 - Using either pad or stretch, the values are set for the whole document - changes during the document will
   produce unpredictable results
 
-- Incompatible with orientation changes, `$forceportraitheaders` or `$forceportraitmargins`
+- Incompatible with orientation changes, `forceportraitheaders` or `forceportraitmargins`
 
 - Does not work with "write to current page" options for Headers
 
