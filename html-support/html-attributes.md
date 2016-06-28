@@ -479,7 +479,7 @@ value, max, min, low, high, optimum
     <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. 
     "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the 
     <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are 
-    recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.
+    recognised - see <a href="{{ "/reference/mpdf-functions/__construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a>.
 </div>
 
 # Changelog
