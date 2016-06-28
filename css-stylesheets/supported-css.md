@@ -10,35 +10,42 @@ modification_time: 2015-08-05T11:59:56+00:00
 
 Unless otherwise stated, the following values are supported:
 
-<span class="smallblock">LENGTH</span>: px, pc, pt, cm, mm, in, em, rem, ex and % (where appropriate) are supported. Default if no unit given is px.
+<span class="smallblock">LENGTH</span>: px, pc, pt, cm, mm, in, em, rem, ex and % (where appropriate) are supported.
+Default if no unit given is px.
 
-<span class="smallblock">FONT-SIZE</span>: px, pc, pt, em, rem, ex, %, small, medium, large, x-small, x-large  are supported. Default if no unit given is px.
+<span class="smallblock">FONT-SIZE</span>: px, pc, pt, em, rem, ex, %, small, medium, large, x-small, x-large are
+supported. Default if no unit given is px.
 
 <div class="alert alert-info" role="alert" markdown="1">
-**Note:** Support for "rem" was added mPDF 5.7  Unlike the CSS3 specification, the basic size used for rem in the document is based on the font-size set on the <body> element (rather than the <html> element).
+	**Note:** Support for "rem" was added mPDF 5.7  Unlike the CSS3 specification, the basic size used for
+    rem in the document is based on the font-size set on the &lt;body&gt; element (rather than the &lt;html&gt; element).
 </div>
 
-Conversion from "px" is determined by the configurable variables <a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a> and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a>
+Conversion from "px" is determined by the configurable variables
+<a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}">dpi</a>
+and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a>
 
 "ex" uses an approximation of half the font height
 
-<span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as *sans*, *sans-serif*, *serif* or *monospace*.
+<span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as
+*sans*, *sans-serif*, *serif* or *monospace*.
 
-<span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g. 'black', 'gray' are supported.
+<span class="smallblock">COLOR</span>: #rgb or #rrggbb or rgb(255,255,255) or
+<a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g.
+'black', 'gray' are supported.
 
 Also supported are:
 
- * rgb(255,255,255)
- * rgba(255,255,255,1) *[last value is transparency (alpha) - between 0-1]* *
- * rgb(100%,100%,100%)
- * hsl(360,100%,100%)
- * hsla(360,100%,100%,1) *[last value is transparency (alpha) - between 0-1]* *
- * cmyk(100,100,100,100) *[or 0-100%]*
- * cmyka(100,100,100,100,1) *[or 0-100%; last value is transparency (alpha) - between 0-1]* *
- * device-cmyk(100,100,100,100) *[or 0-100%]*
- * *device-cmyka*(100,100,100,100,1) *[or 0-100%; last value is transparency (alpha) - between 0-1]* *
- * spot(COLOR NAME, 100%). (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)
-
+- rgb(255,255,255)
+- rgba(255,255,255,1) *[last value is transparency (alpha) - between 0-1]**
+- rgb(100%,100%,100%)
+- hsl(360,100%,100%)
+- hsla(360,100%,100%,1) *[last value is transparency (alpha) - between 0-1]**
+- cmyk(100,100,100,100) *[or 0-100%]*
+- cmyka(100,100,100,100,1) *[or 0-100%; last value is transparency (alpha) - between 0-1]**
+- device-cmyk(100,100,100,100) *[or 0-100%]*
+- *device-cmyka*(100,100,100,100,1) *[or 0-100%; last value is transparency (alpha) - between 0-1]**
+- spot(COLOR NAME, 100%). (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)
 
 mPDF  >= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);
 
@@ -158,7 +165,7 @@ Sets the opacity/transparency of the background image.
 6 - Resize-to-fit w and h
 </td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="30">
         All Block level tags:
         P, DIV, H1-H6, OL, UL, ADDRESS,
@@ -232,7 +239,8 @@ NB Use of $autoPadding which can automatically increase padding in block element
 
 <span class="smallblock">LENGTH</span>
 
-mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
+mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be
+contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
 
 </td>
 </tr>
@@ -242,9 +250,11 @@ mPDF does not support nested block elements which overlap (horizontally or verti
 
 <span class="smallblock">LENGTH</span> 
 
-mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
+mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block must be
+contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
 
-(Prior to mPDF v5.1: only supported if whole block is all on one page; will extend a block but not shorten it; will not force a pagebreak even if height should move onto next page.)
+(Prior to mPDF v5.1: only supported if whole block is all on one page; will extend a block but not shorten it; will
+not force a pagebreak even if height should move onto next page.)
 
 NB % is interpreted as % of printable page height (inside margins)
 
@@ -260,7 +270,10 @@ NB % is interpreted as % of printable page height (inside margins)
 </tr>
 <tr>
     <td>page-break-inside</td>
-    <td>avoid (avoids a page-break within the block - only works across max. of 2 pages; not compatible with table autosize or table rotate)</td>
+    <td>
+        avoid (avoids a page-break within the block - only works across max. of 2 pages; not compatible with table
+        autosize or table rotate)
+    </td>
 </tr>
 <tr>
     <td>page-break-before</td>
@@ -460,7 +473,7 @@ Note: this is not the same as a "layer" in CSS terms. See <a href="{{ "/what-els
 
 </td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="11">
         All Block level tags:
         P, DIV, H1-H6, OL, UL, ADDRESS,
@@ -503,7 +516,8 @@ fixed - uses printable page (inside margins) as containing element.
 
 (mPDF >= 4.0)
 
-NB Only supported for top-level elements i.e. where the parent element is <body>. Fixed-position or floating elements nested inside other fixed-position or floating elements are not supported.
+NB Only supported for top-level elements i.e. where the parent element is &lt;body&gt;. Fixed-position or floating
+elements nested inside other fixed-position or floating elements are not supported.
 
 </td>
 </tr>
@@ -513,7 +527,8 @@ NB Only supported for top-level elements i.e. where the parent element is <body>
 
 visible \| hidden \| auto
 
-Applies to block elements with position fixed or absolute. auto - causes text to autofit within the block size (constrained if necessary to page edges).
+Applies to block elements with position fixed or absolute. auto - causes text to autofit within the block size
+(constrained if necessary to page edges).
 
 (mPDF >= 4.0)
 
@@ -539,7 +554,9 @@ As per CSS. (mPDF  >= 5.7)
 
 Applies only to block elements with position fixed or absolute. (mPDF >= 5.0)
 
-Sizing and layout of the block element using top, left, bottom, right, width and height are applied BEFORE the element is rotated. The top and left co-ordinates are respected for positioning, except when bottom or right are specified without respective top or left when the bottom/right co-ordinates are used.
+Sizing and layout of the block element using top, left, bottom, right, width and height are applied BEFORE the
+element is rotated. The top and left co-ordinates are respected for positioning, except when bottom or right are
+specified without respective top or left when the bottom/right co-ordinates are used.
 
 </td>
 </tr>
@@ -584,13 +601,13 @@ NB Fixed-position or floating elements nested inside other fixed-position or flo
 
 
 <table class="table"> <thead>
-<tr> 
+<tr>
     <th>HTML Tag</th>
     <td>Property     </td>
     <td>Values allowed &amp; Notes</td>
 </tr>
 </thead> <tbody>
-<tr> 
+<tr>
     <th rowspan="5">LIST tags: OL, UL</th>
     <td>list-style</td>
     <td>[ 'list-style-type' 'list-style-position' 'list-style-image' ]   mPDF >= 6.0</td>
@@ -646,11 +663,11 @@ mPDF >= 6.0
 **NB Lists are handled as block-level elements as from mPDF 6.0 (see above)**
 </td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="5">LI</th>
     <td>list-style</td>
 <td markdown="1">
-[ 'list-style-type' 'list-style-position' 'list-style-image' ]   
+[ 'list-style-type' 'list-style-position' 'list-style-image' ]  
 
 mPDF >= 6.0
 </td>
@@ -710,7 +727,7 @@ mPDF >= 6.0
 
 
 <table class="table"> <thead>
-<tr> 
+<tr>
     <th>HTML Tag</th>
     <td>Property</td>
     <td>Values allowed &amp; Notes
@@ -718,7 +735,7 @@ mPDF >= 6.0
     </td>
 </tr>
 </thead> <tbody>
-<tr> 
+<tr>
     <th rowspan="9">
         All Inline tags:
         SPAN, A, SUB, SUP,  ACRONYM,
@@ -806,7 +823,7 @@ As per CSS. (mPDF  >= 5.7)
 
 
 <table class="table"> <thead>
-<tr> 
+<tr>
     <th style="white-space: nowrap;">HTML Tag</th>
     <td>Property</td>
     <td>Values allowed &amp; Notes</td>
@@ -1024,7 +1041,7 @@ Controls table layout if minimum width is too wide for page.
     <td>direction</td>
     <td>rtl | ltr (mPDF >= 5.1)</td>
 </tr>
-<tr> 
+<tr>
     <th>CAPTION</th>
     <td>caption-side</td>
     <td>top | bottom (mPDF >= 5.4) Right and left are not supported</td>
@@ -1042,7 +1059,7 @@ Controls table layout if minimum width is too wide for page.
     <td>text-align</td>
     <td>left | center | right</td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="9">TR</th>
     <td>background-color</td>
     <td><span class="smallblock">COLOR</span></td>
@@ -1135,7 +1152,7 @@ odd \| even \| *a*n+*b*
 As per CSS3 specification
 </td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="21">TD, TH</th>
     <td>background, background-image, background-position, background-repeat, background-color</td>
 <td markdown="1">
@@ -1338,7 +1355,7 @@ As per CSS3 specification
 </tbody> </table>
 
 <table class="table"> <thead>
-<tr> 
+<tr>
     <th>HTML Tag</th>
     <td>Property</td>
     <td>Values allowed &amp; Notes</td>
@@ -1373,7 +1390,7 @@ As per CSS3 specification
     <td>clear</td>
     <td>left | right | both</td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="18">IMG</th>
     <td>vertical-align</td>
 <td markdown="1">
@@ -1508,7 +1525,7 @@ cf. <a href="http://www.w3.org/TR/css3-transforms/#typedef-transform-function">h
     <td>min-width, min-height, max-width, max-height</td>
     <td><span class="smallblock">LENGTH</span>. (mPDF >= 5.6)</td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="3">SELECT</th>
     <td>font-family</td>
     <td><span class="smallblock">FONT-FAMILY</span></td>
@@ -1556,12 +1573,12 @@ top \| middle \| bottom \| baseline \| text-bottom \| text-top
     <td>background-color</td>
     <td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
-<tr> 
+<tr>
     <th>INPUT (type=IMAGE)</th>
     <td>width, height</td>
     <td><span class="smallblock">LENGTH</span></td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="5">INPUT (type=BUTTON| SUBMIT|RESET)</th>
     <td>font-family</td>
     <td><span class="smallblock">FONT-FAMILY</span>  Active Forms only (mPDF >= 5.3)</td>
@@ -1582,7 +1599,7 @@ top \| middle \| bottom \| baseline \| text-bottom \| text-top
     <td>background-color</td>
     <td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="2">INPUT (type=CHECKBOX| RADIO)</th>
     <td>font-size</td>
     <td><span class="smallblock">FONT-SIZE</span> (sets size of glyph). Not inherited.</td>
@@ -1591,7 +1608,7 @@ top \| middle \| bottom \| baseline \| text-bottom \| text-top
     <td>color</td>
     <td><span class="smallblock">COLOR</span>. Not inherited.</td>
 </tr>
-<tr> 
+<tr>
     <th rowspan="6">INPUT (type=PASSWORD| TEXT)</th>
     <td>width</td>
     <td><span class="smallblock">LENGTH</span>. NB the inline attribute size="" is also supported</td>
@@ -1616,19 +1633,19 @@ top \| middle \| bottom \| baseline \| text-bottom \| text-top
     <td>background-color</td>
     <td><span class="smallblock">COLOR</span>  Active Forms only (mPDF >= 5.3)</td>
 </tr>
-<tr> 
+<tr>
     <th>BR</th>
     <td>clear</td>
     <td>left | right | both</td>
 </tr>
-<tr> 
+<tr>
     <th>DOTTAB</th>
 <td markdown="1">
 *outdent*
 </td>
     <td><span class="smallblock">LENGTH</span>. (mPDF >= 5.7)</td>
 </tr>
-<tr> 
+<tr>
 <th rowspan="4" markdown="1">
 @page
 
@@ -1675,7 +1692,7 @@ The name *_default* can be used to allow the current non-HTML header to remain u
     <td>margin, margin-left, margin-right, margin-top, margin-bottom</td>
     <td><span class="smallblock">LENGTH</span> (% refers to page-box width for left/right, of height for top/bottom)</td>
 </tr>
-<tr> 
+<tr>
 <th rowspan="11" markdown="1">
 @page  
 
@@ -1807,7 +1824,7 @@ x, y and radius are values between 0 and 1
 *suppress*
 </td>
 <td markdown="1">
-on \| off \| 1 \| 0  
+on \| off \| 1 \| 0 
 
 See &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; for details
 </td>
@@ -2023,7 +2040,7 @@ text-outline-width, *outline-width*
 <td markdown="1">
 Width of the outline. <span class="smallblock">LENGTH</span>
 
-(text-outline-width as from mPDF >= 5.7) 
+(text-outline-width as from mPDF >= 5.7)
 
 Supported in tables >= 6.0
 </td>
@@ -2050,9 +2067,9 @@ text-outline-color, *outline-color*
     <td>unicode-bidi</td>
 <td markdown="1">
 normal \| embed \| isolate \| bidi-override \| isolate-override \| plaintext
- 
+
 (mPDF >= 6.0)
- 
+
 When used on block-level elements:
 - the value is not inherited to child blocks
 - using "embed" or "isolate" has no effect on block level-boxes
@@ -2077,7 +2094,5 @@ medium \| thin \| thick are accepted for size - converted to 1px, 3px, 5px
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; Borders (including Gradients)</a></li>
-<li class="manual_boxlist"><a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML supported attributes</a></li>
-</ul>
+- <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; Borders (including Gradients)</a>
+- <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML supported attributes</a>

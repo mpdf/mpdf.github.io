@@ -14,9 +14,17 @@ useSubstitutions – Specify whether to substitute missing characters in UTF-8 (
 
 void **useSubstitutions**
 
-Specify whether to substitute missing characters in UTF-8(multibyte) documents. Characters which cannot be displayed in the current set font, will be substituted by characters in the Adobe core fonts (Symbol, Zapfdingbats etc.), or the backup font(s) specified in the variable in <span class="parameter">$this->backupSubsFont</span> the <span class="filename">config_fonts.php</span> configuration file.
+Specify whether to substitute missing characters in UTF-8(multibyte) documents. Characters which cannot be displayed
+in the current set font, will be substituted by characters in the Adobe core fonts (Symbol, Zapfdingbats etc.), or the
+backup font(s) specified in the variable in <span class="parameter">$this->backupSubsFont</span> the
+<span class="filename">config_fonts.php</span> configuration file.
 
-<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 5.0 useSubstitutions controlled the behaviour of character substitution when using Adobe core fonts, and useSubstitutionsMB was used for character susbstitution in multibyte/utf-8 documents. For mPDF >= 5.0 character substitution for documents using core fonts is always enabled.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> Prior to mPDF 5.0 useSubstitutions controlled the
+	behaviour of character substitution when using Adobe core fonts, and useSubstitutionsMB was used for character
+	susbstitution in multibyte/utf-8 documents. For mPDF >= 5.0 character substitution for documents using core fonts
+	is always enabled.
+</div>
 
 # Values
 
@@ -47,9 +55,7 @@ Specify whether to substitute missing characters in UTF-8(multibyte) documents. 
 </tr>
 </tbody> </table>
 
-# Examples
-
-Example #1
+# Example
 
 {% highlight php %}
 <?php
@@ -64,9 +70,9 @@ $mpdf->useSubstitutions = true;
 $mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">**Note:** This may add significantly to the processing time for large files.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This may add significantly to the processing time for large files.
+</div>
 

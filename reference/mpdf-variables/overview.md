@@ -8,7 +8,8 @@ modification_time: 2015-08-05T12:01:32+00:00
 
 # mPDF Variables by Category
 
-Most of the following variables are set as defaults in the configuration file config.php  When set there, they are written as e.g.:
+Most of the following variables are set as defaults in the configuration file config.php  When set there, 
+they are written as e.g.:
 
 {% highlight php %}
 <?php
@@ -16,7 +17,8 @@ Most of the following variables are set as defaults in the configuration file co
 $this->variablename = true;
 {% endhighlight %}
 
-Alternatively you can redefine the variable in individual scripts; here it will be written as e.g. (assuming your class object is "mpdf"):
+Alternatively you can redefine the variable in individual scripts; here it will be written as e.g. 
+(assuming your class object is `$mpdf`):
 
 {% highlight php %}
 <?php
@@ -736,7 +738,7 @@ Colorspaces
 <td>*<span class="smallblock">NULL</span>*</td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td> </td>
-<td><span class="smallblock">DEPRACATED</span> from >= 4.4</td>
+<td><span class="smallblock">deprecated</span> from >= 4.4</td>
 </tr>
 <tr>
 <td> </td>
@@ -758,7 +760,7 @@ useDefaultCSS2
 <td> </td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td> </td>
-<td><span class="smallblock">DEPRACATED</span> from >= 2.2</td>
+<td><span class="smallblock">deprecated</span> from >= 2.2</td>
 </tr>
 <tr>
 <td>Page Headers &amp; Footers</td>
@@ -842,7 +844,7 @@ useDefaultCSS2
 </td>
 <td><span class="smallblock">DOCUMENT</span></td>
 <td> </td>
-<td><span class="smallblock">DEPRACATED</span> from >= 4.0</td>
+<td><span class="smallblock">deprecated</span> from >= 4.0</td>
 </tr>
 <tr>
 <td>Tables</td>
@@ -1036,7 +1038,7 @@ useDefaultCSS2
 <td>*<span class="smallblock">NULL</span>*</td>
 <td> </td>
 <td> </td>
-<td> <span class="smallblock">DEPRACATED</span> from >= 5.1
+<td> <span class="smallblock">deprecated</span> from >= 5.1
 
 </td>
 </tr>
@@ -1292,5 +1294,6 @@ useDefaultCSS2
 </tr>
 </tbody> </table>
 
-[1] Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of the document. All others can be changed during the course of creating the document.
+[1] Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of 
+the document. All others can be changed during the course of creating the document.
 

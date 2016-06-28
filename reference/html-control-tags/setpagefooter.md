@@ -12,37 +12,53 @@ setpagefooter – Set a page footer by a given name
 
 # Description
 
-&lt; **setpagefooter** [ <span class="parameter">$name</span> ] [ <span class="parameter">$page</span> ] [ <span class="parameter">$value</span> ] /&gt;
+&lt; **setpagefooter** 
+[ <span class="parameter">$name</span> ] 
+[ <span class="parameter">$page</span> ] 
+[ <span class="parameter">$value</span> ] /&gt;
 
 Sets a page footer that has previously been defined by name.
 
-<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
+    As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is 
+    recommended where possible to use the preferred spelling.
+</div>
 
 # Parameters
 
 <span class="parameter">$name</span>
 
-This parameter specifies the name of a previously defined page footer. If a <span class="smallblock">BLANK</span> string or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page footer exists.
+This parameter specifies the name of a previously defined page footer. If a <span class="smallblock">BLANK</span> 
+string or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page footer 
+exists.
 
 The <span class="parameter">$name</span> does not need to be defined if you are setting the value to -1 or 'off'
 
 <span class="parameter">$page</span>
 
-Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
+Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages 
+in a <span class="smallblock">DOUBLE-SIDED</span> document.
 
 <span class="smallblock">DEFAULT</span>: 'ODD'
 
-Note: setting this value to <span class="smallblock">BLANK</span> will not clear the footer; set <span class="parameter">$value</span> to -1 or off to cancel the header
+Note: setting this value to <span class="smallblock">BLANK</span> will not clear the footer; set 
+<span class="parameter">$value</span> to -1 or off to cancel the header
 
 **Values** (case-insensitive)
 
-O or ODD - set the footer for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
+O or ODD - set the footer for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> 
+document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a 
+<span class="smallblock">SINGLE-SIDED</span> document.
 
 E or EVEN - set the footer for <span class="smallblock">EVEN</span> pages
 
 ALL - sets the footer for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.
 
-If the <span class="parameter">$page</span> value is <span class="smallblock">BLANK</span> or omitted - sets the footer for <span class="smallblock">ODD</span> in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
+If the <span class="parameter">$page</span> value is <span class="smallblock">BLANK</span> or omitted - sets the footer 
+for <span class="smallblock">ODD</span> in a <span class="smallblock">DOUBLE-SIDED</span> document, or for both 
+<span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a 
+<span class="smallblock">SINGLE-SIDED</span> document.
 
 <span class="parameter">$value</span>
 
@@ -58,7 +74,8 @@ Specify whether to start or stop showing the named footer from the current posit
 
 -1 or OFF - stop using a footer
 
-<span class="smallblock">DEFAULT</span> -  <span class="smallblock">BLANK</span> is ignored, making no changes to the current state
+<span class="smallblock">DEFAULT</span> -  <span class="smallblock">BLANK</span> is ignored, making no changes to the 
+current state
 
 # Changelog
 
@@ -75,18 +92,14 @@ Specify whether to start or stop showing the named footer from the current posit
 
 For examples and further information please see:
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a></li>
-</ul>
+- <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>
+- <a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setfooterbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a></li>
-<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt;</li>
-<li class="manual_boxlist"><a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a></li>
-</ul>
+- <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>
+- &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;
+- <a href="{{ "/reference/mpdf-functions/setfooterbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a>
+- &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt;
+- <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>
 

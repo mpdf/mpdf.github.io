@@ -6,7 +6,10 @@ permalink: /fonts-languages/indic-fonts-v5-x.html
 modification_time: 2015-08-05T11:59:36+00:00
 ---
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF >= 6.0 this has been superseded by the use of <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> From mPDF >= 6.0 this has been superseded by the use of 
+    <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>.
+</div>
 
 Special fonts are provided for several Indic languages.
 
@@ -72,7 +75,7 @@ Hindi, Sindhi, Nepali
 
 These fonts can be access using their font name e.g.
 
-{% highlight php %}
+{% highlight htmlw %}
 
 ജൌ
 

@@ -14,9 +14,14 @@ dottab – Insert dots to following (right-aligned) text
 
 &lt;**dottab** [ <span class="parameter">$outdent</span> ] /&gt;
 
-Insert a string of dots to fill the space to the text which follows &lt;dottab /&gt;, which is right-aligned. This gives the appearance seen in e.g. a table of contents, or a menu with prices. A minimum of 3 dots (with spaces either side) is inserted. If the text which follows the &lt;dottab /&gt; will not fit on a single line, the default tab of ' ... ' is added, and text is not right-aligned.
+Insert a string of dots to fill the space to the text which follows &lt;dottab /&gt;, which is right-aligned. This 
+gives the appearance seen in e.g. a table of contents, or a menu with prices. A minimum of 3 dots (with spaces either 
+side) is inserted. If the text which follows the &lt;dottab /&gt; will not fit on a single line, the default tab of 
+' ... ' is added, and text is not right-aligned.
 
-<div class="alert alert-info" role="alert">**Note:** If a space is required after the &lt;dottab&gt; use a non-breaking space &amp;nbsp;</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> If a space is required after the &lt;dottab&gt; use a non-breaking space `&nbsp;`
+</div>
 
 From mPDF 5.7+ CSS styles can be applied to &lt;dottab&gt; as for an inline element.
 
@@ -45,27 +50,23 @@ Takes any valid CSS <span class="smallblock">LENGTH</span>  e.g. "2em"
 
 # Examples
 
-Example #1
+## Example #1
 
 {% highlight php %}
 <?php
 
-$menuitem = '
-Chilli con carne <dottab />&amp;nbsp;£7.95
-';
+$menuitem = 'Chilli con carne <dottab />&amp;nbsp;£7.95';
 
 $mpdf->WriteHTML($menuitem);
 {% endhighlight %}
 
-Example #2
+## Example #2
 
 {% highlight php %}
 <?php
 
-To right-align the text which follows the <dottab> whilst indenting any preceding lines:
+// To right-align the text which follows the <dottab> whilst indenting any preceding lines:
 
-$menuitem = '
-Chilli con carne etc. etc. <dottab outdent="3em" />&amp;nbsp;£7.95
-';
+$menuitem = 'Chilli con carne etc. etc. <dottab outdent="3em" />&amp;nbsp;£7.95';
 {% endhighlight %}
 

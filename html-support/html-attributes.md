@@ -16,11 +16,15 @@ Minimised attributes are not supported e.g. &lt;input type="checkbox" *disabled*
 
 XHTML specification is recommended for best compliance with mPDF.
 
-<div class="alert alert-info" role="alert">**Note:** The attributes <span class="parameter">$class</span>, <span class="parameter">$id</span> and <span class="parameter">$style</span> are supported on most HTML tags: see <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> The attributes <span class="parameter">$class</span>, <span class="parameter">$id</span> 
+    and <span class="parameter">$style</span> are supported on most HTML tags: see 
+    <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.
+</div>
+
 <table class="table"> <tbody>
 <tr>
 <td rowspan="2">HTML, BODY and ALL recognised tags
-
 </td>
 <td>lang*
 
@@ -106,7 +110,9 @@ Added mPDF 5.7
 
 <span class="smallblock">FLOAT</span>  value >= 0
 
-Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be >=1) determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom attribute)
+Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be >=1) determines the 
+maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the 
+original size. A value of 1 prevents automatic resizing of the table. (custom attribute)
 
 </td>
 </tr>
@@ -409,7 +415,10 @@ noprint
 
 </td>
 <td>value</td>
-<td><span class="smallblock">TEXT</span> In Active Forms value(s) for radio buttons and checkboxes are required, and can only contain letters, numbers, colon(:), undersore(_), hyphen(-) or period(.)</td>
+<td>
+    <span class="smallblock">TEXT</span> In Active Forms value(s) for radio buttons and checkboxes are required, and 
+    can only contain letters, numbers, colon(:), undersore(_), hyphen(-) or period(.)
+</td>
 </tr>
 <tr>
 <td>DOTTAB</td>
@@ -443,17 +452,35 @@ value, max, min, low, high, optimum
 </tr>
 <tr>
 <td>*type*</td>
-<td>Any alphanumeric string. If present, will select custom progress/meter formats - IF they have been defined by the user by editing script <span class="filename">classes/meter.php</span></td>
+<td>
+    Any alphanumeric string. If present, will select custom progress/meter formats - IF they have been defined by the 
+    user by editing script <span class="filename">classes/meter.php</span>
+</td>
 </tr>
 </tbody> </table>
 
-* <span class="parameter">$lang</span> is only recognised when the variable <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)
+* <span class="parameter">$lang</span> is only recognised when the variable 
+<a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to 
+<span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)
 
-<div class="alert alert-info" role="alert">**Note:** Table page-break-inside, autosize values and rotate are only respected for that set on first level table of nested tables</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> Table page-break-inside, autosize values and rotate are only respected for that set on first
+    level table of nested tables
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in their formal/long form i.e. selected="selected"</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> Attributes like nowrap, disabled, multiple, readonly, selected, checked are only 
+    supported in their formal/long form i.e. selected="selected"
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for <span class="parameter">$lang</span> according to the <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for 
+    <span class="parameter">$lang</span> according to the 
+    <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g. 
+    "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the 
+    <span class="filename">config_cp.php</span> configuration file. Other codes for character sets (or codepages) are 
+    recognised - see <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF()</a>.
+</div>
 
 # Changelog
 
@@ -479,7 +506,6 @@ value, max, min, low, high, optimum
 <tr>
 <td>5.0</td>
 <td><span class="parameter">$dir</span> was added to HTML and BODY
-
 </td>
 </tr>
 </tbody> </table>

@@ -8,6 +8,8 @@ modification_time: 2016-06-24T15:36:37+02:00
 
 (mPDF >= 7.0)
 
+@todo
+
 __construct – Initialise an instance of mPDF class
 
 # Description
@@ -18,15 +20,16 @@ Initialise an instance of mPDF class.
 
 # Parameters
 
-<span class="parameter">$mode</span>
+<span class="parameter">$config</span>
 
-This parameter specifies the mode of the new document.
+This parameter specifies configuration of the new document. Apart from configuration variables defined in 
+`ConfigVariables` and `FontConfigVariables` classes it can obtain variables from the constructor of mPDF <7.0:
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+## `mode`
 
-**Codepage Values** (case-insensitive)
+Mode of the document. Is parsed from values of various formats:
 
-<span class="smallblock">BLANK</span>
+### Codepage Values (case-insensitive)
 
 "c"
 
@@ -38,110 +41,101 @@ This parameter specifies the mode of the new document.
 
 "...-aCJK" or "-aCJK"
 
-where ... can be any string. Only language/country codes will have any effect, but other strings are parsed for backwards compatability (but have no effect).
+where ... can be any string. Only language/country codes will have any effect, but other strings are parsed for 
+backwards compatability (but have no effect).
 
-Only some combinations make sense. See <a href="{{ "/fonts-languages/choosing-a-configuration-v5-x.html" | prepend: site.baseurl }}">Choosing a configuration</a> for more details.
+Only some combinations make sense. See 
+<a href="{{ "/fonts-languages/choosing-a-configuration-v5-x.html" | prepend: site.baseurl }}">Choosing a configuration</a> 
+for more details.
 
-**Country/Language code values** (case-insensitive)
+### Country/Language code values (case-insensitive)
 
 Country/language codes are defined in <span class="filename">config_cp.php</span>
 
 A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"***
 
-***
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> If the <span class="parameter">$mode</span> is set by passing a country/language string, 
+	this may also set: available fonts, text justification, and directionality 
+	<acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> 
+	(as determined by <span class="filename">config_cp.php</span>)
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** If the <span class="parameter">$mode</span> is set by passing a country/language string, this may also set: available fonts, text justification, and directionality <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> (as determined by <span class="filename">config_cp.php</span>)</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> There is a useful list of language/country codes at: 
+	<a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a>
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** There is a useful list of language/country codes at: <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a></div>
-<ul> </li>
-</ul>
+## `format`
 
-<span class="parameter">$format</span>
-
-<ul> </li>
-</ul>
-
-<span class="parameter">$format</span> can be specified either as a pre-defined page size, or as an array of width and height in millimetres (see Example #2 below).
+can be specified either as a pre-defined page size, or as an array of width and height in millimetres (see Example #2 below).
 
 <span class="smallblock">DEFAULT</span>: "A4"
 
-**Values** (case-insensitive)
+### Values (case-insensitive)
 
-A0 - A10, B0 - B10, C0 - C10
-
-4A0, 2A0, RA0 - RA4, SRA0 - SRA4
-
-Letter, Legal, Executive, Folio
-
-Demy, Royal
-
-A (Type A paperback 111x178mm)
-
-B (Type B paperback 128x198mm)
-
-Ledger, Tabloid*
+- A0 - A10, B0 - B10, C0 - C10
+- 4A0, 2A0, RA0 - RA4, SRA0 - SRA4
+- Letter, Legal, Executive, Folio
+- Demy, Royal
+- A (Type A paperback 111x178mm)
+- B (Type B paperback 128x198mm)
+- Ledger, Tabloid*
 
 All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L".
 
-If <span class="parameter">$format</span> is defined as a string, the final <span class="parameter">$orientation</span> parameter will be ignored.
+If <span class="parameter">format</span> is defined as a string, the <span class="parameter">orientation</span> 
+parameter will be ignored.
 
-*Ledger and Tabloid are standard formats with the same page size but different orientation (Ledger is landscape, and Tabloid is portrait). mPDF treats these identically; if you wish to use Ledger, you should specify "Ledger-L" for landscape.
+* Ledger and Tabloid are standard formats with the same page size but different orientation 
+(Ledger is landscape, and Tabloid is portrait). Prior to mPDF 6.1, mPDF treats these identically; if you wished to use 
+Ledger, you should have specified "Ledger-L" for landscape.
 
-<span class="parameter">$default_font_size</span>
+## `default_font_size`
 
 Sets the default document font size in ***points*** (pt)
 
 <span class="smallblock">BLANK</span> or omitted or 0 uses the default value set in <span class="parameter">$defaultCSS</span>.
 
-<span class="parameter">$default_font</span>
-
-<ul> </li>
-</ul>
+## `default_font`
 
 Sets the default font-family for the new document.
 
-<span class="smallblock">BLANK</span> or omitted uses default value set in <span class="parameter">$defaultCSS</span> unless <span class="parameter">$codepage</span> has been set to "win-1252". If <span class="parameter">$codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. Helvetica, Times, or Courier.
+<span class="smallblock">BLANK</span> or omitted uses default value set in <span class="parameter">$defaultCSS</span> 
+unless <span class="parameter">$codepage</span> has been set to "win-1252". If 
+<span class="parameter">$codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. 
+Helvetica, Times, or Courier.
 
-<span class="parameter">$margin_left</span>
+## `margin_left`
+## `margin_right`
+## `margin_top`
+## `margin_bottom`
+## `margin_header`
+## `margin_footer`
 
-<span class="parameter">$margin_right</span>
-
-<span class="parameter">$margin_top</span>
-
-<span class="parameter">$margin_bottom</span>
-
-<span class="parameter">$margin_header</span>
-
-<span class="parameter">$margin_footer</span>
-
-Sets the page margins for the new document.
+Set the page margins for the new document.
 
 All values should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values specified will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
+If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values specified will be 
+used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for 
+<span class="smallblock">EVEN</span> pages.
 
 <span class="smallblock">BLANK</span> or omitted uses the default values.
 
 <span class="smallblock">DEFAULT</span> **Values**
 
-<span class="parameter">$margin_left</span> 15
+- <span class="parameter">margin_left</span> 15
+- <span class="parameter">margin_right</span> 15
+- <span class="parameter">margin_top</span> 16
+- <span class="parameter">margin_bottom</span> 16
+- <span class="parameter">margin_header</span> 9
+- <span class="parameter">margin_footer</span> 9
 
-<span class="parameter">$margin_right</span> 15
+## `orientation`
 
-<span class="parameter">$margin_top</span> 16
-
-<span class="parameter">$margin_bottom</span> 16
-
-<span class="parameter">$margin_header</span> 9
-
-<span class="parameter">$margin_footer</span> 9
-
-<span class="parameter">$orientation</span>
-
-<ul> </li>
-</ul>
-
-This attribute specifies the default page orientation of the new document if <span class="parameter">$format</span> is defined as an array. This value will be ignored if <span class="parameter">$format</span> is a string value.
+This attribute specifies the default page orientation of the new document if <span class="parameter">$format</span> 
+is defined as an array. This value will be ignored if <span class="parameter">$format</span> is a string value.
 
 <span class="smallblock">DEFAULT</span>: "P"
 
@@ -153,22 +147,28 @@ L: Landscape
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
-<tr>
-<td>2.0</td>
-<td>The <span class="parameter">$orientation</span> parameter was added.</td>
-</tr>
-<tr>
-<td>5.0</td>
-<td>The <span class="parameter">$mode</span> parameter renamed (from <span class="parameter">$codepage</span>), and recognised values changed</td>
-</tr>
-</tbody> </table>
+<table class="table"> 
+	<thead>
+		<tr>
+			<th>Version</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>6.1</td>
+			<td>Introduced to support higher versions of PHP</td>
+		</tr>
+		<tr>
+			<td>7.0</td>
+			<td>Parameters replaced with single `$config` parameter array</td>
+		</tr>
+	</tbody> 
+</table>
 
 # Examples
 
-Example #1
+## Example #1
 
 {% highlight php %}
 <?php
@@ -183,7 +183,7 @@ $mpdf->WriteHTML('Hello World');
 $mpdf->Output('filename.pdf');
 {% endhighlight %}
 
-Example #2
+## Example #2
 
 {% highlight php %}
 <?php
@@ -207,7 +207,7 @@ $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
 # Notes
 
 <div class="alert alert-info" role="alert">
-	**Note:** <span class="smallblock">_MPDF_PATH</span> was required to be
+	<strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be
 	defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically
 	defined by the script itself when including the mpdf.php file.
 </div>

@@ -21,7 +21,7 @@ The precise effect it has on different languages/fonts will be specified in the 
  configuration file.
 
 <div class="alert alert-info" role="alert">
-	**Note:** This value can only be set inside the <span class="filename">config.php</span>
+	<strong>Note:</strong> This value can only be set inside the <span class="filename">config.php</span>
 	configuration file. To change the value at runtime, you must use `$mpdf = new \Mpdf\Mpdf('-aCJK');` to set as
 	<span class="smallblock">FALSE</span> or `$mpdf = new \Mpdf\Mpdf('+aCJK'); `to set as
 	<span class="smallblock">TRUE</span>

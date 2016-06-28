@@ -6,7 +6,11 @@ permalink: /reference/mpdf-variables/debug.html
 modification_time: 2015-08-05T12:01:50+00:00
 ---
 
-(mPDF >= 3.1)
+(mPDF >= 3.1 && <7.0)
+
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This variable was succeeded by usage of \Psr\Log\LogInterface in `7.0`
+</div>
 
 debug – Turn on debugging messages
 
@@ -14,7 +18,8 @@ debug – Turn on debugging messages
 
 void **debug**
 
-Specify whether to show debugging messages. If you are having problems with mPDF, set <span class="parameter">$debug</span> to TRUE to show error and warning  messages that may otherwise be suppressed.
+Specify whether to show debugging messages. If you are having problems with mPDF, set
+<span class="parameter">$debug</span> to TRUE to show error and warning  messages that may otherwise be suppressed.
 
 # Values
 
@@ -56,16 +61,16 @@ $mpdf->debug = true;
 $mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">**Note:** This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages inadvertently picked up suppressed errors such as those caused by @fopen()  - even though the @ is deliberately there to prevent interruption of the script.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages
+	inadvertently picked up suppressed errors such as those caused by @fopen()  - even though the @ is deliberately
+	there to prevent interruption of the script.
+</div>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a> - prevent error mesages when using output buffering</li>
-</ul>
+- <a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images
+- <a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a> - prevent error mesages when using output buffering
 

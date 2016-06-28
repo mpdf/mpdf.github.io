@@ -12,13 +12,23 @@ columns – Control use of Columns on the page
 
 # Description
 
-&lt;**columns**  <span class="parameter">$column-count</span> [ <span class="parameter">$vAlign</span> ] [ <span class="parameter">$column-gap</span> ]  /&gt;
+&lt;**columns**  <span class="parameter">$column-count</span> 
+[ <span class="parameter">$vAlign</span> ] 
+[ <span class="parameter">$column-gap</span> ]  /&gt;
 
 Define, start or stop Columns in the document.
 
-<div class="alert alert-info" role="alert">**Note:** The maximum ratio to adjust column height when justifying is set by <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - too large a value can give ugly results</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> The maximum ratio to adjust column height when justifying is set by 
+    <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - 
+    too large a value can give ugly results
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; you need to call SetColumns() or use &lt;columns&gt; after commands like <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; 
+    you need to call SetColumns() or use &lt;columns&gt; after commands like 
+    <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.
+</div>
 
 # Parameters
 
@@ -60,26 +70,18 @@ Example #1
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('<columns column-count="3" vAlign="J" column-gap="7" />');
-
-$mpdf->WriteHTML('
-Some text...
-');
+$mpdf->WriteHTML('Some text...');
 
 $mpdf->WriteHTML('<columnbreak />');
 
-$mpdf->WriteHTML('
-Next column...
-');
+$mpdf->WriteHTML('Next column...');
 
-$mpdf=Output();
+$mpdf->Output();
 
-?>
 {% endhighlight %}
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/addcolumn.html" | prepend: site.baseurl }}">AddColumn()</a> - Start a new Column</li>
-<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/columnbreak.html" | prepend: site.baseurl }}">columnbreak</a>&gt; - Start a new Column</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a> - Control the use of multiple columns on the page - PHP equivalent of &lt;columns&gt;</li>
-</ul>
+- <a href="{{ "/reference/mpdf-functions/addcolumn.html" | prepend: site.baseurl }}">AddColumn()</a> - Start a new Column
+- &lt;<a href="{{ "/reference/html-control-tags/columnbreak.html" | prepend: site.baseurl }}">columnbreak</a>&gt; - Start a new Column
+- <a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a> - Control the use of multiple columns on the page - PHP equivalent of &lt;columns&gt;

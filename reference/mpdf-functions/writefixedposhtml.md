@@ -94,7 +94,7 @@ $mpdf->WriteFixedPosHTML('
 This text will appear just where I want it!
 ', 30, 120, 50, 90, 'auto');
 
-$mpdf=Output();
+$mpdf->Output();
 
 ?>
 {% endhighlight %}

@@ -12,13 +12,31 @@ indexinsert  — Generate an Index for the document
 
 # Description
 
-&lt;**indexinsert** [ <span class="parameter">$font</span> ] [ <span class="parameter">$font-size</span> ] [ <span class="parameter">$line-spacing</span> ] [ <span class="parameter">$cols</span> ] [ <span class="parameter">$gap</span> ] [ <span class="parameter">$offset</span> ] [ <span class="parameter">$links</span> ] [ <span class="parameter">$usedivletters</span> ] [ <span class="parameter">$div-font</span> ] [ <span class="parameter">$div-font-size</span> ] /&gt;
+&lt;**indexinsert**
+[ <span class="parameter">$font</span> ]
+[ <span class="parameter">$font-size</span> ]
+[ <span class="parameter">$line-spacing</span> ]
+[ <span class="parameter">$cols</span> ]
+[ <span class="parameter">$gap</span> ]
+[ <span class="parameter">$offset</span> ]
+[ <span class="parameter">$links</span> ]
+[ <span class="parameter">$usedivletters</span> ]
+[ <span class="parameter">$div-font</span> ]
+[ <span class="parameter">$div-font-size</span> ] /&gt;
 
-From mPDF v 6.0 onwards, the attributes have changed. See <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a> for more information. The following is for mPDF >= v6.0:
+From mPDF v 6.0 onwards, the attributes have changed. See
+<a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a> for more information. The
+following is for mPDF >= v6.0:
 
-&lt;**indexinsert** [ <span class="parameter">$links</span> ] [ <span class="parameter">$usedivletters</span> ] [ <span class="parameter">$collation</span> ] [ <span class="parameter">$collation-group</span> ] /&gt;
+&lt;**indexinsert**
+[ <span class="parameter">$links</span> ]
+[ <span class="parameter">$usedivletters</span> ]
+[ <span class="parameter">$collation</span> ]
+[ <span class="parameter">$collation-group</span> ] /&gt;
 
-Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>.
+Inserts an Index for the document based on index entries made using
+&lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt;
+or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>.
 
 # Attributes
 
@@ -108,13 +126,16 @@ Sets the font size for the dividing letters  in the Index in ***points*** (pt)
 
 <span class="parameter">$<span class="parameter">$indexCollationLocale</span> </span>
 
-Set a Locale to determine the overall sort order of index entries e.g. 'en_GB.utf8'. Available options are determined by the locales available in your system configuration. Always use a utf-8 locale.
+Set a Locale to determine the overall sort order of index entries e.g. 'en_GB.utf8'. Available options are determined
+by the locales available in your system configuration. Always use a utf-8 locale.
 
 <span class="smallblock">BLANK</span> or omitted uses current locale set in your system.
 
 <span class="parameter">$<span class="parameter">$indexCollationGroup</span> </span>
 
-If you have set your index to use Dividing letters, this value will determine how letters are grouped under a dividing letter. Values should be selected from the files in folder <span class="filename">/collations/</span> e.g. 'English_United_Kingdom'
+If you have set your index to use Dividing letters, this value will determine how letters are grouped under a dividing
+letter. Values should be selected from the files in folder <span class="filename">/collations/</span> e.g.
+'English_United_Kingdom'
 
 NB This will not affect the overall order of entries, which is determined by the value above.
 
@@ -122,27 +143,30 @@ NB This will not affect the overall order of entries, which is determined by the
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
-<tr>
-<td>3.0</td>
-<td>Tag was added.</td>
-</tr>
-<tr>
-<td>6.0</td>
-<td>Parameters removed: <span class="parameter">$font</span> | <span class="parameter">$font-size</span> | <span class="parameter">$line-spacing</span> | <span class="parameter">$cols</span> | <span class="parameter">$gap</span> | <span class="parameter">$offset</span> | <span class="parameter">$links </span>| <span class="parameter">$usedivletters</span> <span class="parameter">$ </span>| <span class="parameter">$div-font</span><span class="parameter">$ <span class="parameter">$</span>| div-font-size</span>
-
-Parameters added: <span class="parameter">$collation</span> | <span class="parameter">$collation-group</span></td>
-</tr>
-</tbody> </table>
+<table class="table">
+	<thead>
+		<tr><th>Version</th><th>Description</th></tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>3.0</td><td>Tag was added.</td>
+		</tr>
+		<tr>
+			<td>6.0</td>
+			<td>
+				Parameters removed: <span class="parameter">$font</span> | <span class="parameter">$font-size</span> |
+				<span class="parameter">$line-spacing</span> | <span class="parameter">$cols</span> |
+				<span class="parameter">$gap</span> | <span class="parameter">$offset</span> |
+				<span class="parameter">$links </span>| <span class="parameter">$usedivletters</span> 
+				<span class="parameter">$ </span>| <span class="parameter">$div-font</span>
+				<span class="parameter">$ | div-font-size</span>
+				Parameters added: <span class="parameter">$collation</span> | <span class="parameter">$collation-group</span>
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 # Examples
-
-{% highlight php %}
-Example #1 (mPDF >= 6.0)
-
-{% endhighlight %}
 
 {% highlight php %}
 <html>
@@ -164,6 +188,4 @@ Text of document...
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a></li>
-</ul>
+- <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a>

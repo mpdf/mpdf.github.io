@@ -10,7 +10,8 @@ modification_time: 2015-08-05T12:00:43+00:00
 
 CreateIndex — Generate an Index for the document
 
-<div class="alert alert-info" role="alert">**Note:** This function is removed in mPDF v6.0 and replaced by <a href="{{ "/reference/mpdf-functions/insertindex.html" | prepend: site.baseurl }}">InsertIndex</a>()</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This function is removed in mPDF v6.0 and replaced by <a href="{{ "/reference/mpdf-functions/insertindex.html" | prepend: site.baseurl }}">InsertIndex</a>()</div>
 
 # Description
 
@@ -18,9 +19,11 @@ void **CreateIndex** ([ int <span class="parameter">$numberofcolumns</span> [, f
 
 Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>.
 
-<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 2.2 the function CreateReference() was used. CreateIndex() is now the preferred form.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> Prior to mPDF 2.2 the function CreateReference() was used. CreateIndex() is now the preferred form.</div>
 
-<div class="alert alert-info" role="alert">**Note:** <span class="parameter">$uselinking</span> was added in mPDF 3.0</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> <span class="parameter">$uselinking</span> was added in mPDF 3.0</div>
 
 # Parameters
 
@@ -150,12 +153,13 @@ $mpdf->WriteHTML('<h2>Index</h2>',2);
 
 $mpdf->CreateIndex(2, '', '', 3, 1, '', 5, 'serif','sans-serif');
 
-$mpdf=Output();
+$mpdf->Output();
 
 ?>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">**Note:** There is no HTML equivalent of CreateIndex()</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> There is no HTML equivalent of CreateIndex()</div>
 
 # See Also
 

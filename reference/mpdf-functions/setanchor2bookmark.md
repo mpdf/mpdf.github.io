@@ -14,9 +14,14 @@ SetAnchor2Bookmark – Specifies whether PDF Bookmarks are created automatically
 
 void **SetAnchor2Bookmark** ( int <span class="parameter">$mode</span> )
 
-Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="Introduction" /&gt;) . This function simply sets the variable <span class="parameter">$anchor2Bookmark</span>
+Specifies whetherPDF Book marks are created from HTML anchors (e.g. &lt;a name="Introduction" /&gt;) . This function 
+simply sets the variable <span class="parameter">$anchor2Bookmark</span>
 
-<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
+    As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is 
+    recommended where possible to use the preferred spelling.
+</div>
 
 # Parameters
 
@@ -52,15 +57,18 @@ $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetAnchor2Bookmark(1);
 
-$mpdf->WriteHTML('<h1><a name="Section 1" />The title</h1>);
+$mpdf->WriteHTML('<h1><a name="Section 1" />The title</h1>');
 
 $mpdf->Output();
 
-?>
+{% endhighlight %}
 
 This will create a Bookmark in the PDF document: "Section 1"
-{% endhighlight %}
 
 # Notes
 
-<div class="alert alert-info" role="alert">**Note:** Prior to mPDF 3.0 you could specify <span class="parameter">$mode</span> = 2 which added the page number to the bookmark e.g. Introduction (p.32). This was removed as it did not accurately handle pagebreaks etc.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> Prior to mPDF 3.0 you could specify <span class="parameter">$mode</span> = 2 which added 
+    the page number to the bookmark e.g. Introduction (p.32). This was removed as it did not accurately handle 
+    pagebreaks etc.
+</div>

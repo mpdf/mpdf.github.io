@@ -12,7 +12,7 @@ modification_time: 2015-08-05T12:00:37+00:00
 
 <a href="{{ "/reference/mpdf-functions/mpdf.html" | prepend: site.baseurl }}">mPDF</a> - Main class constructor
 
-mPDFI - [Depracated] - see <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
+mPDFI - [deprecated] - see <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
 
 <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML</a> - Write HTML code to the document
 
@@ -158,7 +158,7 @@ Other Miscellaneous methods:
 
 ## Import PDF files &amp; Templates
 
-mPDFI - [Depracated] - see <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
+mPDFI - [deprecated] - see <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
 
 <a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail</a> - Print thumbnails of an external PDF file
 

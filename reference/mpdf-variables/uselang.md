@@ -18,11 +18,23 @@ Specify whether to recognise/support the HTML attribute <span class="parameter">
 
 See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for more details.
 
-<div class="alert alert-info" role="alert">**Note:** This variable was removed in mPDF 6.0  <a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">`autoScriptToLang`</a> should be used for the same effect.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This variable was removed in mPDF 6.0 
+	<a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">`autoScriptToLang`</a>
+	should be used for the same effect.</div>
 
-<div class="alert alert-info" role="alert">**Note:** The default value was changed to <span class="smallblock">TRUE </span>in version 4.0</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> The default value was changed to <span class="smallblock">TRUE</span>in version 4.0
+</div>
 
-**Note:** <span class="parameter">$lang</span> is a useful way to select appropriate fonts for some languages. Automatic font selection using <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the HTML with the <span class="parameter">$lang</span> attribute, so useLang is required. Using automatic font selection adds considerable processing time when creating a large document. Automatic font selection is only valid when using UTF-8 as the codepage for the document.
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong><span class="parameter">$lang</span> is a useful way to select appropriate fonts for some
+	languages. Automatic font selection using
+	<a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the
+	HTML with the <span class="parameter">$lang</span> attribute, so useLang is required. Using automatic font selection
+	adds considerable processing time when creating a large document. Automatic font selection is only valid when using
+	UTF-8 as the codepage for the document.
+</div>
 
 # Values
 
@@ -78,16 +90,11 @@ $mpdf->useLang = true;
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-
-?>
-
 {% endhighlight %}
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language</li>
-<li class="manual_boxlist"><a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents</li>
-<li class="manual_boxlist"><a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
-</ul>
+- <a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Use AutoFont to auto-detect text language in HTML input
+- <a href="{{ "/reference/mpdf-variables/autofontgroupsize.html" | prepend: site.baseurl }}">autoFontGroupSize</a> - Specify the text chunk size to group when autodetecting text language
+- <a href="index0c23.html?tid=346">disableMultilingualJustify</a> - Specify whether to disable text justification in multilingual documents
+- <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang
