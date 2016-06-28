@@ -10,13 +10,45 @@ modification_time: 2015-08-05T12:00:38+00:00
 
 AddPage — Add a new page
 
-<div class="alert alert-info" role="alert">**Note:** A new function <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a> was added in mPDF 5.0 which is recommended as much simpler to use.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> A new function 
+	<a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a>
+	was added in mPDF 5.0 which is recommended as much simpler to use.
+</div>
 
 # Description
 
-void **AddPage** ([ string <span class="parameter">$orientation</span> [, string <span class="parameter">$type</span> [, string <span class="parameter">$resetpagenum</span> [, string <span class="parameter">$pagenumstyle</span> [, string <span class="parameter">$suppress</span> [, float <span class="parameter">$margin-left</span> [, float <span class="parameter">$margin-right</span> [, float $<span class="parameter">$margin-top</span> [, float $<span class="parameter">$margin-bottom</span> [, float $<span class="parameter">$margin-header</span> [, float <span class="parameter">$margin-footer</span> [, string <span class="parameter">$odd-header-name</span> [, string <span class="parameter">$even-header-name</span> [, string $<span class="parameter">$odd-footer-name</span> [, string $<span class="parameter">$even-footer-name</span> [, mixed $<span class="parameter">$odd-header-value</span> [, mixed <span class="parameter">$even-header-value</span> [, mixed <span class="parameter">$odd-footer-value</span> [, mixed $<span class="parameter">$even-footer-value</span> [, string <span class="parameter">$pageselector</span> [, mixed <span class="parameter">$sheet-size</span> ]]]]]]]]]]]]]]]]]]]]])
+void **AddPage** (
+[ string <span class="parameter">$orientation</span> 
+[, string <span class="parameter">$type</span> 
+[, string <span class="parameter">$resetpagenum</span>
+[, string <span class="parameter">$pagenumstyle</span> 
+[, string <span class="parameter">$suppress</span> 
+[, float <span class="parameter">$margin-left</span> 
+[, float <span class="parameter">$margin-right</span> 
+[, float $<span class="parameter">$margin-top</span> 
+[, float $<span class="parameter">$margin-bottom</span> 
+[, float $<span class="parameter">$margin-header</span> 
+[, float <span class="parameter">$margin-footer</span>
+[, string <span class="parameter">$odd-header-name</span> 
+[, string <span class="parameter">$even-header-name</span> 
+[, string $<span class="parameter">$odd-footer-name</span> 
+[, string $<span class="parameter">$even-footer-name</span> 
+[, mixed $<span class="parameter">$odd-header-value</span> 
+[, mixed <span class="parameter">$even-header-value</span> 
+[, mixed <span class="parameter">$odd-footer-value</span> 
+[, mixed $<span class="parameter">$even-footer-value</span> 
+[, string <span class="parameter">$pageselector</span> 
+[, mixed <span class="parameter">$sheet-size</span> 
+]]]]]]]]]]]]]]]]]]]]])
 
-Add a new page to the document. The parameter <span class="parameter">$type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional page-break (<span class="parameter">$type</span>="E" or "O") will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a page-break with <span class="parameter">$type</span>="NEXT-ODD" or "NEXT-EVEN" will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).
+Add a new page to the document. The parameter <span class="parameter">$type</span> can specify certain conditions 
+which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, 
+a conditional page-break (<span class="parameter">$type</span>="E" or "O") will add a new page only if required 
+to make the current page match the type (i.e. <span class="smallblock">ODD</span> or 
+<span class="smallblock">EVEN</span>); a page-break with <span class="parameter">$type</span>="NEXT-ODD" 
+or "NEXT-EVEN" will add one or two pages as required to make the current page match the type 
+(i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).
 
 Number of pages added:
 
@@ -70,9 +102,16 @@ Number of pages added:
 </tr>
 </tbody> </table>
 
-<div class="alert alert-info" role="alert">**Note:** If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, margins and headers/footers will start on the final added page.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page 
+	numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles, 
+	margins and headers/footers will start on the final added page.
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to reset it to 1.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to 
+	this, it was only possible to reset it to 1.
+</div>
 
 # Parameters
 
@@ -93,12 +132,13 @@ P *or* portrait: Portrait
 
 <span class="parameter">$type</span> = E|O|even|odd|next-odd|next-even
 
-<ul> </li>
-</ul>
+If <span class="parameter">$type</span> is specified as "E" or "O" when writing a 
+<span class="smallblock">DOUBLE-SIDED</span> document, the page-break is conditional; a new page will only be added 
+if necessary to meet the specified condition. 
 
-If <span class="parameter">$type</span> is specified as "E" or "O" when writing a <span class="smallblock">DOUBLE-SIDED</span> document, the page-break is conditional; a new page will only be added if necessary to meet the specified condition. 
-
-If <span class="parameter">$type</span> is specified as "NEXT-ODD" or "NEXT-EVEN" when writing a <span class="smallblock">DOUBLE-SIDED</span> document, either one or two pages are added as necessary to meet the specified condition.
+If <span class="parameter">$type</span> is specified as "NEXT-ODD" or "NEXT-EVEN" when writing a 
+<span class="smallblock">DOUBLE-SIDED</span> document, either one or two pages are added as necessary to meet 
+the specified condition.
 
 If not writing a <span class="smallblock">DOUBLE-SIDED</span> document, a page-break <span class="parameter">$type</span>="E" or "O" will be ignored.
 
@@ -116,7 +156,8 @@ NEXT-EVEN: Add one or two pages as required to make the current page <span class
 
 <span class="parameter">$resetpagenum</span> = 1 - ∞
 
-Sets/resets the document page number to <span class="parameter">$resetpagenum</span> starting on the new page. (The value must be a positive integer).
+Sets/resets the document page number to <span class="parameter">$resetpagenum</span> starting on the new page. 
+(The value must be a positive integer).
 
 <span class="smallblock">BLANK</span> or omitted or 0 leaves the current page number sequence unchanged.
 
@@ -143,10 +184,8 @@ i: Roman lowercase - i, ii, iii, iv...
 
 <span class="parameter">$suppress</span> = on|off|1|0
 
-<ul> </li>
-</ul>
-
-<span class="parameter">$suppress</span>=on will suppress document page numbers from the new page onwards (until <span class="parameter">$suppress</span>=off is used)
+<span class="parameter">$suppress</span> = on will suppress document page numbers from the new page onwards 
+(until <span class="parameter">$suppress</span>=off is used)
 
 <span class="smallblock">BLANK</span> or omitted leaves the current condition unchanged.
 
@@ -172,7 +211,9 @@ Sets the page margins from the new page forwards.
 
 All values should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
+If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for 
+<span class="smallblock">ODD</span> pages; left and right margins will be mirrored for 
+<span class="smallblock">EVEN</span> pages.
 
 <span class="smallblock">BLANK</span> or omitted leaves the current margin unchanged. NB "0" (zero) will set the margin to zero.
 
@@ -184,13 +225,23 @@ If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the 
 
 <span class="parameter">$even-footer-name</span>
 
-Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined using <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>, <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>, <a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>, or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>.
+Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined 
+using <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>, 
+<a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>, 
+<a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>, 
+or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>.
 
-If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
+If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for 
+<span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> 
+will be ignored.
 
-<span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">$odd-header-value</span> to -1 to turn the header off.
+<span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB 
+<span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">$odd-header-value</span> 
+to -1 to turn the header off.
 
-<div class="alert alert-info" role="alert">**Note:** You must add the prefix 'html_' before the name if it is a HTMLHeader.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.
+</div>
 
 <span class="parameter">$odd-header-value</span>
 
@@ -200,9 +251,16 @@ If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the 
 
 <span class="parameter">$even-footer-</span><span class="parameter">$value</span>
 
-Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already have been defined using <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>, <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>, <a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>, or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>.
+Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must already 
+have been defined using 
+<a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>, 
+<a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>, 
+<a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>, 
+or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>.
 
-If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
+If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for 
+<span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> 
+will be ignored.
 
 <span class="smallblock">BLANK</span> or omitted or 0 leaves the header/footer state unchanged.
 
@@ -222,7 +280,8 @@ See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @pag
 
 <span class="parameter">$sheet-size</span>
 
-<span class="parameter">$sheet-size</span> can be specified either as a pre-defined page size, or as an array of width and height in millimetres e.g. array(210,297).
+<span class="parameter">$sheet-size</span> can be specified either as a pre-defined page size, or as an array of 
+width and height in millimetres e.g. array(210,297).
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
 
@@ -242,7 +301,7 @@ B (Type B paperback 128x198mm)
 
 All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L"
 
-**Note:** If you use the array() form for <span class="parameter">$sheet-size</span>, then you must:
+<strong>Note:</strong> If you use the array() form for <span class="parameter">$sheet-size</span>, then you must:
 
 - specify the width less than the height i.e. the dimensions of the page in portrait orientation; and
 
@@ -291,7 +350,7 @@ Parameters <span class="parameter">$resetpagenum</span> , <span class="parameter
 
 # Examples
 
-Example #1
+## Example #1
 
 {% highlight php %}
 <?php
@@ -303,13 +362,9 @@ $mpdf->WriteHTML('Your Introduction');
 $mpdf->AddPage();
 
 $mpdf->WriteHTML('Your Book text');
-
-?>
 {% endhighlight %}
 
-{% highlight php %}
-Example #2 - Resetting page numbering with a new style
-{% endhighlight %}
+## Example #2 - Resetting page numbering with a new style
 
 {% highlight php %}
 <?php
@@ -321,13 +376,9 @@ $mpdf->useOddEven = 1;
 $mpdf->AddPage('','','1','i','on');
 
 $mpdf->WriteHTML('Your Book text');
-
-?>
 {% endhighlight %}
 
-{% highlight php %}
-Example #3 - Defining new margins and page orientation
-{% endhighlight %}
+## Example #3 - Defining new margins and page orientation
 
 {% highlight php %}
 <?php
@@ -339,13 +390,9 @@ $mpdf->WriteHTML('Your Introduction');
 $mpdf->AddPage('L','','','','',50,50,50,50,10,10);
 
 $mpdf->WriteHTML('Your Book text');
-
-?>
 {% endhighlight %}
 
-{% highlight php %}
-Example #4 - Changing headers/footers
-{% endhighlight %}
+## Example #4 - Changing headers/footers
 
 {% highlight php %}
 <?php
@@ -355,46 +402,43 @@ $mpdf = new \Mpdf\Mpdf();
 $mpdf->useOddEven = 1;
 
 $mpdf->defHeaderByName('myHeader', array (
-
-    'L' => array (),
-
-    'R' => array (),
-
-    'C' => array ('content' => 'Chapter 2', 'font-style' => 'B', 'font-family' => 'serif'),
-
-    'line' => 1,
-
-    ));
+	'L' => array (),
+	'R' => array (),
+	'C' => array ('content' => 'Chapter 2', 'font-style' => 'B', 'font-family' => 'serif'),
+	'line' => 1,
+));
 
 $mpdf->defHTMLHeaderByName('myHeader2','<div style="text-align: center; font-weight: bold;">Chapter 2</div>');
 
 $mpdf->WriteHTML('Your Introduction');
 
 // Selects new headers for ODD and EVEN pages to use from the new page onwards
-
 // Note the html_ prefix before the named HTML header
-
 $mpdf->AddPage('','NEXT-ODD','','','','','','','','','', 'myHeader', 'html_myHeader2', '', '', 1, 1, 0, 0);
 
 $mpdf->WriteHTML('Your Book text');
 
 // Turns all headers/footers off from new page onwards
-
 $mpdf->AddPage('','NEXT-ODD','','','','','','','','','','','','','',-1,-1,-1,-1);
 
 $mpdf->WriteHTML('End section of book with no headers');
-
-?>
 {% endhighlight %}
 
 # Notes
 
-<div class="alert alert-info" role="alert">**Note:** Unlike FPDF **AddPage()** does not need to be called at the beginning of the document if you are writing HTML code to the document. <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> will automatically add the first page to a new document.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> Unlike FPDF **AddPage()** does not need to be called at the beginning of the document 
+	if you are writing HTML code to the document. 
+	<a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> 
+	will automatically add the first page to a new document.
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** **pagebreak** can be used as an <acronym title="Hypertext Markup Language (code used to display Internet pages)">HTML</acronym> equivalent of both <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> **pagebreak** can be used as an <acronym title="Hypertext Markup Language 
+	(code used to display Internet pages)">HTML</acronym> equivalent of both 
+	<a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.
+</div>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist">&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to **AddPage()** </li>
-</ul>
+- &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to **AddPage()**

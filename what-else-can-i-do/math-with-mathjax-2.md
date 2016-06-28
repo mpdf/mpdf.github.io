@@ -6,18 +6,24 @@ permalink: /what-else-can-i-do/math-with-mathjax-2.html
 modification_time: 2015-08-05T12:00:23+00:00
 ---
 
-<div class="alert alert-info" role="alert">**Note:** This is an alternative method to the one in <a href="{{ "/what-else-can-i-do/math-formulae-with-mathjax.html" | prepend: site.baseurl }}">Math Formulae with MathJax</a></div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This is an alternative method to the one in
+	<a href="{{ "/what-else-can-i-do/math-formulae-with-mathjax.html" | prepend: site.baseurl }}">
+		Math Formulae with MathJax
+	</a>
+</div>
 
-<div class="alert alert-info" role="alert">**Note:** This version has an updated script which should work in all browsers.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This version has an updated script which should work in all browsers.
+</div>
 
 1) Adapt the page in which you are testing/writing the Math formulae
 
-<ul>
-<li>Ideally set the default output to SVG. Otherwise the user will need to select this from: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG</li>
-<li>Add code for a button to send the processed SVG to your PHP script</li>
-</ul>
+- Ideally set the default output to SVG. Otherwise the user will need to select this from: Math Settings &gt;&gt; Math 
+  Renderer &gt;&gt; SVG
+- Add code for a button to send the processed SVG to your PHP script
 
-Example of MathJax page
+# Example of MathJax page
 
 {% highlight php %}
 <!DOCTYPE html>
@@ -44,8 +50,9 @@ Example of MathJax page
 
 <h3>Inline equation (TeX)</h3>
 
-Finally, while display equations look good for a page of samples, the ability to mix math and text in a paragraph is also important. This expression \(\sqrt{3x-1}+(1+x)^2\) is an example of an inline equation.  As you see, MathJax equations can be used this way as well, without unduly disturbing the spacing between lines.
-
+Finally, while display equations look good for a page of samples, the ability to mix math and text in a paragraph is
+also important. This expression \(\sqrt{3x-1}+(1+x)^2\) is an example of an inline equation.  As you see, MathJax
+equations can be used this way as well, without unduly disturbing the spacing between lines.
 
 <!-- This block of code adds a button to send the processed HTML code to your script: example_test.php -->
 
@@ -66,11 +73,10 @@ Finally, while display equations look good for a page of samples, the ability to
 </html>
 {% endhighlight %}
 
-2) Now you need a PHP script (in this example: <span class="filename">example_test.php</span>) which processes the output code from MathJax so that it is readable by mPDF:
+2) Now you need a PHP script (in this example: <span class="filename">example_test.php</span>) which processes the output
+code from MathJax so that it is readable by mPDF:
 
-{% highlight php %}
 Example of 1st part of example_test.php
-{% endhighlight %}
 
 {% highlight php %}
 <?php
@@ -97,19 +103,19 @@ preg_match_all('/<svg([^>]*)style="(.*?)"/',$html,$m);
 
 for ($i=0;$i<count($m[0]);$i++) {
 
-    $style=$m[2][$i];
+	$style=$m[2][$i];
 
-    preg_match('/width: (.*?);/',$style, $wr);
+	preg_match('/width: (.*?);/',$style, $wr);
 
-    $w = $mpdf->ConvertSize($wr[1],0,$mpdf->FontSize) * $mpdf->dpi/25.4;
+	$w = $mpdf->ConvertSize($wr[1],0,$mpdf->FontSize) * $mpdf->dpi/25.4;
 
-    preg_match('/height: (.*?);/',$style, $hr);
+	preg_match('/height: (.*?);/',$style, $hr);
 
-    $h = $mpdf->ConvertSize($hr[1],0,$mpdf->FontSize) * $mpdf->dpi/25.4;
+	$h = $mpdf->ConvertSize($hr[1],0,$mpdf->FontSize) * $mpdf->dpi/25.4;
 
-    $replace = '<svg'.$m[1][$i].' width="'.$w.'" height="'.$h.'" style="'.$m[2][$i].'"';
+	$replace = '<svg'.$m[1][$i].' width="'.$w.'" height="'.$h.'" style="'.$m[2][$i].'"';
 
-    $html = str_replace($m[0][$i],$replace,$html);
+	$html = str_replace($m[0][$i],$replace,$html);
 
 }
 
@@ -177,15 +183,13 @@ preg_match_all('/<svg(.*?)<\/svg>/',$html,$m);
 
 for ($i=0;$i<count($m[0]);$i++) {
 
-    $svg = $m[0][$i];
+	$svg = $m[0][$i];
 
-    $svg = preg_replace('/>/',">\n",$svg);    // Just add some new lines
+	$svg = preg_replace('/>/',">\n",$svg);    // Just add some new lines
 
-    echo $svg."\n\n";
+	echo $svg."\n\n";
 
 }
-
-exit;
 {% endhighlight %}
 
 See an example: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a>

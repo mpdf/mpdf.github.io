@@ -6,11 +6,26 @@ permalink: /reference/mpdf-functions/shaded-box.html
 modification_time: 2015-08-05T12:01:11+00:00
 ---
 
-<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name.
+	As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it
+	is recommended where possible to use the preferred spelling.
+</div>
 
-`**Shaded_box**(**string** title[, **string** font[, **float** fontstyle[, **float** fontsize[, **float** width[, **string** style[, **float** radius[, **string** backgroundcolor[, **string** color[, **float** padding]]]]]]]]])
+`**Shaded_box**(**string** title
+[, **string** font
+[, **float** fontstyle
+[, **float** fontsize
+[, **float** width
+[, **string** style
+[, **float** radius
+[, **string** backgroundcolor
+[, **string** color
+[, **float** padding
+]]]]]]]]])
 
-` Writes a single line of text surrounded by a box directly to the PDF document at the current position. The box can have rounded corners, and be filled with background-colour.
+` Writes a single line of text surrounded by a box directly to the PDF document at the current position. The box can
+have rounded corners, and be filled with background-colour.
 
 <ul>
 <li>`title`

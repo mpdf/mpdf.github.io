@@ -12,25 +12,35 @@ SetDocTemplate – Specify an external PDF file to use as a template
 
 # Description
 
-void **SetDocTemplate** ( [ string <span class="parameter">$file</span> [, boolean <span class="parameter">$continue</span> ]])
+void **SetDocTemplate** (
+[ string <span class="parameter">$file</span>
+[, boolean <span class="parameter">$continue</span>
+]])
 
-Specify an external PDF file to use as a template. Each page of the external source PDF file will be used as a template for the corresponding page in your new document. If the current mPDF document has more pages than the external PDF source document, the last page will (optionally) continue to be used for any remaining pages.
+Specify an external PDF file to use as a template. Each page of the external source PDF file will be used as a template
+for the corresponding page in your new document. If the current mPDF document has more pages than the external PDF
+source document, the last page will (optionally) continue to be used for any remaining pages.
 
 # Parameters
 
 <span class="parameter">$file</span>
 
-This parameter specifies the source PDF file used as the template document.  <span class="parameter">$file</span> should be a relative path to a local file.
+This parameter specifies the source PDF file used as the template document.  <span class="parameter">$file</span>
+should be a relative path to a local file.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
 <span class="parameter">$continue</span> = 1|0|<span class="smallblock">TRUE</span>|<span class="smallblock">FALSE</span>
 
-If <span class="smallblock">TRUE</span> (or any positive value) it forces the last page of the source file to continue to be used as a template, if the current mPDF document contains more pages than the source file.
+If <span class="smallblock">TRUE</span> (or any positive value) it forces the last page of the source file to
+continue to be used as a template, if the current mPDF document contains more pages than the source file.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
-<div class="alert alert-info" role="alert">**Note:** If you want to turn the template off, just use `$mpdf-&gt;SetDocTemplate()` with no parameters.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> If you want to turn the template off, just use 
+    <code>$mpdf->SetDocTemplate()</code> with no parameters.
+ </div>
 
 # Changelog
 
@@ -68,18 +78,13 @@ $mpdf->WriteHTML('Hello World');
 // Subsequent pages from logoheader.pdf will be inserted on all subsequent pages
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
 
 # See Also
 
-<ul>
-<li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
-<li><a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page</li>
-<li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file</li>
-<li><a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document</li>
-<li><a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> - Insert an imported page from an external PDF file</li>
-<li><a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template</li>
-</ul>
-
+<a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates
+<a href="{{ "/reference/mpdf-functions/restartdoctemplate.html" | prepend: site.baseurl }}">RestartDocTemplate()</a> - Re-start the use of a Document template from the next page
+<a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
+<a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document
+<a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> - Insert an imported page from an external PDF file
+<a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template

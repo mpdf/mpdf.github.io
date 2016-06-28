@@ -28,11 +28,9 @@ Case-insensitive
 
 <span class="parameter">$value</span>
 
-<span class="parameter">$</span>Specifies the value for the given property.
+Specifies the value for the given property.
 
 # Examples
-
-Example #1
 
 {% highlight php %}
 <?php
@@ -44,7 +42,5 @@ $mpdf->SetDefaultBodyCSS('color', '#880000');
 $mpdf->WriteHTML('Hallow World should be in red');
 
 $mpdf->Output();
-
-?>
 {% endhighlight %}
 

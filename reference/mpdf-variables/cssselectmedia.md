@@ -14,9 +14,14 @@ CSSselectMedia – Selects which media-dependent CSS stylesheets to use
 
 void **CSSselectMedia**
 
-Selects which media-dependent CSS stylesheets to use. mPDF supports internal and external CSS stylesheets, if the media property is set to "all", or matches the value of <span class="parameter">$CSSselectMedia</span>. The <span class="parameter">$@media</span> selector within stylesheets is also supported.
+Selects which media-dependent CSS stylesheets to use. mPDF supports internal and external CSS stylesheets, if the
+media property is set to "all", or matches the value of <span class="parameter">$CSSselectMedia</span>. The
+<span class="parameter">$@media</span> selector within stylesheets is also supported.
 
-<div class="alert alert-info" role="alert">**Note:** This variable can be changed either in the configuration file <span class="filename">config.php</span>  or at runtime</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This variable can be changed either in the
+	configuration file <span class="filename">config.php</span>  or at runtime
+</div>
 
 # Values
 

@@ -12,7 +12,11 @@ SetHTMLHeader – Sets an HTML page header
 
 # Description
 
-void **SetHTMLHeader** ( string <span class="parameter">$html</span> [, string <span class="parameter">$side</span> [, boolean <span class="parameter">$write</span> ]])
+void **SetHTMLHeader** (
+string <span class="parameter">$html</span>
+[, string <span class="parameter">$side</span>
+[, boolean <span class="parameter">$write</span>
+]])
 
 Set an HTML page header.
 
@@ -26,7 +30,8 @@ This parameter specifies the content of the page header as a string of valid HTM
 
 <span class="parameter">$side</span>
 
-Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
+Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages
+in a <span class="smallblock">DOUBLE-SIDED</span> document.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
@@ -40,11 +45,21 @@ E - set the header for <span class="smallblock">EVEN</span> pages
 
 <span class="parameter">$write</span>
 
-If <span class="smallblock">TRUE</span> it forces the Header to be written immediately to the current page. Use if the header is being set after the new page has been added.
+If <span class="smallblock">TRUE</span> it forces the Header to be written immediately to the current page. Use if the
+header is being set after the new page has been added.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
-<div class="alert alert-info" role="alert">**Note:** Important Difference - <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without specifying a <span class="parameter">$side</span> sets both <span class="smallblock">ODD</span> &amp; <span class="smallblock">EVEN</span> headers/footers; **SetHTMLHeader()** and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a> without a <span class="parameter">$side</span> - sets <span class="smallblock">ODD</span> page header/footer only as default</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> Important Difference -
+	<a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and
+	<a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without
+	specifying a <span class="parameter">$side</span> sets both <span class="smallblock">ODD</span> &amp;
+	<span class="smallblock">EVEN</span> headers/footers; **SetHTMLHeader()**
+	and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a>
+	without a <span class="parameter">$side</span> - sets <span class="smallblock">ODD</span> page header/footer only
+	as default
+</div>
 
 # Changelog
 
@@ -61,14 +76,9 @@ If <span class="smallblock">TRUE</span> it forces the Header to be written immed
 
 For examples and further information please see:
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a></li>
-<li class="manual_boxlist"><a href="{{ "/headers-footers/method-2.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 2</a></li>
-</ul>
+- <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>
+- <a href="{{ "/headers-footers/method-2.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 2</a>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a></li>
-</ul>
-
+- <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a>

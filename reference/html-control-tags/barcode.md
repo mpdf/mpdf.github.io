@@ -12,11 +12,20 @@ barcode – Add a Barcode to the document
 
 # Description
 
-&lt;**barcode**  <span class="parameter">$code</span> [ <span class="parameter">$type</span> ] [ <span class="parameter">$text</span> ] [ <span class="parameter">$size</span> ] [ <span class="parameter">$height</span> ] [ <span class="parameter">$pr</span> ] /&gt;
+&lt;**barcode** 
+<span class="parameter">$code</span>
+[ <span class="parameter">$type</span> ] 
+[ <span class="parameter">$text</span> ] 
+[ <span class="parameter">$size</span> ] 
+[ <span class="parameter">$height</span> ] 
+[ <span class="parameter">$pr</span> ] /&gt;
 
 Add a Barcode to the document.
 
-<div class="alert alert-info" role="alert">**Note:** See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> and the example file for further information.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> 
+    and the example file for further information.
+</div>
 
 # Attributes
 
@@ -24,7 +33,8 @@ Add a Barcode to the document.
 
 Specifies the code to translate to a barcode.
 
-<span class="parameter">$code</span> for EAN13 / ISBN / ISSN / UPCA / UPCE can contain hyphens '-' but no other characters are allowed.
+<span class="parameter">$code</span> for EAN13 / ISBN / ISSN / UPCA / UPCE can contain hyphens '-' but no other 
+characters are allowed.
 
 Check-digits can be optionally included for EAN13 / ISBN / ISSN / UPCA / UPCE
 
@@ -84,7 +94,8 @@ Specifies the size of the barcode.
 
 <span class="parameter">$size (float)</span> will scale the nominal size of the barcode as a factor of 1
 
-<span class="parameter">$size="1.5"</span> will generate a barcode one and half times the height and width of the nominal size set in mPDF
+<span class="parameter">$size="1.5"</span> will generate a barcode one and half times the height and width of
+the nominal size set in mPDF
 
 NB Sizes between 0.8 and 2.0 are recommended for EAN13 and similar barcodes.
 
@@ -98,7 +109,8 @@ Specifies the height of the barcode.
 
 The height factor is applied after the <span class="parameter">$size </span>
 
-<span class="parameter">$size="2" height="0.5"</span> will generate a barcode of twice the nominal width, but with the nominal height.
+<span class="parameter">$size="2" height="0.5"</span> will generate a barcode of twice the nominal width, but with the 
+nominal height.
 
 NB Ignored for Postcode barcodes
 
@@ -110,7 +122,8 @@ Specifies the print ratio i.e. narrow:wide bar width for some types of barcode.
 
 Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODABAR and CODE11
 
-<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>)
+<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see 
+<a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>)
 
 # Changelog
 
@@ -125,43 +138,39 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 
 # Examples
 
-{% highlight php %}
-Examples
-{% endhighlight %}
-
-{% highlight php %}
+{% highlight html %}
 <barcode code="978-0-9542246-0" type="ISBN" height="0.66" text="1" />
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html %}
 <barcode code="04210000526" type="UPCE" />
-
-// Note the UPC-A code is required which is converted to UPCE
+<!-- Note the UPC-A code is required which is converted to UPCE -->
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html %}
 <barcode code="978-0-9542246-0-8 07" type="ISSNP2" text="1" />
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html %}
 <barcode code="01234567094987654321-01234567891" type="IMB" />
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html %}
 <barcode code="SN34RD1A" type="RM4SCC" />
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html %}
 <barcode code="54321068" type="I25" />
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html %}
 <barcode code="A34698735B" type="CODABAR" />
 {% endhighlight %}
 
 # Notes
 
-<div class="alert alert-info" role="alert">**Note:** The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
 
 vertical-align  (default: middle)
 
@@ -179,67 +188,42 @@ NB padding has defaults as 0(mm) if not specified
 
 Padding is in addition to any specified quiet zones/light margins.</div>
 
-{% highlight php %}
-Example with CSS
+## Example with CSS
 
-{% endhighlight %}
-
-{% highlight php %}
+{% highlight html %}
 <style>
-
 .barcode {
-
     padding: 1.5mm;
-
     margin: 0;
-
     vertical-align: top;
-
     color: #000044;
-
 }
-
 .barcodecell {
-
     text-align: center;
-
     vertical-align: middle;
-
 }
-
 </style>
 
 <div class="barcodecell"><barcode code="54321068" type="I25" class="barcode" /></div>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">**Note:** mPDF will generate a Checkdigit for most barcodes if required, which is added to the barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:</div>
+<div class="alert alert-info" role="alert">
+    <strong>Note:</strong> mPDF will generate a Checkdigit for most barcodes if required, which is added to the 
+    barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:
+</div>
 
-{% highlight php %}
-Example - Generating a checkdigit
-
-{% endhighlight %}
+## Example - Generating a checkdigit
 
 {% highlight php %}
 <?php
 
 // Must not contain any - or spaces
+include('../src/Barcode.php');
 
-include('../classes/barcode.php');
-
-$bc = new PDFBarcode();
-
+$bc = new \Mpdf\Barcode();
 echo $bc->getChecksum('9344543204454', 'C93');
-
-exit;
 {% endhighlight %}
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">Barcodes</a> - More information on types of barcode</li>
-</ul>
-
-<span class="jslink">
-
-</span>
-
+- <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">Barcodes</a> - More information on types of barcode

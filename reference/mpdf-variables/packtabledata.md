@@ -14,13 +14,18 @@ packTableData – Use binary packing of table data to reduce memory usage
 
 void **packTableData**
 
-Processing tables uses large amounts of internal memory, as the value are stored in an array. Enabling packTableData causes mPDF to pack the table data into a binary form saving considerable memory. However, the conversion to and from binary data takes a significant amount of time, and can increase processing time.
+Processing tables uses large amounts of internal memory, as the value are stored in an array. Enabling packTableData
+causes mPDF to pack the table data into a binary form saving considerable memory. However, the conversion to and from
+binary data takes a significant amount of time, and can increase processing time.
 
-<div class="alert alert-info" role="alert">**Note:** This variable can be changed either in the configuration file <span class="filename">config.php</span>  or at runtime</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> This variable can be changed either in the
+	configuration file <span class="filename">config.php</span>  or at runtime
+</div>
 
 # Values
 
-<span class="parameter">$packTableData</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$packTableData</span> = <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
 
 **Values**
 
@@ -43,7 +48,5 @@ Processing tables uses large amounts of internal memory, as the value are stored
 
 # See Also
 
-<ul>
-<li><a href="{{ "/reference/mpdf-variables/simpletables.html" | prepend: site.baseurl }}">simpleTables</a> - Disables complex table borders etc. to improve performance</li>
-</ul>
+- <a href="{{ "/reference/mpdf-variables/simpletables.html" | prepend: site.baseurl }}">simpleTables</a> - Disables complex table borders etc. to improve performance
 

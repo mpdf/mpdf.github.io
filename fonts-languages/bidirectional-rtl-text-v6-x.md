@@ -8,54 +8,57 @@ modification_time: 2015-08-05T11:59:35+00:00
 
 ## Document Directionality - RTL versus LTR
 
-The document has a baseline direction which is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:
+The document has a baseline direction which is 
+<acronym title="Left-to-Right document, used for most langauges">LTR</acronym> 
+or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:
 
-<ul>
-<li>text alignment in blocks for which text-align has not been specifically set</li>
-<li>layout of mirrored page-margins, columns, ToC and Indexes, headers / footers</li>
-</ul>
+- text alignment in blocks for which text-align has not been specifically set
+- layout of mirrored page-margins, columns, ToC and Indexes, headers / footers
 
-This base/document directionality is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> by default, and can be set by any of the following:
+This base/document directionality is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym> 
+by default, and can be set by any of the following:
 
-{% highlight php %}
-<?php
-
+```
 $mpdf->SetDirectionality('rtl');
 
 <html dir="rtl"> or <html style="direction: rtl;">
 
 <body dir="rtl"> or <body style="direction: rtl;">
-{% endhighlight %}
+```
 
 Base direction is an inherited CSS property, so will affect all content, unless direction is specified elswhere.
 
 ## Block-level Directionality
 
-Direction can be set for any HTML block elements e.g. &lt;div&gt;&lt;p&gt;&lt;table&gt;&lt;ul&gt; etc using:
+Direction can be set for any HTML block elements e.g. &lt;div&gt;&lt;p&gt;&lt;table&gt;&lt;ul&gt; etc using HTML or CSS:
 
-{% highlight php %}
-[HTML]
-
+{% highlight html %}
 <div style="direction: rtl;">
+{% endhighlight %}
 
 or
 
-[CSS stylesheet]
-
+{% highlight css %}
 div.right { direction: rtl; }
 {% endhighlight %}
 
-Block-level direction *may* affect text alignment, and will also influence text reversal in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
+Block-level direction *may* affect text alignment, and will also influence text reversal in 
+<acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
 
-Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.
+Note that margin/padding are NOT reversed by direction i.e. left-margin will still be left-margin in 
+<acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> state.
 
 ## Text alignment
 
-The default value for text-align is "a nameless value which is dependent on direction". However, once text-align is specified, it is respected and inherited by all descendants.
+The default value for text-align is "a nameless value which is dependent on direction". However, once text-align 
+is specified, it is respected and inherited by all descendants.
 
 ## Text Bidirectionality
 
-<div class="alert alert-info" role="alert">**Note:** <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.</div>
+<div class="alert alert-info" role="alert">
+	<strong>Note:</strong> <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType 
+    layout (OTL)</a> features must be enabled on a font for it to display right-to-left script.
+</div>
 
 Bi-directional text is supported in mPDF.
 
@@ -235,34 +238,28 @@ First Strong Isolate (FSI)
 
 ## First strong isolate (FSI)
 
-FSI is useful when including text within a paragraph where the directionality of the text is unknown. For example, if you are printing out a catalogue from a database of book titles and the number of readers, when some book titles are in right-to-left script, you may use this template:
+FSI is useful when including text within a paragraph where the directionality of the text is unknown. For example, 
+if you are printing out a catalogue from a database of book titles and the number of readers, when some book titles 
+are in right-to-left script, you may use this template:
 
-{% highlight php %}
+{% highlight html %}
 <li>Title: {TITLE} - {READERS} readers</li>
 {% endhighlight %}
 
 This would result in the following:
 
-<ul>
-<li>Title: Alice in Wonderland - 12390 readers</li>
-<li>Title: עליסה בארץ הפלאות, סיפור-ילדים מאת לואיס קרול - 17890 readers</li>
-</ul>
+- Title: Alice in Wonderland - 12390 readers
+- Title: עליסה בארץ הפלאות, סיפור-ילדים מאת לואיס קרול - 17890 readers
 
-{% highlight php %}
+{% highlight html %}
 <li>Title: <bdi>{TITLE}</bdi> - {READERS} readers</li>
 {% endhighlight %}
 
 Using BDI will result in the following:
 
-<ul>
-<li>Title: Alice in Wonderland - 12390 readers</li>
-<li>Title: עליסה בארץ הפלאות, סיפור-ילדים מאת לואיס קרול ‭- 1790 readers‬</li>
-</ul>
+- Title: Alice in Wonderland - 12390 readers
+- Title: עליסה בארץ הפלאות, סיפור-ילדים מאת לואיס קרול ‭- 1790 readers‬
 
 ## See Also
 
-<ul>
-<li class="manual_boxlist">
-
-<a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang</li>
-</ul>
+- <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> - Information on mPDF support for the HTML attribute lang
