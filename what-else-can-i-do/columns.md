@@ -6,8 +6,6 @@ permalink: /what-else-can-i-do/columns.html
 modification_time: 2015-08-05T12:00:13+00:00
 ---
 
-Columns
-
 Multiple columns can be used on a page. This can started and stopped anywhere in the document, by either:
 
 $mPDF-&gt;SetColumns(nCols[, vAlign [, gap ]]); or

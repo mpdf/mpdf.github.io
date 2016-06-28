@@ -20,39 +20,23 @@ From mPDF >= 5.7, CSS styles can be used to control layout of the ToC.
 
 At the end of the document, the ToC is generated, creating HTML code (internally) which looks like this:
 
-{% highlight php %}
+{% highlight html %}
 <div class="mpdf_toc" id="mpdf_toc_0">
-
     <div class="mpdf_toc_level_0">
-
         <a class="mpdf_toc_a" href="#__mpdfinternallink_1"><span class="mpdf_toc_t_level_0">Section 1</span></a>
-
         <dottab outdent="2em" />
-
         <a class="mpdf_toc_a" href="#__mpdfinternallink_1"><span class="mpdf_toc_p_level_0">5</span></a>
-
     </div>
-
     <div class="mpdf_toc_level_1">
-
         <a class="mpdf_toc_a" href="#__mpdfinternallink_2"><span class="mpdf_toc_t_level_1">Chapter 1</span></a>
-
         <dottab outdent="2em" />
-
         <a class="mpdf_toc_a" href="#__mpdfinternallink_2"><span class="mpdf_toc_p_level_1">5</span></a>
-
     </div>
-
     <div class="mpdf_toc_level_2">
-
         <a class="mpdf_toc_a" href="#__mpdfinternallink_3"><span class="mpdf_toc_t_level_2">Topic 1</span></a>
-
         <dottab outdent="2em" />
-
         <a class="mpdf_toc_a" href="#__mpdfinternallink_3"><span class="mpdf_toc_p_level_2">5</span></a>
-
     </div>
-
 </div>
 {% endhighlight %}
 
@@ -67,59 +51,45 @@ An example CSS stylesheet for this:
 </div>
 
 {% highlight css %}
-div.mpdf_toc {font-family: sans-serif; font-size: 11pt;}
-
-a.mpdf_toc_a  {text-decoration: none; color: black;}
-
-/* Whole line level 0 */
-
-div.mpdf_toc_level_0 {line-height: 1.5; margin-left: 0; padding-right: 2em;}
-
-/* padding-right should match e.g <dottab outdent="2em" /> 0 is default */
-
-/* Title level 0 - may be inside <a> */
-
-span.mpdf_toc_t_level_0 {font-weight: bold;}
-
-/* Page no. level 0 - may be inside <a> */
-
-span.mpdf_toc_p_level_0 {}
-
-/* Whole line level 1 */
-
-div.mpdf_toc_level_1 {margin-left: 2em; text-indent: -2em; padding-right: 2em;}
-
-/* padding-right should match <dottab outdent="2em" /> 2em is default */
-
-/* Title level 1 */
-
-span.mpdf_toc_t_level_1 {font-style: italic; font-weight: bold;}
-
-/* Page no. level 1 - may be inside <a> */
-
-span.mpdf_toc_p_level_1  {}
-
-/* Whole line level 2 */
-
-div.mpdf_toc_level_2 {margin-left: 4em; text-indent: -2em; padding-right: 2em;}
-
-/* padding-right should match <dottab outdent="2em" /> 2em is default */
-
-/* Title level 2 */
-
-span.mpdf_toc_t_level_2 {}
-
-/* Page no. level 2 - may be inside <a> */
-
-span.mpdf_toc_p_level_2 {}
+    div.mpdf_toc {font-family: sans-serif; font-size: 11pt;}
+    a.mpdf_toc_a  {text-decoration: none; color: black;}
+    
+    /* Whole line level 0 */
+    div.mpdf_toc_level_0 {line-height: 1.5; margin-left: 0; padding-right: 2em;}
+    
+    /* padding-right should match e.g <dottab outdent="2em" /> 0 is default */
+    /* Title level 0 - may be inside <a> */
+    span.mpdf_toc_t_level_0 {font-weight: bold;}
+    
+    /* Page no. level 0 - may be inside <a> */
+    span.mpdf_toc_p_level_0 {}
+    
+    /* Whole line level 1 */
+    div.mpdf_toc_level_1 {margin-left: 2em; text-indent: -2em; padding-right: 2em;}
+   
+    /* padding-right should match <dottab outdent="2em" /> 2em is default */
+    /* Title level 1 */
+    span.mpdf_toc_t_level_1 {font-style: italic; font-weight: bold;}
+    
+    /* Page no. level 1 - may be inside <a> */
+    span.mpdf_toc_p_level_1  {}
+    
+    /* Whole line level 2 */
+    div.mpdf_toc_level_2 {margin-left: 4em; text-indent: -2em; padding-right: 2em;}
+    
+    /* padding-right should match <dottab outdent="2em" /> 2em is default */
+    /* Title level 2 */
+    span.mpdf_toc_t_level_2 {}
+    
+    /* Page no. level 2 - may be inside <a> */
+    span.mpdf_toc_p_level_2 {}
 {% endhighlight %}
 
 For additional ToCs, these will have &lt;toc name=""&gt; attribute. Use the lowercase e.g. for name="Figures"
 
 {% highlight css %}
-#mpdf_toc_figures {font-family:Calibri; font-size: 10pt;}
-
-#mpdf_toc_figures span.mpdf_toc_t_level_0 {color: red; }
+    #mpdf_toc_figures {font-family:Calibri; font-size: 10pt;}
+    #mpdf_toc_figures span.mpdf_toc_t_level_0 {color: red; }
 {% endhighlight %}
 
 <div class="alert alert-info" role="alert">
@@ -135,14 +105,14 @@ You can automatically generate ToC entries from h1 - h6 tags, by setting the var
 
 Only the default ToC will be used if more than 1 ToCs are defined for the document.
 
-H1 - H6 must be written with uppercase when defining the array.
+H1 - H6 must be written with **uppercase** when defining the array.
 
 Example:
 
 {% highlight php %}
 <?php
 
-$mpdf->h2toc = array('H1'=>0, 'H2'=>1, 'H3'=>2);
+$mpdf->h2toc = array('H1' => 0, 'H2' => 1, 'H3' => 2);
 {% endhighlight %}
 
 NB This will ignores calls from inside ToC e.g. if &lt;tocpagebreak toc-prehtml="&lt;h3&gt;Table of Contents&lt;/h3&gt;"
