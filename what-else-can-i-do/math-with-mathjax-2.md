@@ -192,5 +192,4 @@ for ($i=0;$i<count($m[0]);$i++) {
 }
 {% endhighlight %}
 
-See an example: <a href="http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm">http://mpdf1.com/common/mpdf/examples/MathJaxSample.htm</a>
-
+See an example of output: <a href="https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm">https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm</a>

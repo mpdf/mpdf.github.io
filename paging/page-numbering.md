@@ -129,7 +129,7 @@ $mpdf->PageNumSubstitutions[] = array('from'=>1, 'reset'=> 0, 'type'=>'I', 'supp
 - <a href="{{ "/reference/mpdf-variables/aliasnbpg.html" | prepend: site.baseurl }}">aliasNbPg</a> - Specify the text to be replaced by the document page total
 - <a href="{{ "/reference/mpdf-variables/aliasnbpggp.html" | prepend: site.baseurl }}">aliasNbPgGp</a> - Specify the text to be replaced by the group page total
 
-Please also see <a href="http://mpdf1.com/documentation/table-of-contents">Table of Contents</a> for this special case.
+Please also see <a href="{{ "/what-else-can-i-do/table-of-contents.html" | prepend: site.baseurl }}">Table of Contents</a> for this special case.
 
 <div class="alert alert-info" role="alert">
     <strong>Note:</strong> startPageNums() and <span class="parameter">$showdefaultpagenos</span> are now deprecated and 
