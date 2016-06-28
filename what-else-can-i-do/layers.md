@@ -10,7 +10,8 @@ modification_time: 2015-08-05T12:00:14+00:00
 
 CSS "z-index" can be used to utilise layers in the PDF document.
 
-CSS can set the z-index for any block element or image (default = 0). This does not work on block elements with fixed or absolute position.
+CSS can set the z-index for any block element or image (default = 0). This does not work on block elements 
+with fixed or absolute position.
 
 ## Set the Initial state for each layer
 
@@ -32,10 +33,8 @@ $mpdf->layerDetails[z]['name']='Correct Answers';
 
 Note:
 
-<ul>
-<li>Using layers automatically changes the resulting PDF document to PDF 1.5 version (which is incompatible with PDFA and PDFX in mPDF).</li>
-<li>You cannot nest layers - inner values will be ignored</li>
-</ul>
+- Using layers automatically changes the resulting PDF document to PDF 1.5 version (which is incompatible with PDFA and PDFX in mPDF).
+- You cannot nest layers - inner values will be ignored
 
 ## Display the Layers pane in PDF document viewer
 

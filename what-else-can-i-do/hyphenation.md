@@ -10,7 +10,8 @@ modification_time: 2015-08-05T12:00:01+00:00
 
 Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)
 
-The CSS property <span class="parameter">$hyphens</span> is supported on block elements (e.g. &lt;div&gt;), inline elements (e.g. &lt;span&gt;) and &lt;td/th&gt;.
+The CSS property <span class="parameter">$hyphens</span> is supported on block elements (e.g. &lt;div&gt;), 
+inline elements (e.g. &lt;span&gt;) and &lt;td/th&gt;.
 
 hyphens: none | manual | auto
 
@@ -27,7 +28,8 @@ Words are not broken at line breaks, even if characters inside the word suggest 
 
 manual
 
-Words are only broken at line breaks where there are characters inside the word that suggest line break opportunities. Characters can be explicit or conditional.
+Words are only broken at line breaks where there are characters inside the word that suggest line break opportunities. 
+Characters can be explicit or conditional.
 
 auto
 
@@ -37,7 +39,8 @@ SHY inside the word take priority over hyphenation points determined by other re
 
 ## Soft hyphens
 
-The soft-hyphen character (U+00AD or &amp;shy;) and the &lt;wbr&gt; tag (from mPDF 5.7) are supported in <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.
+The soft-hyphen character (U+00AD or &amp;shy;) and the &lt;wbr&gt; tag (from mPDF 5.7) are supported in 
+<a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.
 
 ## Automatic hyphenation
 
@@ -47,7 +50,8 @@ Automatic hyphenation is set using CSS:
 hyphens: auto;
 {% endhighlight %}
 
-Automatic hyphenation is based on the commonly used TeX algorithm and requires pattern files for each language. The following languages are supplied with mPDF 2.5:
+Automatic hyphenation is based on the commonly used TeX algorithm and requires pattern files for each language. 
+The following languages are supplied with mPDF 2.5:
 
 <table class="table">
     <tbody>
@@ -134,7 +138,10 @@ Pattern checking can be fine-tuned by 4 variables if required:
         <tr>
             <td><span class="parameter">$SHYcharmax</span></td>
             <td>10</td>
-            <td>Maximum number of characters in a pattern used for pattern checking (10 usually is more than enough). this is NOT the maximum length of words to be checked.</td>
+            <td>
+                Maximum number of characters in a pattern used for pattern checking (10 usually is more than enough). 
+                This is NOT the maximum length of words to be checked.
+            </td>
         </tr>
     </tbody>
 </table>

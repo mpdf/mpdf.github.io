@@ -55,18 +55,18 @@ for defining the gradient axis (linear gradients) or shape and extent (radial gr
 
 For more details see:
 
-- Mozilla linear - <a href="https://developer.mozilla.org/en/CSS/-moz-linear-gradient">https://developer.mozilla.org/en/CSS/-moz-linear-gradient</a>
-- Mozilla radial - <a href="https://developer.mozilla.org/en/CSS/-moz-radial-gradient">https://developer.mozilla.org/en/CSS/-moz-radial-gradient</a>
-- Mozilla gradients use - <a href="https://developer.mozilla.org/en/Using_gradients">https://developer.mozilla.org/en/Using_gradients</a>
-- CSS3 linear gradients - <a href="http://dev.w3.org/csswg/css3-images/#linear-gradients">http://dev.w3.org/csswg/css3-images/#linear-gradients</a>
-- CSS3 radial gradients - <a href="http://dev.w3.org/csswg/css3-images/#radial-gradients">http://dev.w3.org/csswg/css3-images/#radial-gradients</a>
+- Mozilla linear - https://developer.mozilla.org/en/CSS/-moz-linear-gradient
+- Mozilla radial - https://developer.mozilla.org/en/CSS/-moz-radial-gradient
+- Mozilla gradients use - https://developer.mozilla.org/en/Using_gradients
+- CSS3 linear gradients - http://dev.w3.org/csswg/css3-images/#linear-gradients
+- CSS3 radial gradients - http://dev.w3.org/csswg/css3-images/#radial-gradients
 
 ## Background-gradient (Old form - deprecated)
 
 Background gradient can be set as a linear or radial gradient between two colours. Background gradients can be set on
 all block elements e.g. P, DIV, H1-H6, as well as @page and on BODY.
 
-{% highlight php %}
+{% highlight css %}
 background-gradient: linear #c7cdde #f0f2ff 0 1 0 0.5;
 {% endhighlight %}
 
@@ -75,7 +75,7 @@ The four numbers are coordinates in the form (x1, y1, x2, y2) which defines the 
 
 <img src="files/images/linear_gradient_coords.jpg" alt="linear_gradient_coords.jpg" width="355" height="291" />
 
-{% highlight php %}
+{% highlight css %}
 background-gradient: radial #00FFFF #FFFF00 0.5 0.5 0.5 0.5 0.65;
 {% endhighlight %}
 

@@ -6,9 +6,11 @@ permalink: /what-else-can-i-do/images.html
 modification_time: 2015-08-05T12:00:04+00:00
 ---
 
-Images are supported by mPDF: GIF, PNG, JPG, WMF, SVG, BMP and generated images from <acronym title="PHP: Hypertext Preprocessor">PHP </acronym> scripts.
+Images are supported by mPDF: GIF, PNG, JPG, WMF, SVG, BMP and generated images from 
+<acronym title="PHP: Hypertext Preprocessor">PHP </acronym> scripts.
 
-Transparent GIF images are supported, and so are interlaced and transparent PNG files, including transparency using alpha channel.
+Transparent GIF images are supported, and so are interlaced and transparent PNG files, 
+including transparency using alpha channel.
 
 <table class="table">
     <tbody>
@@ -48,17 +50,18 @@ Transparent GIF images are supported, and so are interlaced and transparent PNG 
 
 Images are handled in mPDF as in-line elements.
 
-Unlike the HTML specification, the width and height attributes of IMG will additionally take different dimensions e.g. mm, pt etc. 
+Unlike the HTML specification, the width and height attributes of IMG will additionally take different 
+dimensions e.g. mm, pt etc. 
 
-{% highlight php %}
+{% highlight html %}
 <img src="image.jpg" width="90" /> // 90 pixels, just like HTML
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html %}
 <img src="image.jpg" width="90mm" />  // non-standard support for dimensions
 {% endhighlight %}
 
-{% highlight php %}
+{% highlight html %}
 <img src="image.jpg" style="width:90mm;" />  // Can also use CSS
 {% endhighlight %}
 
@@ -70,9 +73,9 @@ $mpdf->img_dpi = 96;
 {% endhighlight %}
 
 In addition, many CSS style properties are supported including <span class="parameter">$vertical-align</span>, as well
- as some custom attributes such as <span class="parameter">$opacity</span> and <span class="parameter">$rotate</span>. 
- (See <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> 
- and <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)
+as some custom attributes such as <span class="parameter">$opacity</span> and <span class="parameter">$rotate</span>. 
+(See <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> 
+and <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">HTML attributes</a>)
 
 Images can be used in:
 
