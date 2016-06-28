@@ -44,7 +44,6 @@ $e = strtr($e, $this->compat);
 {% endhighlight %}
 
 Then add the following in your script
-(use `$this->compat` if you use it in the <span class="filename">config.php</span> file) after declaring the class `$mpdf`:
 
 {% highlight php %}
 <?php

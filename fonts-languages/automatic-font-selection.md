@@ -70,8 +70,8 @@ which do not appear in other Latin script langauges, and similarly analysis of t
 Arabic, Farsi, Pashto, Urdu and Sindhi. If active, the text will then be marked with a specific language tag e.g. 
 "vi", "pa", "ur", "fa" etc.
 
-These features can be disabled or enabled (default) using the variables `$mpdf->autoVietnamese` 
-`$mpdf->autoArabic`, either in <span class="filename">config.php</span> or at runtime.
+These features can be disabled or enabled (default) using the `autoVietnamese` and `autoArabic`
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>.
 
 # autoLangToFont
 

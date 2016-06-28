@@ -6,7 +6,7 @@ permalink: /configuration/configuration-files-v6-x.html
 modification_time: 2015-08-05T11:59:39+00:00
 ---
 
-(mPDF >= 6.0)
+(mPDF >= 6.0 && < 7.0)
 
 Four configuration files are included in the root folder of mPDF:
 

@@ -10,7 +10,7 @@ mPDF >= 5.1
 
 Set the default bleed margin in millimeters used in @page media.
 
-Default set in config.php
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
 Default value: 5
 

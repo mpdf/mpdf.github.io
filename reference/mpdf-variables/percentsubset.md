@@ -22,7 +22,7 @@ Control fonts/subsetting
 
 // 100 will force always to subset
 
-Default set in config.php
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
 Default value: 30
 

@@ -10,7 +10,7 @@ mPDF >= 5.0
 
 Control SmallCaps appearance
 
-Default set in config.php
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
 Default value: 115;    // % to stretch small caps horizontally
 

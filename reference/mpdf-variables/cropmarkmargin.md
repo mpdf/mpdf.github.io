@@ -10,7 +10,7 @@ mPDF >= 5.1
 
 Distance of crop mark from margin in mm
 
-Default set in config.php
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
 Default value: 8
 

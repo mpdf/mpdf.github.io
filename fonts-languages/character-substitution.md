@@ -29,7 +29,8 @@ will be substituted. Because they are displayed using a different font they may 
 
 In Unicode Truetype files, the limitation is whether the font file contains a "glyph" for each character in the document.
 Character substitution (i.e. substituting a different font solely to display that character) can be enabled by setting 
-the configuration variable in <span class="filename">config.php</span>:
+the `useSubstitution` 
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 
 {% highlight php %}
 <?php

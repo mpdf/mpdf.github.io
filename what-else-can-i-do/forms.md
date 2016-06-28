@@ -10,9 +10,9 @@ mPDF can generate a static view of HTML forms and their elements, or (from mPDF 
 
 # "Active" Forms
 
-Active forms can be generated which can either be printed, or the data submitted to a URI. The variable
-`$this->useActiveForms` should be set to <span class="smallblock">TRUE</span> either at run-time or in
-<span class="filename">config.php</span>
+Active forms can be generated which can either be printed, or the data submitted to a URI. The 
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
+`useActiveForms` should be set to <span class="smallblock">TRUE</span>
 
 ## Compatibility &amp; Limitations
 
@@ -27,16 +27,14 @@ Brief testing with the in-built Google Chrome PDF Reader also shows some limited
 
 Known limitations include:
 
-<ul>
-<li>cannot save a completed form</li>
-<li>cannot save or export FDF data locally</li>
-<li>cannot "sign" PDF forms</li>
-<li>incompatible with rotated tables, HTML headers, and "keep-with-table" (is compatible with page-break:avoid - but not
-	if rotated - and columns)</li>
-<li>cannot use SIP/SMP fonts for active form elements (ones which are subset as SIP/SMP)</li>
-<li>button images cannot be vector images (SVG or WMF)</li>
-<li>(active) radio buttons do not work inside a DIV fixed/absolute position (or with page-break-inside: avoid)</li>
-</ul>
+- cannot save a completed form
+- cannot save or export FDF data locally
+- cannot "sign" PDF forms
+- incompatible with rotated tables, HTML headers, and "keep-with-table" (is compatible with page-break:avoid - but not
+	if rotated - and columns)
+- cannot use SIP/SMP fonts for active form elements (ones which are subset as SIP/SMP)
+- button images cannot be vector images (SVG or WMF)
+- (active) radio buttons do not work inside a DIV fixed/absolute position (or with page-break-inside: avoid)
 
 ## Creating a valid Active Form
 
@@ -70,9 +68,9 @@ which can be applied.
 
 ## Exporting (submitting) data
 
-Data from forms can be submitted to a URI in either HTML or XFDF format (cf. <span class="filename">config.php</span>).
+Data from forms can be submitted to a URI in either HTML or XFDF format
 XFDF is a form of XML and is recommended, because of encoding issues. See <span class="filename">formsubmit.php</span>
-in the example folder for ideas on how to handle the submitted data.
+in the [example repository](https://github.com/mpdf/mpdf-examples) for ideas on how to handle the submitted data.
 
 NB A submitted radio button field name is doubled with an underscore i.e. "myButtonName_myButtonName"
 
@@ -122,7 +120,8 @@ Adobe Reader 10 largely ignores any control one tries to place on the appearance
 own thing. In general, the `font-size` set for the form field will determine its size, and for text/textarea and select
 fields, `color` will determine the font colour used. CSS values for `border-color` or `background-color` will work for
 (non-image) buttons, textarea and text fields. Other things like the border style and width can be altered by
-configurable variables in <span class="filename">`config.php`</span> but the level of control is disappointing.
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>
+but the level of control is disappointing.
 
 Radio buttons and check-boxes use Adobe Reader's own icons, but Foxit uses information provided by the PDF file. The
 variable `$this->formUseZapD` determines whether ZapfDingbat symbols are used, or mPDF's appearance streams designed
