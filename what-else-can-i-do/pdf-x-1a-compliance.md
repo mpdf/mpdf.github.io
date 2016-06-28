@@ -16,7 +16,7 @@ need to be CMYK or spot colors.
 A PDF/X document can be identified as such through PDF/X-specific metadata located in the document. However, 
 claiming to be PDF/X compliant and being so are not necessarily the same.
 
-**Important**: mPDF is ***not guaranteed ***to produce fully PDF/X-1a compliant files in all circumstances. 
+**Important**: mPDF is ***not guaranteed*** to produce fully PDF/X-1a compliant files in all circumstances. 
 It is the users responsibility to check compliance if this is essential.
 
 # mPDF and PDF/X-1a compliance

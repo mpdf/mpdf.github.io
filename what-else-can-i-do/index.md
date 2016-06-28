@@ -37,7 +37,7 @@ When an Index is inserted in the PDF document using `<indexinsert>` or `InsertIn
 
 CSS stylesheets can thus be used to control the layout of the Index e.g.:
 
-{% highlight php %}
+{% highlight css %}
 /* For Index */
 
 div.mpdf_index_main {

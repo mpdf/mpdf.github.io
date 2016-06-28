@@ -16,6 +16,4 @@ by a formfeed in the output file.
 
 # See
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-utilities/preparepretext.html" | prepend: site.baseurl }}">preparePreText()</a></li>
-</ul>
+- <a href="{{ "/reference/mpdf-utilities/preparepretext.html" | prepend: site.baseurl }}">preparePreText()</a>

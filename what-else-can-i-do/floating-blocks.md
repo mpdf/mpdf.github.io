@@ -37,7 +37,7 @@ Margin-right can still be set for a float:right and vice-versa.
 
 The CSS property "clear" can be set on any block element (p, div etc.), and also &lt;hr&gt; or &lt;br&gt; elements.
 
-{% highlight html %}
+{% highlight css %}
 clear: right|left|both
 {% endhighlight %}
 
@@ -47,24 +47,20 @@ clear: right|left|both
 <h4>CSS Float</h4>
 
 <div>
+    
+    Some text to start with
+    
+    <div style="float: right; width: 28%;">
+        This is text that is set to float:right.
+    </div>
+    
+    <div style="float: left; width: 54%;">
+        This is text that is set to float:left.
+    </div>
 
-Some text to start with
-
-<div style="float: right; width: 28%;">
-
-This is text that is set to float:right.
-
-</div>
-
-<div style="float: left; width: 54%;">
-
-This is text that is set to float:left.
-
-</div>
-
-<div style="clear: both; margin: 0pt; padding: 0pt; "></div>
-
-This is text that follows the clear:both.
+    <div style="clear: both; margin: 0pt; padding: 0pt; "></div>
+    
+    This is text that follows the clear:both.
 
 </div>
 {% endhighlight %}

@@ -609,12 +609,6 @@
             slug: capture-html-output
             parent_title: 'What Else Can I Do'
         -
-            title: 'Saving to a database'
-            url: indexdd7c.html
-            permalink: /what-else-can-i-do/saving-to-a-database.html
-            slug: saving-to-a-database
-            parent_title: 'What Else Can I Do'
-        -
             title: 'Math Formulae with MathJax'
             url: index0d3a.html
             permalink: /what-else-can-i-do/math-formulae-with-mathjax.html
