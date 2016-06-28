@@ -37,7 +37,7 @@ If you pass a large chunk of code to WriteHTML() whether as CSS styles or the ma
 page output, or that section of code missing.
 
 The PHP function preg_replace() has a maximum string length it will parse (by default this is often about 100000
-	characters). Over this, PHP silently returns a null value. So long strings of code will be replaced by nothing!
+characters). Over this, PHP silently returns a null value. So long strings of code will be replaced by nothing!
 
 You may be able to increase the value of
 <a href="http://www.php.net/manual/en/pcre.configuration.php#ini.pcre.backtrack-limit">pcre.backtrack_limit</a>
