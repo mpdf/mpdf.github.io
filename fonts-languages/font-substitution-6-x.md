@@ -6,6 +6,8 @@ permalink: /fonts-languages/font-substitution-6-x.html
 modification_time: 2015-08-05T11:59:38+00:00
 ---
 
+(mPDF >= 6.0)
+
 If a font or default font is declared in HTML or CSS, the font that is actually set is determined by:
 
 ## Standard use

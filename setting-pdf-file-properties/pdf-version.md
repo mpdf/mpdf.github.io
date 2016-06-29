@@ -10,11 +10,9 @@ mPDF >=4.3 produces PDF files which are specified as version %PDF-1.4.
 
 1.4 is the lowest specification which contains all the features used in mPDF - with a few minor exceptions:
 
-<ul>
-<li>SetDisplayPreferences($preferences) allows the option to include "NoPrintScaling" (PDF-1.6)</li>
-<li>Using mirrorMargins, mPDF will set by default /Duplex /DuplexFlipLongEdge (PDF-1.7)</li>
-<li>The "Subject" field of Annotations (PDF-1.5)</li>
-</ul>
+- SetDisplayPreferences($preferences) allows the option to include "NoPrintScaling" (PDF-1.6)
+- Using mirrorMargins, mPDF will set by default /Duplex /DuplexFlipLongEdge (PDF-1.7)
+- The "Subject" field of Annotations (PDF-1.5)
 
 ## Previous versions
 
