@@ -14,26 +14,21 @@ least in some form).
 
 Some of the things you can change are:
 
-<ul>
-<li>the initial parameter used to call mPDF e.g. `$mpdf = new mPDF('c')`</li>
-<li>configuration variables set in <span class="filename">config.php</span> see
-	<a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">mPDF Variables - Overview</a>
+- the initial parameter used to call mPDF e.g. `$mpdf = new mPDF('c')`
+- configuration variables set in <span class="filename">config.php</span> see
+	<a href="{{ " /reference/mpdf-variables/overview.html " | prepend: site.baseurl }}">mPDF Variables - Overview</a> (many of those configuration variable can also be set at runtime on a 'per-script' basis)
+- font details in <span class="filename">config_fonts.php</span>
+- language/font details in <span class="filename">config_lang2fonts.php</span>
+- initial style settings in <span class="filename">config.php</span> or <span class="filename">mpdf.css</span>
 
-(many of those configuration variable can also be set at runtime on a 'per-script' basis)</li>
-<li>font details in <span class="filename">config_fonts.php</span></li>
-<li>language/font details in <span class="filename">config_lang2fonts.php</span></li>
-<li>initial style settings in <span class="filename">config.php</span> or <span class="filename">mpdf.css</span></li>
-</ul>
 
 ## Main choices
 
 Some of the major considerations are:
 
-<ul>
-<li>whether to restrict the document to core non-embedded fonts</li>
-<li>whether, or how, to subset embedded fonts</li>
-<li>handling of languages which require special fonts, including automatic font selection and character substitution</li>
-</ul>
+- whether to restrict the document to core non-embedded fonts
+- whether, or how, to subset embedded fonts
+- handling of languages which require special fonts, including automatic font selection and character substitution
 
 # Core non-embedded fonts
 
@@ -104,18 +99,13 @@ translation variable `$this->fonttrans` in <span class="filename">config_fonts.p
 <?php
 
 $this->fonttrans = array(
-
- 'arial' => 'chelvetica',
-
- 'helvetica' => 'chelvetica',
-
- 'timesnewroman' => 'ctimes',
-
- 'times' => 'ctimes',
-
- 'couriernew' => 'ccourier',
-
- 'courier' => 'ccourier',
+	'arial' => 'chelvetica',
+	'helvetica' => 'chelvetica',
+	'timesnewroman' => 'ctimes',
+	'times' => 'ctimes',
+	'couriernew' => 'ccourier',
+	'courier' => 'ccourier',
+);
 {% endhighlight %}
 
 # Languages/Scripts which require special fonts
@@ -124,11 +114,9 @@ Most browsers / PC applications automatically select / substitute appropriate fo
 this by default (additional processing resources required). there are two situations when you need to consider the method
 of font selection:
 
-<ul>
-<li>the text contains characters which are not covered by the initial font selected</li>
-<li>the text contains complex script requiring special treatment i.e.
-<a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a></li>
-</ul>
+- the text contains characters which are not covered by the initial font selected
+- the text contains complex script requiring special treatment i.e.
+  <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>
 
 The DejaVu fonts distributed with mPDF contain characters (glyphs) to display most Western and Eastern European
 languages, Cyrillic text, Baltic languages, Turkish, and Greek. Languages which usually need special consideration

@@ -64,109 +64,109 @@ Bi-directional text is supported in mPDF.
 
 1) The following Unicode characters are supported, and can be inserted directly in the text as HTML entities:
 
-<table class="table"> <tbody>
-<tr>
-<td>LRE</td>
-<td>U+202A</td>
-<td>LEFT-TO-RIGHT EMBEDDING</td>
-<td>&amp;#x202A;</td>
-</tr>
-<tr>
-<td>RLE</td>
-<td>U+202B</td>
-<td>RIGHT-TO-LEFT EMBEDDING</td>
-<td>&amp;#x202B;</td>
-</tr>
-<tr>
-<td>LRO</td>
-<td>U+202D</td>
-<td>LEFT-TO-RIGHT OVERRIDE</td>
-<td>&amp;#x202D;</td>
-</tr>
-<tr>
-<td>RLO</td>
-<td>U+202E</td>
-<td>RIGHT-TO-LEFT OVERRIDE</td>
-<td>&amp;#x202E;</td>
-</tr>
-<tr>
-<td>PDF</td>
-<td>U+202C</td>
-<td>POP DIRECTIONAL FORMATTING</td>
-<td>&amp;#x202C;</td>
-</tr>
-<tr>
-<td>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>LRE</td>
+            <td>U+202A</td>
+            <td>LEFT-TO-RIGHT EMBEDDING</td>
+            <td>&amp;#x202A;</td>
+        </tr>
+        <tr>
+            <td>RLE</td>
+            <td>U+202B</td>
+            <td>RIGHT-TO-LEFT EMBEDDING</td>
+            <td>&amp;#x202B;</td>
+        </tr>
+        <tr>
+            <td>LRO</td>
+            <td>U+202D</td>
+            <td>LEFT-TO-RIGHT OVERRIDE</td>
+            <td>&amp;#x202D;</td>
+        </tr>
+        <tr>
+            <td>RLO</td>
+            <td>U+202E</td>
+            <td>RIGHT-TO-LEFT OVERRIDE</td>
+            <td>&amp;#x202E;</td>
+        </tr>
+        <tr>
+            <td>PDF</td>
+            <td>U+202C</td>
+            <td>POP DIRECTIONAL FORMATTING</td>
+            <td>&amp;#x202C;</td>
+        </tr>
+        <tr>
+            <td>
 
-</td>
-<td>
+            </td>
+            <td>
 
-</td>
-<td>
+            </td>
+            <td>
 
-</td>
-<td>
+            </td>
+            <td>
 
-</td>
-</tr>
-<tr>
-<td>LRI</td>
-<td>U+2066</td>
-<td>LEFT-TO-RIGHT ISOLATE</td>
-<td>&amp;#x2066;</td>
-</tr>
-<tr>
-<td>RLI</td>
-<td>U+2067</td>
-<td>RIGHT-TO-LEFT ISOLATE</td>
-<td>&amp;#x2067;</td>
-</tr>
-<tr>
-<td>FSI</td>
-<td>U+2068</td>
-<td>FIRST STRONG ISOLATE</td>
-<td>&amp;#x2068;</td>
-</tr>
-<tr>
-<td>PDI</td>
-<td>U+2069</td>
-<td>POP DIRECTIONAL ISOLATE</td>
-<td>&amp;#x2069;</td>
-</tr>
-<tr>
-<td>
+            </td>
+        </tr>
+        <tr>
+            <td>LRI</td>
+            <td>U+2066</td>
+            <td>LEFT-TO-RIGHT ISOLATE</td>
+            <td>&amp;#x2066;</td>
+        </tr>
+        <tr>
+            <td>RLI</td>
+            <td>U+2067</td>
+            <td>RIGHT-TO-LEFT ISOLATE</td>
+            <td>&amp;#x2067;</td>
+        </tr>
+        <tr>
+            <td>FSI</td>
+            <td>U+2068</td>
+            <td>FIRST STRONG ISOLATE</td>
+            <td>&amp;#x2068;</td>
+        </tr>
+        <tr>
+            <td>PDI</td>
+            <td>U+2069</td>
+            <td>POP DIRECTIONAL ISOLATE</td>
+            <td>&amp;#x2069;</td>
+        </tr>
+        <tr>
+            <td>
 
-</td>
-<td>
+            </td>
+            <td>
 
-</td>
-<td>
+            </td>
+            <td>
 
-</td>
-<td>
+            </td>
+            <td>
 
-</td>
-</tr>
-<tr>
-<td>LRM</td>
-<td>U+200E</td>
-<td>LEFT-TO-RIGHT MARK</td>
-<td>&amp;#x200E;</td>
-</tr>
-<tr>
-<td>RLM</td>
-<td>U+200F</td>
-<td>RIGHT-TO-LEFT MARK</td>
-<td>&amp;#x200F;</td>
-</tr>
-</tbody> </table>
+            </td>
+        </tr>
+        <tr>
+            <td>LRM</td>
+            <td>U+200E</td>
+            <td>LEFT-TO-RIGHT MARK</td>
+            <td>&amp;#x200E;</td>
+        </tr>
+        <tr>
+            <td>RLM</td>
+            <td>U+200F</td>
+            <td>RIGHT-TO-LEFT MARK</td>
+            <td>&amp;#x200F;</td>
+        </tr>
+    </tbody>
+</table>
 
 2) The following HTML tags are supported:
 
-<ul>
-<li>&lt;bdo&gt; (NB the "dir" attribute is mandatory on &lt;bdo&gt;)</li>
-<li>&lt;bdi&gt; (HTML5)</li>
-</ul>
+- &lt;bdo&gt; (NB the "dir" attribute is mandatory on &lt;bdo&gt;)
+- &lt;bdi&gt; (HTML5)
 
 3) The CSS property "unicode-bidi" is supported with the following (CSS3) values: normal | embed | isolate | bidi-override | isolate-override | plaintext.
 
@@ -174,11 +174,9 @@ See <a href="http://www.w3.org/TR/css3-writing-modes/#unicode-bidi">http://www.w
 
 "unicode-bidi" is supported on block level elements as well as in-line elements, but note that:
 
-<ul>
-<li>the value is not inherited to child blocks</li>
-<li>using "embed" or "isolate" has no effect on block level boxes</li>
-<li>"isolate-override" is equivalent to "bidi-override" on block level boxes</li>
-</ul>
+- the value is not inherited to child blocks
+- using "embed" or "isolate" has no effect on block level boxes
+- "isolate-override" is equivalent to "bidi-override" on block level boxes
 
 NB dir="auto" is not supported generally, but it is supported for &lt;bdi&gt; (has the same effect as if omitted) to use First Strong Isolate (FSI).
 

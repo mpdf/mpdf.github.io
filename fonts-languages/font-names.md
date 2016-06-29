@@ -8,30 +8,19 @@ modification_time: 2015-08-05T11:59:28+00:00
 
 ## CSS font-family name
 
-Every font family has a name which is defined in the font file. This is the name by which your computer OS registers and recognises the font family.
+Every font family has a name which is defined in the font file. This is the name by which your computer OS 
+registers and recognises the font family.
 
-This is also the name used in CSS e.g.
-
-{% highlight php %}
-
-
-{% endhighlight %}
+This is also the name used in CSS.
 
 ## mPDF font-family name
 
-<p>This is the name used by mPDF internally to process fonts. This could be anything you like, but by default mPDF will
-	convert CSS font-family names by removing any spaces and changing to lowercase. Reading the CSS name above, mPDF will
-	look for a "mPDF font-family name" of 'trebuchetms'.
+This is the name used by mPDF internally to process fonts. This could be anything you like, but by default mPDF will
+convert CSS font-family names by removing any spaces and changing to lowercase. Reading the CSS name above, mPDF will
+look for a "mPDF font-family name" of 'trebuchetms'.
 
-This means that this will also work:
-
-{% highlight php %}
-
-
-{% endhighlight %}
-
-<p>Next it will look for a translation in `$this->fonttrans` in the `$config` constructor parameter. Imagine that we also
-	wished to recognise 'Trebuchet', we would add:
+Next it will look for a translation in `$this->fonttrans` in the `$config` constructor parameter. Imagine that we also
+wished to recognise 'Trebuchet', we would add:
 
 {% highlight php %}
 <?php
@@ -61,14 +50,12 @@ These should be defined in `$config` constructor parameter as an array:
 <?php
 
 $this->fontdata = [
-
     "trebuchetms" => [
         'R' => "trebuc.ttf",
         'B' => "trebucbd.ttf",
         'I' => "trebucit.ttf",
         'BI' => "trebucbi.ttf",
     ],
-
 ];
 {% endhighlight %}
 

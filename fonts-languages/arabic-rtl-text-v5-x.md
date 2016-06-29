@@ -62,11 +62,9 @@ specified, it is respected and inherited by all descendants.
 
 ## Directionality in Tables
 
-<ul>
-<li>direction can only be set on the top-level element of nested lists</li>
-<li>direction can only be set on &lt;table&gt;, NOT on &lt;thead&gt;&lt;tbody&gt;&lt;td&gt; etc.</li>
-<li>nested tables CAN have different directions</li>
-</ul>
+- direction can only be set on the top-level element of nested lists
+- direction can only be set on &lt;table&gt;, NOT on &lt;thead&gt;&lt;tbody&gt;&lt;td&gt; etc.
+- nested tables CAN have different directions
 
 ## Text Bidirectionality
 

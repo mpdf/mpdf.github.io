@@ -22,15 +22,13 @@ and GDEF tables for now. mPDF does *not *support BASE and JSTF at present.
 
 Other mPDF features to enhance complex scripts:
 
-<ul>
-<li>Bidirectional (Bidi) algorithm for right-to-left (RTL) text</li>
-<li>support for Kashida for justification of arabic scripts</li>
-<li>partial support for CSS3 optional font features e.g. font-feature-settings, font-variant</li>
-<li>improved "autofont" capability to select fonts automatically for any script</li>
-<li>support for CSS :lang selector</li>
-<li>dictionary-based line-breaking for Lao, Thai and Khmer (U+200B is also supported)</li>
-<li>separate algorithm for Tibetan line-breaking</li>
-</ul>
+- Bidirectional (Bidi) algorithm for right-to-left (RTL) text
+- support for Kashida for justification of arabic scripts
+- partial support for CSS3 optional font features e.g. font-feature-settings, font-variant
+- improved "autofont" capability to select fonts automatically for any script
+- support for CSS :lang selector
+- dictionary-based line-breaking for Lao, Thai and Khmer (U+200B is also supported)
+- separate algorithm for Tibetan line-breaking
 
 <div class="alert alert-info" role="alert">
 	<strong>Note:</strong> There are other smart-font technologies around to deal with complex scripts, namely 
@@ -41,15 +39,12 @@ Other mPDF features to enhance complex scripts:
 
 Support for OTL fonts allows the faithful display of almost all complex scripts:
 
-<ul>
-<li>Arabic (<span>السلام عليكم</span>), Hebrew (<span>שלום</span>), Syriac (<span>ܐܣܛܪܢܓܠܐ</span>)</li>
-<li>Indic - Bengali (<span>স্লামালিকুম</span>), Devanagari (<span>नमस्ते</span>), Gujarati (<span>નમસ્તે</span>), Punjabi (<span>ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ</span>),
-
-Kannada (<span>ನಮಸ್ತೆ</span>), Malayalam (<span>നമസ്തെ</span>), Oriya (<span>ନମସ୍କର</span>), Tamil (<span>வணக்கம்</span>), Telugu (<span>నమస్కారం</span>)</li>
-<li>Sinhala (<span>ආයුඛෝවන්</span>), Thai (<span>สวัสดี</span>), Lao (<span>ສະບາຍດີ</span>), Khmer (<span>ជំរាបសួរ</span>), Myanmar (<span>မဂႆလာပၝ</span>),
-
-Tibetan (<span>བཀྲ་ཤིས་བདེ་ལེགས།</span>)</li>
-</ul>
+- Arabic (<span>السلام عليكم</span>), Hebrew (<span>שלום</span>), Syriac (<span>ܐܣܛܪܢܓܠܐ</span>)
+- Indic - Bengali (<span>স্লামালিকুম</span>), Devanagari (<span>नमस्ते</span>), Gujarati (<span>નમસ્તે</span>), 
+  Punjabi (<span>ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ</span>), Kannada (<span>ನಮಸ್ತೆ</span>), Malayalam (<span>നമസ്തെ</span>), 
+  Oriya (<span>ନମସ୍କର</span>), Tamil (<span>வணக்கம்</span>), Telugu (<span>నమస్కారం</span>)
+- Sinhala (<span>ආයුඛෝවන්</span>), Thai (<span>สวัสดี</span>), Lao (<span>ສະບາຍດີ</span>), 
+  Khmer (<span>ជំរាបសួរ</span>), Myanmar (<span>မဂႆလာပၝ</span>), Tibetan (<span>བཀྲ་ཤིས་བདེ་ལེགས།</span>)
 
 OTL features allow:
 
@@ -99,18 +94,16 @@ for information about CSS3 and font-features.
 
 The following are supported in mPDF:
 
-<ul>
-<li>`font-variant-position`</li>
-<li>`font-variant-caps`</li>
-<li>`font-variant-ligatures`</li>
-<li>`font-variant-numeric`</li>
-<li>`font-variant-alternates` - Only [`normal | historical-forms`] supported (i.e. most are NOT supported)
+- `font-variant-position`
+- `font-variant-caps`
+- `font-variant-ligatures`
+- `font-variant-numeric`
+- `font-variant-alternates` - Only [`normal | historical-forms`] supported (i.e. most are NOT supported) e.g. 
+  `stylistic, styleset, character-variant, swash, ornaments, annotation` (use `font-feature-settings` for these)
+- `font-variant` - as above, and except for: `east-asian-variant-values, east-asian-width-values, ruby`
+- `font-language-override`
+- `font-feature-settings`
 
-e.g. `stylistic, styleset, character-variant, swash, ornaments, annotation` (use `font-feature-settings` for these)</li>
-<li>`font-variant` - as above, and except for: `east-asian-variant-values, east-asian-width-values, ruby`</li>
-<li>`font-language-override`</li>
-<li>`font-feature-settings`</li>
-</ul>
 
 `font-variant-east-asian` is NOT supported
 
@@ -124,39 +117,31 @@ work in mPDF.
 
 See notes later about font kerning.
 
-Examples:
+# Examples
 
 {% highlight css %}
 /* use small-cap alternate glyphs */
-
 .smallcaps { font-feature-settings: "smcp" on; }
 
 /* convert both upper and lowercase to small caps (affects punctuation also) */
-
 .allsmallcaps { font-feature-settings: "c2sc", "smcp"; }
 
 /* enable historical forms */
-
 .hist { font-feature-settings: "hist"; }
 
 /* disable common ligatures, usually on by default */
-
 .noligs { font-feature-settings: "liga" 0; }
 
 /* enable tabular (monospaced) figures */
-
 td.tabular { font-feature-settings: "tnum"; }
 
 /* enable automatic fractions */
-
 .fractions { font-feature-settings: "frac"; }
 
 /* use the second available swash character */
-
 .swash { font-feature-settings: "swsh" 2; }
 
 /* enable stylistic set 7 */
-
 .fancystyle {
     font-family: Gabriola; /* available on Windows 7, and on Mac OS */
     font-feature-settings: "ss07";
@@ -182,62 +167,64 @@ In `config_fonts.php` there are 2 variables which affect OTL features for each f
 
 useOTL should be set to an integer between 0 and 255. Each bit will enable OTL features for a different group of scripts:
 
-<table class="table"> <tbody>
-<tr>
-<td>Bit</td>
-<td>dec</td>
-<td>hex</td>
-<td>Enabled</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0x01</td>
-<td>GSUB/GPOS - Latin script</td>
-</tr>
-<tr>
-<td>2</td>
-<td>2</td>
-<td>0x02</td>
-<td>GSUB/GPOS - Cyrillic script</td>
-</tr>
-<tr>
-<td>3</td>
-<td>4</td>
-<td>0x04</td>
-<td>GSUB/GPOS - Greek script</td>
-</tr>
-<tr>
-<td>4</td>
-<td>8</td>
-<td>0x08</td>
-<td>GSUB/GPOS - CJK scripts (excluding Hangul-Jamo)</td>
-</tr>
-<tr>
-<td>5</td>
-<td>16</td>
-<td>0x10</td>
-<td>(Reserved)</td>
-</tr>
-<tr>
-<td>6</td>
-<td>32</td>
-<td>0x20</td>
-<td>(Reserved)</td>
-</tr>
-<tr>
-<td>7</td>
-<td>64</td>
-<td>0x40</td>
-<td>(Reserved)</td>
-</tr>
-<tr>
-<td>8</td>
-<td>128</td>
-<td>0x80</td>
-<td>GSUB/GPOS - All other scripts (including all RTL scripts, complex scripts etc)</td>
-</tr>
-</tbody> </table>
+<table class="table">
+    <tbody>
+        <tr>
+            <td>Bit</td>
+            <td>dec</td>
+            <td>hex</td>
+            <td>Enabled</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>0x01</td>
+            <td>GSUB/GPOS - Latin script</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2</td>
+            <td>0x02</td>
+            <td>GSUB/GPOS - Cyrillic script</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+            <td>0x04</td>
+            <td>GSUB/GPOS - Greek script</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>8</td>
+            <td>0x08</td>
+            <td>GSUB/GPOS - CJK scripts (excluding Hangul-Jamo)</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>16</td>
+            <td>0x10</td>
+            <td>(Reserved)</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>32</td>
+            <td>0x20</td>
+            <td>(Reserved)</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>64</td>
+            <td>0x40</td>
+            <td>(Reserved)</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>128</td>
+            <td>0x80</td>
+            <td>GSUB/GPOS - All other scripts (including all RTL scripts, complex scripts etc)</td>
+        </tr>
+    </tbody>
+</table>
 
 Setting `useOTL` to 0 (or omitting it) will disable all OTL features. Setting `useOTL` to 255 or 0xFF will enable OTL 
 for all scripts. Setting `useOTL` to 0x82 will enable OTL features for Cyrillic and complex scripts.
