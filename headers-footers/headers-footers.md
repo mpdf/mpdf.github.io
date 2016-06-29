@@ -39,157 +39,143 @@ defined outside HTML block tags (except &lt;body&gt;).
 
 # Methods
 
-<table class="table"> <tbody>
-<tr>
-<td> </td>
-<td> </td>
-<td><span class="smallblock">NON-HTML</span></td>
-<td><span class="smallblock">HTML</span></td>
-</tr>
-<tr>
-<td><span class="smallblock">RUNTIME</span></td>
-<td>
+<table class="table">
+    <tbody>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td><span class="smallblock">NON-HTML</span></td>
+            <td><span class="smallblock">HTML</span></td>
+        </tr>
+        <tr>
+            <td><span class="smallblock">RUNTIME</span></td>
+            <td>
 
-</td>
-<td>
+            </td>
+            <td>
 
-## <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a>
+                ## <a href="{{ " /headers-footers/method-1.html " | prepend: site.baseurl }}">Method 1</a> 
 
-This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control 
-over styling.
+                This is the simplest &amp; quickest way to define a header/footer for the whole document if you need limited control over styling.
 
-<a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>
+                <a href="{{ " /reference/mpdf-functions/setheader.html " | prepend: site.baseurl }}">SetHeader()</a>
 
-<a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a>
+                <a href="{{ " /reference/mpdf-functions/setfooter.html " | prepend: site.baseurl }}">SetFooter()</a> There are several variants of this method, using string or array. The simplest form does not allow different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages. Style can be defined by variables:
 
-There are several variants of this method, using string or array. The simplest form does not allow different 
-header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.
+                <a href="{{ " /reference/mpdf-variables/defaultheaderfontsize.html " | prepend: site.baseurl }}">$defaultheaderfontsize</a>
 
-Style can be defined by variables:
+                <a href="{{ " /reference/mpdf-variables/defaultheaderfontstyle.html " | prepend: site.baseurl }}">$defaultheaderfontstyle</a>
 
-<a href="{{ "/reference/mpdf-variables/defaultheaderfontsize.html" | prepend: site.baseurl }}">$defaultheaderfontsize</a>
+                <a href="{{ " /reference/mpdf-variables/defaultheaderline.html " | prepend: site.baseurl }}">$defaultheaderline</a>
 
-<a href="{{ "/reference/mpdf-variables/defaultheaderfontstyle.html" | prepend: site.baseurl }}">$defaultheaderfontstyle</a>
+                <a href="{{ " /reference/mpdf-variables/defaultfooterfontsize.html " | prepend: site.baseurl }}">$defaultfooterfontsize</a>
 
-<a href="{{ "/reference/mpdf-variables/defaultheaderline.html" | prepend: site.baseurl }}">$defaultheaderline</a>
+                <a href="{{ " /reference/mpdf-variables/defaultfooterfontstyle.html " | prepend: site.baseurl }}">$defaultfooterfontstyle</a>
 
-<a href="{{ "/reference/mpdf-variables/defaultfooterfontsize.html" | prepend: site.baseurl }}">$defaultfooterfontsize</a>
+                <a href="{{ " /reference/mpdf-variables/defaultfooterline.html " | prepend: site.baseurl }}">$defaultfooterline</a>
 
-<a href="{{ "/reference/mpdf-variables/defaultfooterfontstyle.html" | prepend: site.baseurl }}">$defaultfooterfontstyle</a>
+            </td>
+            <td>
 
-<a href="{{ "/reference/mpdf-variables/defaultfooterline.html" | prepend: site.baseurl }}">$defaultfooterline</a>
+                ## <a href="{{ " /headers-footers/method-2.html " | prepend: site.baseurl }}">Method 2</a> The simplest &amp; quickest way to program a header/footer once for the whole document that includes images or uses more complex layout styles.
 
-</td>
-<td>
+                <a href="{{ " /reference/mpdf-functions/sethtmlheader.html " | prepend: site.baseurl }}">SetHTMLHeader() </a>
 
-## <a href="{{ "/headers-footers/method-2.html" | prepend: site.baseurl }}">Method 2</a>
+                <a href="{{ " /reference/mpdf-functions/sethtmlfooter.html " | prepend: site.baseurl }}">SetHTMLFooter()</a>
 
-The simplest &amp; quickest way to program a header/footer once for the whole document that includes images or 
-uses more complex layout styles.
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="3"><span class="smallblock">NAMED</span></td>
+            <td>Define</td>
+            <td>
 
-<a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader() </a>
+                ## <a href="{{ " /headers-footers/method-3.html " | prepend: site.baseurl }}">Method 3</a> 
 
-<a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a>
+                This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers throughout the document**.
 
-</td>
-</tr>
-<tr>
-<td rowspan="3"><span class="smallblock">NAMED</span></td>
-<td>Define</td>
-<td>
+                <a href="{{ " /reference/mpdf-functions/defheaderbyname.html " | prepend: site.baseurl }}">DefHeaderByName()</a>
 
-## <a href="{{ "/headers-footers/method-3.html" | prepend: site.baseurl }}">Method 3</a>
+                <a href="{{ " /reference/mpdf-functions/deffooterbyname.html " | prepend: site.baseurl }}">DefFooterByName()</a> &lt;
 
-This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers 
-throughout the document**.
+                <a href="{{ " /reference/html-control-tags/pageheader.html " | prepend: site.baseurl }}">pageheader</a>&gt; &lt;
 
-<a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>
+                <a href="{{ " /reference/html-control-tags/pagefooter.html " | prepend: site.baseurl }}">pagefooter</a>&gt;
 
-<a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>
+            </td>
+            <td>
 
-&lt;<a href="{{ "/reference/html-control-tags/pageheader.html" | prepend: site.baseurl }}">pageheader</a>&gt;
+                ## <a href="{{ " /headers-footers/method-4.html " | prepend: site.baseurl }}">Method 4</a> 
 
-&lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pagefooter</a>&gt;
+                This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the headers/footers at any time during the document.
 
-</td>
-<td>
+                <a href="{{ " /reference/mpdf-functions/defhtmlheaderbyname.html " | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>
 
-## <a href="{{ "/headers-footers/method-4.html" | prepend: site.baseurl }}">Method 4</a>
+                <a href="{{ " /reference/mpdf-functions/defhtmlfooterbyname.html " | prepend: site.baseurl }}">DefHTMLFooterByName()</a> &lt;
 
-This is the best way for complex headers/footers with the advantage of HTML code, but you can easily change the 
-headers/footers at any time during the document.
+                <a href="{{ " /reference/html-control-tags/htmlpageheader.html " | prepend: site.baseurl }}">htmlpageheader</a>&gt; &lt;
 
-<a href="{{ "/reference/mpdf-functions/defhtmlheaderbyname.html" | prepend: site.baseurl }}">DefHTMLHeaderByName()</a>
+                <a href="{{ " /reference/html-control-tags/htmlpagefooter.html " | prepend: site.baseurl }}">htmlpagefooter</a>&gt;
 
-<a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2">Reference</td>
+            <td>
 
-&lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;
+                These methods are recommended when setting the header/footer at the start of a document.
 
-&lt;<a href="{{ "/reference/html-control-tags/htmlpagefooter.html" | prepend: site.baseurl }}">htmlpagefooter</a>&gt;
+                <a href="{{ " /reference/mpdf-functions/setheaderbyname.html " | prepend: site.baseurl }}">SetHeaderByName()</a>
 
-</td>
-</tr>
-<tr>
-<td rowspan="2">Reference
+                <a href="{{ " /reference/mpdf-functions/setfooterbyname.html " | prepend: site.baseurl }}">SetFooterByName()</a> &lt;
 
-</td>
-<td>
+                <a href="{{ " /reference/html-control-tags/setpageheader.html " | prepend: site.baseurl }}">setpageheader</a>&gt; &lt;
 
-These methods are recommended when setting the header/footer at the start of a document.
+                <a href="{{ " /reference/html-control-tags/setpagefooter.html " | prepend: site.baseurl }}">setpagefooter</a>&gt;
 
-<a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a>
+                <a href="{{ " /paging/using-page.html " | prepend: site.baseurl }}">@page</a>
 
-<a href="{{ "/reference/mpdf-functions/setfooterbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a>
+            </td>
+            <td>
 
-&lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt;
+                These methods are recommended when setting the header/footer at the start of a document.
 
-&lt;<a href="{{ "/reference/html-control-tags/setpagefooter.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;
+                <a href="{{ " /reference/mpdf-functions/sethtmlheaderbyname.html " | prepend: site.baseurl }}">SetHTMLHeaderByName()</a>
 
-<a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>
+                <a href="{{ " /reference/mpdf-functions/sethtmlfooterbyname.html " | prepend: site.baseurl }}">SetHTMLFooterByName()</a> &lt;
 
-</td>
-<td>
+                <a href="{{ " /reference/html-control-tags/sethtmlpageheader.html " | prepend: site.baseurl }}">sethtmlpageheader</a>&gt; &lt;
 
-These methods are recommended when setting the header/footer at the start of a document.
+                <a href="{{ " /reference/html-control-tags/sethtmlpagefooter.html " | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;
 
-<a href="{{ "/reference/mpdf-functions/sethtmlheaderbyname.html" | prepend: site.baseurl }}">SetHTMLHeaderByName()</a>
+                <a href="{{ " /paging/using-page.html " | prepend: site.baseurl }}">@page</a>
 
-<a href="{{ "/reference/mpdf-functions/sethtmlfooterbyname.html" | prepend: site.baseurl }}">SetHTMLFooterByName()</a>
+            </td>
+        </tr>
 
-&lt;<a href="{{ "/reference/html-control-tags/sethtmlpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt;
+        <tr>
+            <td colspan="2" class="pmhTopCenter">
 
-&lt;<a href="{{ "/reference/html-control-tags/sethtmlpagefooter.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;
+                Recommended when you wish to change the headers/footers during the document. These methods can reference any <span class="smallblock">NAMED</span> header or footer (
+                <span class="smallblock">NON-HTML</span> or <span class="smallblock">HTML</span>)
 
-<a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>
+                <a href="{{ " /reference/mpdf-functions/addpage.html " | prepend: site.baseurl }}">AddPage()</a>
 
-</td>
-</tr>
+                <a href="{{ " /reference/mpdf-functions/tocpagebreak.html " | prepend: site.baseurl }}">TOCpagebreak()</a> &lt;
 
-<tr>
-<td colspan="2" class="pmhTopCenter">
+                <a href="{{ " /reference/html-control-tags/pagebreak.html " | prepend: site.baseurl }}">pagebrea</a>k&gt; &lt;
 
-Recommended when you wish to change the headers/footers during the document.
+                <a href="{{ " /reference/html-control-tags/tocpagebreak.html " | prepend: site.baseurl }}">tocpagebreak</a>&gt;
 
-These methods can reference any <span class="smallblock">NAMED</span> header or footer 
-(<span class="smallblock">NON-HTML</span> or <span class="smallblock">HTML</span>)
+                <a href="{{ " /paging/using-page.html " | prepend: site.baseurl }}">@page</a>
 
-<a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>
-
-<a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>
-
-&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt;
-
-&lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;
-
-<a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>
-
-</td>
-</tr>
-</tbody> </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 In any of the options, {PAGENO} or {DATE j-m-Y} can be used - which will be replaced by the page number or current date. 
 j-m-Y can be replaced by any of the valid formats used in the php 
 <a href="http://www.php.net/manual/en/function.date.php" target="_blank">date()</a> function.
 
 See also: <a href="{{ "/reference/mpdf-variables/forceportraitheaders.html" | prepend: site.baseurl }}">forcePortraitHeaders</a>
-

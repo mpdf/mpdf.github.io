@@ -8,164 +8,178 @@ modification_time: 2015-08-05T11:59:34+00:00
 
 The following Open Source fonts are included with mPDF 5:
 
-<ul>
-<li>*DejaVuSans, DejaVuSansCondensed, DejaVuSansMono, DejaVuSerif, DejaVuSerifCondensed*</li>
-<li>*Garuda* - Thai (sans-serif)</li>
-<li>*Norasi* - Thai (serif)</li>
-<li>*XBZar, XBRiyaz* - Arabic</li>
-</ul>
+- *DejaVuSans, DejaVuSansCondensed, DejaVuSansMono, DejaVuSerif, DejaVuSerifCondensed*
+- *Garuda* - Thai (sans-serif)
+- *Norasi* - Thai (serif)
+- *XBZar, XBRiyaz* - Arabic
 
 ## Coverage of included fonts
 
-<table class="table"> <thead>
-<tr> <th> </th><th> </th>
-<td>
+<table class="table">
+    <thead>
+        <tr>
+            <th> </th>
+            <th> </th>
+            <td>
 
-DejaVuSans
+                DejaVuSans (+condensed)
 
-(+condensed)
+            </td>
+            <td>
 
-</td>
-<td>
+                DejaVuSansMono
 
-DejaVuSansMono
+            </td>
+            <td>
 
-</td>
-<td>
+                DejaVuSerif (+condensed)
 
-DejaVuSerif
+            </td>
+            <td>Garuda (sans) Norasi (serif)
 
-(+condensed)
+            </td>
+            <td>
 
-</td>
-<td>Garuda (sans)
+                XBZar XBRiyaz
 
-Norasi (serif)
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>
 
-</td>
-<td>
+                Western European: English, French, German, Spanish, Icelandic etc.
 
-XBZar
+            </th>
+            <th>win-1252 </th>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <th>
 
-XBRiyaz
+                Central and Eastern Europe: Polish, Hungarian, Romanian
 
-</td>
-</tr>
-</thead> <tbody>
-<tr> <th>
+            </th>
+            <th>iso-8859-2 </th>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>
 
-Western European:
+                Cyrillic: Russian, Bulgarian, Macedonian, Ukrainian etc.
 
-English, French, German, Spanish, Icelandic etc.
+            </th>
+            <th>win-1251</th>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>
 
-</th><th>win-1252 </th>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-</tr>
-<tr> <th>
+                Baltic: Latvian, Lithuanian, Estonian, Greenlandic
 
-Central and Eastern Europe:
+            </th>
+            <th>iso-8859-4 </th>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Turkish</th>
+            <th>iso-8859-9</th>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Greek </th>
+            <th>iso-8859-7 </th>
+            <td>Y</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Arabic</th>
+            <th> </th>
+            <td>Y</td>
+            <td>Y</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <th>Persian / Farsi</th>
+            <th> </th>
+            <td>Y</td>
+            <td>Y</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <th>Urdu</th>
+            <th> </th>
+            <td>[94%]</td>
+            <td>[97%]</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <th>Pashto</th>
+            <th> </th>
+            <td>[83%]</td>
+            <td>[75%]</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Y</td>
+        </tr>
+        <tr>
+            <th>Hebrew</th>
+            <th> </th>
+            <td>Y</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Thai</th>
+            <th> </th>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>**Y**</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <th>Vietnamese</th>
+            <th> </th>
+            <td>Y</td>
+            <td>[62%]</td>
+            <td>[77%]</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+    </tbody>
+</table>
 
-Polish, Hungarian, Romanian
-
-</th><th>iso-8859-2 </th>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr> <th>
-
-Cyrillic:
-
-Russian, Bulgarian, Macedonian, Ukrainian etc.
-
-</th><th>win-1251</th>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr> <th>
-
-Baltic:
-
-Latvian, Lithuanian, Estonian, Greenlandic
-
-</th><th>iso-8859-4 </th>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr> <th>Turkish</th><th>iso-8859-9</th>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr> <th>Greek </th><th>iso-8859-7 </th>
-<td>Y</td>
-<td>Y</td>
-<td>Y</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr> <th>Arabic</th><th> </th>
-<td>Y</td>
-<td>Y</td>
-<td>-</td>
-<td>-</td>
-<td>Y</td>
-</tr>
-<tr> <th>Persian / Farsi</th><th> </th>
-<td>Y</td>
-<td>Y</td>
-<td>-</td>
-<td>-</td>
-<td>Y</td>
-</tr>
-<tr> <th>Urdu</th><th> </th>
-<td>[94%]</td>
-<td>[97%]</td>
-<td>-</td>
-<td>-</td>
-<td>Y</td>
-</tr>
-<tr> <th>Pashto</th><th> </th>
-<td>[83%]</td>
-<td>[75%]</td>
-<td>-</td>
-<td>-</td>
-<td>Y</td>
-</tr>
-<tr> <th>Hebrew</th><th> </th>
-<td>Y</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr> <th>Thai</th><th> </th>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>**Y**</td>
-<td>-</td>
-</tr>
-<tr> <th>Vietnamese</th><th> </th>
-<td>Y</td>
-<td>[62%]</td>
-<td>[77%]</td>
-<td>-</td>
-<td>-</td>
-</tr>
-</tbody> </table>
 
