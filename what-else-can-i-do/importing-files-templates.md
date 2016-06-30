@@ -29,7 +29,7 @@ current document. This can be used for:
 
 <div class="alert alert-info" role="alert">
 	<strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated
-	into the main mpdf.php file, but you must use
+	into the main \Mpdf\Mpdf class, but you must use
 	<a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> to
 	enable them.
 </div>

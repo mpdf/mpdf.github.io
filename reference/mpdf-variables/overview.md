@@ -385,7 +385,7 @@ You can redefine the variables in individual scripts as a
             <td>array('dejavusanscondensed')</td>
             <td> </td>
             <td>5.0</td>
-            <td>**Set in config_fonts.php**</td>
+            <td>**Set as a font <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>**</td>
         </tr>
         <tr>
             <td> </td>
@@ -393,7 +393,7 @@ You can redefine the variables in individual scripts as a
             <td><span class="smallblock">NOT DEFINED</span></td>
             <td> </td>
             <td>5.0</td>
-            <td>**Set in config_fonts.php**</td>
+            <td>**Set as a font <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>**</td>
         </tr>
         <tr>
             <td>Configuration</td>

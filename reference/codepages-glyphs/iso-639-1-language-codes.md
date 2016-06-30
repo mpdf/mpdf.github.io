@@ -6,2777 +6,2776 @@ permalink: /reference/codepages-glyphs/iso-639-1-language-codes.html
 modification_time: 2015-08-05T12:03:02+00:00
 ---
 
-The language/country codes recognised by mPDF are configurable in the <span class="filename">config_cp.php</span> file.
+Up to mPDF 6.x The language/country codes recognised by mPDF are configurable in the 
+<span class="filename">config_cp.php</span> file.
 
-<table class="table"> <thead>
-<tr class="oddrow">
-<td>
+<table class="table">
+    <thead>
+        <tr class="oddrow">
+            <td>
 
-ISO 639-1
+                ISO 639-1 Code
 
-Code
+            </td>
+            <td>
 
-</td>
-<td>
+                Language
 
-Language
+            </td>
+            <td>
 
-</td>
-<td>
+                Recognised by mPDF
 
-Recognised
+            </td>
+            <td>Country</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
 
-by mPDF
+                aa
 
-</td>
-<td>Country</td>
-</tr>
-</thead> <tbody>
-<tr>
-<td>
+            </td>
+            <td>
 
-aa
+                Afar
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Afar
+                ab
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ab
+                Abkhazian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Abkhazian
+                af
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-af
+                Afrikaans
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Afrikaans
+                ak
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ak
+                Akan
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Akan
+                sq
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sq
+                Albanian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Albanian
+                am
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-am
+                Amharic
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Amharic
+                ar
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ar
+                Arabic
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Arabic
+                an
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-an
+                Aragonese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Aragonese
+                hy
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-hy
+                Armenian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Armenian
+                as
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-as
+                Assamese
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Assamese
+                av
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-av
+                Avaric
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Avaric
+                ae
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ae
+                Avestan
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Avestan
+                ay
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ay
+                Aymara
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Aymara
+                az
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-az
+                Azerbaijani
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Azerbaijani
+                ba
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ba
+                Bashkir
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Bashkir
+                bm
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-bm
+                Bambara
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Bambara
+                eu
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-eu
+                Basque
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Basque
+                be
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-be
+                Belarusian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Belarusian
+                bn
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-bn
+                Bengali
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Bengali
+                bh
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-bh
+                Bihari
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Bihari
+                bi
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-bi
+                Bislama
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Bislama
+                bo
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-bo
+                Tibetan
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tibetan
+                bs
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-bs
+                Bosnian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Bosnian
+                br
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-br
+                Breton
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Breton
+                bg
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-bg
+                Bulgarian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Bulgarian
+                my
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-my
+                Burmese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Burmese
+                ca
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ca
+                Catalan; Valencian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Catalan; Valencian
+                cs
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-cs
+                Czech
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Czech
+                ch
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ch
+                Chamorro
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Chamorro
+                ce
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ce
+                Chechen
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Chechen
+                zh
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-zh
+                Chinese
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Chinese
+                cv
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-cv
+                Chuvash
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Chuvash
+                kw
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-kw
+                Cornish
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Cornish
+                co
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-co
+                Corsican
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Corsican
+                cr
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-cr
+                Cree
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Cree
+                cy
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-cy
+                Welsh
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Welsh
+                cs
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-cs
+                Czech
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Czech
+                da
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-da
+                Danish
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Danish
+                de
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-de
+                German
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-German
+                dv
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-dv
+                Divehi; Dhivehi; Maldivian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Divehi; Dhivehi; Maldivian
+                nl
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-nl
+                Dutch; Flemish
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Dutch; Flemish
+                dz
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-dz
+                Dzongkha
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Dzongkha
+                el
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-el
+                Greek, Modern (1453-)
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Greek, Modern (1453-)
+                en
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-en
+                English
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-English
+                eo
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-eo
+                Esperanto
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Esperanto
+                et
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-et
+                Estonian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Estonian
+                eu
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-eu
+                Basque
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Basque
+                ee
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ee
+                Ewe
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ewe
+                fo
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-fo
+                Faroese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Faroese
+                fa
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-fa
+                Persian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Persian
+                fj
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-fj
+                Fijian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Fijian
+                fi
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-fi
+                Finnish
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Finnish
+                fr
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-fr
+                French
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-French
+                ff
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ff
+                Fulah
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Fulah
+                ka
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ka
+                Georgian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Georgian
+                de
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-de
+                German
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-German
+                gd
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-gd
+                Gaelic; Scottish Gaelic
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Gaelic; Scottish Gaelic
+                ga
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ga
+                Irish
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Irish
+                gl
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-gl
+                Galician
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Galician
+                gv
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-gv
+                Manx
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Manx
+                el
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-el
+                Greek, Modern (1453-)
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Greek, Modern (1453-)
+                gu
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-gu
+                Gujarati
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Gujarati
+                ht
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ht
+                Haitian; Haitian Creole
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Haitian; Haitian Creole
+                ha
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ha
+                Hausa
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Hausa
+                he
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-he
+                Hebrew
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Hebrew
+                hz
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-hz
+                Herero
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Herero
+                hi
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-hi
+                Hindi
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Hindi
+                ho
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ho
+                Hiri Motu
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Hiri Motu
+                hr
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-hr
+                Croatian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Croatian
+                hu
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-hu
+                Hungarian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Hungarian
+                hy
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-hy
+                Armenian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Armenian
+                ig
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ig
+                Igbo
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Igbo
+                is
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-is
+                Icelandic
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Icelandic
+                io
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-io
+                Ido
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ido
+                ie
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ie
+                Interlingue; Occidental
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Interlingue; Occidental
+                ia
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ia
+                Interlingua
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Interlingua
+                id
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-id
+                Indonesian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Indonesian
+                ik
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ik
+                Inupiaq
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Inupiaq
+                is
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-is
+                Icelandic
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Icelandic
+                it
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-it
+                Italian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Italian
+                jv
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-jv
+                Javanese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Javanese
+                ja
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ja
+                Japanese
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Japanese
+                kl
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-kl
+                Kalaallisut; Greenlandic
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kalaallisut; Greenlandic
+                kn
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-kn
+                Kannada
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kannada
+                ks
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ks
+                Kashmiri
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kashmiri
+                ka
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ka
+                Georgian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Georgian
+                kr
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-kr
+                Kanuri
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kanuri
+                kk
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-kk
+                Kazakh
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kazakh
+                km
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-km
+                Central Khmer
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Central Khmer
+                ki
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ki
+                Kikuyu; Gikuyu
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kikuyu; Gikuyu
+                rw
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-rw
+                Kinyarwanda
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kinyarwanda
+                ky
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ky
+                Kirghiz; Kyrgyz
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kirghiz; Kyrgyz
+                kv
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-kv
+                Komi
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Komi
+                kg
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-kg
+                Kongo
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kongo
+                ko
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ko
+                Korean
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Korean
+                kj
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-kj
+                Kuanyama; Kwanyama
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kuanyama; Kwanyama
+                ku
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ku
+                Kurdish
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Kurdish
+                lo
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-lo
+                Lao
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Lao
+                la
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-la
+                Latin
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Latin
+                lv
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-lv
+                Latvian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Latvian
+                li
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-li
+                Limburgan; Limburger; Limburgish
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Limburgan; Limburger; Limburgish
+                ln
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ln
+                Lingala
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Lingala
+                lt
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-lt
+                Lithuanian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Lithuanian
+                lb
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-lb
+                Luxembourgish; Letzeburgesch
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Luxembourgish; Letzeburgesch
+                lu
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-lu
+                Luba-Katanga
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Luba-Katanga
+                lg
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-lg
+                Ganda
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ganda
+                mk
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mk
+                Macedonian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Macedonian
+                mh
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mh
+                Marshallese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Marshallese
+                ml
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ml
+                Malayalam
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Malayalam
+                mi
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mi
+                Maori
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Maori
+                mr
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mr
+                Marathi
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Marathi
+                ms
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ms
+                Malay
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Malay
+                mk
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mk
+                Macedonian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Macedonian
+                mg
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mg
+                Malagasy
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Malagasy
+                mt
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mt
+                Maltese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Maltese
+                mn
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mn
+                Mongolian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Mongolian
+                mi
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-mi
+                Maori
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Maori
+                ms
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ms
+                Malay
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Malay
+                my
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-my
+                Burmese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Burmese
+                na
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-na
+                Nauru
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Nauru
+                nv
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-nv
+                Navajo; Navaho
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Navajo; Navaho
+                nr
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-nr
+                Ndebele, South; South Ndebele
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ndebele, South; South Ndebele
+                nd
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-nd
+                Ndebele, North; North Ndebele
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ndebele, North; North Ndebele
+                ng
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ng
+                Ndonga
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ndonga
+                ne
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ne
+                Nepali
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Nepali
+                nl
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-nl
+                Dutch; Flemish
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Dutch; Flemish
+                nn
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-nn
+                Norwegian Nynorsk
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Norwegian Nynorsk
+                nb
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-nb
+                Bokmål, Norwegian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Bokmål, Norwegian
+                no
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-no
+                Norwegian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Norwegian
+                ny
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ny
+                Chichewa; Chewa; Nyanja
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Chichewa; Chewa; Nyanja
+                oc
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-oc
+                Occitan
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Occitan
+                oj
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-oj
+                Ojibwa
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ojibwa
+                or
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-or
+                Oriya
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Oriya
+                om
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-om
+                Oromo
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Oromo
+                os
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-os
+                Ossetian; Ossetic
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ossetian; Ossetic
+                pa
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-pa
+                Panjabi; Punjabi
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Panjabi; Punjabi
+                fa
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-fa
+                Persian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Persian
+                pi
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-pi
+                Pali
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Pali
+                pl
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-pl
+                Polish
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Polish
+                pt
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-pt
+                Portuguese
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Portuguese
+                ps
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ps
+                Pushto; Pashto
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Pushto; Pashto
+                qu
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-qu
+                Quechua
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Quechua
+                rm
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-rm
+                Romansh
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Romansh
+                ro
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ro
+                Romanian; Moldavian; Moldovan
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Romanian; Moldavian; Moldovan
+                rn
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-rn
+                Rundi
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Rundi
+                ru
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ru
+                Russian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Russian
+                sg
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sg
+                Sango
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Sango
+                sa
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sa
+                Sanskrit
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Sanskrit
+                si
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-si
+                Sinhala; Sinhalese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Sinhala; Sinhalese
+                sk
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sk
+                Slovak
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Slovak
+                sl
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sl
+                Slovenian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Slovenian
+                se
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-se
+                Northern Sami
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Northern Sami
+                sm
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sm
+                Samoan
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Samoan
+                sn
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sn
+                Shona
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Shona
+                sd
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sd
+                Sindhi
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td>-IN, -PK
 
-Sindhi
+            </td>
+        </tr>
+        <tr>
+            <td>
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td>-IN, -PK
+                so
 
-</td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-so
+                Somali
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Somali
+                st
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-st
+                Sotho, Southern
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Sotho, Southern
+                es
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-es
+                Spanish; Castilian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Spanish; Castilian
+                sq
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sq
+                Albanian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Albanian
+                sc
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sc
+                Sardinian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Sardinian
+                sr
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sr
+                Serbian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Serbian
+                ss
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ss
+                Swati
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Swati
+                su
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-su
+                Sundanese
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Sundanese
+                sw
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sw
+                Swahili
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Swahili
+                sv
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-sv
+                Swedish
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Swedish
+                ty
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ty
+                Tahitian
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tahitian
+                ta
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ta
+                Tamil
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tamil
+                tt
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-tt
+                Tatar
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tatar
+                te
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-te
+                Telugu
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Telugu
+                tg
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-tg
+                Tajik
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tajik
+                tl
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-tl
+                Tagalog
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tagalog
+                th
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-th
+                Thai
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Thai
+                bo
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-bo
+                Tibetan
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tibetan
+                ti
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ti
+                Tigrinya
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tigrinya
+                to
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-to
+                Tonga (Tonga Islands)
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tonga (Tonga Islands)
+                tn
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-tn
+                Tswana
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tswana
+                ts
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ts
+                Tsonga
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Tsonga
+                tk
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-tk
+                Turkmen
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Turkmen
+                tr
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-tr
+                Turkish
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Turkish
+                tw
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-tw
+                Twi
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Twi
+                ug
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ug
+                Uighur; Uyghur
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Uighur; Uyghur
+                uk
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-uk
+                Ukrainian
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Ukrainian
+                ur
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ur
+                Urdu
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Urdu
+                uz
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-uz
+                Uzbek
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Uzbek
+                ve
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-ve
+                Venda
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Venda
+                vi
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-vi
+                Vietnamese
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Vietnamese
+                vo
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-vo
+                Volapük
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Volapük
+                cy
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-cy
+                Welsh
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Welsh
+                wa
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-wa
+                Walloon
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Walloon
+                wo
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-wo
+                Wolof
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Wolof
+                xh
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-xh
+                Xhosa
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Xhosa
+                yi
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-yi
+                Yiddish
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Yiddish
+                yo
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-yo
+                Yoruba
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Yoruba
+                za
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-za
+                Zhuang; Chuang
 
-</td>
-<td>
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td>
 
-Zhuang; Chuang
+                zh
 
-</td>
-<td> </td>
-<td> </td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-zh
+                Chinese
 
-</td>
-<td>
+            </td>
+            <td><span class="smallblock">YES</span></td>
+            <td>-TW, -HK, -CN</td>
+        </tr>
+        <tr>
+            <td>
 
-Chinese
+                zu
 
-</td>
-<td><span class="smallblock">YES</span></td>
-<td>-TW, -HK, -CN</td>
-</tr>
-<tr>
-<td>
+            </td>
+            <td>
 
-zu
+                Zulu
 
-</td>
-<td>
-
-Zulu
-
-</td>
-<td> </td>
-<td> </td>
-</tr>
-</tbody> </table>
-
+            </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+    </tbody>
+</table>

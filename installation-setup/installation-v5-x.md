@@ -11,22 +11,22 @@ modification_time: 2015-08-05T11:59:23+00:00
 Installation:
 
 - Download the .zip file and unzip it
-- Create a folder e.g. <span class="filename">/mpdf</span> on your server 
-- Upload all of the files to the server, maintaining the folders as they are 
+- Create a directory e.g. <span class="filename">/mpdf</span> on your server 
+- Upload all of the files to the server, maintaining the directories as they are 
 - Ensure that you have write permissions set for the following fol
     - <span class="filename">/ttfontdata/</span>
     - <span class="filename">/tmp/</span>
     - <span class="filename">/graph_cache/</span>
 
-To test the installation, point your browser to the example files folder e.g.
+To test the installation, point your browser to the example files directory e.g.
 <span class="filename">[path_to_mpdf_folder]/mpdf/examples/</span>
 
 If you wish to install additional fonts please see the notes in
 <a href="{{ "/fonts-languages/fonts-in-mpdf-5-x.html" | prepend: site.baseurl }}">Fonts &amp; Languages</a> for further
 instructions.
 
-If you wish to define a different folder for temporary files rather than <span class="filename">/tmp/</span> see the
-note on '<a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">Folder for
+If you wish to define a different directory for temporary files rather than <span class="filename">/tmp/</span> see the
+note on '<a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">directory for
 temporary files</a>'.
 
 If you have problems, please read the section on

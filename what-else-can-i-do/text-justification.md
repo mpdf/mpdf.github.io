@@ -40,7 +40,9 @@ div.arabic {
 ## Kashida in Arabic text
 
 In Arabic text, justification can be achieved by elongating the line between characters - this is known as 
-"kashida". Kashida can be used by configuring the font in <span class="filename">config_fonts.php</span> 
+"kashida". Kashida can be used by configuring the font in `fontdata` 
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a> 
+
 cf. <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout features (OTL)</a>
 
 ## Non-breaking space (NBSP)

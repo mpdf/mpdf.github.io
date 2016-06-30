@@ -21,7 +21,7 @@ It is the users responsibility to check compliance if this is essential.
 
 # mPDF and PDF/X-1a compliance
 
-You can make mPDF produce mPDF/X-1a:2003 compliant files by setting a 
+You can make mPDF produce mPDF/X-1a:2003 compliant files by setting a `PDFX`
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>:
 
 {% highlight php %}
@@ -52,14 +52,14 @@ Sources of free ICC profiles are:
 - http://www.color.org/profiles2.xalter 
 - http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html 
 
-You can change the color profile used by mPDF by adding a  <span class="filename">*.icc</span> file to the 
-<span class="filename">[mpdf]/iccprofiles/</span> folder. It must be a 4-colour CMYK profile. 
-Then edit <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration</a>
+You can change the color profile used by mPDF by specifying `ICCProfile` 
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a> as 
+a path to your ICC profile:
 
 {% highlight php %}
 <?php
 
-$mpdf->ICCProfile = 'SWOP2006_Coated5v2';
+$mpdf->ICCProfile = __DIR__ . '/SWOP2006_Coated5v2';
 {% endhighlight %}
 
 ## Fonts

@@ -77,7 +77,7 @@ NB A submitted radio button field name is doubled with an underscore i.e. "myBut
 If the export format is XFDF, the submitted data is always UTF-8 encoded.
 
 If the export format is HTML, it is much more complicated. From a "core-fonts" only document, the submitted data uses
-PDFDocEncoding. (See <span class="filename">formsubmit.php</span> in the example folder for a conversion script.) But
+PDFDocEncoding. (See <span class="filename">formsubmit.php</span> in the example directory for a conversion script.) But
 if the form contains any characters which are not in the PDFDocEncoding (similar to Windows-1252), Adobe Reader will
 decide which encoding to use(!?)
 

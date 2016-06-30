@@ -17,8 +17,7 @@ size to a minimum. This affects text defines using the CSS <span class="paramete
 the use of AutoFont. Thus a CSS stylesheet defining `lang="ja"` will be substituted by the Adobe Japanes font. (This
 will not prevent the use of other CJK fonts if specified by font-family.)
 
-The precise effect it has on different languages/fonts will be specified in the <span class="filename">config_cp.php</span>
- configuration file.
+The precise effect it has on different languages/fonts is specified in the `\Mpdf\LangToFont` class.
 
 <div class="alert alert-info" role="alert">
 	<strong>Note:</strong> This value can only be set as a configuration variable

@@ -90,14 +90,15 @@ which seems to change colours a little as possible for an sRGB profile. Other so
 - http://www.color.org/profiles2.xalter
 - http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html
 
-You can change the color profile used by mPDF by adding a 
-<span class="filename">*.icc</span> file to the <span class="filename">[mpdf]/iccprofiles/</span> folder. 
-Then edit <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>:
+You can change the color profile used by mPDF by specifying
+`ICCProfile` 
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a> as 
+a path to your ICC profile:
 
 {% highlight php %}
 <?php
 
-$mpdf->ICCProfile = 'eciRGB_v2';
+$mpdf->ICCProfile = __DIR__ . '/eciRGB_v2.icc';
 {% endhighlight %}
 
 ## Fonts

@@ -21,10 +21,12 @@ gap = gap in mm between columns. Default 5. (Optional)
 &lt;columnbreak /&gt; &lt;column_break /&gt; or &lt;newcolumn /&gt; (synonymous) can be included to force a new column.
 (This will automatically disable any justification or readjustment of column heights.)
 
-The maximum ratio to adjust column height when justifying is defined at the top of the mpdf.php file - too large a value
+The maximum ratio to adjust column height when justifying is defined as a configuration variable - too large a value
 can give ugly results:
 
-var $max_colH_correction = 1.15; (default value)
+```
+'max_colH_correction' => 1.15; // (default value)
+```
 
 You can keep columns as they are i.e. 1st column will finish page then start on second, by setting
 
