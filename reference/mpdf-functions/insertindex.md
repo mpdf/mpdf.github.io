@@ -12,9 +12,16 @@ InsertIndex — Generate an Index for the document
 
 # Description
 
-void **InsertIndex** ([ int <span class="parameter">$usedivletters</span> [, boolean <span class="parameter">$uselinking</span> [, string <span class="parameter">$indexCollationLocale</span> [, string <span class="parameter">$indexCollationGroup</span> ]]]])
+void **InsertIndex** (
+[ int <span class="parameter">$usedivletters</span> 
+[, boolean <span class="parameter">$uselinking</span> 
+[, string <span class="parameter">$indexCollationLocale</span> 
+[, string <span class="parameter">$indexCollationGroup</span> 
+]]]])
 
-Inserts an Index for the document based on index entries made using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>.
+Inserts an Index for the document based on index entries made using 
+&lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; 
+or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>.
 
 # Parameters
 
@@ -44,13 +51,16 @@ Specify whether to add hyperlinks (internal links) to the entries in the documen
 
 <span class="parameter">$<span class="parameter">$indexCollationLocale</span> </span>
 
-Set a Locale to determine the overall sort order of index entries e.g. 'en_GB.utf8'. Available options are determined by the locales available in your system configuration. Always use a utf-8 locale.
+Set a Locale to determine the overall sort order of index entries e.g. 'en_GB.utf8'. Available options are determined 
+by the locales available in your system configuration. Always use a utf-8 locale.
 
 <span class="smallblock">BLANK</span> or omitted uses current locale set in your system.
 
 <span class="parameter">$<span class="parameter">$indexCollationGroup</span> </span>
 
-If you have set your index to use Dividing letters, this value will determine how letters are grouped under a dividing letter. Values should be selected from the files in folder <span class="filename">/collations/</span> e.g. 'English_United_Kingdom'
+If you have set your index to use Dividing letters, this value will determine how letters are grouped under a dividing 
+letter. Values should be selected from the files in directory <span class="filename">/data/collations/</span> e.g. 
+*English_United_Kingdom*
 
 NB This will not affect the overall order of entries, which is determined by the value above.
 
@@ -58,21 +68,25 @@ NB This will not affect the overall order of entries, which is determined by the
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
-<tr>
-<td>6.0</td>
-<td>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Version</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>6.0</td>
+            <td>
 
-Function was added
+                Function was added
 
-</td>
-</tr>
-</tbody> </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a></li>
-</ul>
+- <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Indexes</a>

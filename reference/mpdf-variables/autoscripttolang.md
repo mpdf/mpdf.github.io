@@ -13,7 +13,7 @@ modification_time: 2015-08-05T12:01:41+00:00
 boolean **autoScriptToLang**
 
 When <span class="smallblock">TRUE</span>, marks up HTML text using the lang attribute, based on the Unicode script 
-block in question, and configurable values in <span class="code">config_script2lang.php.</span>
+block in question, and values in `\Mpdf\ScriptToLang` class.
 
 # Values
 
@@ -22,7 +22,7 @@ block in question, and configurable values in <span class="code">config_script2l
 **Values**
 
 *<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> mark up HTML text using the lang 
-attribute, based on the Unicode script block in question, and configurable values in `config_script2lang.php`.
+attribute, based on the Unicode script block in question, and values in `\Mpdf\ScriptToLang` class.
 
 <span class="smallblock">FALSE</span>: No markup applied.
 

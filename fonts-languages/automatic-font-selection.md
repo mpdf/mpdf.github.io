@@ -13,10 +13,10 @@ modification_time: 2015-08-05T11:59:31+00:00
 mPDF has two functions which can be used together or separately:
 
 `autoScriptToLang` - marks up HTML text using the lang attribute, based on the Unicode script block in question, 
-and configurable values in `config_script2lang.php`.
+and values in `\Mpdf\ScriptToLang` class.
 
-`autoLangToFont` - selects the font to use, based on the HTML lang attribute, using configurable values in 
-`config_lang2font.php`.
+`autoLangToFont` - selects the font to use, based on the HTML lang attribute, using values from 
+`\Mpdf\LangToFont` class.
 
 For automatic font selection, ideally we would choose the font based on the language in use. However it is actually 
 impossible to determine the language used from a string of HTML text. The Unicode script block can be ascertained, 
@@ -30,7 +30,7 @@ English ру́сский язы́к پښتو
 
 {% endhighlight %}
 
-              ↓ **autoScriptToLang** (config_script2lang.php) ↓
+              ↓ **autoScriptToLang** (`\Mpdf\ScriptToLang`) ↓
 
 {% highlight html %}
 
@@ -38,7 +38,7 @@ English <span lang="und-Cyrl">ру́сский язы́к</span> <span lang="ps"
 
 {% endhighlight %}
 
-             ↓ **autoLangToFont** (config_lang2fonts.php) ↓
+             ↓ **autoLangToFont** (`\Mpdf\LangToFont`) ↓
 
 Uses "lang" to select font, and to determine OTL features applied
 
@@ -61,7 +61,7 @@ In this mode, all scripts *except* Latin script are marked up with `lang` attrib
 the base, see the \Mpdf\Ucdn class
 
 Using `autoScriptToLang`, mPDF detects text runs based on Unicode script block; using the values in 
-`config_script2lang.php` it then encloses the text run within a span tag with the appropriate language attribute. 
+`\Mpdf\ScriptToLang` it then encloses the text run within a span tag with the appropriate language attribute. 
 For many scripts, the language cannot be determined: see the example above which recognises Cyrillic script and 
 marks it up using `und-Cyrl`, which is a valid IETF tag, coding for language="undetermined", script="Cyrillic".
 
@@ -81,7 +81,7 @@ These features can be disabled or enabled (default) using the `autoVietnamese` a
 $mpdf->autoLangToFont = true;
 {% endhighlight %}
 
-You can edit the values in `config_lang2font.php` to specify which fonts are used for which `lang`.
+[//]: # You can edit the values in `\Mpdf\LangToFont` to specify which fonts are used for which `lang`.
 
 Using text with multiple languages
 
@@ -100,5 +100,5 @@ when undefined languages are set e.g "`und-Cyrl`".
 <div class="alert alert-info" role="alert">
 	<strong>Note:</strong> As from mPDF 6.0 automatic font selection can be used within an SVG image. 
     Control is separate from that of the rest of the document. For details, see the defined constants at the 
-    top of Svg class.
+    top of `\Mpdf\Svg` class.
 </div>

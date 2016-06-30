@@ -10,7 +10,9 @@ mPDF >= 5.0
 
 Optional array containing font(s) to use for missing characters when using useSubstitutions.
 
-Default set in config_fonts.php
+Default set in font 
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>
+or at runtime.
 
 Default value: array('dejavusanscondensed')
 
@@ -18,11 +20,12 @@ Only relevant when using subsets (otherwise would add very large file), and does
 
 More than 1 font can be specified but each will add to the processing time of the script
 
-Names used are as defined in $this->fontdata in config_fonts.php
+Names used are as defined in `fontdata` configuration variable.
 
 Examples:
 
-$this->backupSubsFont = array('dejavusanscondensed','arialunicodems','sun-exta');    // this will recognise most scripts
+```
+$mpdf->backupSubsFont = array('dejavusanscondensed', 'arialunicodems', 'sun-exta'); // this will recognise most scripts
 
-$this->backupSubsFont = array('dejavusanscondensed','arialunicodems');    // good default - REQUIRES Arial Unicode MS
-
+$mpdf->backupSubsFont = array('dejavusanscondensed', 'arialunicodems'); // good default - REQUIRES Arial Unicode MS
+```

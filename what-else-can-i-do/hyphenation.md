@@ -103,7 +103,7 @@ The following languages are supplied with mPDF 2.5:
 </table>
 
 
-A pattern file for each language is found in the folder /patterns/ and the 
+A pattern file for each language is found in the directory /patterns/ and the 
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 <span class="parameter">$SHYlanguages</span> needs to be updated if any additions are made.
 

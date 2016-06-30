@@ -134,7 +134,7 @@ by the locales available in your system configuration. Always use a utf-8 locale
 <span class="parameter">$<span class="parameter">$indexCollationGroup</span> </span>
 
 If you have set your index to use Dividing letters, this value will determine how letters are grouped under a dividing
-letter. Values should be selected from the files in folder <span class="filename">/collations/</span> e.g.
+letter. Values should be selected from the files in directory <span class="filename">/data/collations/</span> e.g.
 'English_United_Kingdom'
 
 NB This will not affect the overall order of entries, which is determined by the value above.
@@ -168,7 +168,7 @@ NB This will not affect the overall order of entries, which is determined by the
 
 # Examples
 
-{% highlight php %}
+{% highlight html %}
 <html>
 
 Text of document...

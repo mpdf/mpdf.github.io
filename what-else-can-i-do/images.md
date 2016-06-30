@@ -7,7 +7,7 @@ modification_time: 2015-08-05T12:00:04+00:00
 ---
 
 Images are supported by mPDF: GIF, PNG, JPG, WMF, SVG, BMP and generated images from
-<acronym title="PHP: Hypertext Preprocessor">PHP </acronym> scripts.
+<acronym title="PHP: Hypertext Preprocessor">PHP</acronym> scripts.
 
 Transparent GIF images are supported, and so are interlaced and transparent PNG files,
 including transparency using alpha channel.
@@ -220,7 +220,7 @@ If none of these are present, the intrinsic size will be set as the width of con
 - automatic font selection for text*
 
 As from mPDF 6.0 there is limited support for CSS classes and for automatic font selection (see the defined constants
-at the top of classes/svg.php file).
+at the top of `\Mpdf\Svg` class).
 
 ## Not supported
 

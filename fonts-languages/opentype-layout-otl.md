@@ -150,7 +150,8 @@ td.tabular { font-feature-settings: "tnum"; }
 
 # How to use OTL in mPDF
 
-In `config_fonts.php` there are 2 variables which affect OTL features for each font family e.g.:
+In <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">font configuration variables</a>
+there are 2 variables which affect OTL features for each font family e.g.:
 
 {% highlight php %}
 "dejavusanscondensed" => array(
@@ -255,22 +256,22 @@ Note: mPDF does not support Graphite or AAT font features.
 
 ## Configuring new fonts for mPDF 6
 
-To add a font, first copy the font file to the <span class="filename">/ttfonts/</span> folder.
+To add a font, first copy the font file to your `fontDir` directory.
 
-Then edit <span class="filename">config_fonts.php</span> to add. See the manual for details if you are not already 
-familiar with this.
+Then set `fontdata` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
+to add the font. See the manual for details if you are not already familiar with this.
 
-If you wish to use this font with `autoLangToFont`, you also need to edit <span class="filename">config_lang2fonts.php</span>
+[//]: # If you wish to use this font with `autoLangToFont`, you also need to edit `\Mpdf\LangToFont`
 
 ## Setting OTL use at runtime
 
-mPDF caches some font information in the <span class="filename">/ttfontdata/</span> folder to improve performance. 
+mPDF caches some font information in the directory configured as `tempDir` to improve performance. 
 This is regenerated if you change the value of `useOTL` for a font.
 
 There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g. 
 for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for 
 Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in 
-<span class="filename">config_fonts.php</span>:
+`fontdata` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 
 {% highlight php %}
 "freeserif" => array(

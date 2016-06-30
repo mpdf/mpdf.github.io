@@ -115,7 +115,8 @@ The following font names can be used with mPDF 5.x
                 sans sans-serif serif monospace mono
             </td>
             <td>
-                sans-serif, serif and monospace are recognised generic font-families specified by CSS. These are recognised by mPDF - defined in <span class="filename">config_fonts.php</span>
+                sans-serif, serif and monospace are recognised generic font-families specified by CSS. 
+                These are recognised by mPDF - defined in <span class="filename">config_fonts.php</span>
             </td>
         </tr>
     </tbody>
