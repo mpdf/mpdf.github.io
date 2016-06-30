@@ -8,7 +8,7 @@ modification_time: 2015-08-05T11:59:39+00:00
 
 (mPDF >= 4.0 && < 6.0)
 
-Three configuration files are included in the root folder of mPDF:
+Three configuration files are included in the root directory of mPDF:
 
 <table class="table"> <thead>
 <tr>

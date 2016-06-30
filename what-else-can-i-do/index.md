@@ -85,7 +85,7 @@ Arroyo Molino, David
 
 **B**
 
-BenÃtez, Carlos
+Benitez, Carlos
 
 Entries in an Index can now be sorted using any of the Locale values available on your system. Set it using the "collation" property/parameter e.g.:
 
@@ -115,7 +115,7 @@ letter. In the example index above, we want Ã to be grouped under the letter a/
 <indexinsert usedivletters="on" links="off" collation="es_ES.utf8" collation-group="Spanish_Spain" />
 {% endhighlight %}
 
-- or -
+or
 
 {% highlight php %}
 <?php
@@ -123,7 +123,7 @@ letter. In the example index above, we want Ã to be grouped under the letter a/
 $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
 {% endhighlight %}
 
-Values should be selected from the available file names in folder /collations/.
+Values should be selected from the available file names in directory /collations/.
 
 Note: This will not affect the overall order of entries, which is determined by the value of "collation".
 
@@ -168,6 +168,7 @@ It can be disabled/enabled using the configurable variable `indexUseSubentries` 
 
 This is the default appearance, with $this->indexUseSubentries = false; -
 
+```
 Mammals 73
 
 - elephants 142
@@ -179,6 +180,7 @@ Marsupials
 - kangaroos 75
 
 - wombats 86
+```
 
 Index entries can also include simple mark-up tags and/or more than one colon e.g:
 
@@ -188,12 +190,15 @@ Index entries can also include simple mark-up tags and/or more than one colon e.
 
 which appears as:
 
+```
 Mammals
 
 - **elephants**: breeding 15
+```
 
 This is the appearance with $this->indexUseSubentries = false;
 
+```
 Mammals 73
 
 Mammals, elephants 142
@@ -205,6 +210,7 @@ Mammals, humans 173
 Marsupials, kangaroos 75
 
 Marsupials, wombats 86
+```
 
 ## Customised appearance (advanced)
 

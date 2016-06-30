@@ -43,10 +43,11 @@ mPDF will try to find substitutions for any missing characters:
 1. if the character is in Unicode Plane 2 (SIP) i.e. Unicode value &gt; U+20000:
     1. looks in the sip-ext font file 
        (see <a href="{{ "/fonts-languages/fonts-in-mpdf-5-x.html" | prepend: site.baseurl }}">Fonts in mPDF 5.x</a>)
-    2. looks in the font defined by `$this->backupSIPFont` in the <span class="filename">config_fonts.php</span> file
+    2. looks in the font defined by `backupSIPFont` 
+       <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 2. looks to see if the character is available in the core fonts: Arial/Helvetica, Times, Courier, Symbols or ZapfDingbats
-3. looks in each of the the font(s) set by `$this->backupSubsFont` array in the 
-   <span class="filename">config_fonts.php</span> file
+3. looks in each of the the font(s) set by `backupSubsFont` 
+   <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>
 
 It is not recommended to enable this for regular use, as it will add to the processing time.
 

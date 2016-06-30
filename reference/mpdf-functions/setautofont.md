@@ -53,8 +53,8 @@ but note that SetAutoFont also:
     it is marked as `&lt;span lang="zh"&gt;...&lt;/span&gt;`.
 
     The font actually used for default chinese is determined by the settings in function 
-    <span class="function">GetCodepage()</span> in <span class="filename">config_cp.php</span>; 
-    by default this is Chinese Simplified (GB, GBK).
+    <span class="function">GetCodepage()</span> in `\Mpdf\LangToFont` class. 
+    By default this is Chinese Simplified (GB, GBK).
 </div>
 
 <div class="alert alert-info" role="alert">

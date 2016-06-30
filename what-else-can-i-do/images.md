@@ -216,7 +216,7 @@ If none of these are present, the intrinsic size will be set as the width of con
 - automatic font selection for text*
 
 As from mPDF 6.0 there is limited support for CSS classes and for automatic font selection (see the defined constants 
-at the top of classes/svg.php file).
+at the top of `\Mpdf\Svg` class).
 
 ## Not supported
 

@@ -49,9 +49,8 @@ fonts e.g. DejaVu Sans Condensed:
 However, for some fonts the normal line-height using font metrics will be significantly taller, to account for the 
 design of the font glyphs e.g. Khmer font:
 
-For more information on how complex normal lineheights are, see Eric Meyers' website: 
-<a href="http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/">http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/</a> 
-and <a href="http://typophile.com/node/13081">http://typophile.com/node/13081</a>
+For more information on how complex normal lineheights are, see Eric Meyer website: 
+http://meyerweb.com/eric/thoughts/2008/05/06/line-height-abnormal/ and http://typophile.com/node/13081
 
 # CSS control of line-height
 
@@ -60,10 +59,13 @@ elements (P, DIV etc) and tables (TABLE/TD/TH).
 
 **line-stacking-strategy** = `inline-line-height | block-line-height | max-height | grid-height`
 
-- `inline-line-height` - [default] lineheight is initially calculated from the block-level font[-size]; the height is expanded by any inline content, including the calculated lineheight of that inline content;
+- `inline-line-height` - [default] lineheight is initially calculated from the block-level font[-size]; the height is 
+   expanded by any inline content, including the calculated lineheight of that inline content;
 - `block-line-height` - lineheight is fixed as the lineheight of the block-level font[-size];
-- `max-height` - lineheight is initially calculated from the block-level font; the height is expanded by any inline content, EXCLUDING the calculated lineheight of that inline content;
-- `grid-height` - lineheight is initially calculated from the block-level font; the height is expanded - AS MULTIPLES OF INITIAL LINEHEIGHT - by any inline content, EXCLUDING the calculated lineheight of that inline content;
+- `max-height` - lineheight is initially calculated from the block-level font; the height is expanded by any inline 
+  content, EXCLUDING the calculated lineheight of that inline content;
+- `grid-height` - lineheight is initially calculated from the block-level font; the height is expanded - **as 
+  multiples of initial lineheight** - by any inline content, EXCLUDING the calculated lineheight of that inline content;
 
 Note: XSL has a similar property with the same name, which uses different but equivalent values: `line-height` 
 instead of `inline-line-height`, `font-height` instead of `block-line-height`. It also uses `max-height`. The value 
@@ -84,16 +86,24 @@ There are actually three possible metrics that can be used in a TrueType font fi
 quite well in this article at <a href="http://typophile.com/node/13081">http://typophile.com/node/13081</a>. 
 mPDF will by default use the usWinAscent and usWinDescent values to determine a 'normal' line-height, with two variations:
 
-- if either the usWinAscent or usWinDescent are greater than the font bounding box (yMin yMax), then the values are reduced to equal the yMin/yMax values. NB this works as a fix with Myanmar Text (Windows 8 version) to give a line-height normal that is equivalent to that produced in browsers.
-- if the USE_TYPO_METRICS bit is set on fsSelection (OS/2 table), this is telling the font to use the sTypo values and not the usWinAscent values. NB this works as a fix with Cambria Math font to give a normal line-height; at present, this is the only font I have found with this bit set; although note that MS WordPad and Windows FireFox browser use the big line-height from usWinAscent, whilst MS Word 2007 observes the fSelection value.
+- if either the usWinAscent or usWinDescent are greater than the font bounding box (yMin yMax), then the values are 
+  reduced to equal the yMin/yMax values. NB this works as a fix with Myanmar Text (Windows 8 version) to give a 
+  line-height normal that is equivalent to that produced in browsers.
+- if the USE_TYPO_METRICS bit is set on fsSelection (OS/2 table), this is telling the font to use the sTypo values and 
+  not the usWinAscent values. NB this works as a fix with Cambria Math font to give a normal line-height; at present, 
+  this is the only font I have found with this bit set; although note that MS WordPad and Windows FireFox browser use 
+  the big line-height from usWinAscent, whilst MS Word 2007 observes the fSelection value.
 
-You can change the font metrics used by mPDF, by editing the defined constant (`_FONT_DESCRIPTOR`) at the top of the <span>mpdf.php</span> file:
+You can change the font metrics used by mPDF, by setting `fontDescriptor` 
+<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-- '`winTypo`' uses sTypoAscender etc from the OS/2 table and is the one officially recommended - BUT
-- '`win`' use usWinAscent etc from OS/2 and in practice seems to be used most commonly in Windows environment; this is the default in mPDF;
-- '`mac`' uses Ascender etc from hhea table, and may be used to give results consistent with a Mac/OSX environment.
+- `winTypo` uses sTypoAscender etc from the OS/2 table and is the one officially recommended - BUT
+- `win` use usWinAscent etc from OS/2 and in practice seems to be used most commonly in Windows environment; 
+  this is the default in mPDF;
+- `mac` uses Ascender etc from hhea table, and may be used to give results consistent with a Mac/OSX environment.
 
-Finally, you can override values for Ascent, Descent and Leading for any specific font, by setting values in `config_font.php` e.g.
+Finally, you can override values for Ascent, Descent and Leading for any specific font, by setting 
+font <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>.
 
 {% highlight php %}
 "cambriamath" => array(
@@ -115,7 +125,7 @@ Remember that line-height for a TABLE has a default value (1.2) set in the `defa
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 This is left in for backwards compatability. You can change this value to 'normal' for results consistent with most browsers.
 
-Line-height in a &lt;textarea&gt; is fixed and defined in `classes/mpdfform.php` (= 1.2)
+Line-height in a &lt;textarea&gt; is fixed and defined in `\Mpdf\Form` class (= 1.2)
 
 Details of the font metrics can be seen by inspecting the temporary font files e.g. `/ttfontdata/[fontname].mtx.php`.
 

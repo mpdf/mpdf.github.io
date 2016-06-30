@@ -50,7 +50,7 @@ for more details.
 
 ### Country/Language code values (case-insensitive)
 
-Country/language codes are defined in <span class="filename">config_cp.php</span>
+Country/language codes are defined in `\Mpdf\LangToFont` class
 
 A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"***
 
@@ -58,7 +58,6 @@ A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"***
 	<strong>Note:</strong> If the <span class="parameter">$mode</span> is set by passing a country/language string, 
 	this may also set: available fonts, text justification, and directionality 
 	<acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> 
-	(as determined by <span class="filename">config_cp.php</span>)
 </div>
 
 <div class="alert alert-info" role="alert">

@@ -10,7 +10,7 @@ mPDF uses a default "stylesheet" for default settings of style and layout; this 
 `defaultCSS` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 
 mPDF (>= 2.2) will load an optional file <span class="filename">mpdf.css</span> (located in the data directory of
-mPDF vendor base dir).
+mPDF installation root).
 
 **mPDF >= 6.0** A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for 
 Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. 

@@ -61,12 +61,13 @@ $this->fontdata = [
 
 Each font-family must have a Regular ['R'] file defined - the others (['B']old, ['I']talic, ['BI']bold-italic) are optional.
 
-mPDF will try to locate the font-file. If you have defined `_MPDF_SYSTEM_TTFONTS` at the top of the
-<span class="filename">config_fonts.php</span> file, it will first look for the font-file there. This is useful if you
-are running mPDF on a computer which already has a folder with TTF fonts in (e.g. on Windows)
+mPDF looks for files based on the `fontDir` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">
+configuration variable</a>. This is, by default set to `ttfonts` directory in the root of mPDF installation.
 
-If the font-file is not there, or `_MPDF_SYSTEM_TTFONTS` is not defined, mPDF will look in the folder
-<span class="filename">/[your_path_to_mpdf]/ttfonts/</span>
+Any readable path or an array of paths can be set to the `fontDir` directive. When an array is set, mPDF will scan
+directories in the defined order.
+
+This is useful if you are running mPDF on a computer which already has a directory with TTF fonts in (e.g. on Windows)
 
 Note that the font-file names are case-sensitive and can contain capitals.
 
