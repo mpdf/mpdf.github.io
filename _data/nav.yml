@@ -25,6 +25,11 @@
             slug: credits
             parent_title: 'About mPDF'
         -
+            title: Changelog
+            permalink: /about-mpdf/changelog.html
+            slug: changelog
+            parent_title: 'About mPDF'
+        -
             title: License
             url: index1652.html
             permalink: /about-mpdf/license.html
