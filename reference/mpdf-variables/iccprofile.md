@@ -20,7 +20,7 @@ Either a 3-colour RGB profile or a 4-colour CMYK profile should be used dependin
 
 The default colorspace for a PDF/A1-b document is RGB. The default for a PDF/X-1a document is CMYK.
 
-Specify the name without the <span class="filename">.icc</span> extension or a full path to ICC profile file
+Specify the full path to ICC profile file.
 
 sRGB_IEC61966-2-1 is used as the default file for PDF/A1-b documents if none is specified 
 (a profile must be specified for PDF/X-1a)
@@ -28,9 +28,6 @@ sRGB_IEC61966-2-1 is used as the default file for PDF/A1-b documents if none is 
 # Values
 
 <span class="parameter">$ICCProfile</span> = <span class="smallblock">STRING</span>
-
-Name of a valid ICC colour profile in the <span class="filename">/iccprofiles/</span> directory - without the 
-<span class="filename">.icc</span> extension.
 
 Full path to .icc profile file.
 
