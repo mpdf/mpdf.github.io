@@ -61,7 +61,7 @@ mPDF  >= 5.7 Spotcolor CMYK values can be defined as it is used e.g. color: spo
 <td><span class="smallblock">COMMON TEXT STYLES</span>
 
 </td>
-<td><span class="smallblock">See below - all excpet text-shadow
+<td><span class="smallblock">See below - all except text-shadow
 
 </span></td>
 </tr>
@@ -892,7 +892,7 @@ Sets the opacity/transparency of the background image.
 </tr>
 <tr>
 <td><span class="smallblock">COMMON TEXT STYLES</span></td>
-<td><span class="smallblock">See below - except text-decoration, text-trnsform and text-shadow
+<td><span class="smallblock">See below - except text-decoration, text-transform and text-shadow
 
 </span></td>
 </tr>
@@ -1376,7 +1376,7 @@ As per CSS3 specification</td>
 </tr>
 <tr>
 <td>margin-left, margin-right</td>
-<td>auto|0 (only)are supported as an alternative way to align a HR of less than 100% width. Values for margin-left: 0; margin-right: auto; will align the HR to the left etc.</td>
+<td>auto|0 (only) are supported as an alternative way to align a HR of less than 100% width. Values for margin-left: 0; margin-right: auto; will align the HR to the left etc.</td>
 </tr>
 <tr>
 <td>clear</td>
@@ -1430,7 +1430,7 @@ medium | thin | thick accepted for size
 
 Value between 0 and 1.0
 
-CSS3 recommended property (but already supported by FireFox)
+CSS3 recommended property (but already supported by Firefox)
 
 Sets the opacity/transparency of the image.
 
