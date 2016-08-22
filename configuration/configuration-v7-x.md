@@ -37,3 +37,12 @@ All variables can be changed at runtime using Mpdf public properties as defined 
 ```
 $mpdf->pdf_version = '1.5';
 ```
+
+# Example PDFs
+
+Mpdf includes a [large number of working example PHP files](https://github.com/mpdf/mpdf-examples) to show off Mpdf's features.
+When you install Mpdf with `composer install` these files are included by default (the package is included in the `require-dev` section of `composer.json`).
+ 
+To view the PDFs, point your browser to the `/vendor/mpdf/examples/` directory. For example:
+
+`http://host.com/vendor/mpdf/examples/example01_basic.php`
