@@ -632,6 +632,30 @@
             slug: combining-diacritics
             parent_title: 'What Else Can I Do'
 -
+    title: 'Command Line'
+    slug: cli
+    items:
+        -
+            title: Introduction
+            permalink: /cli/introduction.html
+            slug: introduction
+            parent_title: 'Command Line'
+            items:
+                -
+                    title: 'Commands'
+                    slug: commands
+                    items:
+                        -
+                            title: testing.buildsnapshots
+                            permalink: /cli/commands/testing.buildsnapshots.html
+                            slug: testing.buildsnapshots
+                            parent_title: 'Commands'
+                        -
+                            title: testing.comparesnapshots
+                            permalink: /cli/commands/testing.comparesnapshots.html
+                            slug: testing.comparesnapshots
+                            parent_title: 'Commands'
+-
     title: 'Real life examples'
     slug: real-life-examples
     items:
