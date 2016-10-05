@@ -13,37 +13,35 @@ Transparent GIF images are supported, and so are interlaced and transparent PNG 
 <table class="table"> <tbody>
 <tr>
 <td>JPG image</td>
-<td><img src="files/images/tiger.jpg" alt="tiger.jpg" width="100" /></td>
+<td><img src="/files/images/tiger.jpg" alt="tiger.jpg" width="100" /></td>
 </tr>
 <tr>
 <td>GIF with transparency</td>
-<td><img src="files/images/tiger8trns.gif" alt="tiger8trns.gif" width="100" /></td>
+<td><img src="/files/images/tiger8trns.gif" alt="tiger8trns.gif" width="100" /></td>
 </tr>
 <tr>
 <td>PNG with transparency</td>
-<td><img src="files/images/tiger8trns.png" alt="tiger8trns.png" width="100" /></td>
+<td><img src="/files/images/tiger8trns.png" alt="tiger8trns.png" width="100" /></td>
 </tr>
 <tr>
 <td>PNG with alpha channel</td>
-<td><img src="files/images/alpha.png" alt="alpha.png" width="180" /></td>
+<td><img src="/files/images/alpha.png" alt="alpha.png" width="180" /></td>
 </tr>
 <tr>
 <td>WMF image
 
-(will only show in IE or <a href="index76c0.pdf?op=pdf&amp;op_target=print&amp;id=295&amp;media=pdf&amp;pdffmt=1&amp;dg=1">PDF</a>)</td>
-<td><img src="files/images/tiger.wmf" alt="tiger.wmf" /></td>
+(will only show in IE or PDF)</td>
+<td><img src="/files/images/tiger.wmf" alt="tiger.wmf" /></td>
 </tr>
 <tr>
 <td>
 
 SVG image
 
-(will only show in some browsers
-
-e.g. Firefox which support SVG, and <a href="index76c0.pdf?op=pdf&amp;op_target=print&amp;id=295&amp;media=pdf&amp;pdffmt=1&amp;dg=1">PDF</a>)
+(will only show in some browsers e.g. Firefox which support SVG, and PDF)
 
 </td>
-<td><img src="files/images/tiger.svg" alt="tiger.svg" width="100" /></td>
+<td><img src="/files/images/tiger.svg" alt="tiger.svg" width="100" /></td>
 </tr>
 </tbody> </table>
 
@@ -75,11 +73,9 @@ In addition, many CSS style properties are supported including <span class="para
 
 Images can be used in:
 
-<ul>
-<li>In-line images, including in HTML headers &amp; footers</li>
-<li>Watermarks</li>
-<li>CSS background-image</li>
-</ul>
+* In-line images, including in HTML headers &amp; footers
+* Watermarks
+* CSS background-image
 
 ## Size constraint
 
@@ -100,7 +96,7 @@ This can be achieved using HTML &amp; CSS like this:
 {% highlight php %}
 <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
 
-<img src="files/images/frontcover.jpg" style="width: 210mm; height: 297mm; margin: 0;" />
+<img src="/files/images/frontcover.jpg" style="width: 210mm; height: 297mm; margin: 0;" />
 
 </div>
 {% endhighlight %}
@@ -137,20 +133,18 @@ Any process that requires the GD library uses a large amount of memory - to crea
 You can define a script which generates an image just as you can in HTML:
 
 {% highlight php %}
-<img src="files/my_file_generating_script.php?color=red" />
+<img src="/files/my_file_generating_script.php?color=red" />
 {% endhighlight %}
 
 ## Embedded Image data
 
 Embedded image data can be used either in &lt;img&gt; elements or in CSS:background. gif, png and jpeg are supported.
 
-{% highlight php %}
-[HTML]
-
+{% highlight html %}
 <img src="data:image/gif;base64,...." />
+{% endhighlight %}
 
-[CSS stylesheet]
-
+{% highlight css %}
 div { background: url(data:image/gif;base64,....) no-repeat 4px center; }
 {% endhighlight %}
 
@@ -273,6 +267,3 @@ Note: SVG images can be embedded within the HTML code. They may be a useful way 
 
 </body>
 {% endhighlight %}
-
-<ul> </li>
-</ul>

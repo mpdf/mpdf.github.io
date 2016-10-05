@@ -68,7 +68,7 @@ background-gradient: linear #c7cdde #f0f2ff 0 1 0 0.5;
 
 The four numbers are coordinates in the form (x1, y1, x2, y2) which defines the gradient vector. x and y are values from 0 to 1, where 1 represents the height or width of the box as it is printed.
 
-<img src="files/images/linear_gradient_coords.jpg" alt="linear_gradient_coords.jpg" width="355" height="291" />
+<img src="/files/images/linear_gradient_coords.jpg" alt="linear_gradient_coords.jpg" width="355" height="291" />
 
 {% highlight php %}
 background-gradient: radial #00FFFF #FFFF00 0.5 0.5 0.5 0.5 0.65;
@@ -76,7 +76,7 @@ background-gradient: radial #00FFFF #FFFF00 0.5 0.5 0.5 0.5 0.65;
 
 The five numbers are coordinates in the form (x1, y1, x2, y2, r) where (x1, y1) is the starting point of the gradient with color1, (x2, y2) is the center of the circle with color2, and r is the radius of the circle. (x1, y1) should be inside the circle, otherwise some areas will not be defined.
 
-<img src="files/images/radial_gradient_coords.jpg" alt="radial_gradient_coords.jpg" width="342" height="308" />
+<img src="/files/images/radial_gradient_coords.jpg" alt="radial_gradient_coords.jpg" width="342" height="308" />
 
 # Borders
 
