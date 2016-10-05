@@ -2,7 +2,7 @@
 layout: page
 title: Features
 parent_title: About mPDF
-permalink: /about-mpdf/features.html
+permalink: /about-mpdf/features-v5.html
 modification_time: 2015-08-05T11:59:20+00:00
 ---
 
