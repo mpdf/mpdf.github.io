@@ -65,7 +65,7 @@ $message = Swift_Message::newInstance()
   ->setFrom(array('john@doe.com' => 'John Doe'))
   ->setTo(array('receiver@domain.org', 'other@domain.org' => 'A name'))
   ->setBody('Here is the message itself')
-  ->attach($attachment)
+  ->attach($attachment);
 
 $transport = Swift_MailTransport::newInstance();
 
