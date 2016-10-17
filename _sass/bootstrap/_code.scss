@@ -38,8 +38,9 @@ pre {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 90%;
-  line-height: $line-height;
+  line-height: 1;
   color: $pre-color;
+  padding-bottom: 1rem;
 
   // Account for some code outputs that place code tags in pre tags
   code {
