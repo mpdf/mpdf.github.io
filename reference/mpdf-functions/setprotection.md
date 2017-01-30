@@ -144,9 +144,3 @@ $mpdf->SetProtection(array(), 'UserPassword', 'MyPassword');
 
 $mpdf->SetProtection(array('copy','print'), '', 'MyPassword');
 {% endhighlight %}
-
-# See Also
-
-<ul>
-<li class="manual_boxlist"><a href="indexaf79.html?tid=193">SetUserRights()</a></li>
-</ul>
