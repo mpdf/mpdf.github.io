@@ -159,17 +159,17 @@ div { background: url(data:image/gif;base64,....) no-repeat 4px center; }
 
 ## Image data as a Variable
 
-A PHP variable containing image data can be passed directly to mPDF. You need to allocate the data to a class variable
+A PHP variable containing image data can be passed directly to mPDF. You need to allocate the data to an array item (changed in 7.0)
 
 (you can make any name up) e.g.
 
 {% highlight php %}
 <?php
 
-$mpdf->myvariable = file_get_contents('alpha.png');
+$mpdf->imageVars['myvariable'] = file_get_contents('alpha.png');
 {% endhighlight %}
 
-The image can then be referred to by use of "var:varname" instead of a file name, either in src="" or direct to Image()
+The image can then be referred to by use of "var:varname" instead of a file name, either in `src=""` or direct to Image()
 function e.g.
 
 {% highlight php %}
@@ -183,7 +183,7 @@ $mpdf->WriteHTML($html);
 {% highlight php %}
 <?php
 
-$mpdf->Image('var: myvariable',0,0);
+$mpdf->Image('var:myvariable', 0, 0);
 {% endhighlight %}
 
 # SVG images
