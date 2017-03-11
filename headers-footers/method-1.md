@@ -74,7 +74,7 @@ $mpdf->WriteHTML('Document text');
 $mpdf->Output();
 {% endhighlight %}
 
-## Variant #4 (Array) - DEPRACATED
+## Variant #4 (Array) - DEPRECATED
 
 Set a header/footer using an array of values. This allows greater control over styling. Recommended to use Variant #5, which is very similar, but specifies <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> forms separately.
 
@@ -351,7 +351,7 @@ $mpdf->WriteHTML('Main part of document...');
 $mpdf->Output();
 {% endhighlight %}
 
-... and for historical purposes using depracated TOC functions:
+... and for historical purposes using deprecated TOC functions:
 
 {% highlight php %}
 <?php
@@ -394,7 +394,7 @@ $mpdf->AddPage('', '', 1, '', 'on');    // suppress page numbering for the intro
 
 $mpdf->WriteHTML('Introduction of document...');
 
-// Set some variables for the ToC - these are all now depracated
+// Set some variables for the ToC - these are all now deprecated
 
 $mpdf->TOCheader = array();
 
