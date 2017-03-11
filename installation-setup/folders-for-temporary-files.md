@@ -6,11 +6,12 @@ permalink: /installation-setup/folders-for-temporary-files.html
 modification_time: 2015-08-05T11:59:24+00:00
 ---
 
-mPDF is pre-configured to use <span class="filename">[path_to_mpdf]/tmp/</span> as a directory to write temporary files
-(mainly for images), and <span class="filename">[path_to_mpdf]/tmp/ttfontdata/</span> as a directory to cache font metrics 
-data. Write permissions must be set for read/write access for the tmp directory.
+mPDF is pre-configured to use `[path_to_mpdf]/tmp/` as a directory to write temporary files
+(mainly for images). Write permissions must be set for read/write access for the tmp directory.
 
-If you wish to use a different directory for temporary files, you should define should define `tempDir` key in constructor
+As the default temp directory will be in vendor folder, is is advised to set custom temporary directory.
+
+If you wish to use a different directory for temporary files, you should define `tempDir` key in constructor
 `$config` parameter
 
 {% highlight php %}
@@ -19,16 +20,16 @@ If you wish to use a different directory for temporary files, you should define 
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new \Mpdf\Mpdf(['tempDir' => 'custom/temp/dir/path']);
+$mpdf = new \Mpdf\Mpdf(['tempDir' => __DIR__ . '/custom/temp/dir/path']);
 {% endhighlight %}
 
 ## Images
 
-Up to version 6.x, Images will still be processed without write permissions to the temp folder, but at considerable cost 
+Up to version 6.x, Images will still be processed without write permissions to the temp folder, but at considerable cost
 in processing time and memory usage.
 
 ## Fonts
 
-Up to version 6.x, fonts can still be used and embedded without write permissions to this folder, but at some cost in processing time 
+Up to version 6.x, fonts can still be used and embedded without write permissions to this folder, but at some cost in processing time
 and memory usage.
 

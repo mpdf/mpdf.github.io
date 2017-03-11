@@ -3,10 +3,10 @@ layout: page
 title: Features
 parent_title: About mPDF
 permalink: /about-mpdf/features.html
-modification_time: 2015-08-05T11:59:20+00:00
+modification_time: 2017-08-05T10:06:20+02:00
 ---
 
-# Main features
+# Main features (as of version 7)
 
 - Accepts UTF-8 encoded HTML
 - Supports almost all languages including <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">
@@ -26,7 +26,7 @@ modification_time: 2015-08-05T11:59:20+00:00
 - Tables - nested tables, rotated, or autosized to fit on a page
 - Table of contents
 - Index
-- Watermarks
+- Watermarks (with customizable text angle)
 - Images in JPG, GIF, PNG, SVG, BMP or WMF format
 - Password protection
 - Annotations
@@ -35,6 +35,7 @@ modification_time: 2015-08-05T11:59:20+00:00
 - Embedded font subsets
 - PDF/A-1b support (ISO 19005-1:2005)
 - PDF/X-1a support
+- PDF/A-3 support (along with ZUGFeRD invoices compatibility)
 
 # More Information
 

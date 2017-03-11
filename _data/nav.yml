@@ -4,13 +4,18 @@
     items:
         -
             title: 'Features'
-            permalink: /about-mpdf/features-v7.html
+            permalink: /about-mpdf/features.html
             slug: features
             parent_title: 'About mPDF'
         -
-            title: 'Requirements v7'
+            title: 'Requirements'
             permalink: /about-mpdf/requirements-v7.html
             slug: requirements-v7
+            parent_title: 'About mPDF'
+        -
+            title: 'Requirements < v7.0'
+            permalink: /about-mpdf/requirements-v5.html
+            slug: requirements-v5
             parent_title: 'About mPDF'
         -
             title: Limitations
@@ -40,10 +45,9 @@
     slug: installation-setup
     items:
         -
-            title: 'Installation v5.x'
-            url: index619b.html
-            permalink: /installation-setup/installation-v5-x.html
-            slug: installation-v5-x
+            title: 'Installation v7.x'
+            permalink: /installation-setup/installation-v7-x.html
+            slug: installation-v7-x
             parent_title: 'Installation & Setup'
         -
             title: 'Installation v6.x'
@@ -90,16 +94,21 @@
             slug: about-pdf-files
             parent_title: 'Fonts & Languages'
         -
-            title: 'Fonts in mPDF 5.x'
-            url: index84a8.html
-            permalink: /fonts-languages/fonts-in-mpdf-5-x.html
-            slug: fonts-in-mpdf-5-x
+            title: 'Fonts in mPDF 7.x'
+            permalink: /fonts-languages/fonts-in-mpdf-7-x.html
+            slug: fonts-in-mpdf-7-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Fonts in mPDF 6.x'
             url: indexa2f8.html
             permalink: /fonts-languages/fonts-in-mpdf-6-x.html
             slug: fonts-in-mpdf-6-x
+            parent_title: 'Fonts & Languages'
+        -
+            title: 'Fonts in mPDF 5.x'
+            url: indexa2f8.html
+            permalink: /fonts-languages/fonts-in-mpdf-5-x.html
+            slug: fonts-in-mpdf-5-x
             parent_title: 'Fonts & Languages'
         -
             title: 'OpenType layout (OTL)'
@@ -114,16 +123,16 @@
             slug: font-names
             parent_title: 'Fonts & Languages'
         -
+            title: 'Available fonts v6 and v7'
+            url: index3517.html
+            permalink: /fonts-languages/available-fonts-v6.html
+            slug: available-fonts-v6
+            parent_title: 'Fonts & Languages'
+        -
             title: 'Available Fonts v5.x'
             url: index3ad8.html
             permalink: /fonts-languages/available-fonts-v5-x.html
             slug: available-fonts-v5-x
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Available fonts v6'
-            url: index3517.html
-            permalink: /fonts-languages/available-fonts-v6.html
-            slug: available-fonts-v6
             parent_title: 'Fonts & Languages'
         -
             title: 'Choosing a configuration v5.x'

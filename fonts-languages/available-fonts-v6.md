@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Available fonts v6
+title: Available fonts v6 and v7
 parent_title: Fonts & Languages
 permalink: /fonts-languages/available-fonts-v6.html
 modification_time: 2015-08-05T11:59:29+00:00
@@ -407,7 +407,7 @@ The following font names can also be used with mPDF:
             </td>
             <td>
 
-                sans-serif, serif and monospace are recognised generic font-families specified by CSS. 
+                sans-serif, serif and monospace are recognised generic font-families specified by CSS.
                 These are recognised by mPDF - cf. <span class="filename">config_fonts.php</span>
 
             </td>
