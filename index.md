@@ -32,7 +32,7 @@ Consider supporting development of mPDF with a donation of any value.
 - <a href="{{ "/about-mpdf/licence.html" | prepend: site.baseurl }}">Licence</a>
 
 - <a href="https://github.com/mpdf/mpdf">GitHub repository</a>
-- <a href="{{ "/installation-setup/installation-v6-x.html" | prepend: site.baseurl }}">Installation</a>
+- <a href="{{ "/installation-setup/installation-v7-x.html" | prepend: site.baseurl }}">Installation</a>
 
 - <a href="{{ "/getting-started/creating-your-first-file.html" | prepend: site.baseurl }}">Creating your first document</a>
 
