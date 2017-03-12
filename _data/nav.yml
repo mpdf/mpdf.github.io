@@ -229,10 +229,9 @@
     slug: configuration
     items:
         -
-            title: 'Configuration files v5.x'
-            url: index136f.html
-            permalink: /configuration/configuration-files-v5-x.html
-            slug: configuration-files-v5-x
+            title: 'Configuration v7.x'
+            permalink: /configuration/configuration-v7-x.html
+            slug: configuration-files-v7-x
             parent_title: Configuration
         -
             title: 'Configuration files v6.x'
