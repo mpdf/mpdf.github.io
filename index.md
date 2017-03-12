@@ -4,8 +4,10 @@ title: mPDF
 permalink: /
 ---
 
-mPDF is a PHP class which generates PDF files from UTF-8 encoded HTML. It is based on <a href="http://www.fpdf.org/">FPDF</a>
-and <a href="http://html2fpdf.sourceforge.net/">HTML2FPDF</a> with a number of enhancements.
+mPDF is a PHP library which generates PDF files from UTF-8 encoded HTML.
+
+It is based on <a href="http://www.fpdf.org/">FPDF</a> and <a href="http://html2fpdf.sourceforge.net/">HTML2FPDF</a>
+with a number of enhancements.
 
 The original author, Ian Back, wrote mPDF to output PDF files 'on-the-fly' from his website, handling different
 languages. It is slower than the original scripts e.g. HTML2FPDF and produces larger files when using Unicode
@@ -25,16 +27,17 @@ Consider supporting development of mPDF with a donation of any value.
 
 ## Useful manual pages
 
-- <a href="{{ "/about-mpdf/features.html" | prepend: site.baseurl }}">Main features</a>
 - <a href="{{ "/about-mpdf/requirements-v7.html" | prepend: site.baseurl }}">Requirements</a>
+- <a href="{{ "/installation-setup/installation-v7-x.html" | prepend: site.baseurl }}">Installation</a>
+- <a href="{{ "/getting-started/creating-your-first-file.html" | prepend: site.baseurl }}">Creating your first document</a>
+- <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">Configuration</a>
+
+- <a href="{{ "/about-mpdf/features.html" | prepend: site.baseurl }}">Main features</a>
 - <a href="{{ "/about-mpdf/limitations.html" | prepend: site.baseurl }}">Known limitations</a>
 - <a href="{{ "/about-mpdf/credits.html" | prepend: site.baseurl }}">Credits</a>
 - <a href="{{ "/about-mpdf/licence.html" | prepend: site.baseurl }}">Licence</a>
 
 - <a href="https://github.com/mpdf/mpdf">GitHub repository</a>
-- <a href="{{ "/installation-setup/installation-v7-x.html" | prepend: site.baseurl }}">Installation</a>
-
-- <a href="{{ "/getting-started/creating-your-first-file.html" | prepend: site.baseurl }}">Creating your first document</a>
 
 ## Acronyms
 
