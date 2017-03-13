@@ -3,10 +3,10 @@ layout: page
 title: Creating your first file
 parent_title: Getting Started
 permalink: /getting-started/creating-your-first-file.html
-modification_time: 2016-06-25T08:00:00+02:00
+modification_time: 2017-03-13T14:34:39+01:00
 ---
 
-The following PHP will produce the most basic example with mPDF.
+The following PHP will produce the most basic example with mPDF `>= 7.0.0`.
 
 {% highlight php %}
 <?php
@@ -25,18 +25,17 @@ $mpdf->Output();
 
 {% endhighlight %}
 
+For versions below `7.0` use `new mPDF()`;
+
 # Notes
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be defined explicitly prior
-	to mPDF 4.0 e.g. `define('_MPDF_PATH','../')`.
+<div class="alert alert-info" role="alert" markdown="1">
+	*Note:* `_MPDF_PATH` was required to be defined explicitly prior to mPDF 4.0 e.g. `define('_MPDF_PATH','../')`.
 
-	From mPDF 4.0 the value should be automatically defined by the script itself when
-	including the mpdf.php file.
+	Since mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.
 
-	From mPDF 7.0 this constant is deprecated and removed.
+	This constant is deprecated and removed since mPDF 7.0.
 </div>
 
 For details and options for the `Output` method, see 
 <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a>
-
