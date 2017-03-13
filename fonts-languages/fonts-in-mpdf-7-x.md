@@ -3,7 +3,7 @@ layout: page
 title: Fonts in mPDF 7.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/fonts-in-mpdf-7-x.html
-modification_time: 2017-03-08T10:39:27+02:00
+modification_time: 2017-03-13T15:06:17+01:00
 ---
 
 mPDF supports Truetype fonts, reading and embedding directly from the .ttf font files. Fonts must follow the Truetype
@@ -15,12 +15,13 @@ in Truetype format are also supported.
 - Add your font directory to `fontDir` configuration parameter.
 - Define the font file details in the `fontData` parameter
 - Access the font by specifying it in your HTML code as the CSS font-family
-- Specifying languages for the font is TBD
+- Specifying languages for the font by defining custom `Mpdf\Language\LanguageToFontInterface`
+and `Mpdf\Language\ScriptToLanguage` implementation
 
 ## Example
 
-You have 2 font files "Frutiger-Normal.ttf" and "FrutigerObl-Normal.ttf" which you want to be available in mPDF,
-and you will refer to them in HTML/CSS as "Frutiger".
+You have 2 font files `Frutiger-Normal.ttf` and `FrutigerObl-Normal.ttf` which you want to be available in mPDF,
+and you will refer to them in HTML/CSS as `frutiger`.
 
 1. Define the directory with the font
 
@@ -74,19 +75,35 @@ details of setting OTL use and support for kashida e.g.
 
 {% endhighlight %}
 
-4. To use the font with specific languages, you need also to add the font to LangToFont class definition.
-This feature is yet to be done in the 7.x version.
+4. To use the font with specific languages, you need also to add the font to return of a custom
+`Mpdf\Language\LanguageToFontInterface` implementation.
+
+You can also extend existing `Mpdf\Language\LanguageToFontInterface` class.
 
 {% highlight php %}
 <?php
-	// THAI
-	case "th":  $unifont = "frutiger";  break;
+
+class CustomLanguageToFontImplementation extends \Mpdf\Language\LanguageToFontInterface implements \Mpdf\Language\LanguageToFontInterface
+{
+
+	public function getLanguageOptions($llcc, $adobeCJK)
+	{
+		if ($llcc === 'th') {
+			return [false, 'frutiger']; // for thai language, font is not core suitable and the font is Frutiger
+		}
+
+		return parent::getLanguageOptions($llcc, $adobeCJK);
+	}
+
+}
+
+$mpdf = new \Mpdf\Mpdf(['languageToFont' => new CustomLanguageToFontImplementation()]);
+
 {% endhighlight %}
 
-This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable
-`autoLangToFont` is set to `true`:
+This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable `autoLangToFont` is set to `true`:
 
-{% highlight php %}
+{% highlight html %}
 
 <p lang="th">Text in Frutiger</p>
 
@@ -112,9 +129,8 @@ these are the initial, medial, final, and isolated forms of arabic letter 'ain':
 
 ع ـع ـعـ عـ
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly display
-	right-to-left scripts.
+<div class="alert alert-info" role="alert" markdown="1">
+	*Note:* You must enable OpenType layout (OTL) features for a font to correctly display right-to-left scripts.
 </div>
 
 ## Indic languages, Lao, Tibetan etc.
@@ -165,8 +181,7 @@ coverage of free fonts</a> for full list.
 
 mPDF uses a different method to embed fonts in the PDF file if they include characters from SMP or SIP, because the
 characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less eficient than the default
-method, and it can be suppressed by adding the font name to the array `BMPonly` in the
-<span class="filename">config_fonts.php</span> configuration file.
+method, and it can be suppressed by adding the font name to the configuration key `BMPonly` configuration key.
 
 Note that the DejaVu fonts  distributed with mPDF do contain a few characters in the SMP plane, but most users will
 not require them and by default they are added to the array `BMPonly`.
@@ -188,10 +203,9 @@ complete coverage of all CJK characters (in both BMP and SIP) is 'Sun' available
 This comes as 2 files, Sun-ExtA and Sun-ExtB (both about 20MB in size) containing the characters from
 BMP and SIP respectively.
 
-mPDF allows you to treat these as one font by defining the second file as an SIP-extension of the first in the
-config_fonts.php configuration file.
+mPDF allows you to treat these as one font by defining the second file as an SIP-extension of the first.
 
-This is an example of the entry in the `fontdata` configuration variable:
+This is an example of the entry in the `fontdata` configuration key:
 
 {% highlight php %}
 <?php
@@ -238,12 +252,12 @@ Font collection file (<span class="filename">mingliub.ttc</span>) contains the f
 
 [3] MingLiU_HKSCS-ExtB (mingliu_hkscs-extb) Regular
 
-This is the entry in the config_fonts.php configuration file:
+This is the entry in the mPDF configuration:
 
 {% highlight php %}
 <?php
 
-[
+$config = [
 	'fontdata' = [
 
 		'mingliu' => [

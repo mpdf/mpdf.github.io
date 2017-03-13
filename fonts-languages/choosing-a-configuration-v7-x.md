@@ -3,10 +3,10 @@ layout: page
 title: Choosing a configuration v7.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/choosing-a-configuration-v7-x.html
-modification_time: 2015-08-05T11:59:30+00:00
+modification_time: 2017-03-13T15:06:17+01:00
 ---
 
-(mPDF >= 6.0 && < 7.0)
+(mPDF >= 7.0)
 
 In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing
 speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at
@@ -30,7 +30,7 @@ Some of the major considerations are:
 
 # Core non-embedded fonts
 
-PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and 
+PDF files have certain standard fonts: Helvetica, Times and Courier in the win-1252 character set, and 
 Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not need to
 be embedded in the PDF document.
 
@@ -42,7 +42,7 @@ be embedded in the PDF document.
 <a href="{{ "/reference/codepages-glyphs/zapfdingbats-adobe.html" | prepend: site.baseurl }}">Dingbats</a> codepages
 (suitable for most Western European languages).
 
-To use core fonts only, use `'c'` for the mode parameter:
+To use core fonts only, use `c` for the `mode` configuration key:
 
 {% highlight php %}
 <?php
@@ -70,7 +70,7 @@ By default, mPDF will embed subsets of fonts if less than 30% of the characters 
 document; otherwise it will embed the whole font file. You can override this by changing the configurable variable
 `$this->percentSubset`
 
-For backwards compatibility, you can use 's' in the mode parameter to override the
+For backwards compatibility, you can use `s` in the `mode` configuration key to override the
 configuration settings and force subsetting of all fonts e.g.
 
 {% highlight php %}
@@ -91,7 +91,7 @@ This paragraph will use core fonts
 {% endhighlight %}
 
 You could force mPDF to always use core fonts when Arial/Helvetica/Courier are specified, by editing the font
-translation variable `fonttrans` e.g.:
+translation configuration key `fonttrans` e.g.:
 
 {% highlight php %}
 <?php
@@ -153,13 +153,11 @@ There are several different ways to do this:
 
 This needs to be used in conjunction with either:
 
-<ul>
-	<li>`autoLangToFont`</li>
-	<li>CSS stylesheet using the `:lang` selector</li>
-</ul>
+- `autoLangToFont`
+- CSS stylesheet using the `:lang` selector
 
 3) Use `autoScriptToLang` to mark up HTML text by inserting the `lang` attribute, based on the Unicode script block
-in question, and configurable values in `config_script2lang.php`
+in question, and values in a `Mpdf\Language\LanguageToFontInterface` implementation.
 
 {% highlight php %}
 <?php
@@ -169,15 +167,13 @@ $mpdf->autoScriptToLang = true;
 
 As for (2) this needs to be used in conjunction with either:
 
-<ul>
-<li>`autoLangToFont`</li>
-<li>CSS stylesheet using the `:lang` selector</li>
-</ul>
+- `autoLangToFont`</li>
+- CSS stylesheet using the `:lang` selector</li>
 
 4) Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a>
 to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not
-represented in the specified font, it will try to substitute it from one of the fonts defined in `$this->backupSubsFont`
-in <span class="filename">config_fonts.php</span>.
+represented in the specified font, it will try to substitute it from one of the fonts defined in `backupSubsFont`
+configuration key.
 
 {% highlight php %}
 $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
