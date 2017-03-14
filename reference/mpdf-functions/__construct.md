@@ -22,7 +22,7 @@ Initialise an instance of mPDF class.
 
 <span class="parameter">$config</span>
 
-This parameter specifies configuration of the new document. Apart from configuration variables defined in 
+This parameter specifies configuration of the new document. Apart from configuration variables defined in
 `ConfigVariables` and `FontConfigVariables` classes it can obtain variables from the constructor of mPDF <7.0:
 
 ## `mode`
@@ -41,11 +41,11 @@ Mode of the document. Is parsed from values of various formats:
 
 "...-aCJK" or "-aCJK"
 
-where ... can be any string. Only language/country codes will have any effect, but other strings are parsed for 
+where ... can be any string. Only language/country codes will have any effect, but other strings are parsed for
 backwards compatability (but have no effect).
 
-Only some combinations make sense. See 
-<a href="{{ "/fonts-languages/choosing-a-configuration-v5-x.html" | prepend: site.baseurl }}">Choosing a configuration</a> 
+Only some combinations make sense. See
+<a href="{{ "/fonts-languages/choosing-a-configuration-v5-x.html" | prepend: site.baseurl }}">Choosing a configuration</a>
 for more details.
 
 ### Country/Language code values (case-insensitive)
@@ -55,14 +55,14 @@ Country/language codes are defined in `\Mpdf\LangToFont` class
 A country/language code can be passed as e.g. "en-GB" or "en_GB" or "en"***
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If the <span class="parameter">$mode</span> is set by passing a country/language string, 
-	this may also set: available fonts, text justification, and directionality 
-	<acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> 
+  <strong>Note:</strong> If the <span class="parameter">$mode</span> is set by passing a country/language string,
+  this may also set: available fonts, text justification, and directionality
+  <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>
 </div>
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> There is a useful list of language/country codes at: 
-	<a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a>
+  <strong>Note:</strong> There is a useful list of language/country codes at:
+  <a href="http://www.i18nguy.com/unicode/language-identifiers.html">http://www.i18nguy.com/unicode/language-identifiers.html</a>
 </div>
 
 ## `format`
@@ -83,11 +83,11 @@ can be specified either as a pre-defined page size, or as an array of width and 
 
 All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L".
 
-If <span class="parameter">format</span> is defined as a string, the <span class="parameter">orientation</span> 
+If <span class="parameter">format</span> is defined as a string, the <span class="parameter">orientation</span>
 parameter will be ignored.
 
-* Ledger and Tabloid are standard formats with the same page size but different orientation 
-(Ledger is landscape, and Tabloid is portrait). Prior to mPDF 6.1, mPDF treats these identically; if you wished to use 
+* Ledger and Tabloid are standard formats with the same page size but different orientation
+(Ledger is landscape, and Tabloid is portrait). Prior to mPDF 6.1, mPDF treats these identically; if you wished to use
 Ledger, you should have specified "Ledger-L" for landscape.
 
 ## `default_font_size`
@@ -100,9 +100,9 @@ Sets the default document font size in ***points*** (pt)
 
 Sets the default font-family for the new document.
 
-<span class="smallblock">BLANK</span> or omitted uses default value set in <span class="parameter">$defaultCSS</span> 
-unless <span class="parameter">$codepage</span> has been set to "win-1252". If 
-<span class="parameter">$codepage</span>="win-1252", the appropriate core Adobe font will be set i.e. 
+<span class="smallblock">BLANK</span> or omitted uses default value set in <span class="parameter">$defaultCSS</span>
+unless <span class="parameter">$codepage</span> has been set to "win-1252". If
+<span class="parameter">$codepage</span>="win-1252", the appropriate core Adobe font will be set i.e.
 Helvetica, Times, or Courier.
 
 ## `margin_left`
@@ -116,8 +116,8 @@ Set the page margins for the new document.
 
 All values should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values specified will be 
-used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for 
+If you are creating a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values specified will be
+used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for
 <span class="smallblock">EVEN</span> pages.
 
 <span class="smallblock">BLANK</span> or omitted uses the default values.
@@ -133,7 +133,7 @@ used for <span class="smallblock">ODD</span> pages; left and right margins will 
 
 ## `orientation`
 
-This attribute specifies the default page orientation of the new document if <span class="parameter">$format</span> 
+This attribute specifies the default page orientation of the new document if <span class="parameter">$format</span>
 is defined as an array. This value will be ignored if <span class="parameter">$format</span> is a string value.
 
 <span class="smallblock">DEFAULT</span>: "P"
@@ -146,7 +146,7 @@ L: Landscape
 
 # Changelog
 
-<table class="table"> 
+<table class="table">
 	<thead>
 		<tr>
 			<th>Version</th>
@@ -162,7 +162,7 @@ L: Landscape
 			<td>7.0</td>
 			<td>Parameters replaced with single `$config` parameter array</td>
 		</tr>
-	</tbody> 
+	</tbody>
 </table>
 
 # Examples
@@ -206,9 +206,9 @@ $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
 # Notes
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be
-	defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically
-	defined by the script itself when including the mpdf.php file.
+  <strong>Note:</strong> <span class="smallblock">_MPDF_PATH</span> was required to be
+  defined explicitly prior to mPDF 4.0 e.g. define('_MPDF_PATH','../'). From mPDF 4.0 the value should be automatically
+  defined by the script itself when including the mpdf.php file.
 </div>
 
 # See Also

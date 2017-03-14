@@ -10,7 +10,7 @@ mPDF can generate a static view of HTML forms and their elements, or (from mPDF 
 
 # "Active" Forms
 
-Active forms can be generated which can either be printed, or the data submitted to a URI. The 
+Active forms can be generated which can either be printed, or the data submitted to a URI. The
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 `useActiveForms` should be set to <span class="smallblock">TRUE</span>
 
@@ -102,13 +102,13 @@ Acrobat Javascript reference manual from the Adobe Developer's site).
 
 For select, text and textarea you can use `onChange=""` which is triggered after the value has been changed.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF >= 5.4, &lt;textarea&gt; and &lt;input
-	type="text"&gt; will accept javascript as: `onKeystroke`, `onValidate`, `onCalculate` and `onFormat`.
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** From mPDF >= 5.4, `<textarea>` and `<input type="text">
+  will accept javascript as: `onKeystroke`, `onValidate`, `onCalculate` and `onFormat`.
 
-    `onChange` is deprecated but works as `onCalculate` (for &lt;textarea&gt; and &lt;input&gt;).
+  `onChange` is deprecated but works as `onCalculate` (for `<textarea>` and `<input>`).
 
-    Select still accepts `onChange`.
+  Select still accepts `onChange`.
 </div>
 
 Unicode characters in JavaScript must be written by typing a backslash, a lowercase "u", and then the four digit

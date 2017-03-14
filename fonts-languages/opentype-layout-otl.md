@@ -10,14 +10,14 @@ OpenType layout features were introduced in mPDF >= 6.0
 
 # Advanced Typography
 
-Many TrueType fonts contain OpenType Layout (OTL) tables. These Advanced Typographic tables contain additional 
+Many TrueType fonts contain OpenType Layout (OTL) tables. These Advanced Typographic tables contain additional
 information that extend the capabilities of the fonts to support high-quality international typography:
 
 - OTL fonts support ligatures, positional forms, alternates, and other substitutions.
 - OTL fonts include information to support features for two-dimensional positioning and glyph attachment.
 - OTL fonts contain explicit script and language information, so a text-processing application can adjust its behavior accordingly.
 
-mPDF 6 introduces the power and flexibility of the OpenType Layout font model into PDF. mPDF supports GSUB, GPOS 
+mPDF 6 introduces the power and flexibility of the OpenType Layout font model into PDF. mPDF supports GSUB, GPOS
 and GDEF tables for now. mPDF does *not *support BASE and JSTF at present.
 
 Other mPDF features to enhance complex scripts:
@@ -31,8 +31,8 @@ Other mPDF features to enhance complex scripts:
 - separate algorithm for Tibetan line-breaking
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> There are other smart-font technologies around to deal with complex scripts, namely 
-    Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.
+  <strong>Note:</strong> There are other smart-font technologies around to deal with complex scripts, namely
+  Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.
 </div>
 
 # What can OTL Fonts do?
@@ -40,10 +40,10 @@ Other mPDF features to enhance complex scripts:
 Support for OTL fonts allows the faithful display of almost all complex scripts:
 
 - Arabic (<span>السلام عليكم</span>), Hebrew (<span>שלום</span>), Syriac (<span>ܐܣܛܪܢܓܠܐ</span>)
-- Indic - Bengali (<span>স্লামালিকুম</span>), Devanagari (<span>नमस्ते</span>), Gujarati (<span>નમસ્તે</span>), 
-  Punjabi (<span>ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ</span>), Kannada (<span>ನಮಸ್ತೆ</span>), Malayalam (<span>നമസ്തെ</span>), 
+- Indic - Bengali (<span>স্লামালিকুম</span>), Devanagari (<span>नमस्ते</span>), Gujarati (<span>નમસ્તે</span>),
+  Punjabi (<span>ਸਤਿ ਸ੍ਰੀ ਅਕਾਲ</span>), Kannada (<span>ನಮಸ್ತೆ</span>), Malayalam (<span>നമസ്തെ</span>),
   Oriya (<span>ନମସ୍କର</span>), Tamil (<span>வணக்கம்</span>), Telugu (<span>నమస్కారం</span>)
-- Sinhala (<span>ආයුඛෝවන්</span>), Thai (<span>สวัสดี</span>), Lao (<span>ສະບາຍດີ</span>), 
+- Sinhala (<span>ආයුඛෝවන්</span>), Thai (<span>สวัสดี</span>), Lao (<span>ສະບາຍດີ</span>),
   Khmer (<span>ជំរាបសួរ</span>), Myanmar (<span>မဂႆလာပၝ</span>), Tibetan (<span>བཀྲ་ཤིས་བདེ་ལེགས།</span>)
 
 OTL features allow:
@@ -68,28 +68,28 @@ In mPDF, the following features are on by default:
 - GSUB features: `isol fina fin2 fin3 medi med2 init nukt akhn rphf rkrf half vatu cjct cfar` (for appropriate scripts e.g. Indic, Arabic)
 - GPOS features: `abvm blwm mark mkmk curs cpsp dist requ kern`
 
-NB '`requ`' is not listed in the Microsoft registry of Feature tags; however it is found in the Arial Unicode MS font 
+NB '`requ`' is not listed in the Microsoft registry of Feature tags; however it is found in the Arial Unicode MS font
 (it repositions the baseline for punctuation in Kannada script).
 
-`kern` is used in some fonts to reposition marks etc. and is essential for correct display, so in mPDF `kern` is on by 
+`kern` is used in some fonts to reposition marks etc. and is essential for correct display, so in mPDF `kern` is on by
 default when any non-Latin script is used.
 
-Complex scripts require a "shaping engine" to re-order glyphs and apply the OTL features by syllable. MS Word and 
-Wordpad run on the Windows platform use "Uniscribe", whereas some browsers such as FireFox and OpenOffice use 
+Complex scripts require a "shaping engine" to re-order glyphs and apply the OTL features by syllable. MS Word and
+Wordpad run on the Windows platform use "Uniscribe", whereas some browsers such as FireFox and OpenOffice use
 Pango/HarfBuzz. The different shaping engines (and indeed different versions of them) can produce different results.
 
 Different applications have different defaults (on/off) for some of the features e.g. kerning.
 
-When testing mPDF, if text does not appear as you expect, ensure that the font is installed on your computer, and 
-view the HTML in a browser. Also try copying/pasting the text into Wordpad/Word/OpenOffice and ensure that the correct 
+When testing mPDF, if text does not appear as you expect, ensure that the font is installed on your computer, and
+view the HTML in a browser. Also try copying/pasting the text into Wordpad/Word/OpenOffice and ensure that the correct
 font has been applied.
 
-Note that Wordpad sometimes substitutes a different font if it does not like the one you have chosen, and does not 
+Note that Wordpad sometimes substitutes a different font if it does not like the one you have chosen, and does not
 even indicate that the substitution has occurred.
 
 # CSS control of font features
 
-See <a href="http://www.w3.org/TR/css3-fonts/#font-rend-props">http://www.w3.org/TR/css3-fonts/#font-rend-props</a> 
+See <a href="http://www.w3.org/TR/css3-fonts/#font-rend-props">http://www.w3.org/TR/css3-fonts/#font-rend-props</a>
 for information about CSS3 and font-features.
 
 The following are supported in mPDF:
@@ -98,7 +98,7 @@ The following are supported in mPDF:
 - `font-variant-caps`
 - `font-variant-ligatures`
 - `font-variant-numeric`
-- `font-variant-alternates` - Only [`normal | historical-forms`] supported (i.e. most are NOT supported) e.g. 
+- `font-variant-alternates` - Only [`normal | historical-forms`] supported (i.e. most are NOT supported) e.g.
   `stylistic, styleset, character-variant, swash, ornaments, annotation` (use `font-feature-settings` for these)
 - `font-variant` - as above, and except for: `east-asian-variant-values, east-asian-width-values, ruby`
 - `font-language-override`
@@ -111,8 +111,8 @@ NB `@font-face` is NOT supported
 
 NB `@font-feature-values` is NOT supported
 
-<strong>Note:</strong> `font-variant` specifies a single property in CSS2, whereas in CSS3 it has become a shorthand 
-for all the other `font-variant-*` properties. `font-variant: small-caps` was the form supported in CSS2, and will 
+<strong>Note:</strong> `font-variant` specifies a single property in CSS2, whereas in CSS3 it has become a shorthand
+for all the other `font-variant-*` properties. `font-variant: small-caps` was the form supported in CSS2, and will
 work in mPDF.
 
 See notes later about font kerning.
@@ -227,28 +227,28 @@ useOTL should be set to an integer between 0 and 255. Each bit will enable OTL f
     </tbody>
 </table>
 
-Setting `useOTL` to 0 (or omitting it) will disable all OTL features. Setting `useOTL` to 255 or 0xFF will enable OTL 
+Setting `useOTL` to 0 (or omitting it) will disable all OTL features. Setting `useOTL` to 255 or 0xFF will enable OTL
 for all scripts. Setting `useOTL` to 0x82 will enable OTL features for Cyrillic and complex scripts.
 
-In a font like Free Serif, it may be useful to enable OTL features for complex scripts, but disable OTL for Latin 
+In a font like Free Serif, it may be useful to enable OTL features for complex scripts, but disable OTL for Latin
 scripts (to save processing time). However, see above - this may disable kerning in Latin scripts in certain
 circumstances.
 
 ## useKashida
 
 useKashida should be set for arabic fonts if you wish to enable text justification using kashida. The value should
-be an integer between 0 and 100 and represents the percentage of additional space required to justify the text on a 
+be an integer between 0 and 100 and represents the percentage of additional space required to justify the text on a
 line as a ratio of kashida/inter-word spacing.
 
 # Choosing fonts to add to mPDF 6
 
-Fonts with OTL need to have GDEF, GSUB and GPOS tables in the font file. Although TrueType font files are binary 
-files, the table names and script/feature tags are written as ASCII characters; open the .ttf or .otf file in a text 
-editor such as Windows Notepad, and you will see GDEF, GSUB and GPOS in the first few lines if they are present. You 
-can also search the file to see if the script tags are present for your desired scripts cf. 
+Fonts with OTL need to have GDEF, GSUB and GPOS tables in the font file. Although TrueType font files are binary
+files, the table names and script/feature tags are written as ASCII characters; open the .ttf or .otf file in a text
+editor such as Windows Notepad, and you will see GDEF, GSUB and GPOS in the first few lines if they are present. You
+can also search the file to see if the script tags are present for your desired scripts cf.
 <a href="http://www.microsoft.com/typography/otspec/scripttags.htm">http://www.microsoft.com/typography/otspec/scripttags.htm</a>.
 
-Note: The OTL specification for Indic fonts was updated in 2005 to version 2. The v2 script tag for Bengali is 
+Note: The OTL specification for Indic fonts was updated in 2005 to version 2. The v2 script tag for Bengali is
 "bng2" whereas prior to this it was "beng". Many open-source font files are still written for the old specification.
 This is supported by mPDF, although v2 fonts give better results.
 
@@ -265,12 +265,12 @@ to add the font. See the manual for details if you are not already familiar with
 
 ## Setting OTL use at runtime
 
-mPDF caches some font information in the directory configured as `tempDir` to improve performance. 
+mPDF caches some font information in the directory configured as `tempDir` to improve performance.
 This is regenerated if you change the value of `useOTL` for a font.
 
-There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g. 
-for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for 
-Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in 
+There may be circumstances when you wish to use OTL features with different scripts depending on the document e.g.
+for everyday use you may want to disable OTL for FreeSerif to save processing time, but on occasions use OTL for
+Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in
 `fontdata` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 
 {% highlight php %}

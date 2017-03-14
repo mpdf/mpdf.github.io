@@ -3,25 +3,27 @@ layout: page
 title: Default stylesheet
 parent_title: CSS & Stylesheets
 permalink: /css-stylesheets/default-stylesheet.html
-modification_time: 2015-08-05T11:59:57+00:00
+modification_time: 2017-03-04T08:57:57+00:00
 ---
 
-mPDF uses a default "stylesheet" for default settings of style and layout; this is in 
-`defaultCSS` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
+mPDF uses a default "stylesheet" for default settings of style and layout; this is in
+`defaultCSS` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration key</a>.
 
-mPDF (>= 2.2) will load an optional file <span class="filename">mpdf.css</span> (located in the data directory of
-mPDF installation root).
+**mPDF >= 7.0** It is possible to define custom default CSS file by `defaultCssFile` configuration key.
 
-**mPDF >= 6.0** A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for 
-Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. 
-This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added 
-to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following 
+**mPDF >= 6.0** A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for
+Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags.
+This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added
+to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following
 text describes behaviour prior to mPDF v6.0)
 
-The file should be a valid CSS stylesheet, but will only support changing properties at element level i.e. P, DIV, 
+**mPDF >= 2.2** will load an optional file <span class="filename">mpdf.css</span> (located in the data directory of
+mPDF installation root).
+
+The file should be a valid CSS stylesheet, but will only support changing properties at element level i.e. P, DIV,
 TABLE, TD and not P.classname.
 
-The mpdf.css file supplied is inactive as it has all the entries commented out by /* ... */
+The mpdf.css file supplied is inactive as it has all the entries commented out by `/* ... */`
 
 The following values will restore behaviour of pre-4.2 versions to 4.2:
 
@@ -76,10 +78,10 @@ The following values will restore behaviour of 2.2 versions:
 
 ## Prior to mPDF 2.2
 
-The original default styles (mPDF <=2.0) were extensively changed with improvements in CSS handling in mPDF 2.0 
+The original default styles (mPDF <=2.0) were extensively changed with improvements in CSS handling in mPDF 2.0
 (this particularly changed table borders, and table cell alignment, as well as a serif default font-family).
 
-In order to allow backwards compatibilty, a secondary "stylesheet" - a variable $defaultCSS2 was introduced in 
+In order to allow backwards compatibilty, a secondary "stylesheet" - a variable $defaultCSS2 was introduced in
 mPDF 2.0 - and the option to load this on intiating mPDF:
 
 {% highlight php %}

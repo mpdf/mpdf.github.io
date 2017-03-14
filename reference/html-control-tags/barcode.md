@@ -14,17 +14,17 @@ barcode – Add a Barcode to the document
 
 &lt;**barcode** 
 <span class="parameter">$code</span>
-[ <span class="parameter">$type</span> ] 
-[ <span class="parameter">$text</span> ] 
-[ <span class="parameter">$size</span> ] 
-[ <span class="parameter">$height</span> ] 
+[ <span class="parameter">$type</span> ]
+[ <span class="parameter">$text</span> ]
+[ <span class="parameter">$size</span> ]
+[ <span class="parameter">$height</span> ]
 [ <span class="parameter">$pr</span> ] /&gt;
 
 Add a Barcode to the document.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a> 
-    and the example file for further information.
+  <strong>Note:</strong> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>
+  and the example file for further information.
 </div>
 
 # Attributes
@@ -33,7 +33,7 @@ Add a Barcode to the document.
 
 Specifies the code to translate to a barcode.
 
-<span class="parameter">$code</span> for EAN13 / ISBN / ISSN / UPCA / UPCE can contain hyphens '-' but no other 
+<span class="parameter">$code</span> for EAN13 / ISBN / ISSN / UPCA / UPCE can contain hyphens '-' but no other
 characters are allowed.
 
 Check-digits can be optionally included for EAN13 / ISBN / ISSN / UPCA / UPCE
@@ -109,7 +109,7 @@ Specifies the height of the barcode.
 
 The height factor is applied after the <span class="parameter">$size </span>
 
-<span class="parameter">$size="2" height="0.5"</span> will generate a barcode of twice the nominal width, but with the 
+<span class="parameter">$size="2" height="0.5"</span> will generate a barcode of twice the nominal width, but with the
 nominal height.
 
 NB Ignored for Postcode barcodes
@@ -122,7 +122,7 @@ Specifies the print ratio i.e. narrow:wide bar width for some types of barcode.
 
 Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODABAR and CODE11
 
-<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see 
+<span class="smallblock">DEFAULT</span>: Varies between 2.5 and 3.0 dependent on barcode specification (see
 <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>)
 
 # Changelog
@@ -170,23 +170,25 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 # Notes
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
+  <strong>Note:</strong> The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
 
-vertical-align  (default: middle)
+  vertical-align  (default: middle)
 
-border*
+  border*
 
-margin*
+  margin*
 
-padding* (default 2mm for EAN13)
+  padding* (default 2mm for EAN13)
 
-color (default black)
+  color (default black)
 
-background-color (default white)
+  background-color (default white)
 
-NB padding has defaults as 0(mm) if not specified
+  NB padding has defaults as 0(mm) if not specified
 
-Padding is in addition to any specified quiet zones/light margins.</div>
+  Padding is in addition to any specified quiet zones/light margins.
+
+</div>
 
 ## Example with CSS
 
@@ -208,7 +210,7 @@ Padding is in addition to any specified quiet zones/light margins.</div>
 {% endhighlight %}
 
 <div class="alert alert-info" role="alert">
-    <strong>Note:</strong> mPDF will generate a Checkdigit for most barcodes if required, which is added to the 
+    <strong>Note:</strong> mPDF will generate a Checkdigit for most barcodes if required, which is added to the
     barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:
 </div>
 

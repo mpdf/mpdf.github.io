@@ -6,8 +6,8 @@ permalink: /fonts-languages/fonts-in-mpdf-6-x.html
 modification_time: 2015-08-05T11:59:27+00:00
 ---
 
-mPDF supports Truetype fonts, reading and embedding directly from the .ttf font files. Fonts must follow the Truetype 
-specification and use Unicode mapping to the characters. Truetype collections (.ttc files) and Opentype files (.otf) 
+mPDF supports Truetype fonts, reading and embedding directly from the .ttf font files. Fonts must follow the Truetype
+specification and use Unicode mapping to the characters. Truetype collections (.ttc files) and Opentype files (.otf)
 in Truetype format are also supported.
 
 # Easy to add new fonts
@@ -15,12 +15,12 @@ in Truetype format are also supported.
 - Upload the Truetype font file to the fonts directory (<span class="filename">/ttfonts</span>)
 - Define the font file details in the configuration file (<span class="filename">config_fonts.php</span>)
 - Access the font by specifying it in your HTML code as the CSS font-family
-- To use the font with specific languages, you need also to edit the configuration file 
+- To use the font with specific languages, you need also to edit the configuration file
   (<span class="filename">config_lang2fonts.php</span>) - see the example
 
 ## Example
 
-You have 2 font files "Frutiger-Normal.ttf" and "FrutigerObl-Normal.ttf" which you want to be available in mPDF, 
+You have 2 font files "Frutiger-Normal.ttf" and "FrutigerObl-Normal.ttf" which you want to be available in mPDF,
 and you will refer to them in HTML/CSS as "Frutiger".
 
 1. Upload the 2 files to the fonts directory (<span class="filename">/ttfonts</span>)
@@ -34,8 +34,8 @@ and you will refer to them in HTML/CSS as "Frutiger".
    ),
 {% endhighlight %}
 
-For fonts which handle complex scripts and/or right-to-left text, see 
-<a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> for 
+For fonts which handle complex scripts and/or right-to-left text, see
+<a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> for
 details of setting OTL use and support for kashida e.g.
 
 {% highlight php %}
@@ -55,8 +55,8 @@ details of setting OTL use and support for kashida e.g.
 
 {% endhighlight %}
 
-4. To use the font with specific languages, you need also to edit the configuration file 
-   (<span class="filename">config_lang2fonts.php</span>); let us imagine that Frutiger contains a full set 
+4. To use the font with specific languages, you need also to edit the configuration file
+   (<span class="filename">config_lang2fonts.php</span>); let us imagine that Frutiger contains a full set
    of characters needed for the Thai language:
 
 {% highlight php %}
@@ -65,7 +65,7 @@ details of setting OTL use and support for kashida e.g.
 	case "th":  $unifont = "frutiger";  break;
 {% endhighlight %}
 
-This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable 
+This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable
 `autoLangToFont` is set to `true`:
 
 {% highlight php %}
@@ -76,32 +76,32 @@ This will enable the Frutiger font whenever the lang attribute is set, if the co
 
 # Full Unicode support
 
-The DejaVu fonts distributed with mPDF contain an extensive set of characters - see 
-<a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode 
+The DejaVu fonts distributed with mPDF contain an extensive set of characters - see
+<a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode
 coverage of free fonts</a> for details of these and other open-source fonts.
 
 # Complex scripts
 
 ## Right-to-left languages (Hebrew, Arabic etc.)
 
-Arabic languages and Hebrew are written in a right-to-left direction (RTL). mPDF recognises both Arabic and 
+Arabic languages and Hebrew are written in a right-to-left direction (RTL). mPDF recognises both Arabic and
 Hebrew languages and reverses text direction automatically.
 
 ألسّلام عليكم     שלום
 
-Arabic languages (but not Hebrew) also change the form of the letter depending on its position in the text e.g. 
+Arabic languages (but not Hebrew) also change the form of the letter depending on its position in the text e.g.
 these are the initial, medial, final, and isolated forms of arabic letter 'ain':
 
 ع ـع ـعـ عـ
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly display 
-	right-to-left scripts.
+  <strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly display
+  right-to-left scripts.
 </div>
 
 ## Indic languages, Lao, Tibetan etc.
 
-Other complex scripts require some processing of characters before display. For example some vowels consist of 2 
+Other complex scripts require some processing of characters before display. For example some vowels consist of 2
 characters, to be placed before and after the adjacent consonant e.g.
 
 U+0D1C + U+0D4C [vowel AU] = [written together as &amp;#x0D1C;&amp;#x0D4C;]
@@ -113,8 +113,8 @@ Consonant conjuncts are where two adjacent characters are written as a single 'c
 प + ॡ = पॣ
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly 
-	display complex scripts.
+  <strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly
+  display complex scripts.
 </div>
 
 ## Vertical writing
@@ -124,53 +124,53 @@ can be displayed using suitable fonts.
 
 # Unicode Supplementary Planes
 
-The original Unicode allocated characters between x0000 and xFFFF (65,536 characters). This 'Basic Multilingual Plane' 
+The original Unicode allocated characters between x0000 and xFFFF (65,536 characters). This 'Basic Multilingual Plane'
 supported most characters in common use, including a large number of Unified Chinese-Japanese-Korean characters (CJK).
 Later the Unicode standard was extended to 16 Planes.
 
 The first plane (plane 0), the Basic Multilingual Plane (BMP), is where most characters have been assigned so far.
 
-Plane 1, the Supplementary Multilingual Plane (SMP), is mostly used for historic scripts such as Linear B, but is also 
+Plane 1, the Supplementary Multilingual Plane (SMP), is mostly used for historic scripts such as Linear B, but is also
 used for musical and mathematical symbols.
 
 Plane 2, the Supplementary Ideographic Plane (SIP), is used for about 40,000 Unified Han (CJK) Ideographs.
 
-mPDF supports fonts containing characters from all Unicode Planes. By choosing the correct font, almost every single 
+mPDF supports fonts containing characters from all Unicode Planes. By choosing the correct font, almost every single
 character from Unicode 5 can be displayed in a PDF file.
 
 ## Unicode Supplementary Multilingual Plane (SMP or Plane 1) U+10000 - U+1FFFF
 
-The Unicode Supplementary Multilingual Plane contains ranges such as Gothic text and Egyptian Hieroglyphics. as well as 
-other (mainly) ancient scripts - see 
-<a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode 
+The Unicode Supplementary Multilingual Plane contains ranges such as Gothic text and Egyptian Hieroglyphics. as well as
+other (mainly) ancient scripts - see
+<a href="{{ "/reference/codepages-glyphs/unicode-coverage-of-free-fonts.html" | prepend: site.baseurl }}">Unicode
 coverage of free fonts</a> for full list.
 
-mPDF uses a different method to embed fonts in the PDF file if they include characters from SMP or SIP, because the 
-characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less eficient than the default 
-method, and it can be suppressed by adding the font name to the array `BMPonly` in the 
+mPDF uses a different method to embed fonts in the PDF file if they include characters from SMP or SIP, because the
+characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less eficient than the default
+method, and it can be suppressed by adding the font name to the array `BMPonly` in the
 <span class="filename">config_fonts.php</span> configuration file.
 
-Note that the DejaVu fonts  distributed with mPDF do contain a few characters in the SMP plane, but most users will 
+Note that the DejaVu fonts  distributed with mPDF do contain a few characters in the SMP plane, but most users will
 not require them and by default they are added to the array `BMPonly`.
 
 # Using CJK fonts in mPDF
 
-Fonts containing CJK characters are large files, typically 10-30MB. Adobe provides a free download of an 
-'Asian font pack' allowing you to create PDF files without including (embedding) the font information in the file. 
-This keeps the file size to a minimum and minimises resource usage on your website generating the PDF file. However, 
-users will have to download the Adobe font packs to read the file, and other PDF software will not 
+Fonts containing CJK characters are large files, typically 10-30MB. Adobe provides a free download of an
+'Asian font pack' allowing you to create PDF files without including (embedding) the font information in the file.
+This keeps the file size to a minimum and minimises resource usage on your website generating the PDF file. However,
+users will have to download the Adobe font packs to read the file, and other PDF software will not
 display the text correctly.
 
 mPDF allows you to embed subsets of CJK fonts keeping file size down, although there is considerable memory usage
 to generate these files.
 
-Some CJK fonts are broken up into 2 files because of the size of the files. One freely available font with almost 
+Some CJK fonts are broken up into 2 files because of the size of the files. One freely available font with almost
 complete coverage of all CJK characters (in both BMP and SIP) is 'Sun' available from Alan Wood's excellent website:
-<a href="http://www.alanwood.net/unicode/fonts-east-asian.html">http://www.alanwood.net/unicode/fonts-east-asian.html</a>. 
-This comes as 2 files, Sun-ExtA and Sun-ExtB (both about 20MB in size) containing the characters from 
+<a href="http://www.alanwood.net/unicode/fonts-east-asian.html">http://www.alanwood.net/unicode/fonts-east-asian.html</a>.
+This comes as 2 files, Sun-ExtA and Sun-ExtB (both about 20MB in size) containing the characters from
 BMP and SIP respectively.
 
-mPDF allows you to treat these as one font by defining the second file as an SIP-extension of the first in the 
+mPDF allows you to treat these as one font by defining the second file as an SIP-extension of the first in the
 config_fonts.php configuration file.
 
 This is an example of the entry in the <span class="filename">config_fonts.php</span> configuration file:
@@ -189,7 +189,7 @@ $this->fontdata = array(
 );
 {% endhighlight %}
 
-This is a sample of HTML code containing CJK characters in both BMP and SIP - note only the sun-exta font-family 
+This is a sample of HTML code containing CJK characters in both BMP and SIP - note only the sun-exta font-family
 needs to be referenced:
 
 {% highlight html %}
@@ -198,10 +198,10 @@ needs to be referenced:
 
 # TrueType Collections
 
-TrueType Collections (.ttc files) contain more than one font. mPDF treats each font separately by defining the 
+TrueType Collections (.ttc files) contain more than one font. mPDF treats each font separately by defining the
 `TTCfontID` array in the <span class="filename">config_fonts.php</span> configuration file.
 
-This example uses the Windows MingLiU fonts, which consist of 2 files containing 6 fonts (note that mingliub is not 
+This example uses the Windows MingLiU fonts, which consist of 2 files containing 6 fonts (note that mingliub is not
 a Bold variant):
 
 Font collection file (<span class="filename">mingliu.ttc</span>) contains the following fonts:

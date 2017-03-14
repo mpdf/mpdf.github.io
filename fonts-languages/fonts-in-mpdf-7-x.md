@@ -39,15 +39,15 @@ $defaultFontConfig = (new Mpdf\Config\FontVariables())->getDefaults();
 $fontData = $defaultFontConfig['fontdata'];
 
 $mpdf = new \Mpdf\Mpdf([
-	'fontDir' => [
-		$fontDir,
-		__DIR__ . '/custom/font/directory',
-	],
-	'fontdata' => $fontData + ['frutiger' => [
-		'R' => 'Frutiger-Normal.ttf',
-		'I' => 'FrutigerObl-Normal.ttf',
-	]],
-	'default_font' => 'frutiger'
+  'fontDir' => [
+    $fontDir,
+    __DIR__ . '/custom/font/directory',
+  ],
+  'fontdata' => $fontData + ['frutiger' => [
+    'R' => 'Frutiger-Normal.ttf',
+    'I' => 'FrutigerObl-Normal.ttf',
+  ]],
+  'default_font' => 'frutiger'
 ]);
 
 {% endhighlight %}
@@ -60,11 +60,11 @@ details of setting OTL use and support for kashida e.g.
 <?php
 
    'frutiger' => [
-		'R' => 'Frutiger-Normal.ttf',
-		'I' => 'FrutigerObl-Normal.ttf',
-		'useOTL' => 0xFF,
-		'useKashida' => 75,
-	],
+    'R' => 'Frutiger-Normal.ttf',
+    'I' => 'FrutigerObl-Normal.ttf',
+    'useOTL' => 0xFF,
+    'useKashida' => 75,
+  ],
 {% endhighlight %}
 
 3. In your HTML or CSS code use something like this:
@@ -86,14 +86,14 @@ You can also extend existing `Mpdf\Language\LanguageToFontInterface` class.
 class CustomLanguageToFontImplementation extends \Mpdf\Language\LanguageToFontInterface implements \Mpdf\Language\LanguageToFontInterface
 {
 
-	public function getLanguageOptions($llcc, $adobeCJK)
-	{
-		if ($llcc === 'th') {
-			return [false, 'frutiger']; // for thai language, font is not core suitable and the font is Frutiger
-		}
+  public function getLanguageOptions($llcc, $adobeCJK)
+  {
+    if ($llcc === 'th') {
+      return [false, 'frutiger']; // for thai language, font is not core suitable and the font is Frutiger
+    }
 
-		return parent::getLanguageOptions($llcc, $adobeCJK);
-	}
+    return parent::getLanguageOptions($llcc, $adobeCJK);
+  }
 
 }
 
@@ -130,7 +130,7 @@ these are the initial, medial, final, and isolated forms of arabic letter 'ain':
 ع ـع ـعـ عـ
 
 <div class="alert alert-info" role="alert" markdown="1">
-	*Note:* You must enable OpenType layout (OTL) features for a font to correctly display right-to-left scripts.
+  *Note:* You must enable OpenType layout (OTL) features for a font to correctly display right-to-left scripts.
 </div>
 
 ## Indic languages, Lao, Tibetan etc.
@@ -146,9 +146,8 @@ Consonant conjuncts are where two adjacent characters are written as a single 'c
 
 प + ॡ = पॣ
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly
-	display complex scripts.
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** You must enable OpenType layout (OTL) features for a font to correctly display complex scripts.
 </div>
 
 ## Vertical writing
@@ -211,13 +210,13 @@ This is an example of the entry in the `fontdata` configuration key:
 <?php
 
 'fontdata' = [
-	'sun-exta' => [
-		'R' => 'Sun-ExtA.ttf',
-		'sip-ext' => 'sun-extb',
-	],
-	'sun-extb' => [
-		'R' => 'Sun-ExtB.ttf',
-	],
+  'sun-exta' => [
+    'R' => 'Sun-ExtA.ttf',
+    'sip-ext' => 'sun-extb',
+  ],
+  'sun-extb' => [
+    'R' => 'Sun-ExtB.ttf',
+  ],
 ];
 {% endhighlight %}
 
@@ -258,48 +257,48 @@ This is the entry in the mPDF configuration:
 <?php
 
 $config = [
-	'fontdata' = [
+  'fontdata' = [
 
-		'mingliu' => [
-			'R' => 'mingliu.ttc',
-			'TTCfontID' => [
-				'R' => 1,
-			],
-			'sip-ext' => 'mingliu-extb',
-		],
-		'pmingliu' => [
-			'R' => 'mingliu.ttc',
-			'TTCfontID' => [
-				'R' => 2,
-			],
-			'sip-ext' => 'pmingliu-extb',
-		],
-		'mingliu_hkscs' => [
-			'R' => 'mingliu.ttc',
-			'TTCfontID' => [
-				'R' => 3,
-			],
-			'sip-ext' => 'mingliu_hkscs-extb',
-		],
-		'mingliu-extb' => [
-			'R' => 'mingliub.ttc',
-			'TTCfontID' => [
-				'R' => 1,
-			],
-		],
-		'pmingliu-extb' => [
-			'R' => 'mingliub.ttc',
-			'TTCfontID' => [
-				'R' => 2,
-			],
-		],
-		'mingliu_hkscs-extb' => [
-			'R' => 'mingliub.ttc',
-			'TTCfontID' => [
-				'R' => 3,
-			],
-		],
-	]
+    'mingliu' => [
+      'R' => 'mingliu.ttc',
+      'TTCfontID' => [
+        'R' => 1,
+      ],
+      'sip-ext' => 'mingliu-extb',
+    ],
+    'pmingliu' => [
+      'R' => 'mingliu.ttc',
+      'TTCfontID' => [
+        'R' => 2,
+      ],
+      'sip-ext' => 'pmingliu-extb',
+    ],
+    'mingliu_hkscs' => [
+      'R' => 'mingliu.ttc',
+      'TTCfontID' => [
+        'R' => 3,
+      ],
+      'sip-ext' => 'mingliu_hkscs-extb',
+    ],
+    'mingliu-extb' => [
+      'R' => 'mingliub.ttc',
+      'TTCfontID' => [
+        'R' => 1,
+      ],
+    ],
+    'pmingliu-extb' => [
+      'R' => 'mingliub.ttc',
+      'TTCfontID' => [
+        'R' => 2,
+      ],
+    ],
+    'mingliu_hkscs-extb' => [
+      'R' => 'mingliub.ttc',
+      'TTCfontID' => [
+        'R' => 3,
+      ],
+    ],
+  ]
 ];
 {% endhighlight %}
 

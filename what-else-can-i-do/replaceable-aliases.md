@@ -7,11 +7,11 @@ modification_time: 2015-08-05T12:00:17+00:00
 ---
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Prior to mPDF 6.0 you could include
-	<span class="parameter">${nb​}</span> and <span class="parameter">${nbpg​}</span> anywhere in the text of the
-	document, including headers/footers. 
+  <strong>Note:</strong> Prior to mPDF 6.0 you could include
+  <span class="parameter">${nb​}</span> and <span class="parameter">${nbpg​}</span> anywhere in the text of the
+  document, including headers/footers.
 
-    In mPDF v6.0+ these will only be replaced when used in headers/footers.
+  In mPDF v6.0+ these will only be replaced when used in headers/footers.
 </div>
 
 There are several placemarkers you can include, which will be replaced when the PDF file is ouput:
