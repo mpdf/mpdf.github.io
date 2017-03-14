@@ -28,9 +28,9 @@ float: right|left
 Margin-right can still be set for a float:right and vice-versa.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The width that is set defines the width of the
-	content-box. So if you have two floats with width=50% and either of them has padding, margin or border, they
-	will not fit together on the page.
+  <strong>Note:</strong> The width that is set defines the width of the
+  content-box. So if you have two floats with width=50% and either of them has padding, margin or border, they
+  will not fit together on the page.
 </div>
 
 ## Clear
@@ -47,19 +47,19 @@ clear: right|left|both
 <h4>CSS Float</h4>
 
 <div>
-    
+
     Some text to start with
-    
+
     <div style="float: right; width: 28%;">
         This is text that is set to float:right.
     </div>
-    
+
     <div style="float: left; width: 54%;">
         This is text that is set to float:left.
     </div>
 
     <div style="clear: both; margin: 0pt; padding: 0pt; "></div>
-    
+
     This is text that follows the clear:both.
 
 </div>

@@ -146,8 +146,8 @@ I have left options encoded in <span class="function">function InitArabic()</spa
 double-joining, it also needs to be added to <span class="parameter">$arabPrevLink</span> as "\xd9\x89"
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner,
-    LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.
+  <strong>Note:</strong> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner,
+  LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.
 </div>
 
 # See Also
