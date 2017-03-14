@@ -28,13 +28,13 @@ $mpdf->watermarkImageAlpha = 0.5;
 {% endhighlight %}
 
 A watermark image is set by default to print on top of the page contents. The opacity setting will alter the appearance
-of the text behind the image. You can optionally set the watermark to appear behind the page contents using 
-<span class="parameter">$watermarkImgBehind</span>, but note that the image will be hidden by any background colour 
+of the text behind the image. You can optionally set the watermark to appear behind the page contents using
+<span class="parameter">$watermarkImgBehind</span>, but note that the image will be hidden by any background colour
 specified, including table cells and the page background.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> In version 4.4 <span class="parameter">$watermarkImgBehind</span> was unintentionally set +
-    to <span class="smallblock">TRUE</span> in the <span class="filename">config.php</span> file
+  <strong>Note:</strong> In version 4.4 <span class="parameter">$watermarkImgBehind</span> was unintentionally set +
+  to <span class="smallblock">TRUE</span> in the <span class="filename">config.php</span> file
 </div>
 
 Set the watermark(s) to show using:
@@ -42,10 +42,10 @@ Set the watermark(s) to show using:
 <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a>
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF >=3.0 you can alternatively use the CSS
-	style for background-image on the &lt;body&gt; tag to create a sort of watermark, although this does not support
-	opacity. The difference is that text, tables etc are written over the top of a background-image; a watermark is
-	actually printed over the top of everything else, but is semi-transparent.
+  <strong>Note:</strong> From mPDF >=3.0 you can alternatively use the CSS
+  style for background-image on the &lt;body&gt; tag to create a sort of watermark, although this does not support
+  opacity. The difference is that text, tables etc are written over the top of a background-image; a watermark is
+  actually printed over the top of everything else, but is semi-transparent.
 </div>
 
 # See

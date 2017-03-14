@@ -7,10 +7,8 @@ modification_time: 2015-08-05T12:00:23+00:00
 ---
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This is an alternative method to the one in
-	<a href="{{ "/what-else-can-i-do/math-formulae-with-mathjax.html" | prepend: site.baseurl }}">
-		Math Formulae with MathJax
-	</a>
+  <strong>Note:</strong> This is an alternative method to the one in
+  <a href="{{ "/what-else-can-i-do/math-formulae-with-mathjax.html" | prepend: site.baseurl }}">Math Formulae with MathJax</a>
 </div>
 
 <div class="alert alert-info" role="alert">
@@ -19,7 +17,7 @@ modification_time: 2015-08-05T12:00:23+00:00
 
 1) Adapt the page in which you are testing/writing the Math formulae
 
-- Ideally set the default output to SVG. Otherwise the user will need to select this from: Math Settings &gt;&gt; Math 
+- Ideally set the default output to SVG. Otherwise the user will need to select this from: Math Settings &gt;&gt; Math
   Renderer &gt;&gt; SVG
 - Add code for a button to send the processed SVG to your PHP script
 

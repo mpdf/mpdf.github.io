@@ -34,20 +34,22 @@ and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl
 <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g.
 `black`, `gray` are supported.
 
+<span class="smallblock">ALPHA</span>, or transparency, value between 0 and 1
+
 Also supported are:
 
 - `rgb(255, 255, 255)`
-- `rgba(255, 255, 255, 1)` *[last value is transparency (alpha) - between 0-1]*\*
+- `rgba(255, 255, 255, 1)` last value is <span class="smallblock">ALPHA</span> \*
 - `rgb(100%, 100%, 100%)`
 - `hsl(360, 100%, 100%)`
-- `hsla(360, 100%, 100%, 1)` *[last value is transparency (alpha) - between 0-1]*\*
+- `hsla(360, 100%, 100%, 1)` last value is <span class="smallblock">ALPHA</span> \*
 - `cmyk(100, 100, 100, 100)` *[or 0-100%]*
-- `cmyka(100, 100, 100, 100, 1)` *[or 0-100%; last value is transparency (alpha) - between 0-1]*\*
+- `cmyka(100, 100, 100, 100, 1)` *[or 0-100%; last value is <span class="smallblock">ALPHA</span> *\*
 - `device-cmyk(100, 100, 100, 100)` *[or 0-100%]*
-- `device-cmyka(100, 100, 100, 100, 1)` *[or 0-100%; last value is transparency (alpha) - between 0-1]*\*
+- `device-cmyka(100, 100, 100, 100, 1)` last value is <span class="smallblock">ALPHA</span> \*
 - `spot(<color name>, 100%)`. (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)
 
-`mPDF >= 5.7` Spotcolor CMYK values can be defined as it is used e.g. `color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);`
+since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);`
 
 \* Alpha values (transparency) are only supported on background colours - not text color
 

@@ -9,7 +9,7 @@ modification_time: 2015-08-05T11:59:48+00:00
 (mPDF >= 4.2)
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.
+  <strong>Note:</strong> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.
 </div>
 
 # About CSS Paged Media
@@ -75,7 +75,7 @@ Three values for the <span class="parameter">$size</span> property set the page 
 
 `auto` - The page box will be set to the size and orientation of the target sheet.
 
-`landscape` - Overrides the target's orientation. The page box is the same size as the target, and the longer sides 
+`landscape` - Overrides the target's orientation. The page box is the same size as the target, and the longer sides
 are horizontal.
 
 `portrait` - Overrides the target's orientation. The page box is the same size as the target, and the shorter sides
@@ -87,15 +87,15 @@ NB The prefix "html_" used before the name is used to denote a header/footer def
 
 If a header/Footer name is set as _blank (or any name that hasn't been defined) it will turn off Headers/Footers.
 
-Crop marks indicate where the page should be cut. Cross marks (also known as register marks or registration marks) 
+Crop marks indicate where the page should be cut. Cross marks (also known as register marks or registration marks)
 are used to align sheets.
 
-If you have defined @page {} in the CSS, then the values for the margins will override the ones set calling a 
+If you have defined @page {} in the CSS, then the values for the margins will override the ones set calling a
 `new \Mpdf\Mpdf()`.
 
 IMPORTANT - if you define a @page {} but don't specifiy margins, they will be set to the initial margin values of mPDF.
 
-If you set a page(-box) smaller than the sheet size, the margins are increased by the difference between the page-box 
+If you set a page(-box) smaller than the sheet size, the margins are increased by the difference between the page-box
 and sheet size - automatically centering the page-box inside the sheet.
 
 If you change page-box orientation, the sheet orientation will follow.
@@ -127,7 +127,7 @@ CSS pseudo-selectors :left :right and :first are recognised by mPDF and support 
 Pseudo-selectors for page can change top, bottom, header and footer margins, but not left and right margins.
 mPDF can only cope with one set of (optionally mirrored) left/right margins.
 
-Properties specified in a :first @page rule override those specified in :right (or :left) @page rules for the 
+Properties specified in a :first @page rule override those specified in :right (or :left) @page rules for the
 first page only
 
 # Named @page selectors
@@ -150,10 +150,10 @@ div.onitsside { page: rotated; page-break-before: right; }
 
 You can also set the page using parameters in:
 
-- functions: <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> 
+- functions: <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>
   and <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>
-- html tags: &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; 
-  &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; 
+- html tags: &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;
+  &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;
   and &lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">formfeed</a>&gt;
 
 ## page-break-before

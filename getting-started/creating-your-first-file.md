@@ -5,8 +5,7 @@ parent_title: Getting Started
 permalink: /getting-started/creating-your-first-file.html
 modification_time: 2017-03-13T14:34:39+01:00
 ---
-
-The following PHP will produce the most basic example with mPDF `>= 7.0.0`.
+The following PHP will produce the most basic example with `mPDF >= 7.0`.
 
 {% highlight php %}
 <?php
@@ -25,16 +24,16 @@ $mpdf->Output();
 
 {% endhighlight %}
 
-For versions below `7.0` use `new mPDF()`;
+For `mPDF < 7.0` use `new mPDF();`
 
 # Notes
 
 <div class="alert alert-info" role="alert" markdown="1">
-	*Note:* `_MPDF_PATH` was required to be defined explicitly prior to mPDF 4.0 e.g. `define('_MPDF_PATH','../')`.
+  *Note:* `_MPDF_PATH` was required to be defined explicitly prior to mPDF 4.0 e.g. `define('_MPDF_PATH','../')`.
 
-	Since mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.
+  Since mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.
 
-	This constant is deprecated and removed since mPDF 7.0.
+  This constant is deprecated and removed since mPDF 7.0.
 </div>
 
 For details and options for the `Output` method, see 

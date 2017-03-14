@@ -10,9 +10,9 @@ modification_time: 2017-03-08T10:02:23+02:00
 
 Official installation method is via composer and its packagist package [mpdf/mpdf](https://packagist.org/packages/mpdf/mpdf).
 
-```
+{% highlight terminal %}
 $ composer require mpdf/mpdf
-```
+{% endhighlight %}
 
 # Usage
 
@@ -31,7 +31,7 @@ $mpdf->Output();
 All [configuration directives](https://mpdf.github.io/reference/mpdf-variables/overview.html) can
 be set by the `$config` parameter of the constructor.
 
-It is recommended to set one's own temporary directory via `tempDir` and `fontTempDir` configuration variables.
+It is recommended to set custom temporary directory via `tempDir` configuration key.
 The directory must have write permissions (mode `775` is recommended).
 
 If you have problems, please read the section on

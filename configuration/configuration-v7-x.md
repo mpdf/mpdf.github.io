@@ -3,7 +3,7 @@ layout: page
 title: Configuration v7.x
 parent_title: Configuration
 permalink: /configuration/configuration-v7-x.html
-modification_time: 2015-08-05T11:59:39+00:00
+modification_time: 2017-03-14T08:51:39+00:00
 ---
 
 (mPDF >= 7.0)

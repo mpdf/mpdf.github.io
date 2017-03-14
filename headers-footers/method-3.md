@@ -6,19 +6,19 @@ permalink: /headers-footers/method-3.html
 modification_time: 2015-08-05T11:59:51+00:00
 ---
 
-This uses <span class="smallblock">NAMED</span> <span class="smallblock">NON-HTML</span> headers &amp; footers. 
-This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers 
+This uses <span class="smallblock">NAMED</span> <span class="smallblock">NON-HTML</span> headers &amp; footers.
+This method is useful if you do not need the flexibility of an HTML header/footer, but are changing headers/footers
 throughout the document.
 
-These use the same array values as <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a> 
+These use the same array values as <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Method 1</a>
 Variant #5.
 
-Note that named headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> 
+Note that named headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>
 when they are defined, but only when they are selected.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Do not name a header or footer starting with html_ - This prefix is reserved to identify 
-	an <span class="smallblock">HTML</span> header/footer.
+  <strong>Note:</strong> Do not name a header or footer starting with html_ - This prefix is reserved to identify
+  an <span class="smallblock">HTML</span> header/footer.
 </div>
 
 # Defining NAMED Headers/Footers
@@ -74,8 +74,8 @@ $mpdf->WriteHTML($html);
 
 Once you have defined <span class="smallblock">NAMED</span> headers/footers for your document, you can reference them using:
 
-Methods for <span class="smallblock">NON-HTML</span> headers/footers only - **Recommended** when setting the 
-first page header/footer at the start of a document (although they can also be used to change headers/footers 
+Methods for <span class="smallblock">NON-HTML</span> headers/footers only - **Recommended** when setting the
+first page header/footer at the start of a document (although they can also be used to change headers/footers
 during the document).
 
 - <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetHeaderByName()</a> - see Example #3
@@ -95,7 +95,7 @@ Methods to access any headers/footers (<span class="smallblock">HTML</span> or <
 
 # Setting a named header at the start of a document
 
-When using a <span class="smallblock">NAMED</span> header on the first page, remember that mPDF writes the header as 
+When using a <span class="smallblock">NAMED</span> header on the first page, remember that mPDF writes the header as
 the first page is started. This is usually when you first use WriteHTML() which automatically triggers an AddPage().
 
 ## Example #3 - SetHeaderByName()
@@ -112,8 +112,8 @@ $mpdf->WriteHTML('Document text');
 $mpdf->Output();
 {% endhighlight %}
 
-In this example using custom HTML tags to set the <span class="smallblock">NON-HTML</span> header, notice that 
-&lt;setpageheader&gt; has <span class="parameter">$show-this-page</span> = 1. This is because as soon as you call 
+In this example using custom HTML tags to set the <span class="smallblock">NON-HTML</span> header, notice that
+&lt;setpageheader&gt; has <span class="parameter">$show-this-page</span> = 1. This is because as soon as you call
 WriteHTML(), mPDF has added the first page, so this fixes the problem by forcing the header to show on the first page:
 
 ## Example #4 - <setpageheader>
