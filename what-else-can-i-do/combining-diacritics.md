@@ -7,9 +7,9 @@ modification_time: 2015-08-05T12:00:23+00:00
 ---
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF v6.0, support for
-	<a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>
-	makes this section redundant if you use the OTL capability available in most fonts.
+  <strong>Note:</strong> From mPDF v6.0, support for
+  <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>
+  makes this section redundant if you use the OTL capability available in most fonts.
 </div>
 
 In Unicode, letters with diacritics (e.g. ÁáȦȧÄä) are usually represented as a single character e.g. Unicode U+0196 is

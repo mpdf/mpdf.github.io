@@ -31,9 +31,9 @@ NB CSS2.1 states that the area for background-image should include the padding a
 Firefox 3 starts the tiling position 0 inside the border. mPDF complies with CSS and IE7.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Background-color and background-image set on the
-	&lt;body&gt; element will cover the whole page i.e. not inside the "margins". (cf.
-	<a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+  <strong>Note:</strong> Background-color and background-image set on the
+  &lt;body&gt; element will cover the whole page i.e. not inside the "margins". (cf.
+  <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
 </div>
 
 ## Gradients defined as background-image
@@ -91,9 +91,9 @@ In addition to the standard CSS styles for borders, border-radius and background
 in the <a href="http://www.w3.org/TR/2008/WD-css3-background-20080910/#layering">CSS3 draft specification</a>.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Border-radius does not work if Columns are being used,
-	or if <span class="parameter"><a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a></span>
-	is <span class="smallblock">TRUE</span> (keep-with-table).
+  <strong>Note:</strong> Border-radius does not work if Columns are being used,
+  or if <span class="parameter"><a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a></span>
+  is <span class="smallblock">TRUE</span> (keep-with-table).
 </div>
 
 The two length values of the ‘border-*-radius’ properties define the radii of a quarter ellipse that defines the shape

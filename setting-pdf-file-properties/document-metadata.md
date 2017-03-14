@@ -32,9 +32,9 @@ The text should be UTF-8 encoded, but should not contain HTML mark-up tags.
 function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.
 
 <div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Adobe Reader uses system fonts to display the
-	document metadata, therefore any Unicode text can be used, even if core fonts only are being used for the
-	document.
+  <strong>Note:</strong> Adobe Reader uses system fonts to display the
+  document metadata, therefore any Unicode text can be used, even if core fonts only are being used for the
+  document.
 </div>
 
 Example
