@@ -33,12 +33,15 @@ nav {
 	font-family: $font-family-monospace;
 }
 
-code {
-	padding: .1rem, .3rem;
+figure.highlight {
+
+	background-color: $code-bg;
+	padding: .5rem;
+
 	pre {
-		background-color: $code-bg;
-		padding: 0.3rem;
+		padding: 0;
 	}
+
 }
 
 #content {
