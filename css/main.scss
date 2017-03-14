@@ -19,20 +19,22 @@ nav {
 }
 
 .filename {
-	font-size: $font-size-root * 0.8;
+	font-size: $font-size-root * 0.7;
 	color: #870000;
 	background-color: $code-bg;
 	font-family: $font-family-monospace;
 }
 
-.parameter {
-	font-size: $font-size-root * 0.8;
+.parameter,
+.smallblock {
+	font-size: $font-size-root * 0.7;
 	color: #000088;
 	background-color: $code-bg;
 	font-family: $font-family-monospace;
 }
 
 code {
+	padding: .1rem, .3rem;
 	pre {
 		background-color: $code-bg;
 		padding: 0.3rem;
