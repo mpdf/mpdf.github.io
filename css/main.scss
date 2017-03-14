@@ -25,7 +25,8 @@ nav {
 	font-family: $font-family-monospace;
 }
 
-.parameter {
+.parameter,
+.smallblock {
 	font-size: $font-size-root * 0.8;
 	color: #000088;
 	background-color: $code-bg;
