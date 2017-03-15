@@ -10,48 +10,76 @@ modification_time: 2017-03-05T21:59:56+00:00
 
 Unless otherwise stated, the following values are supported:
 
-<span class="smallblock">LENGTH</span>: `px`, `pc`, `pt`, `cm`, `mm`, `in`, `em`, `rem`, `ex` and `%` (where appropriate) are supported.<br>
-Default if no unit given is `px`.
+<span class="smallblock">LENGTH</span>
+: `px`, `pc`, `pt`, `cm`, `mm`, `in`, `em`, `rem`, `ex` and `%` (where appropriate) are supported.<br>
+  Default if no unit given is `px`.
 
-<span class="smallblock">FONT-SIZE</span>: `px`, `pc`, `pt`, `em`, `rem`, `ex`, `%`, `small`, `medium`, `large`, `x-small`, `x-large` are supported.<br>
-Default if no unit given is `px`.
+<span class="smallblock">FONT-SIZE</span>
+: `px`, `pc`, `pt`, `em`, `rem`, `ex`, `%`, `small`, `medium`, `large`, `x-small`, `x-large` are supported.<br>
+  Default if no unit given is `px`.
+  
+  <div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Support for `rem` was added in mPDF 5.7. Unlike the CSS3 specification, the basic size used for
+    `rem` in the document is based on the `font-size` set on the `<body>` element (rather than the `<html>` element).
+  </div>
+  
+  Conversion from `px` is determined by the configurable variables
+  <a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}" markdown="1">`dpi`</a>
+  and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}" markdown="1">`img_dpi`</a>
+  
+  `ex` uses an approximation of half the font height
 
-<div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Support for `rem` was added in mPDF 5.7. Unlike the CSS3 specification, the basic size used for
-  `rem` in the document is based on the `font-size` set on the `<body>` element (rather than the `<html>` element).
-</div>
+<span class="smallblock">FONT-FAMILY</span>
+: Any font family defined in your configuration, as well as
+  `sans`, `sans-serif`, `serif` or `monospace`.
 
-Conversion from `px` is determined by the configurable variables
-<a href="{{ "/reference/mpdf-variables/dpi.html" | prepend: site.baseurl }}" markdown="1">`dpi`</a>
-and <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}" markdown="1">`img_dpi`</a>
+<span class="smallblock">ALPHA</span>
+: transparency, value between 0 and 1
 
-`ex` uses an approximation of half the font height
+<span class="smallblock">COLOR</span>
+: `#rgb` or `#rrggbb` or `rgb(255,255,255)` or
+  <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g.
+  `black`, `gray` are supported.
 
-<span class="smallblock">FONT-FAMILY</span>: Any font family defined in your configuration, as well as
-`sans`, `sans-serif`, `serif` or `monospace`.
+  Also supported are:
+  - `rgb(255, 255, 255)`
+  - `rgba(255, 255, 255, 1)` last value is <span class="smallblock">ALPHA</span> \*
+  - `rgb(100%, 100%, 100%)`
+  - `hsl(360, 100%, 100%)`
+  - `hsla(360, 100%, 100%, 1)` last value is <span class="smallblock">ALPHA</span> \*
+  - `cmyk(100, 100, 100, 100)` *[or 0-100%]*
+  - `cmyka(100, 100, 100, 100, 1)` *[or 0-100%]* last value is <span class="smallblock">ALPHA</span> \*
+  - `device-cmyk(100, 100, 100, 100)` *[or 0-100%]*
+  - `device-cmyka(100, 100, 100, 100, 1)` last value is <span class="smallblock">ALPHA</span> \*
+  - `spot(<color name>, 100%)`. (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)
 
-<span class="smallblock">COLOR</span>: `#rgb` or `#rrggbb` or `rgb(255,255,255)` or
-<a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g.
-`black`, `gray` are supported.
+  since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);`
 
-<span class="smallblock">ALPHA</span>, or transparency, value between 0 and 1
+  \* Alpha values (transparency) are only supported on background colours - not text color
 
-Also supported are:
+<span class="smallblock">GRADIENT</span>
+: Both the Mozilla or the draft CSS3 syntax are supported e.g.:
+  
+   * `background: -moz-repeating-linear-gradient(red, blue 20px, red 40px)`
+   * `background-image: -moz-repeating-linear-gradient(red, blue 20px, red 40px)`
+   * `background: linear-gradient(top, #c7cdde, #f0f2ff);`
+   * `background-image: linear-gradient(top, #c7cdde, #f0f2ff);`
+  
+  There are more values supported. 
+  (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
 
-- `rgb(255, 255, 255)`
-- `rgba(255, 255, 255, 1)` last value is <span class="smallblock">ALPHA</span> \*
-- `rgb(100%, 100%, 100%)`
-- `hsl(360, 100%, 100%)`
-- `hsla(360, 100%, 100%, 1)` last value is <span class="smallblock">ALPHA</span> \*
-- `cmyk(100, 100, 100, 100)` *[or 0-100%]*
-- `cmyka(100, 100, 100, 100, 1)` *[or 0-100%; last value is <span class="smallblock">ALPHA</span> *\*
-- `device-cmyk(100, 100, 100, 100)` *[or 0-100%]*
-- `device-cmyka(100, 100, 100, 100, 1)` last value is <span class="smallblock">ALPHA</span> \*
-- `spot(<color name>, 100%)`. (cf. <a href="{{ "/reference/mpdf-functions/addspotcolor.html" | prepend: site.baseurl }}">AddSpotColor</a>)
+<span class="smallblock">GRADIENT_OLD</span>
+: `background-gradient: GRADIENT_OLD`  is **deprecated**
 
-since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: spot(PANTONE 534 EC, 100%, 85, 65, 47, 9);`
+  Defines a linear or radial colour gradient for the background.  
+   * `linear `<span class="smallblock">COLOR1</span>` `<span class="smallblock">COLOR2</span>` x1 y1 x2 y2;` or
+   * `radial `<span class="smallblock">COLOR1</span>` `<span class="smallblock">COLOR2</span>` x1 y1 x2 y2 radius;` 
+   
+  `x`, `y` and `radius` are values between 0 and 1
 
-\* Alpha values (transparency) are only supported on background colours - not text color
+  (custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+  
+  
 
 <table class="table">
 <thead>
@@ -72,7 +100,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <span class="smallblock">COMMON TEXT STYLES</span>
   </td>
   <td>
-  <span class="smallblock">See <a href="#common-text-styles">below</a> - all except text-shadow</span>
+  <span class="smallblock">See <a href="#common-text-styles">below</a></span> - all except text-shadow
   </td>
 </tr>
 <tr>
@@ -94,7 +122,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <td markdown="1">
   background is parsed as per the CSS specification.
 
-  background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span>
+  background-image in the form `url(image.png)` or `url('image.png')` or <span class="smallblock">GRADIENT</span>
   (mPDF >= 5.1).
 
   background-position is supported as per CSS2.1
@@ -125,20 +153,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <td markdown="1">
   *background-gradient*
   </td>
-  <td markdown="1">
-
-  Defines a linear or radial colour gradient for the background.
-
-  linear <span class="smallblock">COLOR1</span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or
-
-  radial <span class="smallblock">COLOR1</span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;
-
-  x, y and radius are values between 0 and 1
-
-  (custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl
-  }}">Backgrounds &amp; borders</a>)
-
-  </td>
+  <td>(Deprecated) <span class="smallblock">GRADIENT_OLD</span></td>
 </tr>
 <tr>
   <td markdown="1">
@@ -240,7 +255,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   See <a href="http://www.w3.org/TR/2008/WD-css3-background-20080910/#layering">draft CSS3 specification</a>
   for use.
 
-  NB Use of $autoPadding which can automatically increase padding in block elements with border-radius set as
+  NB Use of `$autoPadding` which can automatically increase padding in block elements with border-radius set as
   required
   </td>
 </tr>
@@ -251,8 +266,8 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <span class="smallblock">LENGTH</span>
 
   mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block
-  must be
-  contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
+  must be contained by the outer block's physical dimensions. width and height are overridden if this is 
+  not the case.
 
   </td>
 </tr>
@@ -263,12 +278,11 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <span class="smallblock">LENGTH</span> 
 
   mPDF does not support nested block elements which overlap (horizontally or vertically) i.e. the inner block
-  must be
-  contained by the outer block's physical dimensions. width and height are overridden if this is not the case.
+  must be  contained by the outer block's physical dimensions. width and height are overridden if this is 
+  not the case.
 
   (Prior to mPDF v5.1: only supported if whole block is all on one page; will extend a block but not shorten
-  it; will
-  not force a pagebreak even if height should move onto next page.)
+  it; will not force a pagebreak even if height should move onto next page.)
 
   NB % is interpreted as % of printable page height (inside margins)
 
@@ -351,7 +365,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   background is parsed as per the CSS specification.
 
-  background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span>
+  background-image in the form `url(image.png)` or `url('image.png')` or <span class="smallblock">GRADIENT</span>
   (mPDF >= 5.1).
 
   background-position is supported as per CSS2.1
@@ -413,20 +427,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <td markdown="1">
   *background-gradient*
   </td>
-  <td markdown="1">
-
-  Defines a linear or radial colour gradient for the background.
-
-  linear <span class="smallblock">COLOR1</span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or
-
-  radial <span class="smallblock">COLOR1</span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;
-
-  x, y and radius are values between 0 and 1
-
-  (custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl
-  }}">Backgrounds &amp; borders</a>)
-
-  </td>
+  <td>(Deprecated) <span class="smallblock">GRADIENT_OLD</span></td>
 </tr>
 <tr>
   <td markdown="1">
@@ -576,10 +577,8 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   Applies only to block elements with position fixed or absolute. (mPDF >= 5.0)
 
   Sizing and layout of the block element using top, left, bottom, right, width and height are applied BEFORE
-  the
-  element is rotated. The top and left co-ordinates are respected for positioning, except when bottom or right
-  are
-  specified without respective top or left when the bottom/right co-ordinates are used.
+  the element is rotated. The top and left co-ordinates are respected for positioning, except when bottom 
+  or right are specified without respective top or left when the bottom/right co-ordinates are used.
 
   </td>
 </tr>
@@ -658,10 +657,10 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   "i" = lower-roman
 
-  Custom list-style-type is recognised e.g.: U+263Argb(255,0,0);
-  - where U+263A is the Unicode HEX value of the character you want for the bullet
+  Custom list-style-type is recognised e.g.: `U+263Argb(255,0,0);`
+  - where `U+263A` is the Unicode HEX value of the character you want for the bullet
   - the character MUST be included in the font used for that list item
-  - rgb() bit is optional
+  - `rgb()` bit is optional
 
   </td>
 </tr>
@@ -720,10 +719,10 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   "i" = lower-roman
 
-  Custom list-style-type is recognised e.g.: U+263Argb(255,0,0);
-  - where U+263A is the Unicode HEX value of the character you want for the bullet
+  Custom list-style-type is recognised e.g.: `U+263Argb(255,0,0);`
+  - where `U+263A` is the Unicode HEX value of the character you want for the bullet
   - the character MUST be included in the font used for that list item
-  - rgb() bit is optional
+  - `rgb()` bit is optional
 
   </td>
 </tr>
@@ -874,7 +873,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   background is parsed as per the CSS specification.
 
-  background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span>.
+  background-image in the form `url(image.png)` or `url('image.png')` or <span class="smallblock">GRADIENT</span>.
 
   background-position is supported as per CSS2.1
 
@@ -963,7 +962,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   (mPDF <= 1.3 incorrectly set cell-padding for all cells in table.)
 
-  Sets table padding (only relevant when border-collapse:separate)
+  Sets table padding (only relevant when `border-collapse:separate`)
 
   </td>
 </tr>
@@ -981,7 +980,8 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 </tr>
 <tr>
   <td>text-align</td>
-  <td>left | right | center (applies to all cells in table; to centre a table on the page, you must use the
+  <td>
+  left | right | center (applies to all cells in table; to centre a table on the page, you must use the
   align="center" attribute in the table tag)
   </td>
 </tr>
@@ -995,9 +995,9 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   Single or double values:
 
-  2px sets horizontal and vertical;
+  `2px` sets horizontal and vertical;
 
-  2px 3px sets horizontal=2 and vertical=3
+  `2px 3px` sets horizontal=2 and vertical=3
 
   (Same as cellSpacing attribute) Default=2px
 
@@ -1032,7 +1032,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   *autosize*
   </td>
   <td>Shrinks a table to fit if width is too small to allow complete words to fit. The value (must be >=1)
-  determines the maximum allowable factor to shrink i.e. autosize="2" will allow the font-size to be reduced
+  determines the maximum allowable factor to shrink i.e. `autosize="2"` will allow the font-size to be reduced
   to a minimum of 1/2 the original size. A value of 1 prevents automatic resizing of the table. (custom
   property)
   </td>
@@ -1210,7 +1210,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   background is parsed as per the CSS specification.
 
-  background-image in the form url(image.png) or url('image.png') or <span class="smallblock">GRADIENT</span>
+  background-image in the form `url(image.png)` or `url('image.png')` or <span class="smallblock">GRADIENT</span>
   (mPDF >= 5.1).
 
   background-position is supported as per CSS2.1
@@ -1231,16 +1231,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   </td>
   <td markdown="1">
 
-  Defines a linear or radial colour gradient for the background.
-
-  linear <span class="smallblock">COLOR1</span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or
-
-  radial <span class="smallblock">COLOR1</span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;
-
-  x, y and radius are values between 0 and 1
-
-  (custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl
-  }}">Backgrounds &amp; borders</a>)
+  (Deprecated) <span class="smallblock">GRADIENT_OLD</span>
 
   (Added mPDF 3.2)
 
@@ -1353,11 +1344,11 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   From mPDF 5.7, also supports a decimal-mark alignment followed by a default e.g.
 
-  text-align: '.' center;
+  `text-align: '.' center;`
 
   Non-ASCII characters should be defined using Unicode values:
 
-  text-align: '\66B' center;
+  `text-align: '\66B' center;`
 
   </td>
 </tr>
@@ -1475,9 +1466,9 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   0.1pt solid \| dotted \| dashed #cccccc
 
-  Will also accept #cccccc 0.1pt solid (which is generated by IE WYSIWYG editor)
+  Will also accept `#cccccc 0.1pt solid` (which is generated by IE WYSIWYG editor)
 
-  and (from mPDF 1.4) solid 3mm #000000
+  and (from mPDF 1.4) `solid 3mm #000000`
 
   medium \| thin \| thick accepted for size
 
@@ -1525,7 +1516,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   Controls whether interpolation is on or off in PDF document. Once set for an image, subsequent use of the
   same image will use the initial setting for this property.
 
-  auto (default) - uses the value set by config variable: $interpolateImages
+  auto (default) - uses the value set by config variable: `$interpolateImages`
 
   crisp-edges - interpolation disabled
 
@@ -1539,7 +1530,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <td markdown="1">
   *gradient-mask*
   </td>
-  <td><span class="smallblock">GRADIENT</span>  (see notes below)  mPDF >= 5.1</td>
+  <td><span class="smallblock">GRADIENT_OLD</span>  mPDF >= 5.1</td>
 </tr>
 <tr>
   <td>display</td>
@@ -1585,7 +1576,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 </tr>
 <tr>
   <td>width, height</td>
-  <td><span class="smallblock">LENGTH</span>. NB the inline attributes width="" and height="" are also supported
+  <td><span class="smallblock">LENGTH</span>. NB the inline attributes `width=""` and `height=""` are also supported
   </td>
 </tr>
 <tr>
@@ -1726,7 +1717,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   Note: 'em' 'ex' and % are not allowed
 
-  Length values are width and height e.g. size: 8.5in 11in; or one value for a square.
+  Length values are width and height e.g. `size: 8.5in 11in;` or one value for a square.
 
   Sets the size of the 'page-box', which is usually used with a constant size sheet through the document, as
   in the CSS2 @paged media spec.
@@ -1741,8 +1732,8 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   Note: 'em' 'ex' and % are not allowed
 
-  Length values are width and height e.g. size: 8.5in 11in; Any of the standard sheet sizes can be used (as
-  for mPDF() ) with the suffix '-L' for landscape
+  Length values are width and height e.g. `size: 8.5in 11in;` Any of the standard sheet sizes can be used (as
+  for mPDF() ) with the suffix `-L` for landscape
 
   </td>
 </tr>
@@ -1751,12 +1742,12 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <td markdown="1">
 
   A named Header or Footer. HTML headers/footers must precede the name with
-  <span class="parameter">$html_</span>
+  `$html_`
 
   NB This was the original form, and still takes preference over header and footer which can be set using the
   pseudo-selectors e.g. :right
 
-  The name *_default* can be used to allow the current non-HTML header to remain unchanged (mPDF >= 5.1)
+  The name `_default` can be used to allow the current non-HTML header to remain unchanged (mPDF >= 5.1)
   </td>
 </tr>
 <tr>
@@ -1806,8 +1797,9 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 </tr>
 <tr>
   <td>header, footer</td>
-  <td>A named Header or Footer. HTML headers/footers must precede the name with
-  <span class="parameter">$html_</span> (from mPDF 4.2)
+  <td markdown="1">
+  A named Header or Footer. HTML headers/footers must precede the name with
+  `$html_` (from mPDF 4.2)
   </td>
 </tr>
 <tr>
@@ -1816,7 +1808,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
   background is parsed as per the CSS specification.
 
-  background-image in the form url(image.png) or url('image.png') supported.
+  background-image in the form `url(image.png)` or `url('image.png')` supported.
 
   background-position is supported as per CSS2.1
 
@@ -1866,20 +1858,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
   <td markdown="1">
   *background-gradient*
   </td>
-  <td markdown="1">
-
-  Defines a linear or radial colour gradient for the background.
-
-  linear <span class="smallblock">COLOR1</span><span class="smallblock">COLOR2</span> x1 y1 x2 y2; or
-
-  radial <span class="smallblock">COLOR1</span><span class="smallblock">COLOR2</span> x1 y1 x2 y2 radius;
-
-  x, y and radius are values between 0 and 1
-
-  (custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl
-  }}">Backgrounds &amp; borders</a>)
-
-  </td>
+  <td>(Deprecated) <span class="smallblock">GRADIENT_OLD</span></td>
 </tr>
 <tr>
   <td markdown="1">
@@ -1913,6 +1892,7 @@ since mPDF 5.7, spotcolor CMYK values can be defined as it is used e.g. `color: 
 
 ## Common Text Styles
 
+<span class="smallblock">COMMON TEXT STYLES</span> are:
 
 <table class="table">
 <tbody>
