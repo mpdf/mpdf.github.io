@@ -8,15 +8,14 @@ modification_time: 2015-08-05T12:00:00+00:00
 
 # Backgrounds
 
-Background colour (colour is the only property) can be set for in-line elements e.g. &lt;span&gt;
+Background colour (colour is the only property) can be set for in-line elements e.g. <span>
 
-3 types of background can be set for block elements (div, p etc), @page, and for the &lt;body&gt; element:
+3 types of background can be set for block elements (div, p etc), @page, and for the <body> element:
 
-<ul>
-<li>background color</li>
-<li>background images (including gradients using CSS3 spec.)</li>
-<li>*background gradients (custom style for mPDF - not part of CSS specification - deprecated)*</li>
-</ul>
+ * background color
+ * background images (including gradients using CSS3 spec.)
+ * *background gradients (custom style for mPDF - not part of CSS specification - **deprecated**)*
+
 
 ## Background Images
 
@@ -30,10 +29,10 @@ Background-images are disabled in columns, and when "page-break-inside: avoid" i
 NB CSS2.1 states that the area for background-image should include the padding and the BORDER - IE7 does this, but
 Firefox 3 starts the tiling position 0 inside the border. mPDF complies with CSS and IE7.
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Background-color and background-image set on the
-  &lt;body&gt; element will cover the whole page i.e. not inside the "margins". (cf.
-  <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Background-color and background-image set on the <body> element 
+  will cover the whole page i.e. not inside the "margins". 
+  (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
 </div>
 
 ## Gradients defined as background-image
@@ -61,7 +60,7 @@ For more details see:
 - CSS3 linear gradients - http://dev.w3.org/csswg/css3-images/#linear-gradients
 - CSS3 radial gradients - http://dev.w3.org/csswg/css3-images/#radial-gradients
 
-## Background-gradient (Old form - deprecated)
+## Background-gradient (Old form - Deprecated)
 
 Background gradient can be set as a linear or radial gradient between two colours. Background gradients can be set on
 all block elements e.g. P, DIV, H1-H6, as well as @page and on BODY.
@@ -90,8 +89,8 @@ inside the circle, otherwise some areas will not be defined.
 In addition to the standard CSS styles for borders, border-radius and background-clip are supported. these are defined
 in the <a href="http://www.w3.org/TR/2008/WD-css3-background-20080910/#layering">CSS3 draft specification</a>.
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Border-radius does not work if Columns are being used,
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Border-radius does not work if Columns are being used,
   or if <span class="parameter"><a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a></span>
   is <span class="smallblock">TRUE</span> (keep-with-table).
 </div>
@@ -99,7 +98,7 @@ in the <a href="http://www.w3.org/TR/2008/WD-css3-background-20080910/#layering"
 The two length values of the ‘border-*-radius’ properties define the radii of a quarter ellipse that defines the shape
 of the corner of the outer border edge.
 
-The first value is the horizontal radius e.g. in ‘border-top-left-radius: 55pt 25pt’  55pt is radius of curve from top
+The first value is the horizontal radius e.g. in `border-top-left-radius: 55pt 25pt` 55pt is radius of curve from top
 end of left border starting to go round to the top.
 
 If the second length is omitted it is equal to the first (and the corner is thus a quarter circle). If either length is
