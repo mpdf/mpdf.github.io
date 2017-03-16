@@ -3,11 +3,8 @@ layout: page
 title: AddSpotColor
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/addspotcolor.html
-modification_time: 2015-08-05T12:00:39+00:00
+modification_time: 2017-03-16T12:01:09+00:00
 ---
-
-<div>
-<div>
 
 (mPDF >= 5.1)
 
@@ -38,7 +35,7 @@ Example #1
 {% highlight php %}
 <?php
 
-$mpdf->AddSpotColor('PANTONE 534 EC',85,65,47,9);
+$mpdf->AddSpotColor('PANTONE 534 EC', 85, 65, 47, 9);
 
 ?>
 
@@ -47,6 +44,3 @@ HTML
 This will be printed using PANTONE 300 EC at 80% tint
 
 {% endhighlight %}
-
-</div>
-</div>
