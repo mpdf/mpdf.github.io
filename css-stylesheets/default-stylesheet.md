@@ -7,7 +7,12 @@ modification_time: 2017-03-04T08:57:57+00:00
 ---
 
 mPDF uses a default "stylesheet" for default settings of style and layout; this is in
-`defaultCSS` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration key</a>.
+`defaultCSS` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>,
+which is based on the recommended default values for HTML4 - 
+<http://www.w3.org/TR/CSS21/sample.html> 
+
+The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.
+
 
 **mPDF >= 7.0** It is possible to define custom default CSS file by `defaultCssFile` configuration key.
 
