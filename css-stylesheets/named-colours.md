@@ -11,7 +11,8 @@ modification_time: 2015-08-05T11:59:58+00:00
 The table below provides a list of the named colours supported by mPDF when used in CSS contexts. The list is 
 precisely the same as the <a href="http://www.w3.org/TR/SVG/types.html#ColorKeywords">SVG 1.0 color keyword names</a>. 
 The two color swatches on the left illustrate setting the background color of a table cell in two ways: The first column 
-uses the named color value, and the second column uses the respective numeric color value.
+uses the named color value, and the second column uses the respective numeric color value. The third column lists the 
+decimal numbers for `rgb(255,255,255)` notation.
 
 <table class="table">
     <thead>
