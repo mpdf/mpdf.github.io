@@ -9,7 +9,7 @@ modification_time: 2015-08-05T11:59:47+00:00
 # Page sizes supported
 
 When declaring an instance of
-<a href="{{ "/reference/mpdf-functions/__construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf</a> 
+<a href="{{ "/reference/mpdf-functions/construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf</a> 
 class, you can specify the (default) page size and orientation for the document. 
 
 The margins and orientation can be redefined throughout the document whenever you add a new page using 

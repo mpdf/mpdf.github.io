@@ -455,7 +455,7 @@ XHTML specification is recommended for best compliance with mPDF.
     <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g.
     "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the
     `\Mpdf\LangToFont` class. Other codes for character sets (or codepages) are recognised - see
-    <a href="{{ " /reference/mpdf-functions/__construct.html " | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a>.
+    <a href="{{ " /reference/mpdf-functions/construct.html " | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a>.
 </div>
 
 # Changelog
