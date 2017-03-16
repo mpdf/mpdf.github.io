@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:00:37+00:00
 
 ## Main controls
 
-<a href="{{ "/reference/mpdf-functions/__construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a> - Main class constructor
+<a href="{{ "/reference/mpdf-functions/construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a> - Main class constructor
 
 mPDFI - [deprecated] - see <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
 
