@@ -15,35 +15,35 @@ The appearance of a default mPDF document based on HTML should approximate to it
 
 The following are supported (in order of ascending priority - lower ones in list overwrite higher):
 
-- HTML attributes e.g. &lt;div align="center"&gt; 
+- HTML attributes e.g. `<div align="center">` 
   (see <a href="{{ "/html-support/html-attributes.html" | prepend: site.baseurl }}">supported HTML attributes</a>)
-- CSS Stylesheets - included in header of HTML document or as &lt;link  /&gt; or as @import()
-    - html tags e.g. p { font-size:12pt; color:#880000; }
-    - class e.g. .stylename { font-size:9pt; }
-    - id e.g. #style { font-size:9pt; }
-- In-line CSS style e.g. &lt;p style="font-family:monospace;"&gt;
+- CSS Stylesheets - included in header of HTML document or as `<link />` or as `@import()`
+    - html tags e.g. `p { font-size:12pt; color:#880000; }`
+    - class e.g. `.stylename { font-size:9pt; }`
+    - id e.g. `#style { font-size:9pt; }`
+- In-line CSS style e.g. `<p style="font-family:monospace;">`
 
 Note: Prior to mPDF 5.x HTML attributes overrode CSS styles.
 
 CSS attributes, used in stylesheets or in-line, can define:
 
-- most tags/elements e.g. div, p, body, table, span
+- most tags/elements e.g. `div`, `p`, `body`, `table`, `span`
 - class-names e.g. `p.mystylename { font-size:9pt; }`
 - id e.g. `div#style { font-size:9pt; }`
 
-Tag, class and id can share a similar name e.g. p {...} .p {...} and #p {...} are handled uniquely
+Tag, class and id can share a similar name e.g. `p {...}` `.p {...}` and `#p {...}` are handled uniquely
 
-There is some support for 'cascaded' CSS e.g. div.topic table.type1 td {...}
+There is some support for 'cascaded' CSS e.g. `div.topic table.type1 td {...}`
 
-- table, tr, th and td will only be recognised as the last items (as above)
-- only 'block' elements (not 'in-line') can be included i.e. div.style1 a {...} will not work, nor will a#class1 {...}
+- `table`, `tr`, `th` and `td` will only be recognised as the last items (as above)
+- only 'block' elements (not 'in-line') can be included i.e. `div.style1 a {...}` will not work, nor will `a#class1 {...}`
 
 For a full list of CSS attributes supported see 
 <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a>
 
 Note the OUTLINE style (which is not supported in most browsers) does work in mPDF e.g.
 
-&lt;span style="outline-width:thin|medium|thick; outline-color:#rrggbb|invert"&gt;
+`<span style="outline-width:thin|medium|thick; outline-color:#rrggbb|invert">`
 
 # Using a stylesheet
 
@@ -53,15 +53,18 @@ for details of this and other parameters.
 
 <span class="parameter">$mode</span>
 
-0 - Use this (default) if the text you pass is a complete HTML page including head and body and style definitions.
+**Values**
 
-1 - Use this when you want to set a CSS stylesheet - see example below
+`0`
+: Use this (default) if the text you pass is a complete HTML page including head and body and style definitions.
 
-2 - Write HTML code without the &lt;head&gt; information. Does not need to be contained in &lt;body&gt;
+`1`
+: Use this when you want to set a CSS stylesheet - see example below
 
-{% highlight php %}
-Example using a stylesheet
-{% endhighlight %}
+`2`
+: Write HTML code without the <head> information. Does not need to be contained in <body>
+
+## Example using a stylesheet
 
 {% highlight php %}
 <?php
@@ -69,7 +72,6 @@ Example using a stylesheet
 $stylesheet = file_get_contents('style.css');
 
 $mpdf->WriteHTML($stylesheet,1);
-
 $mpdf->WriteHTML($html,2);
 {% endhighlight %}
 
@@ -79,15 +81,15 @@ mPDF supports media-dependent CSS styles as:
 
 {% highlight php %}
 @media print {
-
- p { color: red; }
-
+  p { 
+    color: red; 
+  }
 }
 
 <style media="print">
-
- p { color: red; }
-
+  p { 
+    color: red; 
+  }
 </style>
 
 <link rel="stylesheet" media="print" href="..." />

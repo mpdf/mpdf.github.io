@@ -10,7 +10,7 @@ In order for users to be able to read a PDF file, they need to be able to access
 They can do this in three ways:
 
 - PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and 
-  Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program,and do not 
+  Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not 
   need to be embedded in the PDF document.
 - Files using CJK (chinese-japanese-korean) characters can refer to standard fonts which are freely downloadable from 
   the <a href="http://www.adobe.com/products/acrobat/acrrasianfontpack.html" target="_blank">Adobe website</a>. 
