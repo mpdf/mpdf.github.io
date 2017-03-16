@@ -6,14 +6,14 @@ permalink: /fonts-languages/arabic-rtl-text-v5-x.html
 modification_time: 2015-08-05T11:59:34+00:00
 ---
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Handling of RTL (right-to-left) languages was significantly rewritten for mPDF v5.1
 </div>
 
 ## Document Directionality - RTL versus LTR
 
 The document has a baseline direction which is
-<acronym title="Left-to-Right document, used for most langauges">LTR</acronym>
+<acronym title="Left-to-Right document, used for most languages">LTR</acronym>
 or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>; this determines:
 
 - text alignment in blocks for which text-align has not been specifically set
@@ -22,30 +22,28 @@ or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages"
 This base/document directionality is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym>
 by default, and can be set by any of the following:
 
-```
-
+{% highlight php %}
+<?php
 $mpdf->SetDirectionality('rtl');
 
 <html dir="rtl"> or <html style="direction: rtl;">
-
 <body dir="rtl"> or <body style="direction: rtl;">
-```
+{% endhighlight %}
 
-Base direction is an inherited CSS property, so will affect all content, unless direction is specified elswhere.
+Base direction is an inherited CSS property, so will affect all content, unless direction is specified elsewhere.
 
 ## Block-level Directionality
 
-Direction can be set for any HTML block elements e.g. &lt;div&gt;&lt;p&gt;&lt;table&gt;&lt;ul&gt; etc using:
+Direction can be set for any HTML block elements e.g. `<div><p><table><ul>` etc using:
 
+HTML:
 {% highlight php %}
-[HTML]
-
 <div style="direction: rtl;">
+{% endhighlight %}
 
-or
+or CSS stylesheet:
 
-[CSS stylesheet]
-
+{% highlight css %}
 div.right { direction: rtl; }
 {% endhighlight %}
 
@@ -63,7 +61,7 @@ specified, it is respected and inherited by all descendants.
 ## Directionality in Tables
 
 - direction can only be set on the top-level element of nested lists
-- direction can only be set on &lt;table&gt;, NOT on &lt;thead&gt;&lt;tbody&gt;&lt;td&gt; etc.
+- direction can only be set on `<table>`, NOT on `<thead><tbody><td>` etc.
 - nested tables CAN have different directions
 
 ## Text Bidirectionality
@@ -82,7 +80,7 @@ reversed as well so that the sentence order is
 <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>.
 
 This process when <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym>
-arabic characters are present is fully automatic and unconfigurable. &lt;bdo&gt; etc has no effect.
+arabic characters are present is fully automatic and unconfigurable. <bdo> etc has no effect.
 
 However enclosing text in silent tags can sometimes help by altering the way the text is broken up into chunks to
 process e.g.:
@@ -97,11 +95,11 @@ Arabic is a complex script requiring processing before output. However any appro
 it contains the characters in Unicode blocks 'Arabic Presentation Forms' A and B (U+FB50 - U+FDFF, U+FE70 - U+FEFE).
 Note that quite a large number of fonts contain the isolated characters but not the presentation forms.
 
-2 fonts are bundled with mPDF: XB Zar and XB Riyaz. These are 2 of a number of fonts available from
+Two fonts are bundled with mPDF: XB Zar and XB Riyaz. These are 2 of a number of fonts available from
 <a href="http://wiki.irmug.com/index.php/X_Series_2">http://wiki.irmug.com/index.php/X_Series_2</a>.
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** The script handling Arabic text (RTL) was rewritten in mPDF 5.5 with improved support for
   Pashto/Sindhi/Urdu/Kurdish, especially for joining characters and added new presentation forms.
 </div>
 
@@ -118,12 +116,12 @@ By editing <span class="filename">config_fonts.php</span> and adding to appropri
 {% endhighlight %}
 
 this will force mPDF to use unmapped glyphs. It requires the font file to include a Format 2.0 POST table which
-references the glyphs by name as e.g. uni067C.med or uni067C.medi
+references the glyphs by name as e.g. `uni067C.med` or `uni067C.medi`
 
 XB Riyaz, XB Zar, Arabic Typesetting (MS), Arial (MS) all contain this table. NB If you want to know if a font file
-is suitable, you can open a .ttf file in a text editor and search for "uni067C.med" - if it exists, it may work!
+is suitable, you can open a .ttf file in a text editor and search for `uni067C.med` - if it exists, it may work!
 
-Using "unAGlyphs" forces subsetting of fonts, and will not work with SIP/SMP fonts (using characters beyond the
+Using `unAGlyphs` forces subsetting of fonts, and will not work with SIP/SMP fonts (using characters beyond the
 Unicode BMP Plane).
 
 mPDF maps these characters to part of the Private Use Area allocated by Unicode U+F500-F7FF. This could interfere
@@ -143,10 +141,10 @@ does at least display.
 It seems that Initial and Medial forms are used in Koranic text.
 
 I have left options encoded in <span class="function">function InitArabic()</span> if you want to alter - to make it
-double-joining, it also needs to be added to <span class="parameter">$arabPrevLink</span> as "\xd9\x89"
+double-joining, it also needs to be added to <span class="parameter">$arabPrevLink</span> as `\xd9\x89`
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner,
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** mPDF deletes Unicode characters: U+200C,U+200D,U+200E,U+200F zero-width joiner/non-joiner,
   LTR and RTL marks so they will not appear - even though some fonts contain glyphs for these characters.
 </div>
 
