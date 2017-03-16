@@ -53,6 +53,6 @@ $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
 
 # See Also
 
-- <a href="{{ "/reference/mpdf-functions/__construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a> - mPDF class constructor
+- <a href="{{ "/reference/mpdf-functions/construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a> - mPDF class constructor
 - <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page
 
