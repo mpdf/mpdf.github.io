@@ -69,7 +69,7 @@ The functions <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: si
 parameters to select sheet size.
 
 Accepted values - same options as the original 
-<a href="{{ "/reference/mpdf-functions/__construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a> - are:
+<a href="{{ "/reference/mpdf-functions/construct.html" | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a> - are:
 
 - "A4", "A3", "Letter" etc
 - "A4-L", "A3-L", "Letter-L" etc. for landscape
