@@ -21,8 +21,8 @@ border-collapse is not used).
 This may improve performance considerably for large tables, reducing memory use and increasing processing speed by
 approximately 30%
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Prior to mPDF 4.4 using simpleTables also disabled
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Prior to mPDF 4.4 using simpleTables also disabled
 	padding, background-images, background-color and rotated text. These were re-introduced with almost no loss of
 	performance.
 </div>

@@ -22,8 +22,8 @@ barcode – Add a Barcode to the document
 
 Add a Barcode to the document.
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** See <a href="{{ "/what-else-can-i-do/barcodes.html" | prepend: site.baseurl }}">barcodes</a>
   and the example file for further information.
 </div>
 
@@ -169,8 +169,8 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 
 # Notes
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** The following CSS properties can be set on the &lt;barcode /&gt; element as though it were standard HTML:
 
   vertical-align  (default: middle)
 
@@ -209,8 +209,8 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 <div class="barcodecell"><barcode code="54321068" type="I25" class="barcode" /></div>
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> mPDF will generate a Checkdigit for most barcodes if required, which is added to the
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** mPDF will generate a Checkdigit for most barcodes if required, which is added to the
     barcode. If you need to know what the checkdigit is for a particular barcode, you could do the following:
 </div>
 

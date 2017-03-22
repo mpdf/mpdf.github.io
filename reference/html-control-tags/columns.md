@@ -18,14 +18,14 @@ columns – Control use of Columns on the page
 
 Define, start or stop Columns in the document.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> The maximum ratio to adjust column height when justifying is set by 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** The maximum ratio to adjust column height when justifying is set by 
     <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">$max_colH_correction</a> - 
     too large a value can give ugly results
 </div>
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** If you are setting HTMLHeaders or HTMLFooters, this will cancel any columns you have set; 
     you need to call SetColumns() or use &lt;columns&gt; after commands like 
     <a href="{{ "/reference/mpdf-functions/sethtmlheader.html" | prepend: site.baseurl }}">SetHTMLHeader()</a> etc.
 </div>

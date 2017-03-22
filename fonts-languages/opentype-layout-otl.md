@@ -30,8 +30,8 @@ Other mPDF features to enhance complex scripts:
 - dictionary-based line-breaking for Lao, Thai and Khmer (U+200B is also supported)
 - separate algorithm for Tibetan line-breaking
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> There are other smart-font technologies around to deal with complex scripts, namely
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** There are other smart-font technologies around to deal with complex scripts, namely
   Graphite fonts (SIL International) and Apple Advanced Typography (AAT by Apple/Mac). mPDF 6 does not support these.
 </div>
 
@@ -111,7 +111,7 @@ NB `@font-face` is NOT supported
 
 NB `@font-feature-values` is NOT supported
 
-<strong>Note:</strong> `font-variant` specifies a single property in CSS2, whereas in CSS3 it has become a shorthand
+**Note:** `font-variant` specifies a single property in CSS2, whereas in CSS3 it has become a shorthand
 for all the other `font-variant-*` properties. `font-variant: small-caps` was the form supported in CSS2, and will
 work in mPDF.
 

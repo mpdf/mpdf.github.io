@@ -17,8 +17,8 @@ bookmark – Add a Bookmark to the document
 Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target 
 is set as the current writing position in the document when the Bookmark is defined.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if 
     a unibyte codepage is being used for the document.
 </div>
 
@@ -97,8 +97,8 @@ This will produce a Bookmark tree in Adobe Reader:
 
 # Notes
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> To set the Bookmark for a Table of Contents, see 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** To set the Bookmark for a Table of Contents, see 
     <span class="parameter">$toc-bookmarkText</span> in 
     &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.
 </div>

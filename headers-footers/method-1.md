@@ -161,8 +161,8 @@ $arr = array (
 $mpdf->SetHeader($arr, 'O');  // O for Odd header
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> When you are using the array form, any values that are not defined in the array use the 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** When you are using the array form, any values that are not defined in the array use the 
     document default values, not the defaultheader values (like the previous Simple form)  i.e. an undefined font-size 
     uses the document default of 10pt, not the <span class="parameter">$defaultheaderfontsize</span> of 8pt.
 </div>

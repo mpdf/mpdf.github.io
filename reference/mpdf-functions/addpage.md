@@ -10,8 +10,8 @@ modification_time: 2015-08-05T12:00:38+00:00
 
 AddPage — Add a new page
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> A new function
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** A new function
 	<a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a>
 	was added in mPDF 5.0 which is recommended as much simpler to use.
 </div>
@@ -102,14 +102,14 @@ Number of pages added:
 </tr>
 </tbody> </table>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** If no new page is added, the other parameters will be ignored e.g. resetting page
 	numbers/styles, margins and headers/footers. If 2 pages are added, the changes in page numbers/styles,
 	margins and headers/footers will start on the final added page.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to
 	this, it was only possible to reset it to 1.
 </div>
 
@@ -239,8 +239,8 @@ will be ignored.
 <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">$odd-header-value</span>
 to -1 to turn the header off.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** You must add the prefix 'html_' before the name if it is a HTMLHeader.
 </div>
 
 <span class="parameter">$odd-header-value</span>
@@ -301,7 +301,7 @@ B (Type B paperback 128x198mm)
 
 All of the above values can be suffixed with "-L" to force a Landscape page orientation document e.g. "A4-L"
 
-<strong>Note:</strong> If you use the array() form for <span class="parameter">$sheet-size</span>, then you must:
+**Note:** If you use the array() form for <span class="parameter">$sheet-size</span>, then you must:
 
 - specify the width less than the height i.e. the dimensions of the page in portrait orientation; and
 
@@ -426,15 +426,15 @@ $mpdf->WriteHTML('End section of book with no headers');
 
 # Notes
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Unlike FPDF **AddPage()** does not need to be called at the beginning of the document
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Unlike FPDF **AddPage()** does not need to be called at the beginning of the document
 	if you are writing HTML code to the document.
 	<a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a>
 	will automatically add the first page to a new document.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> **pagebreak** can be used as an <acronym title="Hypertext Markup Language
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** **pagebreak** can be used as an <acronym title="Hypertext Markup Language
 	(code used to display Internet pages)">HTML</acronym> equivalent of both
 	<a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.
 </div>

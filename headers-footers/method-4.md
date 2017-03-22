@@ -14,13 +14,13 @@ Note that <span class="smallblock">NAMED</span> <span class="smallblock">HTML</s
 <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> when they are defined, but only when
 they are selected.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong>Do not name any header or footer starting with html_ - This prefix is reserved to 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:**Do not name any header or footer starting with html_ - This prefix is reserved to 
     identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>,
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>,
     <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>,
     &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebrea</a>k&gt; 
     &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; 

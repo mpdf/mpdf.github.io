@@ -9,8 +9,8 @@ modification_time: 2015-08-05T11:59:49+00:00
 Page headers and page footers can be set for mPDF documents in a number of different ways. As mPDF has evolved, new 
 methods have been added.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> As from mPDF v6.0 Headers and Footers are all now 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** As from mPDF v6.0 Headers and Footers are all now 
     written internally as HTMLheaders/footers. The use of non-HTML headers and footers (methods 1 &amp; 3) is 
     deprecated, but remains supported. Non-HTML headers and footers are converted in mPDF to HTML equivalents. 
     Default non-HTML headers will not clash with HTML headers, but named non-HTML headers WILL clash with 
@@ -32,8 +32,8 @@ to define styles. Style changes (font-size, font-family, color) can be defined b
 **HTML** - <span class="smallblock">HTML</span> headers/footers are written in standard HTML code. They can only be 
 defined outside HTML block tags (except &lt;body&gt;).
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> **HTML** headers/footers are more intensive of processing time and memory. This probably
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** **HTML** headers/footers are more intensive of processing time and memory. This probably
     makes little difference for an average/short document, but may be important for long/complex documents.
 </div>
 

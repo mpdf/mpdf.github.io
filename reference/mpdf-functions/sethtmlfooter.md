@@ -39,8 +39,8 @@ E - set the footer for <span class="smallblock">EVEN</span> pages
 
 <span class="smallblock">BLANK</span> - set the footer for <span class="smallblock">ODD</span> pages
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Important Difference -
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Important Difference -
 	<a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and
 	<a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without
 	specifying a <span class="parameter">$side</span> sets both <span class="smallblock">ODD</span> &amp;

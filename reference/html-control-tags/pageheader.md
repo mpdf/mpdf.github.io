@@ -26,8 +26,8 @@ pageheader – Define a page header with a given name
 Define a page header with a given name. Named headers can be referenced and set later in the document e.g. 
 &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt;
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> Do not name any header or footer starting with html_ - This prefix is reserved to 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Do not name any header or footer starting with html_ - This prefix is reserved to 
     identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 

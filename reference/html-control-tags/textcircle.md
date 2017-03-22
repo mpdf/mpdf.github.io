@@ -27,8 +27,8 @@ Font-size should be set for &lt;textcircle&gt; using in-line CSS or specified in
 HTML tag. Other CSS styles supported on Circular Text are: border, margin, padding, color, background-color, font-family,
 font-size, font-weight, font-style, display, visibility, and opacity.
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> CSS style are not inherited from parent elements.
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** CSS style are not inherited from parent elements.
 </div>
 
 From mPDF >= 5.6 the CSS property `<span class="parameter">$font-size`</span> can be set to `auto`. This automatically
@@ -36,8 +36,8 @@ sizes text to fill a semicircle (if both top and bottom set) or a full circle (i
 
 Circular Text is displayed as though an in-line element. Automatic kerning will be applied to the text if <a href="{{ "/reference/mpdf-variables/usekerning.html" | prepend: site.baseurl }}">useKerning</a> is <span class="smallblock">TRUE</span>. 
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Prior to mPDF 5.6 the textcircle was displayed with a white background.
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Prior to mPDF 5.6 the textcircle was displayed with a white background.
   In >= 5.6 the background has been changed to transparent by default.
 </div>
 

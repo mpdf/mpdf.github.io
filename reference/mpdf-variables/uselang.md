@@ -18,17 +18,17 @@ Specify whether to recognise/support the HTML attribute <span class="parameter">
 
 See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for more details.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable was removed in mPDF 6.0 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable was removed in mPDF 6.0 
 	<a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">`autoScriptToLang`</a>
 	should be used for the same effect.</div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The default value was changed to <span class="smallblock">TRUE</span>in version 4.0
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The default value was changed to <span class="smallblock">TRUE</span>in version 4.0
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong><span class="parameter">$lang</span> is a useful way to select appropriate fonts for some
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:**<span class="parameter">$lang</span> is a useful way to select appropriate fonts for some
 	languages. Automatic font selection using
 	<a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> marks up the
 	HTML with the <span class="parameter">$lang</span> attribute, so useLang is required. Using automatic font selection

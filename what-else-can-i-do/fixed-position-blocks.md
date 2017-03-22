@@ -48,13 +48,13 @@ the respective top or left values; in this case these values are used to positio
 - Probably INCOMPATIBLE with keep-with-table, columns etc.
 - Annotations were disabled prior to mPDF 5.0
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** width (including the value 'auto'), height, margin-left -right -top -bottom, padding-left
     -right -top -bottom, are all supported.
 </div>
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Using overflow:auto can cause mPDF to be very slow, as it attempts to write the same HTML
     reiteratively until it finds a reasonable fit to the available size.
 </div>
 

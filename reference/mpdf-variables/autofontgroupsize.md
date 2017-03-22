@@ -17,8 +17,8 @@ void **autoFontGroupSize**
 Specify the chunk size of text to group when auto-detecting languages using
 <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a>.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable is removed from mPDF v 6.0
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable is removed from mPDF v 6.0
 </div>
 
 Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage

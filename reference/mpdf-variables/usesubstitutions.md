@@ -19,8 +19,8 @@ in the current set font, will be substituted by characters in the Adobe core fon
 backup font(s) specified in the variable in `backupSubsFont` 
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Prior to mPDF 5.0 useSubstitutions controlled the
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Prior to mPDF 5.0 useSubstitutions controlled the
 	behaviour of character substitution when using Adobe core fonts, and useSubstitutionsMB was used for character
 	susbstitution in multibyte/utf-8 documents. For mPDF >= 5.0 character substitution for documents using core fonts
 	is always enabled.
@@ -72,7 +72,7 @@ $mpdf->WriteHTML("Hello World");
 $mpdf->Output();
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This may add significantly to the processing time for large files.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This may add significantly to the processing time for large files.
 </div>
 

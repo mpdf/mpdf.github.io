@@ -42,16 +42,16 @@ Columns are incompatible with (and automatically disable): justification if a ta
 collapsible margins for blocks e.g. top and bottom margins for a DIV will not collapse (default) at the top/bottom of a
 column. Support for block-level borders (DIV, P etc) was added in mPDF 3.0
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Block element borders (P,DIV etc) in columns may appear as disjointed lines. This is because
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Block element borders (P,DIV etc) in columns may appear as disjointed lines. This is because
   they are written to the document line by line to allow repositioning when the columns are adjusted. The borders
   should appear correctly when "zoomed in" and when printing. Table cell borders may be similarly affected. Also note
   that the horizontal borders between table cells will only appear half width if a background color is used in the
   cell below, because the cell background may write over the bottom half of the border.
 </div>
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> To create columns that span more than one page, use
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** To create columns that span more than one page, use
   <a href="{{ "/what-else-can-i-do/floating-blocks.html" | prepend: site.baseurl }}">Floating blocks</a>.
 </div>
 

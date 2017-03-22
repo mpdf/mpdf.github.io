@@ -8,8 +8,8 @@ modification_time: 2015-08-05T11:59:48+00:00
 
 (mPDF >= 4.2)
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** If you are referencing an HTML header/footer, you must add the prefix 'html_' before the name.
 </div>
 
 # About CSS Paged Media

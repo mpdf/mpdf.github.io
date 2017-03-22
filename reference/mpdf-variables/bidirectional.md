@@ -10,8 +10,8 @@ This variable is set by mPDF when it detects characters from a script written in
 processing of bidirectional text. It does not normally need to be defined by the user, but can be, in order to force
 the bidirectional algorithm to be applied.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable originally started with an uppercase
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable originally started with an uppercase
 	letter (<= mPDF 2.2). Support for the uppercase version was removed in mPDF >= 6.0
 </div>
 

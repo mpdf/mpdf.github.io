@@ -99,14 +99,14 @@ Number of pages added:
 </tr>
 </tbody> </table>
 
-<div class="alert alert-info" role="alert">
-    strong>Note:</strong> If no new page is added, the other parameters will be ignored e.g. resetting page 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** If no new page is added, the other parameters will be ignored e.g. resetting page 
     numbers/styles, margins and headers/footers. If 2 pages are added, any changes in page numbers/styles, 
     margins and headers/footers will start on the final added page.
 </div>
 
-<div class="alert alert-info" role="alert">
-    strong>Note:</strong> From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, 
     it was only possible to reset it to 1.
 </div>
 
@@ -225,8 +225,8 @@ will be ignored.
 <span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB "" will not unset the header. 
 Use <span class="parameter">$odd-header-value</span> to turn the header off.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** You must add the prefix 'html_' before the name if it is a HTMLHeader.
 </div>
 
 <span class="parameter">$odd-header-value</span>
@@ -303,8 +303,8 @@ Function was added. 
 
 # Notes
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> See 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** See 
     &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; 
     for further examples using the attributes. There is no PHP equivalent of &lt;formfeed&gt; but you can use 
     <a href="{{ "/reference/mpdf-variables/restoreblockpagebreaks.html" | prepend: site.baseurl }}">

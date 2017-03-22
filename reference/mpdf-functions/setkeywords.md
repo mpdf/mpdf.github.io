@@ -16,8 +16,8 @@ void **SetKeywords** ( string <span class="parameter">$text</span> )
 
 Set Keywords for the document metadata. This metadata can be seen when inspecting the document properties in Adobe Reader.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text
 	can be used, even if a unibyte codepage is being used for the document.
 </div>
 

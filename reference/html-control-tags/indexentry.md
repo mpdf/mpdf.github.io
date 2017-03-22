@@ -18,8 +18,8 @@ Insert an Index entry for the document Index, referencing the current writing po
 <span class="parameter">$xref</span> is set, it will appear as a cross-referencing entry in the index as for 
 <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> The Index must be generated explicity at the end of the document using 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** The Index must be generated explicity at the end of the document using 
     <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> 
     at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> 
     is called.
@@ -96,8 +96,8 @@ $mpdf->WriteHTML('<indexentry content="Dromedary" xref="Camel:types" />The drome
 
 # Notes
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** 
     &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; 
     may be a preferred form to 
     <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>, 

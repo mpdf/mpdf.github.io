@@ -18,12 +18,12 @@ Specifies that mPDF should interpret any URLs in the HTML code relative to this 
 Otherwise relative paths will be based on the current script. This is important for hyperlinks, external stylesheets, 
 and images.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
     As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is 
     recommended where possible to use the preferred spelling.
 </div>

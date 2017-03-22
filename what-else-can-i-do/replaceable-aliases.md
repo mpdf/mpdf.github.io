@@ -6,8 +6,8 @@ permalink: /what-else-can-i-do/replaceable-aliases.html
 modification_time: 2015-08-05T12:00:17+00:00
 ---
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Prior to mPDF 6.0 you could include
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Prior to mPDF 6.0 you could include
   <span class="parameter">${nb​}</span> and <span class="parameter">${nbpg​}</span> anywhere in the text of the
   document, including headers/footers.
 

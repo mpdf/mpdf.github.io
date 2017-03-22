@@ -27,8 +27,8 @@ float: right|left
 
 Margin-right can still be set for a float:right and vice-versa.
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> The width that is set defines the width of the
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** The width that is set defines the width of the
   content-box. So if you have two floats with width=50% and either of them has padding, margin or border, they
   will not fit together on the page.
 </div>

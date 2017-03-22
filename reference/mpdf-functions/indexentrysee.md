@@ -19,8 +19,8 @@ string <span class="parameter">$see_content</span>
 
 Insert a cross-reference entry for the document Index i.e. "Dromedary - see Camel".
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The Index must be generated explicity at the end of the document using 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The Index must be generated explicity at the end of the document using 
     <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> 
     at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> 
     is called.

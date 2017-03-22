@@ -439,18 +439,18 @@ XHTML specification is recommended for best compliance with mPDF.
 <a href="{{ " /reference/mpdf-variables/uselang.html " | prepend: site.baseurl }}">$useLang</a> is set to
 <span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> Table page-break-inside, autosize values and rotate are only respected for that set on first
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Table page-break-inside, autosize values and rotate are only respected for that set on first
     level table of nested tables
 </div>
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in
     their formal/long form i.e. selected="selected"
 </div>
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for
     <span class="parameter">$lang</span> according to the
     <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g.
     "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the

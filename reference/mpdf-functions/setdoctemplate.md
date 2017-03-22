@@ -37,8 +37,8 @@ continue to be used as a template, if the current mPDF document contains more pa
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If you want to turn the template off, just use 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** If you want to turn the template off, just use 
     <code>$mpdf->SetDocTemplate()</code> with no parameters.
  </div>
 

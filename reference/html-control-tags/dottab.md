@@ -19,8 +19,8 @@ gives the appearance seen in e.g. a table of contents, or a menu with prices. A 
 side) is inserted. If the text which follows the &lt;dottab /&gt; will not fit on a single line, the default tab of 
 ' ... ' is added, and text is not right-aligned.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> If a space is required after the &lt;dottab&gt; use a non-breaking space `&nbsp;`
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** If a space is required after the &lt;dottab&gt; use a non-breaking space `&nbsp;`
 </div>
 
 From mPDF 5.7+ CSS styles can be applied to &lt;dottab&gt; as for an inline element.
