@@ -10,8 +10,8 @@ modification_time: 2015-08-05T12:01:12+00:00
 
 TOCpagebreak — Insert a table of contents in the document
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> A new function
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** A new function
 	<a href="{{ "/reference/mpdf-functions/tocpagebreakbyarray.html" | prepend: site.baseurl }}">TOCpagebreakByArray()</a>
 	was added in mPDF 5.0 which is recommended as much simpler to use.
 </div>
@@ -76,38 +76,38 @@ Add a new page to the document, marking the point at which a Table of Contents
 The numerous parameters specify both paging details for the continuing document, and for the
 <acronym title="Table of Contents">ToC</acronym> when it is generated.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF 5.7 the layout of a table of contents can be controlled using CSS.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** From mPDF 5.7 the layout of a table of contents can be controlled using CSS.
 	<span class="parameter">$font</span>, <span class="parameter">$font-size</span> and
 	<span class="parameter">$indent</span> have become redundant. They are kept as parameters to allow backwards
 	compatibility, but any values set for these are ignored.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> When writing a <span class="smallblock">DOUBLE-SIDED</span> document,
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** When writing a <span class="smallblock">DOUBLE-SIDED</span> document,
 	the <acronym title="Table of Contents">ToC</acronym> will always start on an <span class="smallblock">ODD</span>
 	page. Therefore there is no option to specifiy the pagebreak <span class="parameter">$type </span>as in
 	<a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> -
 	using **TOCpagebreak()** will always continue the document on an <span class="smallblock">ODD</span> page.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Page numbering is always suppressed in the <acronym title="Table of Contents">ToC</acronym>.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Page numbering is always suppressed in the <acronym title="Table of Contents">ToC</acronym>.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The <acronym title="Table of Contents">ToC</acronym> is generated at the end of the
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The <acronym title="Table of Contents">ToC</acronym> is generated at the end of the
 	document. Unless otherwise specified, the <acronym title="Table of Contents">ToC</acronym> will inherit the
 	page margins, headers/footers and orientation of the last page written to the document.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF 2.3 you can include more than one <acronym title="Table of Contents">ToC</acronym>
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** From mPDF 2.3 you can include more than one <acronym title="Table of Contents">ToC</acronym>
 	in the document using the parameter <span class="parameter">$name</span>.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If **TOCpagebreak()** is used at the start of a blank (<span class="smallblock">ODD</span>)
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** If **TOCpagebreak()** is used at the start of a blank (<span class="smallblock">ODD</span>)
 	page, no new page(s) will be added. This was added in mPDF 2.3 to allow a
 	<acronym title="Table of Contents">ToC</acronym> to be placed on the first page, or to allow a
 	<acronym title="Table of Contents">ToC</acronym> to follow another <acronym title="Table of Contents">ToC</acronym>.
@@ -239,8 +239,8 @@ will be ignored.
 <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">$toc-</span>
 <span class="parameter">$odd-header-value</span> to -1 to turn the header off.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You must add the prefix 'html_' before the name if it is a HTMLHeader.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** You must add the prefix 'html_' before the name if it is a HTMLHeader.
 </div>
 
 <span class="parameter">$toc-odd-header-value</span>

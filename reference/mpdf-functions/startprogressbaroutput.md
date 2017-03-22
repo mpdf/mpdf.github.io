@@ -18,8 +18,8 @@ Enable progress bars to be shown during file generation. Not recommended for gen
 development purposes, or for slow document generation. To set this value globally you can edit the value for
 `progressBar` in the configuration file <span class="filename">config.php</span>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You may need to define the constant _MPDF_URI
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** You may need to define the constant _MPDF_URI
 	if you use progress bars. The constant _MPDF_URI is needed to redirect the user to the PDF file (and prior to
 	mPDF 5.0 to locate a javascript file within the progress bar script). It must be either a relative path
 	(e.g. '../') or a full URI (e.g. 'http://www.mydomain.com/mpdf/'). If you do not define it before calling mPDF()

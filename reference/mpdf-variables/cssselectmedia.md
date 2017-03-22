@@ -18,8 +18,8 @@ Selects which media-dependent CSS stylesheets to use. mPDF supports internal and
 media property is set to "all", or matches the value of <span class="parameter">$CSSselectMedia</span>. The
 <span class="parameter">$@media</span> selector within stylesheets is also supported.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed as a
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable can be changed as a
     <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 

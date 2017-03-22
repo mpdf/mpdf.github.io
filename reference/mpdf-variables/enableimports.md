@@ -17,16 +17,16 @@ void **enableImports**
 Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several
 functions allowing you to import PDF files into the document you are writing, and using templates.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You should only change this variable as a constructor parameter key 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** You should only change this variable as a constructor parameter key 
     <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
     If you want to set this at runtime, use	
     <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI().
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Prior to mPDF 4.3, this required calling mPDFI().
 	The functions have now been incorporated into the main class, but you must set this variable to enable them.
 </div>
 

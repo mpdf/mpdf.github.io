@@ -41,8 +41,8 @@ When a language is set, the following happens (determined by function <span clas
   <span class="parameter">$text-align:justify</span>; for span/inline elements the justification
   is disabled for the enclosing block element.
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Automatic language detection using <span class="function">SetAutoFont()</span>
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Automatic language detection using <span class="function">SetAutoFont()</span>
   will detect language use in the text passed to mPDF, and add
   <span class="filename">&lt;span lang="xx" class="lang_xx"&gt;..&lt;/span&gt;</span> tags to mark up.
   Using automatic language detection may add to the processing time when creating a large document.

@@ -14,8 +14,8 @@ CreateRefence — Generate an Index - deprecated / Removed in mPDF v6.0
 
 void **CreateReference** ( )
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> **CreateReference()** is now deprecated in favour of the better-named 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** **CreateReference()** is now deprecated in favour of the better-named 
     <a href="{{ "/reference/mpdf-functions/createindex.html" | prepend: site.baseurl }}">CreateIndex()</a>.
 </div>
 

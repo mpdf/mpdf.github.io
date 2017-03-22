@@ -59,8 +59,8 @@ $mpdf->Output();
 
 ## Changing page numbering from the start of the document
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> From mPDF 6.0 the default page number style used from the start of the document can be set
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** From mPDF 6.0 the default page number style used from the start of the document can be set
     using <a href="{{ "/reference/mpdf-variables/defaultpagenumstyle.html" | prepend: site.baseurl }}">`defaultPageNumStyle`</a>.
     The following text is now redundant.
 </div>

@@ -17,8 +17,8 @@ void **SetHeader** ([ mixed <span class="parameter">$header</span> [, string <sp
 
 Set a page header.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This function/method was altered in mPDF 2.2 by
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This function/method was altered in mPDF 2.2 by
 	capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive,
 	this should not cause any problems, but it is recommended where possible to use the preferred spelling.
 </div>
@@ -148,8 +148,8 @@ the header is being set after the new page has been added.
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> <span class="parameter">$write</span> forces the
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** <span class="parameter">$write</span> forces the
 appropriate header to be written. If you have just defined an <span class="smallblock">ODD</span>-sided header and
 the document is currently writing to an <span class="smallblock">EVEN</span>-sided page, the
 <span class="smallblock">EVEN</span> header will be output.</div>

@@ -27,8 +27,8 @@ correctly in any circumstances. mPDF will strip away the <span class="parameter"
 following spaces, and the <span class="parameter">$mpdf--&gt;</span> tag and any preceeding spaces, and process all 
 enclosed code.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> Almost all mPDF custom tags are self closing e.g. &lt;pagebreak /&gt;. If you do not use 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Almost all mPDF custom tags are self closing e.g. &lt;pagebreak /&gt;. If you do not use 
     self-closing tags, the HTML may not show correctly in a browser unless you hide the tags in special comments as above.
 </div>
 

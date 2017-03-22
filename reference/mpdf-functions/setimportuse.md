@@ -17,8 +17,8 @@ void **SetImportUse** ( )
 Enable the use of imported PDF files or templates. This causes additional files (classes) to be loaded, enabling several
 functions allowing you to import PDF files into the document you are writing, and using templates.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated
 	into the main \Mpdf\Mpdf class, but you must use SetImportUse() to enable them.
 </div>
 

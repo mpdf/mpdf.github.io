@@ -58,7 +58,7 @@ $mpdf->Output();
 
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> False bold text has the same character widths as the normal text.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** False bold text has the same character widths as the normal text.
 </div>
 

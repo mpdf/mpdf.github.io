@@ -10,8 +10,8 @@ modification_time: 2015-08-05T11:59:48+00:00
 
 The page (sheet) size can be reset within the document.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> The @page model used by CSS and supported by mPDF 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** The @page model used by CSS and supported by mPDF 
     allows the size of a "page-box" to be set, assuming a constant size of the "sheet" on which it is being printed. 
     To avoid confusion, the term "sheet size" is preferred for the physical dimensions of the page of the document.
 </div>

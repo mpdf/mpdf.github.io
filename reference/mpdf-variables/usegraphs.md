@@ -9,7 +9,7 @@ modification_time: 2015-08-05T12:02:37+00:00
 (mPDF >= 2.4 && <7.0)
 
 <div class="alert alert-warning" role="alert">
-	<strong>Note:</strong> This feature was removed in mPDF 7.0
+	**Note:** This feature was removed in mPDF 7.0
 </div>
 
 # Description
@@ -21,8 +21,8 @@ When <span class="smallblock">TRUE</span>, mPDF will parse table data and allow 
 graphs from the data. This should only be set to <span class="smallblock">TRUE</span> when required to conserve memory
 and processing time.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Graphs require
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Graphs require
 	<a href="http://www.aditus.nu/jpgraph/" target="_blank">JPGraph</a> to be installed on the server.
 	See <a href="{{ "/what-else-can-i-do/graphs.html" | prepend: site.baseurl }}">Graphs</a> for further information.
 </div>

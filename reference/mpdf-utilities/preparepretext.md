@@ -20,8 +20,8 @@ surround the text with &lt;pre&gt; tags whilst preventing &lt;pre&gt;tags includ
 also allows use of a text string marker (<span class="parameter">$formfeed</span>) to be replaced by a formfeed in the
 output file.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Prior to mPDF 5.1 you should use the
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Prior to mPDF 5.1 you should use the
 	<span class="parameter">$mode </span>parameter of
 	<a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> as '2'
 	to avoid parsing the text for style tags. See example below.

@@ -16,8 +16,8 @@ max_colH_correction – Sets maximum ratio to allow when adjusting column height
 
 The maximum ratio to adjust column height when justifying - too large a value can give ugly results
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The <span class="parameter">$vAlign</span> parameter of &lt;
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The <span class="parameter">$vAlign</span> parameter of &lt;
 	<a href="{{ "/reference/html-control-tags/columnbreak.html" | prepend: site.baseurl }}">columnbreak</a>&gt;
 	or <a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a> must
 	be set to J or justify

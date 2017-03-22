@@ -19,8 +19,8 @@ $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
 $mpdf->charset_in='windows-1252';
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> <span class="parameter">$charset_in</span> requires codes recognised by the PHP
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** <span class="parameter">$charset_in</span> requires codes recognised by the PHP
   function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> i.e.
   windows-1252 not win-1252
 </div>

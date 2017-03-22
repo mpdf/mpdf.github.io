@@ -19,8 +19,8 @@ will not prevent the use of other CJK fonts if specified by font-family.)
 
 The precise effect it has on different languages/fonts is specified in the `\Mpdf\LangToFont` class.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This value can only be set as a configuration variable
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This value can only be set as a configuration variable
     To change the value at runtime, you must use `$mpdf = new \Mpdf\Mpdf(['mode' => '-aCJK']);` to set as
 	<span class="smallblock">FALSE</span> or `$mpdf = new \Mpdf\Mpdf(['mode' => '-aCJK']); `to set as
 	<span class="smallblock">TRUE</span>

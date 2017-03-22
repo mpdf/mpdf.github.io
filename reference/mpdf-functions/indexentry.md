@@ -16,11 +16,11 @@ void **IndexEntry** ( string <span class="parameter">$content</span> [ string <s
 
 Insert an Index entry for the document Index, referencing the current writing position in the document. If <span class="parameter">$xref</span> is set, it will appear as a cross-referencing entry in the index as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The Index must be generated explicity at the end of the document using <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.</div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Prior to mPDF 2.2 the function Reference() was used. IndexEntry() is now the preferred form.</div>
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Prior to mPDF 2.2 the function Reference() was used. IndexEntry() is now the preferred form.</div>
 
 # Parameters
 
@@ -103,8 +103,8 @@ Dromedary - see Camel, types
 
 # Notes
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; may be a preferred form, as it will allow more precise identification of the position and page - the &lt;indexentry&gt; can be placed just next to the appropriate word.</div>
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; may be a preferred form, as it will allow more precise identification of the position and page - the &lt;indexentry&gt; can be placed just next to the appropriate word.</div>
 
 ## Recommended placement
 

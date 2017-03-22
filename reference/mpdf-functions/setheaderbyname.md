@@ -17,8 +17,8 @@ void **SetHeaderByName** ( string <span class="parameter">$name</span> [, string
 
 Sets a page header that has previously been defined by name.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This function/method was altered in mPDF 2.2 by capitalising the first letter of the name.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name.
 	As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is
 	recommended where possible to use the preferred spelling.
 </div>

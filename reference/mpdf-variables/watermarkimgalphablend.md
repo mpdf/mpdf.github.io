@@ -19,8 +19,8 @@ The blend modes are those specified in the
 <a href="{{ "/reference/pdf-files-adobe/pdf-reference.html" | prepend: site.baseurl }}">PDF reference</a>. The value of
 Normal gives acceptable results for most cases. 'Multiply' may produce better results with overlying WMF or SVG images.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed as any other
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable can be changed as any other
     <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 

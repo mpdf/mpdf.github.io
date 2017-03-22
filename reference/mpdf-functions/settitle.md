@@ -17,8 +17,8 @@ void **SetTitle** ( string <span class="parameter">$text</span> )
 Set the title for the document. The title is displayed at the top of the Adobe Reader screen when viewing the PDF file,
 and is included in the document metadata, which can be seen when inspecting the document properties in Adobe Reader.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Adobe Reader uses system fonts to display the document
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Adobe Reader uses system fonts to display the document
 	metadata, therefore any Unicode text can be used, even if a unibyte codepage is being used for the document.
 </div>
 

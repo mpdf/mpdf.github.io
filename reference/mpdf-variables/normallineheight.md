@@ -16,8 +16,8 @@ void **normalLineheight**
 
 This variable defines the default line-height used when the CSS property line-height is set to normal (default).
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF v 6.0 onwards, this value will only be
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** From mPDF v 6.0 onwards, this value will only be
 	used when the variable `useFixedNormalLineHeight` is set to <span class="smallblock">TRUE</span>
 </div>
 

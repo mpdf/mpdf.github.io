@@ -6,13 +6,13 @@ permalink: /what-else-can-i-do/math-with-mathjax-2.html
 modification_time: 2015-08-05T12:00:23+00:00
 ---
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> This is an alternative method to the one in
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This is an alternative method to the one in
   <a href="{{ "/what-else-can-i-do/math-formulae-with-mathjax.html" | prepend: site.baseurl }}">Math Formulae with MathJax</a>
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This version has an updated script which should work in all browsers.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This version has an updated script which should work in all browsers.
 </div>
 
 1) Adapt the page in which you are testing/writing the Math formulae

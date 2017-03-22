@@ -20,8 +20,8 @@ void **SetProtection** ( array <span class="parameter">$permissions</span>
 
 Encrypts and sets the PDF document permissions for the PDF file, together with user and owner passwords.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> A default mPDF document is not encrypted, and grants full permissions to the end-user e.g.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** A default mPDF document is not encrypted, and grants full permissions to the end-user e.g.
 	copying, printing, modifying.
 </div>
 
@@ -36,8 +36,8 @@ A blank array should be passed to deny all permissions to the user. The latter 4
 Using any of these last 4 permissions require 128-bit encryption and will force this mode, regardless of any value set
 for <span class="parameter">$length</span>.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If 128-bit encryption is used (whether by specifying
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** If 128-bit encryption is used (whether by specifying
 	<span class="parameter">$length</span>=128 or by using any of the 4 latter permissions), the use of
 	<span class="parameter">$print</span> will only allow low-resolution printing from the document; you must
 	specify <span class="parameter">$print-highres</span> to allow full resolution printing.
