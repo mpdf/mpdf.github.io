@@ -6,7 +6,7 @@ permalink: /about-mpdf/license.html
 modification_time: 2017-03-14T08:59:22+00:00
 ---
 
-mPDF: A PHP class to generate PDF files from HTML with Unicode/UTF-8
+mPDF: A PHP library to generate PDF files from HTML with Unicode/UTF-8
 and CJK support
 
 Copyright (C) 2010 Ian Back
