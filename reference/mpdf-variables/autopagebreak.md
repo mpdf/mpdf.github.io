@@ -62,8 +62,8 @@ $mpdf->WriteHTML($html);
 $mpdf->Output();
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable existed in the script before v3.1
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable existed in the script before v3.1
 	but did not allow paging to be turned off. The variable was altered in mPDF 3.1 by making the first letter of
 	the variable lowercase.
 </div>

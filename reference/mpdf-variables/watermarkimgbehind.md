@@ -16,13 +16,13 @@ void **watermarkImgBehind**
 
 Specify whether to place watermark images behind page contents
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed as any other
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable can be changed as any other
 	<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable was unintentionally set to
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable was unintentionally set to
 	<span class="smallblock">TRUE</span> in the <span class="filename">config.php</span> file released with mPDF 4.4
 	In version 4.5 it was changed to <span class="smallblock">FALSE</span>
 </div>

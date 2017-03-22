@@ -94,8 +94,8 @@ these are the initial, medial, final, and isolated forms of arabic letter 'ain':
 
 ع ـع ـعـ عـ
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly display
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** You must enable OpenType layout (OTL) features for a font to correctly display
   right-to-left scripts.
 </div>
 
@@ -112,8 +112,8 @@ Consonant conjuncts are where two adjacent characters are written as a single 'c
 
 प + ॡ = पॣ
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> You must enable OpenType layout (OTL) features for a font to correctly
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** You must enable OpenType layout (OTL) features for a font to correctly
   display complex scripts.
 </div>
 

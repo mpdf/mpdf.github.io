@@ -45,8 +45,8 @@ the link generating the PDF.
 `\Mpdf\Output\Destination::STRING_RETURN`: return the document as a string. <span class="parameter">$filename</span> 
 is ignored.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You can use the 'S' option to e-mail a PDF file - see example under 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** You can use the 'S' option to e-mail a PDF file - see example under 
     <a href="{{ "/real-life-examples/e-mail-a-pdf-file.html" | prepend: site.baseurl }}">E-mail a PDF file</a>.
 </div>
 

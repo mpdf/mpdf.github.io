@@ -16,8 +16,8 @@ Specifies whether or not to show/print the watermark text on each page. The text
 <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a>. The
 watermark is added to the document at the end of each page.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This superceded TopicIsUnvalidated in mPDF 2.2 as an alias, and is now the preferred form.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This superceded TopicIsUnvalidated in mPDF 2.2 as an alias, and is now the preferred form.
 </div>
 
 # Values

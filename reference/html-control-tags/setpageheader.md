@@ -20,8 +20,8 @@ setpageheader – Set a page header by a given name
 
 Sets a page header that has previously been defined by name.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> This function/method was altered in mPDF 2.2 by 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** This function/method was altered in mPDF 2.2 by 
     capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, 
     this should not cause any problems, but it is recommended where possible to use the preferred spelling.
 </div>
@@ -85,8 +85,8 @@ written immediately to the current page. Use if the header is being set after th
 
 <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> <span class="parameter">$show-this-page</span> forces the appropriate header to be written.
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** <span class="parameter">$show-this-page</span> forces the appropriate header to be written.
     If you have just defined an <span class="smallblock">ODD</span>-sided header and the document is currently writing 
     to an <span class="smallblock">EVEN</span>-sided page, the <span class="smallblock">EVEN</span> 
     header will be output.

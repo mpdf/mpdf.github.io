@@ -19,8 +19,8 @@ Some end tags are optional in HTML 4 (see
 </a>).
 These include (not exclusively): P, LI, DD, DT, TR, TD
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If the HTML is incorrectly "formed" i.e. with
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** If the HTML is incorrectly "formed" i.e. with
 	illegal nesting of elements, this may do better or worse than the default.
 </div>
 

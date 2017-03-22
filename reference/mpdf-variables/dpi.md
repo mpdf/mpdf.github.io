@@ -17,13 +17,13 @@ inherent size for pixels. Any values set for e.g. font-size, border-width etc. n
 The dots-per-inch (dpi) affects all conversions from pixels ***except images***, which are set by a separate variable
 <span class="parameter">$img_dpi</span>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> It is recommended that the values for
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** It is recommended that the values for
 	<span class="parameter">$dpi</span> and <span class="parameter">$img_dpi</span> are the same.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable can be changed as any other 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable can be changed as any other 
     <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 

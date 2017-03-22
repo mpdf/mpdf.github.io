@@ -44,8 +44,8 @@ The id is "0" for root/un-named ToC; otherwise it is lowercase of the name="" us
 
 An example CSS stylesheet for this:
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> From mPDF v 6.0 this example stylesheet for ToCs
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** From mPDF v 6.0 this example stylesheet for ToCs
     was added to the file <span class="filename">mpdf.css</span> which is read by default as a secondary default
     CSS stylesheet
 </div>
@@ -92,8 +92,8 @@ For additional ToCs, these will have &lt;toc name=""&gt; attribute. Use the lowe
     #mpdf_toc_figures span.mpdf_toc_t_level_0 {color: red; }
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> If you have 2 ToCs immediately following each other,
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** If you have 2 ToCs immediately following each other,
     and wish to use pagenumstyle or suppress to control the following text, then you need to set those values on both
     of the &lt;tocpagebreak&gt; elements.
 </div>

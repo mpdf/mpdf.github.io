@@ -19,8 +19,8 @@ will close any HTML block elements, expecting the HTML code to start afresh afte
 <span class="smallblock">TRUE</span> mPDF will attempt to carry over any CSS style values for the current block elements
 and continue after the pagebreak.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable was removed in mPDF 6.0  See
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable was removed in mPDF 6.0  See
 	<a href="{{ "/paging/page-breaks.html" | prepend: site.baseurl }}">Page Breaks</a> for more information
 </div>
 

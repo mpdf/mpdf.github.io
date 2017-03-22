@@ -19,15 +19,15 @@ void **TOC_Entry** ( string <span class="parameter">$content</span>
 
 Insert an entry for the Table of Contents referencing the current writing position in the document.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The position for the Table of Contents must be specified using
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The position for the Table of Contents must be specified using
 	<a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a>
 	or &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;
 	at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF 2.3 you can use more than one <acronym title="Table of Contents">ToC</acronym> in
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** From mPDF 2.3 you can use more than one <acronym title="Table of Contents">ToC</acronym> in
 	the document using the parameter <span class="parameter">$name</span>.
 </div>
 
@@ -93,8 +93,8 @@ $mpdf->Output();
 
 # Notes
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Since mPDF 2.0 **insertTOC()** should **not** be called at the end of the document.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Since mPDF 2.0 **insertTOC()** should **not** be called at the end of the document.
 	<a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">Output()</a>
 	will automatically generate the ToC if it has been defined with either or
 	<a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">TOCpagebreak()</a> or 

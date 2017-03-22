@@ -8,8 +8,8 @@ modification_time: 2015-08-05T12:01:50+00:00
 
 (mPDF >= 3.1 && <7.0)
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This variable was succeeded by usage of \Psr\Log\LogInterface in `7.0`
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This variable was succeeded by usage of \Psr\Log\LogInterface in `7.0`
 </div>
 
 debug – Turn on debugging messages
@@ -63,8 +63,8 @@ $mpdf->WriteHTML("Hello World");
 $mpdf->Output();
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages
 	inadvertently picked up suppressed errors such as those caused by @fopen()  - even though the @ is deliberately
 	there to prevent interruption of the script.
 </div>

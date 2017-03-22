@@ -62,8 +62,8 @@ $mpdf->WriteHTML($html);
 $mpdf->Output();
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The collapse of margins at the top and bottom of the page is unaffected by this variable.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The collapse of margins at the top and bottom of the page is unaffected by this variable.
 	This is set by the custom CSS property `margin-collapse: collapse|none` which can be defined in the `defaultCSS`
 	<a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>

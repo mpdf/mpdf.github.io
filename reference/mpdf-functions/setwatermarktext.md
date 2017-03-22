@@ -19,8 +19,8 @@ such as "DRAFT". The watermark will be added to each page when the Footer is pri
 <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermark</a> is set
 to 1 or <span class="smallblock">TRUE</span>. 
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> Prior to mPDF 2.2 the function setUnvalidatedText()
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** Prior to mPDF 2.2 the function setUnvalidatedText()
 	was used. SetWatermarkText() is now the preferred form.
 </div>
 

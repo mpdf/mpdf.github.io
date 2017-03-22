@@ -16,8 +16,8 @@ Variant #5.
 Note that named headers are not specified as <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>
 when they are defined, but only when they are selected.
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Do not name a header or footer starting with html_ - This prefix is reserved to identify
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Do not name a header or footer starting with html_ - This prefix is reserved to identify
   an <span class="smallblock">HTML</span> header/footer.
 </div>
 

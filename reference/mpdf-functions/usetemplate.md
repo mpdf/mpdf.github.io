@@ -19,17 +19,16 @@ already been stored as a 'template' using <a href="{{ "/reference/mpdf-functions
 The template is inserted on the current page of the document. UseTemplate() returns an array of height and width of the
 imported page as it is printed (see Example #1).
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The template will be printed onto the page as the bottom 'layer' i.e.
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The template will be printed onto the page as the bottom 'layer' i.e.
 	anything else written to that page by mPDF will be written on top of thie template. NB If you use `WriteHTML()` and have
 	a background-color set on BODY this will hide the template from view e.g. `body style="background-color:#FFFFFF;"`
 </div>
 
-<div class="alert alert-info" role="alert">
-
-<strong>Note</strong> If you are using automatic header-margins, you need to set the header before starting the first page; if you start
-the document with `UseTemplate()` this will move it to page 1, so the order needs to be:
-
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** If you are using automatic header-margins, you need to set the header before starting the first page; if you start
+  the document with `UseTemplate()` this will move it to page 1, so the order needs to be:
+  
 {% highlight php %}
 <?php
 

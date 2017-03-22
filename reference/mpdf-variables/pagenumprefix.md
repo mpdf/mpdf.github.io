@@ -14,8 +14,8 @@ string **pagenumPrefix**
 
 Specify text to precede the page number when using {PAGENO} to insert page numbers in headers or footers.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This is only recommended in non-HTML headers and
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This is only recommended in non-HTML headers and
 	footers. Although the text is added correctly in HTML headers &amp; footers, the text alignment is not readjusted
 	after substitution e.g. if it used in the right margin.
 </div>

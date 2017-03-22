@@ -36,8 +36,8 @@ to force the Annotation marker to display in the right margin.
 The attribute <span class="parameter">$file</span> can be used to specify a file (any type) which is to be embedded 
 inside the PDF document.
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> All text to do with an annotation (text, author, subject) is rendered with the system font 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** All text to do with an annotation (text, author, subject) is rendered with the system font 
     and can therefore contain any Unicode character even if the document font restricts to a specific codepage.
 </div>
 
@@ -89,8 +89,8 @@ Sets the appearance of the Annotation marker.
 
 <span class="smallblock">DEFAULT:</span> Note
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> The default is "Comment" when using Annotations from HTML markup &lt;span title=""&gt; 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** The default is "Comment" when using Annotations from HTML markup &lt;span title=""&gt; 
     when <a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a> 
     is <span class="smallblock">TRUE</span>
 </div>

@@ -43,13 +43,13 @@ Follow the instructions on screen. This will produce (overwriting if necessary) 
 
 Do not delete the <span class="filename">mpdf_source</span> file, which will remain as your original.
 
-<div class="alert alert-success" role="alert">
-  <strong>Tip:</strong> Consider setting <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not
+<div class="alert alert-success" role="alert" markdown="1">
+  **Tip:** Consider setting <span class="parameter">$mpdf-&gt;simpleTables = true;</span> if you do not
   need complex table borders, or <span class="parameter">$mpdf-&gt;packTableData = true;</span> if you do not mind
   the extra processing time.
 </div>
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> mPDF>=5.0 Ensure that you have set write permissions to
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** mPDF>=5.0 Ensure that you have set write permissions to
   <a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">temporary folders</a>
 </div>

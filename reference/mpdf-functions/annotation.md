@@ -34,8 +34,8 @@ writing in the document. The <span class="parameter">$x</span> position (horizon
 variable <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a>, 
 which can be used to force the Annotation marker to display in the right margin.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> All text to do with an annotation (text, author, subject) is rendered with the system 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** All text to do with an annotation (text, author, subject) is rendered with the system 
 	font and can therefore contain any Unicode character even if the document font restricts to a specific codepage.
 </div>
 
@@ -88,8 +88,8 @@ Paragraph
 
 <span class="smallblock">DEFAULT:</span> Note
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> The default is "Comment" when using Annotations from HTML markup &lt;span title=""&gt;
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** The default is "Comment" when using Annotations from HTML markup &lt;span title=""&gt;
 	when <a href="{{ "/reference/mpdf-variables/title2annots.html" | prepend: site.baseurl }}">title2annots</a> 
 	is <span class="smallblock">TRUE</span>
 </div>

@@ -17,13 +17,13 @@ htmlpagefooter – Define an HTML page footer with a given name
 Define an HTML page footer with a given name. Named footer can be referenced and set later in the document e.g. 
 &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> Do not name any header or footer starting with html_   This prefix is reserved to identify an 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Do not name any header or footer starting with html_   This prefix is reserved to identify an 
     <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
-<div class="alert alert-info" role="alert">
-    <strong>Note:</strong> Remember that, unlike most mPDF custom tags which are self-closing with /&gt;, htmlpageheader 
+<div class="alert alert-info" role="alert" markdown="1">
+    **Note:** Remember that, unlike most mPDF custom tags which are self-closing with /&gt;, htmlpageheader 
     and htmlpagefooter require end tags. If you wish to make the HTML code compatible with browsers, see 
     <a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a>
 </div>

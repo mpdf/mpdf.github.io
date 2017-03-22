@@ -27,19 +27,19 @@ each copy without having to re-generate the whole document each time.
 Overwrite() does not re-flow the text from the source file. If the <span class="parameter">$replacement</span> string 
 is longer than the <span class="parameter">$search</span> string, it may overlap the following text.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> **OverWrite()** has only been tested to work on PDF files produced by mPDF. It will work 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** **OverWrite()** has only been tested to work on PDF files produced by mPDF. It will work 
     with encrpyted files, as long as the same encryption properties are used for the new document.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If you want the final PDF file to be encrypted, you need to encrypt the original source 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** If you want the final PDF file to be encrypted, you need to encrypt the original source 
     file. Make sure that you specify a password otherwise mPDF uses a random password and **OverWrite()** will not 
     be able to access the text.
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> From mPDF >= 5.3 a unique encryption key is generated each time you create a PDF file. 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** From mPDF >= 5.3 a unique encryption key is generated each time you create a PDF file. 
     So to use encryption you need to save variables when you create the original file. See Example 2.
 </div>
 

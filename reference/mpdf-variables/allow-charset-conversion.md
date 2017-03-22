@@ -82,8 +82,8 @@ $mpdf->WriteHTML($html);
 $mpdf->Output();
 {% endhighlight %}
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> mPDF will convert pages with character sets which work with the PHP function
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** mPDF will convert pages with character sets which work with the PHP function
 	<a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv()</a>
 </div>
 

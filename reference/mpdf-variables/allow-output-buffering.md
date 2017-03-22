@@ -16,8 +16,8 @@ When <span class="smallblock">TRUE</span>, mPDF will ignore any content in the o
 when outputting the PDF file. By default, any buffered output will be treated as an error message and will abort the PDF
 file output and display any errors to the browser.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> If the variable <span class="parameter">$debug</span>
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** If the variable <span class="parameter">$debug</span>
 	is set to <span class="smallblock">FALSE</span> (default) this variable has no effect.
 </div>
 

@@ -16,8 +16,8 @@ string **strcode2utf** ( string <span class="parameter">$text</span> [, boolean 
 
 Returns a UTF-8 encoded string.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> <code>strcode2utf()</code> is useful for preparing text to be
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** <code>strcode2utf()</code> is useful for preparing text to be
 	used as a Watermark, or for the metadata properties of Title, Author, Creator and Keywords - which require UTF-8
 	encoded strings with no entities.
 </div>
@@ -40,8 +40,8 @@ Specifies whether to convert HTML numerical entities of ASCII characters (&lt;12
 
 <span class="smallblock">FALSE</span>: Only convert characters above codepoint 127
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> This function does not convert named character
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** This function does not convert named character
 	entities like &amp;amp; &amp;quot; or &amp;raquo;
 </div>
 

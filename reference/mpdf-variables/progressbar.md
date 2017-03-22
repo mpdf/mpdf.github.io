@@ -9,7 +9,7 @@ modification_time: 2015-08-05T12:02:22+00:00
 (mPDF >= 4.2 && < 7.0)
 
 <div class="alert alert-warning" role="alert">
-	<strong>Note:</strong> This feature was removed in mPDF 7.0
+	**Note:** This feature was removed in mPDF 7.0
 </div>
 
 progressBar – Specify whether to show progress bars during file generation
@@ -20,14 +20,14 @@ bool `progressBar`
 
 Specify whether to show progress bars during file generation. Not recommended for general use, but may be helpful for development purposes, or for slow document generation.
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You should only change this variable in the configuration file <span class="filename">config.php</span> 
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** You should only change this variable in the configuration file <span class="filename">config.php</span> 
 	If you want to set this at runtime, use 
 	<a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a>
 </div>
 
-<div class="alert alert-info" role="alert">
-	<strong>Note:</strong> You may need to define _MPDF_URI if you are using progress bars -
+<div class="alert alert-info" role="alert" markdown="1">
+	**Note:** You may need to define _MPDF_URI if you are using progress bars -
 	see <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a>
 </div>
 
