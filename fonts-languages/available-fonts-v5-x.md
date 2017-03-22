@@ -11,9 +11,9 @@ The following fonts are distributed with mPDF 5.x
 <table class="table">
     <tbody>
         <tr>
-            <td colspan="2">
-                ## General
-            </td>
+            <th colspan="2">
+                General
+            </th>
         </tr>
         <tr>
             <td>
@@ -22,9 +22,9 @@ The following fonts are distributed with mPDF 5.x
             <td>Good general coverage of common languages</td>
         </tr>
         <tr>
-            <td colspan="2">
-                ## Thai
-            </td>
+            <th colspan="2">
+                Thai
+            </th>
         </tr>
         <tr>
             <td>
@@ -35,9 +35,9 @@ The following fonts are distributed with mPDF 5.x
             </td>
         </tr>
         <tr>
-            <td colspan="2">
-                ## Indic languages
-            </td>
+            <th colspan="2">
+                Indic languages
+            </th>
         </tr>
         <tr>
             <td>ind_bn_1_001</td>
@@ -83,9 +83,9 @@ The following font names can be used with mPDF 5.x
 <table class="table">
     <tbody>
         <tr>
-            <td colspan="2">
-                ## Adobe Asian font-pack
-            </td>
+            <th colspan="2">
+                Adobe Asian font-pack
+            </th>
         </tr>
         <tr>
             <td>
@@ -106,9 +106,9 @@ The following font names can be used with mPDF 5.x
             <td>Japanese Adobe Asian font-pack containing all characters in codepage SHIFT_JIS</td>
         </tr>
         <tr>
-            <td colspan="2">
-                ## Generic font-family
-            </td>
+            <th colspan="2">
+                Generic font-family
+            </th>
         </tr>
         <tr>
             <td>
