@@ -16,12 +16,14 @@ You can redefine the variables in individual scripts as a
 <table class="table">
     <thead>
         <tr>
-            <td>Category</td>
-            <td>Variable</td>
-            <td>Default value</td>
-            <td>Scope<sup>[1]</sup></td>
-            <td>Version</td>
-            <td>Notes</td>
+            <th>Category</th>
+            <th>Variable</th>
+            <th>Default value</th>
+  <th markdown="1">
+  Scope[^1]
+  </th>
+            <th>Version</th>
+            <th>Notes</th>
         </tr>
     </thead>
     <tbody>
@@ -1204,5 +1206,7 @@ You can redefine the variables in individual scripts as a
     </tbody>
 </table>
 
-[1] Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of
-the document. All others can be changed during the course of creating the document.
+Notes:
+
+[^1]: Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of
+      the document. All others can be changed during the course of creating the document.

@@ -8,8 +8,8 @@ modification_time: 2015-08-05T11:59:38+00:00
 
 (mPDF >= 5.0)
 
-<div class="alert alert-info" role="alert">
-  <strong>Note:</strong> Prior to mPDF 5.0 there were 2 configurable variables, `$this->useSubstitutions` and
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Prior to mPDF 5.0 there were 2 configurable variables, `$this->useSubstitutions` and
   `$this->useSubstitutionsMB`. controlling behaviour of core fonts and unicode fonts respectively. From mPDF 5.0,
   character substitution using core fonts is always ON and cannot be disabled by configurable variables.
 
@@ -41,7 +41,7 @@ $this->useSubstitutions = true;
 
 mPDF will try to find substitutions for any missing characters:
 
-1. if the character is in Unicode Plane 2 (SIP) i.e. Unicode value &gt; U+20000:
+1. if the character is in Unicode Plane 2 (SIP) i.e. Unicode value > U+20000:
     1. looks in the sip-ext font file
        (see <a href="{{ "/fonts-languages/fonts-in-mpdf-5-x.html" | prepend: site.baseurl }}">Fonts in mPDF 5.x</a>)
     2. looks in the font defined by `backupSIPFont`

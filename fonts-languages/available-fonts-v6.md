@@ -11,12 +11,10 @@ The following fonts are included with mPDF 6:
 <table class="table">
     <thead>
         <tr>
-            <td>Font(s)</td>
-            <td>Download URL</td>
-            <td>Copyright / License
-
-            </td>
-            <td>Coverage</td>
+            <th>Font(s)</th>
+            <th>Download URL</th>
+            <th>Copyright / License</th>
+            <th>Coverage</th>
         </tr>
     </thead>
     <tbody>
@@ -52,20 +50,16 @@ The following fonts are included with mPDF 6:
 
             </td>
         </tr>
-        <tr>
-            <td>Quivira</td>
-            <td>http://www.quivira-font.com/</td>
-            <td>
-
-                *<span>free for any use</span>*
-
-            </td>
-            <td>
-
-                Coptic Buhid Tagalog Tagbanwa Lisu
-
-            </td>
-        </tr>
+<tr>
+  <td>Quivira</td>
+  <td>http://www.quivira-font.com/</td>
+  <td markdown="1">
+  *free for any use*
+  </td>
+  <td>
+  Coptic Buhid Tagalog Tagbanwa Lisu
+  </td>
+</tr>
         <tr>
             <td>Abyssinica SIL</td>
             <td>http://www.sil.org/resources/software_fonts/abyssinica-sil</td>
@@ -112,16 +106,16 @@ The following fonts are included with mPDF 6:
             </td>
             <td>Syriac</td>
         </tr>
-        <tr>
-            <td>Aegean</td>
-            <td>http://users.teilar.gr/~g1951d/</td>
-            <td>*<span>free for any use</span>*</td>
-            <td>
-
-                Carian Lycian Lydian Phoenecian Ugaritic Linear B Old Italic
-
-            </td>
-        </tr>
+<tr>
+  <td>Aegean</td>
+  <td>http://users.teilar.gr/~g1951d/</td>
+  <td markdown="1">
+  *free for any use*
+  </td>
+  <td>
+  Carian Lycian Lydian Phoenecian Ugaritic Linear B Old Italic
+  </td>
+</tr>
         <tr>
             <td>Jomolhari</td>
             <td>https://sites.google.com/site/chrisfynn2/home/fonts/jomolhari</td>
@@ -316,18 +310,22 @@ The following fonts are included with mPDF 6:
 
             </td>
         </tr>
-        <tr>
-            <td>Aegyptus</td>
-            <td>http://users.teilar.gr/~g1951d/</td>
-            <td>*<span>free for any use</span>*</td>
-            <td>Egyptian Hieroglyphs</td>
-        </tr>
-        <tr>
-            <td>Akkadian</td>
-            <td>http://users.teilar.gr/~g1951d/</td>
-            <td>*<span>free for any use</span>*</td>
-            <td>Cuneiforn</td>
-        </tr>
+<tr>
+  <td>Aegyptus</td>
+  <td>http://users.teilar.gr/~g1951d/</td>
+  <td markdown="1">
+  *free for any use*
+  </td>
+  <td>Egyptian Hieroglyphs</td>
+</tr>
+<tr>
+  <td>Akkadian</td>
+  <td>http://users.teilar.gr/~g1951d/</td>
+  <td markdown="1">
+  *free for any use*
+  </td>
+  <td>Cuneiforn</td>
+</tr>
         <tr>
             <td>Eeyek Unicode</td>
             <td>http://tabish.freeshell.org/eeyek/download.html</td>
@@ -366,11 +364,11 @@ The following font names can also be used with mPDF:
 <table class="table">
     <tbody>
         <tr>
-            <td colspan="2">
+            <th colspan="2">
 
-                ## Adobe Asian font-pack
+                Adobe Asian font-pack
 
-            </td>
+            </th>
         </tr>
         <tr>
             <td>
@@ -393,11 +391,11 @@ The following font names can also be used with mPDF:
             <td>Japanese Adobe Asian font-pack containing all characters in codepage SHIFT_JIS</td>
         </tr>
         <tr>
-            <td colspan="2">
+            <th colspan="2">
 
-                ## Generic font-family
+                Generic font-family
 
-            </td>
+            </th>
         </tr>
         <tr>
             <td>
