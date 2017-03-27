@@ -38,7 +38,7 @@ Then add this line to your webpages. This should be at the end of the document &
 <link href="mypdf.css" type="text/css" rel="stylesheet" media="mpdf" />
 {% endhighlight %}
 
-NB The media="mpdf" means that the stylesheet will be ignored by browsers, but can be selected for use by mPDF - see below.
+NB The `media="mpdf"` means that the stylesheet will be ignored by browsers, but can be selected for use by mPDF - see below.
 
 Now create a file e.g. <span class="filename">makepdf.php</span> and add the following script. Note you will need to edit the lines in italics.
 
@@ -54,8 +54,8 @@ $url = urldecode($_REQUEST['url']);
 
 // To prevent anyone else using your script to create their PDF files
 
-if (!preg_match('/^http:\/\/www\.mydomain\.com/', $url)) {
-  die("Access denied");
+if (!preg_match('@^https?://www\.mydomain\.com/@', $url)) {
+    die("Access denied");
 }
 
 // For $_POST i.e. forms with fields
