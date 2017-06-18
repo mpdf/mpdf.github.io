@@ -18,41 +18,40 @@ Enable the use of imported PDF files or templates. This causes additional files 
 functions allowing you to import PDF files into the document you are writing, and using templates.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated
-	into the main \Mpdf\Mpdf class, but you must use SetImportUse() to enable them.
+  **Note:** Prior to mPDF 4.3, this required calling `mPDFI()`. The functions have now been incorporated
+  into the main `\Mpdf\Mpdf` class, but you must use `SetImportUse()` to enable them.
 </div>
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>4.3</td>
-<td>
-
-Function added.
-
-</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>4.3</td>
+  <td>Function added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetImportUse();
 
 $mpdf->WriteHTML('You can use this just like normal, but also import and use templates...');
-
 $mpdf->Output();
-{% endhighlight %}
+```
 
 # See Also
 
