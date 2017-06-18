@@ -19,43 +19,38 @@ Otherwise relative paths will be based on the current script. This is important 
 and images.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** From mPDF 5.7 &lt;base href=""&gt; is parsed in the HTML and used to set the base path.
+  **Note:** From mPDF 5.7 the HTML tag `<base href="">` is parsed in the HTML and used to set the base path.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
-    As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is 
-    recommended where possible to use the preferred spelling.
+  **Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
+  As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is 
+  recommended where possible to use the preferred spelling.
 </div>
 
 # Parameters
 
 <span class="parameter">$url</span>
-
-A full URL should be provided, but the following will all work:
-
-http://www.mydomain.com
-
-http://www.mydomain.com/index.php
-
-http://www.mydomain.com/path/
+: A full URL should be provided, but the following will all work:
+  
+  * http://www.mydomain.com
+  * http://www.mydomain.com/index.php
+  * http://www.mydomain.com/path/
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $url = "http://www.php.net/manual/en/function.iconv.php";
-
 $html = file_get_contents($url);
 
 $mpdf->setBasePath($url);
 
-// Now any relative paths e.g. <img src="../picture.jpg" /> will be parsed relative to a base path of "http://www.php.net/manual/en/"
-
+// Now any relative paths e.g. <img src="../picture.jpg" /> will be parsed relative to 
+// a base path of "http://www.php.net/manual/en/"
 $mpdf->WriteHTML($html);
-
 $mpdf->Output();
-{% endhighlight %}
+
+```

@@ -14,53 +14,54 @@ SetDisplayMode – Specify the initial Display Mode when the PDF file is opened 
 
 void **SetDisplayMode** ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])
 
-Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in Adobe Reader, these values will determine the initial appearance and layout.
+Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in 
+Adobe Reader, these values will determine the initial appearance and layout.
 
 # Parameters
 
 <span class="parameter">$zoom</span>
-
-This parameter specifies the magnification (zoom) of the display when the document is opened.
-
-**Values** (case-sensitive)
-
-fullpage: Fit a whole page in the screen
-
-fullwidth: Fit the width of the page in the screen
-
-real: Display at real size
-
-default: User's default setting in Adobe Reader
-
-<span class="smallblock">INTEGER</span> : Display at a percentage zoom (e.g. 90 will display at 90% zoom)
-
+: This parameter specifies the magnification (zoom) of the display when the document is opened.
+  
+  **Values** (case-sensitive)
+  
+  * `'fullpage'`
+    : Fit a whole page in the screen
+  * `'fullwidth'`
+    : Fit the width of the page in the screen
+  * `'real'`
+    : Display at real size
+  * `'default'`
+    : User's default setting in Adobe Reader
+  * or an <span class="smallblock">INTEGER</span>
+    : Display at a percentage zoom (e.g. `90` will display at 90% zoom)
+  
 <span class="parameter">$layout</span>
+: Specify the page layout to be used when the document is opened.
+  
+  **Values** (case-sensitive)
+  
+  * `'single'`
+    : Display one page at a time
+  * `'continuous'`
+    : Display the pages in one column
+  * `'two'`
+    : Display the pages in two columns (first page determined by document direction (e.g. RTL))
+  * `'twoleft'`
+    : Display the pages in two columns, with the first page displayed on the left side (mPDF >= 5.2)
+  * `'tworight'`
+    : Display the pages in two columns, with the first page displayed on the right side (mPDF >= 5.2)
+  * `'default'`
+    : User's default setting in Adobe Reader
 
-Specify the page layout to be used when the document is opened.
+  <span class="smallblock">DEFAULT</span>: `'continuous'`
 
-<span class="smallblock">DEFAULT</span>: "continuous"
-
-**Values** (case-sensitive)
-
-single: Display one page at a time
-
-continuous: Display the pages in one column
-
-two: Display the pages in two columns (first page determined by document direction (e.g. RTL))
-
-twoleft: Display the pages in two columns, with the first page displayed on the left side (mPDF >= 5.2)
-
-tworight: Display the pages in two columns, with the first page displayed on the right side (mPDF >= 5.2)
-
-default: User's default setting in Adobe Reader
 
 # Examples
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetDisplayMode('fullwidth');
@@ -68,49 +69,46 @@ $mpdf->SetDisplayMode('fullwidth');
 $mpdf->WriteHTML('
 Hello World
 ');
-
 $mpdf->Output('filename.pdf');
 
-?>
-{% endhighlight %}
+```
 
 Example #2
 
-{% highlight php %}
+```php
 <?php
 
 // Display at 90% zoom - note the 90 is a number not a string
-
 $mpdf->SetDisplayMode(90);
 
 // Display two pages side by side (book style)
-
 $mpdf->SetDisplayMode('fullpage','two');
-{% endhighlight %}
+
+```
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>1.0</td>
-<td>
-
-Function was added.
-
-</td>
+  <th>Version</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1.0</td>
+  <td>Function was added.</td>
 </tr>
 <tr>
-<td>5.2</td>
-<td>2 options for layout parameter added (twoleft and tworight)
-
-</td>
+  <td>5.2</td>
+  <td markdown="1">
+  2 options for layout parameter added (`'twoleft'` and `'tworight'`)
+  </td>
 </tr>
-</tbody> </table>
+</tbody>
+</table>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/setdisplaypreferences.html" | prepend: site.baseurl }}">SetDisplayPreferences()</a> - Defines the way the document shall be presented on the screen</li>
-</ul>
+ * <a href="{{ "/reference/mpdf-functions/setdisplaypreferences.html" | prepend: site.baseurl }}">SetDisplayPreferences()</a> - Defines the way the document shall be presented on the screen

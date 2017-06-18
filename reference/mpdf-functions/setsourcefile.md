@@ -20,7 +20,9 @@ Specify the source PDF file used to import pages into the document.
 
 <span class="parameter">$file</span>
 
-This parameter specifies the source PDF file used to import pages into the document. **Note:  <span class="parameter">$file</span> should be a relative path to a local file.**
+: This parameter specifies the source PDF file used to import pages into the document. 
+
+  **Note**:  <span class="parameter">$file</span> should be a **relative path** to a local file.
 
 # Return Value
 
@@ -28,25 +30,29 @@ This parameter specifies the source PDF file used to import pages into the docum
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>2.3</td>
-<td>Function was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>2.3</td>
+  <td>Function was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetImportUse();
@@ -54,25 +60,19 @@ $mpdf->SetImportUse();
 $pagecount = $mpdf->SetSourceFile('logoheader.pdf');
 
 // Import the last page of the source PDF file
-
 $tplId = $mpdf->ImportPage($pagecount);
-
 $mpdf->UseTemplate($tplId);
 
 $mpdf->WriteHTML('Hello World');
-
 $mpdf->Output();
 
-?>
-{% endhighlight %}
+```
 
 # See Also
 
-<ul>
-<li><a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates</li>
-<li><a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file</li>
-<li><a href="{{ "/reference/mpdf-functions/importpage.html" | prepend: site.baseurl }}">ImportPage()</a> - Import a page from an external PDF file</li>
-<li><a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> - Insert an imported page from an external PDF file</li>
-<li><a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template</li>
-<li><a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template</li>
-</ul>
+* <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates
+* <a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
+* <a href="{{ "/reference/mpdf-functions/importpage.html" | prepend: site.baseurl }}">ImportPage()</a> - Import a page from an external PDF file
+* <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> - Insert an imported page from an external PDF file
+* <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a> - Specify a page from an external PDF file to use as a template
+* <a href="{{ "/reference/mpdf-functions/setdoctemplate.html" | prepend: site.baseurl }}">SetDocTemplate()</a> - Specify an external PDF file to use as a template

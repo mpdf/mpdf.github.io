@@ -12,105 +12,85 @@ SetAlpha – Set the opacity for Images
 
 # Description
 
-void **SetAlpha** ( float <span class="parameter">$alpha</span> [, integer <span class="parameter">$blend</span> ])
+void **SetAlpha** ( float <span class="parameter">$alpha</span> [, string <span class="parameter">$blend</span> ])
 
 Set the opacity and blend mode for Images
 
 # Parameters
 
 <span class="parameter">$alpha</span>
+: This parameter specifies the opacity for any subsequent images written to the current document.
 
-This parameter specifies the opacity for any subsequent images written to the current document.
-
-**Values**
-
-Float: 0 (transparent) to 1 (opaque)
+  **Values**
+  
+  Float: 0 (transparent) to 1 (opaque)
 
 <span class="parameter">$blend</span>
+: This parameter specifies the blend mode.
 
-This parameter specifies the blend mode.
+  **Values**
 
-**Values**
+  One of the following strings:
 
-<span class="smallblock">STRING</span> - One of the following:
+  * `'Normal'`
+  * `'Multiply'`
+  * `'Screen'`
+  * `'Overlay'`
+  * `'Darken'`
+  * `'Lighten'`
+  * `'ColorDodge'`
+  * `'ColorBurn'`
+  * `'HardLight'`
+  * `'SoftLight'`
+  * `'Difference'`
+  * `'Exclusion'`
+  * `'Hue'`
+  * `'Saturation'`
+  * `'Color'`
+  * `'Luminosity'`
 
-Normal
-
-Multiply
-
-Screen
-
-Overlay
-
-Darken
-
-Lighten
-
-ColorDodge
-
-ColorBurn
-
-HardLight
-
-SoftLight
-
-Difference
-
-Exclusion
-
-Hue
-
-Saturation
-
-Color
-
-Luminosity
-
-<span class="smallblock">DEFAULT</span>: Normal
+  <span class="smallblock">DEFAULT</span>: `'Normal'`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>1.0</td>
-<td>Function was added.</td>
+    <th>Version</th>
+    <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+    <td>1.0</td>
+    <td>Function was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetAlpha(0.5);
-
 $mpdf->WriteHTML('<img src="clematis.jpg" />');
-
 $mpdf->SetAlpha(1);
 
 // This produces the identical result as the last 3 lines
-
 // $mpdf->WriteHTML('<img src="clematis.jpg" opacity="0.5" />');
 
 $mpdf->Output();
-
 exit;
 
-?>
-{% endhighlight %}
+```
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/image.html" | prepend: site.baseurl }}">Image()</a> - Write an image to the current document</li>
-</ul>
+* <a href="{{ "/reference/mpdf-functions/image.html" | prepend: site.baseurl }}">Image()</a> - Write an image to the current document
 

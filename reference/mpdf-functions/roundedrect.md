@@ -6,29 +6,37 @@ permalink: /reference/mpdf-functions/roundedrect.html
 modification_time: 2015-08-05T12:00:52+00:00
 ---
 
-`**RoundedRect**(**float** x, **float** y, **float** w, **float** h, **float** radius[, **string** style])
+void **RoundedRect**(
+float $x, float $y, 
+float $w, float $h, 
+float $radius
+[, string $style])
 
-` Draws a rectangle with rounded corners directly to the PDF document at the specified position.
+Draws a rectangle with rounded corners directly to the PDF document at the specified position.
 
-<ul>
-<li>`x`
+# Parameters
 
-Abscissa of left edge of box - value in millimeters</li>
-<li>`y`
+`$x`
+: Abscissa of left edge of box - value in millimeters
 
-Ordinate of top edge of box - value in millimeters</li>
-<li>`w`
+`$y`
+: Ordinate of top edge of box - value in millimeters
 
-Width of the box - in millimeters</li>
-<li>`h`
+`$w`
+: Width of the box - in millimeters
 
-Width of the box - in millimeters</li>
-<li>`radius`
+`$h`
+: Width of the box - in millimeters
 
-Radius of the rounded corners</li>
-<li>`style`
+`$radius`
+: Radius of the rounded corners
 
-Box style: D or empty string - draw border (default); F - fill; DF or FD - draw and fill
+`$style`
+: Box style
 
-Default = '' i.e. border, no fill</li>
-</ul>
+  **Values**: 
+  * `'D'` or empty string - draw border (default); 
+  * `'F'` - fill; 
+  * `'DF'` or `'FD'` - draw and fill
+
+  Default = `''` i.e. border, no fill

@@ -8,25 +8,67 @@ modification_time: 2015-08-05T12:00:43+00:00
 
 mPDF >= 5.4
 
-function CircularText($x, $y, $r, $text, $align='top|bottom', fontfamily='', fontsize=0, fontstyle='', $kerning=120, $fontwidth=100, $divider='') {
+# Description
 
-x: abscissa of center
+function **CircularText**(
+<span class="parameter">$x</span>, <span class="parameter">$y</span>, <span class="parameter">$r</span>, 
+<span class="parameter">$text</span>, 
+<span class="parameter">$align</span>='top|bottom', 
+<span class="parameter">$fontfamily</span>='', 
+<span class="parameter">$fontsize</span>=0, 
+<span class="parameter">$fontstyle</span>='', 
+<span class="parameter">$kerning</span>=120, 
+<span class="parameter">$fontwidth</span>=100, 
+<span class="parameter">$divider</span>=''
+)
 
-y: ordinate of center
 
-r: radius of circle
+## Parameters
 
-text: text to be printed
+<span class="parameter">$x</span>
+: Abscissa of center
 
-align: text alignment: top or bottom. Default value: top
+<span class="parameter">$y</span>
+: Ordinate of center
 
-divider: optional character string to divide top and bottom text
+<span class="parameter">$r</span>
+: Radius of circle
 
-kerning: (fixed) spacing between letters in percentage. Default value: 120. Zero is not allowed.
+<span class="parameter">$text</span>
+: Text to be printed
 
-fontwidth: width of letters in percentage. Default value: 100. Zero is not allowed
+<span class="parameter">$align</span>
+: Text alignment: top or bottom. 
+   
+  Default value: top
+   
+<span class="parameter">$fontfamily</span>
+: 
 
-- uses automatic Kerning between letters if useKerning == true
+<span class="parameter">$fontsize</span>
+: 
 
-See &lt;<a href="{{ "/reference/html-control-tags/textcircle.html" | prepend: site.baseurl }}">textcircle</a>&gt; for more details
+<span class="parameter">$fontstyle</span>
+: 
+
+<span class="parameter">$kerning</span>
+: (Fixed) spacing between letters in percentage. 
+
+  Default value: 120. Zero is not allowed.
+  
+  Uses automatic Kerning between letters if <a href="{{ "/reference/mpdf-variables/usekerning.html" | prepend: site.baseurl }}">useKerning</a> == true.
+
+<span class="parameter">$fontwidth</span>
+: Width of letters in percentage. 
+
+  Default value: 100. Zero is not allowed
+   
+<span class="parameter">$divider</span>
+: Optional character string to divide top and bottom text
+
+
+
+
+# See Also
+* For more details see &lt;<a href="{{ "/reference/html-control-tags/textcircle.html" | prepend: site.baseurl }}">textcircle</a>&gt; 
 

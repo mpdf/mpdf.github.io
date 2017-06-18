@@ -6,6 +6,7 @@ permalink: /reference/mpdf-functions/addspotcolor.html
 modification_time: 2017-03-16T12:01:09+00:00
 ---
 
+
 (mPDF >= 5.1)
 
 AddSpotColor – Define a Spot colour
@@ -19,22 +20,19 @@ Define a Spot colour which can be used in the document. Spot colours need to be 
 # Parameters
 
 <span class="parameter">$name</span>
+: Specifies the name used for the spot colour.
 
-Specifies the name used for the spot colour.
+<span class="parameter">$c, $m, $y, $k</span>
+: Specifies the CMYK values to be used to display in the document or if the spot colour is not available.
 
-<span class="parameter">$c, m, y, k</span>
-
-<span class="parameter">$S</span>pecifies the CMYK values to be used to display in the document or if the spot colour is not available.
-
-<span class="smallblock">DEFAULT</span>: 0
+  <span class="smallblock">DEFAULT</span>: 0
 
 # Examples
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf->AddSpotColor('PANTONE 534 EC', 85, 65, 47, 9);
 
 ?>
@@ -43,4 +41,5 @@ HTML
 
 This will be printed using PANTONE 300 EC at 80% tint
 
-{% endhighlight %}
+
+```
