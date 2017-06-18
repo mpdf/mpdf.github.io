@@ -20,10 +20,8 @@ You can set the metadata directly using:
 
 Metadata is also set automatically if you pass full HTML code to WriteHTML() including:
 
-<ul>
-<li>title is read from &lt;title&gt;...&lt;/title&gt; tags</li>
-<li>subject, keywords and author are read from &lt;meta ... /&gt; tags</li>
-</ul>
+* title is read from `<title>...</title>` tags
+* subject, keywords and author are read from `<meta ... />` tags
 
 Whichever is set later will override previous settings.
 
@@ -39,19 +37,18 @@ function provided with mPDF which converts HTML numerical entities to UTF-8 enco
 
 Example
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $md = strcode2utf("&amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575; &amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575;");
-
 $mpdf->SetTitle($md);
 
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # See Also
 
