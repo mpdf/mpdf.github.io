@@ -19,25 +19,24 @@ If you specify a header that extends further down the page than the top-margin, 
 
 # Alternative margin usage
 
-The <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>
-`setAutoTopMargin` and `setAutoBottomMargin` can be set. Both default to <span class="smallblock">FALSE</span>.
+The configuration variables <a href="{{ "/reference/mpdf-variables/setautotopmargin.html" | prepend: site.baseurl }}">`$setAutoTopMargin`</a> 
+and <a href="{{ "/reference/mpdf-variables/setautotopmargin.html" | prepend: site.baseurl }}">`$setAutoBottomMargin`</a> can be set. Both default to <span class="smallblock">FALSE</span>.
 
 ## pad
 
-If `setAutoTopMargin` is set to '**pad**' then the value for margin-top is used to set a fixed distance in mm 
-(padding) between the bottom of the header and top of the main text. The converse is true with `setAutoBottomMargin`.
+If `$setAutoTopMargin` is set to **`'pad'`** then the value for margin-top is used to set a fixed distance in mm 
+(padding) between the bottom of the header and top of the main text. The converse is true with `$setAutoBottomMargin`.
 
 ## stretch
 
-If `setAutoTopMargin` is set to '**stretch**' then the margin-top sets a **minimum** 
+If `$setAutoTopMargin` is set to **`'stretch'`** then the margin-top sets a **minimum** 
 distance in mm between the top of the page and the top of the main text, which expands if header is too large to fit. 
 
-The value `autoMarginPadding`
-(default = 2, <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configurable</a>) 
-defines an additional distance in mm used as padding between the header and main text. This is the behaviour seen 
+The configuration variable <a href="{{ "/reference/mpdf-variables/automarginpadding.html" | prepend: site.baseurl }}">`$autoMarginPadding`</a>
+(default: `2`, configurable) defines an additional distance in mm used as padding between the header and main text. This is the behaviour seen 
 in Microsoft Word.
 
-The converse is true with `setAutoBottomMargin`.
+The converse is true with `$setAutoBottomMargin`.
 
 # Experimental!
 
@@ -46,16 +45,13 @@ functionality in mPDF, and has some limitations:
 
 - Using either pad or stretch, the values are set for the whole document - changes during the document will 
   produce unpredictable results
-
-- Incompatible with orientation changes, `forceportraitheaders` or `forceportraitmargins`
-
+- Incompatible with orientation changes, 
+  <a href="{{ "/reference/mpdf-variables/forceportraitheaders.html" | prepend: site.baseurl }}">`$forceportraitheaders`</a> 
+  or <a href="{{ "/reference/mpdf-variables/forceportraitmargins.html" | prepend: site.baseurl }}">`$forceportraitmargins`</a>
 - Does not work with "write to current page" options for Headers
-
-- Incompatible with CSS @paged media
-
+- Incompatible with CSS <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>d media
 - Cannot set a new Footer when already further down the page than there is room needed for footer
-
-- Potential error if using {nbpg} to define page total in an HTML header or footer. The top/bottom margin is 
+- Potential error if using `{nbpg}` to define page total in an HTML header or footer. The top/bottom margin is 
   calculated by writing the HTML header using the current page no. If when the header is finally written, 
   a page number total of e.g. 500 causes an extra line in the header/footer, this will not be allowed for.
 
