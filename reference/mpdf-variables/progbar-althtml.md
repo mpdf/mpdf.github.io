@@ -8,6 +8,10 @@ modification_time: 2015-08-05T12:02:21+00:00
 
 (mPDF >= 5.0 && < 7.0)
 
+<div class="alert alert-danger" role="alert" markdown="1">
+  **Note:** This feature was removed in mPDF 7.0
+</div>
+
 Customisable Progress bar
 
 Default set in config.php
