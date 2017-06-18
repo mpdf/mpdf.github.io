@@ -24,15 +24,14 @@ wished to recognise 'Trebuchet', we would add:
 
 {% highlight php %}
 <?php
-
 $this->fonttrans = array(
     'trebuchet' => 'trebuchetms',
 );
 {% endhighlight %}
 
 mPDF font-family names should therefore always be lower-case and contain no spaces. When mPDF needs to refer to a specific
-variant (bold, italic etc.) it will use the mPDF font-family name (lowercase) followed by 'B', 'I', or 'BI' (uppercase).
-The regular/normal Trebuchet MS will be 'trebuchetms', and the bold variant will be referred to as 'trebuchetmsB'.
+variant (bold, italic etc.) it will use the mPDF font-family name (lowercase) followed by `B`, `I`, or `BI` (uppercase).
+The regular/normal Trebuchet MS will be `trebuchetms`, and the bold variant will be referred to as `trebuchetmsB`.
 
 These mPDF font names are used in other places:
 
@@ -48,7 +47,6 @@ These should be defined in `$config` constructor parameter as an array:
 
 {% highlight php %}
 <?php
-
 $this->fontdata = [
     "trebuchetms" => [
         'R' => "trebuc.ttf",
@@ -59,7 +57,7 @@ $this->fontdata = [
 ];
 {% endhighlight %}
 
-Each font-family must have a Regular ['R'] file defined - the others (['B']old, ['I']talic, ['BI']bold-italic) are optional.
+Each font-family must have a Regular (`'R'`) file defined - the others (Bold `'B'`, Italic `'I'`, bold-italic `'BI'`) are optional.
 
 mPDF looks for files based on the `fontDir` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">
 configuration variable</a>. This is, by default set to `ttfonts` directory in the root of mPDF installation.

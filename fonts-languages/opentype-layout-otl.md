@@ -18,7 +18,7 @@ information that extend the capabilities of the fonts to support high-quality in
 - OTL fonts contain explicit script and language information, so a text-processing application can adjust its behavior accordingly.
 
 mPDF 6 introduces the power and flexibility of the OpenType Layout font model into PDF. mPDF supports GSUB, GPOS
-and GDEF tables for now. mPDF does *not *support BASE and JSTF at present.
+and GDEF tables for now. mPDF does *not* support BASE and JSTF at present.
 
 Other mPDF features to enhance complex scripts:
 
@@ -26,7 +26,7 @@ Other mPDF features to enhance complex scripts:
 - support for Kashida for justification of arabic scripts
 - partial support for CSS3 optional font features e.g. font-feature-settings, font-variant
 - improved "autofont" capability to select fonts automatically for any script
-- support for CSS :lang selector
+- support for CSS `:lang` selector
 - dictionary-based line-breaking for Lao, Thai and Khmer (U+200B is also supported)
 - separate algorithm for Tibetan line-breaking
 
@@ -68,7 +68,7 @@ In mPDF, the following features are on by default:
 - GSUB features: `isol fina fin2 fin3 medi med2 init nukt akhn rphf rkrf half vatu cjct cfar` (for appropriate scripts e.g. Indic, Arabic)
 - GPOS features: `abvm blwm mark mkmk curs cpsp dist requ kern`
 
-NB '`requ`' is not listed in the Microsoft registry of Feature tags; however it is found in the Arial Unicode MS font
+NB `requ` is not listed in the Microsoft registry of Feature tags; however it is found in the Arial Unicode MS font
 (it repositions the baseline for punctuation in Kannada script).
 
 `kern` is used in some fonts to reposition marks etc. and is essential for correct display, so in mPDF `kern` is on by
@@ -98,7 +98,7 @@ The following are supported in mPDF:
 - `font-variant-caps`
 - `font-variant-ligatures`
 - `font-variant-numeric`
-- `font-variant-alternates` - Only [`normal | historical-forms`] supported (i.e. most are NOT supported) e.g.
+- `font-variant-alternates` - Only [`normal` \| `historical-forms`] supported (i.e. most are NOT supported) e.g.
   `stylistic, styleset, character-variant, swash, ornaments, annotation` (use `font-feature-settings` for these)
 - `font-variant` - as above, and except for: `east-asian-variant-values, east-asian-width-values, ruby`
 - `font-language-override`
@@ -171,10 +171,10 @@ useOTL should be set to an integer between 0 and 255. Each bit will enable OTL f
 <table class="table">
     <tbody>
         <tr>
-            <td>Bit</td>
-            <td>dec</td>
-            <td>hex</td>
-            <td>Enabled</td>
+            <th>Bit</th>
+            <th>dec</th>
+            <th>hex</th>
+            <th>Enabled</th>
         </tr>
         <tr>
             <td>1</td>
