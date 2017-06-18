@@ -27,52 +27,54 @@ and you will refer to them in HTML/CSS as "Frutiger".
 
 2. In the configuration file (<span class="filename">config_fonts.php</span>) add this to the array `$this->fontdata`:
 
-{% highlight php %}
-   "frutiger" => array(
-		'R' => "Frutiger-Normal.ttf",
-		'I' => "FrutigerObl-Normal.ttf",
-   ),
-{% endhighlight %}
+    ```php
+    "frutiger" => array(
+        'R' => "Frutiger-Normal.ttf",
+        'I' => "FrutigerObl-Normal.ttf",
+    ),
+    ```
 
-For fonts which handle complex scripts and/or right-to-left text, see
-<a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> for
-details of setting OTL use and support for kashida e.g.
+    For fonts which handle complex scripts and/or right-to-left text, see
+    <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a> for
+    details of setting OTL use and support for kashida e.g.
 
-{% highlight php %}
-   "frutiger" => array(
-		'R' => "Frutiger-Normal.ttf",
-		'I' => "FrutigerObl-Normal.ttf",
-		'useOTL' => 0xFF,
-		'useKashida' => 75,
-	),
-{% endhighlight %}
+    ```php
+    "frutiger" => array(
+        'R' => "Frutiger-Normal.ttf",
+        'I' => "FrutigerObl-Normal.ttf",
+        'useOTL' => 0xFF,
+        'useKashida' => 75,
+    ),
+    ```
 
 3. In your HTML or CSS code use something like this:
 
-{% highlight php %}
+    ```php
 
-....
+    ....
 
-{% endhighlight %}
+    ```
 
 4. To use the font with specific languages, you need also to edit the configuration file
    (<span class="filename">config_lang2fonts.php</span>); let us imagine that Frutiger contains a full set
    of characters needed for the Thai language:
 
-{% highlight php %}
-<?php
-	// THAI
-	case "th":  $unifont = "frutiger";  break;
-{% endhighlight %}
+    ```php
+    <?php
+    // THAI
+    case "th":  
+        $unifont = "frutiger";  
+        break;
+    ```
 
-This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable
-`autoLangToFont` is set to `true`:
+    This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable
+    `autoLangToFont` is set to `true`:
 
-{% highlight php %}
+    ```php
 
-...
+    ...
 
-{% endhighlight %}
+    ```
 
 # Full Unicode support
 
@@ -177,15 +179,14 @@ This is an example of the entry in the <span class="filename">config_fonts.php</
 
 {% highlight php %}
 <?php
-
 $this->fontdata = array(
-	  "sun-exta" => array(
-			'R' => "Sun-ExtA.ttf",
-			'sip-ext' => 'sun-extb',
-	  ),
-	  "sun-extb" => array(
-			 'R' => "Sun-ExtB.ttf",
-	  ),
+    "sun-exta" => array(
+        'R' => "Sun-ExtA.ttf",
+        'sip-ext' => 'sun-extb',
+    ),
+    "sun-extb" => array(
+        'R' => "Sun-ExtB.ttf",
+    ),
 );
 {% endhighlight %}
 
@@ -193,7 +194,13 @@ This is a sample of HTML code containing CJK characters in both BMP and SIP - no
 needs to be referenced:
 
 {% highlight html %}
-<div style="font-family:sun-extA;"> &amp;#40706; &amp;#40712; &amp;#40727; &amp;#x2320f; &amp;#x23225; &amp;#40742; &amp;#40743; &amp;#x2322f; &amp;#x23231; &amp;#40761; &amp;#40772; &amp;#x23232; &amp;#x23233; &amp;#40773; &amp;#40784; &amp;#x23234; &amp;#x23256; &amp;#40787; &amp;#40794; &amp;#x23262; &amp;#x23281; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
+<div style="font-family:sun-extA;"> 
+    &amp;#40706; &amp;#40712; &amp;#40727; &amp;#x2320f; &amp;#x23225; &amp;#40742; 
+    &amp;#40743; &amp;#x2322f; &amp;#x23231; &amp;#40761; &amp;#40772; &amp;#x23232; 
+    &amp;#x23233; &amp;#40773; &amp;#40784; &amp;#x23234; &amp;#x23256; &amp;#40787; 
+    &amp;#40794; &amp;#x23262; &amp;#x23281; &amp;#40802; &amp;#40809; &amp;#x23289; 
+    &amp;#x2328a; 
+</div>
 {% endhighlight %}
 
 # TrueType Collections
@@ -206,65 +213,60 @@ a Bold variant):
 
 Font collection file (<span class="filename">mingliu.ttc</span>) contains the following fonts:
 
-[1] MingLiU (mingliu) Regular
-
-[2] PMingLiU (pmingliu) Regular (Proportional)
-
-[3] MingLiU_HKSCS (mingliu_hkscs) Regular
+1. MingLiU (mingliu) Regular
+2. PMingLiU (pmingliu) Regular (Proportional)
+3. MingLiU_HKSCS (mingliu_hkscs) Regular
 
 Font collection file (<span class="filename">mingliub.ttc</span>) contains the following fonts:
 
-[1] MingLiU-ExtB (mingliu-extb) Regular
-
-[2] PMingLiU-ExtB (pmingliu-extb) Regular (Proportional)
-
-[3] MingLiU_HKSCS-ExtB (mingliu_hkscs-extb) Regular
+1. MingLiU-ExtB (mingliu-extb) Regular
+2. PMingLiU-ExtB (pmingliu-extb) Regular (Proportional)
+3. MingLiU_HKSCS-ExtB (mingliu_hkscs-extb) Regular
 
 This is the entry in the config_fonts.php configuration file:
 
 {% highlight php %}
 <?php
-
 $this->fontdata = array(
 
 	  "mingliu" => array(
-			'R' => "mingliu.ttc",
-			'TTCfontID' => array (
-				'R' => 1,
-			),
-			'sip-ext' => 'mingliu-extb',
+        'R' => "mingliu.ttc",
+        'TTCfontID' => array (
+            'R' => 1,
+        ),
+        'sip-ext' => 'mingliu-extb',
 	  ),
 	  "pmingliu" => array(
-			'R' => "mingliu.ttc",
-			'TTCfontID' => array (
-				'R' => 2,
-			),
-			'sip-ext' => 'pmingliu-extb',
+        'R' => "mingliu.ttc",
+        'TTCfontID' => array (
+            'R' => 2,
+        ),
+        'sip-ext' => 'pmingliu-extb',
 	  ),
 	  "mingliu_hkscs" => array(
-			'R' => "mingliu.ttc",
-			'TTCfontID' => array (
-				'R' => 3,
-			),
-			'sip-ext' => 'mingliu_hkscs-extb',
+        'R' => "mingliu.ttc",
+        'TTCfontID' => array (
+            'R' => 3,
+        ),
+        'sip-ext' => 'mingliu_hkscs-extb',
 	  ),
 	  "mingliu-extb" => array(
-			'R' => "mingliub.ttc",
-			'TTCfontID' => array (
-				'R' => 1,
-			),
+        'R' => "mingliub.ttc",
+        'TTCfontID' => array (
+            'R' => 1,
+        ),
 	  ),
 	  "pmingliu-extb" => array(
-			'R' => "mingliub.ttc",
-			'TTCfontID' => array (
-				'R' => 2,
-			),
+        'R' => "mingliub.ttc",
+        'TTCfontID' => array (
+            'R' => 2,
+        ),
 	  ),
 	  "mingliu_hkscs-extb" => array(
-			'R' => "mingliub.ttc",
-			'TTCfontID' => array (
-				'R' => 3,
-			),
+        'R' => "mingliub.ttc",
+        'TTCfontID' => array (
+            'R' => 3,
+        ),
 	  ),
 ...
 );
@@ -273,10 +275,19 @@ $this->fontdata = array(
 This is an example of HTML code containing CJK characters from both BMP and SIP, and selecting the different fonts:
 
 {% highlight html %}
-<div style="font-family:mingliu;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
+<div style="font-family:mingliu;"> 
+    &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
+    &amp;#x23289; &amp;#x2328a; 
+</div>
 
-<div style="font-family:mingliu_hkscs;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
+<div style="font-family:mingliu_hkscs;"> 
+    &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
+    &amp;#x23289; &amp;#x2328a; 
+</div>
 
-<div style="font-family:pmingliu;"> &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; &amp;#x23289; &amp;#x2328a; </div>
+<div style="font-family:pmingliu;"> 
+    &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
+    &amp;#x23289; &amp;#x2328a; 
+</div>
 {% endhighlight %}
 
