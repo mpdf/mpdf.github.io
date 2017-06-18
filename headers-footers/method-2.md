@@ -20,21 +20,20 @@ headers/footers before writing to the document.
 
 {% highlight php %}
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 // Define the Header/Footer before writing anything so they appear on the first page
-
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">My document</div>');
-
+$mpdf->SetHTMLHeader('
+<div style="text-align: right; font-weight: bold;">
+    My document
+</div>');
 $mpdf->SetHTMLFooter('
-
 <table width="100%">
-	<tr>
-		<td width="33%">{DATE j-m-Y}</td>
-		<td width="33%" align="center">{PAGENO}/{nbpg}</td>
-		<td width="33%" style="text-align: right;">My document</td>
-	</tr>
+    <tr>
+        <td width="33%">{DATE j-m-Y}</td>
+        <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+        <td width="33%" style="text-align: right;">My document</td>
+    </tr>
 </table>');
 
 $mpdf->WriteHTML('Hello World');
@@ -46,35 +45,35 @@ $mpdf->Output();
 
 {% highlight php %}
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = 1;    // Use different Odd/Even headers and footers and mirror margins
 
 // Define the Headers before writing anything so they appear on the first page
-
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">My document</div>','O');
-
+$mpdf->SetHTMLHeader('
+<div style="text-align: right; font-weight: bold;">
+    My document
+</div>','O');
 $mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">My document</div>','E');
 
 $mpdf->SetHTMLFooter('
-
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
-	<tr>
-		<td width="33%">{DATE j-m-Y}</td>
-		<td width="33%" align="center">{PAGENO}/{nbpg}</td>
-		<td width="33%" style="text-align: right;">My document</td>
-	</tr>
+<table width="100%" style="vertical-align: bottom; font-family: serif; 
+    font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+    <tr>
+        <td width="33%">{DATE j-m-Y}</td>
+        <td width="33%" align="center">{PAGENO}/{nbpg}</td>
+        <td width="33%" style="text-align: right;">My document</td>
+    </tr>
 </table>');  // Note that the second parameter is optional : default = 'O' for ODD
 
 $mpdf->SetHTMLFooter('
-
-<table width="100%" style="vertical-align: bottom; font-family: serif; font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
-	<tr>
-		<td width="33%"><span style="font-weight: bold; font-style: italic;">My document</span></td>
-		<td width="33%" align="center" style="font-weight: bold; font-style: italic;">{PAGENO}/{nbpg}</td>
-		<td width="33%" style="text-align: right; ">{DATE j-m-Y}</td>
-		</tr>
+<table width="100%" style="vertical-align: bottom; font-family: serif; 
+    font-size: 8pt; color: #000000; font-weight: bold; font-style: italic;">
+    <tr>
+        <td width="33%"><span style="font-weight: bold; font-style: italic;">My document</span></td>
+        <td width="33%" align="center" style="font-weight: bold; font-style: italic;">{PAGENO}/{nbpg}</td>
+        <td width="33%" style="text-align: right; ">{DATE j-m-Y}</td>
+    </tr>
 </table>', 'E');
 
 $mpdf->WriteHTML('Hello World');
@@ -103,18 +102,29 @@ Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:
 
 {% highlight php %}
 <?php
-
 // First ensure that you are on an Even page
 $mpdf->AddPage('','E');
 
 // Then set the headers for the next page before you add the page
-$mpdf->SetHTMLHeader('<div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;">Chapter 2</div>','O');
-$mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;">Chapter 2</div>','E');
+$mpdf->SetHTMLHeader('
+<div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;">
+    Chapter 2
+</div>','O');
+$mpdf->SetHTMLHeader('
+<div style="border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;">
+    Chapter 2
+</div>','E');
 
 $mpdf->AddPage();
 
-$mpdf->SetHTMLFooter('<div style="text-align: right; font-weight: bold; font-size: 8pt; font-style: italic;">Chapter 2</div>','O');
-$mpdf->SetHTMLFooter('<div style="font-weight: bold; font-size: 8pt; font-style: italic;">Chapter 2</div>','E');
+$mpdf->SetHTMLFooter('
+<div style="text-align: right; font-weight: bold; font-size: 8pt; font-style: italic;">
+    Chapter 2
+</div>','O');
+$mpdf->SetHTMLFooter('
+<div style="font-weight: bold; font-size: 8pt; font-style: italic;">
+    Chapter 2
+</div>','E');
 
 $mpdf->WriteHTML('Rest of the document');
 
@@ -125,16 +135,11 @@ $mpdf->Output();
 
 {% highlight php %}
 <?php
-
 // If you want the changes to start on an ODD page
 $mpdf->AddPage('','E');
-
 $mpdf->SetHTMLHeader();
-
 $mpdf->AddPage();
-
 $mpdf->SetHTMLFooter();
-
 $mpdf->WriteHTML('No-Header page');
 
 $mpdf->Output();
@@ -148,14 +153,19 @@ Here for the record is how you would do it:
 
 {% highlight php %}
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = true;
 
 // Set the headers/footers for the Introduction
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Introduction</div>','O');
-$mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">Introduction</div>','E');
+$mpdf->SetHTMLHeader('
+<div style="text-align: right; font-weight: bold;">
+    Introduction
+</div>','O');
+$mpdf->SetHTMLHeader('
+<div style="border-bottom: 1px solid #000000;">
+    Introduction
+</div>','E');
 
 $mpdf->SetHTMLFooter('<div style="font-weight: bold;">{PAGENO}</div>','O');
 $mpdf->SetHTMLFooter('<div style="text-align: right;">{PAGENO}</div>','E');
@@ -169,9 +179,10 @@ $mpdf->AddPage('','E');
 $mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Main</div>','O');
 $mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">Main</div>','E');
 
-$mpdf->TOCpagebreak('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
-
-$toc-preHTML, $toc-postHTML, $toc-bookmarkText, 1, 'A', 'off');    // sets numbering to start at A
+$mpdf->TOCpagebreak(
+    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+    $toc-preHTML, $toc-postHTML, $toc-bookmarkText, 
+    1, 'A', 'off');    // sets numbering to start at A
 
 $mpdf->SetHTMLFooter('<div style="font-weight: bold;">Main - {PAGENO}</div>','O');
 $mpdf->SetHTMLFooter('<div style="text-align: right;">Main - {PAGENO}</div>','E');
@@ -185,15 +196,19 @@ $mpdf->Output();
 
 {% highlight php %}
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->useOddEven = true;
 
 // Set the headers/footers for the Introduction
-
-$mpdf->SetHTMLHeader('<div style="text-align: right; font-weight: bold;">Introduction</div>','O');
-$mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">Introduction</div>','E');
+$mpdf->SetHTMLHeader('
+<div style="text-align: right; font-weight: bold;">
+    Introduction
+</div>','O');
+$mpdf->SetHTMLHeader('
+<div style="border-bottom: 1px solid #000000;">
+    Introduction
+</div>','E');
 
 $mpdf->SetHTMLFooter('<div style="font-weight: bold;">{PAGENO}</div>','O');
 $mpdf->SetHTMLFooter('<div style="text-align: right;">{PAGENO}</div>','E');
@@ -213,19 +228,19 @@ $mpdf->SetHTMLFooter('<div style="font-weight: bold;">Main - {PAGENO}</div>','O'
 $mpdf->SetHTMLFooter('<div style="text-align: right;">Main - {PAGENO}</div>','E');
 
 // Set some variables for the ToC - these are all now deprecated
-
 $mpdf->TOCheader = array();
 $mpdf->TOCfooter = array();
 
 $mpdf->TOCpreHTML = '<h2>Table of Contents</h2>');
-
 $mpdf->TOCpostHTML = 'Text to come after the contenst list';
 
 $mpdf->TOCbookmarkText = 'Contents';
 
 // Mark this current page as where the ToC is to be inserted
-
-$mpdf->TOC(($tocfont, $tocfontsize, $tocindent, $resetpagenum, $pagenumstyle, $suppress, $toc_orientation, $TOCusePaging, $TOCuseLinking);
+$mpdf->TOC(
+    $tocfont, $tocfontsize, $tocindent, $resetpagenum, $pagenumstyle, $suppress, 
+    $toc_orientation, $TOCusePaging, $TOCuseLinking
+);
 
 $mpdf->WriteHTML('Main part of document...');
 
@@ -233,6 +248,11 @@ $mpdf->Output();
 {% endhighlight %}
 
 # See Also
+- <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>
+  - <a href="{{ " /headers-footers/method-1.html " | prepend: site.baseurl }}">Method 1</a> RUNTIME non-HTML headers & footers (deprecated)
+  - <a href="{{ " /headers-footers/method-3.html " | prepend: site.baseurl }}">Method 3</a> NAMED non-HTML headers & footers (deprecated)
+  - <a href="{{ " /headers-footers/method-4.html " | prepend: site.baseurl }}">Method 4</a> NAMED HTML headers & footers
 
+Related to RUNTIME HTML headers & footers:
 - <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLHeader()</a>
 - <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a>

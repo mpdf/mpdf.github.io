@@ -8,17 +8,23 @@ modification_time: 2015-08-05T11:59:55+00:00
 
 Special case - rotated Portrait headers on Landscape pages
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf->forcePortraitHeaders = true;
-{% endhighlight %}
+
+```
 
 This is a quick fix which rotates HTML headers and Footers (only - not normal ones)
 on landscape pages in the following conditions:
 
 - document orientation is portrait
-- when adding a page, you must only call $mpdf-&gt;AddPage('L') or &lt;pagebreak orientaion="landscape" /&gt;
+- when adding a page, you must only call `$mpdf->AddPage('L')`  
+  or `<pagebreak orientation="landscape" />`
 
-If you try to set new margins/headers etc. for new landscape pages when forcePortrait=true, it will go wrong
+If you try to set new margins/headers etc. for new landscape pages when variable `$forcePortraitHeaders = true`, it will go wrong.
+
+
+# See also
+* <a href="{{ "/reference/mpdf-variables/forceportraitheaders.html" | prepend: site.baseurl }}">$forcePortraitHeaders</a> - rotate headers and margins
+* <a href="{{ "/reference/mpdf-variables/forceportraitmargins.html" | prepend: site.baseurl }}">$forcePortraitMargins</a> - rotate only margins
 
