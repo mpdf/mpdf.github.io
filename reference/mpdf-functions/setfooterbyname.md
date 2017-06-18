@@ -17,54 +17,63 @@ void **SetFooterByName** ( string <span class="parameter">$name</span> [, string
 Sets a page footer that has previously been defined by name.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** This function/method was altered in mPDF 2.2 by
-	capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive,
-	this should not cause any problems, but it is recommended where possible to use the preferred spelling.
+  **Note:** This function/method was altered in mPDF 2.2 by
+  capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive,
+  this should not cause any problems, but it is recommended where possible to use the preferred spelling.
 </div>
 
 # Parameters
 
 <span class="parameter">$name</span>
+: This parameter specifies the name of a previously defined page footer. 
 
-This parameter specifies the name of a previously defined page footer. If a <span class="smallblock">BLANK</span> string
-or <span class="smallblock">NULL</span> is passed, mPDF will use the value '_default' if such a page footer exists.
+  If a <span class="smallblock">BLANK</span> string
+  or <span class="smallblock">NULL</span> is passed, mPDF will use the value `_default` if such a page footer exists.
 
 <span class="parameter">$side</span>
+: Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages
+  in a <span class="smallblock">DOUBLE-SIDED</span> document.
+  
+  **Values** (case-sensitive)
+  
+  * `'O'`
+    : set the footer for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span>
+      document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a
+      <span class="smallblock">SINGLE-SIDED</span> document.
+  
+  * `'E'` 
+    : set the footer for <span class="smallblock">EVEN</span> pages
+  
+      <span class="smallblock">DEFAULT</span> - sets the footer for <span class="smallblock">ODD</span> in a
+      <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span>
+      and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 
-Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages
-in a <span class="smallblock">DOUBLE-SIDED</span> document.
+  <span class="smallblock">DEFAULT</span>: `'O'`
 
-<span class="smallblock">DEFAULT</span>: 'O'
-
-**Values** (case-sensitive)
-
-O - set the footer for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span>
-document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a
-<span class="smallblock">SINGLE-SIDED</span> document.
-
-E - set the footer for <span class="smallblock">EVEN</span> pages
-
-<span class="smallblock">DEFAULT</span> - sets the footer for <span class="smallblock">ODD</span> in a
-<span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span>
-and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>2.0</td>
-<td>The function was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>2.0</td>
+  <td>The function was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
 For examples and further information please see:
 
-<a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>
-<a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a>
+* <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>
+* <a href="{{ "/headers-footers/method-1.html" | prepend: site.baseurl }}">Headers &amp; Footers - Method 3</a>
 
 # See Also
 

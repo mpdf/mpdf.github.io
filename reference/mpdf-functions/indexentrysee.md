@@ -20,36 +20,33 @@ string <span class="parameter">$see_content</span>
 Insert a cross-reference entry for the document Index i.e. "Dromedary - see Camel".
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** The Index must be generated explicity at the end of the document using 
-    <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> 
-    at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> 
-    is called.
+  **Note:** The Index must be generated explicity at the end of the document using 
+  <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> 
+  at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> 
+  is called.
 </div>
 
 # Parameters
 
 <span class="parameter">$content</span>
+: This parameter sets the text as it will appear in the Index entry. Text should be UTF-8 encoded. Text entries 
+  passed in the form `Subject:Subcategory` will appear in the Index as "Subject, Subcategory".
 
-This parameter sets the text as it will appear in the Index entry. Text should be UTF-8 encoded. Text entries 
-passed in the form "Subject:Subcategory" will appear in the Index as "Subject, Subcategory".
-
-<span class="smallblock">REQUIRED</span>
+  <span class="smallblock">REQUIRED</span>
 
 <span class="parameter">$see_content</span>
+: This parameter sets the text used as the cross-reference. Text should be UTF-8 encoded. Text entries passed in the 
+  form `Subject:Subcategory` will appear in the Index as "Subject, Subcategory"
 
-This parameter sets the text used as the cross-reference. Text should be UTF-8 encoded. Text entries passed in the 
-form "Subject:Subcategory" will appear in the Index as "Subject, Subcategory"
-
-<span class="smallblock">REQUIRED</span>
+  <span class="smallblock">REQUIRED</span>
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf->IndexEntry("Dromedary", "Camel:types");
 
-{% endhighlight %}
+```
 
 This will produce an entry in the Index under 'Dromedary' appearing as:
 

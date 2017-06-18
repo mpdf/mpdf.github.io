@@ -31,22 +31,17 @@ No parameters
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mPDF->SetColumns(2);
-
 $mpdf->WriteHTML('Some text...');
-
 $mpdf->AddColumn();
-
 $mpdf->WriteHTML('Next column...');
 
 $mpdf->Output();
-
-{% endhighlight %}
+```
 
 # See Also
 

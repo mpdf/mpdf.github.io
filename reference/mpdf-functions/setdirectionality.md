@@ -14,35 +14,34 @@ SetDirectionality – Set the document RTL state
 
 void **SetDirectionality** ( string <span class="parameter">$dir</span> )
 
-Set the document RTL state. This defines the default alignment of tables, columns, text justification, page layout etc. See <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional Text</a> for more details. If SetDirectionality('rtl') is set, *Text Bidirectionality* is automatically turned on.
+Set the document RTL state. This defines the default alignment of tables, columns, text justification, page layout etc. 
+See <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional Text</a> 
+for more details. If `SetDirectionality('rtl')` is set, *Text Bidirectionality* is automatically turned on.
 
 # Parameters
 
 <span class="parameter">$dir</span>
-
-Defines the directionality of the document
-
-BLANK or omitted (or any value other than RTL) sets the default of LTR
-
-**Values** (case-insensitive)
-
-LTR
-
-RTL
-
-<span class="smallblock">DEFAULT</span>: LTR
+: Defines the directionality of the document
+  
+  BLANK or omitted (or any value other than `'rtl'` or `'RTL'`) sets the default of `'ltr'`
+  
+  **Values** (case-insensitive)
+  
+  * `'ltr'`
+  * `'rtl'`
+  
+  <span class="smallblock">DEFAULT</span>: `'ltr'`
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8']);
 
 $mpdf->SetDirectionality('rtl');
 
 $mpdf->WriteHTML('דג סקרן שט בים מאוכזב ולפתע מצא חברה');
-
 $mpdf->Output();
-{% endhighlight %}
+
+```
 

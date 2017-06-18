@@ -21,86 +21,85 @@ Define a page footer with a given name. Named footers can be referenced and set 
 e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a>
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** Do not name any header or footer starting with html_ - This prefix is reserved to identify 
+  **Note:** Do not name any header or footer starting with `html_` - This prefix is reserved to identify 
 	an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
+  **Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
 	As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is 
 	recommended where possible to use the preferred spelling.
 </div>
 
-# Parameters
+## Parameters
 
 <span class="parameter">$name</span>
-
-User-defined name for the footer. If <span class="parameter">$name</span> = <span class="smallblock">BLANK</span> 
-the name '_default' is used.<span class="smallblock">
-
-</span>
+: User-defined name for the footer. If <span class="parameter">$name</span> = <span class="smallblock">BLANK</span> 
+  the name `_default` is used.
 
 <span class="parameter">$footer</span>
+: This parameter specifies the content of the page footer as an array.
 
-This parameter specifies the content of the page footer as an array.
 
-<span class="smallblock">DEFAULT</span>: array()
+  <span class="smallblock">DEFAULT</span>: array()
 
-**Values** in the array
+  **Values** in the array:
+  * <span class="parameter">L</span>: subarray for left
+  * <span class="parameter">C</span>: subarray for center
+  * <span class="parameter">R</span>: subarray for right
+    
+    Subarray with following entries:
+    * <span class="parameter">content</span>:  <span class="smallblock">TEXT STRING</span>
+    * <span class="parameter">font-size</span>:  <span class="smallblock">FLOAT</span> font size in **pts**
+    * <span class="parameter">font-style</span>:  B \| I \| BI \| <span class="smallblock">BLANK STRING</span>
+    * <span class="parameter">font-family</span>:  Any available font-family
+    * <span class="parameter">color</span>:  CSS `#RRGGBB` string
+  * <span class="parameter">line</span>:  0 \| 1 - specify whether to draw a line above the footer
 
-<span class="parameter">$content</span>: <span class="smallblock">TEXT STRING</span>
-
-<span class="parameter">$font-size</span>: <span class="smallblock">FLOAT</span> font size in **pts**
-
-<span class="parameter">$font-style</span>: B|I|BI|<span class="smallblock">BLANK STRING</span>
-
-<span class="parameter">$font-family</span>: Any available font-family
-
-<span class="parameter">$color</span>: CSS '#RRGGBB' string
-
-<span class="parameter">$line</span>: 0|1 - specify whether to draw a line above the footer
-
-{% highlight php %}
-<?php
-
-$footer = array (
-	'L' => array (
-		'content' => '',
-		'font-size' => 10,
-		'font-style' => 'B',
-		'font-family' => 'serif',
-		'color'=>'#000000'
-	),
-	'C' => array (
-		'content' => '',
-		'font-size' => 10,
-		'font-style' => 'B',
-		'font-family' => 'serif',
-		'color'=>'#000000'
-	),
-	'R' => array (
-		'content' => 'My document',
-		'font-size' => 10,
-		'font-style' => 'B',
-		'font-family' => 'serif',
-		'color'=>'#000000'
-	),
-	'line' => 1,
-);
-{% endhighlight %}
+  ```php
+  <?php
+  
+  $footer = array (
+      'L' => array (
+          'content' => '',
+          'font-size' => 10,
+          'font-style' => 'B',
+          'font-family' => 'serif',
+          'color'=>'#000000'
+      ),
+      'C' => array (
+          'content' => '',
+          'font-size' => 10,
+          'font-style' => 'B',
+          'font-family' => 'serif',
+          'color'=>'#000000'
+      ),
+      'R' => array (
+          'content' => 'My document',
+          'font-size' => 10,
+          'font-style' => 'B',
+          'font-family' => 'serif',
+          'color'=>'#000000'
+      ),
+      'line' => 1,
+  );
+  ```
 
 # Changelog
 
 <table class="table">
-	<thead>
-		<tr> <th>Version</th><th>Description</th> </tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>2.0</td>
-			<td>The function was added.</td>
-		</tr>
-	</tbody>
+<thead>
+<tr> 
+  <th>Version</th>
+  <th>Description</th> 
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>2.0</td>
+  <td>The function was added.</td>
+</tr>
+</tbody>
 </table>
 
 # Examples

@@ -12,7 +12,13 @@ WriteFixedPosHTML — Write HTML to a fixed position on the current page
 
 # Description
 
-void **WriteFixedPosHTML** ( string <span class="parameter">$html</span> , float <span class="parameter">$x</span> , float <span class="parameter">$y</span> , float <span class="parameter">$w</span> , float <span class="parameter">$h</span> [, string <span class="parameter">$overflow</span> ])
+void **WriteFixedPosHTML** ( 
+string <span class="parameter">$html</span> , 
+float <span class="parameter">$x</span> , 
+float <span class="parameter">$y</span> , 
+float <span class="parameter">$w</span> , 
+float <span class="parameter">$h</span> 
+[, string <span class="parameter">$overflow</span> ])
 
 Write HTML to a fixed position on the current page.
 
@@ -20,70 +26,63 @@ Write HTML to a fixed position on the current page.
 
 <span class="parameter">$html</span>
 
-This parameter specifies the text to write to the document - parsed as HTML code
+: This parameter specifies the text to write to the document - parsed as HTML code
 
 <span class="parameter">$x</span>
 
-Sets the <span class="parameter">$x</span> position of the (left edge) of the block element, set in mm from the left of the page.<span class="smallblock">
+: Sets the <span class="parameter">$x</span> position of the (left edge) of the block element, 
+  set in mm from the left of the page.<span class="smallblock">
 
-</span>
 
 <span class="parameter">$y</span>
 
-Sets the <span class="parameter">$y</span> position of the (top edge) of the block element, set in mm from the top of the page.<span class="smallblock">
-
-</span>
+: Sets the <span class="parameter">$y</span> position of the (top edge) of the block element, 
+  set in mm from the top of the page.<span class="smallblock">
 
 <span class="parameter">$w</span>
 
-Sets the width of the block element, in mm.<span class="smallblock">
-
-</span>
+: Sets the width of the block element, in mm.<span class="smallblock">
 
 <span class="parameter">$h</span>
 
-Sets the height of the block element, in mm.<span class="smallblock">
-
-</span>
+: Sets the height of the block element, in mm.<span class="smallblock">
 
 <span class="parameter">$overflow</span>
 
-Specifies how to handle text which would not fit inside the block element, with its dimensions as specified.
+: Specifies how to handle text which would not fit inside the block element, with its dimensions 
+  as specified.
 
-<span class="smallblock"></span>
+  **Values**
 
-**Values**
+  * `'visible'`: show all text, even if it spills over outside the dimensions of the block element
+  * `'hidden'`: hide any text (clip) which spills over outside the dimensions of the block element
+  * `'auto'`: force text to be reduced in size if required to fit inside the dimensions of the block element
 
-visible: show all text, even if it spills over outside the dimensions of the block element
-
-hidden: hide any text (clip) which spills over outside the dimensions of the block element
-
-auto: force text to be reduced in size if required to fit inside the dimensions of the block element
-
-<span class="smallblock">BLANK</span> uses the default value of 'visible'
+  <span class="smallblock">BLANK</span> uses the default value of `'visible'`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>4.0</td>
-<td>
-
-Function was added.
-
-</td>
+    <th>Version</th>
+    <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+    <td>4.0</td>
+    <td>Function was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('
@@ -96,12 +95,11 @@ This text will appear just where I want it!
 
 $mpdf->Output();
 
-?>
-{% endhighlight %}
+```
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML</a> - Add an Index entry in the document </li>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/fixed-position-blocks.html" | prepend: site.baseurl }}">Fixed position elements</a> - About fixed-position elements (using CSS)</li>
-</ul>
+* <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML</a> - 
+  Add an Index entry in the document
+* <a href="{{ "/what-else-can-i-do/fixed-position-blocks.html" | prepend: site.baseurl }}">Fixed position elements</a> - 
+  About fixed-position elements (using CSS)

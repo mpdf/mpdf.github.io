@@ -19,10 +19,9 @@ Set the value for the variable string <a href="{{ "/reference/mpdf-variables/ali
 # Parameters
 
 <span class="parameter">$text</span>
-
-Defines the text for the vaiable <span class="parameter">$aliasNbPg</span>.
-
-<span class="smallblock">DEFAULT</span>: {nb}
+: Defines the text for the variable <span class="parameter">$aliasNbPg</span>.
+  
+  <span class="smallblock">DEFAULT</span>: `{nb}`
 
 # Examples
 
@@ -30,25 +29,21 @@ Example #1
 
 {% highlight php %}
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->AliasNbPages('[pagetotal]');
-
 $mpdf->WriteHTML('
 There are [pagetotal] pages in this document
 ');
 
 $mpdf->Output();
 
-?>
 {% endhighlight %}
 
 Example #2
 
 {% highlight php %}
 <?php
-
 $mpdf->AliasNbPages('[pagetotal]');
 
 is the exact equivalent of:
@@ -58,7 +53,5 @@ $mpdf->aliasNbPg = '[pagetotal]';
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a></li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/aliasnbpagegroups.html" | prepend: site.baseurl }}">AliasNbPageGroups()</a> - Sets the placeholder alias for the total number of pages in a document or page group</li>
-</ul>
+* <a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a>
+* <a href="{{ "/reference/mpdf-functions/aliasnbpagegroups.html" | prepend: site.baseurl }}">AliasNbPageGroups()</a> - Sets the placeholder alias for the total number of pages in a document or page group
