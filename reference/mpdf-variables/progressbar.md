@@ -8,8 +8,8 @@ modification_time: 2015-08-05T12:02:22+00:00
 
 (mPDF >= 4.2 && < 7.0)
 
-<div class="alert alert-warning" role="alert">
-	**Note:** This feature was removed in mPDF 7.0
+<div class="alert alert-danger" role="alert" markdown="1">
+  **Note:** This feature was removed in mPDF 7.0
 </div>
 
 progressBar – Specify whether to show progress bars during file generation
