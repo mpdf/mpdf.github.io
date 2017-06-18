@@ -352,25 +352,25 @@
             slug: headers-footers
             parent_title: 'Headers & Footers'
         -
-            title: 'Method 1'
+            title: 'Method 1 - Runtime Non-HTML'
             url: indexd017.html
             permalink: /headers-footers/method-1.html
             slug: method-1
             parent_title: 'Headers & Footers'
         -
-            title: 'Method 2'
+            title: 'Method 2 - Runtime HTML'
             url: index8f9d.html
             permalink: /headers-footers/method-2.html
             slug: method-2
             parent_title: 'Headers & Footers'
         -
-            title: 'Method 3'
+            title: 'Method 3 - Named Non-HTML'
             url: index9405.html
             permalink: /headers-footers/method-3.html
             slug: method-3
             parent_title: 'Headers & Footers'
         -
-            title: 'Method 4'
+            title: 'Method 4 - Named HTML'
             url: index2fc7.html
             permalink: /headers-footers/method-4.html
             slug: method-4
@@ -791,16 +791,16 @@
             slug: mpdf-functions
             items:
                 -
-                    title: __construct()
-                    url: index7d44.html
-                    permalink: /reference/mpdf-functions/construct.html
-                    slug: construct
-                    parent_title: 'mPDF functions'
-                -
                     title: Overview
                     url: indexf571.html
                     permalink: /reference/mpdf-functions/overview.html
                     slug: overview
+                    parent_title: 'mPDF functions'
+                -
+                    title: __construct()
+                    url: index7d44.html
+                    permalink: /reference/mpdf-functions/construct.html
+                    slug: construct
                     parent_title: 'mPDF functions'
                 -
                     title: AddColumn()
@@ -1025,16 +1025,16 @@
                     slug: setdefaultfont
                     parent_title: 'mPDF functions'
                 -
-                    title: SetDirectionality()
-                    url: index11d2.html
-                    permalink: /reference/mpdf-functions/setdirectionality.html
-                    slug: setdirectionality
-                    parent_title: 'mPDF functions'
-                -
                     title: SetDefaultFontSize()
                     url: index82cf.html
                     permalink: /reference/mpdf-functions/setdefaultfontsize.html
                     slug: setdefaultfontsize
+                    parent_title: 'mPDF functions'
+                -
+                    title: SetDirectionality()
+                    url: index11d2.html
+                    permalink: /reference/mpdf-functions/setdirectionality.html
+                    slug: setdirectionality
                     parent_title: 'mPDF functions'
                 -
                     title: SetDisplayMode()
