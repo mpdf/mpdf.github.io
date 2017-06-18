@@ -25,6 +25,8 @@ Consider supporting development of mPDF with a donation of any value.
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+
+
 ## Useful manual pages
 
 - <a href="{{ "/about-mpdf/requirements-v7.html" | prepend: site.baseurl }}">Requirements</a>
@@ -37,11 +39,17 @@ Consider supporting development of mPDF with a donation of any value.
 - <a href="{{ "/about-mpdf/credits.html" | prepend: site.baseurl }}">Credits</a>
 - <a href="{{ "/about-mpdf/licence.html" | prepend: site.baseurl }}">Licence</a>
 
-- <a href="https://github.com/mpdf/mpdf">GitHub repository</a>
+
+## Development
+
+- <a href="https://github.com/mpdf/mpdf">GitHub repository of mPDF library</a>
+- <a href="https://github.com/mpdf/mpdf.github.io">GitHub repository of the documentation of the mPDF library</a>
+
+
 
 ## Acronyms
 
-These are the most used acronyms throughout this manual.</p>
+These are the most used acronyms throughout this manual.
 
 - <acronym>CJK</acronym> - Chinese-Japanese-Korean languages
 - <acronym>HTML</acronym> - Hypertext Markup Language (code used to display Internet pages)
