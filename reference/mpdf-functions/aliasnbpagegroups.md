@@ -32,7 +32,7 @@ number of pages in the whole document.
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -43,18 +43,20 @@ There are [pagetotal] pages in this page group
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 Example #2
 
-{% highlight php %}
+```php
 <?php
 $mpdf->AliasNbPageGroups('[pagetotal]');
 
 is the exact equivalent of:
 
 $mpdf->aliasNbPgGp = '[pagetotal]';
-{% endhighlight %}
+
+```
 
 # See Also
 

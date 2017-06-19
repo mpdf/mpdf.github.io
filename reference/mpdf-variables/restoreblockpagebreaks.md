@@ -53,7 +53,7 @@ Values of 1 or 0 can also be used
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new mPDF();
@@ -66,7 +66,8 @@ $mpdf->AddPage();
 
 $mpdf->WriteHTML('Hello World</div></div>');
 
-{% endhighlight %}
+
+```
 
 # See Also
 

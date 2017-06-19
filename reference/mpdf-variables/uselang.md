@@ -67,7 +67,7 @@ See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">la
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -90,7 +90,8 @@ $mpdf->useLang = true;
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # See Also
 

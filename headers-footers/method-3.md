@@ -31,7 +31,7 @@ when they are defined, but only when they are selected.
 
 ## Example #1 - Using PHP
 
-{% highlight php %}
+```php
 <?php
 $arr1 = array (
     'L' => array (
@@ -59,11 +59,12 @@ $arr1 = array (
 );
 
 $mpdf->DefHeaderByName('MyHeader1', $arr1);
-{% endhighlight %}
+
+```
 
 ## Example #2 - Using Custom HTML tags
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -77,7 +78,8 @@ $html = '
 <div>Now starts the document text... </div>';
 
 $mpdf->WriteHTML($html);
-{% endhighlight %}
+
+```
 
 # Referencing a Header/Footer by NAME
 
@@ -109,7 +111,7 @@ the first page is started. This is usually when you first use `WriteHTML()` whic
 
 ## Example #3 - SetHeaderByName()
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -118,7 +120,8 @@ $mpdf->SetHeaderByName('MyHeader1');
 $mpdf->WriteHTML('Document text');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 In this example using custom HTML tags to set the <span class="smallblock">NON-HTML</span> header, notice that
 `<setpageheader>` has `show-this-page = "1"`. This is because as soon as you call
@@ -126,7 +129,7 @@ In this example using custom HTML tags to set the <span class="smallblock">NON-H
 
 ## Example #4 - &lt;setpageheader&gt;
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -144,11 +147,12 @@ $html = '
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Example #5 - @page
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -199,13 +203,14 @@ $html = '
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # Selecting a named header during the document
 
 ## Example #6 - AddPage()
 
-{% highlight php %}
+```php
 <?php
 $mpdf->WriteHTML('Document text');
 
@@ -221,11 +226,12 @@ $mpdf->WriteHTML('Document text');
 $mpdf->AddPage('','','','','','','','','','','', '', '', '', '', -1, 0, -1, 0);
 
 $mpdf->WriteHTML('Document text with No Headers/Footers');
-{% endhighlight %}
+
+```
 
 ## Example #7 - &lt;pagebreak&gt;
 
-{% highlight php %}
+```php
 <?php
 $html = '
 <p>Document text</p>
@@ -237,13 +243,14 @@ $html = '
 <p>No-Header page</p>';
 
 $mpdf->WriteHTML($html);
-{% endhighlight %}
+
+```
 
 # Table of Contents
 
 ## Example #8 - TOCpagebreak()
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -261,11 +268,12 @@ $mpdf->TOCpagebreak (
 $mpdf->WriteHTML('Main part of document...');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Example #9 - &lt;tocpagebreak&gt;
 
-{% highlight php %}
+```php
 <?php
 $html = "
 <!-- Define headers etc. here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 
@@ -281,7 +289,8 @@ $html = "
 <p>Text of Chapter 2...</p>";
 
 $mpdf->WriteHTML($html);
-{% endhighlight %}
+
+```
 
 # See Also
 - <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>

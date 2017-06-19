@@ -177,7 +177,7 @@ config_fonts.php configuration file.
 
 This is an example of the entry in the <span class="filename">config_fonts.php</span> configuration file:
 
-{% highlight php %}
+```php
 <?php
 $this->fontdata = array(
     "sun-exta" => array(
@@ -188,12 +188,13 @@ $this->fontdata = array(
         'R' => "Sun-ExtB.ttf",
     ),
 );
-{% endhighlight %}
+
+```
 
 This is a sample of HTML code containing CJK characters in both BMP and SIP - note only the sun-exta font-family
 needs to be referenced:
 
-{% highlight html %}
+```html
 <div style="font-family:sun-extA;"> 
     &amp;#40706; &amp;#40712; &amp;#40727; &amp;#x2320f; &amp;#x23225; &amp;#40742; 
     &amp;#40743; &amp;#x2322f; &amp;#x23231; &amp;#40761; &amp;#40772; &amp;#x23232; 
@@ -201,7 +202,8 @@ needs to be referenced:
     &amp;#40794; &amp;#x23262; &amp;#x23281; &amp;#40802; &amp;#40809; &amp;#x23289; 
     &amp;#x2328a; 
 </div>
-{% endhighlight %}
+
+```
 
 # TrueType Collections
 
@@ -225,7 +227,7 @@ Font collection file (<span class="filename">mingliub.ttc</span>) contains the f
 
 This is the entry in the config_fonts.php configuration file:
 
-{% highlight php %}
+```php
 <?php
 $this->fontdata = array(
 
@@ -270,11 +272,12 @@ $this->fontdata = array(
 	  ),
 ...
 );
-{% endhighlight %}
+
+```
 
 This is an example of HTML code containing CJK characters from both BMP and SIP, and selecting the different fonts:
 
-{% highlight html %}
+```html
 <div style="font-family:mingliu;"> 
     &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
     &amp;#x23289; &amp;#x2328a; 
@@ -289,5 +292,6 @@ This is an example of HTML code containing CJK characters from both BMP and SIP,
     &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
     &amp;#x23289; &amp;#x2328a; 
 </div>
-{% endhighlight %}
+
+```
 

@@ -52,7 +52,7 @@ approximately 30%
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -65,5 +65,6 @@ $mpdf->simpleTables = true;
 $mpdf->WriteHTML($table);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 

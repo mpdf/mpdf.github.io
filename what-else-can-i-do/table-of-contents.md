@@ -20,7 +20,7 @@ From mPDF >= 5.7, CSS styles can be used to control layout of the ToC.
 
 At the end of the document, the ToC is generated, creating HTML code (internally) which looks like this:
 
-{% highlight html %}
+```html
 <div class="mpdf_toc" id="mpdf_toc_0">
     <div class="mpdf_toc_level_0">
         <a class="mpdf_toc_a" href="#__mpdfinternallink_1"><span class="mpdf_toc_t_level_0">Section 1</span></a>
@@ -38,7 +38,8 @@ At the end of the document, the ToC is generated, creating HTML code (internally
         <a class="mpdf_toc_a" href="#__mpdfinternallink_3"><span class="mpdf_toc_p_level_2">5</span></a>
     </div>
 </div>
-{% endhighlight %}
+
+```
 
 The id is "0" for root/un-named ToC; otherwise it is lowercase of the name="" used for the ToC
 
@@ -50,7 +51,7 @@ An example CSS stylesheet for this:
     CSS stylesheet
 </div>
 
-{% highlight css %}
+```css
     div.mpdf_toc {font-family: sans-serif; font-size: 11pt;}
     a.mpdf_toc_a  {text-decoration: none; color: black;}
     
@@ -83,14 +84,16 @@ An example CSS stylesheet for this:
     
     /* Page no. level 2 - may be inside <a> */
     span.mpdf_toc_p_level_2 {}
-{% endhighlight %}
+
+```
 
 For additional ToCs, these will have &lt;toc name=""&gt; attribute. Use the lowercase e.g. for name="Figures"
 
-{% highlight css %}
+```css
     #mpdf_toc_figures {font-family:Calibri; font-size: 10pt;}
     #mpdf_toc_figures span.mpdf_toc_t_level_0 {color: red; }
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
     **Note:** If you have 2 ToCs immediately following each other,
@@ -109,11 +112,12 @@ H1 - H6 must be written with **uppercase** when defining the array.
 
 Example:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->h2toc = array('H1' => 0, 'H2' => 1, 'H3' => 2);
-{% endhighlight %}
+
+```
 
 NB This will ignores calls from inside ToC e.g. if &lt;tocpagebreak toc-prehtml="&lt;h3&gt;Table of Contents&lt;/h3&gt;"
 and H3 is set to auto-generate a ToC entry - these will be ignored.

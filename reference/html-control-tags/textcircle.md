@@ -119,7 +119,7 @@ Support for "font: auto" added.
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 ...
@@ -130,7 +130,8 @@ top-text="&amp;bull; Circular Text &amp;bull;" bottom-text="Circular Text"
 
 style="background-color: #FFAAAA; border:1px solid red; padding: 0.3em; margin: 0.3em; color: #000000; font-size: 21pt; font-weight:bold; font-family: Arial" />');
 
-{% endhighlight %}
+
+```
 
 # See Also
 

@@ -21,7 +21,7 @@ Options are set by
 Default settings in mPDF versions >=6.0 - recommended especially for complex scripts with marks used 
 above or below characters:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->useFixedNormalLineHeight = false;
@@ -29,11 +29,12 @@ $mpdf->useFixedNormalLineHeight = false;
 $mpdf->useFixedTextBaseline = false;
 
 $mpdf->adjustFontDescLineheight = 1.14;
-{% endhighlight %}
+
+```
 
 Settings to be backwards compatible with mPDF versions &lt; 6:
 
-{% highlight php %}
+```php
 <?php
 
 $this->useFixedNormalLineHeight = true;
@@ -41,7 +42,8 @@ $this->useFixedNormalLineHeight = true;
 $this->useFixedTextBaseline = true;
 
 $this->normalLineheight = 1.33;
-{% endhighlight %}
+
+```
 
 Using the font metrics will give approximately the same result as the fixed value for many standard Latin script 
 fonts e.g. DejaVu Sans Condensed:
@@ -105,7 +107,7 @@ You can change the font metrics used by mPDF, by setting `fontDescriptor`
 Finally, you can override values for Ascent, Descent and Leading for any specific font, by setting 
 font <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>.
 
-{% highlight php %}
+```php
 "cambriamath" => array(
     'R' => "cambria.ttc",
     'useOTL' => 0xFF,
@@ -114,7 +116,8 @@ font <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseur
     'Descent' => -222,
     'Leading' => 0,
 ),
-{% endhighlight %}
+
+```
 
 Note - The same values are used for all styles of the font-family. Descent values should be negative. All 
 values should be given using a 1000 units per em scale, regardless of the UnitsPerEm used in the font design.

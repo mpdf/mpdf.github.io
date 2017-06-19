@@ -54,26 +54,30 @@ Images are handled in mPDF as in-line elements.
 Unlike the HTML specification, the width and height attributes of IMG will additionally take different
 dimensions e.g. mm, pt etc. 
 
-{% highlight html %}
+```html
 <img src="image.jpg" width="90" /> // 90 pixels, just like HTML
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
 <img src="image.jpg" width="90mm" />  // non-standard support for dimensions
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
 <img src="image.jpg" style="width:90mm;" />  // Can also use CSS
-{% endhighlight %}
+
+```
 
 Images for which the size is not defined are output at a default dpi set in by the img_dpi
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>:
 
-{% highlight php %}
+```php
 <php
 
 $mpdf->img_dpi = 96;
-{% endhighlight %}
+
+```
 
 In addition, many CSS style properties are supported including <span class="parameter">$vertical-align</span>, as well
 as some custom attributes such as <span class="parameter">$opacity</span> and <span class="parameter">$rotate</span>.
@@ -92,24 +96,26 @@ Images can be used in:
 When writing HTML, image size is automatically constrained to current margins and page position. An extra parameter
 added to end of the Image() function allows you to override this:
 
-{% highlight php %}
+```php
 <?php
 
 // the last "false" allows a full page picture
 $mpdf->Image('files/images/frontcover.jpg', 0, 0, 210, 297, 'jpg', '', true, false);
-{% endhighlight %}
+
+```
 
 This is useful for e.g. a cover page for your document.
 
 This can be achieved using HTML &amp; CSS like this:
 
-{% highlight html %}
+```html
 <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
 
 <img src="/files/images/frontcover.jpg" style="width: 210mm; height: 297mm; margin: 0;" />
 
 </div>
-{% endhighlight %}
+
+```
 
 ## Float and Text wrapping
 
@@ -141,21 +147,24 @@ Any process that requires the GD library uses a large amount of memory - to crea
 
 You can define a script which generates an image just as you can in HTML:
 
-{% highlight php %}
+```php
 <img src="/files/my_file_generating_script.php?color=red" />
-{% endhighlight %}
+
+```
 
 ## Embedded Image data
 
 Embedded image data can be used either in &lt;img&gt; elements or in CSS:background. gif, png and jpeg are supported.
 
-{% highlight html %}
+```html
 <img src="data:image/gif;base64,...." />
-{% endhighlight %}
 
-{% highlight css %}
+```
+
+```css
 div { background: url(data:image/gif;base64,....) no-repeat 4px center; }
-{% endhighlight %}
+
+```
 
 ## Image data as a Variable
 
@@ -163,39 +172,43 @@ A PHP variable containing image data can be passed directly to mPDF. You need to
 
 (you can make any name up) e.g.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->imageVars['myvariable'] = file_get_contents('alpha.png');
-{% endhighlight %}
+
+```
 
 The image can then be referred to by use of "var:varname" instead of a file name, either in `src=""` or direct to Image()
 function e.g.
 
-{% highlight php %}
+```php
 <?php
 
 $html = '<img src="var:myvariable" />';
 
 $mpdf->WriteHTML($html);
-{% endhighlight %}
 
-{% highlight php %}
+```
+
+```php
 <?php
 
 $mpdf->Image('var:myvariable', 0, 0);
-{% endhighlight %}
+
+```
 
 # SVG images
 
 mPDF partially supports SVG images, including as embedded HTML e.g.:
 
-{% highlight html %}
+```html
 
 This is an embedded SVG image:
 
 <svg>.....</svg>
-{% endhighlight %}
+
+```
 
 All units with no dimension are taken as pixels.
 
@@ -234,7 +247,7 @@ at the top of `\Mpdf\Svg` class).
 Note: SVG images can be embedded within the HTML code. They may be a useful way to deal with some presentation issues
 not supported by HTML/CSS e.g. Text used with a transformation, or text used as a clipPath e.g.
 
-{% highlight html %}
+```html
 <body>
 <div>
 
@@ -255,4 +268,5 @@ not supported by HTML/CSS e.g. Text used with a transformation, or text used as 
 
 </div>
 </body>
-{% endhighlight %}
+
+```

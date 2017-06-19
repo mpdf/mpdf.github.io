@@ -19,13 +19,14 @@ $mpdf->watermark_font = 'DejaVuSansCondensed'; // Uses default font if left bla
 
 You can alter the transparency values (default = 0.2) using
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->watermarkTextAlpha = 0.1;
 
 $mpdf->watermarkImageAlpha = 0.5;
-{% endhighlight %}
+
+```
 
 A watermark image is set by default to print on top of the page contents. The opacity setting will alter the appearance
 of the text behind the image. You can optionally set the watermark to appear behind the page contents using

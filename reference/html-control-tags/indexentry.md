@@ -66,7 +66,7 @@ Text entries passed in the form "Subject:Subcategory" will appear in the Index a
 
 ## Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -81,18 +81,20 @@ $mpdf->WriteHTML('<h2>Index</h2>',2);
 $mpdf->CreateIndex(2, '', '', 3, 1, '', 5, 'serif','sans-serif');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Example #2
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->WriteHTML('<indexentry content="Dromedary" xref="Camel:types" />The dromedary is a type of camel');
 
 // This will produce an entry in the Index under 'Dromedary' appearing as:
 // Dromedary - see Camel, types
-{% endhighlight %}
+
+```
 
 # Notes
 
@@ -109,21 +111,24 @@ $mpdf->WriteHTML('<indexentry content="Dromedary" xref="Camel:types" />The drome
 
 Recommended placement of Index Entries is just after the first word following the opening tag of the block element:
 
-{% highlight php %}
+```php
     <h2>First<indexentry... /> word of a heading or block</h2>
-{% endhighlight %}
+
+```
 
 or alternatively just after the opening tag of the block element:
 
-{% highlight php %}
+```php
     <h2><indexentry... />Heading or block</h2>
-{% endhighlight %}
+
+```
 
 or just after a word to be marked:
 
-{% highlight php %}
+```php
     ... this is a word<indexentry... /> in the middle of text to be marked ...
-{% endhighlight %}
+
+```
 
 # See Also
 

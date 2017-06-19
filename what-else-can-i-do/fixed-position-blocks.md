@@ -13,17 +13,19 @@ mPDF >= 4.0
 The CSS property "position" is **partially** supported in mPDF, allowing a block element (div etc.) to be placed at a
 fixed position on the page.
 
-{% highlight php %}
+```php
 position: fixed|absolute
-{% endhighlight %}
+
+```
 
 <span class="parameter">$absolute</span> - treats the whole physical page as the containing element
 
 <span class="parameter">$fixed</span> - treats the 'printable page' (inside the margins) as the containing element
 
-{% highlight php %}
+```php
 top|left|bottom|right: LENGTH (any valid length unit: em, mm, px, % etc.) DEFAULT = auto
-{% endhighlight %}
+
+```
 
 <span class="parameter">$rotate</span> - (introduced mPDF 5.0) rotates the block element 90 degrees clockwise or
 counterclockwise
@@ -34,9 +36,10 @@ position the top left corner of the (rotated) element. There is an exception if 
 the respective top or left values; in this case these values are used to position the bottom or right edge of the
 (rotated) element.
 
-{% highlight php %}
+```php
 90|-90 DEFAULT = BLANK
-{% endhighlight %}
+
+```
 
 ## Limitations:
 
@@ -62,9 +65,10 @@ the respective top or left values; in this case these values are used to positio
 
 The CSS property "overflow" determines how text is displayed if the block element size is too small for the text.
 
-{% highlight php %}
+```php
 overflow: visible|hidden|auto  DEFAULT = visible
-{% endhighlight %}
+
+```
 
 <span class="parameter">$visible</span> - all text will show, even if it lies outside the defined block element
 
@@ -76,17 +80,18 @@ overflow: visible|hidden|auto  DEFAULT = visible
 
 ### Example #1
 
-{% highlight html %}
+```html
 <div style="position: absolute; top: 50mm; left: 50mm; width: 100mm;">
 
 This is text in a fixed position block element.
 
 </div>
-{% endhighlight %}
+
+```
 
 ### Example #2 - Centres a block in the middle of the page
 
-{% highlight html %}
+```html
 <style>
 
 .myfixed {
@@ -118,13 +123,15 @@ This is text in a fixed position block element.
 </style>
 
 <div class="myfixed">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec mattis lacus ac purus feugiat semper. Donec aliquet nunc odio, vitae pellentesque diam. Pellentesque sed velit lacus. Duis quis dui quis sem consectetur sollicitudin. Cras dolor quam, dapibus et pretium sit amet, elementum vel arcu.</div>
-{% endhighlight %}
+
+```
 
 ### Example #3 - Rotated barcode at the bottom right corner of the page
 
-{% highlight html %}
+```html
 <div style="position: fixed; right: 0mm; bottom: 0mm; rotate: -90;">
     <barcode code="978-0-9542246-0" class="barcode" />
 </div>
-{% endhighlight %}
+
+```
 

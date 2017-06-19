@@ -49,11 +49,12 @@ The maximum ratio to adjust column height when justifying - too large a value ca
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->max_colH_correction = 1.3;
-{% endhighlight %}
+
+```
 

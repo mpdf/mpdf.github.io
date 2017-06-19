@@ -191,7 +191,7 @@ Annotations cannot be moved or deleted.
 
 ## Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -201,11 +201,12 @@ $html = 'This is a paragraph about violas<annotation content="Violas are like bi
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Example #2
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -219,7 +220,8 @@ $mpdf->annotOpacity = 1;
 $html = 'This is a paragraph about violas<annotation content="Violas are like big violins" /> about which I know very little.';
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # See Also
 

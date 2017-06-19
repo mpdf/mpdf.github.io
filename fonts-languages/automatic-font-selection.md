@@ -24,19 +24,21 @@ and sometimes this tells us the language e.g. Telugu. However, Cyrillic script i
 languages. So the best we can do is base it on the script used. However, mPDF does this in two stages via the `lang`
 attribute, because this allows the options of using either of the stages alone or together:
 
-{% highlight html %}
+```html
 
 English ру́сский язы́к پښتو
 
-{% endhighlight %}
+
+```
 
               ↓ **autoScriptToLang** (`\Mpdf\ScriptToLang`) ↓
 
-{% highlight html %}
+```html
 
 English <span lang="und-Cyrl">ру́сский язы́к</span> <span lang="ps">پښتو</span>
 
-{% endhighlight %}
+
+```
 
              ↓ **autoLangToFont** (`\Mpdf\LangToFont`) ↓
 
@@ -44,13 +46,14 @@ Uses "lang" to select font, and to determine OTL features applied
 
 # autoScriptToLang
 
-{% highlight php %}
+```php
 <?php
 $mpdf->autoScriptToLang = true;
 $mpdf->baseScript = 1;
 $mpdf->autoVietnamese = true;
 $mpdf->autoArabic = true;
-{% endhighlight %}
+
+```
 
 <a href="{{ "/reference/mpdf-variables/basescript.html" | prepend: site.baseurl }}">`baseScript`</a> tells mPDF which Script to ignore. It is set by default to `1` which is for Latin script.
 In this mode, all scripts *except* Latin script are marked up with `lang` attribute. To select other scripts as
@@ -71,11 +74,12 @@ These features can be disabled or enabled (default) using the
 
 # autoLangToFont
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->autoLangToFont = true;
-{% endhighlight %}
+
+```
 
 You can edit the values in `\Mpdf\LangToFont` to specify which fonts are used for which `lang`.
 

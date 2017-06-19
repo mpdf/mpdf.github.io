@@ -45,7 +45,7 @@ NB Firefox does not collapse margins above and below tables, but IE8 does.
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -60,7 +60,8 @@ $html = '<div style="margin-bottom: 3em;">This DIV has a bottom margin defined a
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
 	**Note:** The collapse of margins at the top and bottom of the page is unaffected by this variable.

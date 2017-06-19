@@ -22,13 +22,14 @@ or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages"
 This base/document directionality is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym>
 by default, and can be set by any of the following:
 
-{% highlight php %}
+```php
 <?php
 $mpdf->SetDirectionality('rtl');
 
 <html dir="rtl"> or <html style="direction: rtl;">
 <body dir="rtl"> or <body style="direction: rtl;">
-{% endhighlight %}
+
+```
 
 Base direction is an inherited CSS property, so will affect all content, unless direction is specified elsewhere.
 
@@ -37,15 +38,17 @@ Base direction is an inherited CSS property, so will affect all content, unless 
 Direction can be set for any HTML block elements e.g. `<div><p><table><ul>` etc using:
 
 HTML:
-{% highlight php %}
+```php
 <div style="direction: rtl;">
-{% endhighlight %}
+
+```
 
 or CSS stylesheet:
 
-{% highlight css %}
+```css
 div.right { direction: rtl; }
-{% endhighlight %}
+
+```
 
 Block-level direction *may* affect text alignment, and will also influence text reversal in
 <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
@@ -85,9 +88,10 @@ arabic characters are present is fully automatic and unconfigurable. <bdo> etc h
 However enclosing text in silent tags can sometimes help by altering the way the text is broken up into chunks to
 process e.g.:
 
-{% highlight html %}
+```html
 english text <span>[arabic text]</span> english text
-{% endhighlight %}
+
+```
 
 # Fonts
 
@@ -111,9 +115,10 @@ Riyaz, which are bundled with mPDF).
 
 By editing <span class="filename">config_fonts.php</span> and adding to appropriate fonts:
 
-{% highlight php %}
+```php
 'unAGlyphs' => true,
-{% endhighlight %}
+
+```
 
 this will force mPDF to use unmapped glyphs. It requires the font file to include a Format 2.0 POST table which
 references the glyphs by name as e.g. `uni067C.med` or `uni067C.medi`

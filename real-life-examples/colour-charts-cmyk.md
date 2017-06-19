@@ -10,7 +10,7 @@ This example produces colour charts for all the CMYK colours (incrementing each 
 
 The example from the result: <img src="images/cmyk-colour-charts.png" alt="Colour Charts CMYK" style="max-width: 80%; margin: 0 auto;">
 
-{% highlight php %}
+```php
 <?php
 
 // require composer autoload
@@ -58,5 +58,6 @@ for ($k = 0; $k <= 8; $k++) {    // Black - page group
 
 $mpdf->Output('mpdf.pdf', 'I');
 
-{% endhighlight %}
+
+```
 

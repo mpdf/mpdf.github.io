@@ -363,7 +363,7 @@ Parameters <span class="parameter">$resetpagenum</span> , <span class="parameter
 
 ## Example #1
 
-{% highlight html %}
+```html
 <html>
 
 Text of introduction...
@@ -371,11 +371,12 @@ Text of introduction...
 <p>Text of main book...
 
 </html>
-{% endhighlight %}
+
+```
 
 ## Example #2 - Defining new margins and page orientation
 
-{% highlight html %}
+```html
 <html>
 
 Text of introduction...
@@ -383,11 +384,12 @@ Text of introduction...
 <p>Text of main book...
 
 </html>
-{% endhighlight %}
+
+```
 
 ## Example #3 - Changing headers/footers
 
-{% highlight html %}
+```html
 <html>
 
 <htmlpageheader name="myHeader2">
@@ -401,7 +403,8 @@ Text of introduction...
 <p>Text of main book...
 
 </html>
-{% endhighlight %}
+
+```
 
 # Notes
 

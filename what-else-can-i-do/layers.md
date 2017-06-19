@@ -17,17 +17,19 @@ with fixed or absolute position.
 
 You can set initial state="hidden" for a specific z-index (z), and/or specify a display name for the Layer e.g.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->layerDetails[z]['state']='hidden';    // Set initial state of layer - "hidden" or nothing
-{% endhighlight %}
 
-{% highlight php %}
+```
+
+```php
 <?php
 
 $mpdf->layerDetails[z]['name']='Correct Answers';
-{% endhighlight %}
+
+```
 
 - where z= the z-index (set by CSS)
 
@@ -42,17 +44,18 @@ Note:
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>) 
 can be set to open the layers pane in the browser when the document is opened.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->open_layer_pane = true;
-{% endhighlight %}
+
+```
 
 ## Set Programatically
 
 If you are writing the PDF document using functions other than WriteHTML(), you can set the layers as follows:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->BeginLayer($z-index);
@@ -60,7 +63,8 @@ $mpdf->BeginLayer($z-index);
 ...
 
 $mpdf->EndLayer();
-{% endhighlight %}
+
+```
 
 ## Reserved Layer Names
 

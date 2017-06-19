@@ -14,7 +14,7 @@ Bookmarks can be styled by adding code as below to your script. You can define a
 
 Set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-{% highlight php %}
+```php
 <?php
 
 $config = [
@@ -26,5 +26,6 @@ $config = [
 ];
 
 $mpdf = new \Mpdf\Mpdf($config);
-{% endhighlight %}
+
+```
 

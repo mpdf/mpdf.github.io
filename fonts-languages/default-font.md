@@ -11,7 +11,7 @@ A default font and font-size are required for mPDF to function. These are determ
 Declared when instantiating the mPDF class (see Getting Started). These "provisional" default values will be active
 if you are using functions to write directly to the PDF file e.g.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf([
@@ -20,7 +20,8 @@ $mpdf = new \Mpdf\Mpdf([
 ]);
 
 $mpdf->WriteCell(110, 5, 'Hello World');
-{% endhighlight %}
+
+```
 
 If you are using WriteHTML() these "provisional" default values are overridden, and defaults are set as follows:
 
@@ -30,15 +31,17 @@ If you are using WriteHTML() these "provisional" default values are overridden, 
 If the secondary default CSS stylesheet <span class="filename">mpdf.css</span> contains values to define the 
 BODY tag, these values will override the above e.g.
 
-{% highlight php %}
+```php
 body { font-family: serif; font-size: 10pt; }
-{% endhighlight %}
+
+```
 
 If a CSS stylesheet is used with WriteHTML() and contains values to define the BODY tag, these values will override the above.
 
 In-line style used in the `<body>` tag will override the default values e.g.
 
-{% highlight php %}
+```php
 <body style="font-family: serif; font-size: 10pt;">
-{% endhighlight %}
+
+```
 

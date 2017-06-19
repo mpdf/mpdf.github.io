@@ -26,7 +26,7 @@ Define as any of the available font-families.
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -42,7 +42,8 @@ Hello World
 ');
 
 ?>
-{% endhighlight %}
+
+```
 
 # See Also
 

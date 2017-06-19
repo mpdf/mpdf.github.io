@@ -21,7 +21,7 @@ mPDF can generate an index at the end of document using:
 When an Index is inserted in the PDF document using `<indexinsert>` or `InsertIndex()`, the Index is generated
 (internally) as HTML code in the following format (with the markup as shown):
 
-{% highlight html %}
+```html
 <div class="mpdf_index_main">
 
 <div class="mpdf_index_letter">A</div>
@@ -33,11 +33,12 @@ When an Index is inserted in the PDF document using `<indexinsert>` or `InsertIn
 ...
 
 </div>
-{% endhighlight %}
+
+```
 
 CSS stylesheets can thus be used to control the layout of the Index e.g.:
 
-{% highlight css %}
+```css
 /* For Index */
 
 div.mpdf_index_main {
@@ -66,7 +67,8 @@ a.mpdf_index_link {
     color: #000000;
     text-decoration: none;
 }
-{% endhighlight %}
+
+```
 
 A default stylesheet for Indexes is included in <span class="filename">mpdf.css</span>
 
@@ -89,17 +91,19 @@ Benitez, Carlos
 
 Entries in an Index can now be sorted using any of the Locale values available on your system. Set it using the "collation" property/parameter e.g.:
 
-{% highlight html %}
+```html
 <indexinsert usedivletters="on" links="off" collation="es_ES.utf8" collation-group="Spanish_Spain" />
-{% endhighlight %}
+
+```
 
 - or -
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
-{% endhighlight %}
+
+```
 
 NB You should always choose a UTF-8 collation, even when you are using Core fonts or e.g. charset-in=win-1252, because
 mPDF handles all text internally as UTF-8 encoded.
@@ -111,17 +115,19 @@ Note: Index collation will probably not work on Windows servers because of the p
 If you have set your index to use Dividing letters, you can also determine how letters are grouped under a dividing
 letter. In the example index above, we want Ã to be grouped under the letter a/A. Set the "collation-group" using:
 
-{% highlight php %}
+```php
 <indexinsert usedivletters="on" links="off" collation="es_ES.utf8" collation-group="Spanish_Spain" />
-{% endhighlight %}
+
+```
 
 or
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
-{% endhighlight %}
+
+```
 
 Values should be selected from the available file names in directory /collations/.
 
@@ -144,7 +150,7 @@ Note: htmlspecials_encode should be used to encode the text of content in `<inde
 From mPDF 6.0, columns are not specified as part of the `<indexinsert>`, so a typical 2-column index might be
 produced by:
 
-{% highlight html %}
+```html
 
 <h2>Index</h2>
 
@@ -153,15 +159,17 @@ produced by:
 <indexinsert usedivletters="on" links="on" collation="en_US.utf8" collationgroup="English_United_States" />
 
 <columns column-count="1" />
-{% endhighlight %}
+
+```
 
 ## Index Sub-entries
 
 <p>Index entries can contain sub-entries, separated by colons e.g.
 
-{% highlight html %}
+```html
 <indexentry content="Mammals:elephants" />
-{% endhighlight %}
+
+```
 
 A shorthand way of displaying subentries is set by default, which suppresses the main entry if &gt; 1 subEntry.
 It can be disabled/enabled using the configurable variable `indexUseSubentries` in config constructor parameter.
@@ -184,9 +192,10 @@ Marsupials
 
 Index entries can also include simple mark-up tags and/or more than one colon e.g:
 
-{% highlight php %}
+```php
 <indexentry content="Mammals:&amp;lt;b&amp;gt;elephants&amp;lt;/b&amp;gt;: breeding" />
-{% endhighlight %}
+
+```
 
 which appears as:
 

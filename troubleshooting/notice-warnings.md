@@ -12,20 +12,22 @@ If you get something like:
 
 you might need to suppress NOTICE warnings using e.g.
 
-{% highlight php %}
+```php
 $former = error_reporting(E_ALL ^ E_NOTICE);
 
 // or
 
 $former = error_reporting(0);
-{% endhighlight %}
+
+```
 
 Include this at the start of your script before instantiating and running mPDF.
 
 It is a good practice to return the former error_reporting after
 
-{% highlight php %}
+```php
 error_reporting($former);
-{% endhighlight %}
+
+```
 
 Also, you could want to report the notice in the [mPDF Github issue tracker](https://github.com/mpdf/mpdf/issues)

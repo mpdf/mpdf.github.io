@@ -289,7 +289,7 @@ Function was added. 
 
 # Examples
 
-{% highlight php %}
+```php
 <html>
 
 <div>
@@ -299,7 +299,8 @@ Function was added. 
 </div>
 
 </html>
-{% endhighlight %}
+
+```
 
 # Notes
 

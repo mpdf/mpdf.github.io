@@ -44,7 +44,7 @@ below. Accepts an integer from 0 to the maximum depth you wish.
 
 ## Example #1
 
-{% highlight html %}
+```html
 <html>
 
 <bookmark content="Start of the Document" />
@@ -52,11 +52,12 @@ below. Accepts an integer from 0 to the maximum depth you wish.
 <div>Section 1 text</div>
 
 </html>
-{% endhighlight %}
+
+```
 
 ## Example #2
 
-{% highlight html %}
+```html
 
 <html>
 
@@ -93,7 +94,8 @@ This will produce a Bookmark tree in Adobe Reader:
 + Section 2
 
   + Chapter 3
-{% endhighlight %}
+
+```
 
 # Notes
 
@@ -107,21 +109,24 @@ This will produce a Bookmark tree in Adobe Reader:
 
 Recommended placement of Bookmarks is just after the first word following the opening tag of the block element:
 
-{% highlight php %}
+```php
 <h2>First<bookmark... /> word of a heading or block</h2>
-{% endhighlight %}
+
+```
 
 or alternatively just after the opening tag of the block element:
 
-{% highlight php %}
+```php
 <h2><bookmark... />Heading or block</h2>
-{% endhighlight %}
+
+```
 
 or just after a word to be marked:
 
-{% highlight php %}
+```php
 ... this is a word<bookmark... /> in the middle of text to be marked ...
-{% endhighlight %}
+
+```
 
 ## Automatically Generated Bookmarks
 
@@ -136,11 +141,12 @@ H1 - H6 must be written with uppercase when defining the array.
 
 Example:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->h2bookmarks = array('H1'=>0, 'H2'=>1, 'H3'=>2);
-{% endhighlight %}
+
+```
 
 # See Also
 

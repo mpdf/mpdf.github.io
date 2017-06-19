@@ -43,7 +43,7 @@ the page.
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -60,7 +60,8 @@ $mpdf->AddPage();
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
 	**Note:** This variable existed in the script before v3.1

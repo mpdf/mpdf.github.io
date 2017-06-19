@@ -58,7 +58,7 @@ compatible is grouped together with these words
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -105,7 +105,8 @@ Most of this text is in English, but has occasional words in Chinese:<span>æ¥è‡
 $mpdf->WriteHTML($html2);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # See Also
 

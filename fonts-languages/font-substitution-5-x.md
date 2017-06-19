@@ -16,9 +16,10 @@ that is actually set is determined by:
 If called in HTML/CSS the font-family name is converted to an mPDF font-family name (see 
 <a href="{{ "/fonts-languages/font-names.html" | prepend: site.baseurl }}">Font names in 5.x</a>) e.g.
 
-{% highlight php %}
+```php
 
-{% endhighlight %}
+
+```
 
 The font requested (including style) is checked to see if it is available to mPDF: set by the array `$available_unifonts`:
 

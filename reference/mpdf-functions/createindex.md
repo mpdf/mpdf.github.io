@@ -138,7 +138,7 @@ Inserts an Index for the document based on index entries made using &lt;<a href=
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -157,7 +157,8 @@ $mpdf->CreateIndex(2, '', '', 3, 1, '', 5, 'serif','sans-serif');
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** There is no HTML equivalent of CreateIndex()

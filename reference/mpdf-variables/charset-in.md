@@ -28,7 +28,7 @@ Any string value allowed which is valid for the PHP function <a href="{{ "/refer
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $html = '... the body of the document encoded in ISO-8859-4 ...';
@@ -44,7 +44,8 @@ $mpdf->WriteHTML($html);
 $mpdf->Output();
 
 ?>
-{% endhighlight %}
+
+```
 
 # See Also
 

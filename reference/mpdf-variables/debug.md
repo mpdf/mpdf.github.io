@@ -48,7 +48,7 @@ Specify whether to show debugging messages. If you are having problems with mPDF
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -61,7 +61,8 @@ $mpdf->debug = true;
 $mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
 	**Note:** This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages

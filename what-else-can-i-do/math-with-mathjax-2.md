@@ -23,7 +23,7 @@ modification_time: 2015-08-05T12:00:23+00:00
 
 # Example of MathJax page
 
-{% highlight php %}
+```php
 <!DOCTYPE html>
 
 <html>
@@ -69,14 +69,15 @@ equations can be used this way as well, without unduly disturbing the spacing be
 </body>
 
 </html>
-{% endhighlight %}
+
+```
 
 2) Now you need a PHP script (in this example: <span class="filename">example_test.php</span>) which processes the output
 code from MathJax so that it is readable by mPDF:
 
 Example of 1st part of example_test.php
 
-{% highlight php %}
+```php
 <?php
 
 // You should include a check for unwanted external referrers to prevent
@@ -117,15 +118,17 @@ for ($i=0;$i<count($m[0]);$i++) {
 
 }
 
-{% endhighlight %}
+
+```
 
 3a) Finally you can create a PDF document directly based on the MathJax web page submitted:
 
-{% highlight php %}
+```php
 Example of 2nd part of example_test.php creating a PDF document
-{% endhighlight %}
 
-{% highlight php %}
+```
+
+```php
 <?php
 
 // ADD a stylesheet
@@ -160,15 +163,17 @@ $mpdf->Output();
 
 exit;
 
-{% endhighlight %}
+
+```
 
 3b) Or you could output the prepared SVG code suitable for including directly in your PDF documents:
 
-{% highlight php %}
+```php
 Example of 2nd part of example_test.php to output the code to a browser
-{% endhighlight %}
 
-{% highlight php %}
+```
+
+```php
 <?php
 
 ...
@@ -188,6 +193,7 @@ for ($i=0;$i<count($m[0]);$i++) {
 	echo $svg."\n\n";
 
 }
-{% endhighlight %}
+
+```
 
 See an example of output: <a href="https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm">https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm</a>
