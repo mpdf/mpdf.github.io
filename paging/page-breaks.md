@@ -32,7 +32,7 @@ the same time marking the position for a Table of Contents to be later inserted.
 
 # Forcing Page Breaks
 
-You can set the CSS value for <span class="parameter">$page-break-before</span> to "always | left | right" for any block
+You can set the CSS value for <span class="parameter">$page-break-before</span> to "always \| left \| right" for any block
 element (p, div etc). This will force a page-break, but take care that any enclosing (outer) block elements will be
 'closed down' and their characteristics lost.
 
@@ -162,11 +162,11 @@ page-break-before or page-break-after</td>
 
 ## Notes on page breaking
 
-"box-decoration-break: slice | clone" was proposed for CSS3 in http://www.w3.org/TR/2012/CR-css3-background-20120417/#the-box-decoration-break
+"box-decoration-break: slice \| clone" was proposed for CSS3 in http://www.w3.org/TR/2012/CR-css3-background-20120417/#the-box-decoration-break
 but it appears that it may be withdrawn. Default is "slice"; it is not inherited.
 
 "page-break-before" is not supported on &lt;table&gt;.
 
-"page-break-before|after" is ignored if set on block elements inside a table.
+"page-break-before\|after" is ignored if set on block elements inside a table.
 
 Background images and gradients are not sliced (always cloned).

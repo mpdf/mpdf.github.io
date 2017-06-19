@@ -45,5 +45,5 @@ IETF tags should be used for lang which comply with the following:
 - a 2 or 3 letter Language code, followed optionally by
 - a hyphen and a 4 letter Script code, and or
 - a hyphen and a 2 letter Region code
-- i.e. [xx|xxx]{-Xxxx}{-XX}
+- i.e. [xx\|xxx]{-Xxxx}{-XX}
 - mPDF deals with IETF tags as case insensitive

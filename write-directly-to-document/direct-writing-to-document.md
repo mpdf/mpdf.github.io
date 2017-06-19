@@ -123,7 +123,7 @@ NB Does not reverse RTL text
 - text UTF-8 encoded text to write. Single line only.
 - width Width of text in millimeters. The font size will be reduced if required to fit this size.
 - font Font family to use
-- style Font style used [blank for normal]|i|b|bi
+- style Font style used [blank for normal] \| i \| b \| bi
 - fontsize Maximm font size in points (pt) Default = 72
 
 **watermark**(
