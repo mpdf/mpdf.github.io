@@ -49,7 +49,7 @@ This parameter defines the transparency value (alpha) to use for the watermark: 
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -63,7 +63,8 @@ Hello World
 ');
 
 ?>
-{% endhighlight %}
+
+```
 
 # See Also
 

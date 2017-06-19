@@ -15,13 +15,14 @@ word spacing and character spacing are normally used to justify text.
 
 The default is to use a mix of character and word spacing. The ratio is set by \Mpdf\Mpdf properties
 
-{% highlight php %}
+```php
 <?php
 
 var $jSWord = 0.4;  // Percentage(/100) of spacing to allocate to Word vs. Character
 
 var $jSmaxChar = 2; // Maximum spacing to allocate to character spacing. (0 = no maximum)
-{% endhighlight %}
+
+```
 
 The maximum (<span class="parameter">$jSmaxChar</span>) will prevent excessive, ugly 
 and difficult-to-read character spacing.
@@ -30,12 +31,13 @@ CJK characters usually need to be character-spaced (as each character is like a 
 and cursive scripts like Arabic or Indic texts need to be word-spaced. You can override some 
 of the default settings also by using CSS letter-spacing:
 
-{% highlight css %}
+```css
 div.arabic {
    text-align: justify;
    letter-spacing: 0;
 }
-{% endhighlight %}
+
+```
 
 ## Kashida in Arabic text
 

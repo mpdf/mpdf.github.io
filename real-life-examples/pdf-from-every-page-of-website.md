@@ -14,7 +14,7 @@ Write a stylesheet suitable for presenting your webpage in mPDF. Most webpages h
 which you will not want to appear in the PDF document. You can use display: none to omit these elements. From mPDF >= 5.0
 this will also work for inline elements. You may have something like this:
 
-{% highlight css %}
+```css
 #myheader, #mysearchbar, #myleftcol, #myfooter {
   display: none;
 }
@@ -28,21 +28,23 @@ span.abstract_link {
     padding:0;
     width:100%;
 }
-{% endhighlight %}
+
+```
 
 Save this file as e.g. <span class="filename">mypdf.css</span>
 
 Then add this line to your webpages. This should be at the end of the document &lt;head&gt; section, to override any preceding style definitions:
 
-{% highlight html %}
+```html
 <link href="mypdf.css" type="text/css" rel="stylesheet" media="mpdf" />
-{% endhighlight %}
+
+```
 
 NB The `media="mpdf"` means that the stylesheet will be ignored by browsers, but can be selected for use by mPDF - see below.
 
 Now create a file e.g. <span class="filename">makepdf.php</span> and add the following script. Note you will need to edit the lines in italics.
 
-{% highlight php %}
+```php
 <?php
 
 // require composer autoload
@@ -95,13 +97,14 @@ $mpdf->WriteHTML($html);
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 Now, the link from your webpages. This code can be inserted anywhere on the page. (The &lt;![CDATA[ bit is to make the
   page compatible with XHTML.) This code will work if your webpages are simple files e.g. <span class="filename">myfile.html</span>
 or if they are selected using variables in the URI (i.e. HTTP GET method) e.g. <span class="filename">myfile.php?cc=1&amp;var=35</span>
 
-{% highlight html %}
+```html
 <script language="javascript" type="text/javascript">
   /* <![CDATA[ */
     document.write('<a href="makepdf.php?url=' + encodeURIComponent(location.href) +'">');
@@ -109,11 +112,12 @@ or if they are selected using variables in the URI (i.e. HTTP GET method) e.g. <
     document.write('</a>');
   /* ]]> */
 </script>
-{% endhighlight %}
+
+```
 
 Use this to generate the code, if the webpages are selected using variables hidden from the URI e.g. HTTP POST method using a form:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf_link = '<script language="javascript" type="text/javascript">
@@ -133,5 +137,6 @@ $mpdf_link .= '
 </script>';
 
 echo $mpdf_link;
-{% endhighlight %}
+
+```
 

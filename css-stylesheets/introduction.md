@@ -66,20 +66,21 @@ for details of this and other parameters.
 
 ## Example using a stylesheet
 
-{% highlight php %}
+```php
 <?php
 
 $stylesheet = file_get_contents('style.css');
 
 $mpdf->WriteHTML($stylesheet,1);
 $mpdf->WriteHTML($html,2);
-{% endhighlight %}
+
+```
 
 # Media selectors
 
 mPDF supports media-dependent CSS styles as:
 
-{% highlight php %}
+```php
 @media print {
   p { 
     color: red; 
@@ -93,7 +94,8 @@ mPDF supports media-dependent CSS styles as:
 </style>
 
 <link rel="stylesheet" media="print" href="..." />
-{% endhighlight %}
+
+```
 
 By default mPDF will match stylesheets set for "print" or "all" media. This can be changed by the configurable 
 variable <a href="{{ "/reference/mpdf-variables/cssselectmedia.html" | prepend: site.baseurl }}">CSSselectMedia</a>.

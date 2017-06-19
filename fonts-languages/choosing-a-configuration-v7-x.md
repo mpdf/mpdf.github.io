@@ -44,11 +44,12 @@ be embedded in the PDF document.
 
 To use core fonts only, use `c` for the `mode` configuration key:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new mPDF(['mode' => 'c']);
-{% endhighlight %}
+
+```
 
 # Embedded Unicode fonts
 
@@ -73,27 +74,29 @@ document; otherwise it will embed the whole font file. You can override this by 
 For backwards compatibility, you can use `s` in the `mode` configuration key to override the
 configuration settings and force subsetting of all fonts e.g.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new mPDF(['mode' => 's']);
-{% endhighlight %}
+
+```
 
 ## Using core non-embedded fonts in a Unicode document
 
 If your document uses Unicode fonts as above, you can force mPDF to use the core (non-embedded) PDF fonts in parts of
 the document by selecting the fontnames: `chelvetica`, `ccourier` and `ctimes` e.g.
 
-{% highlight php %}
+```php
 
 This paragraph will use core fonts
 
-{% endhighlight %}
+
+```
 
 You could force mPDF to always use core fonts when Arial/Helvetica/Courier are specified, by editing the font
 translation configuration key `fonttrans` e.g.:
 
-{% highlight php %}
+```php
 <?php
 
 $this->fonttrans = array(
@@ -104,7 +107,8 @@ $this->fonttrans = array(
 	'couriernew' => 'ccourier',
 	'courier' => 'ccourier',
 );
-{% endhighlight %}
+
+```
 
 # Languages/Scripts which require special fonts
 
@@ -125,7 +129,7 @@ There are several different ways to do this:
 
 1) Write your HTML code to specify the exact fonts needed:
 
-{% highlight php %}
+```php
 
 เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
 
@@ -135,11 +139,12 @@ There are several different ways to do this:
 
 البرادعی البرادعی
 
-{% endhighlight %}
+
+```
 
 2) Write your HTML code using the `lang` attribute to define the language. 
 
-{% highlight php %}
+```php
 
 เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
 
@@ -149,7 +154,8 @@ There are several different ways to do this:
 
 पहला पन्ना
 
-{% endhighlight %}
+
+```
 
 This needs to be used in conjunction with either:
 
@@ -159,11 +165,12 @@ This needs to be used in conjunction with either:
 3) Use `autoScriptToLang` to mark up HTML text by inserting the `lang` attribute, based on the Unicode script block
 in question, and values in a `Mpdf\Language\LanguageToFontInterface` implementation.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->autoScriptToLang = true;
-{% endhighlight %}
+
+```
 
 As for (2) this needs to be used in conjunction with either:
 
@@ -175,9 +182,10 @@ to use character susbstitution. mPDF will inspect every character in the HTML co
 represented in the specified font, it will try to substitute it from one of the fonts defined in `backupSubsFont`
 configuration key.
 
-{% highlight php %}
+```php
 $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
-{% endhighlight %}
+
+```
 
 # Which method should I use?
 

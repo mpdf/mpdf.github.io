@@ -45,7 +45,7 @@ Values of 1 or 0 can also be used
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -71,7 +71,8 @@ Hello World
 ');
 
 ?>
-{% endhighlight %}
+
+```
 
 # See Also
 

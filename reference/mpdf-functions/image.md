@@ -36,13 +36,14 @@ $shownoimg = true, $allowvector = true)
 
 
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->Image('files/images/frontcover.jpg',0,0,210,297,'jpg','',true, false);
 
 // the last "false" allows a full page picture
-{% endhighlight %}
+
+```
 
 See Also
 

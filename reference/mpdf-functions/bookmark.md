@@ -51,18 +51,19 @@ The target is set as the current writing position in the document when the Bookm
 
 ### Example #1
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->Bookmark('Start of the document');
 $mpdf->WriteHTML('<div>Section 1 text</div>');
 $mpdf->Output('filename.pdf');
-{% endhighlight %}
+
+```
 
 ### Example #2
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -93,7 +94,8 @@ This will produce a Bookmark tree in Adobe Reader:
    + Chapter 3
    
 */
-{% endhighlight %}
+
+```
 
 # Notes
 

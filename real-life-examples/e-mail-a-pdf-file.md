@@ -8,7 +8,7 @@ modification_time: 2015-08-05T12:00:26+00:00
 
 This example shows how to create a PDF file and e-mail it:
 
-{% highlight php %}
+```php
 <?php
 
 // require composer autoload
@@ -38,7 +38,8 @@ $mpdf->WriteHTML(utf8_encode($html));
 
 $content = $mpdf->Output('', 'S');
 
-{% endhighlight %}
+
+```
 
 E-mailing with attachments by yourself is full of unexpected obstacles. Instead of building the message by hand, we will
 use a 3rd party library.
@@ -53,7 +54,7 @@ $ composer require swiftmailer/swiftmailer
 
 Then, create a Swift Message and send it with a Transport wrapping PHP mail() function.
 
-{% highlight php %}
+```php
 
 <?php
 
@@ -78,6 +79,7 @@ $mailer->send($message);
 // Then, you can send PDF to the browser
 $mpdf->Output($filename ,'I');
 
-{% endhighlight %}
+
+```
 
 For more information about Swift Mailer, see its [documentation](http://swiftmailer.org/docs).

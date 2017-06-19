@@ -77,7 +77,7 @@ F: Centred on the page print-area (frame) respecting page margins
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -91,7 +91,8 @@ Hello World
 ');
 
 ?>
-{% endhighlight %}
+
+```
 
 # See Also
 

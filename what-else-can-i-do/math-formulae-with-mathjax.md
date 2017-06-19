@@ -36,7 +36,7 @@ work in IE which only saves the original HTML code prior to processing).
 5) Run the following script to produce your PDF document (assumes you saved the file as TeXSample.htm). This adjusts the
 SVG code produced to allow mPDF to display it:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf('');
@@ -77,7 +77,8 @@ $mpdf->Output();
 
 exit;
 
-{% endhighlight %}
+
+```
 
 See an example of output: <a href="https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm">https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm</a>
 

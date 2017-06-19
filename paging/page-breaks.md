@@ -8,12 +8,13 @@ modification_time: 2015-08-05T11:59:45+00:00
 
 You can force a page break anywhere in the document either by using HTML code or PHP:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->AddPage();
 
-{% endhighlight %}
+
+```
 
 You can define or change all page characteristics when you add the new page:
 
@@ -47,11 +48,12 @@ with table autosize or table rotate
 
 ## "Keep-with-table"
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->use_kwt = true;    // DEFAULT=false
-{% endhighlight %}
+
+```
 
 If set to true, mPDF will automatically set <span class="parameter">$page-break-inside</span>=avoid for any H1-H6 header
 that *immediately* precedes a table, thus keeping the heading together with the table.
@@ -90,7 +92,7 @@ wrapped with their border and padding.
 
 The difference between 2) and 3) is illustrated by this example:
 
-{% highlight html %}
+```html
 <style>
 	div { border: 1px solid black; padding: 1em; }
 	.level1 { box-decoration-break: slice; }
@@ -106,7 +108,8 @@ The difference between 2) and 3) is illustrated by this example:
 </div>
 </div>
 </div>
-{% endhighlight %}
+
+```
 
 At the forced pagebreak which occurs after the P element:
 

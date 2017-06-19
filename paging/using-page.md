@@ -49,7 +49,7 @@ NB Page-box margins are INSIDE the page-box (unlike block elements in CSS).
 
 The CSS `@page` selector is partially supported in mPDF with the following properties:
 
-{% highlight css %}
+```css
 @page {
 	size: 8.5in 11in;  <length>{1,2} | auto | portrait | landscape  /* 'em' 'ex' and % are not allowed; length values are width height */
 	margin: 10%; /* <any of the usual CSS values for margins> (% of page-box width for LR, of height for TB) */
@@ -65,7 +65,8 @@ The CSS `@page` selector is partially supported in mPDF with the following prope
 	background-color ...
 	background-gradient: ...
 }
-{% endhighlight %}
+
+```
 
 ## Notes
 
@@ -116,13 +117,14 @@ CSS pseudo-selectors :left :right and :first are recognised by mPDF and support 
 
 # Example
 
-{% highlight css %}
+```css
 @page :right {
 	margin-top: 3cm;
 	margin-bottom: 4cm;
 	header: html_myHeader;
 }
-{% endhighlight %}
+
+```
 
 Pseudo-selectors for page can change top, bottom, header and footer margins, but not left and right margins.
 mPDF can only cope with one set of (optionally mirrored) left/right margins.
@@ -134,15 +136,17 @@ first page only
 
 Named pages are also supported e.g.:
 
-{% highlight css %}
+```css
 @page rotated { size: landscape; }
-{% endhighlight %}
+
+```
 
 You can then refer to the named page in other CSS style sheets:
 
-{% highlight css %}
+```css
 div.onitsside { page: rotated; page-break-before: right; }
-{% endhighlight %}
+
+```
 
 `<div class="onitsside">` will thus start a new right/odd page which will be in landscape.
 
@@ -172,7 +176,7 @@ So, for example, `page-break-before: right` is equivalent of `AddPage(... 'NEXT-
 
 ## Example using Headers and Footers
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -271,4 +275,5 @@ $html = '
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```

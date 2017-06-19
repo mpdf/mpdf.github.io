@@ -28,7 +28,7 @@ Integer value greater than 0
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -43,7 +43,8 @@ $mpdf->WriteHTML('
 $mpdf->Output();
 
 ?>
-{% endhighlight %}
+
+```
 
 <p><span class="jslink">
 

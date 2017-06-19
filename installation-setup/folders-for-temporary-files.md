@@ -17,14 +17,15 @@ If you wish to use a different directory for temporary files, you should define 
 for `mPDF < 7.0`, there are constants `_MPDF_TEMP_PATH` and `_MPDF_TTFONTDATAPATH` which can be used to alter
 default temporary files directories.
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf(['tempDir' => __DIR__ . '/custom/temp/dir/path']);
-{% endhighlight %}
+
+```
 
 ## Images
 

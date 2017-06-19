@@ -32,15 +32,16 @@ The mpdf.css file supplied is inactive as it has all the entries commented out b
 
 The following values will restore behaviour of pre-4.2 versions to 4.2:
 
-{% highlight css %}
+```css
     img { margin: 0.83em 0; vertical-align: bottom; }
     table { margin: 0.5em; }
     textarea { vertical-align: top; }
-{% endhighlight %}
+
+```
 
 The following values will restore behaviour of 2.2 versions:
 
-{% highlight css %}
+```css
     body {
         font-family: sans-serif;
     }
@@ -79,7 +80,8 @@ The following values will restore behaviour of 2.2 versions:
         margin: 0.2em;
         vertical-align: middle;
     }
-{% endhighlight %}
+
+```
 
 ## Prior to mPDF 2.2
 
@@ -89,15 +91,16 @@ The original default styles (mPDF <=2.0) were extensively changed with improveme
 In order to allow backwards compatibilty, a secondary "stylesheet" - a variable $defaultCSS2 was introduced in
 mPDF 2.0 - and the option to load this on intiating mPDF:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->useDefaultCSS2 = true;
-{% endhighlight %}
+
+```
 
 ## Secondary default CSS values used mPDF 2.0 - 2.1
 
-{% highlight php %}
+```php
 <?php
 
 var $defaultCSS2 = array(
@@ -140,4 +143,5 @@ var $defaultCSS2 = array(
         'VERTICAL-ALIGN' => 'middle',
     ),
 );
-{% endhighlight %}
+
+```

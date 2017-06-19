@@ -22,7 +22,7 @@ Specify text to precede the page number when using {PAGENO} to insert page numbe
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -40,7 +40,8 @@ $mpdf->SetHeader('{PAGENO}{nbpg}');
 $mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 Will output a header:
 

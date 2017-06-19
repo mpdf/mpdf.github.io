@@ -30,7 +30,7 @@ text from the HTML, or allow setting of the value <span class="parameter">$chars
 
 ## Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $html = '
@@ -62,11 +62,12 @@ $mpdf->allow_charset_conversion = true;
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Example #2
 
-{% highlight php %}
+```php
 <?php
 
 $html = '... the body of the document encoded in ISO-8859-4 ...';
@@ -80,7 +81,8 @@ $mpdf->charset_in = 'iso-8859-4';
 $mpdf->WriteHTML($html);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
 	**Note:** mPDF will convert pages with character sets which work with the PHP function

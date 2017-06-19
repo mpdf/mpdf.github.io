@@ -10,7 +10,7 @@ This script was written to create a new PDF file based on a pre-existing PDF doc
 into an A5 booklet ready for duplex printing. Page order is adjusted, and page orientation is rotated so that
 it prints a landscape booklet.
 
-{% highlight php %}
+```php
 <?php
 
 // require composer autoload
@@ -84,5 +84,6 @@ function GetBookletPages($np, $backcover = true)
     return $pp;
 }
 
-{% endhighlight %}
+
+```
 

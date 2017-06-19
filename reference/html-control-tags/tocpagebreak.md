@@ -411,7 +411,7 @@ Parameters <span class="parameter">$page-selector</span>, <span class="parameter
 
 # Examples
 
-{% highlight html %}
+```html
 <html>
 
 Text of introduction...
@@ -421,7 +421,8 @@ Text of introduction...
 <tocentry content="Chapter 1" />Text of main book...
 
 </html>
-{% endhighlight %}
+
+```
 
 # See Also
 

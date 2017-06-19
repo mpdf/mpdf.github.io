@@ -46,9 +46,10 @@ The soft-hyphen character (U+00AD or &amp;shy;) and the &lt;wbr&gt; tag (from mP
 
 Automatic hyphenation is set using CSS:
 
-{% highlight css %}
+```css
 hyphens: auto;
-{% endhighlight %}
+
+```
 
 Automatic hyphenation is based on the commonly used TeX algorithm and requires pattern files for each language. 
 The following languages are supplied with mPDF 2.5:
@@ -148,7 +149,7 @@ Pattern checking can be fine-tuned by 4 variables if required:
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -160,7 +161,8 @@ $mpdf->SHYleftmin = 3;
 $mpdf->WriteHTML('La grande texte....');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # Hyphenation Dictionary
 

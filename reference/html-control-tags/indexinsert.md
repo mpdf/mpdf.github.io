@@ -168,7 +168,7 @@ NB This will not affect the overall order of entries, which is determined by the
 
 # Examples
 
-{% highlight html %}
+```html
 <html>
 
 Text of document...
@@ -184,7 +184,8 @@ Text of document...
 <indexinsert usedivletters="on" links="on" collation="en_US.utf8" collation-group="English_United_States"/>
 
 </html>
-{% endhighlight %}
+
+```
 
 # See Also
 

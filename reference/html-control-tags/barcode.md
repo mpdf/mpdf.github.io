@@ -138,34 +138,41 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 
 # Examples
 
-{% highlight html %}
+```html
 <barcode code="978-0-9542246-0" type="ISBN" height="0.66" text="1" />
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
 <barcode code="04210000526" type="UPCE" />
 <!-- Note the UPC-A code is required which is converted to UPCE -->
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
 <barcode code="978-0-9542246-0-8 07" type="ISSNP2" text="1" />
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
 <barcode code="01234567094987654321-01234567891" type="IMB" />
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
 <barcode code="SN34RD1A" type="RM4SCC" />
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
 <barcode code="54321068" type="I25" />
-{% endhighlight %}
 
-{% highlight html %}
+```
+
+```html
 <barcode code="A34698735B" type="CODABAR" />
-{% endhighlight %}
+
+```
 
 # Notes
 
@@ -192,7 +199,7 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 
 ## Example with CSS
 
-{% highlight html %}
+```html
 <style>
 .barcode {
     padding: 1.5mm;
@@ -207,7 +214,8 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 </style>
 
 <div class="barcodecell"><barcode code="54321068" type="I25" class="barcode" /></div>
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
     **Note:** mPDF will generate a Checkdigit for most barcodes if required, which is added to the
@@ -216,7 +224,7 @@ Valid for: C39 (Code 39), Standard and Interleaved 2 of 5 (S25, I25 etc.), CODAB
 
 ## Example - Generating a checkdigit
 
-{% highlight php %}
+```php
 <?php
 
 // Must not contain any - or spaces
@@ -224,7 +232,8 @@ include('../src/Barcode.php');
 
 $bc = new \Mpdf\Barcode();
 echo $bc->getChecksum('9344543204454', 'C93');
-{% endhighlight %}
+
+```
 
 # See Also
 

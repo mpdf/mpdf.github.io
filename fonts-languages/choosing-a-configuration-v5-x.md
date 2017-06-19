@@ -46,11 +46,12 @@ need to be embedded in the PDF document.
 
 To use core fonts only, use `c` for the initial parameter:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new mPDF(['mode' => 'c']);
-{% endhighlight %}
+
+```
 
 # Embedded Unicode fonts
 
@@ -75,7 +76,7 @@ the document; otherwise it will embed the whole font file. You can override this
 For backwards compatibility, you can use `-s` or `s` in the initial parameter to override the 
 <span class="filename">config.php</span> settings and force subsetting of all fonts e.g.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new mPDF('s');
@@ -83,23 +84,25 @@ $mpdf = new mPDF('s');
 $mpdf = new mPDF('ar-s');  // also defining arabic language code
 
 $mpdf = new mPDF('utf8-s'); // for backwards compatibility - the utf-8 does nothing
-{% endhighlight %}
+
+```
 
 ## Using core non-embedded fonts in a Unicode document
 
 If your document uses Unicode fonts as above, you can force mPDF to use the core (non-embedded) PDF fonts in 
 parts of the document by selecting the fontnames: `chelvetica`, `ccourier` and `ctimes` e.g.
 
-{% highlight php %}
+```php
 
 <p style="font-family:chelvetica">This paragraph will use core fonts</p>
 
-{% endhighlight %}
+
+```
 
 You could force mPDF to always use core fonts when Arial/Helvetica/Courier are specified, by editing the 
 font translation variable `$this->fonttrans` in <span class="filename">config_fonts.php</span> e.g.:
 
-{% highlight php %}
+```php
 <?php
 
 $this->fonttrans = array(
@@ -109,7 +112,8 @@ $this->fonttrans = array(
   'times' => 'ctimes',
   'couriernew' => 'ccourier',
   'courier' => 'ccourier',
-{% endhighlight %}
+
+```
 
 # Languages which require special fonts
 
@@ -276,7 +280,7 @@ If you want to use core non-embedded fonts when possible (for Western European l
 language string. This will select core fonts only when the language string is appropriate (as defined in 
 <span class="filename">config_cp.php</span>) e.g.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new mPDF('en-GB-x');  // will only use core non-embedded fonts
@@ -286,7 +290,8 @@ $mpdf = new mPDF('de-x');     // will only use core non-embedded fonts (German)
 $mpdf = new mPDF('ar-x');     // behaves as though ('ar') called (Arabic)
 
 $mpdf = new mPDF('ru-x');     // behaves as though ('ru') called (Russian)
-{% endhighlight %}
+
+```
 
 # See Also
 

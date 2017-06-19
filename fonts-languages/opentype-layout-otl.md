@@ -119,7 +119,7 @@ See notes later about font kerning.
 
 # Examples
 
-{% highlight css %}
+```css
 /* use small-cap alternate glyphs */
 .smallcaps { font-feature-settings: "smcp" on; }
 
@@ -146,14 +146,15 @@ td.tabular { font-feature-settings: "tnum"; }
     font-family: Gabriola; /* available on Windows 7, and on Mac OS */
     font-feature-settings: "ss07";
 }
-{% endhighlight %}
+
+```
 
 # How to use OTL in mPDF
 
 In <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">font configuration variables</a>
 there are 2 variables which affect OTL features for each font family e.g.:
 
-{% highlight php %}
+```php
 "dejavusanscondensed" => array(
     'R' => "DejaVuSansCondensed.ttf",
     'B' => "DejaVuSansCondensed-Bold.ttf",
@@ -162,7 +163,8 @@ there are 2 variables which affect OTL features for each font family e.g.:
     'useOTL' => 0xFF,
     'useKashida' => 75,
 ),
-{% endhighlight %}
+
+```
 
 ## useOTL
 
@@ -273,7 +275,7 @@ for everyday use you may want to disable OTL for FreeSerif to save processing ti
 Indic and/or Arabic scripts. The recommended way to do this is to create 2 instances of the font e.g. in
 `fontdata` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 
-{% highlight php %}
+```php
 "freeserif" => array(
     'R' => "FreeSerif.ttf",
     'B' => "FreeSerifBold.ttf",
@@ -290,21 +292,24 @@ Indic and/or Arabic scripts. The recommended way to do this is to create 2 insta
     'useOTL' => 0xFF, /* Uses OTL for all scripts */
     'useKashida' => 75,
 ),
-{% endhighlight %}
+
+```
 
 You could then either use this second font name in your stylesheets e.g.
 
-{% highlight php %}
+```php
 
 Hello World (in Arabic)
 
-{% endhighlight %}
+
+```
 
 or, you could use font translation e.g.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->fonttrans['freeserif'] = 'freeserif2';
-{% endhighlight %}
+
+```
 

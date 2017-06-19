@@ -40,11 +40,12 @@ Browser mode is set as the default - for backwards compatibility, change this to
 
 The default in browsers is to add a top and bottom margin to the outermost list only. This can be defined using CSS as:
 
-{% highlight css %}
+```css
 ul, ol { margin-top: 0.83em; margin-bottom: 0.83em; }
 
 ul ul, ul ol, ol ul, ol ol { margin-top: 0; margin-bottom: 0; }
-{% endhighlight %}
+
+```
 
 This style is included in file <span class="filename">mpdf.css</span>
 
@@ -65,23 +66,25 @@ To specify a fixed bullet size and offset to give a similar appearance to most b
 <ul> </li>
 </ul>
 
-{% highlight php %}
+```php
 <?php
 
 $this->list_marker_offset = '5.5pt';
 
 $this->list_symbol_size = '3.6pt';
-{% endhighlight %}
+
+```
 
 To specify size and offset proportional to the list item's font size (compatible with versions of mPDF prior to v6.0), use:
 
-{% highlight php %}
+```php
 <?php
 
 $this->list_marker_offset = '0.45em';
 
 $this->list_symbol_size = '0.31em';
-{% endhighlight %}
+
+```
 
 ## Notes on Lists
 

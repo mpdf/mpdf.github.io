@@ -26,7 +26,7 @@ Arabic languages">RTL</acronym> document)
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 // Define a document with default left-margin=30 and right-margin=10
@@ -48,5 +48,6 @@ $mpdf->AddPage();
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 

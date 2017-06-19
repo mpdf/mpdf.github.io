@@ -64,7 +64,7 @@ Set the gap between columns in millimeters
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -78,7 +78,8 @@ $mpdf->WriteHTML('Next column...');
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 # See Also
 

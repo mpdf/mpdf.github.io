@@ -79,7 +79,7 @@ be any alphanumeric characters (except just "0") and is case-insensitive.
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -95,7 +95,8 @@ $mpdf->WriteHTML('Chapter 1 ...');
 $mpdf->Output();
 
 ?>
-{% endhighlight %}
+
+```
 
 # Notes
 
@@ -111,21 +112,24 @@ $mpdf->Output();
 
 Recommended placement of ToC Entries is just after the first word following the opening tag of the block element:
 
-{% highlight html %}
+```html
 <h2>First<tocentry... /> word of a heading or block</h2>
-{% endhighlight %}
+
+```
 
 or alternatively just after the opening tag of the block element:
 
-{% highlight html %}
+```html
 <h2><tocentry... />Heading or block</h2>
-{% endhighlight %}
+
+```
 
 or just after a word to be marked:
 
-{% highlight html %}
+```html
 ... this is a word<tocentry... /> in the middle of text to be marked ...
-{% endhighlight %}
+
+```
 
 # See Also
 

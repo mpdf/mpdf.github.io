@@ -10,7 +10,7 @@ modification_time: 2016-25-06T07:30:29+00:00
 
 1) Use a try/catch block for a `\Mpdf\MpdfException` to find out more:
 
-{% highlight php %}
+```php
 <?php
 try {
 	$mpdf = new mPDF();
@@ -21,7 +21,8 @@ try {
 	// Process the exception, log, print etc.
 	echo $e->getMessage();
 }
-{% endhighlight %}
+
+```
 
 2) Enable error_reporting in your development environment or look into PHP error logs.
 
@@ -56,9 +57,10 @@ ini_set("pcre.backtrack_limit","1000000");
 If <a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">use_kwt</a> ("keep-with-table")
 is set, and a heading element precedes a table inside a div with border/background set: it does not work e.g.
 
-{% highlight html %}
+```html
 <div style="border: 1px solid #000000; background-color: #EEEEFF;"><h2>Title</h2><table...
-{% endhighlight %}
+
+```
 
 ## Program dies with no error message when generating a large PDF file
 

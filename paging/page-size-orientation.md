@@ -22,7 +22,7 @@ It can also be set by CSS using <a href="{{ "/paging/using-page.html" | prepend:
 
 ## Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf(['format' => 'Legal']);
@@ -34,11 +34,12 @@ $mpdf->AddPage('L'); // Adds a new page in Landscape orientation
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Example #2
 
-{% highlight php %}
+```php
 <?php
 
 // Define a default Landscape page size/format by name
@@ -49,7 +50,8 @@ $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'utf-8', [190, 236]);
 
 // Define a default page using all default values except "L" for Landscape orientation
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
-{% endhighlight %}
+
+```
 
 # See Also
 

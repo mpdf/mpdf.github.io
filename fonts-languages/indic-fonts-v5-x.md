@@ -89,11 +89,12 @@ Special fonts are provided for several Indic languages.
 
 These fonts can be access using their font name e.g.
 
-{% highlight htmlw %}
+```html
 
 ജൌ
 
-{% endhighlight %}
+
+```
 
 NB Indic font support is font-specific; adding other Indic fonts to mPDF won't work.
 

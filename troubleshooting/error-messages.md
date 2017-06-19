@@ -18,11 +18,12 @@ Most likely causes are:
 
 If no error message appears, try setting:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->debug = true;
-{% endhighlight %}
+
+```
 
 ## Object buffering
 
@@ -34,9 +35,10 @@ object-buffer.
 If you use object_buffering in the process of preparing the text for mPDF, this will falsely trigger the error message. 
 If this is the case, add the following to your script to prevent it:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->allow_output_buffering = true;
-{% endhighlight %}
+
+```
 
