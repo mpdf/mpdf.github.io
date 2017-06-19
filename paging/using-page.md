@@ -164,7 +164,7 @@ You can also set the page using parameters in:
 
 The CSS property 'page-break-before' is useful in conjunction with a named page definition.
 
-page-break-before: always|left|right;
+page-break-before: always \| left \| right;
 
 `always` - Always force a page break before the generated block element.
 

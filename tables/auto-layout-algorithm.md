@@ -68,6 +68,6 @@ will determine which factor takes priority. (mPDF v>=4.6)
 
 * From mPDF 4.3, this can be overridden using CSS property overflow:
 
-&lt;table style="overflow: auto | hidden | visible | wrap"&gt;
+  `<table style="overflow: auto | hidden | visible | wrap">`
 
-auto is the default, described above.
+  `auto` is the default, described above.

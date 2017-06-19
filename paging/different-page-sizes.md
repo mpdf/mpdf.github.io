@@ -81,5 +81,5 @@ Accepted values - same options as the original
 - mPDF will not carry block-style elements across page-breaks.
 - Does not work with &lt;<a href="{{ "/reference/html-control-tags/formfeed.html" | prepend: site.baseurl }}">
   formfeed</a>&gt;, and disabled if using $this->restoreBlockPageBreaks
-- Cannot use @page { size: portrait | landscape; } at the same time as defining the sheet-size
+- Cannot use `@page { size: portrait|landscape; }` at the same time as defining the sheet-size
 
