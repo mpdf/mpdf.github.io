@@ -11,9 +11,10 @@ mPDF >= 3.0
 The CSS property "float" is **partially** supported in mPDF, allowing block elements (p, div etc.) to be placed
 alongside one another. They can also be used to create "columns" that span more than one page.
 
-{% highlight css %}
+```css
 float: right|left
-{% endhighlight %}
+
+```
 
 ## Limitations:
 
@@ -37,13 +38,14 @@ Margin-right can still be set for a float:right and vice-versa.
 
 The CSS property "clear" can be set on any block element (p, div etc.), and also &lt;hr&gt; or &lt;br&gt; elements.
 
-{% highlight css %}
+```css
 clear: right|left|both
-{% endhighlight %}
+
+```
 
 ## Examples
 
-{% highlight html %}
+```html
 <h4>CSS Float</h4>
 
 <div>
@@ -63,5 +65,6 @@ clear: right|left|both
     This is text that follows the clear:both.
 
 </div>
-{% endhighlight %}
+
+```
 

@@ -15,9 +15,10 @@ If a font or default font is declared in HTML or CSS, the font that is actually 
 If called in HTML/CSS the font-family name is converted to an mPDF font-family name (see
 <a href="{{ "/fonts-languages/font-names.html" | prepend: site.baseurl }}">Font names</a>) e.g.
 
-{% highlight php %}
+```php
 
-{% endhighlight %}
+
+```
 
 The font requested (including style) is checked to see if it is available to mPDF: set by the array 
 `$available_unifonts`:

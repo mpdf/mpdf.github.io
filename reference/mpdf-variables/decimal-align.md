@@ -15,11 +15,12 @@ Characters to be used for alignment must be defined in the array `decimal_align`
 
 By default these are : period "."  comma  ","  middot "\B7" and arabic decimal mark "\66B"
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->decimal_align = array('DP'=>'.', 'DC'=>',', 'DM'=>"\xc2\xb7", 'DA'=>"\xd9\xab", 'DD'=>'-');
-{% endhighlight %}
+
+```
 
 The default character is a period.
 

@@ -37,7 +37,7 @@ omitted end-tags
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -49,5 +49,6 @@ $mpdf->WriteHTML('<p>Hello World');
 $mpdf->WriteHTML('<p>Hello World');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 

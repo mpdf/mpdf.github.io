@@ -52,21 +52,23 @@ Takes any valid CSS <span class="smallblock">LENGTH</span>  e.g. "2em"
 
 ## Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $menuitem = 'Chilli con carne <dottab />&amp;nbsp;£7.95';
 
 $mpdf->WriteHTML($menuitem);
-{% endhighlight %}
+
+```
 
 ## Example #2
 
-{% highlight php %}
+```php
 <?php
 
 // To right-align the text which follows the <dottab> whilst indenting any preceding lines:
 
 $menuitem = 'Chilli con carne etc. etc. <dottab outdent="3em" />&amp;nbsp;£7.95';
-{% endhighlight %}
+
+```
 

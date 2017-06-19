@@ -371,12 +371,13 @@ $mpdf->AddPageByArray(array(
 ));
 $mpdf->WriteHTML('Your Book text');
 
-{% endhighlight %}
+
+```
 
 
 Example #3 - Defining new margins and page orientation
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 

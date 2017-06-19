@@ -11,13 +11,14 @@ mPDF accepts UTF-8 encoded text by default for all functions.
 You can use the following to allow you to write html code encoded in other than utf-8 (in functions like
 <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>):
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
 
 $mpdf->charset_in='windows-1252';
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** <span class="parameter">$charset_in</span> requires codes recognised by the PHP
@@ -28,9 +29,10 @@ $mpdf->charset_in='windows-1252';
 If <span class="parameter">$allow_charset_conversion</span> is <span class="smallblock">TRUE</span> mPDF will
 also read the charset from the HTML header if present e.g.
 
-{% highlight php %}
+```php
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-{% endhighlight %}
+
+```
 
 Alternatively, you could convert the html to utf-8 encoding before passing it to mPDF,
 using any one of the PHP functions:

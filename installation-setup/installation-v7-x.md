@@ -10,15 +10,16 @@ modification_time: 2017-03-08T10:02:23+02:00
 
 Official installation method is via composer and its packagist package [mpdf/mpdf](https://packagist.org/packages/mpdf/mpdf).
 
-{% highlight terminal %}
+```bash
 $ composer require mpdf/mpdf
-{% endhighlight %}
+
+```
 
 # Usage
 
 The simplest usage of the library would be as follows:
 
-{% highlight php %}
+```php
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
@@ -26,7 +27,8 @@ require_once __DIR__ . '/vendor/autoload.php';
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->WriteHTML('<h1>Hello world!</h1>');
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 All [configuration directives](https://mpdf.github.io/reference/mpdf-variables/overview.html) can
 be set by the `$config` parameter of the constructor.
@@ -42,17 +44,18 @@ If you have problems, please read the section on
 mPDF 7.x has introduced namespaces, so in order to use mPDF, you have to reference the class either by fully
 qualified name:
 
-{% highlight php %}
+```php
 <?php
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
-{% endhighlight %}
+
+```
 
 or import the class beforehand:
 
-{% highlight php %}
+```php
 <?php
 
 use Mpdf\Mpdf;
@@ -60,7 +63,8 @@ use Mpdf\Mpdf;
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new Mpdf();
-{% endhighlight %}
+
+```
 
 The class now accepts only one parameter, an array of configuration directives. See
 [configuration directives](https://mpdf.github.io/reference/mpdf-variables/overview.html) for reference.

@@ -14,9 +14,10 @@ modification_time: 2015-08-05T12:02:06+00:00
 Set this variable to <span class="smallblock">TRUE</span> and columns will be written successively i.e. there will
 be no balancing of the length of columns.
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->keepColumns = true;
-{% endhighlight %}
+
+```
 

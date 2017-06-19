@@ -57,7 +57,7 @@ backup font(s) specified in the variable in `backupSubsFont`
 
 # Example
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -70,7 +70,8 @@ $mpdf->useSubstitutions = true;
 $mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
 	**Note:** This may add significantly to the processing time for large files.

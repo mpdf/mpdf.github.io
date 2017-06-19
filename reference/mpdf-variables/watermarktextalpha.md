@@ -26,7 +26,7 @@ Define as a value between 0 and 1.
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -42,7 +42,8 @@ Hello World
 ');
 
 ?>
-{% endhighlight %}
+
+```
 
 # See Also
 

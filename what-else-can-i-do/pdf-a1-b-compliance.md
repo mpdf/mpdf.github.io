@@ -45,11 +45,12 @@ It is the users responsibility to check compliance if this is essential.
 You can make mPDF produce mPDF/A1-b compliant files by setting 
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->PDFA = true;
-{% endhighlight %}
+
+```
 
 Some changes were made in mPDF 4.3 which affect all files (PDF/A or not) to improve compliance with PDF-1.4 specification:
 
@@ -95,11 +96,12 @@ You can change the color profile used by mPDF by specifying
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a> as 
 a path to your ICC profile:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->ICCProfile = __DIR__ . '/eciRGB_v2.icc';
-{% endhighlight %}
+
+```
 
 ## Fonts
 
@@ -142,11 +144,12 @@ Some problems can be fixed by mPDF, but will cause a change to the appearance of
 generate warning messages. Once you have assessed the warnings, you can direct mPDF to make these changes automatically 
 by setting in your script:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->PDFAauto = true; // Overrides warnings making changes when possible to force PDFA1-b compliance
-{% endhighlight %}
+
+```
 
 The following issues will cause a warning message when you try to generate a PDFA file:
 

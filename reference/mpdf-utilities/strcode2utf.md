@@ -51,7 +51,7 @@ Returns a UTF-8 encoded string.
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -63,7 +63,8 @@ $mpdf->SetWatermarkText($wm);
 $mpdf->showWatermark = true;
 
 $mpdf->WriteHTML('Hello World');
-{% endhighlight %}
+
+```
 
 # See Also
 

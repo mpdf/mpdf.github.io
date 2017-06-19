@@ -26,11 +26,12 @@ Note: `[lang=zh]` will match `lang="zh-TW"` and `lang="zh-HK"`
 
 Limitation: class selectors and attribute selectors should be of equal specificity in CSS specification e.g.
 
-{% highlight css %}
+```css
 :lang(syr) { color: blue; }
 
 .syriac { color: red; }
-{% endhighlight %}
+
+```
 
 should be of equal specificity, and thus apply whichever comes later in the CSS stylesheet. 
 mPDF however gives `:lang` priority over `.class`

@@ -20,7 +20,7 @@ There are different ways to change sheet size:
 
 ## 1) Using CSS @page
 
-{% highlight css %}
+```css
 <style>
 
 @page { sheet-size: A3-L; }
@@ -35,7 +35,8 @@ h1.bigsection {
 }
 
 </style>
-{% endhighlight %}
+
+```
 
 You can reference the @page selectors using other CSS as above (and see 
 <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a>) or setting attributes in:

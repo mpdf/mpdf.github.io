@@ -33,11 +33,12 @@ Character substitution (i.e. substituting a different font solely to display tha
 the `useSubstitution`
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 
-{% highlight php %}
+```php
 <?php
 
 $this->useSubstitutions = true;
-{% endhighlight %}
+
+```
 
 mPDF will try to find substitutions for any missing characters:
 

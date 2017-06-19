@@ -23,7 +23,7 @@ the 'g'. This is put here to allow it to print in mPDF)</span>
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -37,7 +37,8 @@ $mpdf->SetHeader('{PAGENO}{nbpg}');
 $mpdf->WriteHTML("Hello World");
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 Will output a header:
 

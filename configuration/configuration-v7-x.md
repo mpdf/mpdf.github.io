@@ -34,8 +34,9 @@ All variables can be changed at runtime using Mpdf public properties as defined 
 
 ## Example
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->pdf_version = '1.5';
-{% endhighlight %}
+
+```

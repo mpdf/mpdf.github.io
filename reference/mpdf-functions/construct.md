@@ -166,7 +166,7 @@ from the constructor of mPDF <7.0: `mode`, `format`, `default_font_size`, `defau
 
 ## Example #1
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -176,11 +176,12 @@ $mpdf = new \Mpdf\Mpdf();
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output('filename.pdf');
-{% endhighlight %}
+
+```
 
 ## Example #2
 
-{% highlight php %}
+```php
 <?php
 
 // Define a new \Mpdf\Mpdf document using utf-8 fonts
@@ -197,7 +198,8 @@ $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => [190, 236]]);
 
 // Define a page using all default values except "L" for Landscape orientation
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
-{% endhighlight %}
+
+```
 
 # Notes
 

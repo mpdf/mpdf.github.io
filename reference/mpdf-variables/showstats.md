@@ -43,7 +43,7 @@ Specify whether to show performance data. Useful if you are developing with mPDF
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -58,13 +58,15 @@ $mpdf->WriteHTML("Hello World");
 $mpdf->Output();
 
 ?>
-{% endhighlight %}
 
-{% highlight php %}
+```
+
+```php
 This will suppress output of the PDF file, and display data on the browser such as:
-{% endhighlight %}
 
-{% highlight php %}
+```
+
+```php
 Generated in 0.45 seconds
 
 Compiled in 0.46 seconds (total)
@@ -74,7 +76,8 @@ Peak Memory usage 10.25MB
 PDF file size 37kB
 
 Number of fonts 6
-{% endhighlight %}
+
+```
 
 # See Also
 

@@ -11,7 +11,7 @@ each letter uses a letterhead for page one then plain paper for the remaining pa
 
 ## Method 1
 
-{% highlight php %}
+```php
 <?php
 
 $header = '<!--mpdf
@@ -87,11 +87,12 @@ $mpdf->WriteHTML('<pagebreak page-selector="letterhead" />');
 $mpdf->WriteHTML($letter);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Method 2
 
-{% highlight php %}
+```php
 <?php
 
 $header = '<!--mpdf
@@ -170,4 +171,5 @@ $mpdf->WriteHTML($letter);
 $mpdf->WriteHTML($letter);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```

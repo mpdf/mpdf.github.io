@@ -9,7 +9,7 @@ modification_time: 2015-08-05T12:00:32+00:00
 If you get nothing but a blank screen on your browser, it may be because there is a script error. 
 Turn on debugging at the start of your script:
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -30,7 +30,8 @@ try {
 	echo $e->getMessage();
 }
 
-{% endhighlight %}
+
+```
 
 See also <a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">Known issues</a> and 
 <a href="{{ "/troubleshooting/corrupt-pdf-file.html" | prepend: site.baseurl }}">Corrupt PDF file</a>.

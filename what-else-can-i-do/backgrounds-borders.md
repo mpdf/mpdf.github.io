@@ -39,7 +39,7 @@ Firefox 3 starts the tiling position 0 inside the border. mPDF complies with CSS
 
 (mPDF >= 5.1) Gradients can be defined as background-image: both the Mozilla or the draft CSS3 syntax are supported e.g.:
 
-{% highlight css %}
+```css
 background: -moz-repeating-linear-gradient(red, blue 20px, red 40px)
 
 background-image: -moz-repeating-linear-gradient(red, blue 20px, red 40px)
@@ -47,7 +47,8 @@ background-image: -moz-repeating-linear-gradient(red, blue 20px, red 40px)
 background: linear-gradient(top, #c7cdde, #f0f2ff);
 
 background-image: linear-gradient(top, #c7cdde, #f0f2ff);
-{% endhighlight %}
+
+```
 
 CSS3/Mozilla gradients in mPDF support: multiple colour-stops, opacity, repeating-gradients, and a number of options
 for defining the gradient axis (linear gradients) or shape and extent (radial gradients)
@@ -65,18 +66,20 @@ For more details see:
 Background gradient can be set as a linear or radial gradient between two colours. Background gradients can be set on
 all block elements e.g. P, DIV, H1-H6, as well as @page and on BODY.
 
-{% highlight css %}
+```css
 background-gradient: linear #c7cdde #f0f2ff 0 1 0 0.5;
-{% endhighlight %}
+
+```
 
 The four numbers are coordinates in the form (x1, y1, x2, y2) which defines the gradient vector. x and y are values from
 0 to 1, where 1 represents the height or width of the box as it is printed.
 
 <img src="/files/images/linear_gradient_coords.jpg" alt="linear_gradient_coords.jpg" width="355" height="291" />
 
-{% highlight css %}
+```css
 background-gradient: radial #00FFFF #FFFF00 0.5 0.5 0.5 0.5 0.65;
-{% endhighlight %}
+
+```
 
 The five numbers are coordinates in the form (x1, y1, x2, y2, r) where (x1, y1) is the starting point of the gradient
 with color1, (x2, y2) is the center of the circle with color2, and r is the radius of the circle. (x1, y1) should be
@@ -110,33 +113,37 @@ radius. If there is no slash, then the values set both radii equally. The four v
 the order top-left, top-right, bottom-right, bottom-left. If bottom-left is omitted it is the same as top-right.
 If bottom-right is omitted it is the same as top-left. If top-right is omitted it is the same as top-left.
 
-{% highlight css %}
+```css
 border-radius: 4em;
-{% endhighlight %}
+
+```
 
 would be equivalent to
 
-{% highlight css %}
+```css
 border-top-left-radius:     4em;
 border-top-right-radius:    4em;
 border-bottom-right-radius: 4em;
 border-bottom-left-radius:  4em;
-{% endhighlight %}
+
+```
 
 and
 
-{% highlight css %}
+```css
 border-radius: 2em 1em 4em / 0.5em 3em;
-{% endhighlight %}
+
+```
 
 would be equivalent to
 
-{% highlight css %}
+```css
 border-top-left-radius:     2em 0.5em;
 border-top-right-radius:    1em 3em;
 border-bottom-right-radius: 4em 0.5em;
 border-bottom-left-radius:  1em 3em;
-{% endhighlight %}
+
+```
 
 ## Border for In-line elements
 
@@ -153,15 +160,16 @@ border-radius set - as required.
 
 # Background clipping
 
-{% highlight css %}
+```css
 background-clip : padding-box | border-box (default=border-box)
-{% endhighlight %}
+
+```
 
 defines whether the background is painted to the inside or outside edge of the borders.
 
 # Example
 
-{% highlight css %}
+```css
 div.rounded {
     border:1mm dashed #220044;
     background-color: #f0f2ff;
@@ -169,4 +177,5 @@ div.rounded {
     background-clip: border-box;
     padding: 1em;
 }
-{% endhighlight %}
+
+```

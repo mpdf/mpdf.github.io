@@ -18,14 +18,15 @@ or <acronym title="Right-to-Left document, used for Hebrew and Arabic languages"
 This base/document directionality is <acronym title="Left-to-Right document, used for most langauges">LTR</acronym>
 by default, and can be set by any of the following:
 
-{% highlight php %}
+```php
 <?php
 $mpdf->SetDirectionality('rtl');
 
 <html dir="rtl"> or <html style="direction: rtl;">
 
 <body dir="rtl"> or <body style="direction: rtl;">
-{% endhighlight %}
+
+```
 
 Base direction is an inherited CSS property, so will affect all content, unless direction is specified elswhere.
 
@@ -33,15 +34,17 @@ Base direction is an inherited CSS property, so will affect all content, unless 
 
 Direction can be set for any HTML block elements e.g. `<div><p><table><ul>` etc using HTML or CSS:
 
-{% highlight html %}
+```html
 <div style="direction: rtl;">
-{% endhighlight %}
+
+```
 
 or
 
-{% highlight css %}
+```css
 div.right { direction: rtl; }
-{% endhighlight %}
+
+```
 
 Block-level direction *may* affect text alignment, and will also influence text reversal in
 <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text.
@@ -173,17 +176,18 @@ The following are equivalent methods:
 
 EMBED
 : 
-{% highlight php %}
+```php
 <span dir="rtl">...</span>
 
 &amp;#x202B;...&amp;#x202C;
 
 <span style="direction: rtl; unicode-bidi: embed">...</span>
-{% endhighlight %}
+
+```
 
 OVERRIDE
 : 
-{% highlight php %}
+```php
 <bdo dir="rtl">...</bdo>
 
 &amp;#x202E;...&amp;#x202C;
@@ -191,11 +195,12 @@ OVERRIDE
 <span dir="rtl" style="unicode-bidi: bidi-override">...</span>
 
 <span style="direction: rtl; unicode-bidi: bidi-override">...</span>
-{% endhighlight %}
+
+```
 
 ISOLATE
 : 
-{% highlight php %}
+```php
 <bdi dir="ltr">...</bdi>
 
 &amp;#x2067;...&amp;#x2069;
@@ -203,11 +208,12 @@ ISOLATE
 <span dir="rtl" style="unicode-bidi: isolate">...</span>
 
 <span style="direction: rtl; unicode-bidi: isolate">...</span>
-{% endhighlight %}
+
+```
 
 First Strong Isolate (FSI)
 : 
-{% highlight php %}
+```php
 <bdi>...</bdi>
 
 <bdi dir="auto">...</bdi>
@@ -217,7 +223,8 @@ First Strong Isolate (FSI)
 <span dir="rtl" style="unicode-bidi: plaintext">...</span>
 
 <span style="direction: rtl; unicode-bidi: plaintext">...</span>
-{% endhighlight %}
+
+```
 
 ## First strong isolate (FSI)
 
@@ -225,17 +232,19 @@ FSI is useful when including text within a paragraph where the directionality of
 if you are printing out a catalogue from a database of book titles and the number of readers, when some book titles
 are in right-to-left script, you may use this template:
 
-{% highlight html %}
+```html
 <li>Title: {TITLE} - {READERS} readers</li>
-{% endhighlight %}
+
+```
 
 This would result in the following:
 - Title: Alice in Wonderland - 12390 readers
 - Title: עליסה בארץ הפלאות, סיפור-ילדים מאת לואיס קרול - 17890 readers
 
-{% highlight html %}
+```html
 <li>Title: <bdi>{TITLE}</bdi> - {READERS} readers</li>
-{% endhighlight %}
+
+```
 
 Using BDI will result in the following:
 - Title: Alice in Wonderland - 12390 readers

@@ -13,7 +13,7 @@ deleted at some point.
 
 example_userinput.php
 
-{% highlight html %}
+```html
 <html>
 <body>
 	<form action="example_userinput2.php" method="post" enctype="multipart/form-data">
@@ -30,11 +30,12 @@ example_userinput.php
 		</form>
 </body>
 </html>
-{% endhighlight %}
+
+```
 
 example_userinput2.php
 
-{% highlight php %}
+```php
 <?php
 
 if (($_FILES["file"]["type"] == "image/gif" || $_FILES["file"]["type"] == "image/jpeg") && $_FILES["file"]["size"] < 20000) {
@@ -59,11 +60,12 @@ $html = '<html>
 
 echo $html;
 
-{% endhighlight %}
+
+```
 
 example_userinput3.php
 
-{% highlight php %}
+```php
 <?php
 
 require __DIR__ . '/vendor/autoload.php';
@@ -79,4 +81,5 @@ $html ='<html>
 
 $mpdf->WriteHTML($html);
 $mpdf->Output();
-{% endhighlight %}
+
+```

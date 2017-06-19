@@ -42,7 +42,7 @@ the characters. This variable sets the width of the line and thus the "weight" o
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -56,7 +56,8 @@ $mpdf->WriteHTML('<p style="font-family: mysimplefont">**Hello World**<p>');
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 <div class="alert alert-info" role="alert" markdown="1">
 	**Note:** False bold text has the same character widths as the normal text.

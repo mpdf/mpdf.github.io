@@ -12,7 +12,7 @@ which should start with "%PDF" and instead it gets some text like an error messa
 
 To show error message(s):
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -21,11 +21,12 @@ $mpdf->debug = true;
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 Also, you should always use try/catch block for a `\Mpdf\MpdfException` to find out more:
 
-{% highlight php %}
+```php
 <?php
 try {
     $mpdf = new mPDF();
@@ -36,4 +37,5 @@ try {
     // Process the exception, log, print etc.
     echo $e->getMessage();
 }
-{% endhighlight %}
+
+```

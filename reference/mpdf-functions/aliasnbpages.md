@@ -27,7 +27,7 @@ Set the value for the variable string <a href="{{ "/reference/mpdf-variables/ali
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -38,18 +38,20 @@ There are [pagetotal] pages in this document
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 Example #2
 
-{% highlight php %}
+```php
 <?php
 $mpdf->AliasNbPages('[pagetotal]');
 
 is the exact equivalent of:
 
 $mpdf->aliasNbPg = '[pagetotal]';
-{% endhighlight %}
+
+```
 
 # See Also
 

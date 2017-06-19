@@ -18,9 +18,10 @@ the mPDF program to denote the core symbol, dingbat and arial characters.
 
 If you want to hide mPDF custom tags from a browser, enclose any mPDF code within:
 
-{% highlight php %}
+```php
 <!--mpdf  ..  anything you want to write ...  mpdf-->
-{% endhighlight %}
+
+```
 
 As these are the standard comment tags recognised by every browser, this will create valid HTML which should output 
 correctly in any circumstances. mPDF will strip away the <span class="parameter">$&lt;!--mpdf</span> tag and any 
@@ -35,21 +36,24 @@ enclosed code.
 Most browsers will ignore (self-closing) tags that are not recognised, but &lt;htmlpageheader&gt; and 
 &lt;htmlpagefooter&gt; are different, as they contain innerHTML e.g.
 
-{% highlight php %}
+```php
 <htmlpageheader name="phname">HTML code in here</htmlpageheader>
-{% endhighlight %}
+
+```
 
 The enclosed innerHTML will be output by a browser, so you need to hide it; either use the special comment 
 tags as above, or an alternative is to use CSS, e.g. add to your stylesheet
 
-{% highlight css %}
+```css
 htmlpageheader { display : none; }
 htmlpagefooter { display : none; }
-{% endhighlight %}
+
+```
 
 Yet another way is to use in-line CSS:
 
-{% highlight html %}
+```html
 <htmlpageheader name="phname" style="display: none;">HTML code in here</htmlpageheader>
-{% endhighlight %}
+
+```
 

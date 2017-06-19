@@ -20,8 +20,9 @@ Use a font like `hannomb` or `sun-extb` if available
 
 Example:
 
-{% highlight php %}
+```php
 <?php
 
 $this->backupSIPFont = 'sun-extb';
-{% endhighlight %}
+
+```

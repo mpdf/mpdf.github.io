@@ -154,7 +154,7 @@ Annotations cannot be moved or deleted by the reader
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -163,11 +163,12 @@ $mpdf->Annotation("Text annotation example");
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output('filename.pdf');
-{% endhighlight %}
+
+```
 
 Example #2
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -185,7 +186,8 @@ $mpdf->Annotation(
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output('filename.pdf');
-{% endhighlight %}
+
+```
 
 # See Also
 

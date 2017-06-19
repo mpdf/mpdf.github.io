@@ -24,11 +24,12 @@ It is the users responsibility to check compliance if this is essential.
 You can make mPDF produce mPDF/X-1a:2003 compliant files by setting a `PDFX`
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>:
 
-{% highlight php %}
+```php
 <?php
 
 $this->PDFX = true;
-{% endhighlight %}
+
+```
 
 ## Colorspaces and ICC Profiles
 
@@ -56,11 +57,12 @@ You can change the color profile used by mPDF by specifying `ICCProfile`
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a> as 
 a path to your ICC profile:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->ICCProfile = __DIR__ . '/SWOP2006_Coated5v2';
-{% endhighlight %}
+
+```
 
 ## Fonts
 
@@ -103,11 +105,12 @@ Some problems can be fixed by mPDF, but will cause a change to the appearance of
 generate warning messages. Once you have assessed the warnings, you can direct mPDF to make these changes automatically 
 by setting in your script:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->PDFXauto = true; // Overrides warnings making changes when possible to force PDFX-1a compliance
-{% endhighlight %}
+
+```
 
 The following issues will cause a warning message when you try to generate a PDFX file:
 

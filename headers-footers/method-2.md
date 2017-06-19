@@ -18,7 +18,7 @@ headers/footers before writing to the document.
 
 ## Example #1 - Single-sided document
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -39,11 +39,12 @@ $mpdf->SetHTMLFooter('
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Example #2 - Double-sided document
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -79,7 +80,8 @@ $mpdf->SetHTMLFooter('
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # Changing Header/Footer during the document
 
@@ -100,7 +102,7 @@ Therefore to use any <span class="smallblock">RUNTIME</span> method you need to:
 
 ## Example #1
 
-{% highlight php %}
+```php
 <?php
 // First ensure that you are on an Even page
 $mpdf->AddPage('','E');
@@ -129,11 +131,12 @@ $mpdf->SetHTMLFooter('
 $mpdf->WriteHTML('Rest of the document');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ## Example #2 - Turning a Header/Footer off
 
-{% highlight php %}
+```php
 <?php
 // If you want the changes to start on an ODD page
 $mpdf->AddPage('','E');
@@ -143,7 +146,8 @@ $mpdf->SetHTMLFooter();
 $mpdf->WriteHTML('No-Header page');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # Table of Contents
 
@@ -151,7 +155,7 @@ Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Co
 it is strongly recommended that you use one of the <span class="smallblock">NAMED</span> methods. 
 Here for the record is how you would do it:
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -190,11 +194,12 @@ $mpdf->SetHTMLFooter('<div style="text-align: right;">Main - {PAGENO}</div>','E'
 $mpdf->WriteHTML('Main part of document...');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 ...and for historical reference, using deprecated TOC function:
 
-{% highlight php %}
+```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
@@ -245,7 +250,8 @@ $mpdf->TOC(
 $mpdf->WriteHTML('Main part of document...');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # See Also
 - <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>

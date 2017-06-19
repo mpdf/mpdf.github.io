@@ -31,7 +31,7 @@ No attributes
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -45,7 +45,8 @@ Next column...
 ');
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # See Also
 

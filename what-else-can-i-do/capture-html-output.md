@@ -8,7 +8,7 @@ modification_time: 2015-08-05T12:00:21+00:00
 
 One way of outputting a webpage to mPDF without re-writing your scripts too much, is to buffer the output:
 
-{% highlight php %}
+```php
 <?php
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
@@ -27,5 +27,6 @@ ob_end_clean();
 // send the captured HTML from the output buffer to the mPDF class for processing
 $mpdf->WriteHTML($html);
 $mpdf->Output();
-{% endhighlight %}
+
+```
 

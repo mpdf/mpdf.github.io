@@ -31,7 +31,7 @@ You could obviously also hide the page numbering by redefining a header or foote
 
 ## Example #1
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -55,7 +55,8 @@ $mpdf->WriteHTML('Section 3 - Starting with page a');
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 ## Changing page numbering from the start of the document
 
@@ -76,7 +77,7 @@ In a complex document you could suppress the page numbering from the start for t
 number to 1, and set the style as lowercase Roman (i,ii,iii) for the foreword and introduction; then reset the
 style to decimal for the rest of the document:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
@@ -100,16 +101,18 @@ $mpdf->WriteHTML('Your Book text');
 
 $mpdf->Output();
 
-{% endhighlight %}
+
+```
 
 <p>If using the initial  <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>
 causes problems (a blank first page), an alternative way to do this is:
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->PageNumSubstitutions[] = ['from' => 1, 'reset' => 0, 'type' => 'I', 'suppress' => 'on'];
-{% endhighlight %}
+
+```
 
 # See Also
 

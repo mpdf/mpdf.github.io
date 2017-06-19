@@ -30,11 +30,12 @@ can give ugly results:
 
 You can keep columns as they are i.e. 1st column will finish page then start on second, by setting
 
-{% highlight php %}
+```php
 <?php
 
 $mpdf->KeepColumns = true;
-{% endhighlight %}
+
+```
 
 ## Limitations
 

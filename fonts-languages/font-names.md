@@ -22,12 +22,13 @@ look for a "mPDF font-family name" of 'trebuchetms'.
 Next it will look for a translation in `$this->fonttrans` in the `$config` constructor parameter. Imagine that we also
 wished to recognise 'Trebuchet', we would add:
 
-{% highlight php %}
+```php
 <?php
 $this->fonttrans = array(
     'trebuchet' => 'trebuchetms',
 );
-{% endhighlight %}
+
+```
 
 mPDF font-family names should therefore always be lower-case and contain no spaces. When mPDF needs to refer to a specific
 variant (bold, italic etc.) it will use the mPDF font-family name (lowercase) followed by `B`, `I`, or `BI` (uppercase).
@@ -45,7 +46,7 @@ To make a font available to mPDF, you need to specify the Truetype .ttf font fil
 
 These should be defined in `$config` constructor parameter as an array:
 
-{% highlight php %}
+```php
 <?php
 $this->fontdata = [
     "trebuchetms" => [
@@ -55,7 +56,8 @@ $this->fontdata = [
         'BI' => "trebucbi.ttf",
     ],
 ];
-{% endhighlight %}
+
+```
 
 Each font-family must have a Regular (`'R'`) file defined - the others (Bold `'B'`, Italic `'I'`, bold-italic `'BI'`) are optional.
 

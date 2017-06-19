@@ -56,7 +56,7 @@ Returns a text string.
 
 # Examples
 
-{% highlight php %}
+```php
 <?php
 
 // Require composer autoload
@@ -80,7 +80,8 @@ $mpdf->charset_in='windows-1252';
 $mpdf->WriteHTML($text, 2);
 
 $mpdf->Output();
-{% endhighlight %}
+
+```
 
 # See Also
 
