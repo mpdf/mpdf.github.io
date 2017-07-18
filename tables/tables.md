@@ -68,11 +68,7 @@ for a particular table e.g.  `<table autosize="1">` or by setting the variable f
 
 # Repeating Table Header row on new page
 
-If a table is split onto more than one page, the first row of the table will be repeated at the top of the new page if either:
-
-`<table repeat_header="1">` or
-
-`<thead>` or `<tfoot>` is defined
+If a table is split onto more than one page, the first row of the table will be repeated at the top of the new page if `<thead>` or `<tfoot>` is defined
 
 # Error reporting
 
