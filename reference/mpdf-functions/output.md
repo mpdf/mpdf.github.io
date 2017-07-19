@@ -6,8 +6,6 @@ permalink: /reference/mpdf-functions/output.html
 modification_time: 2015-08-05T12:00:50+00:00
 ---
 
-(FPDF)
-
 Output – Finalise the document and send it to specified destination
 
 # Description
@@ -22,11 +20,13 @@ Send the document to a given destination: browser, file or string. In the case o
 # Parameters
 
 <span class="parameter">$filename</span>
+
 : The name of the file. If not specified, the document will be sent to the browser (destination `\Mpdf\Output\Destination::INLINE`).
 
-  <span class="smallblock">BLANK</span> or omitted: `doc.pdf`
+  <span class="smallblock">BLANK</span> or omitted: `'doc.pdf'`
 
 <span class="parameter">$dest</span>
+
 : Destination where to send the document. Use class constants from `\Mpdf\Output\Destination` for better readability
   and understandability
 

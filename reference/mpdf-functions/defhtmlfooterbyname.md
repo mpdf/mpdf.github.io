@@ -33,10 +33,12 @@ Define an HTML page footer with a given name. Named footers can be referenced an
 # Parameters
 
 <span class="parameter">$name</span>
-: User-defined name for the footer. If <span class="parameter">$name</span> = <span class="smallblock">BLANK</span> the
+
+: User-defined name for the footer. If <span class="parameter">$name</span>`= ''` (blank) the
   name `_default` is used.
 
 <span class="parameter">$html</span>
+
 : This parameter specifies the content of the page footer as a string of valid HTML code.
 
   <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>

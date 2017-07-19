@@ -20,6 +20,7 @@ Adobe Reader, these values will determine the initial appearance and layout.
 # Parameters
 
 <span class="parameter">$zoom</span>
+
 : This parameter specifies the magnification (zoom) of the display when the document is opened.
   
   **Values** (case-sensitive)
@@ -36,6 +37,7 @@ Adobe Reader, these values will determine the initial appearance and layout.
     : Display at a percentage zoom (e.g. `90` will display at 90% zoom)
   
 <span class="parameter">$layout</span>
+
 : Specify the page layout to be used when the document is opened.
   
   **Values** (case-sensitive)

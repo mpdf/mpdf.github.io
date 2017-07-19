@@ -17,21 +17,27 @@ Draws a rectangle with rounded corners directly to the PDF document at the speci
 # Parameters
 
 `$x`
+
 : Abscissa of left edge of box - value in millimeters
 
 `$y`
+
 : Ordinate of top edge of box - value in millimeters
 
 `$w`
+
 : Width of the box - in millimeters
 
 `$h`
+
 : Width of the box - in millimeters
 
 `$radius`
+
 : Radius of the rounded corners
 
 `$style`
+
 : Box style
 
   **Values**: 
@@ -39,4 +45,4 @@ Draws a rectangle with rounded corners directly to the PDF document at the speci
   * `'F'` - fill; 
   * `'DF'` or `'FD'` - draw and fill
 
-  Default = `''` i.e. border, no fill
+  Default: `''` i.e. border, no fill

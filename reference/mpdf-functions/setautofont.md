@@ -64,6 +64,7 @@ but note that `SetAutoFont()` also:
 # Parameters
 
 <span class="parameter">$flag</span>
+
 : This parameter specifies which languages are auto-detected. Either an integer or one of the defined constants can be used.
 
   `SetAutoFont(0)` will turn off any auto-detection.

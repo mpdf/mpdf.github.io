@@ -26,39 +26,37 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 # Parameters
 
 <span class="parameter">$usedivletters</span>
+
 : Defines whether to divide index entries starting with the same letter, using a (large) letter as a heading.
 
-  <span class="smallblock">DEFAULT</span>: 1
+  <span class="smallblock">DEFAULT</span>: `1`
 
   **Values**
-  1
-  : show dividing letters in the Index
+  * `1` : show dividing letters in the Index
+  * `0` : do not show dividing letters in the Index
 
-  0
-  : do not show dividing letters in the Index
-
-  <span class="smallblock">BLANK</span> or omitted uses a default value of 1
+  <span class="smallblock">BLANK</span> or omitted uses a default value of `1`
 
 <span class="parameter">$uselinking</span>
+
 : Specify whether to add hyperlinks (internal links) to the entries in the document Index.
 
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
+  <span class="smallblock">DEFAULT</span>: `false`
 
   **Values**
-  <span class="smallblock">TRUE</span> or 1
-  : add links to Index
-
-  <span class="smallblock">BLANK</span> or omitted, 0 or <span class="smallblock">FALSE</span>
-  : do not add links to the Index
+  * `true` or `1`: add links to Index
+  * <span class="smallblock">BLANK</span> or omitted, `0` or `false`: do not add links to the Index
 
 
 <span class="parameter">$indexCollationLocale</span>
+
 : Set a Locale to determine the overall sort order of index entries e.g. `en_GB.utf8`. Available options are determined 
   by the locales available in your system configuration. Always use a utf-8 locale.
 
   <span class="smallblock">BLANK</span> or omitted uses current locale set in your system.
 
 <span class="parameter">$indexCollationGroup</span>
+
 : If you have set your index to use Dividing letters, this value will determine how letters are grouped under a dividing 
   letter. Values should be selected from the files in directory <span class="filename">/data/collations/</span> e.g. 
   `English_United_Kingdom`.

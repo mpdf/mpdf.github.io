@@ -25,6 +25,7 @@ Set a page header.
 
 # Parameters
 <span class="parameter">$header</span>
+
 : This parameter specifies the content of the page header. It can accept a string or array.
   
   <span class="smallblock">DEFAULT</span>: `array()`
@@ -64,7 +65,7 @@ Set a page header.
           Subarray with following entries:
           * `'content'`: <span class="smallblock">TEXT STRING</span> 
           * `'font-size'`: <span class="smallblock">FLOAT</span> font size in **pts**
-          * `'font-style'`: `B` \| `I` \| `BI` | <span class="smallblock">BLANK STRING</span>
+          * `'font-style'`: `B` \| `I` \| `BI` \| <span class="smallblock">BLANK STRING</span>
           * `'font-family'`: Any available font-family  
           * `'color'`: CSS `#RRGGBB` string 
         * `'line'`: `0` \| `1` - specify whether to draw a line above the Header
@@ -137,6 +138,7 @@ Set a page header.
       ```
   
 <span class="parameter">$side</span>
+
 : Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>
   pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
   
@@ -151,6 +153,7 @@ Set a page header.
 
 
 <span class="parameter">$write</span>
+
 : If `true`, it forces the Header to be written immediately to the current page. Use if
   the header is being set after the new page has been added.
   

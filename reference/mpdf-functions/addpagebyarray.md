@@ -16,19 +16,25 @@ void **AddPageByArray** ([ array <span class="parameter">$arr</span> ])
 
 Add a new page to the document using an array of parameters which are all optional. 
 
-The parameter <span class="parameter">type</span> can specify certain conditions which determine how many pages are added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional page-break (`'type' => "E"` or `"O"`) will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>); a page-break with `'type' => "NEXT-ODD"` or `"NEXT-EVEN"` will add one or two pages as required to make the current page match the type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).
+The parameter <span class="parameter">type</span> can specify certain conditions which determine how many pages are 
+added. If writing a <span class="smallblock">DOUBLE-SIDED</span> document, a conditional page-break (`'type' => "E"` or `"O"`) 
+will add a new page only if required to make the current page match the type (i.e. <span class="smallblock">ODD</span> 
+or <span class="smallblock">EVEN</span>); a page-break with `'type' => "NEXT-ODD"` or `"NEXT-EVEN"` will add one or 
+two pages as required to make the current page match the 
+type (i.e. <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>).
 
 Number of pages added:
 
-<table class="table"> <tbody>
+<table class="table">
+<tbody>
 <tr>
-  <td><span class="parameter">'type'</span></td>
-  <td><span class="smallblock">SINGLE-SIDED</span></td>
-  <td>
+  <th><span class="parameter">'type'</span></th>
+  <th><span class="smallblock">SINGLE-SIDED</span></th>
+  <th>
   <span class="smallblock">DOUBLE-SIDED</span>
   <br/><br/>Currently <span class="smallblock">ODD</span> page
-  </td>
-  <td><br/><br/>Currently <span class="smallblock">EVEN</span> page</td>
+  </th>
+  <th><br/><br/>Currently <span class="smallblock">EVEN</span> page</th>
 </tr>
 <tr>
   <td><span class="smallblock">BLANK</span></td>
@@ -37,30 +43,39 @@ Number of pages added:
   <td>1</td>
 </tr>
 <tr>
-  <td>O or ODD</td>
+  <td markdown="1">
+  `'O'` or `'ODD'`
+  </td>
   <td>0</td>
   <td>0</td>
   <td>1</td>
 </tr>
 <tr>
-  <td>E or EVEN</td>
+  <td markdown="1">
+  `'E'` or `'EVEN'`
+  </td>
   <td>0</td>
   <td>1</td>
   <td>0</td>
 </tr>
 <tr>
-  <td>NEXT-ODD</td>
+  <td markdown="1">
+  `'NEXT-ODD'`
+  </td>
   <td>1</td>
   <td>2</td>
   <td>1</td>
 </tr>
 <tr>
-  <td>NEXT-EVEN</td>
+  <td markdown="1">
+  `'NEXT-EVEN'`
+  </td>
   <td>1</td>
   <td>1</td>
   <td>2</td>
 </tr>
-</tbody> </table>
+</tbody>
+</table>
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** If no new page is added, the other parameters will be ignored e.g. resetting page numbers/styles, 
@@ -70,36 +85,40 @@ Number of pages added:
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. 
-  Prior to this, it was only possible to reset it to 1.
+  Prior to this, it was only possible to reset it to `1`.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** The description below uses the same parameter names as used in AddPage(), but these were not 
-  recognised in mPDF &lt; 5.4  The examples use different parameter names. From mPDF >=5.4 both are supported. 
+  **Note:** The description below uses the same parameter names as used in `AddPage()`, but these were not 
+  recognised in mPDF < 5.4  The examples use different parameter names. From mPDF >= 5.4 both are supported. 
   See below for a list of alternatives.
 </div>
 
 # Parameters
 
-<span class="parameter">orientation</span> => L|P
+<span class="parameter">orientation</span> => `L|P`
+
 : This attribute specifies the orientation of the new page.
 
   <span class="smallblock">BLANK</span> or omitted leaves the current orientation unchanged
 
   **Values** (case-insensitive)
 
-  L *or* landscape
+  `'L'` or `'landscape'`
   : Landscape
 
-  P *or* portrait
+  `'P'` or `'portrait'`
   : Portrait
 
-<span class="parameter">type</span> => E|O|even|odd|next-odd|next-even
-: If <span class="parameter">type</span> is specified as `E` or `O` when writing 
+<span class="parameter">type</span> => `E|O|even|odd|next-odd|next-even`
+
+: If <span class="parameter">type</span> is specified as `'E'` or `'O'` when writing 
   a <span class="smallblock">DOUBLE-SIDED</span> document, the page-break is conditional; 
   a new page will only be added if necessary to meet the specified condition. 
 
-  If <span class="parameter">type</span> is specified as "NEXT-ODD" or "NEXT-EVEN" when writing a <span class="smallblock">DOUBLE-SIDED</span> document, either one or two pages are added as necessary to meet the specified condition.
+  If <span class="parameter">type</span> is specified as `'NEXT-ODD'` or `'NEXT-EVEN'` when writing 
+  a <span class="smallblock">DOUBLE-SIDED</span> document, either one or two pages are added as 
+  necessary to meet the specified condition.
 
   If not writing a <span class="smallblock">DOUBLE-SIDED</span> document, a page-break `'type' => "E"` or `"O"` will be ignored.
 
@@ -107,47 +126,50 @@ Number of pages added:
 
   **Values** (case-insensitive)
 
-  O *or* ODD
+  `'O'` or `'ODD'`
   : Add a new page if required to make current page an <span class="smallblock">ODD</span> one.
 
-  E *or* EVEN
+  `'E'` or `'EVEN'`
   : Add a new page if required to make current page an <span class="smallblock">EVEN</span> one.
 
-  NEXT-ODD
+  `'NEXT-ODD'`
   : Add one or two pages as required to make the current page <span class="smallblock">ODD</span>.
 
-  NEXT-EVEN
+  `'NEXT-EVEN'`
   : Add one or two pages as required to make the current page <span class="smallblock">EVEN</span>.
 
-<span class="parameter">resetpagenum</span> => 1 - ∞
+<span class="parameter">resetpagenum</span> => `1 - ∞`
+
 : Sets/resets the document page number to <span class="parameter">resetpagenum</span> starting on the new page. 
   (The value must be a positive integer).
 
-  <span class="smallblock">BLANK</span> or omitted or 0 leaves the current page number sequence unchanged.
+  <span class="smallblock">BLANK</span> or omitted or `0` leaves the current page number sequence unchanged.
 
-<span class="parameter">pagenumstyle</span> => 1|A|a|I|i
+<span class="parameter">pagenumstyle</span> => `1|A|a|I|i`
+
 : Sets/resets the page numbering style (values as for lists)
 
   <span class="smallblock">BLANK</span> or omitted leaves the current page number style unchanged.
 
   **Values** (case-sensitive)
 
-  `1`
+  `'1'`
   : Decimal - 1,2,3,4...
 
-  `A`
+  `'A'`
   : Alpha uppercase - A,B,C,D...
 
-  `a`
+  `'a'`
   : Alpha lowercase - a,b,c,d...
 
-  `I`
+  `'I'`
   : Roman uppercase - I, II, III, IV...
 
-  `i`
+  `'i'`
   : Roman lowercase - i, ii, iii, iv...
 
-<span class="parameter">suppress</span> => on|off|1|0
+<span class="parameter">suppress</span> => `on|off|1|0`
+
 : `'suppress' => 'on'` will suppress document page numbers from the new page 
   onwards (until `'suppress' => 'off'` is used)
 
@@ -155,10 +177,10 @@ Number of pages added:
 
   **Values** (case-insensitive)
 
-  1 *or* on
+  `1` or `'on'`
   : Suppress (hide) page numbers from the new page forwards.
 
-  0 *or* off
+  `0` or `'off'`
   : Show page numbers from the new page forwards.
 
 <span class="parameter">margin-left</span>
@@ -167,18 +189,21 @@ Number of pages added:
 <span class="parameter">margin-bottom</span>
 <span class="parameter">margin-header</span>
 <span class="parameter">margin-footer</span>
+
 : Sets the page margins from the new page forwards.
 
   All values should be specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-  If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
+  If you are writing a <span class="smallblock">DOUBLE-SIDED</span> document, the margin values will be used 
+  for <span class="smallblock">ODD</span> pages; left and right margins will be mirrored for <span class="smallblock">EVEN</span> pages.
 
-  <span class="smallblock">BLANK</span> or omitted leaves the current margin unchanged. NB "0" (zero) will set the margin to zero.
+  <span class="smallblock">BLANK</span> or omitted leaves the current margin unchanged. NB `0` (zero) will set the margin to zero.
 
 <span class="parameter">odd-header-name</span>
 <span class="parameter">even-header-name</span>
 <span class="parameter">odd-footer-name</span>
 <span class="parameter">even-footer-name</span>
+
 : Selects a header or footer by name to use from the new page forwards. The header/footer must already have been defined 
   using:
   * <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a> 
@@ -186,9 +211,11 @@ Number of pages added:
   * <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>
     or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>.
 
-  If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
+  If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> 
+  will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
-  <span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB <span class="smallblock">BLANK</span> will not unset the header. Set <span class="parameter">odd-header-value</span> to -1 to turn the header off.
+  <span class="smallblock">BLANK</span> or omitted leaves the header/footer unchanged. NB <span class="smallblock">BLANK</span> 
+  will not unset the header. Set <span class="parameter">odd-header-value</span> to `-1` to turn the header off.
 
   <div class="alert alert-info" role="alert" markdown="1">
     **Note:** You must add the prefix `html_` before the name if it is a HTMLHeader.
@@ -198,6 +225,7 @@ Number of pages added:
 <span class="parameter">even-header-value</span>
 <span class="parameter">odd-footer-value</span>
 <span class="parameter">even-footer-value</span>
+
 : Specify whether to show or hide the named header or footer from the new page forwards. The header/footer must 
   already have been defined using:
   * <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefHeaderByName()</a>
@@ -205,19 +233,21 @@ Number of pages added:
   * <a href="{{ "/reference/mpdf-functions/deffooterbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>
     or <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>.
 
-  If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
+  If you are writing a <span class="smallblock">SINGLE-SIDED</span> document, the values for <span class="smallblock">ODD</span> 
+  will be used for all pages, and values for <span class="smallblock">EVEN</span> will be ignored.
 
-  <span class="smallblock">BLANK</span> or omitted or 0 leaves the header/footer state unchanged.
+  <span class="smallblock">BLANK</span> or omitted or `0` leaves the header/footer state unchanged.
 
   **Values** (case-insensitive)
 
-  1 *or* on
+  `1` or `'on'`
   : Start using the selected header/footer from the new page onwards.
 
-  -1 *or* off
+  `-1` or `'off'`
   : Start the selected header from the new page onwards.
 
 <span class="parameter">pageselector</span>
+
 : Select a named CSS @page.
 
   <span class="smallblock">BLANK</span> or omitted or leaves the CSS page unchanged.
@@ -225,25 +255,27 @@ Number of pages added:
   See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information
 
 <span class="parameter">sheet-size</span>
-: <span class="parameter">sheet-size</span> can be specified either as a pre-defined page size, or as an array of width and 
-  height in millimetres e.g. `array(210,297)`.
+
+: <span class="parameter">sheet-size</span> can be specified either as:
+  * a pre-defined page size, 
+  * or as an array of width and height in millimetres e.g. `array(210, 297)`.
 
   <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
 
   **Values** (case-insensitive)
 
-  * `A0` - `A10`, `B0` - `B10`, `C0` - `C10`
-  * `4A0`, `2A0`, `RA0` - `RA4`, `SRA0` - `SRA4`
-  * `Letter`, `Legal`, `Executive`, `Folio`
-  * `Demy`, `Royal`
-  * `A` (Type A paperback 111x178mm)
-  * `B` (Type B paperback 128x198mm)
+  * `'A0'` - `'A10'`, `'B0'` - `'B10'`, `'C0'` - `'C10'`
+  * `'4A0'`, `'2A0'`, `'RA0'` - `'RA4'`, `'SRA0'` - `'SRA4'`
+  * `'Letter'`, `'Legal'`, `'Executive'`, `'Folio'`
+  * `'Demy'`, `'Royal'`
+  * `'A'` (Type A paperback 111x178mm)
+  * `'B'` (Type B paperback 128x198mm)
 
-  All of the above values can be suffixed with `-L` to force a Landscape page orientation document e.g. `A4-L`
+  All of the above values can be suffixed with `'-L'` to force a Landscape page orientation document e.g. `'A4-L'`
 
   **Note:** If you use the array() form for <span class="parameter">sheet-size</span>, then you must:
   - specify the width less than the height i.e. the dimensions of the page in portrait orientation; 
-  - and explicitly define the <span class="parameter">orientation</span> as `L` or `P`
+  - and explicitly define the <span class="parameter">orientation</span> as `'L'` or `'P'`
 
 
 
@@ -270,76 +302,78 @@ Number of pages added:
 
 # Alternative parameter names
 
-<table class="table"> <tbody>
+<table class="table">
+<tbody>
 <tr>
-  <th>type</th>
-  <th>condition</th>
+  <td><span class="parameter">type</span></td>
+  <td><span class="parameter">condition</span></td>
 </tr>
 <tr>
-  <td>margin-left</td>
-  <td>mgl</td>
+  <td><span class="parameter">margin-left</span></td>
+  <td><span class="parameter">mgl</span></td>
 </tr>
 <tr>
-  <td>margin-right</td>
-  <td>mgr</td>
+  <td><span class="parameter">margin-right</span></td>
+  <td><span class="parameter">mgr</span></td>
 </tr>
 <tr>
-  <td>margin-top</td>
-  <td>mgt</td>
+  <td><span class="parameter">margin-top</span></td>
+  <td><span class="parameter">mgt</span></td>
 </tr>
 <tr>
-  <td>margin-bottom</td>
-  <td>mgb</td>
+  <td><span class="parameter">margin-bottom</span></td>
+  <td><span class="parameter">mgb</span></td>
 </tr>
 <tr>
-  <td>margin-header</td>
-  <td>mgh</td>
+  <td><span class="parameter">margin-header</span></td>
+  <td><span class="parameter">mgh</span></td>
 </tr>
 <tr>
-  <td>margin-footer</td>
-  <td>mgf</td>
+  <td><span class="parameter">margin-footer</span></td>
+  <td><span class="parameter">mgf</span></td>
 </tr>
 <tr>
-  <td>odd-header-name</td>
-  <td>ohname</td>
+  <td><span class="parameter">odd-header-name</span></td>
+  <td><span class="parameter">ohname</span></td>
 </tr>
 <tr>
-  <td>even-header-name</td>
-  <td>ehname</td>
+  <td><span class="parameter">even-header-name</span></td>
+  <td><span class="parameter">ehname</span></td>
 </tr>
 <tr>
-  <td>odd-footer-name</td>
-  <td>ofname</td>
+  <td><span class="parameter">odd-footer-name</span></td>
+  <td><span class="parameter">ofname</span></td>
 </tr>
 <tr>
-  <td>even-footer-name</td>
-  <td>efname</td>
+  <td><span class="parameter">even-footer-name</span></td>
+  <td><span class="parameter">efname</span></td>
 </tr>
 <tr>
-  <td>odd-header-value</td>
-  <td>ohvalue</td>
+  <td><span class="parameter">odd-header-value</span></td>
+  <td><span class="parameter">ohvalue</span></td>
 </tr>
 <tr>
-  <td>even-header-value</td>
-  <td>ehvalue</td>
+  <td><span class="parameter">even-header-value</span></td>
+  <td><span class="parameter">ehvalue</span></td>
 </tr>
 <tr>
-  <td>odd-footer-value</td>
-  <td>ofvalue</td>
+  <td><span class="parameter">odd-footer-value</span></td>
+  <td><span class="parameter">ofvalue</span></td>
 </tr>
 <tr>
-  <td>even-footer-value</td>
-  <td>efvalue</td>
+  <td><span class="parameter">even-footer-value</span></td>
+  <td><span class="parameter">efvalue</span></td>
 </tr>
 <tr>
-  <td>pageselector</td>
-  <td>pagesel</td>
+  <td><span class="parameter">pageselector</span></td>
+  <td><span class="parameter">pagesel</span></td>
 </tr>
 <tr>
-  <td>sheet-size</td>
-  <td>newformat</td>
+  <td><span class="parameter">sheet-size</span></td>
+  <td><span class="parameter">newformat</span></td>
 </tr>
-</tbody> </table>
+</tbody>
+</table>
 
 # Examples
 
@@ -492,7 +526,7 @@ $mpdf->Output();
 # Notes
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Unlike FPDF **AddPage()** or **AddPageByArray()** does not need to be called at the beginning 
+  **Note:** Unlike FPDF `AddPage()` or `AddPageByArray()` does not need to be called at the beginning 
   of the document if you are writing HTML code to the document. 
   <a href="{{ "/reference/codepages-glyphs/iso-8859-win-comparison-chart.html" | prepend: site.baseurl }}">WriteHTML()</a> 
   will automatically add the first page to a new document.
@@ -500,4 +534,5 @@ $mpdf->Output();
 
 # See Also
 
- * &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - Custom HTML tag - equivalent to **AddPage()** or **AddPageByArray()**
+ * &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt; - 
+   Custom HTML tag - equivalent to `AddPage()` or `AddPageByArray()`

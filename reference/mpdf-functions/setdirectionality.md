@@ -21,6 +21,7 @@ for more details. If `SetDirectionality('rtl')` is set, *Text Bidirectionality* 
 # Parameters
 
 <span class="parameter">$dir</span>
+
 : Defines the directionality of the document
   
   BLANK or omitted (or any value other than `'rtl'` or `'RTL'`) sets the default of `'ltr'`

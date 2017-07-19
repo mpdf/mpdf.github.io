@@ -34,10 +34,12 @@ Define a page header with a given name. Named headers can be referenced and set 
 # Parameters
 
 <span class="parameter">$name</span>
-: User-defined name for the header. If <span class="parameter">$name</span> = <span class="smallblock">BLANK</span> 
+
+: User-defined name for the header. If <span class="parameter">$name</span>`= ''` (blank)
   the name `_default` is used.
 
 <span class="parameter">$header</span>
+
 : This parameter specifies the content of the page header as an array.
 
   <span class="smallblock">DEFAULT</span>: array()
@@ -50,10 +52,10 @@ Define a page header with a given name. Named headers can be referenced and set 
     Subarray with following entries:
     * <span class="parameter">content</span>: <span class="smallblock">TEXT STRING</span>
     * <span class="parameter">font-size</span>: <span class="smallblock">FLOAT</span> font size in **pts**
-    * <span class="parameter">font-style</span>: B\|I\|BI\|<span class="smallblock">BLANK STRING</span>
+    * <span class="parameter">font-style</span>: `'B'` \| `'I'` \| `'BI'` \|<span class="smallblock">BLANK STRING</span>
     * <span class="parameter">font-family</span>: Any available font-family
     * <span class="parameter">color</span>: CSS `#RRGGBB` string
-  * <span class="parameter">line</span>: 0\|1 - specify whether to draw a line under the Header
+  * <span class="parameter">line</span>: `0` \| `1` - specify whether to draw a line under the Header
 
   ```php
   <?php
