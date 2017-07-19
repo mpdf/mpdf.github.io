@@ -8,43 +8,44 @@ modification_time: 2016-25-06T07:30:29+00:00
 
 ## Script ends with no output
 
-1) Use a try/catch block for a `\Mpdf\MpdfException` to find out more:
+1.  Use a try/catch block for a `\Mpdf\MpdfException` to find out more:
 
-```php
-<?php
-try {
-	$mpdf = new mPDF();
-	$mpdf->WriteHTML('Hello World');
-	// Other code
-	$mpdf->Output();
-} catch (\Mpdf\MpdfException $e) { // Note: safer fully qualified exception name used for catch
-	// Process the exception, log, print etc.
-	echo $e->getMessage();
-}
+    ```php
+    <?php
+    try {
+        $mpdf = new mPDF();
+        $mpdf->WriteHTML('Hello World');
+        // Other code
+        $mpdf->Output();
+    } catch (\Mpdf\MpdfException $e) { // Note: safer fully qualified exception
+                                       //       name used for catch
+        // Process the exception, log, print etc.
+        echo $e->getMessage();
+    }
+    
+    ```
 
-```
-
-2) Enable error_reporting in your development environment or look into PHP error logs.
+2.  Enable error_reporting in your development environment or look into PHP error logs.
 
 ## Crashing with no error message whatsoever
 
-Ensure mbregex is enabled as part of mbstring. Apparently this is enabled by default when you enable mbstring in most
+Ensure `mbregex` is enabled as part of mbstring. Apparently this is enabled by default when you enable mbstring in most
 cases, however with cPanel and some other non-standard environments this might not be the case, so people have to
-explicitly look for and enable mbregex (i.e. compile PHP with `--enable-mbregex`.
+explicitly look for and enable `mbregex` (i.e. compile PHP with `--enable-mbregex`.
 
 ## Blank pages or some sections missing
 
-If you pass a large chunk of code to WriteHTML() whether as CSS styles or the main HTML code, you may get a blank
+If you pass a large chunk of code to `WriteHTML()` whether as CSS styles or the main HTML code, you may get a blank
 page output, or that section of code missing.
 
-The PHP function preg_replace() has a maximum string length it will parse (by default this is often about 100000
+The PHP function `preg_replace()` has a maximum string length it will parse (by default this is often about 100000
 characters). Over this, PHP silently returns a null value. So long strings of code will be replaced by nothing!
 
 You may be able to increase the value of
 <a href="http://www.php.net/manual/en/pcre.configuration.php#ini.pcre.backtrack-limit">pcre.backtrack_limit</a>
 at runtime if your system allows; alternatively, break your HTML into chunks and pass them one at a time to `WriteHTML()`
 
-pcre.backtrack_limit is configurable from PHP >= 5.2.0
+`pcre.backtrack_limit` is configurable from PHP >= 5.2.0
 
 The default value was increased from 100,000 to 1,000,000 from PHP >= 5.3.7
 
@@ -68,17 +69,17 @@ A timeout due to Apache configuration `TimeOut` will cause the script to termina
 increasing the PHP time limit etc.
 
 See also <a href="{{ "/troubleshooting/blank-screen.html" | prepend: site.baseurl }}">Blank screen</a> for a bug when
-using localhost
+using localhost.
 
 # Problems fixed from mPDF >= 5.0
 
 ## Indic Fonts - ASCII characters
 
-The Indic fonts (added mPDF 4.0) do not contain the basic ASCII characters: a-z, A-Z, and in some: ' and $
+The Indic fonts (added mPDF 4.0) do not contain the basic ASCII characters: `a-z`,`A-Z`, and in some: `'` and `$`.
 
 The font files have been edited to add these characters if you are using embedded font subsets (so all ASCII chars show),
 but they will not be available if you are not using subsets. In this case you need to mark up HTML text with
-<span class="parameter">$lang</span> or <span class="parameter">$font-family</span>.
+`lang` or `font-family`.
 
 ## Adobe Reader 7 error reading file with embedded SVG image
 

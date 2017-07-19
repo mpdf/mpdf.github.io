@@ -11,7 +11,6 @@ If you have problems with PDF files printing on PostScript printers, this may be
 
 ```php
 <?php
-
 $mpdf->repackageTTF = false;
 
 ```

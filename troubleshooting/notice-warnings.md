@@ -13,6 +13,7 @@ If you get something like:
 you might need to suppress NOTICE warnings using e.g.
 
 ```php
+<?php
 $former = error_reporting(E_ALL ^ E_NOTICE);
 
 // or
@@ -23,9 +24,10 @@ $former = error_reporting(0);
 
 Include this at the start of your script before instantiating and running mPDF.
 
-It is a good practice to return the former error_reporting after
+It is a good practice to return the former `error_reporting` after
 
 ```php
+<?php
 error_reporting($former);
 
 ```

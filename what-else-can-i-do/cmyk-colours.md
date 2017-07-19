@@ -12,7 +12,11 @@ Functions - `SetDrawColor()`, `SetTextColor()` and `SetFillColor()` all take an 
 
 If defined this will interpret the input as CMYK color i.e.
 
-`SetDrawColor(15, 82, 0, 10)`
+```php
+<?php
+$mpdf->SetDrawColor(15, 82, 0, 10)
 
-NB all values are out of 100 - not 255 as for RGB
+```
+
+NB all values are out of `100` - not `255` as for RGB
 

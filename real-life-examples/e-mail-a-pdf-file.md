@@ -10,14 +10,11 @@ This example shows how to create a PDF file and e-mail it:
 
 ```php
 <?php
-
 // require composer autoload
 require __DIR__ . '/vendor/autoload.php';
-
 $mpdf = new \Mpdf\Mpdf(); // Create new mPDF Document
 
 // Beginning Buffer to save PHP variables and HTML tags
-
 ob_start();
 
 $day = date('d');
@@ -29,15 +26,12 @@ echo "Hello World
 Today is $month $day, $year";
 
 $html = ob_get_contents();
-
 ob_end_clean();
 
-// Here convert the encode for UTF-8, if you prefer the ISO-8859-1 just change for $mpdf->WriteHTML($html);
-
+// Here convert the encode for UTF-8, if you prefer 
+// the ISO-8859-1 just change for $mpdf->WriteHTML($html);
 $mpdf->WriteHTML(utf8_encode($html));
-
 $content = $mpdf->Output('', 'S');
-
 
 ```
 
@@ -48,16 +42,14 @@ use a 3rd party library.
 
 First, require Swift mailer with command
 
-```
+```bash
 $ composer require swiftmailer/swiftmailer
 ```
 
-Then, create a Swift Message and send it with a Transport wrapping PHP mail() function.
+Then, create a Swift Message and send it with a Transport wrapping PHP `mail()` function.
 
 ```php
-
 <?php
-
 // Create instance of Swift_Attachment with our PDF file
 $attachment = new Swift_Attachment($content, 'filename.pdf', 'application/pdf');
 
@@ -78,7 +70,6 @@ $mailer->send($message);
 
 // Then, you can send PDF to the browser
 $mpdf->Output($filename ,'I');
-
 
 ```
 

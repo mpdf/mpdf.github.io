@@ -23,62 +23,48 @@ to use MathJax first to render the equation, and MathJax needs to be configured 
 demonstrate, start with a sample page such as
 <a href="http://www.mathjax.org/demos/tex-samples/">http://www.mathjax.org/demos/tex-samples/ </a>
 
-1) Open the HTML page in your browser (allowing MathJax to render the equations).
+1. Open the HTML page in your browser (allowing MathJax to render the equations).
 
-2) Right click over one of the equations and select: Math Settings &gt;&gt; Math Renderer &gt;&gt; SVG (This re-renders
-all the equations n the page in SVG format),
+2. Right click over one of the equations and select: Math Settings >> Math Renderer >> SVG (This re-renders
+   all the equations in the page in SVG format),
 
-3) Save the page including the javascript-processed code. In Firefox, select File &gt;&gt; Save Page As... (This doesn't
-work in IE which only saves the original HTML code prior to processing).
+3. Save the page including the javascript-processed code. In Firefox, select File >> Save Page As... (This doesn't
+   work in IE which only saves the original HTML code prior to processing).
 
-4) Edit the file to make any necessary changes e.g. CSS stylesheets.
+4. Edit the file to make any necessary changes e.g. CSS stylesheets.
 
-5) Run the following script to produce your PDF document (assumes you saved the file as TeXSample.htm). This adjusts the
-SVG code produced to allow mPDF to display it:
+5. Run the following script to produce your PDF document (assumes you saved the file as `TeXSample.htm`). This adjusts the
+   SVG code produced to allow mPDF to display it:
 
-```php
-<?php
+   ```php
+   <?php
+   $mpdf = new \Mpdf\Mpdf('');
+  
+   $html = file_get_contents('TeXSample.htm');
+   preg_match('/<svg[^>]*>\s*(<defs.*?>.*?<\/defs>)\s*<\/svg>/', $html, $m);
+   $defs = $m[1];
+   $html = preg_replace('/<svg[^>]*>\s*<defs.*?<\/defs>\s*<\/svg>/', '', $html);
+   $html = preg_replace('/(<svg[^>]*>)/', "\\1".$defs, $html);
+   preg_match_all('/<svg([^>]*)style="(.*?)"/', $html, $m);
+  
+   for ($i = 0; $i < count($m[0]); $i++) {
+       $style=$m[2][$i];
 
-$mpdf = new \Mpdf\Mpdf('');
+       preg_match('/width: (.*?);/', $style, $wr);
+       $w = $mpdf->ConvertSize($wr[1], 0, $mpdf->FontSize) * $mpdf->dpi/25.4;
 
-$html = file_get_contents('TeXSample.htm');
+       preg_match('/height: (.*?);/', $style, $hr);
+       $h = $mpdf->ConvertSize($hr[1], 0, $mpdf->FontSize) * $mpdf->dpi/25.4;
+  
+       $replace = '<svg'.$m[1][$i].' width="'.$w.'" height="'.$h.'" style="'.$m[2][$i].'"';
+       $html = str_replace($m[0][$i], $replace, $html);
+   }
+  
+   $mpdf->WriteHTML($html);
+   $mpdf->Output();
+   exit;
 
-preg_match('/<svg[^>]*>\s*(<defs.*?>.*?<\/defs>)\s*<\/svg>/',$html,$m);
-
-$defs = $m[1];
-
-$html = preg_replace('/<svg[^>]*>\s*<defs.*?<\/defs>\s*<\/svg>/','',$html);
-
-$html = preg_replace('/(<svg[^>]*>)/',"\\1".$defs,$html);
-
-preg_match_all('/<svg([^>]*)style="(.*?)"/',$html,$m);
-
-for ($i=0;$i<count($m[0]);$i++) {
-
-    $style=$m[2][$i];
-
-    preg_match('/width: (.*?);/',$style, $wr);
-
-    $w = $mpdf->ConvertSize($wr[1],0,$mpdf->FontSize) * $mpdf->dpi/25.4;
-
-    preg_match('/height: (.*?);/',$style, $hr);
-
-    $h = $mpdf->ConvertSize($hr[1],0,$mpdf->FontSize) * $mpdf->dpi/25.4;
-
-    $replace = '<svg'.$m[1][$i].' width="'.$w.'" height="'.$h.'" style="'.$m[2][$i].'"';
-
-    $html = str_replace($m[0][$i],$replace,$html);
-
-}
-
-$mpdf->WriteHTML($html);
-
-$mpdf->Output();
-
-exit;
-
-
-```
-
-See an example of output: <a href="https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm">https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm</a>
+   ```
+  
+  See an example of output: <a href="https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm">https://github.com/mpdf/mpdf-examples/blob/master/MathJaxSample.htm</a>
 
