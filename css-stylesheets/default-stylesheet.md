@@ -14,82 +14,87 @@ which is based on the recommended default values for HTML4 -
 The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.
 
 
-**mPDF >= 7.0** It is possible to define custom default CSS file by `defaultCssFile` configuration key.
+**mPDF >= 7.0** 
 
-**mPDF >= 6.0** A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for
-Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags.
-This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added
-to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following
-text describes behaviour prior to mPDF v6.0)
+: It is possible to define custom default CSS file by 
+  <a href="{{ "/reference/mpdf-variables/defaultcssfile.html" | prepend: site.baseurl }}">defaultCssFile</a> configuration key.
 
-**mPDF >= 2.2** will load an optional file <span class="filename">mpdf.css</span> (located in the data directory of
-mPDF installation root).
+**mPDF >= 6.0** 
 
-The file should be a valid CSS stylesheet, but will only support changing properties at element level i.e. P, DIV,
-TABLE, TD and not P.classname.
+: A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for
+  Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags.
+  This is always read (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added
+  to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following
+  text describes behaviour prior to mPDF v6.0)
 
-The mpdf.css file supplied is inactive as it has all the entries commented out by `/* ... */`
+**mPDF >= 2.2** 
 
-The following values will restore behaviour of pre-4.2 versions to 4.2:
-
-```css
-    img { margin: 0.83em 0; vertical-align: bottom; }
-    table { margin: 0.5em; }
-    textarea { vertical-align: top; }
-
-```
-
-The following values will restore behaviour of 2.2 versions:
-
-```css
-    body {
-        font-family: sans-serif;
-    }
-    a {
-        color: #000066;
-        text-decoration: none;
-    }
-    table {
-        border-collapse: collapse;
-    }
-    thead {
-        vertical-align: bottom;
-        text-align: center;
-        font-weight: bold;
-    }
-    tfoot {
-        text-align: center;
-        font-weight: bold;
-    }
-    th {
-        text-align: left;
-        padding-left: 0.35em;
-        padding-right: 0.35em;
-        padding-top: 0.35em;
-        padding-bottom: 0.35em;
-        vertical-align: top;
-    }
-    td {
-        padding-left: 0.35em;
-        padding-right: 0.35em;
-        padding-top: 0.35em;
-        padding-bottom: 0.35em;
-        vertical-align: top;
-    }
-    img {
-        margin: 0.2em;
-        vertical-align: middle;
-    }
-
-```
+: will load an optional file `[mpdf root]/data/mpdf.css` (located in the data directory of
+  mPDF installation root).
+  
+  The file should be a valid CSS stylesheet, but will only support changing properties at element level i.e. P, DIV,
+  TABLE, TD and not P.classname.
+  
+  The `mpdf.css` file supplied is inactive as it has all the entries commented out by `/* ... */`
+  
+  The following values will restore behaviour of pre-4.2 versions to 4.2:
+  
+  ```css
+  img { margin: 0.83em 0; vertical-align: bottom; }
+  table { margin: 0.5em; }
+  textarea { vertical-align: top; }
+  ```
+  
+  The following values will restore behaviour of 2.2 versions:
+  
+  ```css
+  body {
+      font-family: sans-serif;
+  }
+  a {
+      color: #000066;
+      text-decoration: none;
+  }
+  table {
+      border-collapse: collapse;
+  }
+  thead {
+      vertical-align: bottom;
+      text-align: center;
+      font-weight: bold;
+  }
+  tfoot {
+      text-align: center;
+      font-weight: bold;
+  }
+  th {
+      text-align: left;
+      padding-left: 0.35em;
+      padding-right: 0.35em;
+      padding-top: 0.35em;
+      padding-bottom: 0.35em;
+      vertical-align: top;
+  }
+  td {
+      padding-left: 0.35em;
+      padding-right: 0.35em;
+      padding-top: 0.35em;
+      padding-bottom: 0.35em;
+      vertical-align: top;
+  }
+  img {
+      margin: 0.2em;
+      vertical-align: middle;
+  }
+  ```
 
 ## Prior to mPDF 2.2
 
-The original default styles (mPDF <=2.0) were extensively changed with improvements in CSS handling in mPDF 2.0
+The original default styles (mPDF <= 2.0) were extensively changed with improvements in CSS handling in mPDF 2.0
 (this particularly changed table borders, and table cell alignment, as well as a serif default font-family).
 
-In order to allow backwards compatibilty, a secondary "stylesheet" - a variable $defaultCSS2 was introduced in
-mPDF 2.0 - and the option to load this on intiating mPDF:
+In order to allow backwards compatibility, a secondary "stylesheet" - a configuration variable `$defaultCSS2` was introduced in
+mPDF 2.0 - and the option to load this on initiating mPDF:
 
 ```php
 <?php

@@ -11,6 +11,7 @@ modification_time: 2017-03-08T10:02:23+02:00
 Official installation method is via composer and its packagist package [mpdf/mpdf](https://packagist.org/packages/mpdf/mpdf).
 
 ```bash
+
 $ composer require mpdf/mpdf
 
 ```
@@ -30,8 +31,8 @@ $mpdf->Output();
 
 ```
 
-All [configuration directives](https://mpdf.github.io/reference/mpdf-variables/overview.html) can
-be set by the `$config` parameter of the constructor.
+All <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">configuration directives</a> can
+be set by the `$config` parameter of the <a href="{{ "/reference/mpdf-functions/construct.html" | prepend: site.baseurl }}">constructor</a>.
 
 It is recommended to set custom temporary directory via `tempDir` configuration key.
 The directory must have write permissions (mode `775` is recommended).
@@ -67,8 +68,8 @@ $mpdf = new Mpdf();
 ```
 
 The class now accepts only one parameter, an array of configuration directives. See
-[configuration directives](https://mpdf.github.io/reference/mpdf-variables/overview.html) for reference.
+<a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">configuration directives</a> for reference.
 
 If you wish to install additional fonts please see the notes in
-<a href="{{ "/fonts-languages/fonts-in-mpdf-7-x.html" | prepend: site.baseurl }}">Fonts &amp; Languages</a>
+<a href="{{ "/fonts-languages/fonts-in-mpdf-7-x.html" | prepend: site.baseurl }}">Fonts & Languages</a>
 for further instructions.

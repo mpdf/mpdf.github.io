@@ -12,9 +12,9 @@ mPDF is pre-configured to use `<path to mpdf>/tmp/` as a directory to write temp
 As the default temp directory will be in vendor folder, is is advised to set custom temporary directory.
 
 If you wish to use a different directory for temporary files, you should define `tempDir` key in constructor
-`$config` parameter
+`$config` parameter.
 
-for `mPDF < 7.0`, there are constants `_MPDF_TEMP_PATH` and `_MPDF_TTFONTDATAPATH` which can be used to alter
+for mPDF < 7.0, there are constants `_MPDF_TEMP_PATH` and `_MPDF_TTFONTDATAPATH` which can be used to alter
 default temporary files directories.
 
 ```php

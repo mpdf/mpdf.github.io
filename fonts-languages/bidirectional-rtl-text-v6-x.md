@@ -175,56 +175,60 @@ Bi-directional text is supported in mPDF.
 The following are equivalent methods:
 
 EMBED
-: 
-```php
-<span dir="rtl">...</span>
 
-&amp;#x202B;...&amp;#x202C;
-
-<span style="direction: rtl; unicode-bidi: embed">...</span>
-
-```
+: Example
+  ```php
+  <span dir="rtl">...</span>
+  
+  &amp;#x202B;...&amp;#x202C;
+  
+  <span style="direction: rtl; unicode-bidi: embed">...</span>
+  
+  ```
 
 OVERRIDE
-: 
-```php
-<bdo dir="rtl">...</bdo>
 
-&amp;#x202E;...&amp;#x202C;
-
-<span dir="rtl" style="unicode-bidi: bidi-override">...</span>
-
-<span style="direction: rtl; unicode-bidi: bidi-override">...</span>
-
-```
+: Example
+  ```php
+  <bdo dir="rtl">...</bdo>
+  
+  &amp;#x202E;...&amp;#x202C;
+  
+  <span dir="rtl" style="unicode-bidi: bidi-override">...</span>
+  
+  <span style="direction: rtl; unicode-bidi: bidi-override">...</span>
+  
+  ```
 
 ISOLATE
-: 
-```php
-<bdi dir="ltr">...</bdi>
 
-&amp;#x2067;...&amp;#x2069;
-
-<span dir="rtl" style="unicode-bidi: isolate">...</span>
-
-<span style="direction: rtl; unicode-bidi: isolate">...</span>
-
-```
+: Example
+  ```php
+  <bdi dir="ltr">...</bdi>
+  
+  &amp;#x2067;...&amp;#x2069;
+  
+  <span dir="rtl" style="unicode-bidi: isolate">...</span>
+  
+  <span style="direction: rtl; unicode-bidi: isolate">...</span>
+  
+  ```
 
 First Strong Isolate (FSI)
-: 
-```php
-<bdi>...</bdi>
 
-<bdi dir="auto">...</bdi>
-
-&amp;#x2068;...&amp;#x2069;
-
-<span dir="rtl" style="unicode-bidi: plaintext">...</span>
-
-<span style="direction: rtl; unicode-bidi: plaintext">...</span>
-
-```
+: Example
+  ```php
+  <bdi>...</bdi>
+  
+  <bdi dir="auto">...</bdi>
+  
+  &amp;#x2068;...&amp;#x2069;
+  
+  <span dir="rtl" style="unicode-bidi: plaintext">...</span>
+  
+  <span style="direction: rtl; unicode-bidi: plaintext">...</span>
+  
+  ```
 
 ## First strong isolate (FSI)
 

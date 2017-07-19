@@ -18,7 +18,8 @@ methods have been added.
   
   
   Default non-HTML headers will not clash with HTML headers, but named non-HTML headers WILL clash with 
-  (and overwrite) HTML headers of the same (equivalent) name e.g. `html_MyFooter` (HTML) == `MyFooter` (non-HTML).
+  (and overwrite) HTML headers of the same (equivalent) name   
+  e.g. `MyFooter` (non-HTML) **overwrites** `html_MyFooter` (HTML).
 </div>
 
 # Types
@@ -38,7 +39,7 @@ to define styles. Style changes (font-size, font-family, color) can be defined b
 
 **HTML**
 : <span class="smallblock">HTML</span> headers/footers are written in standard HTML code. They can only be 
-defined outside HTML block tags (except &lt;body&gt;).
+defined outside HTML block tags (except `<body>`).
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** **HTML** headers/footers are more intensive of processing time and memory. This probably

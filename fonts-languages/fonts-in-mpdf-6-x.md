@@ -20,7 +20,7 @@ in Truetype format are also supported.
 
 ## Example
 
-You have 2 font files "Frutiger-Normal.ttf" and "FrutigerObl-Normal.ttf" which you want to be available in mPDF,
+You have 2 font files `Frutiger-Normal.ttf` and `FrutigerObl-Normal.ttf` which you want to be available in mPDF,
 and you will refer to them in HTML/CSS as "Frutiger".
 
 1. Upload the 2 files to the fonts directory (<span class="filename">/ttfonts</span>)
@@ -196,11 +196,11 @@ needs to be referenced:
 
 ```html
 <div style="font-family:sun-extA;"> 
-    &amp;#40706; &amp;#40712; &amp;#40727; &amp;#x2320f; &amp;#x23225; &amp;#40742; 
-    &amp;#40743; &amp;#x2322f; &amp;#x23231; &amp;#40761; &amp;#40772; &amp;#x23232; 
-    &amp;#x23233; &amp;#40773; &amp;#40784; &amp;#x23234; &amp;#x23256; &amp;#40787; 
-    &amp;#40794; &amp;#x23262; &amp;#x23281; &amp;#40802; &amp;#40809; &amp;#x23289; 
-    &amp;#x2328a; 
+    &#40706; &#40712; &#40727; &#x2320f; &#x23225; &#40742; 
+    &#40743; &#x2322f; &#x23231; &#40761; &#40772; &#x23232; 
+    &#x23233; &#40773; &#40784; &#x23234; &#x23256; &#40787; 
+    &#40794; &#x23262; &#x23281; &#40802; &#40809; &#x23289; 
+    &#x2328a; 
 </div>
 
 ```
@@ -279,18 +279,18 @@ This is an example of HTML code containing CJK characters from both BMP and SIP,
 
 ```html
 <div style="font-family:mingliu;"> 
-    &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
-    &amp;#x23289; &amp;#x2328a; 
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
+    &#x23289; &#x2328a; 
 </div>
 
 <div style="font-family:mingliu_hkscs;"> 
-    &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
-    &amp;#x23289; &amp;#x2328a; 
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
+    &#x23289; &#x2328a; 
 </div>
 
 <div style="font-family:pmingliu;"> 
-    &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
-    &amp;#x23289; &amp;#x2328a; 
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
+    &#x23289; &#x2328a; 
 </div>
 
 ```

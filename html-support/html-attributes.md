@@ -17,8 +17,8 @@ Minimised attributes are not supported e.g. `<input type="checkbox" disabled />`
 XHTML specification is recommended for best compliance with mPDF.
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** The attributes `$class`, `$id` and `$style` are supported on most HTML tags: see
-    <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.
+  **Note:** The attributes `$class`, `$id` and `$style` are supported on most HTML tags: see
+  <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> for details.
 </div>
 
 <table class="table">
@@ -26,58 +26,46 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td rowspan="2">HTML, BODY and ALL recognised tags
             </td>
-            <td>lang*
-
-            </td>
-            <td><span class="smallblock">LANGUAGE-COUNTRY CODE</span> *
-
-            </td>
+            <td>lang* </td>
+            <td><span class="smallblock">LANGUAGE-COUNTRY CODE</span> *</td>
         </tr>
         <tr>
             <td>dir</td>
-            <td>rtl | ltr (mPDF >= 6.0)<span class="smallblock"></span></td>
+            <td>rtl | ltr (mPDF >= 6.0)</td>
         </tr>
         <tr>
             <td>HTML, BODY</td>
             <td>dir</td>
-            <td>rtl | ltr (mPDF >= 5.0)
-
-            </td>
+            <td>rtl | ltr (mPDF >= 5.0)</td>
         </tr>
         <tr>
             <td>P, DIV</td>
             <td>align</td>
-            <td>left | center | right | justify
-
-            </td>
+            <td>left | center | right | justify</td>
         </tr>
         <tr>
-            <td rowspan="10">TABLE       </td>
+            <td rowspan="10">TABLE</td>
             <td>border</td>
             <td>1 | 0</td>
         </tr>
         <tr>
-            <td>width
-
-            </td>
+            <td>width</td>
             <td><span class="smallblock">LENGTH</span></td>
         </tr>
         <tr>
             <td>align</td>
-            <td>
-
-                left | center | right | char char was added in mPDF 5.7
-
-            </td>
+  <td markdown="1">
+  left \| center \| right \| char 
+  
+  char was added in mPDF 5.7
+  </td>
         </tr>
         <tr>
             <td>char</td>
-            <td>
-
-                Used in conjunction with align="char". Default if omitted is period "." Non-ASCII characters can be
-                defined with HTML entities e.g. &amp;middot; or &amp;#183; As per HTML 4 spec. Added mPDF 5.7
-
-            </td>
+  <td markdown="1">  
+  Used in conjunction with `align="char"`. Default if omitted is period `"."` Non-ASCII characters can be
+  defined with HTML entities e.g. `&middot;` or `&#183;` As per HTML 4 spec. Added mPDF 5.7  
+  </td>
         </tr>
         <tr>
             <td>bgcolor</td>
@@ -92,24 +80,25 @@ XHTML specification is recommended for best compliance with mPDF.
             <td><span class="smallblock">LENGTH</span></td>
         </tr>
         <tr>
-            <td>*(repeat_header)*</td>
-            <td>1   (removed from mPDF >= 5.4; use &lt;thead&gt;)
-
-            </td>
+            <td><i>(repeat_header)</i></td>
+  <td markdown="1">
+  1   (removed from mPDF >= 5.4; use `<thead>`)
+  </td>
         </tr>
         <tr>
-            <td>*autosize*</td>
-            <td>
-
-                <span class="smallblock">FLOAT</span>  value >= 0 Shrinks a table to fit if width is too small to allow
-                complete words to fit. The value (must be >=1) determines the maximum allowable factor to shrink i.e.
-                autosize="2" will allow the font-size to be reduced to a minimum of 1/2 the original size. A value of 1
-                prevents automatic resizing of the table. (custom attribute)
-
-            </td>
+            <td><i>autosize</i></td>
+  <td markdown="1">  
+  <span class="smallblock">FLOAT</span>  
+  
+  * The value >= 0 shrinks a table to fit if width is too small to allow
+  complete words to fit.  
+  * The value (must be >=1) determines the maximum allowable factor to shrink i.e.
+  `autosize="2"` will allow the font-size to be reduced to a minimum of 1/2 the original size.   
+  * A value of 1 prevents automatic resizing of the table. (custom attribute)  
+  </td>
         </tr>
         <tr>
-            <td>*rotate*</td>
+            <td><i>rotate</i></td>
             <td>90 | -90</td>
         </tr>
         <tr>
@@ -118,12 +107,8 @@ XHTML specification is recommended for best compliance with mPDF.
             <td>#rrggbb</td>
         </tr>
         <tr>
-            <td rowspan="8">TD, TH
-
-            </td>
-            <td>width
-
-            </td>
+            <td rowspan="8">TD, TH</td>
+            <td>width</td>
             <td><span class="smallblock">LENGTH</span></td>
         </tr>
         <tr>
@@ -136,7 +121,7 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>valign</td>
-            <td>top  |middle | bottom</td>
+            <td>top | middle | bottom</td>
         </tr>
         <tr>
             <td>bgcolor</td>
@@ -157,9 +142,7 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td>OL, UL</td>
             <td>font-size</td>
-            <td><span class="smallblock">FONT-SIZE</span>
-
-            </td>
+            <td><span class="smallblock">FONT-SIZE</span></td>
         </tr>
         <tr>
             <td rowspan="2">OL</td>
@@ -177,9 +160,7 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td rowspan="3">IMG</td>
-            <td>width, height
-
-            </td>
+            <td>width, height</td>
             <td><span class="smallblock">LENGTH</span></td>
         </tr>
         <tr>
@@ -187,18 +168,16 @@ XHTML specification is recommended for best compliance with mPDF.
             <td><span class="smallblock">LENGTH</span></td>
         </tr>
         <tr>
-            <td>*rotate*</td>
-            <td>
-
-                90 | -90 | 180 90 = clockwise When width is specified e.g. width="3cm" this is applied to the rotated
-                image i.e. will be width 3cm after rotating
-
-            </td>
+            <td><i>rotate</i></td>
+  <td markdown="1">
+  90 \| -90 \| 180, where  90 = clockwise 
+  
+  When width is specified e.g. `width="3cm"` this is applied to the rotated
+  image i.e. will be width 3 cm after rotating
+  </td>
         </tr>
         <tr>
-            <td rowspan="3">HR
-
-            </td>
+            <td rowspan="3">HR</td>
             <td>width</td>
             <td>nn%</td>
         </tr>
@@ -213,9 +192,7 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td rowspan="3">FONT</td>
             <td>face</td>
-            <td><span class="smallblock">FONT-FAMILY</span>
-
-            </td>
+            <td><span class="smallblock">FONT-FAMILY</span></td>
         </tr>
         <tr>
             <td>size</td>
@@ -228,7 +205,11 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td rowspan="2">FORM</td>
             <td>method</td>
-            <td>get | post  (default=post)  (mPDF >= 5.3)</td>
+  <td markdown="1">
+  get \| post  
+  
+  Default: post (mPDF >= 5.3)
+  </td>
         </tr>
         <tr>
             <td>action</td>
@@ -253,16 +234,22 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>spellcheck</td>
-            <td>true | false [HTML5] Default=false (mPDF >= 5.3)</td>
+  <td markdown="1">
+  true \| false [HTML5]
+  
+  Default: false (mPDF >= 5.3)
+  </td>
         </tr>
         <tr>
             <td>onChange</td>
-            <td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)</td>
+  <td markdown="1">
+  <span class="smallblock">JAVASCRIPT</span> 
+  
+  In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)
+  </td>
         </tr>
         <tr>
-            <td rowspan="3">TEXTAREA, SELECT, INPUT
-
-            </td>
+            <td rowspan="3">TEXTAREA, SELECT, INPUT</td>
             <td>disabled</td>
             <td>disabled</td>
         </tr>
@@ -272,20 +259,24 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>name</td>
-            <td>
-
-                <span class="smallblock">TEXT</span>   Field names in Active Forms must only contain letters, numbers,
-                colon(:), undersore(_) or hyphen(-). (This is largely as per HTML spec, but cannot contain period(.) as
-                this is part of PDF spec for name heirarchies)
-
-            </td>
+  <td markdown="1">  
+  <span class="smallblock">TEXT</span>   
+  
+  Field names in Active Forms must only contain letters, numbers,
+  colon(`:`), undersore(`_`) or hyphen(`-`). (This is largely as per HTML spec, but cannot contain period(`.`) as
+  this is part of PDF spec for name hierarchies)  
+  </td>
         </tr>
         <tr>
             <td rowspan="6">SELECT</td>
             <td>size</td>
-            <td><span class="smallblock">INTEGER</span> size = n rows visible. Default=1
-
-            </td>
+  <td markdown="1">
+  <span class="smallblock">INTEGER</span> 
+  
+  size = n, n rows visible. 
+  
+  Default: 1
+  </td>
         </tr>
         <tr>
             <td>multiple</td>
@@ -297,21 +288,29 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>spellcheck</td>
-            <td>
-
-                true | false [HTML5] Default=false (mPDF >= 5.3) Only if also editable and size=1</td>
+  <td markdown="1">
+  true \| false [HTML5] 
+  
+  Default: false (mPDF >= 5.3)  
+  Only if also editable and size=1
+  </td>
         </tr>
         <tr>
             <td>editable</td>
-            <td>
-
-                editable  [HTML5] Default=false (mPDF >= 5.3) Only if size=1
-
-            </td>
+  <td markdown="1">
+  editable  [HTML5] 
+  
+  Default: false (mPDF >= 5.3)  
+  Only if size=1
+  </td>
         </tr>
         <tr>
             <td>onChange</td>
-            <td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)</td>
+  <td markdown="1">
+  <span class="smallblock">JAVASCRIPT</span>
+  
+  In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)
+  </td>
         </tr>
         <tr>
             <td rowspan="2">OPTION</td>
@@ -325,22 +324,20 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td>INPUT</td>
             <td>type</td>
-            <td>text | password | hidden | image | button | submit | reset | radio | checkbox
-
-            </td>
+            <td>text | password | hidden | image | button | submit | reset | radio | checkbox</td>
         </tr>
         <tr>
             <td rowspan="2">INPUT (text, password, hidden, image, button, submit, reset)</td>
             <td>size</td>
-            <td><span class="smallblock">INTEGER
-
-</span>size=n=width as number of characters</td>
+  <td markdown="1">
+  <span class="smallblock">INTEGER</span>
+  
+  size=n, width as number of characters
+  </td>
         </tr>
         <tr>
             <td>value</td>
-            <td><span class="smallblock">TEXT</span>
-
-            </td>
+            <td><span class="smallblock">TEXT</span></td>
         </tr>
         <tr>
             <td rowspan="5">INPUT (text, password)</td>
@@ -357,15 +354,19 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>spellcheck</td>
-            <td>
-
-                true | false [HTML5] Default=false (mPDF >= 5.3)
-
-            </td>
+  <td>
+  true \| false [HTML5] 
+  
+  Default: false (mPDF >= 5.3)
+  </td>
         </tr>
         <tr>
             <td>onChange</td>
-            <td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)</td>
+  <td markdown="1">
+  <span class="smallblock">JAVASCRIPT</span> 
+  
+  In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)
+  </td>
         </tr>
         <tr>
             <td rowspan="3">INPUT (image, button, submit, reset)</td>
@@ -378,42 +379,36 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>onClick</td>
-            <td><span class="smallblock">JAVASCRIPT</span> In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)</td>
+  <td markdown="1">
+  <span class="smallblock">JAVASCRIPT</span> 
+  
+  In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)
+  </td>
         </tr>
         <tr>
             <td>INPUT (button, submit, reset)</td>
-            <td>*noprint*</td>
-            <td>
-
-                noprint (mPDF >= 5.3)
-
-            </td>
+            <td><i>noprint</i></td>
+            <td>noprint (mPDF >= 5.3)</td>
         </tr>
         <tr>
-            <td>INPUT (radio, checkbox)
-
-            </td>
+            <td>INPUT (radio, checkbox)</td>
             <td>value</td>
-            <td>
-                <span class="smallblock">TEXT</span> In Active Forms value(s) for radio buttons and checkboxes are
-                required, and can only contain letters, numbers, colon(:), undersore(_), hyphen(-) or period(.)
-            </td>
+  <td markdown="1">
+  <span class="smallblock">TEXT</span> 
+  
+  In Active Forms value(s) for radio buttons and checkboxes are
+  required, and can only contain letters, numbers, colon(`:`), undersore(`_`), hyphen(`-`) or period(.)
+  </td>
         </tr>
         <tr>
             <td>DOTTAB</td>
-            <td>*outdent*</td>
+            <td><i>outdent</i></td>
             <td><span class="smallblock">LENGTH</span> (mPDF >= 5.7)</td>
         </tr>
         <tr>
             <td>METER</td>
-            <td>
-
-                value, max, min, low, high, optimum
-
-            </td>
-            <td><span class="smallblock">FLOAT</span> [HTML5 spec]
-
-            </td>
+            <td>value, max, min, low, high, optimum</td>
+            <td><span class="smallblock">FLOAT</span> [HTML5 spec]</td>
         </tr>
         <tr>
             <td>PROGRESS</td>
@@ -426,70 +421,78 @@ XHTML specification is recommended for best compliance with mPDF.
             <td><span class="smallblock">LENGTH</span></td>
         </tr>
         <tr>
-            <td>*type*</td>
-            <td>
-                Any alphanumeric string. If present, will select custom progress/meter formats - IF they have been
-                defined in `\Mpdf\Meter` class
-            </td>
+            <td><i>type</i></td>
+  <td markdown="1">
+  Any alphanumeric string. 
+  
+  If present, will select custom progress/meter formats - IF they have been
+  defined in `\Mpdf\Meter` class
+  </td>
         </tr>
     </tbody>
 </table>
 
-*<span class="parameter">$lang</span> is only recognised when the variable
+\* <span class="parameter">$lang</span> is only recognised when the variable
 <a href="{{ " /reference/mpdf-variables/uselang.html " | prepend: site.baseurl }}">$useLang</a> is set to
-<span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span> is <span class="smallblock">TRUE</span>)
+`true` (Default is `true`)
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** Table page-break-inside, autosize values and rotate are only respected for that set on first
-    level table of nested tables
+  **Note:** Table page-break-inside, autosize values and rotate are only respected for that set on first
+  level table of nested tables
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** Attributes like nowrap, disabled, multiple, readonly, selected, checked are only supported in
-    their formal/long form i.e. selected="selected"
+  **Note:** Attributes like `nowrap`, `disabled`, `multiple`, `readonly`, `selected` and `checked` are only supported in
+  their formal/long form i.e. `selected="selected"`
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for
-    <span class="parameter">$lang</span> according to the
-    <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g.
-    "en", "en-US", "fr", "zh-HK". The settings for these languages are defined in the
-    `\Mpdf\LangToFont` class. Other codes for character sets (or codepages) are recognised - see
-    <a href="{{ " /reference/mpdf-functions/construct.html " | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a>.
+  **Note:** <span class="smallblock">LANGUAGE-COUNTRY CODE</span> accepts codes for
+  <span class="parameter">$lang</span> according to the
+  <a href="http://www.w3.org/TR/1998/REC-html40-19980424/struct/dirlang.html#adef-lang">HTML specification</a>. e.g.
+  `"en"`, `"en-US"`, `"fr"`, `"zh-HK"`. The settings for these languages are defined in the
+  `\Mpdf\LangToFont` class. Other codes for character sets (or codepages) are recognised - see
+  <a href="{{ " /reference/mpdf-functions/construct.html " | prepend: site.baseurl }}">\Mpdf\Mpdf::__construct()</a>.
 </div>
 
 # Changelog
 
 <table class="table">
-    <thead>
-        <tr>
-            <th>Version</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>2.0</td>
-            <td>TD border="1" was supported
-                <=mPDF 1.3, but is not valid HTML and is now ignored</td>
-        </tr>
-        <tr>
-            <td> </td>
-            <td>TABLE align="..." with a rotated table - changed to set the alignment ignoring the rotation i.e. align=right sets the table to the right side of the page (looking as though it is bottom-aligned)</td>
-        </tr>
-        <tr>
-            <td>2.3</td>
-            <td><span class="parameter">$lang</span> was added.</td>
-        </tr>
-        <tr>
-            <td>4.0</td>
-            <td>Default value of <span class="parameter">$lang</span> changed to <span class="smallblock">TRUE</span></td>
-        </tr>
-        <tr>
-            <td>5.0</td>
-            <td><span class="parameter">$dir</span> was added to HTML and BODY
-            </td>
-        </tr>
-    </tbody>
+<thead>
+<tr>
+  <th>Version</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>2.0</td>
+  <td markdown="1">
+  TD `border="1"` was supported mPDF <= 1.3, but is not valid HTML and is now ignored
+  </td>
+</tr>
+<tr>
+  <td> </td>
+  <td markdown="1">
+  TABLE `align="..."` with a rotated table - changed to set the alignment ignoring the rotation 
+  i.e. `align="right"` sets the table to the right side of the page (looking as though it is bottom-aligned)
+  </td>
+</tr>
+<tr>
+  <td>2.3</td>
+  <td><span class="parameter">$lang</span> was added.</td>
+</tr>
+<tr>
+  <td>4.0</td>
+  <td markdown="1">
+  Default value of <span class="parameter">$lang</span> changed to `true`
+  </td>
+</tr>
+<tr>
+  <td>5.0</td>
+  <td><span class="parameter">$dir</span> was added to HTML and BODY
+</td>
+</tr>
+</tbody>
 </table>
 
