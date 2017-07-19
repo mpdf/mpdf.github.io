@@ -18,26 +18,33 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 # Values
 
-<span class="parameter">$useFixedTextBaseline= <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
+<span class="parameter">$useFixedTextBaseline</span> = `false`\|`true`
 
 **Values**
 
-*<span class="smallblock">FALSE</span>*: <span class="smallblock">DEFAULT</span> use the font metrics to set the position of the text baseline.
+* `false`: use the font metrics to set the position of the text baseline.
+* `true`: use a fixed value to set the position of the text baseline.
 
-<span class="smallblock">TRUE</span>: use a fixed value to set the position of the text baseline.
+Default: `false`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>6.0</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>6.0</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # See Also
 
-<a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a>
+* <a href="{{ "/what-else-can-i-do/line-height.html" | prepend: site.baseurl }}">Line-height</a>
 

@@ -16,14 +16,16 @@ Tells mPDF which Script to ignore when using `autoScriptToLang`.
 
 # Values
 
-<span class="parameter">$baseScript</span> = *<span class="smallblock">INTEGER</span>*<span class="smallblock"> </span>
+<span class="parameter">$baseScript</span> = *<span class="smallblock">INTEGER</span>*
 
 **Values**
 
-*<span class="smallblock">INTEGER</span>*: (<span class="smallblock">DEFAULT</span> = 1) Number representing the 
-script block to be ignored when using `autoScriptToLang`. It is set by default to "1" which is for Latin script. 
-In this mode, all scripts *except* Latin script are marked up with "lang" attribute. To select other scripts as the base, 
-see the `\Mpdf\Ucdn` class.
+* *<span class="smallblock">INTEGER</span>*:  Number representing the 
+  script block to be ignored when using `autoScriptToLang`. It is set by default to `1` which is for Latin script. 
+  In this mode, all scripts *except* Latin script are marked up with `lang=` attribute. To select other scripts as the base, 
+  see the `\Mpdf\Ucdn` class.
+
+Default: `1`
 
 # See Also
 

@@ -10,15 +10,19 @@ mPDF >= 2.0
 
 Keep with table
 
-Default false
+Default: `false`
 
-If true: function AdjustHTML() adds an attribute KEEP-WITH-TABLE to any &lt;table&gt; which is immediately preceded by a &lt;h1-6&gt; element.
+If `true`: function `AdjustHTML()` adds an attribute KEEP-WITH-TABLE to any `<table>` which is immediately preceded 
+by a `<h1-6>` element.
 
 This attempts to keep the heading and table together on one page.
 
-Can be used together with &lt;table style="page-break-inside: avoid;"&gt;
+Can be used together with `<table style="page-break-inside: avoid;">`
 
-Automatically sets the table to fit on one page (i.e. page-break-inside=avoid) if it is a rotated table.
+Automatically sets the table to fit on one page (i.e. `page-break-inside:avoid`) if it is a rotated table.
 
-Ignored if: Heading is longer than one line of text on the page, Columns are on, Keep-block-together active (i.e. page-break-inside=avoid for surrounding BLOCK).
+Ignored if: 
+* Heading is longer than one line of text on the page, 
+* Columns are on, 
+* Keep-block-together active (i.e. `page-break-inside:avoid` for surrounding BLOCK).
 

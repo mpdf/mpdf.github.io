@@ -20,60 +20,60 @@ backup font(s) specified in the variable in `backupSubsFont`
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** Prior to mPDF 5.0 useSubstitutions controlled the
-	behaviour of character substitution when using Adobe core fonts, and useSubstitutionsMB was used for character
-	susbstitution in multibyte/utf-8 documents. For mPDF >= 5.0 character substitution for documents using core fonts
-	is always enabled.
+  **Note:** Prior to mPDF 5.0 useSubstitutions controlled the
+  behaviour of character substitution when using Adobe core fonts, and useSubstitutionsMB was used for character
+  susbstitution in multibyte/utf-8 documents. For mPDF >= 5.0 character substitution for documents using core fonts
+  is always enabled.
 </div>
 
 # Values
 
-<span class="parameter">$useSubstitutions</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$useSubstitutions</span> =  `true`\|`false`
 
 **Values**
 
-<span class="smallblock">TRUE </span>: enable substitution
+* `true`: enable substitution
+* `false`: disable substitution
 
-<span class="smallblock">FALSE</span>: disable substitution
-
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
+Default: `false`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>4.2</td>
-<td>Variable was added. Controlled behaviour when using Adobe core fonts
-
-</td>
+  <th>Version</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>4.2</td>
+  <td>Variable was added. Controlled behaviour when using Adobe core fonts</td>
 </tr>
 <tr>
-<td>5.0</td>
-<td>Changed to control behaviour of multibyte documents</td>
+  <td>5.0</td>
+  <td>Changed to control behaviour of multibyte documents</td>
 </tr>
-</tbody> </table>
+</tbody>
+</table>
 
 # Example
 
 ```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
 $mpdf = new \Mpdf\Mpdf('UTF-8');
 
 $mpdf->useSubstitutions = true;
 
 $mpdf->WriteHTML("Hello World");
-
 $mpdf->Output();
 
 ```
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** This may add significantly to the processing time for large files.
+  **Note:** This may add significantly to the processing time for large files.
 </div>
 

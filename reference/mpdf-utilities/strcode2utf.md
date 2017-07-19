@@ -17,32 +17,31 @@ string **strcode2utf** ( string <span class="parameter">$text</span> [, boolean 
 Returns a UTF-8 encoded string.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** <code>strcode2utf()</code> is useful for preparing text to be
-	used as a Watermark, or for the metadata properties of Title, Author, Creator and Keywords - which require UTF-8
-	encoded strings with no entities.
+  **Note:** `strcode2utf()` is useful for preparing text to be
+  used as a Watermark, or for the metadata properties of Title, Author, Creator and Keywords - which require UTF-8
+  encoded strings with no entities.
 </div>
 
 # Parameters
 
 <span class="parameter">$text</span>
 
-The input string, containing HTML numerical entities e.g. &amp;#8123; or &amp;#x2022;
+: The input string, containing HTML numerical entities e.g. `&#8123;` or `&#x2022;`
 
 <span class="parameter">$low</span>
 
-Specifies whether to convert HTML numerical entities of ASCII characters (&lt;128).
-
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
-
-**Values**
-
-<span class="smallblock">TRUE</span>: Convert all HTML numerical entities to UTF-8 characters
-
-<span class="smallblock">FALSE</span>: Only convert characters above codepoint 127
+: Specifies whether to convert HTML numerical entities of ASCII characters (< 128).
+  
+  Default: `true`
+  
+  **Values**
+  
+  * `true`: Convert all HTML numerical entities to UTF-8 characters
+  * `false`: Only convert characters above codepoint 127
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** This function does not convert named character
-	entities like &amp;amp; &amp;quot; or &amp;raquo;
+  **Note:** This function does not convert named character
+  entities like `&amp;`, `&quot;` or `&raquo;`
 </div>
 
 # Return value
@@ -53,11 +52,10 @@ Returns a UTF-8 encoded string.
 
 ```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
-$wm = strcode2utf("&amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575; &amp;#1575;&amp;#1610;&amp;#1604;&amp;#1575;&amp;#1578; &amp;#1601;&amp;#1610;&amp;#1605;&amp;#1575;");
-
+$wm = strcode2utf("&#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575; 
+    &#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575;");
 $mpdf->SetWatermarkText($wm);
 
 $mpdf->showWatermark = true;

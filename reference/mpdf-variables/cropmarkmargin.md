@@ -12,5 +12,5 @@ Distance of crop mark from margin in mm
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: 8
+Default value: `8`
 

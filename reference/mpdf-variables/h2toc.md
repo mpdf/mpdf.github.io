@@ -12,9 +12,10 @@ modification_time: 2015-08-05T12:01:59+00:00
 
 boolean **h2toc**
 
-When a valid array is set, mPDF will automatically generate entries for a Table of Contents using all heading elements (H1 - H6) written to the document using `WriteHTML()`.
+When a valid array is set, mPDF will automatically generate entries for a Table of Contents using all heading 
+elements (H1 - H6) written to the document using `WriteHTML()`.
 
-Any number of levels may be specified, but the first level should be 0 and other levels should be consecutive.
+Any number of levels may be specified, but the first level should be `0` and other levels should be consecutive.
 
 # Values
 
@@ -22,9 +23,9 @@ Any number of levels may be specified, but the first level should be 0 and other
 
 **Values**
 
-An array should be specified mapping the headings to the required level of Table of Contents
+* An array should be specified mapping the headings to the required level of Table of Contents
 
-e.g. array('H1'=&gt;0, 'H2'=&gt;1, 'H3'=&gt;2)
+  e.g. `array('H1' => 0, 'H2' => 1, 'H3' => 2)`
 
-<span class="smallblock">DEFAULT:</span> array()
+Default: `array()`
 

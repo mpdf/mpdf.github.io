@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/autofontgroupsize.html
 modification_time: 2015-08-05T12:01:39+00:00
 ---
 
-(mPDF >= 2.3 && <6.0)
+(mPDF >= 2.3 & < 6.0)
 
 autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont
 
@@ -17,14 +17,14 @@ void **autoFontGroupSize**
 Specify the chunk size of text to group when auto-detecting languages using
 <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a>.
 
-<div class="alert alert-info" role="alert" markdown="1">
-	**Note:** This variable is removed from mPDF v 6.0
+<div class="alert alert-danger" role="alert" markdown="1">
+  **Note:** This variable is removed from mPDF v 6.0
 </div>
 
-Bigger chunks (3) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage
+Bigger chunks (`3`) allows reversal of whole sentences of RTL text, not just letters in individual words; the disadvantage
 is that it may include bits of other languages either side, forcing them in the font used for the "foreign" language.
 
-Smaller chunks (1) - analysing word by word - takes more processing time, and cannot reverse RTL sentences. In text with
+Smaller chunks (`1`) - analysing word by word - takes more processing time, and cannot reverse RTL sentences. In text with
 CJK language, it makes it harder for mPDF to correctly identify between e.g. Korean and Chinese which share some
 characters. Thus words may be identified alternately as Korean or Chinese.
 
@@ -34,25 +34,29 @@ characters. Thus words may be identified alternately as Korean or Chinese.
 
 **Values**
 
-1: individual words are analysed
+* `1`: individual words are analysed
+* `2`: words are analysed to see if they are distinctive of a particular language, and then surrounding text that is
+  compatible is grouped together with these words
+* `3`: as big chunks as possible are grouped, including ASCII characters and punctuation
 
-2: words are analysed to see if they are distinctive of a particular language, and then surrounding text that is
-compatible is grouped together with these words
-
-3: as big chunks as possible are grouped, including ASCII characters and punctuation
-
-<span class="smallblock">DEFAULT</span>: 2
+Default: `2`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>2.3</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>2.3</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
@@ -60,21 +64,19 @@ Example #1
 
 ```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
 $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8']);
 
 $html = "
-
 <style>
-
-p { font-family: FreeSerif; }
-
+p { 
+    font-family: FreeSerif; 
+}
 </style>
 
-Most of this text is in English, but has occasional words in Chinese:来自商务 or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: الابيض
+Most of this text is in English, but has occasional words in Chinese:来自商务 
+or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: الابيض
 
 الابيض "بشدة" تفجير
 
@@ -85,21 +87,21 @@ Most of this text is in English, but has occasional words in Chinese:来自商�
 $mpdf->SetAutoFont();
 
 $mpdf->autoFontGroupSize = 1;
-
 $mpdf->WriteHTML($html);
 
 $mpdf->autoFontGroupSize = 2;
-
 $mpdf->WriteHTML($html);
 
 $mpdf->autoFontGroupSize = 3;
-
 $mpdf->WriteHTML($html);
 
 $html2 = "
-In this example, the word boundaries from different languages are already defined by marking with &amp;lt;span&amp;gt; tags
+In this example, the word boundaries from different languages are already defined 
+by marking with &lt;span&gt; tags
 
-Most of this text is in English, but has occasional words in Chinese:<span>来自商务</span> or Vietnamese: <span>Một khảo sát mới cho biết</span>, or maybe even Arabic: <span>الابيض</span>
+Most of this text is in English, but has occasional words in 
+Chinese:<span>来自商务</span> or Vietnamese: <span>Một khảo sát mới cho biết</span>, 
+or maybe even Arabic: <span>الابيض</span>
 ";
 
 $mpdf->WriteHTML($html2);

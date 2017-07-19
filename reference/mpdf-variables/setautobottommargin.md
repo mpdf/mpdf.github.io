@@ -22,23 +22,23 @@ be forced between the top of the footer and the bottom of the main text.
 
 **Values**
 
-`pad`
+`'pad'`
 : the value for margin-bottom is used to set a fixed distance in mm (padding) between the top of the footer and the
   bottom of the main text
 
-`stretch`
+`'stretch'`
 : margin-bottom sets a **minimum** distance in mm between the bottom of the page and the bottom of the main
   text, which expands if the footer is too large to fit.
 
-<span class="smallblock">false</span>
+`false`
 : the defined value for margin-bottom is respected even if the footer overlaps
   the main body of the document.
 
-<span class="smallblock">DEFAULT</span> <span class="smallblock">false</span>
+Default: `false`
 
 # See Also
 
-* <a href="{{ "/headers-footers/headers-top-margins.html" | prepend: site.baseurl }}">Headers &amp; Top margins </a>
+* <a href="{{ "/headers-footers/headers-top-margins.html" | prepend: site.baseurl }}">Headers & Top margins </a>
 * <a href="{{ "/reference/mpdf-variables/setautotopmargin.html" | prepend: site.baseurl }}">setAutoTopMargin</a> - Specify mode of determining top-margin position
 * <a href="{{ "/reference/mpdf-variables/automarginpadding.html" | prepend: site.baseurl }}">autoMarginPadding</a> - Specify padding between top-margin and header in automatic mode
 

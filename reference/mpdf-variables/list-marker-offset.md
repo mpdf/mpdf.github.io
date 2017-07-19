@@ -22,20 +22,26 @@ For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend
 
 **Values**
 
-<span class="smallblock">LENGTH</span>: Any valid CSS length value is permitted e.g. "10pt" or "3em"
+* <span class="smallblock">LENGTH</span>: Any valid CSS length value is permitted e.g. `"10pt"` or `"3em"`
 
-<span class="smallblock">DEFAULT</span>: '5.5pt'
+Default: `'5.5pt'`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>6.0</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>6.0</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # See Also
 
