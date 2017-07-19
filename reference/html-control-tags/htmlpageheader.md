@@ -12,46 +12,54 @@ htmlpageheader – Define an HTML page header with a given name
 
 # Description
 
-&lt;**htmlpageheader**  <span class="parameter">$name</span>  &gt; <span class="parameter">$html</span> &lt;/htmlpageheader&gt;
+&lt;**htmlpageheader**  <span class="parameter">$name</span>  &gt; <span class="parameter">$html</span> &lt;/**htmlpageheader**&gt;
 
 Define an HTML page header with a given name. Named headers can be referenced and set later in the document e.g. 
 &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpageheader</a>&gt;
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** Do not name any header or footer starting with html_ - This prefix is reserved to identify an 
-    <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
+  **Note:** Do not name any header or footer starting with `html_` - This prefix is reserved to identify an 
+  <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** Remember that, unlike most mPDF custom tags which are self-closing with /&gt;, htmlpageheader
-    and htmlpagefooter require end tags. If you wish to make the HTML code compatible with browsers, see 
-    <a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a>
+  **Note:** Remember that, unlike most mPDF custom tags which are self-closing with `/>`, htmlpageheader
+  and htmlpagefooter require end tags. 
+  
+  If you wish to make the HTML code compatible with browsers, see 
+  <a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a>
 </div>
 
 # Attributes
 
 <span class="parameter">$name</span>
 
-This attribute is a text string to use as the name for this header.
+: This attribute is a text string to use as the name for this header.
 
-If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_default'.
+  If name is <span class="smallblock">BLANK</span> or omitted, it is set as `_default`.
 
 # Content
 
 <span class="parameter">$html</span>
 
-Any valid HTML code can be enclosed between the tags, and will be parsed by mPDF as for any other content.
+: Any valid HTML code can be enclosed between the tags, and will be parsed by mPDF as for any other content.
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>2.0</td>
-<td>The tag was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>2.0</td>
+  <td>The tag was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 

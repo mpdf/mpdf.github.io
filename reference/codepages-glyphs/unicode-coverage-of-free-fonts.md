@@ -39,8 +39,9 @@ Fonts with full coverage of Unicode Ranges
 <td>free*</td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddddff;">COMBINING DIACRITICAL MARKS (U+0300-U+036F)
+<td style="font-family: helvetica; font-weight: bold; background-color: #ddddff;">COMBINING DIACRITICAL MARKS (U+0300-U+036F)
 
+<br/>
 Special positioning required</td>
 <td>freesans, freeserif
 
@@ -63,14 +64,16 @@ Special positioning required</td>
 <td>dejavusans(+cond), freemono, freesans</td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">HEBREW (U+0590-U+05FF)
+<td style="font-weight: bold; background-color: #ddffdd;">HEBREW (U+0590-U+05FF)
 
+<br/>
 Special processing required</td>
 <td>freeserif, quivira</td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">ARABIC (U+0600-U+06FF)
+<td style="font-weight: bold; background-color: #ddffdd;">ARABIC (U+0600-U+06FF)
 
+<br/>
 Special processing required</td>
 <td style="background-color: #aaaaaa;">
 
@@ -81,22 +84,25 @@ dejavusans(+cond), xbriyaz, xbzar (&gt;50%)
 </td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">SYRIAC (U+0700-U+074F)
+<td style="font-weight: bold; background-color: #ffdddd;">SYRIAC (U+0700-U+074F)
 
+<br/>
 Special processing required</td>
 <td style="background-color: #aaaaaa;">freesans (&gt;90%)</td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">ARABIC SUPPLEMENT (U+0750-U+077F)
+<td style="font-weight: bold; background-color: #ffdddd;">ARABIC SUPPLEMENT (U+0750-U+077F)
 
+<br/>
 Special processing required</td>
 <td style="background-color: #555555;">
 
 </td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">THAANA (U+0780-U+07BF)
+<td style="font-weight: bold; background-color: #ffdddd;">THAANA (U+0780-U+07BF)
 
+<br/>
 Special processing required</td>
 <td>mph2bdamase</td>
 </tr>
@@ -111,62 +117,72 @@ Special processing required</td>
 </td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">DEVANAGARI (U+0900-U+097F)
+<td style="font-weight: bold; background-color: #ddffdd;">DEVANAGARI (U+0900-U+097F)
 
+<br/>
 Special processing required</td>
-<td>*ind_hi_1_001*</td>
+<td><i>ind_hi_1_001</i></td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">BENGALI (U+0980-U+09FF)
+<td style="font-weight: bold; background-color: #ddffdd;">BENGALI (U+0980-U+09FF)
 
+<br/>
 Special processing required</td>
-<td>*ind_bn_1_001*</td>
+<td><i>ind_bn_1_001</i></td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">GURMUKHI (U+0A00-U+0A7F)
+<td style="font-weight: bold; background-color: #ddffdd;">GURMUKHI (U+0A00-U+0A7F)
 
+<br/>
 Special processing required</td>
-<td>*ind_pa_1_001*</td>
+<td><i>ind_pa_1_001</i></td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">GUJARATI (U+0A80-U+0AFF)
+<td style="font-weight: bold; background-color: #ddffdd;">GUJARATI (U+0A80-U+0AFF)
 
+<br/>
 Special processing required</td>
-<td>*ind_gu_1_001*</td>
+<td><i>ind_gu_1_001</i></td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">ORIYA (U+0B00-U+0B7F)
+<td style="font-weight: bold; background-color: #ddffdd;">ORIYA (U+0B00-U+0B7F)
 
+<br/>
 Special processing required</td>
-<td>*ind_or_1_001*</td>
+<td><i>ind_or_1_001</i></td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">TAMIL (U+0B80-U+0BFF)
+<td style="font-weight: bold; background-color: #ddffdd;">TAMIL (U+0B80-U+0BFF)
 
+<br/>
 Special processing required</td>
-<td>*ind_ta_1_001*</td>
+<td><i>ind_ta_1_001</i></td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">TELUGU (U+0C00-U+0C7F)
+<td style="font-weight: bold; background-color: #ddffdd;">TELUGU (U+0C00-U+0C7F)
 
+<br/>
 Special processing required</td>
-<td>*ind_te_1_001*</td>
+<td><i>ind_te_1_001</i></td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">KANNADA (U+0C80-U+0CFF)
+<td style="font-weight: bold; background-color: #ddffdd;">KANNADA (U+0C80-U+0CFF)
 
+<br/>
 Special processing required</td>
-<td>*ind_kn_1_001*</td>
+<td><i>ind_kn_1_001</i></td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddffdd;">MALAYALAM (U+0D00-U+0D7F)
+<td style="font-weight: bold; background-color: #ddffdd;">MALAYALAM (U+0D00-U+0D7F)
 
+<br/>
 Special processing required</td>
-<td>*ind_ml_1_001*</td>
+<td><i>ind_ml_1_001</i></td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">SINHALA (U+0D80-U+0DFF)
+<td style="font-weight: bold; background-color: #ffdddd;">SINHALA (U+0D80-U+0DFF)
 
+<br/>
 Special processing required</td>
 <td>kaputaunicode</td>
 </tr>
@@ -179,14 +195,16 @@ Special processing required</td>
 <td>dejavusans(+cond)</td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">TIBETAN (U+0F00-U+0FFF)
+<td style="font-weight: bold; background-color: #ffdddd;">TIBETAN (U+0F00-U+0FFF)
 
+<br/>
 Special processing required</td>
 <td style="background-color: #aaaaaa;">tibetanunicode (&gt;90%)</td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">MYANMAR (U+1000-U+109F)
+<td style="font-weight: bold; background-color: #ffdddd;">MYANMAR (U+1000-U+109F)
 
+<br/>
 Special processing required</td>
 <td style="background-color: #555555;">
 
@@ -241,13 +259,14 @@ Special processing required</td>
 <td>quivira</td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">KHMER (U+1780-U+17FF)
+<td style="font-weight: bold; background-color: #ffdddd;">KHMER (U+1780-U+17FF)
 
+<br/>
 Special processing required</td>
 <td>khmerosbattambang</td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">MONGOLIAN (U+1800-U+18AF)
+<td style="font-weight: bold; background-color: #ffdddd;">MONGOLIAN (U+1800-U+18AF)
 
 Vertical positioning required</td>
 <td style="background-color: #aaaaaa;">sun-exta (&gt;90%)</td>
@@ -269,8 +288,9 @@ Vertical positioning required</td>
 <td style="background-color: #aaaaaa;">daibannasilbook (&gt;90%)</td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">KHMER SYMBOLS (U+19E0-U+19FF)
+<td style="font-weight: bold; background-color: #ffdddd;">KHMER SYMBOLS (U+19E0-U+19FF)
 
+<br/>
 Special processing required</td>
 <td>
 
@@ -285,8 +305,9 @@ Special processing required</td>
 <td>lannaalif</td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">BALINESE (U+1B00-U+1B7F)
+<td style="font-weight: bold; background-color: #ffdddd;">BALINESE (U+1B00-U+1B7F)
 
+<br/>
 Special processing required</td>
 <td style="background-color: #555555;">
 
@@ -323,8 +344,9 @@ Special processing required</td>
 <td>charissil, quivira</td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddddff;">COMBINING DIACRITICAL MARKS SUPPLEMENT (U+1DC0-U+1DFF)
+<td style="font-weight: bold; background-color: #ddddff;">COMBINING DIACRITICAL MARKS SUPPLEMENT (U+1DC0-U+1DFF)
 
+<br/>
 Special positioning required</td>
 <td style="background-color: #555555;">
 
@@ -351,8 +373,9 @@ Special positioning required</td>
 <td>bitstreamcyberbit, quivira</td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddddff;">COMBINING MARKS FOR SYMBOLS (U+20D0-U+20FF)
+<td style="font-weight: bold; background-color: #ddddff;">COMBINING MARKS FOR SYMBOLS (U+20D0-U+20FF)
 
+<br/>
 Special positioning required</td>
 <td>bitstreamcyberbit, freeserif</td>
 </tr>
@@ -577,7 +600,7 @@ Special positioning required</td>
 <td>mph2bdamase</td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">PHAGS-PA (U+A840-U+A87F)
+<td style="font-weight: bold; background-color: #ffdddd;">PHAGS-PA (U+A840-U+A87F)
 
 Vertical positioning required</td>
 <td style="background-color: #555555;">
@@ -619,8 +642,9 @@ Vertical positioning required</td>
 </td>
 </tr>
 <tr class="oddrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ffdddd;">MYANMAR (U+AA60-U+AA7B)
+<td style="font-weight: bold; background-color: #ffdddd;">MYANMAR (U+AA60-U+AA7B)
 
+<br/>
 Special processing required</td>
 <td style="background-color: #555555;">
 
@@ -661,8 +685,9 @@ Special processing required</td>
 <td>bitstreamcyberbit, sun-exta, symbola, unbatang</td>
 </tr>
 <tr class="evenrow">
-<td style="font-family: helvetica; font-size: 8pt; font-weight: bold; background-color: #ddddff;">COMBINING HALF MARKS (U+FE20-U+FE2F)
+<td style="font-weight: bold; background-color: #ddddff;">COMBINING HALF MARKS (U+FE20-U+FE2F)
 
+<br/>
 Special positioning required</td>
 <td>bitstreamcyberbit, symbola</td>
 </tr>
@@ -691,7 +716,7 @@ Special positioning required</td>
 <td>charissil, dejavu*, symbola</td>
 </tr>
 <tr class="oddrow">
-<td>**Unicode Plane 1 (SMP) Supplementary Multilingual Plane**</td>
+<td><b>Unicode Plane 1 (SMP) Supplementary Multilingual Plane</b></td>
 <td> </td>
 </tr>
 <tr class="evenrow">
@@ -772,9 +797,7 @@ Special positioning required</td>
 </tr>
 <tr class="oddrow">
 <td>KAITHI (U+11080-U+110CF)</td>
-<td style="background-color: #555555;">
-
-</td>
+<td style="background-color: #555555;"> </td>
 </tr>
 <tr class="evenrow">
 <td>CUNEIFORM (SUMERO-AKKADIAN) (U+12000-U+123FF)</td>
@@ -821,7 +844,7 @@ Special positioning required</td>
 <td>freeserif, quivira, symbola</td>
 </tr>
 <tr class="oddrow">
-<td>**Unicode Plane 2 (SIP) Supplementary Ideographic Plane**</td>
+<td><b>Unicode Plane 2 (SIP) Supplementary Ideographic Plane</b></td>
 <td> </td>
 </tr>
 <tr class="evenrow">
@@ -836,168 +859,166 @@ Special positioning required</td>
 <td>CJK COMPATIBILITY IDEOGRAPHS SUPPLEMENT (U+2F800-U+2FA1F)</td>
 <td>hannomb, sun-extb</td>
 </tr>
-</tbody> </table>
+</tbody>
+</table>
 
-<table class="table"> <thead>
-<tr>
-<td> Font name
+## Fonts
 
-</td>
-<td>Font file
-
-</td>
-<td>Available from
-
-</td>
+<table class="table"><thead><tr>
+  <th>Font name</th>
+  <th>Font file</th>
+  <th>Available from</th>
 </tr>
-</thead> <tbody>
+</thead>
+<tbody>
 <tr class="oddrow">
 <td>charissil</td>
 <td>CharisSILR.ttf</td>
-<td>http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads</td>
+<td><a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads">http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads</a></td>
 </tr>
 <tr class="evenrow">
 <td>quivira</td>
 <td>Quivira.ttf</td>
-<td>http://www.quivira-font.com/</td>
+<td><a href="http://www.quivira-font.com/">ttp://www.quivira-font.com/</a></td>
 </tr>
 <tr class="oddrow">
 <td>symbola</td>
 <td>Symbola.otf</td>
-<td>http://users.teilar.gr/~g1951d/</td>
+<td><a href="http://users.teilar.gr/~g1951d/">http://users.teilar.gr/~g1951d/</a></td>
 </tr>
 <tr class="evenrow">
 <td>bitstreamcyberbit</td>
 <td>Cyberbit.ttf</td>
-<td>http://aol-4.vo.llnwd.net/pub/communicator/extras/fonts/windows/</td>
+<td><a href="http://aol-4.vo.llnwd.net/pub/communicator/extras/fonts/windows/">http://aol-4.vo.llnwd.net/pub/communicator/extras/fonts/windows/</a></td>
 </tr>
 <tr class="oddrow">
 <td>mph2bdamase</td>
 <td>damase_v.2.ttf</td>
-<td>http://www.wazu.jp/gallery/views/View_MPH2BDamase.html</td>
+<td><a href="http://www.wazu.jp/gallery/views/View_MPH2BDamase.html">http://www.wazu.jp/gallery/views/View_MPH2BDamase.html</a></td>
 </tr>
 <tr class="evenrow">
 <td>garuda</td>
 <td>Garuda.ttf</td>
-<td>ftp://linux.thai.net/pub/thailinux/software/thai-ttf/</td>
+<td><a href="ftp://linux.thai.net/pub/thailinux/software/thai-ttf/">ftp://linux.thai.net/pub/thailinux/software/thai-ttf/</a></td>
 </tr>
 <tr class="oddrow">
 <td>norasi</td>
 <td>Norasi.ttf</td>
-<td>ftp://linux.thai.net/pub/thailinux/software/thai-ttf/</td>
+<td><a href="ftp://linux.thai.net/pub/thailinux/software/thai-ttf/">ftp://linux.thai.net/pub/thailinux/software/thai-ttf/</a></td>
 </tr>
 <tr class="evenrow">
 <td>kaputaunicode</td>
 <td>kaputaunicode.ttf</td>
-<td>http://info.lk/slword/kaputaunicode.htm</td>
+<td><a href="http://info.lk/slword/kaputaunicode.htm">http://info.lk/slword/kaputaunicode.htm</a></td>
 </tr>
 <tr class="oddrow">
 <td>tibetanunicode</td>
 <td>TibetanUnicode.ttf</td>
-<td>http://www.popdict.com/dict_tibetan.htm#fonts</td>
+<td><a href="http://www.popdict.com/dict_tibetan.htm#fonts">http://www.popdict.com/dict_tibetan.htm#fonts</a></td>
 </tr>
 <tr class="evenrow">
 <td>abyssinicasil</td>
 <td>Abyssinica_SIL.ttf</td>
-<td>http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads</td>
+<td><a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads">http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads</a></td>
 </tr>
 <tr class="oddrow">
 <td>aboriginalsans, aboriginalserif</td>
 <td>
 
-AboriginalSansREGULAR.ttf
+AboriginalSansREGULAR.ttf<br/>
 
 AboriginalSerifREGULAR.ttf
 
 </td>
-<td>http://www.languagegeek.com/font/fontdownload.html#Full_Unicode</td>
+<td><a href="http://www.languagegeek.com/font/fontdownload.html#Full_Unicode">http://www.languagegeek.com/font/fontdownload.html#Full_Unicode</a></td>
 </tr>
 <tr class="evenrow">
 <td>khmerosbattambang</td>
 <td>KhmerOS_battambang.ttf</td>
-<td>http://sourceforge.net/projects/khmer/files/Fonts%20-%20KhmerOS/</td>
+<td><a href="http://sourceforge.net/projects/khmer/files/Fonts%20-%20KhmerOS/">http://sourceforge.net/projects/khmer/files/Fonts%20-%20KhmerOS/</a></td>
 </tr>
 <tr class="oddrow">
 <td>daibannasilbook</td>
 <td>DBSILBR.ttf</td>
-<td>http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads</td>
+<td><a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads">http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads</a></td>
 </tr>
 <tr class="evenrow">
 <td>lannaalif</td>
 <td>lannaalif-v1-03.ttf</td>
-<td>http://www.geocities.jp/simsheart_alif/taithamunicode.html</td>
+<td><a href="http://www.geocities.jp/simsheart_alif/taithamunicode.html">http://www.geocities.jp/simsheart_alif/taithamunicode.html</a></td>
 </tr>
 <tr class="oddrow">
 <td>sundaneseunicode</td>
 <td>SundaneseUnicode-1.0.5.ttf</td>
-<td>http://sabilulungan.org/aksara/</td>
+<td><a href="http://sabilulungan.org/aksara/">http://sabilulungan.org/aksara/</a></td>
 </tr>
 <tr class="evenrow">
 <td>wakor</td>
 <td>Wakor.ttf</td>
-<td>http://www.evertype.com/fonts/vai/</td>
+<td><a href="http://www.evertype.com/fonts/vai/">http://www.evertype.com/fonts/vai/</a></td>
 </tr>
 <tr class="oddrow">
 <td>taiheritagepro</td>
 <td>TaiHeritagePro.ttf</td>
-<td>http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads</td>
+<td><a href="http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads">http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&amp;cat_id=FontDownloads</a></td>
 </tr>
 <tr class="evenrow">
 <td>meeteimayek</td>
 <td>Eeyek.ttf</td>
-<td>http://tabish.freeshell.org/eeyek/download.html</td>
+<td><a href="http://tabish.freeshell.org/eeyek/download.html">http://tabish.freeshell.org/eeyek/download.html</a></td>
 </tr>
 <tr class="oddrow">
 <td>aegean</td>
 <td>Aegean.otf</td>
-<td>http://users.teilar.gr/~g1951d/</td>
+<td><a href="http://users.teilar.gr/~g1951d/">http://users.teilar.gr/~g1951d/</a></td>
 </tr>
 <tr class="evenrow">
 <td>akkadian</td>
 <td>Akkadian.otf</td>
-<td>http://users.teilar.gr/~g1951d/</td>
+<td><a href="http://users.teilar.gr/~g1951d/">http://users.teilar.gr/~g1951d/</a></td>
 </tr>
 <tr class="oddrow">
 <td>aegyptus</td>
 <td>Aegyptus.otf</td>
-<td>http://users.teilar.gr/~g1951d/</td>
+<td><a href="http://users.teilar.gr/~g1951d/">http://users.teilar.gr/~g1951d/</td>
 </tr>
 <tr class="evenrow">
 <td>hannoma / hannomb</td>
 <td>
 
-HAN NOM A.ttf
+HAN NOM A.ttf<br/>
 
 HAN NOM B.ttf
 
 </td>
-<td>http://vietunicode.sourceforge.net/fonts/fonts_hannom.html</td>
+<td><a href="http://vietunicode.sourceforge.net/fonts/fonts_hannom.html">http://vietunicode.sourceforge.net/fonts/fonts_hannom.html</a></td>
 </tr>
 <tr class="oddrow">
 <td>sun-exta / sun-extb</td>
 <td>
 
-Sun-ExtA.ttf
+Sun-ExtA.ttf<br/>
 
 Sun-ExtB.ttf
 
 </td>
-<td>http://www.alanwood.net/unicode/fonts-east-asian.html</td>
+<td><a href="http://www.alanwood.net/unicode/fonts-east-asian.html">http://www.alanwood.net/unicode/fonts-east-asian.html</a></td>
 </tr>
 <tr class="evenrow">
 <td>unbatang</td>
 <td>UnBatang_0613.ttf</td>
-<td>http://people.ktug.or.kr/~nomos/mine/UnBatang_0613.ttf</td>
+<td><a href="http://people.ktug.or.kr/~nomos/mine/UnBatang_0613.ttf">http://people.ktug.or.kr/~nomos/mine/UnBatang_0613.ttf</a></td>
 </tr>
 <tr class="evenrow">
 <td>xbzar / xbriyaz</td>
 <td>
 
-XB Riyaz.ttf
+XB Riyaz.ttf<br/>
 
 XB Zar.ttf
 
 </td>
-<td>http://wiki.irmug.com/index.php/X_Series_2</td>
+<td><a href="http://wiki.irmug.com/index.php/X_Series_2">http://wiki.irmug.com/index.php/X_Series_2</a></td>
 </tr>
-</tbody> </table>
+</tbody>
+</table>
