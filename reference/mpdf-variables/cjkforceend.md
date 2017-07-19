@@ -8,19 +8,53 @@ modification_time: 2015-08-05T12:01:46+00:00
 
 (mPDF >= 5.7)
 
+bool **$CJKforceend**
+
 CJK line-breaking is implemented in mPDF roughly according to accepted rules.
 
 Configurable variables allow fine control of behaviour:
 
-    $this->CJKforceend = false; // Forces overflowng punctuation to hang outside right margin (used with CJK script)
+```php
+<?php
+$this->CJKforceend = false; 
+```
 
-    $this->allowCJKorphans = true;    // FALSE=always wrap to next line; TRUE=squeeze or overflow
+ * `false`: Forces overflowing punctuation to hang outside right margin (used with CJK script)
 
-    $this->allowCJKoverflow = false; // FALSE=squeeze; TRUE=overflow (only selected)
+Default: `false`
 
-IF $this->allowCJKorphans == true AND $this->allowCJKoverflow == true AND $this->CJKforceend == true AND text-align:justify
+```php
+<?php
+$this->allowCJKorphans = true;
+```
+
+**Values**
+ * `false`: always wrap to next line
+ * `true`: squeeze or overflow
+
+Default: `true`
+
+```php
+<?php
+$this->allowCJKoverflow = false;
+```
+
+**Values**
+
+ * `false`: squeeze
+ * `true`: overflow (only selected)
+
+Default: `false`
+
+IF `$this->allowCJKorphans == true`  
+AND `$this->allowCJKoverflow == true`  
+AND `$this->CJKforceend == true`  
+AND `text-align:justify`
 
 will force hanging punctuation to hang outside right margin.
 
-See also <a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a> and <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a>
+
+See also:
+ * <a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a> 
+ * <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a>
 

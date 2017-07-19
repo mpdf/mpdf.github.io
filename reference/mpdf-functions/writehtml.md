@@ -22,8 +22,8 @@ Write <span class="parameter">$html</span> code to the document.
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** Prior to mPDF 4.2 a fatal error was caused if
-  <span class="parameter">$html</span> was passed as a <span class="smallblock">NULL</span> value,
-  <span class="smallblock">FALSE</span> or an undefined variable.
+  <span class="parameter">$html</span> was passed as a `null` value,
+  `false` or an undefined variable.
 </div>
 
 # Parameters
@@ -44,9 +44,9 @@ Write <span class="parameter">$html</span> code to the document.
   * `3` - (For internal use only - parses the <span class="parameter">$html</span> code without writing to document)
   * `4` - (For internal use only - writes the <span class="parameter">$html</span> code to a buffer)
 
-  <span class="smallblock">DEFAULT</span>: `0`
+  Default: `0`
 
-  **Mode #0** (<span class="smallblock">DEFAULT</span>)
+  **Mode #0** (Default)
 
   Metadata:
   - title is read from `<title>...</title>` tags
@@ -97,7 +97,7 @@ Write <span class="parameter">$html</span> code to the document.
   all buffers, starting all HTML elements from new. See example #2 for use. You must start with a `WriteHTML()` that calls
   `$initialise = true`.
 
-  <span class="smallblock">DEFAULT</span>: `true`
+  Default: `true`
 
 
 <span class="parameter">$close</span>
@@ -106,7 +106,7 @@ Write <span class="parameter">$html</span> code to the document.
   elements are closed, and buffers cleared. See example #2 for use. You must end with a `WriteHTML()` that calls
   `$close = true`.
 
-  <span class="smallblock">DEFAULT</span>: `true`
+  Default: `true`
 
 
 

@@ -12,6 +12,14 @@ Allow use of `{iteration varname}` in THEAD
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: FALSE
 
-Values: TRUE|FALSE
+Values: `true`\|`false`
+
+Default value: `false`
+
+
+
+
+See also:
+
+* <a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a>

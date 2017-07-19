@@ -12,5 +12,7 @@ Control SmallCaps appearance
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: 115;    // % to stretch small caps horizontally
+Default value: `115`    
+
+% to stretch small caps horizontally
 

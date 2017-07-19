@@ -24,8 +24,10 @@ This is a quick fix which rotates HTML headers and Footers on landscape pages in
 
 - document orientation is portrait
 - when adding a page, you must only call  
-  `$mpdf->AddPage('L')` or `<pagebreak orientation="landscape" />` if you try to set new margins/headers etc. for new landscape pages when `forcePortraitHeaders = true`, it will go wrong.
+  `$mpdf->AddPage('L')` or `<pagebreak orientation="landscape" />` if you try to set new margins/headers etc. 
+  for new landscape pages when `forcePortraitHeaders = true`, it will go wrong.
 
+Default: `false`
 
 # See also
 - <a href="{{ "/reference/mpdf-variables/forceportraitmargins.html" | prepend: site.baseurl }}">forcePortraitMargins</a> - rotate only margins

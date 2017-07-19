@@ -18,26 +18,31 @@ Specify whether to show performance data. Useful if you are developing with mPDF
 
 # Values
 
-<span class="parameter">$showStats</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$showStats</span> =  `true`\|`false`
 
 **Values**
 
-<span class="smallblock">TRUE </span>: enable display of data
+* `true`: enable display of data
+* `false`: disabled
 
-<span class="smallblock">FALSE</span>: disabled
-
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
+Default: `false`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>4.0</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>4.0</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
@@ -45,26 +50,20 @@ Example #1
 
 ```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->showStats = true;
 
 $mpdf->WriteHTML("Hello World");
-
 $mpdf->Output();
 
-?>
-
 ```
 
-```php
+
 This will suppress output of the PDF file, and display data on the browser such as:
 
-```
 
 ```php
 Generated in 0.45 seconds
@@ -81,8 +80,6 @@ Number of fonts 6
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/debug.html" | prepend: site.baseurl }}">debug</a> - specify whether to show errors</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a> - prevent error mesages when using output buffering</li>
-</ul>
+* <a href="{{ "/reference/mpdf-variables/debug.html" | prepend: site.baseurl }}">debug</a> - specify whether to show errors
+* <a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images
+* <a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a> - prevent error mesages when using output buffering

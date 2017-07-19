@@ -12,5 +12,5 @@ Default length in mm of crop line
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: 18
+Default value: `18`
 

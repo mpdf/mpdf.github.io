@@ -16,28 +16,28 @@ string **preparePreText** ( string <span class="parameter">$text</span> [, strin
 
 Prepares text to be output ignoring the HTML markup. This is useful to output a large text file (e.g. a PHP script file)
 using <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>. This will
-surround the text with &lt;pre&gt; tags whilst preventing &lt;pre&gt;tags included in the text from being parsed. It
+surround the text with `<pre>` tags whilst preventing `<pre>` tags included in the text from being parsed. It
 also allows use of a text string marker (<span class="parameter">$formfeed</span>) to be replaced by a formfeed in the
 output file.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** Prior to mPDF 5.1 you should use the
-	<span class="parameter">$mode </span>parameter of
-	<a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> as '2'
-	to avoid parsing the text for style tags. See example below.
+  **Note:** Prior to mPDF 5.1 you should use the
+  <span class="parameter">$mode </span>parameter of
+  <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> as `'2'`
+  to avoid parsing the text for style tags. See example below.
 </div>
 
 # Parameters
 
 <span class="parameter">$text</span>
 
-This parameter specifies the text string to prepare.
+: This parameter specifies the text string to prepare.
 
 <span class="parameter">$formfeed</span>
 
-<span class="parameter">$formfeed</span> specifies the string to be replaced by a formfeed in the output file.
+: <span class="parameter">$formfeed</span> specifies the string to be replaced by a formfeed in the output file.
 
-<span class="smallblock">DEFAULT</span>: "//FF//"
+  Default: `"//FF//"`
 
 # Return value
 
@@ -45,37 +45,38 @@ Returns a text string.
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>2.4</td>
-<td>Function was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>2.4</td>
+  <td>Function was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
 ```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
 $text = file_get_contents('scriptfile.php');
-
 $text = preparePreText($text);
 
 // Default spaces/tab in mPDF is 8 as specified by HTML spec.
 // Notepad and other text editors use a value of 6
-
 $mpdf->tabSpaces = 6;
 
 // If 'scriptfile.php' is iso-8859-1 or win-1252 encoded, use
-
-$mpdf->allow_charset_conversion=true;
-
-$mpdf->charset_in='windows-1252';
+$mpdf->allow_charset_conversion = true;
+$mpdf->charset_in = 'windows-1252';
 
 $mpdf->WriteHTML($text, 2);
 

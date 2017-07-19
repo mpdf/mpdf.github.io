@@ -15,40 +15,43 @@ autoPageBreak – Specify whether to allow automatic page breaks
 void **autoPageBreak**
 
 Specify whether to allow automatic page breaks. By default, mPDF creates page breaks when required in the document.
-Setting the value to FALSE allows an oversized object (image etc.) to overwrite the footer and/or the bottom margin of
+Setting the value to `false` allows an oversized object (image etc.) to overwrite the footer and/or the bottom margin of
 the page.
 
 # Values
 
-<span class="parameter">$autoPageBreak</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$autoPageBreak</span> =  `true`\|`false`
 
 **Values**
 
-<span class="smallblock">TRUE </span>: enables automatic page breaks
+* `true`: enables automatic page breaks
+* `false`: disable automatic page breaks
 
-<span class="smallblock">FALSE</span>: disable automatic page breaks
-
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
+Default: `true`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>3.1</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>3.1</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
 ```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
 $mpdf = new \Mpdf\Mpdf();
 
 $html = '<img src="largeimage.jpg" height="290mm" /> ';
@@ -58,14 +61,13 @@ $mpdf->autoPageBreak = false;
 $mpdf->AddPage();
 
 $mpdf->WriteHTML($html);
-
 $mpdf->Output();
 
 ```
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** This variable existed in the script before v3.1
-	but did not allow paging to be turned off. The variable was altered in mPDF 3.1 by making the first letter of
-	the variable lowercase.
+  **Note:** This variable existed in the script before v3.1
+  but did not allow paging to be turned off. The variable was altered in mPDF 3.1 by making the first letter of
+  the variable lowercase.
 </div>
 

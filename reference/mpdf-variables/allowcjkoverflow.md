@@ -8,13 +8,38 @@ modification_time: 2015-08-05T12:01:36+00:00
 
 (mPDF >= 5.7)
 
+bool **$allowCJKoverflow**
+
 CJK line-breaking is implemented in mPDF roughly according to accepted rules.
 
 Configurable variables allow fine control of behaviour (except in tables):
 
-    $this->allowCJKorphans = true;    // FALSE=always wrap to next line; TRUE=squeeze or overflow
+```php
+<?php
+$this->allowCJKorphans = true;
+```
 
-    $this->allowCJKoverflow = false; // FALSE=squeeze; TRUE=overflow (only selected)
+**Values**
+ * `false`: always wrap to next line
+ * `true`: squeeze or overflow
 
-See also <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a> and <a href="{{ "/reference/mpdf-variables/cjkforceend.html" | prepend: site.baseurl }}">CJKforceend </a>
+Default: `true`
+
+Combined with
+
+```php
+<?php
+$this->allowCJKoverflow = false;
+```
+
+**Values**
+
+ * `false`: squeeze
+ * `true`: overflow (only selected)
+
+Default: `false`
+
+See also 
+* <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a> 
+* and <a href="{{ "/reference/mpdf-variables/cjkforceend.html" | prepend: site.baseurl }}">CJKforceend </a>
 

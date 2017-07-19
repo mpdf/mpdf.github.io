@@ -22,18 +22,25 @@ Default value: 'mPDF file progress'
 
 <table class="table">
 <thead>
-	<tr><th>Version</th><th>Description</th></tr>
+<tr>
+  <th>Version</th>
+  <th>Description</th>
+</tr>
 </thead>
 <tbody>
-	<tr><td>5.0</td><td>Variable was added.</td></tr>
-	<tr><td>7.0</td><td>Variable was removed along with progressbar capabilities.</td></tr>
+<tr>
+  <td>5.0</td>
+  <td>Variable was added.</td>
+</tr>
+<tr>
+  <td>7.0</td>
+  <td>Variable was removed along with progressbar capabilities.</td>
+</tr>
 </tbody>
 </table>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a> - show progress bars during file generation</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progressbar.html" | prepend: site.baseurl }}">progressBar</a> –Specify whether to show progress bars during file generation</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/progbar-althtml.html" | prepend: site.baseurl }}">progbar_altHTML</a> - define customised HTML for progress bars</li>
-</ul>
+* <a href="{{ "/reference/mpdf-functions/startprogressbaroutput.html" | prepend: site.baseurl }}">StartProgressBarOutput()</a> - show progress bars during file generation
+* <a href="{{ "/reference/mpdf-variables/progressbar.html" | prepend: site.baseurl }}">progressBar</a> –Specify whether to show progress bars during file generation
+* <a href="{{ "/reference/mpdf-variables/progbar-althtml.html" | prepend: site.baseurl }}">progbar_altHTML</a> - define customised HTML for progress bars
