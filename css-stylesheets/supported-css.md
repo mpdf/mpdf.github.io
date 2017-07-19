@@ -11,11 +11,13 @@ modification_time: 2017-03-05T21:59:56+00:00
 Unless otherwise stated, the following values are supported:
 
 <span class="smallblock">LENGTH</span>
-: `px`, `pc`, `pt`, `cm`, `mm`, `in`, `em`, `rem`, `ex` and `%` (where appropriate) are supported.<br>
+
+: `px`, `pc`, `pt`, `cm`, `mm`, `in`, `em`, `rem`, `ex` and `%` (where appropriate) are supported.  
   Default if no unit given is `px`.
 
 <span class="smallblock">FONT-SIZE</span>
-: `px`, `pc`, `pt`, `em`, `rem`, `ex`, `%`, `small`, `medium`, `large`, `x-small`, `x-large` are supported.<br>
+
+: `px`, `pc`, `pt`, `em`, `rem`, `ex`, `%`, `small`, `medium`, `large`, `x-small`, `x-large` are supported.  
   Default if no unit given is `px`.
   
   <div class="alert alert-info" role="alert" markdown="1">
@@ -30,13 +32,16 @@ Unless otherwise stated, the following values are supported:
   `ex` uses an approximation of half the font height
 
 <span class="smallblock">FONT-FAMILY</span>
+
 : Any font family defined in your configuration, as well as
   `sans`, `sans-serif`, `serif` or `monospace`.
 
 <span class="smallblock">ALPHA</span>
-: transparency, value between 0 and 1
+
+: transparency, value between `0` and `1`
 
 <span class="smallblock">COLOR</span>
+
 : `#rgb` or `#rrggbb` or `rgb(255,255,255)` or
   <a href="{{ "/css-stylesheets/named-colours.html" | prepend: site.baseurl }}">colour names</a> e.g.
   `black`, `gray` are supported.
@@ -58,6 +63,7 @@ Unless otherwise stated, the following values are supported:
   \* Alpha values (transparency) are only supported on background colours - not text color
 
 <span class="smallblock">GRADIENT</span>
+
 : Both the Mozilla or the draft CSS3 syntax are supported e.g.:
   
    * `background: -moz-repeating-linear-gradient(red, blue 20px, red 40px)`
@@ -69,13 +75,14 @@ Unless otherwise stated, the following values are supported:
   (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
 
 <span class="smallblock">GRADIENT_OLD</span>
+
 : `background-gradient: GRADIENT_OLD`  is **deprecated**
 
   Defines a linear or radial colour gradient for the background.  
    * `linear `<span class="smallblock">COLOR1</span>` `<span class="smallblock">COLOR2</span>` x1 y1 x2 y2;` or
    * `radial `<span class="smallblock">COLOR1</span>` `<span class="smallblock">COLOR2</span>` x1 y1 x2 y2 radius;` 
    
-  `x`, `y` and `radius` are values between 0 and 1
+  `x`, `y` and `radius` are values between `0` and `1`
 
   (custom attribute) (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds &amp; borders</a>)
   
@@ -85,8 +92,8 @@ Unless otherwise stated, the following values are supported:
 <thead>
 <tr>
   <th>HTML Tag</th>
-  <td>Property</td>
-  <td>Values allowed &amp; Notes</td>
+  <th>Property</th>
+  <th>Values allowed & Notes</th>
 </tr>
 </thead>
 <tbody>
@@ -107,14 +114,14 @@ Unless otherwise stated, the following values are supported:
   <td markdown="1">
   *margin-collapse*
   </td>
-  <td>collapse | none (custom attribute - collapses top and bottom margins if at top or bottom of page)</td>
+  <td>collapse|none (custom attribute - collapses top and bottom margins if at top or bottom of page)</td>
 </tr>
 <tr>
   <td>line-height</td>
   <td markdown="1">
   Line height as a factor of font-height. Usual values around 1.2 or 1.3
 
-  Also accepts px, pc, pt, cm, mm, in, em and % (mPDF >= 4.0)
+  Also accepts `px`, `pc`, `pt`, `cm`, `mm`, `in`, `em` and `%` (mPDF >= 4.0)
   </td>
 </tr>
 <tr>
@@ -627,8 +634,8 @@ Unless otherwise stated, the following values are supported:
 <thead>
 <tr>
   <th>HTML Tag</th>
-  <td>Property     </td>
-  <td>Values allowed &amp; Notes</td>
+  <th>Property     </th>
+  <th>Values allowed &amp; Notes</th>
 </tr>
 </thead>
 <tbody>
@@ -759,10 +766,8 @@ Unless otherwise stated, the following values are supported:
 <thead>
 <tr>
   <th>HTML Tag</th>
-  <td>Property</td>
-  <td>Values allowed &amp; Notes
-
-  </td>
+  <th>Property</th>
+  <th>Values allowed & Notes</th>
 </tr>
 </thead>
 <tbody>
@@ -857,8 +862,8 @@ Unless otherwise stated, the following values are supported:
 <thead>
 <tr>
   <th style="white-space: nowrap;">HTML Tag</th>
-  <td>Property</td>
-  <td>Values allowed &amp; Notes</td>
+  <th>Property</th>
+  <th>Values allowed & Notes</th>
 </tr>
 </thead>
 <tbody>
@@ -1407,8 +1412,8 @@ Unless otherwise stated, the following values are supported:
 <thead>
 <tr>
   <th>HTML Tag</th>
-  <td>Property</td>
-  <td>Values allowed &amp; Notes</td>
+  <th>Property</th>
+  <th>Values allowed & Notes</th>
 </tr>
 </thead>
 <tbody>

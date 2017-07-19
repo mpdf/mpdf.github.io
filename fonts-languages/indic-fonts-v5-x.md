@@ -18,9 +18,7 @@ Special fonts are provided for several Indic languages.
         <tr>
             <th> </th>
             <td>Unicode range</td>
-            <td>Font name
-
-            </td>
+            <td>Font name</td>
             <td>Languages</td>
         </tr>
     </thead>
@@ -35,11 +33,7 @@ Special fonts are provided for several Indic languages.
             <th>Devanagari</th>
             <td>0900-097F</td>
             <td>ind_hi_1_001</td>
-            <td>
-
-                Hindi, Sindhi, Nepali
-
-            </td>
+            <td>Hindi, Sindhi, Nepali</td>
         </tr>
         <tr class="oddrow">
             <th>Malayalam</th>
@@ -92,7 +86,6 @@ These fonts can be access using their font name e.g.
 ```html
 
 ജൌ
-
 
 ```
 

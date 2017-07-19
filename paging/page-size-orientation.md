@@ -24,13 +24,11 @@ It can also be set by CSS using <a href="{{ "/paging/using-page.html" | prepend:
 
 ```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf(['format' => 'Legal']);
 
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->AddPage('L'); // Adds a new page in Landscape orientation
-
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();

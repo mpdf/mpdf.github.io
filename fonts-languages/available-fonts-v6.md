@@ -19,36 +19,20 @@ The following fonts are included with mPDF 6:
     </thead>
     <tbody>
         <tr>
-            <td>
-
-                DejaVuSans DejaVuSansCondensed DejaVuSerif DejaVuSerifCondensed DejaVuSansMono
-
-            </td>
+            <td>DejaVuSans DejaVuSansCondensed DejaVuSerif DejaVuSerifCondensed DejaVuSansMono</td>
             <td>http://dejavu-fonts.org</td>
-            <td>
-
-                © Bitstream http://dejavu-fonts.org/wiki/License
-
-            </td>
+  <td markdown="1">  
+  © Bitstream [http://dejavu-fonts.org/wiki/License](http://dejavu-fonts.org/wiki/License)
+  </td>
             <td>[Numerous]</td>
         </tr>
         <tr>
-            <td>
-
-                FreeSans FreeSerif FreeMono
-
-            </td>
-            <td>http://www.gnu.org/software/freefont/</td>
-            <td>
-
-                GNU GPL v3
-
-            </td>
-            <td>
-
-                [Numerous incl. Indic]
-
-            </td>
+            <td>FreeSans FreeSerif FreeMono</td>
+  <td markdown="1">
+  [http://www.gnu.org/software/freefont/](http://www.gnu.org/software/freefont/)
+  </td>
+            <td>GNU GPL v3</td>
+            <td>[Numerous incl. Indic]</td>
         </tr>
 <tr>
   <td>Quivira</td>

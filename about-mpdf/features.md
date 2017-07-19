@@ -96,7 +96,7 @@ the HTML code. (Based on Richard Bondi's extension to FPDF.)
 An <a href="{{ "/what-else-can-i-do/index.html" | prepend: site.baseurl }}">Index</a> can be generated at the end
 of the document based on custom tags used throughout the HTML code.
 
-**Non-breaking space** is supported when using fonts that have a character representing chr(160) (not all of them). 
+**Non-breaking space** is supported when using fonts that have a character representing `chr(160)` (not all of them). 
 
 <a href="{{ "/what-else-can-i-do/watermarks.html" | prepend: site.baseurl }}">Watermarks</a> as text or images can be
 used e.g. for 'DRAFT', and will appear as a transparency over other elements.
@@ -106,11 +106,11 @@ will avoid 'orphan' punctuation or superscript moving to the next line.
 
 Automatic hyphenation is optional.
 
-All **HTML entities** are supported, as well as decimal and hex e.g. &amp;apos; &amp;#8812; or &amp;#x21a4;
+All **HTML entities** are supported, as well as decimal and hex e.g. `&apos;`, `&#8812;` or `&#x21a4;`
 
 <a href="{{ "/setting-pdf-file-properties/password-protection.html" | prepend: site.baseurl }}">Password protection</a>
 can be set for the PDF file.
 
-NB The original commands from FPDF can be used e.g. Write(), but some are altered to allow UTF-8 encoding and RTL text
-to be processed e.g. use WriteCell() and WriteMultiCell() instead of Cell() and MultiCell().
+NB The original commands from FPDF can be used e.g. `Write()`, but some are altered to allow UTF-8 encoding and RTL text
+to be processed e.g. use `WriteCell()` and `WriteMultiCell()` instead of `Cell()` and `MultiCell()`.
 

@@ -10,7 +10,7 @@ modification_time: 2015-08-05T11:59:23+00:00
 
 Installation:
 
-- Download the .zip file and unzip it</li>
+- Download the .zip file and unzip it
 - Create a directory e.g. <span class="filename">/mpdf</span> on your server
 - Upload all of the files to the server, maintaining the directories as they are
 - Ensure that you have write permissions set for the following folders:
@@ -35,19 +35,19 @@ If you have problems, please read the section on
 # Upgrading from version mPDF 5.x
 
 mPDF 6 has changed significantly from earlier version and it is recommended that a fresh install is used. You may 
-wish to copy your previous config_* files and use them to update the new config files.
+wish to copy your previous `config_*` files and use them to update the new config files.
 
 **config_fonts.php** - values of "indic" and "unAglyphs" from previous versions are now redundant.
 
-**config_lang2fonts.php** - this is similar to the previous config_cp.php file; note however that 
-$unifont (NOT $unifonts) must be only one font (not a comma-separated list as before).
+**config_lang2fonts.php** - this is similar to the previous `config_cp.php` file; note however that 
+`$unifont` (NOT `$unifonts`) must be only one font (not a comma-separated list as before).
 
-**Included fonts** - the Indic fonts e.g. ind_bn_001.ttf are no longer required (nor do they work properly with mPDF 6).
+**Included fonts** - the Indic fonts e.g. `ind_bn_001.ttf` are no longer required (nor do they work properly with mPDF 6).
 
 **useLang** - this configurable variable, which used to be true by default, is now redundant. You may need to set: 
-$mpdf-&gt;autoLangToFont = true; for the same results.
+`$mpdf->autoLangToFont = true;` for the same results.
 
-**SetAutoFont()** - is now redundant. You may need to set: $mpdf-&gt;autoScriptToLang = true; for the same results.
+**SetAutoFont()** - is now redundant. You may need to set: `$mpdf->autoScriptToLang = true;` for the same results.
 
 **Indexes** - have been largely redefined. See the section above.
 
@@ -71,21 +71,21 @@ change to the updated form:
 
 The following functions have been removed:
 
-- `setUnvalidatedText` - should now use - `SetWatermarkText()` </li>
-- `AddPages` - should now use - `AddPage()` or HTML code methods </li>
-- `startPageNums`</li>
-- `CreateReference` and `CreateIndex` - cf. Index section above</li>
+- `setUnvalidatedText` - should now use - `SetWatermarkText()` 
+- `AddPages` - should now use - `AddPage()` or HTML code methods 
+- `startPageNums`
+- `CreateReference` and `CreateIndex` - cf. Index section above
 
 ## Default style sheet
 
-A new mpdf.css file includes defaults for LISTS top/bottom margins, and also examples for Indexes and ToCs. 
+A new `mpdf.css` file includes defaults for LISTS top/bottom margins, and also examples for Indexes and ToCs. 
 This now acts like a normal CSS file, including cascading selectors i.e. not just main tags. This is always read 
 (if present), so acts as a secondary default CSS, but one which allows selectors. Styles added to this act like a 
 user stylesheet when considering precedence e.g. cellSpacing and border-spacing.
 
 ## Direct writing methods and OTL
 
-`WriteText()` `WriteCell()` `Watermark()` `AutoSizeText()` and `ShadedBox()` DO support complex scripts and right-to-left 
+`WriteText()`, `WriteCell()`, `Watermark()`, `AutoSizeText()` and `ShadedBox()` DO support complex scripts and right-to-left 
 text (RTL).
 
 `Write()` does NOT support complex scripts or RTL (NB this is a change - `Write()` used to support RTL).
@@ -108,47 +108,47 @@ used for list-style e.g.
 
 Short codes are recognised for the 5 most common:
 
-- "1" - decimal
-- "A" = upper-latin or upper-alpha
-- "a" = lower-latin or lower-alpha
-- "I" = upper-roman
-- "i" = lower-roman
+- `'1'` – decimal
+- `'A'` – upper-latin or upper-alpha
+- `'a'` – lower-latin or lower-alpha
+- `'I'` – upper-roman
+- `'i'` – lower-roman
 
-or any of the following: arabic-indic, hebrew, bengali, devanagari, gujarati, gurmukhi, kannada, malayalam, oriya, 
-persian, tamil, telugu, thai, urdu, cambodian, khmer, lao, cjk-decimal
+or any of the following: `'arabic-indic'`, `'hebrew,'` `'bengali'`, `'devanagari'`, `'gujarati'`, `'gurmukhi'`, `'kannada'`, `'malayalam'`, `'oriya'`, 
+`'persian'`, `'tamil'`, `'telugu'`, `'thai'`, `'urdu'`, `'cambodian'`, `'khmer'`, `'lao'`, `'cjk-decimal'`
 
 Note: A suitable font must be used in the header/footer in order to display the numbers in the selected script.
 
 You can now set the pagenumberstyle from the beginning of the document by changing the configurable variable:
 
-$this->defaultPageNumStyle = "arabic-indic"; // in config.php
+in `config.php`: `$this->defaultPageNumStyle = "arabic-indic";`
 
-$mpdf-&gt;defaultPageNumStyle = "arabic-indic"; // at runtime
+at runtime: `$mpdf->defaultPageNumStyle = "arabic-indic";`
 
 ## Other Minor changes in mPDF 6
 
-'hebrew', 'khmer', 'cambodian', 'lao', and 'cjk-decimal' are recognised as values for 
-"list-style-type" in numbered lists.
+`'hebrew'`, `'khmer'`, `'cambodian'`, `'lao'`, and `'cjk-decimal'` are recognised as values for 
+`"list-style-type"` in numbered lists.
 
-CSS "text-outline" is now supported on TD/TH tags
+CSS `"text-outline"` is now supported on TD/TH tags
 
 Text wrapping in tables has been improved when using CJK scripts (chinese-japanese-korean).
 
 Text underline and strikethrough can be used together: <span>Hello World</span>. 
-Either &lt;u&gt;&lt;s&gt;...&lt;/s&gt;&lt;/u&gt; 
-or &lt;span style="text-decoration:underline line-through;"&gt;...&lt;/span&gt; can be used
+Either `<u><s>...</s></u>` 
+or `<span style="text-decoration:underline line-through;">...</span>` can be used
 
-Added support for style="opacity:0.6;" in SVG - equivalent to: style="fill-opacity:0.6; stroke-opacity: 0.6;"
+Added support for `style="opacity:0.6;"` in SVG - equivalent to: `style="fill-opacity:0.6; stroke-opacity: 0.6;"`
 
-Added support for opacity="0.6" (as attribute) in SVG - previously only supported 
-fill-opacity="0.6" stroke-opacity="0.6"
+Added support for `opacity="0.6"` (as attribute) in SVG - previously only supported 
+`fill-opacity="0.6" stroke-opacity="0.6"`
 
-CSS position:absolute or fixed - rotate extended now to include rotate: 180; (previously just 90 or -90)
+CSS `position:absolute` or `fixed` - rotate extended now to include `rotate: 180;` (previously just `90` or `-90`)
 
-The default value of $this->keep_table_proportions = true; in config.php has been changed (see effect on 
+The default value of `$this->keep_table_proportions = true;` in `config.php` has been changed (see effect on 
 Example 6 - nested table in top right cell).
 
-Limited support has been added for SVG fonts embedded in SVG images (but not using @font-face rules) - 
+Limited support has been added for SVG fonts embedded in SVG images (but not using `@font-face` rules) - 
 see the separate Images demo file.
 
 When using columns, the top margin is now collapsed at top of every column (not just first column of page).
@@ -157,6 +157,6 @@ The way mPDF handles optional end tags has been updated to be consistent with th
 <a href="http://www.w3.org/TR/html5/syntax.html#optional-tags">HTML5 specification</a> - previously not well
 defined for HTML4.
 
-Changes to the way lists are handled means that text-align:justify may be inherited by lists from surrounding 
+Changes to the way lists are handled means that `text-align="justify"` may be inherited by lists from surrounding 
 block elements (which did not happen previously). See LISTS above for more information.
 

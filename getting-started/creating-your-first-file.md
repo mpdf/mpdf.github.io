@@ -19,19 +19,19 @@ $mpdf->WriteHTML('Hello World');
 
 // Output a PDF file directly to the browser
 $mpdf->Output();
+
 ```
 
 NB For mPDF < 7.0 use `$mpdf = new mPDF();`
 
 # Notes
 
-For details and options for the `Output` method, see 
-<a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a>
+For details and options for the `Output()` method, see 
+<a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a>.
 
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** `_MPDF_PATH` was required to be defined explicitly prior to mPDF 4.0 e.g. `define('_MPDF_PATH','../')`.
-
+  **Note:** `_MPDF_PATH` was required to be defined explicitly prior to mPDF 4.0 e.g. `define('_MPDF_PATH','../')`. 
   Since mPDF 4.0 the value should be automatically defined by the script itself when including the mpdf.php file.
 
   Since mPDF 7.0 this constant is deprecated and removed.
