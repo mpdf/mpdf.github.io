@@ -12,5 +12,5 @@ Distance of cross mark from margin in mm
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: 5
+Default value: `5`
 

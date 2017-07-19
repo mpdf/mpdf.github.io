@@ -12,7 +12,7 @@ Non-printable border at edge of paper sheet in mm
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: 8
+Default value: `8`
 
-When using Crop- and cross-marks in @page media
+When using Crop- and cross-marks in `@page` media
 

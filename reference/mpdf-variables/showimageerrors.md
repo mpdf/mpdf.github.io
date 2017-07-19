@@ -8,5 +8,5 @@ modification_time: 2015-08-05T12:02:25+00:00
 
 mPDF >= 3.0
 
-Set to <span class="smallblock">TRUE</span> for optional error reporting for problems with Images.
+Set to `true` for optional error reporting for problems with Images.
 

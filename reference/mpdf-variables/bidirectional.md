@@ -11,10 +11,14 @@ processing of bidirectional text. It does not normally need to be defined by the
 the bidirectional algorithm to be applied.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** This variable originally started with an uppercase
-	letter (<= mPDF 2.2). Support for the uppercase version was removed in mPDF >= 6.0
+  **Note:** This variable originally started with an uppercase
+  letter (<= mPDF 2.2). Support for the uppercase version was removed in mPDF >= 6.0
 </div>
+
+bool **$biDirectional**
+
+Default: `false`
 
 # See Also
 
-- <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a>
+- <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL & Bidirectional text</a>

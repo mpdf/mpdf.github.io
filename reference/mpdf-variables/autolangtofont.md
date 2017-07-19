@@ -12,23 +12,24 @@ modification_time: 2017-03-13T15:06:17+01:00
 
 boolean **autoLangToFont**
 
-When `TRUE`, selects the font to use, based on the HTML lang attribute,
+When `true`, selects the font to use, based on the HTML lang attribute,
 using values in `\Mpdf\Language\LanguageToFontInterface` interface implementation set for mPDF.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	*Note: Prior to `mPDF 7.0` this behaviour is being set-up by altering `config_lang2font.php` file in mPDF path root.
+  **Note**: Prior to mPDF 7.0 this behaviour is being set-up by altering `config_lang2font.php` file in mPDF path root.
 </div>
 
 # Values
 
-`$autoLangToFont` = *`TRUE`*|`FALSE`
+`$autoLangToFont` = `true`\|`false`
 
 **Values**
 
-*<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> selects the font to use, based on
-the HTML lang attribute, using values in `\Mpdf\LangToFont` class.
+* `true`: Selects the font to use, based on
+  the HTML lang attribute, using values in `\Mpdf\LangToFont` class.
+* `false`: Font selection unaffected.
 
-<span class="smallblock">FALSE</span>: Font selection unaffected.
+Default: `true`
 
 # See Also
 

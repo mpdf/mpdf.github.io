@@ -6,15 +6,16 @@ permalink: /reference/mpdf-variables/annotmargin.html
 modification_time: 2015-08-05T12:01:37+00:00
 ---
 
-float $annotMargin = 0;    // default position for Annotations;
+float **$annotMargin** = `0` 
 
-0 = where it was defined;
+Default position for Annotations;
 
-(+ve value float) Distance from right margin of page to show annotations;
+**Value**
+
+* `0` = where it was defined;
+* (+ve value float) Distance from right margin of page to show annotations;
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">Annotation()</a> - Add an Annotation to the document</li>
-</ul>
+* <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">Annotation()</a> - Add an Annotation to the document
 

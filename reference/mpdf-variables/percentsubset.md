@@ -10,19 +10,16 @@ mPDF >= 5.0
 
 Control fonts/subsetting
 
-// If not -s (i.e. forced subset) this value determines whether to subset or not
+If not `-s` (i.e. forced subset) this value determines whether to subset or not
 
-// 0 - 100 = percent characters
+`0` - `100` = percent characters
 
-// i.e. if ==40, mPDF will embed whole font if &gt;40% characters in that font
+i.e. if `40`, mPDF will embed whole font if > 40% characters in that font or embed subset if > 40% characters.
 
-// or embed subset if &lt;40% characters
-
-// 0 will force whole file to be embedded
-
-// 100 will force always to subset
+* `0` will force whole file to be embedded
+* `100` will force always to subset
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: 30
+Default value: `30`
 

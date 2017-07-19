@@ -10,5 +10,10 @@ Maximum word spacing allowed (carried over) when finishing a last line.
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
+```php
+<?php
 $mpdf->jSmaxWordLast = 2;
 
+```
+
+Default: `2`

@@ -18,40 +18,45 @@ Enable the use of imported PDF files or templates. This causes additional files 
 functions allowing you to import PDF files into the document you are writing, and using templates.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** You should only change this variable as a constructor parameter key 
-    <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
-
-    If you want to set this at runtime, use	
-    <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
+  **Note:** You should only change this variable as a constructor parameter key 
+  <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
+  
+  If you want to set this at runtime, use	
+  <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-	**Note:** Prior to mPDF 4.3, this required calling mPDFI().
-	The functions have now been incorporated into the main class, but you must set this variable to enable them.
+  **Note:** Prior to mPDF 4.3, this required calling `mPDFI()`.
+  The functions have now been incorporated into the main class, but you must set this variable to enable them.
 </div>
 
 # Values
 
-<span class="parameter">$enableImports</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$enableImports</span> =  `true`\|`false`
 
 **Values**
 
-<span class="smallblock">TRUE </span>: enable import/template functions
+* `true`: enable import/template functions
+* `false`: disabled
 
-<span class="smallblock">FALSE</span>: disabled
-
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
+Default: `false`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>4.3</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>4.3</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # See Also
 

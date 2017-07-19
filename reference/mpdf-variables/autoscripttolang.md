@@ -12,23 +12,24 @@ modification_time: 2017-03-13T15:06:17+01:00
 
 boolean **autoScriptToLang**
 
-When <span class="smallblock">TRUE</span>, marks up HTML text using the lang attribute, based on the Unicode script
+When `true`, marks up HTML text using the lang attribute, based on the Unicode script
 block in question, and values in `\Mpdf\Language\ScriptToLanguageIntergface` interface implementation set for mPDF.
 
 <div class="alert alert-info" role="alert" markdown="1">
-	*Note: Prior to `mPDF 7.0` this behaviour is being set-up by altering `config_script2lang.php` file in mPDF path root.
+  **Note**: Prior to mPDF 7.0 this behaviour is being set-up by altering `config_script2lang.php` file in mPDF path root.
 </div>
 
 # Values
 
-<span class="parameter">$autoScriptToLang</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
+<span class="parameter">$autoScriptToLang</span> = `true`\|`false`
 
 **Values**
 
-*<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> mark up HTML text using the lang
-attribute, based on the Unicode script block in question, and values in `\Mpdf\ScriptToLang` class.
+* `true`: Mark up HTML text using the lang
+  attribute, based on the Unicode script block in question, and values in `\Mpdf\ScriptToLang` class.
+* `false`: No markup applied.
 
-<span class="smallblock">FALSE</span>: No markup applied.
+Default: `true`
 
 # See Also
 

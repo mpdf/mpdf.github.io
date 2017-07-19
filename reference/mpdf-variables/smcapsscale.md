@@ -12,5 +12,7 @@ Control SmallCaps appearance
 
 Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: 0.75;    // Factor of 1 to scale capital letters
+Default value: `0.75`    
+
+Factor of `1` to scale capital letters
 
