@@ -15,7 +15,7 @@ Note that <span class="smallblock">NAMED</span> <span class="smallblock">HTML</s
 they are selected.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:**Do not name any header or footer starting with `html_` - This prefix is reserved to 
+  **Note:** Do not name any header or footer starting with `html_` - This prefix is reserved to 
   identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 

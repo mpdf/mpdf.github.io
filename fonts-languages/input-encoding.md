@@ -22,11 +22,11 @@ $mpdf->charset_in='windows-1252';
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** <span class="parameter">$charset_in</span> requires codes recognised by the PHP
-  function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> i.e.
+  function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv()</a> i.e.
   windows-1252 not win-1252
 </div>
 
-If <span class="parameter">$allow_charset_conversion</span> is <span class="smallblock">TRUE</span> mPDF will
+If `$allow_charset_conversion = true` mPDF will
 also read the charset from the HTML header if present e.g.
 
 ```php
@@ -42,11 +42,11 @@ using any one of the PHP functions:
 - `mb_convert_encoding($ansi_encoded_html, 'UTF-8', 'windows-1252')`;
 
 Note the different order of the parameters, and the different codepage names used by the different functions.
-The codepage names recongnised vary from platform to platform, and your PHP configuration.
+The codepage names recognised vary from platform to platform, and your PHP configuration.
 
-A list of codepages recognised by iconv() can be found at http://www.gnu.org/software/libiconv/
+A list of codepages recognised by `iconv()` can be found at [http://www.gnu.org/software/libiconv/](http://www.gnu.org/software/libiconv/).
 
-In PHP5 you can list the codepages recognised by mb_ functions using mb_list_encodings().
+In PHP5 you can list the codepages recognised by `mb_` functions using `mb_list_encodings()`.
 
 Also note that each function has different ways of failing if illegal characters are encountered.
 

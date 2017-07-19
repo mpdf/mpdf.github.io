@@ -47,7 +47,7 @@ Note the OUTLINE style (which is not supported in most browsers) does work in mP
 
 # Using a stylesheet
 
-The WriteHTML() method takes second parameter i.e. <span class="parameter">$mode</span>. 
+The `WriteHTML()` method takes second parameter i.e. <span class="parameter">$mode</span>. 
 See <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> 
 for details of this and other parameters.
 
@@ -82,15 +82,15 @@ mPDF supports media-dependent CSS styles as:
 
 ```php
 @media print {
-  p { 
-    color: red; 
-  }
+    p { 
+        color: red; 
+    }
 }
 
 <style media="print">
-  p { 
-    color: red; 
-  }
+    p { 
+        color: red; 
+    }
 </style>
 
 <link rel="stylesheet" media="print" href="..." />

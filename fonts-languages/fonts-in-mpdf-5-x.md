@@ -12,15 +12,16 @@ Truetype specification and use Unicode mapping to the characters. Truetype colle
 
 # Easy to add new fonts
 
-1. Upload the Truetype font file to the fonts directory (<span class="filename">/ttfonts</span>)</li>
-1. Define the font file details in the configuration file (<span class="filename">config_fonts.php</span>)</li>
-1. Access the font by specifying it in your HTML code as the CSS font-family</li>
-1. To use the font with specific languages, you need also to edit the configuration file (<span class="filename">config_cp.php</span>) - see the example</li>
+1. Upload the Truetype font file to the fonts directory (<span class="filename">/ttfonts</span>)
+1. Define the font file details in the configuration file (<span class="filename">config_fonts.php</span>)
+1. Access the font by specifying it in your HTML code as the CSS font-family
+1. To use the font with specific languages, you need also to edit the configuration 
+   file (<span class="filename">config_cp.php</span>) - see the example
 
 ## Example
 
-You have 2 font files "Frutiger-Normal.ttf" and "FrutigerObl-Normal.ttf" which you want to be available in 
-mPDF, and you will refer to them in HTML/CSS as "Frutiger".
+You have 2 font files `Frutiger-Normal.ttf` and `FrutigerObl-Normal.ttf` which you want to be available in 
+mPDF, and you will refer to them in HTML/CSS as `'Frutiger'`.
 
 1. Upload the 2 files to the fonts directory (<span class="filename">/ttfonts</span>)
 
@@ -232,7 +233,7 @@ usage to generate these files.
 
 Some CJK fonts are broken up into 2 files because of the size of the files. One freely available font with 
 almost complete coverage of all CJK characters (in both BMP and SIP) is 'Sun' available from Alan Wood's excellent
-website: http://www.alanwood.net/unicode/fonts-east-asian.html.
+website: [http://www.alanwood.net/unicode/fonts-east-asian.html](http://www.alanwood.net/unicode/fonts-east-asian.html).
 
 This comes as 2 files, Sun-ExtA and Sun-ExtB (both about 20MB in size) 
 containing the characters from BMP and SIP respectively.
@@ -349,13 +350,13 @@ This is an example of HTML code containing CJK characters from both BMP and SIP,
 
 ```php
 <div style="font-family:mingliu;"> 
-    &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
-    &amp;#x23289; &amp;#x2328a; 
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
+    &#x23289; &#x2328a; 
 </div>
 
 <div style="font-family:mingliu_hkscs;"> 
-    &amp;#40706; &amp;#40742; &amp;#40772; &amp;#40784; &amp;#40802; &amp;#40809; 
-    &amp;#x23289; &amp;#x2328a; 
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
+    &#x23289; &amp;#x2328a; 
 </div>
 
 <div style="font-family:pmingliu;"> 

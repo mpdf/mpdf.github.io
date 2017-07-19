@@ -8,10 +8,11 @@ modification_time: 2015-08-05T11:59:34+00:00
 
 The following Open Source fonts are included with mPDF 5:
 
-- *DejaVuSans, DejaVuSansCondensed, DejaVuSansMono, DejaVuSerif, DejaVuSerifCondensed*
+- *DejaVuSans*, *DejaVuSansCondensed*, *DejaVuSansMono*, *DejaVuSerif*, *DejaVuSerifCondensed*
 - *Garuda* - Thai (sans-serif)
 - *Norasi* - Thai (serif)
-- *XBZar, XBRiyaz* - Arabic
+- *XBZar*, *XBRiyaz* - Arabic
+
 
 ## Coverage of included fonts
 
@@ -19,40 +20,18 @@ The following Open Source fonts are included with mPDF 5:
     <thead>
         <tr>
             <th> </th>
-            <th> </th>
-            <td>
-
-                DejaVuSans (+condensed)
-
-            </td>
-            <td>
-
-                DejaVuSansMono
-
-            </td>
-            <td>
-
-                DejaVuSerif (+condensed)
-
-            </td>
-            <td>Garuda (sans) Norasi (serif)
-
-            </td>
-            <td>
-
-                XBZar XBRiyaz
-
-            </td>
+            <th> </th>
+            <td>DejaVuSans (+condensed)</td>
+            <td>DejaVuSansMono</td>
+            <td>DejaVuSerif (+condensed)</td>
+            <td>Garuda (sans) Norasi (serif)</td>
+            <td>XBZar XBRiyaz</td>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <th>
-
-                Western European: English, French, German, Spanish, Icelandic etc.
-
-            </th>
-            <th>win-1252 </th>
+            <th>Western European: English, French, German, Spanish, Icelandic etc.</th>
+            <th>win-1252</th>
             <td>Y</td>
             <td>Y</td>
             <td>Y</td>
@@ -60,11 +39,7 @@ The following Open Source fonts are included with mPDF 5:
             <td>Y</td>
         </tr>
         <tr>
-            <th>
-
-                Central and Eastern Europe: Polish, Hungarian, Romanian
-
-            </th>
+            <th>Central and Eastern Europe: Polish, Hungarian, Romanian</th>
             <th>iso-8859-2 </th>
             <td>Y</td>
             <td>Y</td>
@@ -73,11 +48,7 @@ The following Open Source fonts are included with mPDF 5:
             <td>-</td>
         </tr>
         <tr>
-            <th>
-
-                Cyrillic: Russian, Bulgarian, Macedonian, Ukrainian etc.
-
-            </th>
+            <th>Cyrillic: Russian, Bulgarian, Macedonian, Ukrainian etc.</th>
             <th>win-1251</th>
             <td>Y</td>
             <td>Y</td>
@@ -86,12 +57,8 @@ The following Open Source fonts are included with mPDF 5:
             <td>-</td>
         </tr>
         <tr>
-            <th>
-
-                Baltic: Latvian, Lithuanian, Estonian, Greenlandic
-
-            </th>
-            <th>iso-8859-4 </th>
+            <th>Baltic: Latvian, Lithuanian, Estonian, Greenlandic</th>
+            <th>iso-8859-4</th>
             <td>Y</td>
             <td>Y</td>
             <td>Y</td>
@@ -109,7 +76,7 @@ The following Open Source fonts are included with mPDF 5:
         </tr>
         <tr>
             <th>Greek </th>
-            <th>iso-8859-7 </th>
+            <th>iso-8859-7</th>
             <td>Y</td>
             <td>Y</td>
             <td>Y</td>
@@ -167,7 +134,9 @@ The following Open Source fonts are included with mPDF 5:
             <td>-</td>
             <td>-</td>
             <td>-</td>
-            <td>**Y**</td>
+  <td markdown="1">
+  **Y**
+  </td>
             <td>-</td>
         </tr>
         <tr>

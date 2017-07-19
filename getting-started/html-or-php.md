@@ -9,6 +9,7 @@ modification_time: 2017-03-13T15:06:17+01:00
 Most of the functions of mPDF can be achieved two ways: 
  * using PHP commands, 
  * or using custom HTML tags. 
+
 Use whichever suits your purpose better, and you can always combine a mixture of the two.
 
 If you are new to mPDF, I would recommend using HTML/CSS for everything - you can test most things out in a browser

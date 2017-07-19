@@ -11,14 +11,14 @@ actual page number in decimal numerals.
 
 You can optionally:
 
-* suppress page numbering - {PAGENO} will be replaced by a blank string - but counting will continue
+* suppress page numbering - `{PAGENO}` will be replaced by a blank string - but counting will continue
 * reset numbering - reset the numbering anywhere in the document
 * define/change the style of the numbering - as for lists it can be roman, alphabetical or decimal
 
-From `mPDF >= 3.0` the page numbering can be reset to any positive number. Prior to this, it was only possible to
-reset it to 1.
+From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to
+reset it to `1`.
 
-From `mPDF 6.0` the page number style can include any of the values used for list-style-type
+From mPDF 6.0 the page number style can include any of the values used for `list-style-type`.
 
 Page numbering changes are made when adding a new page using
 <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or
@@ -27,30 +27,25 @@ Page numbering changes are made when adding a new page using
 and  &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;)
 or using <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>.
 
-You could obviously also hide the page numbering by redefining a header or footer that does not include {PAGENO}.
+You could obviously also hide the page numbering by redefining a header or footer that does not include `'{PAGENO}'`.
 
 ## Example #1
 
 ```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 // Set a simple Footer including the page number
-
 $mpdf->setFooter('{PAGENO}');
 
 $mpdf->WriteHTML('Section 1');
-
 $mpdf->WriteHTML('');
 
 // You could also do this using
 // $mpdf->AddPage('','','','','on');
 
 $mpdf->WriteHTML('Section 2 - No Footer');
-
 $mpdf->WriteHTML('<pagebreak resetpagenum="1" pagenumstyle="a" suppress="off" />');
-
 $mpdf->WriteHTML('Section 3 - Starting with page a');
 
 $mpdf->Output();
@@ -61,25 +56,24 @@ $mpdf->Output();
 ## Changing page numbering from the start of the document
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** From mPDF 6.0 the default page number style used from the start of the document can be set
-    using <a href="{{ "/reference/mpdf-variables/defaultpagenumstyle.html" | prepend: site.baseurl }}">`defaultPageNumStyle`</a>.
-    The following text is now redundant.
+  **Note:** From mPDF 6.0 the default page number style used from the start of the document can be set
+  using <a href="{{ "/reference/mpdf-variables/defaultpagenumstyle.html" | prepend: site.baseurl }}">`defaultPageNumStyle`</a>.
+  The following text is now redundant.
 </div>
 
 If you want to set page numbering characteristics from the first page onwards, you should explicitly add the first page
 of the document using <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>.
 Note that this is normally not required, as mPDF creates a new first page automatically if required when first using
-WriteHTML().
+`WriteHTML()`.
 
 ## Example #2
 
 In a complex document you could suppress the page numbering from the start for the cover page(s); then reset the
-number to 1, and set the style as lowercase Roman (i,ii,iii) for the foreword and introduction; then reset the
+number to 1, and set the style as lowercase Roman (i, ii, iii) for the foreword and introduction; then reset the
 style to decimal for the rest of the document:
 
 ```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 // Double-side document - mirror margins
@@ -104,13 +98,17 @@ $mpdf->Output();
 
 ```
 
-<p>If using the initial  <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>
+If using the initial  <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a>
 causes problems (a blank first page), an alternative way to do this is:
 
 ```php
 <?php
-
-$mpdf->PageNumSubstitutions[] = ['from' => 1, 'reset' => 0, 'type' => 'I', 'suppress' => 'on'];
+$mpdf->PageNumSubstitutions[] = [
+    'from' => 1, 
+    'reset' => 0, 
+    'type' => 'I', 
+    'suppress' => 'on'
+];
 
 ```
 
@@ -128,5 +126,5 @@ $mpdf->PageNumSubstitutions[] = ['from' => 1, 'reset' => 0, 'type' => 'I', 'supp
 Please also see <a href="{{ "/what-else-can-i-do/table-of-contents.html" | prepend: site.baseurl }}">Table of Contents</a> for this special case.
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** startPageNums() and `$showdefaultpagenos` are now deprecated and will do nothing (used prior to `v1.3`)
+  **Note:** `startPageNums()` and `$showdefaultpagenos` are now deprecated and will do nothing (used prior to `v1.3`)
 </div>
