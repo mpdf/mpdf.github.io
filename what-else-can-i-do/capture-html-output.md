@@ -30,3 +30,7 @@ $mpdf->Output();
 
 ```
 
+
+- <a href="{{ "/reference/mpdf-functions/construct.html" | prepend: site.baseurl }}" markdown="1">\Mpdf\Mpdf()</a> - Initialise an instance of mPDF class, and specify configuration
+- <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> - Write HTML to the document
+- <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> - Finalise and output the document

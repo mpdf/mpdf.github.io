@@ -11,6 +11,7 @@ modification_time: 2015-08-05T12:00:36+00:00
 mPDF still retains use of a constructor function with the same name as the class i.e.
 
 ```php
+<?php
 class mPDF {
 
 function mPDF(...)

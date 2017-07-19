@@ -13,8 +13,8 @@ For example you may have created a long complex PDF file, and you wish to produc
 each copy without having to re-generate the whole document each time.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** OverWrite() was written to work on PDF files produced
-  by mPDF. It will work with encrpyted files, as long as the same encryption properties are used for the new document.
+  **Note:** `OverWrite()` was written to work on PDF files produced
+  by mPDF. It will work with encrypted files, as long as the same encryption properties are used for the new document.
   I have also used it successfully with a number of external PDF files, including those produced by Acrobat Distiller
   (but not if they are encrypted). It will not work with embedded font subsets.
 </div>

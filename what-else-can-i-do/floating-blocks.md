@@ -8,12 +8,11 @@ modification_time: 2015-08-05T12:00:01+00:00
 
 mPDF >= 3.0
 
-The CSS property "float" is **partially** supported in mPDF, allowing block elements (p, div etc.) to be placed
+The CSS property `float` is **partially** supported in mPDF, allowing block elements (p, div etc.) to be placed
 alongside one another. They can also be used to create "columns" that span more than one page.
 
 ```css
 float: right|left
-
 ```
 
 ## Limitations:
@@ -26,7 +25,7 @@ float: right|left
 - You cannot change the page margins/orientation etc. in middle of using floats
 - Float is only supported on block elements (i.e. not SPAN etc.)
 
-Margin-right can still be set for a float:right and vice-versa.
+`margin-right` can still be set for a `float:right` and vice-versa.
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** The width that is set defines the width of the
@@ -36,11 +35,10 @@ Margin-right can still be set for a float:right and vice-versa.
 
 ## Clear
 
-The CSS property "clear" can be set on any block element (p, div etc.), and also &lt;hr&gt; or &lt;br&gt; elements.
+The CSS property `clear` can be set on any block element (p, div etc.), and also `<hr>` or `<br>` elements.
 
 ```css
 clear: right|left|both
-
 ```
 
 ## Examples
@@ -49,7 +47,6 @@ clear: right|left|both
 <h4>CSS Float</h4>
 
 <div>
-
     Some text to start with
 
     <div style="float: right; width: 28%;">
@@ -63,7 +60,6 @@ clear: right|left|both
     <div style="clear: both; margin: 0pt; padding: 0pt; "></div>
 
     This is text that follows the clear:both.
-
 </div>
 
 ```

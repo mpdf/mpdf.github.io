@@ -8,31 +8,40 @@ modification_time: 2015-08-05T12:00:13+00:00
 
 Multiple columns can be used on a page. This can started and stopped anywhere in the document, by either:
 
-$mPDF-&gt;SetColumns(nCols[, vAlign [, gap ]]); or
+```php
+<?php
+$mPDF->SetColumns(nCols[, vAlign [, gap ]]); 
 
-&lt;columns  column-count="n" vAlign="justify" column-gap="n" /&gt;
+```
+or
 
-nCols = Number of columns. Anything less than 2 sets columns off. (Required)
+```html
+<columns column-count="n" vAlign="justify" column-gap="n" />;
+```
 
-vAlign = Automatically adjusts height of columns to be equal if set to J or justify. Default Off. (Optional)
+Values:
+* `nCols` - Number of columns. Anything less than 2 sets columns off. (Required)
+* `vAlign` - Automatically adjusts height of columns to be equal if set to `'J'` or `'justify'`. Default Off. (Optional)
+* `gap` - gap in mm between columns. Default `5`. (Optional)
 
-gap = gap in mm between columns. Default 5. (Optional)
-
-&lt;columnbreak /&gt; &lt;column_break /&gt; or &lt;newcolumn /&gt; (synonymous) can be included to force a new column.
+`<columnbreak />`, `<column_break />` or `<newcolumn />` (synonymous) can be included to force a new column.
 (This will automatically disable any justification or readjustment of column heights.)
 
-The maximum ratio to adjust column height when justifying is defined as a configuration variable - too large a value
+The maximum ratio to adjust column height when justifying is defined as a configuration variable 
+<a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">max_colH_correction</a> - too large a value
 can give ugly results:
-
-```
-'max_colH_correction' => 1.15; // (default value)
-```
-
-You can keep columns as they are i.e. 1st column will finish page then start on second, by setting
 
 ```php
 <?php
+$mPDF->max_colH_correction = 1.15; // (default value)
 
+```
+
+You can keep columns as they are i.e. 1st column will finish page then start on second, by setting 
+<a href="{{ "/reference/mpdf-variables/keepcolumns.html" | prepend: site.baseurl }}">KeepColumns</a>
+
+```php
+<?php
 $mpdf->KeepColumns = true;
 
 ```
@@ -56,3 +65,10 @@ column. Support for block-level borders (DIV, P etc) was added in mPDF 3.0
   <a href="{{ "/what-else-can-i-do/floating-blocks.html" | prepend: site.baseurl }}">Floating blocks</a>.
 </div>
 
+
+## See
+
+* <a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a>
+* &lt;<a href="{{ "/reference/html-control-tags/columns.html" | prepend: site.baseurl }}">columns</a>&gt;
+* <a href="{{ "/reference/mpdf-variables/keepcolumns.html" | prepend: site.baseurl }}">KeepColumns</a>
+* <a href="{{ "/reference/mpdf-variables/max-colh-correction.html" | prepend: site.baseurl }}">max_colH_correction</a>
