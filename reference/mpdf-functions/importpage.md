@@ -12,43 +12,62 @@ ImportPage – Import a page from an external PDF file
 
 # Description
 
-int **ImportPage** ( int <span class="parameter">$pageno</span> [, float <span class="parameter">$crop_x</span> [, float <span class="parameter">$crop_y</span> [, float <span class="parameter">$crop_w</span> [, float <span class="parameter">$crop_h</span> [, string <span class="parameter">$boxname</span> ]]]]])
+int **ImportPage** ( 
+int <span class="parameter">$pageno</span> 
+[, float <span class="parameter">$crop_x</span> 
+[, float <span class="parameter">$crop_y</span> 
+[, float <span class="parameter">$crop_w</span> 
+[, float <span class="parameter">$crop_h</span> 
+[, string <span class="parameter">$boxname</span> ]]]]])
 
-Import a page, or part of a page, from an external PDF file. The external source file must first be set with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template' is created in mPDF which stores the image of this page, ready to insert into the document.
+Import a page, or part of a page, from an external PDF file. The external source file must first be set 
+with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template' 
+is created in mPDF which stores the image of this page, ready to insert into the document.
 
 # Parameters
 
 <span class="parameter">$pageno</span>
-: This parameter specifies the page number from the source PDF file to import.  <span class="parameter">$pageno</span> should be a positive integer value.
 
-  <span class="smallblock">DEFAULT</span>: 1
+: This parameter specifies the page number from the source PDF file to import.  <span class="parameter">$pageno</span> should 
+  be a positive integer value.
+
+  <span class="smallblock">DEFAULT</span>: `1`
 
 <span class="parameter">$crop_x</span>
-: Specifies the x-coordinate (abscissa) for the page of the source PDF file, when importing a 'cropped' page into the template. Value in millimetres.
 
-  <span class="smallblock">DEFAULT</span>: 0
+: Specifies the x-coordinate (abscissa) for the page of the source PDF file, when importing a 'cropped' page into the template. 
+  Value in millimetres.
+
+  <span class="smallblock">DEFAULT</span>: `0`
 
 <span class="parameter">$crop_y</span>
-: Specifies the y-coordinate (ordinate) for the page of the source PDF file, when importing a 'cropped' page into the template. Value in millimetres.
 
-  <span class="smallblock">DEFAULT</span>: 0
+: Specifies the y-coordinate (ordinate) for the page of the source PDF file, when importing a 'cropped' page into the template. 
+  Value in millimetres.
+
+  <span class="smallblock">DEFAULT</span>: `0`
 
 <span class="parameter">$crop_w</span>
+
 : Specifies the width in millimetres when importing a 'cropped' page into the template.
 
   <span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page width from the source file
 
 <span class="parameter">$crop_h</span>
+
 : Specifies the height in millimetres when importing a 'cropped' page into the template.
 
   <span class="smallblock">DEFAULT</span>: <span class="smallblock">NULL</span> uses the full page height from the source file
 
 <span class="parameter">$boxname</span>
+
 : <span class="parameter">$boxname</span> is currently not used.
 
 # Return Value
 
-**ImportPage()** returns an ID for the template which it has created. This ID can be used at any time to insert the template into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a>
+**ImportPage()** returns an ID for the template which it has created. This ID can be used at any time to insert the template 
+into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> 
+or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a>
 
 # Changelog
 

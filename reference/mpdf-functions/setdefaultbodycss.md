@@ -19,6 +19,7 @@ Change default CSS properties at runtime. This changes the default CSS styleshee
 # Parameters
 
 <span class="parameter">$property</span>
+
 : Specifies the CSS property to set. Any valid CSS property that mPDF supports for the BODY element e.g.
   
   `font-family`, `font-size`, `color`
@@ -26,6 +27,7 @@ Change default CSS properties at runtime. This changes the default CSS styleshee
   Case-insensitive
   
 <span class="parameter">$value</span>
+
 : Specifies the value for the given property.
 
 # Examples

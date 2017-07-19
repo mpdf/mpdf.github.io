@@ -33,11 +33,13 @@ See the details for `MultiCell()` at the <a href="{{ "/reference/mpdf-functions/
 Two additional parameters have been added:
 
 `$directionality`
+
 : Set to `'rtl'` if using RTL language (right-to-left)
 
   Default: `'ltr'`
 
 `$encoded`
+
 : When set to false (default), UTF-8 encoded text will be appropriately converted to the chosen output 
   file format. It should only be set to true, when the input text has already been converted internally 
   within the program.
@@ -45,50 +47,61 @@ Two additional parameters have been added:
   Default: `false`
   
 
-Original parameters as the FPDF equivalent:
+   
+   
+
+**Original parameters** as the FPDF equivalent:
 
 `$w`
+
 : Width of cells. 
 
-  If 0, they extend up to the right margin of the page.
+  If `0`, they extend up to the right margin of the page.
 
 `$h`
+
 : Height of cells.
 
 `$text`
+
 : String to print.
 
 `$border`
+
 : Indicates if borders must be drawn around the cell block. 
 
   The value can be either a number:
-  * 0: no border
-  * 1: frame
+  * `0`: no border
+  * `1`: frame
   
   or a string containing some or all of the following characters (in any order):
-  * L: left
-  * T: top
-  * R: right
-  * B: bottom
+  * `'L'`: left
+  * `'T'`: top
+  * `'R'`: right
+  * `'B'`: bottom
   
-  Default value: 0.
+  Default value: `0`.
 
 `$align`
+
 : Sets the text alignment. 
 
   Possible values are:
-  * L: left alignment
-  * C: center
-  * R: right alignment
-  * J: justification (default value)
+  * `'L'`: left alignment
+  * `'C'`: center
+  * `'R'`: right alignment
+  * `'J'`: justification (default value)
 
 `$fill`
-: Indicates if the cell background must be painted (true) or transparent (false). 
 
-  Default value: false.
+: Indicates if the cell background must be painted (`true`) or transparent (`false`). 
+
+  Default value: `false`.
   
 `$link`
+
 : URL or identifier as returned by FPDF's AddLink().
+
   
 NB: This does have an HTML equivalent as `<textcircle>`
 

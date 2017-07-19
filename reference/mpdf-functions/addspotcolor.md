@@ -13,19 +13,26 @@ AddSpotColor – Define a Spot colour
 
 # Description
 
-void **AddSpotColor** ( string <span class="parameter">$name</span> , int <span class="parameter">$c</span> , int <span class="parameter">$m</span>, int <span class="parameter">$y</span> , int <span class="parameter">$k</span> )
+void **AddSpotColor** ( 
+string <span class="parameter">$name</span> , 
+int <span class="parameter">$c</span> , 
+int <span class="parameter">$m</span>, 
+int <span class="parameter">$y</span> , 
+int <span class="parameter">$k</span> )
 
 Define a Spot colour which can be used in the document. Spot colours need to be defined at the start of the script.
 
 # Parameters
 
 <span class="parameter">$name</span>
+
 : Specifies the name used for the spot colour.
 
 <span class="parameter">$c, $m, $y, $k</span>
+
 : Specifies the CMYK values to be used to display in the document or if the spot colour is not available.
 
-  <span class="smallblock">DEFAULT</span>: 0
+  <span class="smallblock">DEFAULT</span>: `0`
 
 # Examples
 

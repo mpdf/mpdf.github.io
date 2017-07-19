@@ -20,6 +20,7 @@ default to `true` on initialising the mPDF class.
 # Parameters
 
 <span class="parameter">$flag</span>
+
 : `true` or `false` to specify whether mPDF should compress the data for the PDF file.
 
   <span class="smallblock">DEFAULT</span>: `true`

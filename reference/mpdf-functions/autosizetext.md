@@ -24,18 +24,29 @@ NB Does not reverse RTL text
 ## Parameters
 
 <span class="parameter">$text</span>
+
 : UTF-8 encoded text to write. Single line only.
 
 <span class="parameter">$width</span>
+
 : Width of text in millimeters. The font size will be reduced if required to fit this size.
 
 <span class="parameter">$font</span>
+
 : Font family to use
 
 <span class="parameter">$style</span>
-: Font style used [blank for normal]|i|b|bi
+
+: Font style used
+
+  **Values**
+  * [blank for normal]
+  * `'i'` - italic
+  * `'b'` - bold
+  * `'bi'` - italic and bold
 
 <span class="parameter">$fontsize</span>
+
 : Maximum font size in points (pt)
 
-  <span class="smallblock">DEFAULT</span> = 72
+  Default: `72`

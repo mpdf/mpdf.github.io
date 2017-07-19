@@ -24,15 +24,17 @@ source document, the last page will (optionally) continue to be used for any rem
 # Parameters
 
 <span class="parameter">$file</span>
+
 : This parameter specifies the source PDF file used as the template document.  <span class="parameter">$file</span>
   should be a relative path to a local file.
   
   <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
   
 <span class="parameter">$continue</span>
+
 : **Values**: `1` \| `0` \| `true` \| `false`
   
-  If <span class="smallblock">TRUE</span> (or any positive value) it forces the last page of the source file to
+  If `true` (or any positive value) it forces the last page of the source file to
   continue to be used as a template, if the current mPDF document contains more pages than the source file.
   
   <span class="smallblock">DEFAULT</span>: `false`

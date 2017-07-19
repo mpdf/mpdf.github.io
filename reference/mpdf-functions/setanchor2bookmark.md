@@ -26,14 +26,15 @@ simply sets the variable <a href="{{ "/reference/mpdf-variables/anchor2bookmark.
 # Parameters
 
 <span class="parameter">$mode</span>
+
 : Set the variable with one of the values.
   
   **Values**
 
-  * 0 - does not generate a bookmark
-  * 1 - generate a bookmark using the text value of the <span class="parameter">$name</span> attribute
+  * `0` - does not generate a bookmark
+  * `1` - generate a bookmark using the text value of the <span class="parameter">$name</span> attribute
   
-  <span class="smallblock">DEFAULT</span>: 0
+  <span class="smallblock">DEFAULT</span>: `0`
 
 # Changelog
 

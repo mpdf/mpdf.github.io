@@ -35,6 +35,7 @@ Define, start or stop Columns in the document.
 # Parameters
 
 <span class="parameter">$nCols</span>
+
 : Set the number of (vertical) columns to use on a page
 
   <span class="smallblock">BLANK</span> or omitted or `0` or `1` turns Columns OFF i.e. the whole page is used as one column.
@@ -42,6 +43,7 @@ Define, start or stop Columns in the document.
   <span class="smallblock">DEFAULT</span>: `1`
   
 <span class="parameter">$vAlign</span>
+
 : Automatically adjusts height of columns to be equal if set to `'J'` or `'justify'`.
   
   <span class="smallblock">BLANK</span> or omitted turns vertical-alignment OFF
@@ -54,6 +56,7 @@ Define, start or stop Columns in the document.
   <span class="smallblock">DEFAULT</span>: `''`
   
 <span class="parameter">$gap</span>
+
 : Set the gap between columns in millimeters
   
   <span class="smallblock">BLANK</span> or omitted uses default value.

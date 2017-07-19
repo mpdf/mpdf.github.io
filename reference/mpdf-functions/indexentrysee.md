@@ -29,12 +29,14 @@ Insert a cross-reference entry for the document Index i.e. "Dromedary - see Came
 # Parameters
 
 <span class="parameter">$content</span>
+
 : This parameter sets the text as it will appear in the Index entry. Text should be UTF-8 encoded. Text entries 
   passed in the form `Subject:Subcategory` will appear in the Index as "Subject, Subcategory".
 
   <span class="smallblock">REQUIRED</span>
 
 <span class="parameter">$see_content</span>
+
 : This parameter sets the text used as the cross-reference. Text should be UTF-8 encoded. Text entries passed in the 
   form `Subject:Subcategory` will appear in the Index as "Subject, Subcategory"
 

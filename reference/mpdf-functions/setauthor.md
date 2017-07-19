@@ -24,6 +24,7 @@ Set the Author for the document. This metadata can be seen when inspecting the d
 # Parameters
 
 <span class="parameter">$text</span>
+
 : Defines the text to appear as the Author. The text should be UTF-8 encoded, but should not contain HTML mark-up tags.
 
   <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful 
