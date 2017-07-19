@@ -14,9 +14,9 @@ the following are resized:
   words are broken) - override using CSS `<table style="overflow: hidden|visible|wrap>`
 - tables will resize to fit the table into the remaining available space left on a page, as long as it is 
   within the limit set by configurable variable `$this->shrink_tables_to_fit` - this can be prevented by setting this 
-  <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a> to "1" 
+  <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a> to `1` 
   or by `<table autosize="1">`
-- block elements (e.g. &lt;div&gt;) with `position:fixed` or `position:absolute` and `overflow:auto` (the default) will
+- block elements (e.g. `<div>`) with `position:fixed` or `position:absolute` and `overflow:auto` (the default) will
   resize the contents if required to fit on the page - override by changing the value of `overflow`
 - images will resize if necessary to fit onto a page
 

@@ -12,7 +12,7 @@ Using an extension of mPDF, pages from external PDF files can be imported into '
 current document. This can be used for:
 
 - page templates e.g. statements or invoices
-- letterheads (see also <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers &amp; Footers</a>)
+- letterheads (see also <a href="{{ "/headers-footers/headers-footers.html" | prepend: site.baseurl }}">Headers & Footers</a>)
 - a whole document template
 - create thumbnails as handouts etc. from a document you have produced
 
@@ -28,8 +28,8 @@ current document. This can be used for:
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Prior to mPDF 4.3, this required calling mPDFI(). The functions have now been incorporated
-  into the main \Mpdf\Mpdf class, but you must use
+  **Note:** Prior to mPDF 4.3, this required calling `mPDFI()`. The functions have now been incorporated
+  into the main `\Mpdf\Mpdf` class, but you must use
   <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> to
   enable them.
 </div>

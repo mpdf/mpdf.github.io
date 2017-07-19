@@ -12,7 +12,6 @@ it prints a landscape booklet.
 
 ```php
 <?php
-
 // require composer autoload
 require __DIR__ . '/vendor/autoload.php';
 
@@ -36,30 +35,26 @@ $ph = $mpdf->h;
 $mpdf->SetDisplayMode('fullpage');
 
 $pagecount = $mpdf->SetSourceFile('A4sourcefile.pdf');
-
 $pp = GetBookletPages($pagecount);
 
 foreach ($pp as $v) {
-
     $mpdf->AddPage();
 
     if ($v[0] > 0 && $v[0] <= $pagecount) {
-        $tplIdx = $mpdf->ImportPage($v[0], 0,0,$ow,$oh);
+        $tplIdx = $mpdf->ImportPage($v[0], 0, 0, $ow, $oh);
         $mpdf->UseTemplate($tplIdx, 0, 0, $pw, $ph);
     }
 
     if ($v[1] > 0 && $v[1] <= $pagecount) {
-        $tplIdx = $mpdf->ImportPage($v[1], 0,0,$ow,$oh);
+        $tplIdx = $mpdf->ImportPage($v[1], 0, 0, $ow, $oh);
         $mpdf->UseTemplate($tplIdx, $pw, 0, $pw, $ph);
     }
 }
 
 $mpdf->Output();
-
 exit;
 
-function GetBookletPages($np, $backcover = true)
-{
+function GetBookletPages($np, $backcover = true) {
     $lastpage = $np;
     $np = 4 * ceil($np / 4);
     $pp = array();
@@ -83,7 +78,6 @@ function GetBookletPages($np, $backcover = true)
 
     return $pp;
 }
-
 
 ```
 

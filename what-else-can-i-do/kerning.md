@@ -9,10 +9,12 @@ modification_time: 2015-08-05T12:00:05+00:00
 (mPDF >= 6.0)
 
 The control of Kerning is complicated! CSS3 allows for 2 methods of specifying kerning. In mPDF 6, 
-these 2 methods have exactly the same effect:
+these two methods have exactly the same effect:
 
+```css
 font-kerning: normal;
 font-feature-settings: 'kern' on;
+```
 
 TrueType fonts allow for 2 possible ways of including kerning data:
 
@@ -34,6 +36,6 @@ use information in the kern feature to reposition glyphs which are essential for
 
 **Limitation**: if useOTL is set, but not for Latin script (e.g. = 0x02), and the text string contains more than one 
 script, then kerning will not be applied to the Latin script text e.g. 
-<span>[Cyrillic text][Latin text][Cyrillic text]</span>. This is because mPDF uses the presence of any repositioning 
+`[Cyrillic text][Latin text][Cyrillic text]`. This is because mPDF uses the presence of any repositioning 
 applied to determine if kerning has been applied, otherwise using the alternative kern tables.
 

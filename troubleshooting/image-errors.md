@@ -12,5 +12,5 @@ for further information, and a method to debug the problem.
 
 Background-images will degrade silently ie. they do not show the <img alt="" src="/files/images/no_img2.gif" /> icon.
 
-Image files containing spaces may cause problems. Change the spaces to %20 using e.g. urlencode()
+Image files containing spaces may cause problems. Change the spaces to `%20` using e.g. `urlencode()`.
 
