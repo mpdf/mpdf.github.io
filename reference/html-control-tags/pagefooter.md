@@ -27,80 +27,76 @@ Define a page footer with a given name. Named footers can be referenced and set 
 &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** Do not name any header or footer starting with html_   This prefix is reserved to identify 
-    an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
+  **Note:** Do not name any header or footer starting with `html_`. This prefix is reserved to identify 
+  a <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
 # Attributes
 
 <span class="parameter">$name</span>
 
-This attribute is a text string to use as the name for this footer.
+: This attribute is a text string to use as the name for this footer.
 
-If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_default'.
+  If name is <span class="smallblock">BLANK</span> or omitted, it is set as `_default`.
 
-<span class="parameter">$content-left
+<span class="parameter">$content-left</span>
+<span class="parameter">$content-center</span>
+<span class="parameter">$content_right</span>
 
-content-center
+: Defines the text to appear in the page footer.
 
-content_right</span>
+  At least one `content-` must be defined.
 
-Defines the text to appear in the page footer.
+  **Values**
+  
+  * <span class="parameter">$content-left</span>: Text to appear at left margin
+  * <span class="parameter">$content-center</span>: Text to appear in centre of page
+  * <span class="parameter">$content-right</span>: Text to appear at right margin
 
-At least one 'content-' must be defined.
 
-**Values**
+<span class="parameter">$footer-style</span>
+<span class="parameter">$footer-style-left</span>
+<span class="parameter">$footer-style-center</span>
+<span class="parameter">$footer-style-right</span>
 
-<span class="parameter">$content-left</span>: Text to appear at left margin
+: This attribute can optionally set CSS style properties for the page footer.
 
-<span class="parameter">$content-center</span>: Text to appear in centre of page
+  <span class="parameter">$footer-style</span> will set the same style for left, right and center content, whereas 
+  <span class="parameter">$footer-style-left</span>, <span class="parameter">$footer-style-center</span> and 
+  <span class="parameter">$footer-style-right</span> set the style for one part of the content only.
+  
+  **Values**
+  
+  Valid CSS inline style declaration but only 5 properties can be set:
 
-<span class="parameter">$content-right</span>: Text to appear at right margin
-
-<span class="parameter">$footer-style
-
-footer-style-left
-
-</span><span class="parameter">$footer-style-center
-
-</span><span class="parameter">$footer-style-right</span>
-
-This attribute can optionally set CSS style properties for the page footer.
-
-<span class="parameter">$footer-style</span> will set the same style for left, right and center content, whereas 
-<span class="parameter">$footer-style-left</span>, <span class="parameter">$footer-style-center</span> and 
-<span class="parameter">$footer-style-right</span> set the style for one part of the content only.
-
-**Values**
-
-Valid CSS inline style declaration but only 5 properties can be set:
-
-<span class="parameter">$font-family
-
-font-size
-
-font-weight
-
-font-style
-
-color
-
-</span>If style is not set, the default values for the document are used.
+  * `font-family`
+  * `font-size`
+  * `font-weight`
+  * `font-style`
+  * `color`
+  
+  If style is not set, the default values for the document are used.
 
 <span class="parameter">$line</span>
 
-If set to "1" or any positive value, a line will be drawn above the footer**.**
+: If set to `"1"` or any positive value, a line will be drawn above the footer.
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>2.0</td>
-<td>The tag was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>2.0</td>
+  <td>The tag was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
@@ -111,8 +107,8 @@ For examples and further information please see:
 
 # See Also
 
- <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>
- &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pageheader</a>&gt;
- <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a>
- &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;
+* <a href="{{ "/reference/mpdf-functions/defheaderbyname.html" | prepend: site.baseurl }}">DefFooterByName()</a>
+* &lt;<a href="{{ "/reference/html-control-tags/pagefooter.html" | prepend: site.baseurl }}">pageheader</a>&gt;
+* <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a>
+* &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;
 
