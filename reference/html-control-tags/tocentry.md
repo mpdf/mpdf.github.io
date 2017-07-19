@@ -35,45 +35,51 @@ Insert an entry for the Table of Contents referencing the current writing positi
 
 <span class="parameter">$content</span>
 
-This parameter sets the text as it will appear in the ToC entry. Text should be UTF-8 encoded.
-
-<span class="parameter">$content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and must use
-the appropriate HTML entities e.g. &lt;tocentry content="&amp;lt; 40" /&gt;
-
-It is recommended that you use htmlspecialchars('Content', ENT_QUOTES) for this.
-
-<span class="smallblock">REQUIRED</span>
+: This parameter sets the text as it will appear in the ToC entry. Text should be UTF-8 encoded.
+  
+  <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and must use
+  the appropriate HTML entities e.g. `<tocentry content="&lt; 40" />`
+  
+  It is recommended that you use `htmlspecialchars('Content', ENT_QUOTES)` for this.
+  
+  <span class="smallblock">REQUIRED</span>
 
 <span class="parameter">$level</span>
 
-Specify the level of this entry (i.e. like heading 1,2,3) as a positive integer 
-
-Starts at level 0
-
-<span class="smallblock">DEFAULT</span>: 0
+: Specify the level of this entry (i.e. like heading 1, 2, 3) as a positive integer 
+  
+  Starts at level 0
+  
+  Default: `'0'`
 
 <span class="parameter">$name</span>
 
-Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry, if using more than one
-<acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">$name</span> can
-be any alphanumeric characters (except just "0") and is case-insensitive.
-
-<span class="smallblock">BLANK</span> or omitted or 0 uses the default <acronym title="Table of Contents">ToC</acronym>.
-
-**Values** (case-insensitive)
-
-"ALL" will add this entry to every ToC active in the document.
+: Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry, if using more than one
+  <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">$name</span> can
+  be any alphanumeric characters (except just `"0"`) and is case-insensitive.
+  
+  <span class="smallblock">BLANK</span> or omitted or `'0'` uses the default <acronym title="Table of Contents">ToC</acronym>.
+  
+  **Values** (case-insensitive)
+  
+  `"ALL"` will add this entry to every ToC active in the document.
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>2.3</td>
-<td><span class="parameter">$name</span> attribute was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>2.3</td>
+  <td><span class="parameter">$name</span> attribute was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
@@ -81,7 +87,6 @@ Example #1
 
 ```php
 <?php
-
 $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->WriteHTML('Introduction');
@@ -89,12 +94,9 @@ $mpdf->WriteHTML('Introduction');
 $mpdf->WriteHTML('<tocpagebreak />');
 
 $mpdf->WriteHTML('<tocentry content="Chapter 1" />');
-
 $mpdf->WriteHTML('Chapter 1 ...');
 
 $mpdf->Output();
-
-?>
 
 ```
 
@@ -113,6 +115,7 @@ $mpdf->Output();
 Recommended placement of ToC Entries is just after the first word following the opening tag of the block element:
 
 ```html
+
 <h2>First<tocentry... /> word of a heading or block</h2>
 
 ```
@@ -120,6 +123,7 @@ Recommended placement of ToC Entries is just after the first word following the 
 or alternatively just after the opening tag of the block element:
 
 ```html
+
 <h2><tocentry... />Heading or block</h2>
 
 ```
@@ -127,7 +131,8 @@ or alternatively just after the opening tag of the block element:
 or just after a word to be marked:
 
 ```html
-... this is a word<tocentry... /> in the middle of text to be marked ...
+
+  ... this is a word<tocentry... /> in the middle of text to be marked ...
 
 ```
 

@@ -27,80 +27,76 @@ Define a page header with a given name. Named headers can be referenced and set 
 &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpageheader</a>&gt;
 
 <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** Do not name any header or footer starting with html_ - This prefix is reserved to 
-    identify an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
+  **Note:** Do not name any header or footer starting with `html_`. This prefix is reserved to identify 
+  a <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
 # Attributes
 
 <span class="parameter">$name</span>
 
-This attribute is a text string to use as the name for this header.
+: This attribute is a text string to use as the name for this header.
 
-If name is <span class="smallblock">BLANK</span> or omitted, it is set as '_default'.
+  If name is <span class="smallblock">BLANK</span> or omitted, it is set as `_default`.
 
-<span class="parameter">$content-left
+<span class="parameter">$content-left</span>
+<span class="parameter">$content-center</span>
+<span class="parameter">$content_right</span>
 
-content-center
+: Defines the text to appear in the page header.
 
-content_right</span>
+  At least one `content-` must be defined.
 
-Defines the text to appear in the page header.
+  **Values**
+  
+  * <span class="parameter">$content-left</span>: Text to appear at left margin
+  * <span class="parameter">$content-center</span>: Text to appear in centre of page
+  * <span class="parameter">$content-right</span>: Text to appear at right margin
 
-At least one 'content-' must be defined.
 
-**Values**
+<span class="parameter">$header-style</span>
+<span class="parameter">$header-style-left</span>
+<span class="parameter">$header-style-center</span>
+<span class="parameter">$header-style-right</span>
 
-<span class="parameter">$content-left</span>: Text to appear at left margin
+: This attribute can optionally set CSS style properties for the page header.
 
-<span class="parameter">$content-center</span>: Text to appear in centre of page
+  <span class="parameter">$header-style</span> will set the same style for left, right and center content, whereas 
+  <span class="parameter">$header-style-left</span>, <span class="parameter">$header-style-center</span> and 
+  <span class="parameter">$header-style-right</span> set the style for one part of the content only.
 
-<span class="parameter">$content-right</span>: Text to appear at right margin
+  **Values**
+  
+  Valid CSS inline style declaration but only 5 properties can be set:
 
-<span class="parameter">$header-style
-
-header-style-left
-
-</span><span class="parameter">$header-style-center
-
-</span><span class="parameter">$header-style-right</span>
-
-This attribute can optionally set CSS style properties for the page header.
-
-<span class="parameter">$header-style</span> will set the same style for left, right and center content, whereas 
-<span class="parameter">$header-style-left</span>, <span class="parameter">$header-style-center</span> and 
-<span class="parameter">$header-style-right</span> set the style for one part of the content only.
-
-**Values**
-
-Valid CSS inline style declaration but only 5 properties can be set:
-
-<span class="parameter">$font-family
-
-font-size
-
-font-weight
-
-font-style
-
-color
-
-</span>If style is not set, the default values for the document are used.
+  * `font-family`
+  * `font-size`
+  * `font-weight`
+  * `font-style`
+  * `color`
+  
+  If style is not set, the default values for the document are used.
 
 <span class="parameter">$line</span>
 
-If set to "1" or any positive value, a line will be drawn below the header**.**
+: If set to `"1"` or any positive value, a line will be drawn below the header.
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>2.0</td>
-<td>The tag was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>2.0</td>
+  <td>The tag was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 

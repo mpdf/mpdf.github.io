@@ -8,12 +8,33 @@ modification_time: 2015-08-05T12:02:48+00:00
 
 ISO-8859 codepages
 
-<table class="table"><tbody>
-<tr><th>Dec</th><th>Hex</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>13</th><th>14</th><th>15</th><th>16</th></tr>
-<tr><th>160</th><th>A0</th>
+<table class="table">
+<tbody>
+<tr>
+<th>Dec</th><th>Hex</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>13</th>
+<th>14</th>
+<th>15</th>
+<th>16</th>
+</tr>
+<tr>
+<th>160</th>
+<th>A0</th>
 <td colspan="15">Non-breaking space (NBSP)</td>
 </tr>
-<tr><th>161</th><th>A1</th>
+<tr>
+<th>161</th><th>A1</th>
 <td>¡</td>
 <td>Ą</td>
 <td>Ħ</td>
@@ -30,7 +51,8 @@ ISO-8859 codepages
 <td>¡</td>
 <td>Ą</td>
 </tr>
-<tr><th>162</th><th>A2</th>
+<tr>
+<th>162</th><th>A2</th>
 <td>¢</td>
 <td>˘</td>
 <td>˘</td>
@@ -47,7 +69,8 @@ ISO-8859 codepages
 <td>¢</td>
 <td>ą</td>
 </tr>
-<tr><th>163</th><th>A3</th>
+<tr>
+<th>163</th><th>A3</th>
 <td>£</td>
 <td>Ł</td>
 <td>£</td>
@@ -64,7 +87,8 @@ ISO-8859 codepages
 <td>£</td>
 <td>Ł</td>
 </tr>
-<tr><th>164</th><th>A4</th>
+<tr>
+<th>164</th><th>A4</th>
 <td>¤</td>
 <td>¤</td>
 <td>¤</td>
@@ -81,7 +105,8 @@ ISO-8859 codepages
 <td>€</td>
 <td>€</td>
 </tr>
-<tr><th>165</th><th>A5</th>
+<tr>
+<th>165</th><th>A5</th>
 <td>¥</td>
 <td>Ľ</td>
 <td> </td>
@@ -98,7 +123,8 @@ ISO-8859 codepages
 <td>¥</td>
 <td>„</td>
 </tr>
-<tr><th>166</th><th>A6</th>
+<tr>
+<th>166</th><th>A6</th>
 <td>¦</td>
 <td>Ś</td>
 <td>Ĥ</td>
@@ -115,7 +141,8 @@ ISO-8859 codepages
 <td>Š</td>
 <td>Š</td>
 </tr>
-<tr><th>167</th><th>A7</th>
+<tr>
+<th>167</th><th>A7</th>
 <td>§</td>
 <td>§</td>
 <td>§</td>
@@ -132,7 +159,8 @@ ISO-8859 codepages
 <td>§</td>
 <td>§</td>
 </tr>
-<tr><th>168</th><th>A8</th>
+<tr>
+<th>168</th><th>A8</th>
 <td>¨</td>
 <td>¨</td>
 <td>¨</td>
@@ -217,12 +245,14 @@ ISO-8859 codepages
 <td>¬</td>
 <td>Ź</td>
 </tr>
-<tr><th>173</th><th>AD</th>
+<tr>
+<th>173</th><th>AD</th>
 <td colspan="10">soft hyphen (SHY)</td>
 <td>ญ</td>
 <td colspan="4">SHY</td>
 </tr>
-<tr><th>174</th><th>AE</th>
+<tr>
+<th>174</th><th>AE</th>
 <td>®</td>
 <td>Ž</td>
 <td> </td>
@@ -1617,155 +1647,201 @@ ISO-8859 codepages
 # Additional characters in win-1252
 
 <table class="table"><tbody>
-<tr><th>8−
-
- </th>
+<tr>
+<th>8− </th>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Euro_sign">€</a></span>
 
 20AC
 
-***128***</td>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;"> </td>
+<b>128</b>
+</td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;">
+<br/>
+<br/>
+<b>129</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">‚</a></span>
 
 201A
 
-***130***</td>
+<b>130</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C6%91">ƒ</a></span>
 
 0192
 
-***131***</td>
+<b>131</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">„</a></span>
 
 201E
 
-***132***</td>
+<b>132</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Ellipsis">…</a></span>
 
 2026
 
-***133***</td>
+<b>133</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Dagger_(typography)">†</a></span>
 
 2020
 
-***134***</td>
+<b>134</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Double_dagger_(typography)">‡</a></span>
 
 2021
 
-***135***</td>
+<b>135</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Circumflex">ˆ</a></span>
 
 02C6
 
-***136***</td>
+<b>136</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Permille">‰</a></span>
 
 2030
 
-***137***</td>
+<b>137</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%A0">Š</a></span>
 
 0160
 
-***138***</td>
+<b>138</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Quotation_mark">‹</a></span>
 
 2039
 
-***139***</td>
+<b>139</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%92">Œ</a></span>
 
 0152
 
-***140***</td>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;">      </td>
+<b>140</b>
+</td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;">
+<br/><br/>
+
+<b>141</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%BD">Ž</a></span>
 
 017D
 
-***142***</td>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;"> </td>
+<b>142</b>
+</td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;">
+<br/><br/>
+
+<b>143</b>
+</td>
 </tr>
 <tr><th> 
 
 9−
 
  </th>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;"> </td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;">
+<br/><br/>
+
+<b>144</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">‘</a></span>
 
 2018
 
-***145***</td>
+<b>145</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">’</a></span>
 
 2019
 
-***146***</td>
+<b>146</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">“</a></span>
 
 201C
 
-***147***</td>
+<b>147</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Curved_quotes">”</a></span>
 
 201D
 
-***148***</td>
+<b>148</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Bullet_(typography)">•</a></span>
 
 2022
 
-***149***</td>
+<b>149</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Dash_(punctuation)">–</a></span>
 
 2013
 
-***150***</td>
+<b>150</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Dash_(punctuation)">—</a></span>
 
 2014
 
-***151***</td>
+<b>151</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Tilde">˜</a></span>
 
 02DC
 
-***152***</td>
+<b>152</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Trademark">™</a></span>
 
 2122
 
-***153***</td>
+<b>153</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%A0">š</a></span>
 
 0161
 
-***154***</td>
+<b>154</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Quotation_mark">›</a></span>
 
 203A
 
-***155***</td>
+<b>155</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%92">œ</a></span>
 
 0153
 
-***156***</td>
-<td style="background: #d0d0d0 none repeat scroll 0% 0%;"> </td>
+<b>156</b>
+</td>
+<td style="background: #d0d0d0 none repeat scroll 0% 0%;">
+<br/><br/>
+
+<b>157</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%BD">ž</a></span>
 
 017E
 
-***158***</td>
+<b>158</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/%C5%B8">Ÿ</a></span>
 
 0178
 
-***159***</td>
+<b>159</b>
+</td>
 </tr>
 </tbody></table>
 
@@ -1779,82 +1855,98 @@ ISO-8859 codepages
 
 0402
 
-***128***</td>
+<b>128</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ѓ</span>
 
 0403
 
-***129***</td>
+<b>129</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‚</span>
 
 201A
 
-***130***</td>
+<b>130</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ѓ</span>
 
 0453
 
-***131***</td>
+<b>131</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>„</span>
 
 201E
 
-***132***</td>
+<b>132</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>…</span>
 
 2026
 
-***133***</td>
+<b>133</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>†</span>
 
 2020
 
-***134***</td>
+<b>134</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‡</span>
 
 2021
 
-***135***</td>
+<b>135</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Euro_sign">€</a></span>
 
 20AC
 
-***136***</td>
+<b>136</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‰</span>
 
 2030
 
-***137***</td>
+<b>137</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Љ</span>
 
 0409
 
-***138***</td>
+<b>138</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‹</span>
 
 2039
 
-***139***</td>
+<b>139</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Њ</span>
 
 040A
 
-***140***</td>
+<b>140</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ќ</span>
 
 040C
 
-***141***</td>
+<b>141</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ћ</span>
 
 040B
 
-***142***</td>
+<b>142</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Џ</span>
 
 040F
 
-***143***</td>
+<b>143</b>
+</td>
 </tr>
 <tr><th> 
 
@@ -1865,80 +1957,97 @@ ISO-8859 codepages
 
 0452
 
-***144***</td>
+<b>144</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>‘</span>
 
 2018
 
-***145***</td>
+<b>145</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>’</span>
 
 2019
 
-***146***</td>
+<b>146</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>“</span>
 
 201C
 
-***147***</td>
+<b>147</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>”</span>
 
 201D
 
-***148***</td>
+<b>148</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>•</span>
 
 2022
 
-***149***</td>
+<b>149</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>–</span>
 
 2013
 
-***150***</td>
+<b>150</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>—</span>
 
 2014
 
-***151***</td>
+<b>151</b>
+</td>
 <td style="background: #d0d0d0 none repeat scroll 0% 0%;">
+<br><br>
 
-***152***</td>
+<b>152</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>™</span>
 
 2122
 
-***153***</td>
+<b>153</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>љ</span>
 
 0459
 
-***154***</td>
+<b>154</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>›</span>
 
 203A
 
-***155***</td>
+<b>155</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>њ</span>
 
 045A
 
-***156***</td>
+<b>156</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ќ</span>
 
 045C
 
-***157***</td>
+<b>157</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ћ</span>
 
 045B
 
-***158***</td>
+<b>158</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>џ</span>
 
 045F
 
-***159***</td>
+<b>159</b>
+</td>
 </tr>
 <tr><th> 
 
@@ -1949,82 +2058,98 @@ A−
 
 00A0
 
-***160***</td>
+<b>160</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ў</span>
 
 040E
 
-***161***</td>
+<b>161</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ў</span>
 
 045E
 
-***162***</td>
+<b>162</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ј</span>
 
 0408
 
-***163***</td>
+<b>163</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>¤</span>
 
 00A4
 
-***164***</td>
+<b>164</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ґ</span>
 
 0490
 
-***165***</td>
+<b>165</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>¦</span>
 
 00A6
 
-***166***</td>
+<b>166</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>§</span>
 
 00A7
 
-***167***</td>
+<b>167</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ё</span>
 
 0401
 
-***168***</td>
+<b>168</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>©</span>
 
 00A9
 
-***169***</td>
+<b>169</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Є</span>
 
 0404
 
-***170***</td>
+<b>170</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>«</span>
 
 00AB
 
-***171***</td>
+<b>171</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>¬</span>
 
 00AC
 
-***172***</td>
+<b>172</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><a href="http://en.wikipedia.org/wiki/Soft_hyphen">SHY</a>
 
 00AD
 
-***173***</td>
+<b>173</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>®</span>
 
 00AE
 
-***174***</td>
+<b>174</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ї</span>
 
 0407
 
-***175***</td>
+<b>175</b>
+</td>
 </tr>
 <tr><th> 
 
@@ -2035,82 +2160,98 @@ B−
 
 00B0
 
-***176***</td>
+<b>176</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Plus-minus_sign">±</a></span>
 
 00B1
 
-***177***</td>
+<b>177</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>І</span>
 
 0406
 
-***178***</td>
+<b>178</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>і</span>
 
 0456
 
-***179***</td>
+<b>179</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ґ</span>
 
 0491
 
-***180***</td>
+<b>180</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Micro_sign">µ</a></span>
 
 00B5
 
-***181***</td>
+<b>181</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>¶</span>
 
 00B6
 
-***182***</td>
+<b>182</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>·</span>
 
 00B7
 
-***183***</td>
+<b>183</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ё</span>
 
 0451
 
-***184***</td>
+<b>184</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span><a href="http://en.wikipedia.org/wiki/Numero_sign">№</a></span>
 
 2116
 
-***185***</td>
+<b>185</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>є</span>
 
 0454
 
-***186***</td>
+<b>186</b>
+</td>
 <td style="background: #dff7ff none repeat scroll 0% 0%;"><span>»</span>
 
 00BB
 
-***187***</td>
+<b>187</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ј</span>
 
 0458
 
-***188***</td>
+<b>188</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ѕ</span>
 
 0405
 
-***189***</td>
+<b>189</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ѕ</span>
 
 0455
 
-***190***</td>
+<b>190</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ї</span>
 
 0457
 
-***191***</td>
+<b>191</b>
+</td>
 </tr>
 <tr><th> 
 
@@ -2121,82 +2262,98 @@ C−
 
 0410
 
-***192***</td>
+<b>192</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Б</span>
 
 0411
 
-***193***</td>
+<b>193</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>В</span>
 
 0412
 
-***194***</td>
+<b>194</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Г</span>
 
 0413
 
-***195***</td>
+<b>195</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Д</span>
 
 0414
 
-***196***</td>
+<b>196</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Е</span>
 
 0415
 
-***197***</td>
+<b>197</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ж</span>
 
 0416
 
-***198***</td>
+<b>198</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>З</span>
 
 0417
 
-***199***</td>
+<b>199</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>И</span>
 
 0418
 
-***200***</td>
+<b>200</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Й</span>
 
 0419
 
-***201***</td>
+<b>201</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>К</span>
 
 041A
 
-***202***</td>
+<b>202</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Л</span>
 
 041B
 
-***203***</td>
+<b>203</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>М</span>
 
 041C
 
-***204***</td>
+<b>204</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Н</span>
 
 041D
 
-***205***</td>
+<b>205</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>О</span>
 
 041E
 
-***206***</td>
+<b>206</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>П</span>
 
 041F
 
-***207***</td>
+<b>207</b>
+</td>
 </tr>
 <tr><th> 
 
@@ -2207,82 +2364,98 @@ D−
 
 0420
 
-***208***</td>
+<b>208</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>С</span>
 
 0421
 
-***209***</td>
+<b>209</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Т</span>
 
 0422
 
-***210***</td>
+<b>210</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>У</span>
 
 0423
 
-***211***</td>
+<b>211</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ф</span>
 
 0424
 
-***212***</td>
+<b>212</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Х</span>
 
 0425
 
-***213***</td>
+<b>213</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ц</span>
 
 0426
 
-***214***</td>
+<b>214</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ч</span>
 
 0427
 
-***215***</td>
+<b>215</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ш</span>
 
 0428
 
-***216***</td>
+<b>216</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Щ</span>
 
 0429
 
-***217***</td>
+<b>217</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ъ</span>
 
 042A
 
-***218***</td>
+<b>218</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ы</span>
 
 042B
 
-***219***</td>
+<b>219</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ь</span>
 
 042C
 
-***220***</td>
+<b>220</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Э</span>
 
 042D
 
-***221***</td>
+<b>221</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Ю</span>
 
 042E
 
-***222***</td>
+<b>222</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>Я</span>
 
 042F
 
-***223***</td>
+<b>223</b>
+</td>
 </tr>
 <tr><th> 
 
@@ -2293,82 +2466,98 @@ E−
 
 0430
 
-***224***</td>
+<b>224</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>б</span>
 
 0431
 
-***225***</td>
+<b>225</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>в</span>
 
 0432
 
-***226***</td>
+<b>226</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>г</span>
 
 0433
 
-***227***</td>
+<b>227</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>д</span>
 
 0434
 
-***228***</td>
+<b>228</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>е</span>
 
 0435
 
-***229***</td>
+<b>229</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ж</span>
 
 0436
 
-***230***</td>
+<b>230</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>з</span>
 
 0437
 
-***231***</td>
+<b>231</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>и</span>
 
 0438
 
-***232***</td>
+<b>232</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>й</span>
 
 0439
 
-***233***</td>
+<b>233</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>к</span>
 
 043A
 
-***234***</td>
+<b>234</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>л</span>
 
 043B
 
-***235***</td>
+<b>235</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>м</span>
 
 043C
 
-***236***</td>
+<b>236</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>н</span>
 
 043D
 
-***237***</td>
+<b>237</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>о</span>
 
 043E
 
-***238***</td>
+<b>238</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>п</span>
 
 043F
 
-***239***</td>
+<b>239</b>
+</td>
 </tr>
 <tr><th> 
 
@@ -2379,82 +2568,98 @@ F−
 
 0440
 
-***240***</td>
+<b>240</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>с</span>
 
 0441
 
-***241***</td>
+<b>241</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>т</span>
 
 0442
 
-***242***</td>
+<b>242</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>у</span>
 
 0443
 
-***243***</td>
+<b>243</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ф</span>
 
 0444
 
-***244***</td>
+<b>244</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>х</span>
 
 0445
 
-***245***</td>
+<b>245</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ц</span>
 
 0446
 
-***246***</td>
+<b>246</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ч</span>
 
 0447
 
-***247***</td>
+<b>247</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ш</span>
 
 0448
 
-***248***</td>
+<b>248</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>щ</span>
 
 0449
 
-***249***</td>
+<b>249</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ъ</span>
 
 044A
 
-***250***</td>
+<b>250</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ы</span>
 
 044B
 
-***251***</td>
+<b>251</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ь</span>
 
 044C
 
-***252***</td>
+<b>252</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>э</span>
 
 044D
 
-***253***</td>
+<b>253</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>ю</span>
 
 044E
 
-***254***</td>
+<b>254</b>
+</td>
 <td style="background: #ffefdf none repeat scroll 0% 0%;"><span>я</span>
 
 044F
 
-***255***</td>
+<b>255</b>
+</td>
 </tr>
 </tbody></table>
 
