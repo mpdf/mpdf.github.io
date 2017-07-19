@@ -23,11 +23,13 @@ Set an HTML page header.
 # Parameters
 
 <span class="parameter">$header</span>
+
 : This parameter specifies the content of the page header as a string of valid HTML code.
 
   <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
   
 <span class="parameter">$side</span>
+
 : Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages
   in a <span class="smallblock">DOUBLE-SIDED</span> document.
   
@@ -41,6 +43,7 @@ Set an HTML page header.
   
   
 <span class="parameter">$write</span>
+
 : If `true` it forces the Header to be written immediately to the current page. Use if the
   header is being set after the new page has been added.
   

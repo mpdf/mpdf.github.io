@@ -19,11 +19,13 @@ Set an HTML page footer.
 # Parameters
 
 <span class="parameter">$header</span>
+
 : This parameter specifies the content of the page footer as a string of valid HTML code.
 
   <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
 
 <span class="parameter">$side</span>
+
 : Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages
   in a <span class="smallblock">DOUBLE-SIDED</span> document.
   
@@ -31,8 +33,7 @@ Set an HTML page footer.
   
   **Values** (case-sensitive)
   
-  * `'O'` - set the footer for <span class="smallblock">ODD</span> pages
-  
+  * `'O'` - set the footer for <span class="smallblock">ODD</span> pages  
   * `'E'` - set the footer for <span class="smallblock">EVEN</span> pages
   
   <span class="smallblock">BLANK</span> - set the footer for <span class="smallblock">ODD</span> pages

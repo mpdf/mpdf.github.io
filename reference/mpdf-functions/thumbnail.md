@@ -31,13 +31,13 @@ Create thumbnails of an external PDF file and insert in current document.
 
 : Specifies the number of thumbnails to print in each **row**.
 
-  <span class="smallblock">DEFAULT</span>: `3`
+  Default: `3`
 
 <span class="parameter">$spacing</span>
 
 : Specifies the spacing (vertical and horizontal) between thumbnails in millimetres.
 
-  <span class="smallblock">DEFAULT</span>: `10`
+  Default: `10`
 
 # Changelog
 

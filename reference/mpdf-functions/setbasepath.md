@@ -31,6 +31,7 @@ and images.
 # Parameters
 
 <span class="parameter">$url</span>
+
 : A full URL should be provided, but the following will all work:
   
   * http://www.mydomain.com

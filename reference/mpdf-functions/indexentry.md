@@ -33,9 +33,10 @@ as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: sit
 # Parameters
 
 <span class="parameter">$content</span>
+
 : This parameter sets the text as it will appear in the Index entry.
 
-  <span class="parameter">$content</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and 
+  <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and 
   must use the appropriate HTML entities e.g. `<annotation content="This is &amp;lt; 40" />`
 
   It is recommended that you use `htmlspecialchars('Content', ENT_QUOTES)` for this.
@@ -45,9 +46,10 @@ as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: sit
   <span class="smallblock">REQUIRED</span>
 
 <span class="parameter">$xref</span>
+
 : This parameter sets the text used as a cross-reference. Text should be UTF-8 encoded.
 
-  <span class="parameter">$xref</span> cannot contain any of the characters: &lt; &gt; &amp; ' *or* " and 
+  <span class="parameter">$xref</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and 
   must use the appropriate HTML entities e.g. `<indexentry xref="&amp;lt; 40" />`
 
   It is recommended that you use e.g. `htmlspecialchars($xref, ENT_QUOTES)` for this.

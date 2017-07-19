@@ -19,13 +19,15 @@ Set the opacity and blend mode for Images
 # Parameters
 
 <span class="parameter">$alpha</span>
+
 : This parameter specifies the opacity for any subsequent images written to the current document.
 
   **Values**
   
-  Float: 0 (transparent) to 1 (opaque)
+  Float: `0` (transparent) to `1` (opaque)
 
 <span class="parameter">$blend</span>
+
 : This parameter specifies the blend mode.
 
   **Values**

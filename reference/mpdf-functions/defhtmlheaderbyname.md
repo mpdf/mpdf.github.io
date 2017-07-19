@@ -31,10 +31,12 @@ Define an HTML page header with a given name. Named headers can be referenced an
 # Parameters
 
 <span class="parameter">$name</span>
-: User-defined name for the header. If <span class="parameter">$name</span> = <span class="smallblock">BLANK</span> the
-  name '_default' is used.
+
+: User-defined name for the header. If <span class="parameter">$name</span>`= ''` (blank) the
+  name `_default` is used.
 
 <span class="parameter">$html</span>
+
 : This parameter specifies the content of the page header as a string of valid HTML code.
 
   <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>

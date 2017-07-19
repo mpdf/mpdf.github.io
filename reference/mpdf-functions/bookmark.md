@@ -29,20 +29,23 @@ The target is set as the current writing position in the document when the Bookm
 ## Parameters
 
 <span class="parameter">$content</span>
+
 : Specifies the text to appear as a Bookmark.
 
-  <span class="parameter">$content</span> cannot contain any of the characters: `<` `>` `&` `'` *or* `"` and must use 
+  <span class="parameter">$content</span> cannot contain any of the characters: `<` `>` `&` `'` or `"` and must use 
   the appropriate HTML entities e.g. `<annotation content="This is &lt; 40" />`
 
   It is recommended that you use `htmlspecialchars('Content', ENT_QUOTES)` for this.
 
 <span class="parameter">$level</span>
-: <span class="parameter">$level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 
-  below. Accepts an integer from 0 to the maximum depth you wish.
 
-  <span class="smallblock">DEFAULT</span>: 0
+: <span class="parameter">$level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 
+  below. Accepts an integer from `0` to the maximum depth you wish.
+
+  <span class="smallblock">DEFAULT</span>: `0`
 
 <span class="parameter">$y</span>
+
 : <span class="parameter">$y</span> specifies the y-coordinate on the page for the Bookmark. The top of the page is 0. 
   The default is the current writing position on the page.
 
