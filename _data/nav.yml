@@ -88,12 +88,6 @@
     slug: fonts-languages
     items:
         -
-            title: 'About PDF files'
-            url: index8fa3.html
-            permalink: /fonts-languages/about-pdf-files.html
-            slug: about-pdf-files
-            parent_title: 'Fonts & Languages'
-        -
             title: 'Fonts in mPDF 7.x'
             permalink: /fonts-languages/fonts-in-mpdf-7-x.html
             slug: fonts-in-mpdf-7-x
@@ -111,6 +105,12 @@
             slug: fonts-in-mpdf-5-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'About PDF files'
+            url: index8fa3.html
+            permalink: /fonts-languages/about-pdf-files.html
+            slug: about-pdf-files
+            parent_title: 'Fonts & Languages'
+        -
             title: 'OpenType layout (OTL)'
             url: index785f.html
             permalink: /fonts-languages/opentype-layout-otl.html
@@ -123,7 +123,7 @@
             slug: font-names
             parent_title: 'Fonts & Languages'
         -
-            title: 'Available fonts v6 and v7'
+            title: 'Available Fonts v6 and v7'
             url: index3517.html
             permalink: /fonts-languages/available-fonts-v6.html
             slug: available-fonts-v6
@@ -135,10 +135,9 @@
             slug: available-fonts-v5-x
             parent_title: 'Fonts & Languages'
         -
-            title: 'Choosing a configuration v5.x'
-            url: index93f4.html
-            permalink: /fonts-languages/choosing-a-configuration-v5-x.html
-            slug: choosing-a-configuration-v5-x
+            title: 'Choosing a configuration v7.x'
+            permalink: /fonts-languages/choosing-a-configuration-v7-x.html
+            slug: choosing-a-configuration-v7-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Choosing a configuration v6.x'
@@ -147,16 +146,16 @@
             slug: choosing-a-configuration-v6-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'Choosing a configuration v5.x'
+            url: index93f4.html
+            permalink: /fonts-languages/choosing-a-configuration-v5-x.html
+            slug: choosing-a-configuration-v5-x
+            parent_title: 'Fonts & Languages'
+        -
             title: 'Automatic font selection'
             url: index0ee5.html
             permalink: /fonts-languages/automatic-font-selection.html
             slug: automatic-font-selection
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'lang v5.x'
-            url: indexe65f.html
-            permalink: /fonts-languages/lang-v5-x.html
-            slug: lang-v5-x
             parent_title: 'Fonts & Languages'
         -
             title: 'lang 6.x'
@@ -165,22 +164,16 @@
             slug: lang-6-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'lang v5.x'
+            url: indexe65f.html
+            permalink: /fonts-languages/lang-v5-x.html
+            slug: lang-v5-x
+            parent_title: 'Fonts & Languages'
+        -
             title: 'Input encoding'
             url: indexd870.html
             permalink: /fonts-languages/input-encoding.html
             slug: input-encoding
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Fonts & Language cover v5.x'
-            url: index39c1.html
-            permalink: /fonts-languages/fonts-language-cover-v5-x.html
-            slug: fonts-language-cover-v5-x
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Arabic (RTL) text v5.x'
-            url: index5202.html
-            permalink: /fonts-languages/arabic-rtl-text-v5-x.html
-            slug: arabic-rtl-text-v5-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Bidirectional (RTL) text v6.x'
@@ -189,16 +182,16 @@
             slug: bidirectional-rtl-text-v6-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'Arabic (RTL) text v5.x'
+            url: index5202.html
+            permalink: /fonts-languages/arabic-rtl-text-v5-x.html
+            slug: arabic-rtl-text-v5-x
+            parent_title: 'Fonts & Languages'
+        -
             title: 'CJK Languages'
             url: index57bf.html
             permalink: /fonts-languages/cjk-languages.html
             slug: cjk-languages
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Indic fonts v5.x'
-            url: indexee38.html
-            permalink: /fonts-languages/indic-fonts-v5-x.html
-            slug: indic-fonts-v5-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Default Font'
@@ -207,10 +200,9 @@
             slug: default-font
             parent_title: 'Fonts & Languages'
         -
-            title: 'Font substitution 5.x'
-            url: indexf1b3.html
-            permalink: /fonts-languages/font-substitution-5-x.html
-            slug: font-substitution-5-x
+            title: 'Font substitution 7.x'
+            permalink: /fonts-languages/font-substitution-7-x.html
+            slug: font-substitution-7-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Font substitution 6.x'
@@ -219,10 +211,28 @@
             slug: font-substitution-6-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'Font substitution 5.x'
+            url: indexf1b3.html
+            permalink: /fonts-languages/font-substitution-5-x.html
+            slug: font-substitution-5-x
+            parent_title: 'Fonts & Languages'
+        -
             title: 'Character substitution'
             url: index9a8f.html
             permalink: /fonts-languages/character-substitution.html
             slug: character-substitution
+            parent_title: 'Fonts & Languages'
+        -
+            title: 'Fonts & Language cover v5.x'
+            url: index39c1.html
+            permalink: /fonts-languages/fonts-language-cover-v5-x.html
+            slug: fonts-language-cover-v5-x
+            parent_title: 'Fonts & Languages'
+        -
+            title: 'Indic fonts v5.x'
+            url: indexee38.html
+            permalink: /fonts-languages/indic-fonts-v5-x.html
+            slug: indic-fonts-v5-x
             parent_title: 'Fonts & Languages'
 -
     title: Configuration
@@ -566,12 +576,6 @@
             url: index452a.html
             permalink: /what-else-can-i-do/watermarks.html
             slug: watermarks
-            parent_title: 'What Else Can I Do'
-        -
-            title: Graphs
-            url: index4d44.html
-            permalink: /what-else-can-i-do/graphs.html
-            slug: graphs
             parent_title: 'What Else Can I Do'
         -
             title: 'Replaceable Aliases'
