@@ -105,7 +105,7 @@ The attribute `start="3"` (integer) works for "OL"; it is an official (though de
 List bullets (`type = disc, circle `or` square`) are drawn rather than using font glyphs (from mPDF >= v6.0), 
 for better consistency.
 
-For maximum backwards comaptibility with older versions of mPDF, change the following 
+For maximum backwards compatibility with older versions of mPDF, change the following 
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a>:
 
 <table class="table">
