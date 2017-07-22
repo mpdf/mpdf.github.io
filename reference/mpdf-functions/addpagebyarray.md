@@ -260,7 +260,7 @@ Number of pages added:
   * a pre-defined page size, 
   * or as an array of width and height in millimetres e.g. `array(210, 297)`.
 
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
+  Default: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
 
   **Values** (case-insensitive)
 

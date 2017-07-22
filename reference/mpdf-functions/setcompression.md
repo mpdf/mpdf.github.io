@@ -23,7 +23,7 @@ default to `true` on initialising the mPDF class.
 
 : `true` or `false` to specify whether mPDF should compress the data for the PDF file.
 
-  <span class="smallblock">DEFAULT</span>: `true`
+  Default: `true`
 
 # Examples
 

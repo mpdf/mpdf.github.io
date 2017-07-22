@@ -40,7 +40,7 @@ Define, start or stop Columns in the document.
 
   <span class="smallblock">BLANK</span> or omitted or `0` or `1` turns Columns OFF i.e. the whole page is used as one column.
   
-  <span class="smallblock">DEFAULT</span>: `1`
+  Default: `1`
   
 <span class="parameter">$vAlign</span>
 
@@ -53,7 +53,7 @@ Define, start or stop Columns in the document.
   * `''` (<span class="smallblock">BLANK</span>) or omitted: turns vertical alignment off
   * `'J'` or `'justify'`:  Automatically adjusts height of columns to be equal
   
-  <span class="smallblock">DEFAULT</span>: `''`
+  Default: `''`
   
 <span class="parameter">$gap</span>
 
@@ -61,7 +61,7 @@ Define, start or stop Columns in the document.
   
   <span class="smallblock">BLANK</span> or omitted uses default value.
   
-  <span class="smallblock">DEFAULT</span>: `5` (mm)
+  Default: `5` (mm)
 
 # Examples
 

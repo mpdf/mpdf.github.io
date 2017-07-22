@@ -62,8 +62,7 @@ imported page as it is printed (see Example #1).
 : Sets the <span class="parameter">$x</span> co-ordinate (abscissa) to output the template. Value should be 
   specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-  <span class="smallblock">DEFAULT</span> <span class="smallblock">NULL</span> - Sets <span class="parameter">$x</span> 
-  co-ordinate to `0`
+  Default: `null` - Sets <span class="parameter">$x</span> co-ordinate to `0`
 
   <span class="smallblock">BLANK</span> or omitted - uses default (`0`)
 
@@ -74,8 +73,7 @@ imported page as it is printed (see Example #1).
 : Sets the <span class="parameter">$y</span> co-ordinate (ordinate) to output the template. Value should be 
   specified as <span class="smallblock">LENGTH</span> in millimetres.
 
-  <span class="smallblock">DEFAULT</span> <span class="smallblock">NULL</span> - Sets <span class="parameter">$y</span> 
-  co-ordinate to `0`
+  Default: `null` - Sets <span class="parameter">$y</span> co-ordinate to `0`
 
   <span class="smallblock">BLANK</span> or omitted - uses default (`0`)
 
@@ -86,7 +84,7 @@ imported page as it is printed (see Example #1).
 : Specifies the width for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> 
   in millimetres.
 
-  <span class="smallblock">DEFAULT</span> or `0` will output the template at the original size (if 
+  Default or `0` will output the template at the original size (if 
   neither <span class="parameter">$width</span> nor <span class="parameter">$height</span> are set) or 
   if <span class="parameter">$height</span> is set, the <span class="parameter">$width</span> is automatically 
   set to output the template in proportion to the original.
@@ -96,7 +94,7 @@ imported page as it is printed (see Example #1).
 : Specifies the height for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> 
   in millimetres.
 
-  <span class="smallblock">DEFAULT</span> or `0` will output the template at the original size (if 
+  Default or `0` will output the template at the original size (if 
   neither <span class="parameter">$width</span> nor <span class="parameter">$height</span> are set) or 
   if <span class="parameter">$width</span> is set, the <span class="parameter">$height</span> is automatically 
   set to output the template in proportion to the original.

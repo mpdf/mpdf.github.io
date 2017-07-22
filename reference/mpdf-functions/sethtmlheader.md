@@ -26,7 +26,7 @@ Set an HTML page header.
 
 : This parameter specifies the content of the page header as a string of valid HTML code.
 
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
   
 <span class="parameter">$side</span>
 
@@ -39,7 +39,7 @@ Set an HTML page header.
   
   `'E'` - set the header for <span class="smallblock">EVEN</span> pages
   
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>, which sets `'O'`
+  Default: <span class="smallblock">BLANK</span>, which sets `'O'`
   
   
 <span class="parameter">$write</span>
@@ -47,7 +47,7 @@ Set an HTML page header.
 : If `true` it forces the Header to be written immediately to the current page. Use if the
   header is being set after the new page has been added.
   
-  <span class="smallblock">DEFAULT</span>: `false`
+  Default: `false`
   
   <div class="alert alert-info" role="alert" markdown="1">
     **Note:** Important Difference

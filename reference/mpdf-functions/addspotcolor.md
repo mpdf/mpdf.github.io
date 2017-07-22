@@ -32,7 +32,7 @@ Define a Spot colour which can be used in the document. Spot colours need to be 
 
 : Specifies the CMYK values to be used to display in the document or if the spot colour is not available.
 
-  <span class="smallblock">DEFAULT</span>: `0`
+  Default: `0`
 
 # Examples
 

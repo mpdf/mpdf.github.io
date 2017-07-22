@@ -31,7 +31,7 @@ for more details. If `SetDirectionality('rtl')` is set, *Text Bidirectionality* 
   * `'ltr'`
   * `'rtl'`
   
-  <span class="smallblock">DEFAULT</span>: `'ltr'`
+  Default: `'ltr'`
 
 # Examples
 

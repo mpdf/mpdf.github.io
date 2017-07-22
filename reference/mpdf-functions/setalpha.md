@@ -51,7 +51,7 @@ Set the opacity and blend mode for Images
   * `'Color'`
   * `'Luminosity'`
 
-  <span class="smallblock">DEFAULT</span>: `'Normal'`
+  Default: `'Normal'`
 
 # Changelog
 

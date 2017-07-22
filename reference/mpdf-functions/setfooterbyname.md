@@ -46,11 +46,11 @@ Sets a page footer that has previously been defined by name.
   * `'E'` 
     : set the footer for <span class="smallblock">EVEN</span> pages
   
-      <span class="smallblock">DEFAULT</span> - sets the footer for <span class="smallblock">ODD</span> in a
+      Default sets the footer for <span class="smallblock">ODD</span> in a
       <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span>
       and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.
 
-  <span class="smallblock">DEFAULT</span>: `'O'`
+  Default: `'O'`
 
 
 # Changelog

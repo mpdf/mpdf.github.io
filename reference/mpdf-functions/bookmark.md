@@ -42,7 +42,7 @@ The target is set as the current writing position in the document when the Bookm
 : <span class="parameter">$level</span> specifies the "tree" level for the Bookmark. The top level is 0. See Example 2 
   below. Accepts an integer from `0` to the maximum depth you wish.
 
-  <span class="smallblock">DEFAULT</span>: `0`
+  Default: `0`
 
 <span class="parameter">$y</span>
 

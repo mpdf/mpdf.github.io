@@ -28,7 +28,7 @@ Set a page footer.
 
 : This parameter specifies the content of the page footer. It can accept a string or array.  
   
-  <span class="smallblock">DEFAULT</span>: `array()`
+  Default: `array()`
   
   **Values**
   `''` (<span class="smallblock">BLANK</span> string) or <span class="smallblock">NULL</span> or `array()`
@@ -142,7 +142,7 @@ Set a page footer.
 : Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>
   pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
   
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
 
   **Values** (case-sensitive)
   

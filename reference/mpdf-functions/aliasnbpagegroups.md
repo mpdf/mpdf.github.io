@@ -27,7 +27,7 @@ number of pages in the whole document.
 
 : Defines the text for the variable <span class="parameter">$aliasNbPgGp</span>.
   
-  <span class="smallblock">DEFAULT</span>: `'{nbpg}'`
+  Default: `'{nbpg}'`
 
 # Examples
 

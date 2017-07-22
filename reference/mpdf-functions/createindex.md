@@ -50,7 +50,7 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 
   <span class="smallblock">BLANK</span> or omitted or `0` or `1` uses the whole page is used as one column.
 
-  <span class="smallblock">DEFAULT</span>: `1`
+  Default: `1`
 
 <span class="parameter">$fontsize</span>
 
@@ -64,7 +64,7 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 
   <span class="smallblock">BLANK</span> or omitted or `0` uses the default value.
 
-  <span class="smallblock">DEFAULT</span>: `1.2`  (changed from `1.0` in mPDF < 3.0)
+  Default: `1.2`  (changed from `1.0` in mPDF < 3.0)
 
 <span class="parameter">$offset</span>
 
@@ -76,7 +76,7 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 
 : Defines whether to divide index entries starting with the same letter, using a (large) letter as a heading.
 
-  <span class="smallblock">DEFAULT</span>: `1`
+  Default: `1`
 
   **Values**
 
@@ -97,7 +97,7 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 
   <span class="smallblock">BLANK</span> or omitted uses the default value.
 
-  <span class="smallblock">DEFAULT</span>: `5` (mm)
+  Default: `5` (mm)
 
 <span class="parameter">$font </span>
 
@@ -117,7 +117,7 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 
   * `true` or `1`: add links to Index
   * <span class="smallblock">BLANK</span> or omitted, `0` or `false`: do not add links to the Index
-  * <span class="smallblock">DEFAULT</span>: `false`
+  * Default: `false`
 
 
 # Changelog

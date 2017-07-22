@@ -55,7 +55,7 @@ Adobe Reader, these values will determine the initial appearance and layout.
   * `'default'`
     : User's default setting in Adobe Reader
 
-  <span class="smallblock">DEFAULT</span>: `'continuous'`
+  Default: `'continuous'`
 
 
 # Examples

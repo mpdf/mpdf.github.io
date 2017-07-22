@@ -43,7 +43,7 @@ e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: sit
 : This parameter specifies the content of the page footer as an array.
 
 
-  <span class="smallblock">DEFAULT</span>: `array()`
+  Default: `array()`
 
   **Values** in the array:
   * <span class="parameter">L</span>: subarray for left
