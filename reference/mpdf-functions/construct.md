@@ -24,11 +24,13 @@ Initialise an instance of mPDF class.
 
 : This parameter specifies configuration of the new document. 
 
-  Apart from configuration variables defined in
-  `ConfigVariables` and `FontConfigVariables` classes it can obtain variables which where the arguments
-  from the constructor of mPDF < 7.0: `mode`, `format`, `default_font_size`, `default_font`, `margin_left`,
+  * Apart from configuration variables defined in
+  `ConfigVariables` and `FontVariables` classes it can obtain variables which where the arguments
+  from the constructor of   mPDF < 7.0: `mode`, `format`, `default_font_size`, `default_font`, `margin_left`,
   `margin_right`, `margin_top`, `margin_bottom`, `margin_header`, `margin_footer`, `orientation`. These variables are described with 
-  their defaults in the next section. Other configuration keys are listed at the <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">configuration overview</a>.
+  their defaults in the next section. 
+  
+  * The other configuration keys are listed at the <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">configuration overview</a>.
 
 ## Variables with defaults from constructor
 
@@ -191,7 +193,6 @@ $mpdf->Output('filename.pdf');
 
 ```php
 <?php
-
 // Define a new \Mpdf\Mpdf document using utf-8 fonts
 $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8']);
 
