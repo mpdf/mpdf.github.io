@@ -81,7 +81,7 @@ but note that `SetAutoFont()` also:
   * `AUTOFONT_INDIC` = 8 - Indic languages such as Devanagari
   * `AUTOFONT_ALL` = 15 - All of the above
 
-  <span class="smallblock">DEFAULT</span>: `AUTOFONT_ALL` (15)
+  Default: `AUTOFONT_ALL` (15)
 
 # Changelog
 

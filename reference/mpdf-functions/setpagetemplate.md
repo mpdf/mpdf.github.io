@@ -26,7 +26,7 @@ added to the page at the same time as a new page is started (in the Header).
 : This parameter specifies the ID of the page template to use. Value must be a valid template ID 
   from <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>.
 
-  <span class="smallblock">DEFAULT</span> or <span class="smallblock">BLANK</span> will clear the template, so 
+  Default or <span class="smallblock">BLANK</span> will clear the template, so 
   subsequent pages will not have the template added.
 
 # Changelog

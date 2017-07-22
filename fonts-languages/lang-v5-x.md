@@ -16,7 +16,7 @@ recognised in `<body>` or `<html>` tags.
 
 **Important:** Support for the attribute <span class="parameter">$lang</span> is only active when the variable
 <a href="{{ "/reference/mpdf-variables/uselang.html" | prepend: site.baseurl }}">$useLang</a> is set to
-<span class="smallblock">TRUE</span> (<span class="smallblock">DEFAULT</span>).
+`true` (Default).
 
 The language codes supported are determined by <span class="filename">config_cp.php</span> :
 

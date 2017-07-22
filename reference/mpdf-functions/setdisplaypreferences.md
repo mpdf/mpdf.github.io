@@ -24,8 +24,8 @@ When the user opens the finished file in Adobe Reader, these values will determi
 : This parameter takes a string containing any one or more of the possible values separated by any characters 
   (e.g. comma, forward slash or space). 
   
-  All the options start as <span class="smallblock">FALSE</span>, and can only be set <span class="smallblock">TRUE</span> 
-  by this command. Each setting is added to those previously set.
+  All the options start as `false`, and can only be set `true` by this command. Each setting is added to those 
+  previously set.
   
   **Values** (case-sensitive)
   

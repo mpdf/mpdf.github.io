@@ -30,7 +30,7 @@ Send the document to a given destination: browser, file or string. In the case o
 : Destination where to send the document. Use class constants from `\Mpdf\Output\Destination` for better readability
   and understandability
 
-  <span class="smallblock">DEFAULT</span>: `\Mpdf\Output\Destination::INLINE`
+  Default: `\Mpdf\Output\Destination::INLINE`
 
   **Values**:
   `\Mpdf\Output\Destination::INLINE`

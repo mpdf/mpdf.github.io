@@ -26,7 +26,7 @@ Initialise an instance of mPDF class.
 
   * Apart from configuration variables defined in
   `ConfigVariables` and `FontVariables` classes it can obtain variables which where the arguments
-  from the constructor of   mPDF < 7.0: `mode`, `format`, `default_font_size`, `default_font`, `margin_left`,
+  from the constructor of   mPDF&nbsp;<&nbsp;7.0: `mode`, `format`, `default_font_size`, `default_font`, `margin_left`,
   `margin_right`, `margin_top`, `margin_bottom`, `margin_header`, `margin_footer`, `orientation`. These variables are described with 
   their defaults in the next section. 
   

@@ -39,7 +39,7 @@ Define an HTML page header with a given name. Named headers can be referenced an
 
 : This parameter specifies the content of the page header as a string of valid HTML code.
 
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
 
 # Changelog
 

@@ -70,7 +70,7 @@ generated automatically at the end of the document when
 
   <span class="smallblock">BLANK</span> or omitted uses a default value of `true`.
 
-  <span class="smallblock">DEFAULT</span>: `true`
+  Default: `true`
 
   **Values**
 
@@ -86,7 +86,7 @@ generated automatically at the end of the document when
 
   <span class="smallblock">BLANK</span> or omitted uses a default value of `false`.
 
-  <span class="smallblock">DEFAULT</span>: `false`
+  Default: `false`
 
   **Values**
 
@@ -142,7 +142,7 @@ generated automatically at the end of the document when
   This will cause the line to extend beyond the right margin; you can prevent this by setting
   <span class="smallblock">PADDING-RIGHT</span> equal to this value.
 
-  <span class="smallblock">DEFAULT</span> `0`
+  Default: `0`
 
 <span class="parameter">toc-odd-header-name</span>
 <span class="parameter">toc-even-header-name</span>
@@ -242,7 +242,7 @@ generated automatically at the end of the document when
   * string for a pre-defined page size, see values below, e.g. `'A5'`
   * or as an array of width and height in millimetres e.g. `array(210,297)`.
 
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
+  Default: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
 
   **Values** (case-insensitive)
   * `'A0'` - `'A10'`, `'B0'` - `'B10'`, `'C0'` - `'C10'`

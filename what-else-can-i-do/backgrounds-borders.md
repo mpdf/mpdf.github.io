@@ -92,7 +92,7 @@ in the <a href="http://www.w3.org/TR/2008/WD-css3-background-20080910/#layering"
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** Border-radius does not work if Columns are being used,
   or if <span class="parameter"><a href="{{ "/reference/mpdf-variables/use-kwt.html" | prepend: site.baseurl }}">$use_kwt</a></span>
-  is <span class="smallblock">TRUE</span> (keep-with-table).
+  is `true` (keep-with-table).
 </div>
 
 The two length values of the `border-*-radius` properties define the radii of a quarter ellipse that defines the shape

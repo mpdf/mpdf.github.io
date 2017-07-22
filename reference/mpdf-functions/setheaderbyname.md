@@ -46,14 +46,14 @@ Sets a page header that has previously been defined by name.
   `'E'`
   : set the header for <span class="smallblock">EVEN</span> pages
   
-  <span class="smallblock">DEFAULT</span>: `'O'`
+  Default: `'O'`
   
 <span class="parameter">$write</span>
 
 : If `true` it forces the Header to be written immediately to the current page.
   Use if the header is being set after the new page has been added.
   
-  <span class="smallblock">DEFAULT</span>: `false`
+  Default: `false`
 
 # Changelog
 
