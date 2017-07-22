@@ -37,7 +37,7 @@ Codes such as `'en-US'` are supported, and interpreted as `'en'`
 When a language is set, the following happens (determined by function `GetCodepage()`):
 
 - available fonts are restricted to those which contain the necessary glyphs to display this language
-- justification type (<a href="index9a03.html?tid=203">$jSpacing</a>) is set when a block tag has the property
+- justification type (`jSpacing` mPDF < 5.1) is set when a block tag has the property
   `text-align: justify;` for span/inline elements the justification
   is disabled for the enclosing block element.
 

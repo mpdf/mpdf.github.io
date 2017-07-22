@@ -63,9 +63,6 @@ Write <span class="parameter">$html</span> code to the document.
 
   NB Stylesheets with `media="all"` or `media ="screen"` will always be parsed.
 
-  The variable <span class="parameter">$disablePrintCSS</span> will determine whether stylesheets `media="print"` are
-  parsed or not.
-
   Anything between `<style>` tags is then discarded.
 
   If `<body>` tags are found, all <span class="parameter">$html</span> outside these tags are discarded, and the
@@ -170,7 +167,6 @@ $mpdf->WriteHTML('...and this is the end', 2, false, true);
 # See Also
 
 - <a href="{{ "/reference/mpdf-variables/allow-charset-conversion.html" | prepend: site.baseurl }}">$allow_charset_conversion</a> - attempts to read any charset declaration in the HTML code
-- <a href="indexb1bd.html?tid=230">disablePrintCSS</a> - prevents stylesheets set for print media being parsed
 - <a href="{{ "/reference/mpdf-variables/ignore-invalid-utf8.html" | prepend: site.baseurl }}">$ignore_invalid_utf8</a> - prevents mPDF from failing if text contains invalid UTF-8 characters
 - <a href="{{ "/reference/mpdf-variables/charset-in.html" | prepend: site.baseurl }}">$charset_in</a> - specify the input text character set if not UTF-8
 - <a href="{{ "/reference/mpdf-variables/bidirectional.html" | prepend: site.baseurl }}">$biDirectional</a> - specify whether mPDF should test for <acronym title="Right-to-Left document, used for Hebrew and Arabic languages">RTL</acronym> text
