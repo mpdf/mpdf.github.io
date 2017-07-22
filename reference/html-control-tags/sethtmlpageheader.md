@@ -21,7 +21,7 @@ Sets an HTML page header that has previously been defined by name.
 <span class="parameter">$name</span>
 
 : This parameter specifies the name of a previously defined HTML page header. If a <span class="smallblock">BLANK</span> 
-  string or <span class="smallblock">NULL</span> is passed, mPDF will use the value `'_default'` if such a page header 
+  string or `null` is passed, mPDF will use the value `'_default'` if such a page header 
   exists.
   
   The <span class="parameter">$name</span> does not need to be defined if you are setting the value to `'-1'` or `'off'`

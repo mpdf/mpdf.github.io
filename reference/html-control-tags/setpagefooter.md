@@ -30,7 +30,7 @@ Sets a page footer that has previously been defined by name.
 <span class="parameter">$name</span>
 
 : This parameter specifies the name of a previously defined page footer. If a <span class="smallblock">BLANK</span> 
-  string or <span class="smallblock">NULL</span> is passed, mPDF will use the value `'_default'` if such a page footer exists.
+  string or `null` is passed, mPDF will use the value `'_default'` if such a page footer exists.
   
   The <span class="parameter">$name</span> does not need to be defined if you are setting the value to `'-1'` or `'off'`
 

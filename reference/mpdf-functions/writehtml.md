@@ -128,9 +128,9 @@ Write <span class="parameter">$html</span> code to the document.
 <tr>
   <td>4.2</td>
   <td markdown="1">
-Accepts <span class="smallblock">NULL</span> string as parameter without error.
+  Accepts `null` string as parameter without error.
 
-Parses default CSS when using <span class="parameter">$mode</span> as 2
+  Parses default CSS when using <span class="parameter">$mode</span> as 2
   </td>
 </tr>
 </tbody>
