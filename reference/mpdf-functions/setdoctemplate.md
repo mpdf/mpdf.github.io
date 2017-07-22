@@ -28,7 +28,7 @@ source document, the last page will (optionally) continue to be used for any rem
 : This parameter specifies the source PDF file used as the template document.  <span class="parameter">$file</span>
   should be a relative path to a local file.
   
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
   
 <span class="parameter">$continue</span>
 
@@ -37,7 +37,7 @@ source document, the last page will (optionally) continue to be used for any rem
   If `true` (or any positive value) it forces the last page of the source file to
   continue to be used as a template, if the current mPDF document contains more pages than the source file.
   
-  <span class="smallblock">DEFAULT</span>: `false`
+  Default: `false`
   
   <div class="alert alert-info" role="alert" markdown="1">
     **Note:** If you want to turn the template off, just use 
