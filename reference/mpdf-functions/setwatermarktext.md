@@ -33,7 +33,7 @@ to `1` or `true`. 
   
   If the text is blank, it will clear the watermark text, so nothing appears.
   
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
 
   
 <span class="parameter">$alpha</span>
@@ -41,7 +41,7 @@ to `1` or `true`. 
 : This parameter defines the transparency value (alpha) to use for the watermark: either text or image. The Value should
   be between `0` and `1`.
 
-  <span class="smallblock">DEFAULT</span>: `0.2`
+  Default: `0.2`
 
 # Changelog
 
