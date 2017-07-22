@@ -32,7 +32,7 @@ Set the visibility of subsequent objects
   * `'printonly'`
   * `'screenonly'`
   
-  <span class="smallblock">DEFAULT</span>: `'visible'`
+  Default: `'visible'`
 
 # Changelog
 

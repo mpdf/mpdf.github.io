@@ -50,7 +50,7 @@ Insert an entry for the Table of Contents referencing the current writing positi
 
   Starts at level 0
   
-  <span class="smallblock">DEFAULT</span>: `0`
+  Default: `0`
 
 
 <span class="parameter">$name</span>

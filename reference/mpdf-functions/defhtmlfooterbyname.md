@@ -41,7 +41,7 @@ Define an HTML page footer with a given name. Named footers can be referenced an
 
 : This parameter specifies the content of the page footer as a string of valid HTML code.
 
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
 
 # Changelog
 

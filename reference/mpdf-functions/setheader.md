@@ -28,7 +28,7 @@ Set a page header.
 
 : This parameter specifies the content of the page header. It can accept a string or array.
   
-  <span class="smallblock">DEFAULT</span>: `array()`
+  Default: `array()`
   
   **Values**
   `''` (<span class="smallblock">BLANK</span> string) or <span class="smallblock">NULL</span> or `array()` 
@@ -142,7 +142,7 @@ Set a page header.
 : Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>
   pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
   
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
 
   **Values** (case-sensitive)
   
@@ -157,7 +157,7 @@ Set a page header.
 : If `true`, it forces the Header to be written immediately to the current page. Use if
   the header is being set after the new page has been added.
   
-  <span class="smallblock">DEFAULT</span>: `false`
+  Default: `false`
   
   <div class="alert alert-info" role="alert" markdown="1">
     **Note:** <span class="parameter">$write</span> forces the

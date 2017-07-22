@@ -70,7 +70,7 @@ Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specifica
 
 : This parameter specifies the size of the barcode relative to the standard. Values between `0.8` and `2.0` (80% to 200%) are accepted.
   
-  <span class="smallblock">DEFAULT</span>: `1`
+  Default: `1`
   
 <span class="parameter">$border</span>
 
@@ -81,7 +81,7 @@ Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specifica
   * `1` or `true` (or any positive value) will set a border
   * `0` or `false` or <span class="smallblock">BLANK</span> will omit the border
   
-  <span class="smallblock">DEFAULT</span>: `0` i.e. No border
+  Default: `0` i.e. No border
   
 <span class="parameter">$padding_left</span>
 <span class="parameter">$padding_right</span>
@@ -94,7 +94,7 @@ Write an EAN-13 barcode. Useful information about the EAN-13 (ISBN-13) specifica
   
   <span class="smallblock">BLANK</span> or omitted uses the default values.
   
-  <span class="smallblock">DEFAULT</span> **Values**
+  Default **Values**
   * <span class="parameter">$padding_left</span>: `1`
   * <span class="parameter">$padding_right</span>: `1`
   * <span class="parameter">$padding_top</span>: `2`

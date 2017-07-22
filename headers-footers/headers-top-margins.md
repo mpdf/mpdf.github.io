@@ -20,7 +20,8 @@ If you specify a header that extends further down the page than the margin-top, 
 # Alternative margin usage
 
 The configuration variables <a href="{{ "/reference/mpdf-variables/setautotopmargin.html" | prepend: site.baseurl }}">`$setAutoTopMargin`</a>
-and <a href="{{ "/reference/mpdf-variables/setautotopmargin.html" | prepend: site.baseurl }}">`$setAutoBottomMargin`</a> can be set. Both default to <span class="smallblock">FALSE</span>.
+and <a href="{{ "/reference/mpdf-variables/setautotopmargin.html" | prepend: site.baseurl }}">`$setAutoBottomMargin`</a>
+can be set. Both default to `false`.
 
 ## pad
 

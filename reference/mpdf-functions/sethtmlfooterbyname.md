@@ -34,7 +34,7 @@ Sets an HTML page footer that has previously been defined by name.
 : Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages
   in a <span class="smallblock">DOUBLE-SIDED</span> document.
   
-  <span class="smallblock">DEFAULT</span>: `'O'`
+  Default: `'O'`
   
   **Values** (case-sensitive)
   
@@ -47,7 +47,7 @@ Sets an HTML page footer that has previously been defined by name.
   : set the footer for <span class="smallblock">EVEN</span> pages
 
   
-  <span class="smallblock">DEFAULT</span>: `'O'`
+  Default: `'O'`
 
 # Changelog
 

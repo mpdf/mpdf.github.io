@@ -29,7 +29,7 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 
 : Defines whether to divide index entries starting with the same letter, using a (large) letter as a heading.
 
-  <span class="smallblock">DEFAULT</span>: `1`
+  Default: `1`
 
   **Values**
   * `1` : show dividing letters in the Index
@@ -41,7 +41,7 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 
 : Specify whether to add hyperlinks (internal links) to the entries in the document Index.
 
-  <span class="smallblock">DEFAULT</span>: `false`
+  Default: `false`
 
   **Values**
   * `true` or `1`: add links to Index

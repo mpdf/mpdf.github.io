@@ -42,7 +42,7 @@ Define a page header with a given name. Named headers can be referenced and set 
 
 : This parameter specifies the content of the page header as an array.
 
-  <span class="smallblock">DEFAULT</span>: array()
+  Default: array()
 
   **Values** in the array
   * <span class="parameter">L</span>: subarray for left

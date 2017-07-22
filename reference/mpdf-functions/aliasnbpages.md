@@ -23,7 +23,7 @@ which is used as a placeholder used to insert total number of pages into the doc
 
 : Defines the text for the variable <span class="parameter">$aliasNbPg</span>.
   
-  <span class="smallblock">DEFAULT</span>: `'{nb}'`
+  Default: `'{nb}'`
 
 # Examples
 

@@ -43,7 +43,7 @@ development purposes, or for slow document generation. To set this value globall
   
   * `2`: Shows multiple progress bars for detailed examination of progress
 
-  <span class="smallblock">DEFAULT</span>: `1`
+  Default: `1`
 
 # Examples
 

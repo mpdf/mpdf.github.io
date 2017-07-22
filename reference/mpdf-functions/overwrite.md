@@ -76,7 +76,7 @@ is longer than the <span class="parameter">$search</span> string, it may overlap
 
 : <span class="parameter">$dest</span> specifies the destination for the generated PDF document.
 
-  <span class="smallblock">DEFAULT</span>: `"D"`
+  Default: `"D"`
 
   **Values**
 
@@ -90,7 +90,7 @@ is longer than the <span class="parameter">$search</span> string, it may overlap
 : This parameter specifies the filename for the output PDF file. No path should be included unless 
   <span class="parameter">$dest</span> is set as `"F"`.
 
-  <span class="smallblock">DEFAULT</span>: `"mpdf.pdf"`
+  Default: `"mpdf.pdf"`
 
 # Return Value
 

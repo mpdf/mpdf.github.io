@@ -68,7 +68,7 @@ Annotations cannot be moved or deleted by the reader
 
 : Sets the appearance of the Annotation marker.
 
-  <span class="smallblock">BLANK</span> or omitted uses <span class="smallblock">DEFAULT</span> i.e. `'Note'`
+  <span class="smallblock">BLANK</span> or omitted uses default value i.e. `'Note'`
 
   **Values** (case sensitive)
 
@@ -92,13 +92,13 @@ Annotations cannot be moved or deleted by the reader
 
 : This specifies the name of the Author which will appear at the top of the popup text box.
 
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
 
 <span class="parameter">$subject</span>
 
 : This specifies the text to appear in the Annotation properties.
 
-  <span class="smallblock">DEFAULT</span>: <span class="smallblock">BLANK</span>
+  Default: <span class="smallblock">BLANK</span>
 
 <span class="parameter">$opacity</span>
 
@@ -106,15 +106,15 @@ Annotations cannot be moved or deleted by the reader
 
   <span class="smallblock">BLANK</span> or omitted or `0`: sets the opacity to the value of 
   <a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a> 
-  (<span class="smallblock">DEFAULT</span> `0.5`), 
+  (Default: `0.5`), 
   unless <a href="{{ "/reference/mpdf-variables/annotmargin.html" | prepend: site.baseurl }}">annotMargin</a> 
-  forces the Annotations to appear in the margin, when the <span class="smallblock">DEFAULT</span> is `1`
+  forces the Annotations to appear in the margin, when the default value is `1`
 
 <span class="parameter">$colarray</span>
 
 : An array containing RGB color specification, which determines the colour of the Annotation marker background
 
-  <span class="smallblock">DEFAULT</span> `array(255,255,0)` i.e. Yellow
+  Default: `array(255,255,0)` i.e. Yellow
 
 <span class="parameter">$popup</span>
 

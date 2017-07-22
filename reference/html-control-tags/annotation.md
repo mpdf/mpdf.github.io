@@ -75,7 +75,7 @@ Annotations cannot be moved or deleted by the reader.
 
 : Sets the appearance of the Annotation marker.
   
-  <span class="smallblock">BLANK</span> or omitted uses <span class="smallblock">DEFAULT</span> i.e. `'Note'`
+  <span class="smallblock">BLANK</span> or omitted uses Default: i.e. `'Note'`
   
   **Values** (case sensitive)
   
