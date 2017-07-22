@@ -51,13 +51,13 @@ is created in mPDF which stores the image of this page, ready to insert into the
 
 : Specifies the width in millimetres when importing a 'cropped' page into the template.
 
-  Default: <span class="smallblock">NULL</span> uses the full page width from the source file
+  Default: `null` uses the full page width from the source file
 
 <span class="parameter">$crop_h</span>
 
 : Specifies the height in millimetres when importing a 'cropped' page into the template.
 
-  Default: <span class="smallblock">NULL</span> uses the full page height from the source file
+  Default: `null` uses the full page height from the source file
 
 <span class="parameter">$boxname</span>
 
