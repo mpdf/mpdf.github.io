@@ -21,7 +21,7 @@ string <span class="parameter">$src</span>
 Set an image to use as a Watermark. The watermark is a semi-transparent background printed on each page, 
 used for text such as "DRAFT" or a background image. The watermark will be added to each page when the 
 Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">$showWatermarkImage</a> 
-is set to 1 or <span class="smallblock">TRUE</span>. 
+is set to `1` or `true`. 
 
 # Parameters
 
@@ -33,7 +33,7 @@ is set to 1 or <span class="smallblock">TRUE</span>. 
 
 : This parameter defines the transparency value (alpha) to use for the watermark. The Value should be between `0` and `1`.
 
-  <span class="smallblock">DEFAULT</span>: `0.2`
+  Default: `0.2`
 
 <span class="parameter">$size</span>
 
@@ -53,7 +53,7 @@ is set to 1 or <span class="smallblock">TRUE</span>. 
   * `array($width, $height)`
     : Specify a size; units in millimeters
   
-  <span class="smallblock">DEFAULT</span>: `'D'`
+  Default: `'D'`
  
   
 <span class="parameter">$position</span>
@@ -68,7 +68,7 @@ is set to 1 or <span class="smallblock">TRUE</span>. 
   * `'F'`: Centred on the page print-area (frame) respecting page margins
   * `array($x, $y)`: Specify a position; units in millimeters
   
-  <span class="smallblock">DEFAULT</span>: `'P'`
+  Default: `'P'`
 
 # Changelog
 

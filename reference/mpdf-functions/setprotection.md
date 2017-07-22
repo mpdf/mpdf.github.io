@@ -74,7 +74,7 @@ Encrypts and sets the PDF document permissions for the PDF file, together with u
   <span class="parameter">$permissions</span> (see above) require 128-bit encryption, and setting any of these will
   automatically set <span class="parameter">$length</span> as `128`, overriding any value specified.
   
-  <span class="smallblock">DEFAULT</span>: `40` - use 40-bit encryption
+  Default: `40` - use 40-bit encryption
   
   **Values**
   
