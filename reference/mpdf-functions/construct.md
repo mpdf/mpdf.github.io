@@ -50,7 +50,7 @@ Initialise an instance of mPDF class.
     backwards compatability (but have no effect).
     
     Only some combinations make sense. See
-    <a href="{{ "/fonts-languages/choosing-a-configuration-v5-x.html" | prepend: site.baseurl }}">Choosing a configuration</a>
+    <a href="{{ "/fonts-languages/choosing-a-configuration-v7-x.html" | prepend: site.baseurl }}">Choosing a configuration</a>
     for more details.
   
   * **Country/Language code values** (case-insensitive)
