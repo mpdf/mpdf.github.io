@@ -6,7 +6,7 @@ permalink: /fonts-languages/choosing-a-configuration-v6-x.html
 modification_time: 2015-08-05T11:59:30+00:00
 ---
 
-(mPDF >= 6.0 && < 7.0)
+(mPDF >= 6.0 & < 7.0)
 
 In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing
 speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at 
@@ -26,11 +26,11 @@ Some of the things you can change are:
 
 Some of the major considerations are:
 
-- whether to restrict the document to core non-embedded fonts
-- whether, or how, to subset embedded fonts
-- handling of languages which require special fonts, including automatic font selection and character substitution
+1. whether to restrict the document to core non-embedded fonts
+2. whether, or how, to subset embedded fonts
+3. handling of languages which require special fonts, including automatic font selection and character substitution
 
-# Core non-embedded fonts
+# 1. Core non-embedded fonts
 
 PDF files have certain standard fonts: Arial/Helvetica, Times and Courier in the win-1252 character set, and 
 Zapfdingbats and Symbol character sets. These fonts should be available to any PDF reading program, and do not need to
@@ -53,7 +53,7 @@ $mpdf = new mPDF('c');
 
 ```
 
-# Embedded Unicode fonts
+# 2. Embedded Unicode fonts
 
 The alternative (the default setup) uses TrueType Unicode fonts, and the only limitation of characters to display is
 determined by the font files themselves.
@@ -73,7 +73,7 @@ By default, mPDF will embed subsets of fonts if less than 30% of the characters 
 document; otherwise it will embed the whole font file. You can override this by changing the configurable variable
 `$this->percentSubset`
 
-For backwards compatibility, you can use 's'  in the initial parameter to override the
+For backwards compatibility, you can use `'s'`  in the initial parameter to override the
 <span class="filename">config.php</span> settings and force subsetting of all fonts e.g.
 
 ```php
@@ -86,7 +86,7 @@ $mpdf = new mPDF('s');
 ## Using core non-embedded fonts in a Unicode document
 
 If your document uses Unicode fonts as above, you can force mPDF to use the core (non-embedded) PDF fonts in parts of
-the document by selecting the fontnames: `chelvetica`, `ccourier` and `ctimes` e.g.
+the document by selecting the fontnames: `'chelvetica'`, `'ccourier'` and `'ctimes'` e.g.
 
 ```php
 
@@ -112,7 +112,7 @@ $this->fonttrans = array(
 
 ```
 
-# Languages/Scripts which require special fonts
+# 3. Languages/Scripts which require special fonts
 
 Most browsers / PC applications automatically select / substitute appropriate fonts when required. mPDF does not do
 this by default (additional processing resources required). there are two situations when you need to consider the method
@@ -127,92 +127,86 @@ languages, Cyrillic text, Baltic languages, Turkish, and Greek. Languages which 
 are: CJK (chinese - japanese - korean) languages, Indic languages, Vietnamese, Thai, and Arabic languages. With these,
 you need to tell mPDF to select a suitable font.
 
-There are several different ways to do this:
+There are several different methods to do this:
 
-1) Write your HTML code to specify the exact fonts needed:
+1.  Write your HTML code to specify the exact fonts needed:
+    
+    ```php
+    
+    เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
+    
+    仝娃阿哀愛挨姶
+    
+    仝娃阿哀愛挨姶
+    
+    البرادعی البرادعی
+    
+    
+    ```
+    
+2.  Write your HTML code using the `lang` attribute to define the language. 
+    
+    ```php
+    
+    เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
+    
+    仝娃阿哀愛挨姶
+    
+    البرادعی البرادعی
+    
+    पहला पन्ना
+    
+    
+    ```
+    
+    This needs to be used in conjunction with either:
+    
+    * `autoLangToFont`
+    * CSS stylesheet using the `:lang` selector
+    
+3.  Use `autoScriptToLang` to mark up HTML text by inserting the `lang` attribute, based on the Unicode script block
+    in question, and configurable values in `config_script2lang.php`
+    
+    ```php
+    <?php
+    $mpdf->autoScriptToLang = true;
+    
+    ```
+    
+    As for (2) this needs to be used in conjunction with either:
+    
+    * `autoLangToFont`
+    * CSS stylesheet using the `:lang` selector
+    
+4.  Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a>
+    to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not
+    represented in the specified font, it will try to substitute it from one of the fonts defined in `$this->backupSubsFont`
+    in <span class="filename">config_fonts.php</span>.
+    
+    ```php
+    <?php
+    $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
+    
+    ```
 
-```php
+## Which method should I use?
 
-เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
-
-仝娃阿哀愛挨姶
-
-仝娃阿哀愛挨姶
-
-البرادعی البرادعی
-
-
-```
-
-2) Write your HTML code using the `lang` attribute to define the language. 
-
-```php
-
-เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
-
-仝娃阿哀愛挨姶
-
-البرادعی البرادعی
-
-पहला पन्ना
-
-
-```
-
-This needs to be used in conjunction with either:
-
-<ul>
-<li>`autoLangToFont`</li>
-<li>CSS stylesheet using the `:lang` selector`
-
-`</li>
-</ul>
-
-3) Use `autoScriptToLang` to mark up HTML text by inserting the `lang` attribute, based on the Unicode script block
-in question, and configurable values in `config_script2lang.php`
-
-```php
-<?php
-
-$mpdf->autoScriptToLang = true;
-
-```
-
-As for (2) this needs to be used in conjunction with either:
-
-<ul>
-<li>`autoLangToFont`</li>
-<li>CSS stylesheet using the `:lang` selector</li>
-</ul>
-
-4) Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a>
-to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not
-represented in the specified font, it will try to substitute it from one of the fonts defined in `$this->backupSubsFont`
-in <span class="filename">config_fonts.php</span>.
-
-```php
-$this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
-
-```
-
-# Which method should I use?
-
-## Individually authored pages
+### Individually authored pages
 
 If you are authoring a document in a common language which contains sections of text using special languages, the ideal
- method to use is 1) or 2).
+ method to use is (1) or (2).
 
-## Multilingual documents 'on-the-fly'
+### Multilingual documents 'on-the-fly'
 
 If you are creating a PDF document from a page such as this web-page or a forum board which is likely to contain some
-special language text, and it is not possible to mark-up the special language text, you should use method 3).
+special language text, and it is not possible to mark-up the special language text, you should use method (3).
 
 If the document is mainly in a common language and may contain only occasional words or characters, the alternative is
-to use method 4) character substitution.
+to use method (4) character substitution.
 
-It is possible to use method 4) together with 1) 2) or 3), to ensure that all special characters are displayed.
+It is possible to use method (4) together with (1), (2) or (3), to ensure that all special characters are displayed.
 
 # See Also
 
-- <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL &amp; Bidirectional text</a>
+- <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL & Bidirectional text</a>
 
