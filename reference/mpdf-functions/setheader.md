@@ -31,7 +31,7 @@ Set a page header.
   Default: `array()`
   
   **Values**
-  `''` (<span class="smallblock">BLANK</span> string) or <span class="smallblock">NULL</span> or `array()` 
+  `''` (<span class="smallblock">BLANK</span> string) or `null` or `array()` 
   : This will clear the page header.
     
   `TEXT STRING`
