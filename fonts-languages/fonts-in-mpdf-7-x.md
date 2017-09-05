@@ -3,7 +3,7 @@ layout: page
 title: Fonts in mPDF 7.x
 parent_title: Fonts & Languages
 permalink: /fonts-languages/fonts-in-mpdf-7-x.html
-modification_time: 2017-03-13T15:06:17+01:00
+modification_time: 2017-09-05T14:19:17+01:00
 ---
 
 mPDF supports Truetype fonts, reading and embedding directly from the .ttf font files. Fonts must follow the Truetype
@@ -12,8 +12,8 @@ in Truetype format are also supported.
 
 # Easy to add new fonts
 
-- Add your font directory to `fontDir` configuration parameter.
-- Define the font file details in the `fontData` parameter
+- Add your font directory to `fontDir` configuration parameter
+- Define the font file details in the `fontData` parameter array
 - Access the font by specifying it in your HTML code as the CSS font-family
 - Specifying languages for the font by defining custom `Mpdf\Language\LanguageToFontInterface`
 and `Mpdf\Language\ScriptToLanguage` implementation
@@ -23,7 +23,8 @@ and `Mpdf\Language\ScriptToLanguage` implementation
 You have 2 font files `Frutiger-Normal.ttf` and `FrutigerObl-Normal.ttf` which you want to be available in mPDF,
 and you will refer to them in HTML/CSS as `frutiger`.
 
-1. Define the directory with the font
+1. Define the directory with the font via `fontDir` configuration key or add it after instatiantion
+   with `$mpdf->AddFontDirectory()` method
 
 2. Define the font details in `fontdata` configuration variable
 
@@ -33,20 +34,21 @@ and you will refer to them in HTML/CSS as `frutiger`.
     <?php
 
     $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
-    $fontDir = $defaultConfig['fontDir'];
+    $fontDirs = $defaultConfig['fontDir'];
 
     $defaultFontConfig = (new Mpdf\Config\FontVariables())->getDefaults();
     $fontData = $defaultFontConfig['fontdata'];
 
     $mpdf = new \Mpdf\Mpdf([
-        'fontDir' => [
-            $fontDir,
+        'fontDir' => $fontDir + [
             __DIR__ . '/custom/font/directory',
         ],
-        'fontdata' => $fontData + ['frutiger' => [
-            'R' => 'Frutiger-Normal.ttf',
-            'I' => 'FrutigerObl-Normal.ttf',
-        ]],
+        'fontdata' => $fontData + [
+            'frutiger' => [
+                'R' => 'Frutiger-Normal.ttf',
+                'I' => 'FrutigerObl-Normal.ttf',
+            ]
+        ],
         'default_font' => 'frutiger'
     ]);
 
@@ -84,8 +86,8 @@ and you will refer to them in HTML/CSS as `frutiger`.
 
     class CustomLanguageToFontImplementation extends \Mpdf\Language\LanguageToFontInterface implements \Mpdf\Language\LanguageToFontInterface
     {
-    
-        public function getLanguageOptions($llcc, $adobeCJK) 
+
+        public function getLanguageOptions($llcc, $adobeCJK)
         {
             if ($llcc === 'th') {
                 return [false, 'frutiger']; // for thai language, font is not core suitable and the font is Frutiger
@@ -104,7 +106,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
 
     ```html
     <p lang="th">Text in Frutiger</p>
-    
+
     ```
 
 # Full Unicode support
@@ -223,12 +225,12 @@ This is a sample of HTML code containing CJK characters in both BMP and SIP - no
 needs to be referenced:
 
 ```html
-<div style="font-family:sun-extA;"> 
-    &#40706; &#40712; &#40727; &#x2320f; &#x23225; &#40742; 
-    &#40743; &#x2322f; &#x23231; &#40761; &#40772; &#x23232; 
-    &#x23233; &#40773; &#40784; &#x23234; &#x23256; &#40787; 
-    &#40794; &#x23262; &#x23281; &#40802; &#40809; &#x23289; 
-    &#x2328a; 
+<div style="font-family:sun-extA;">
+    &#40706; &#40712; &#40727; &#x2320f; &#x23225; &#40742;
+    &#40743; &#x2322f; &#x23231; &#40761; &#40772; &#x23232;
+    &#x23233; &#40773; &#40784; &#x23234; &#x23256; &#40787;
+    &#40794; &#x23262; &#x23281; &#40802; &#40809; &#x23289;
+    &#x2328a;
 </div>
 
 ```
@@ -307,19 +309,19 @@ $config = [
 This is an example of HTML code containing CJK characters from both BMP and SIP, and selecting the different fonts:
 
 ```html
-<div style="font-family:mingliu;"> 
-    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
-    &#x23289; &#x2328a; 
+<div style="font-family:mingliu;">
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809;
+    &#x23289; &#x2328a;
 </div>
 
-<div style="font-family:mingliu_hkscs;"> 
-    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
-    &#x23289; &#x2328a; 
+<div style="font-family:mingliu_hkscs;">
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809;
+    &#x23289; &#x2328a;
 </div>
 
-<div style="font-family:pmingliu;"> 
-    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
-    &#x23289; &#x2328a; 
+<div style="font-family:pmingliu;">
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809;
+    &#x23289; &#x2328a;
 </div>
 
 ```
