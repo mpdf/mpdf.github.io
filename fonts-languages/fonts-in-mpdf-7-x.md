@@ -40,9 +40,9 @@ and you will refer to them in HTML/CSS as `frutiger`.
     $fontData = $defaultFontConfig['fontdata'];
 
     $mpdf = new \Mpdf\Mpdf([
-        'fontDir' => $fontDir + [
+        'fontDir' => array_merge($fontDirs, [
             __DIR__ . '/custom/font/directory',
-        ],
+        ]),
         'fontdata' => $fontData + [
             'frutiger' => [
                 'R' => 'Frutiger-Normal.ttf',
