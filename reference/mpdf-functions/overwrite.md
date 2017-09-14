@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/overwrite.html
 modification_time: 2015-08-05T12:00:50+00:00
 ---
 
-(mPDFI >= 2.3)
+(mPDF >= 2.3)
 
 OverWrite – Replace specified text strings in an existing PDF file
 
@@ -20,7 +20,7 @@ mixed <span class="parameter">$replacement</span>
 [, string <span class="parameter">$file_out</span> 
 ]])
 
-Using the class extension mPDFI, an existing PDF file can be overwritten, replacing specified text with alternatives. 
+Using the class mPDF, after enabling with `SetImportUse`, an existing PDF file can be overwritten, replacing specified text with alternatives. 
 For example you may have created a long complex PDF file, and you wish to produce copies with an individual number on 
 each copy without having to re-generate the whole document each time.
 
@@ -123,7 +123,7 @@ Example #1
 require_once __DIR__ . '/vendor/autoload.php';
 // Must set codepage (e.g. UTF-8 or Core fonts) the same as for original document
 // The rest of the parameters do nothing
-$mpdf = new \Mpdf\MpdfI('');
+$mpdf = new \Mpdf\Mpdf('');
 $mpdf->SetImportUse();
 
 // forces no subsetting - otherwise the inserted characters may not be contained 
@@ -195,6 +195,7 @@ $mpdf->OverWrite('test.pdf', $search, $replacement, 'I', 'mpdf.pdf' ) ;
 
 # See Also
 
+- <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> - Enable the use of imported PDF files or templates
 - <a href="{{ "/reference/mpdf-functions/thumbnail.html" | prepend: site.baseurl }}">Thumbnail()</a> - Print thumbnails of an external PDF file
 - <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a> - Specify the source PDF file used to import pages into the document
 - <a href="{{ "/reference/mpdf-functions/importpage.html" | prepend: site.baseurl }}">ImportPage()</a> - Import a page from an external PDF file

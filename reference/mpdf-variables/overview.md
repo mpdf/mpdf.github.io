@@ -1202,6 +1202,7 @@ You can redefine the variables in individual scripts as a
     </tbody>
 </table>
 
+
 Notes:
 
 [^1]: Variables with scope marked as <span class="smallblock">DOCUMENT</span> should only be set once at the beginning of
