@@ -21,10 +21,10 @@ If no error message appears, try setting:
 
 ```php
 <?php
-
-$mpdf->debug = true;
+$mpdf = new \Mpdf\Mpdf(['debug' => true]);
 
 ```
+
 
 ## Object buffering
 
@@ -38,8 +38,10 @@ If this is the case, add the following to your script to prevent it:
 
 ```php
 <?php
-
-$mpdf->allow_output_buffering = true;
+$mpdf = new \Mpdf\Mpdf([
+    'debug' => true,
+    'allow_output_buffering' => true
+]);
 
 ```
 
