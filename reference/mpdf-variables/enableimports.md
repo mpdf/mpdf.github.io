@@ -22,7 +22,7 @@ functions allowing you to import PDF files into the document you are writing, an
   <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
   
   If you want to set this at runtime, use	
-  <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>
+  <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
@@ -32,7 +32,7 @@ functions allowing you to import PDF files into the document you are writing, an
 
 # Values
 
-<span class="parameter">$enableImports</span> =  `true`\|`false`
+<span class="parameter">enableImports</span> =>  `true`\|`false`
 
 **Values**
 
@@ -57,6 +57,16 @@ Default: `false`
 </tr>
 </tbody>
 </table>
+
+# Examples
+
+```php
+<?php
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
+$mpdf = new \Mpdf\Mpdf(['enableImports' => true]);
+
+```
 
 # See Also
 

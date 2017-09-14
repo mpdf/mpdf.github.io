@@ -28,6 +28,23 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-height.html" | p
 
 Default: `1.14`
 
+# Usage
+
+Set at document initiation
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf(['adjustFontDescLineheight' => 1.14]);
+
+```
+
+or during the course of creating the document
+
+```php
+<?php
+$mpdf->adjustFontDescLineheight = 1.14;
+
+```
+
 # Changelog
 
 <table class="table">
