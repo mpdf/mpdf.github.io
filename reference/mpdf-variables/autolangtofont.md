@@ -31,6 +31,15 @@ using values in `\Mpdf\Language\LanguageToFontInterface` interface implementatio
 
 Default: `true`
 
+# Usage
+
+Set at document initiation
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf(['autoLangToFont' => false]);
+
+```
+
 # See Also
 
 - <a href="{{ "/fonts-languages/fonts-in-mpdf-7-x.html" | prepend: site.baseurl }}">Fonts in mPDF 7.x</a>
