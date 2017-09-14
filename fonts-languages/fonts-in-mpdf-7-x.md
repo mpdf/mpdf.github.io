@@ -23,12 +23,12 @@ and `Mpdf\Language\ScriptToLanguage` implementation
 You have 2 font files `Frutiger-Normal.ttf` and `FrutigerObl-Normal.ttf` which you want to be available in mPDF,
 and you will refer to them in HTML/CSS as `frutiger`.
 
-1. Define the directory with the font via `fontDir` configuration key or add it after instatiantion
-   with `$mpdf->AddFontDirectory()` method
+1.  Define the directory with the font via `fontDir` configuration key or add it after instantiation
+    with `$mpdf->AddFontDirectory()` method
 
-2. Define the font details in `fontdata` configuration variable
+2.  Define the font details in `fontdata` configuration variable
 
-   Example below shows how to maintain default fonts and their settings
+    Example below shows how to maintain default fonts and their settings
 
     ```php
     <?php
@@ -68,7 +68,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
         ],
     ```
 
-3. In your HTML or CSS code use something like this:
+3.  In your HTML or CSS code use something like this:
 
     ```html
 
@@ -76,7 +76,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
 
     ```
 
-4. To use the font with specific languages, you need also to add the font to return of a custom
+4.  To use the font with specific languages, you need also to add the font to return of a custom
     `Mpdf\Language\LanguageToFontInterface` implementation.
 
     You can also extend existing `Mpdf\Language\LanguageToFontInterface` class.
@@ -102,7 +102,8 @@ and you will refer to them in HTML/CSS as `frutiger`.
 
     ```
 
-    This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable `autoLangToFont` is set to `true`:
+    This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable 
+    <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">`autoLangToFont`</a> is set to `true` (default):
 
     ```html
     <p lang="th">Text in Frutiger</p>

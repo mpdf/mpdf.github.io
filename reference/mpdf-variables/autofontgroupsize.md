@@ -8,7 +8,7 @@ modification_time: 2015-08-05T12:01:39+00:00
 
 (mPDF >= 2.3 & < 6.0)
 
-autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont
+autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont()
 
 # Value
 
