@@ -20,7 +20,7 @@ the page.
 
 # Values
 
-<span class="parameter">$autoPageBreak</span> =  `true`\|`false`
+<span class="parameter">autoPageBreak</span> => `true`\|`false`
 
 **Values**
 
@@ -52,7 +52,7 @@ Default: `true`
 <?php
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-$mpdf = new \Mpdf\Mpdf();
+$mpdf = new \Mpdf\Mpdf(['autoPageBreak' => false]);
 
 $html = '<img src="largeimage.jpg" height="290mm" /> ';
 
@@ -64,6 +64,8 @@ $mpdf->WriteHTML($html);
 $mpdf->Output();
 
 ```
+
+
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** This variable existed in the script before v3.1

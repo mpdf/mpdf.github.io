@@ -33,6 +33,19 @@ file output and display any errors to the browser.
 
 Default: `false`
 
+# Usage
+
+Set at beginning of document
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf([
+    'debug' => true,
+    'allow_output_buffering' => true
+]);
+
+```
+
+
 # See Also
 
 - <a href="{{ "/troubleshooting/error-messages.html" | prepend: site.baseurl }}">Error Messages</a>

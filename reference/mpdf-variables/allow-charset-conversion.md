@@ -28,6 +28,24 @@ use it together with <span class="parameter">$charset_in</span> to manually set 
 
 Default: `true`
 
+
+# Usage
+
+Set at document initiation
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf(['allow_charset_conversion' => true]);
+
+```
+
+or during the course of creating the document
+
+```php
+<?php
+$mpdf->allow_charset_conversion = true;
+
+```
+
 # Examples
 
 ## Example #1
@@ -50,8 +68,7 @@ $html = '
 </body>
 </html>';
 
-$mpdf = new \Mpdf\Mpdf();
-$mpdf->allow_charset_conversion = true;
+$mpdf = new \Mpdf\Mpdf(['allow_charset_conversion' => true]);
 
 $mpdf->WriteHTML($html);
 $mpdf->Output();
@@ -66,10 +83,11 @@ $mpdf->Output();
 $html = '... the body of the document encoded in ISO-8859-4 ...';
 
 $mpdf = new \Mpdf\Mpdf();
+
 $mpdf->allow_charset_conversion = true;
 $mpdf->charset_in = 'iso-8859-4';
-
 $mpdf->WriteHTML($html);
+
 $mpdf->Output();
 
 ```
