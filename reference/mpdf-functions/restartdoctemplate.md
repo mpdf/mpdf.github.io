@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/restartdoctemplate.html
 modification_time: 2015-08-05T12:00:51+00:00
 ---
 
-(mPDFI >= 2.4)
+(mPDF >= 2.4)
 
 RestartDocTemplate – Re-start the use of a Document template from the next page
 
@@ -25,14 +25,14 @@ none
 <table class="table">
 <thead>
 <tr>
-    <th>Version</th>
-    <th>Description</th>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-    <td>2.4</td>
-    <td>Function was added.</td>
+  <td>2.4</td>
+  <td>Function was added.</td>
 </tr>
 </tbody>
 </table>
