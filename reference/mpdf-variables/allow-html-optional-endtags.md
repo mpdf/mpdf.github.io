@@ -34,13 +34,22 @@ These include (not exclusively): P, LI, DD, DT, TR, TD
 omitted end-tags
 * `false`: Expect well formed (X)HTML with closing tags on all elements.
 
+# Usage
+
+Set at beginning of document
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf(['allow_html_optional_endtags' => true]);
+
+```
+
 # Examples
 
 ```php
 <?php
-$mpdf = new \Mpdf\Mpdf();
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf->allow_html_optional_endtags = true;
+$mpdf = new \Mpdf\Mpdf(['allow_html_optional_endtags' => true]);
 
 $mpdf->WriteHTML('<p>Hello World');
 $mpdf->WriteHTML('<p>Hello World');

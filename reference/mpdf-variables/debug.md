@@ -57,9 +57,8 @@ Example #1
 <?php
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-$mpdf = new \Mpdf\Mpdf();
 
-$mpdf->debug = true;
+$mpdf = new \Mpdf\Mpdf(['debug' => true]);
 
 $mpdf->WriteHTML("Hello World");
 $mpdf->Output();

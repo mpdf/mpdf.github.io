@@ -14,7 +14,8 @@ boolean **autoArabic**
 
 Tells mPDF whether to try and distinguish between Arabic languages when using `autoScriptToLang`.
 
-Analysis of the text will attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi. If active, the text will then be marked with a specific language tag e.g. `"pa"`, `"ur"`, `"fa"` etc.
+Analysis of the text will attempt to distinguish Arabic, Farsi, Pashto, Urdu and Sindhi. If active, the text will then be 
+marked with a specific language tag e.g. `"pa"`, `"ur"`, `"fa"` etc.
 
 # Values
 
@@ -27,6 +28,15 @@ Analysis of the text will attempt to distinguish Arabic, Farsi, Pashto, Urdu and
   specific language tag e.g. `"pa"`, `"ur"`, `"fa"` etc.
 
 Default: `false`
+
+# Usage
+
+Set at document initiation
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf(['autoArabic' => true]);
+
+```
 
 # See Also
 

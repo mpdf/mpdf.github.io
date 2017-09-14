@@ -13,7 +13,16 @@ Default position for Annotations;
 **Value**
 
 * `0` = where it was defined;
-* (+ve value float) Distance from right margin of page to show annotations;
+* (+ve value float) Distance from right margin of page to show annotations (in mm);
+
+# Usage
+
+Set at document initiation
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf(['annotMargin' => 5]);
+
+```
 
 # See Also
 

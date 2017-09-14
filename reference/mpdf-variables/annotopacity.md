@@ -18,6 +18,18 @@ Suggest `0.5` if using in-line with text, or `1` if using in the margins (with a
 
 Default: `0.5`
 
+# Usage
+
+Set at document initiation
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf([
+    'annotMargin' => 5,
+    'annotOpacity' => 1
+]);
+
+```
+
 # See Also
 
 * <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">Annotation()</a> - Add an Annotation to the document
