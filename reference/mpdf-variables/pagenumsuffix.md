@@ -15,21 +15,24 @@ string **pagenumSuffix**
 Specify text to follow the page number when using `{PAGENO}` to insert page numbers in headers or footers.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** This is only recommended in non-HTML headers and
-  footers. Although the text is added correctly in HTML headers & footers, the text alignment is not readjusted
-  after substitution e.g. if it used in the right margin.
+  **Note:** This is only recommended in non-HTML headers and footers. Although the text is added 
+  correctly in HTML headers & footers, the text alignment is not readjusted after substitution e.g. 
+  if it used in the right margin.
 </div>
 
 # Examples
 
 ```php
 <?php
-$mpdf = new \Mpdf\Mpdf();
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf->pagenumPrefix = 'Page number ';
-$mpdf->pagenumSuffix = ' - ';
-$mpdf->nbpgPrefix = ' out of ';
-$mpdf->nbpgSuffix = ' pages';
+$mpdf = new \Mpdf\Mpdf([
+    'pagenumPrefix' => 'Page number ',
+    'pagenumSuffix' => ' - ',
+    'nbpgPrefix' => ' out of ',
+    'nbpgSuffix' => ' pages'
+]);
 
 $mpdf->SetHeader('{PAGENO}{nbpg}');
 $mpdf->WriteHTML("Hello World");

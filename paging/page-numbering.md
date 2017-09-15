@@ -50,7 +50,6 @@ $mpdf->WriteHTML('Section 3 - Starting with page a');
 
 $mpdf->Output();
 
-
 ```
 
 ## Changing page numbering from the start of the document

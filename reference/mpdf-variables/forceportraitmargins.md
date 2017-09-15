@@ -13,12 +13,6 @@ mPDF >= 2.3
 </div>
 
 
-```php
-<?php
-$mpdf->forcePortraitMargins = true;
-
-```
-
 Default: `false`
 
 If default page orientation is `P`(`Portrait`), then adding new page `L`(`Landscape`) causes the left/right margins to 
@@ -32,4 +26,16 @@ NB - if using OddEven (double-sided document), it is the Portrait orientation L/
 When adding a page, you must only call `$mpdf->AddPage('L')` or `<pagebreak orientation="landscape" />`.
 If you try to set new margins/headers etc. for new landscape pages when `forcePortraitMargins = true`, it will go wrong.
 
+# Usage
+
+Set at document initiation
+
+```php
+<?php
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new \Mpdf\Mpdf(['forcePortraitMargins' => true]);
+
+```
 
