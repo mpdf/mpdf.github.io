@@ -14,8 +14,7 @@ SetAnchor2Bookmark – Specifies whether PDF Bookmarks are created automatically
 
 void **SetAnchor2Bookmark** ( int <span class="parameter">$mode</span> )
 
-Specifies whether PDF Book marks are created from HTML anchors (e.g. `<a name="Introduction" />`) . This function 
-simply sets the variable <a href="{{ "/reference/mpdf-variables/anchor2bookmark.html" | prepend: site.baseurl }}">`$anchor2Bookmark`</a>.
+Specifies whether PDF Book marks are created from HTML anchors (e.g. `<a name="Introduction" />`) .
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
@@ -32,7 +31,7 @@ simply sets the variable <a href="{{ "/reference/mpdf-variables/anchor2bookmark.
   **Values**
 
   * `0` - does not generate a bookmark
-  * `1` - generate a bookmark using the text value of the <span class="parameter">$name</span> attribute
+  * `1` - generate a bookmark using the text value of the `name="Text"` attribute
   
   Default: `0`
 

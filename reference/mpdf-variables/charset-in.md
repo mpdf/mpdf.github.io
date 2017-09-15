@@ -21,12 +21,11 @@ to manually set an input encoding.
 
 **Values** (case-insensitive)
 
-Any string value allowed which is valid for the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv()</a>. 
-This appears to vary depending on the local configuration. See the manual entry for 
-<a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> for usual values. You may need 
-to use `'cp1252'` or `'windows-1252'` instead of `'win-1252'`, or `'iso-88591'` instead of `'iso-8859-1'`.
-
-<span class="smallblock">BLANK</span> or omitted: Expect all text input as UTF-8 encoding.
+* Any string value allowed which is valid for the PHP function <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv()</a>. 
+  This appears to vary depending on the local configuration. See the manual entry for 
+  <a href="{{ "/reference/codepages-glyphs/iconv.html" | prepend: site.baseurl }}">iconv</a> for usual values. You may need 
+  to use `'cp1252'` or `'windows-1252'` instead of `'win-1252'`, or `'iso-88591'` instead of `'iso-8859-1'`.
+* <span class="smallblock">BLANK</span> or omitted: Expect all text input as UTF-8 encoding.
 
 # Examples
 
@@ -40,8 +39,8 @@ $mpdf = new \Mpdf\Mpdf();
 
 $mpdf->allow_charset_conversion = true;
 $mpdf->charset_in = 'iso-8859-4';
-
 $mpdf->WriteHTML($html);
+
 $mpdf->Output();
 
 ```

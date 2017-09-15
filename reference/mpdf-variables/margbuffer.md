@@ -13,3 +13,14 @@ border/background-color of the end of a block being moved on to next page.
 
 Default: `2`
 
+
+# Usage
+
+```php
+<?php
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new \Mpdf\Mpdf(['margBuffer' => 7]);
+
+```

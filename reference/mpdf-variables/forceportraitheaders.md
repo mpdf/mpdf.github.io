@@ -11,13 +11,6 @@ modification_time: 2015-08-05T12:01:57+00:00
 </div>
 
 
-
-```php
-<?php
-$mpdf->forcePortraitHeaders = true;
-
-```
-
 In v2.3 this was updated to work for non-HTML headers/footers as well.
 
 This is a quick fix which rotates HTML headers and Footers on landscape pages in the following conditions:
@@ -28,6 +21,20 @@ This is a quick fix which rotates HTML headers and Footers on landscape pages in
   for new landscape pages when `forcePortraitHeaders = true`, it will go wrong.
 
 Default: `false`
+
+
+# Usage
+
+Set at document initiation
+
+```php
+<?php
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new \Mpdf\Mpdf(['forcePortraitHeaders' => true]);
+
+```
 
 # See also
 - <a href="{{ "/reference/mpdf-variables/forceportraitmargins.html" | prepend: site.baseurl }}">forcePortraitMargins</a> - rotate only margins

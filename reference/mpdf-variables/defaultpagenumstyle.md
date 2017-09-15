@@ -56,6 +56,43 @@ Default: `'1'`
 </tbody>
 </table>
 
+# Usage
+
+Set at document initiation
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf(['defaultPageNumStyle' => 'A']);
+
+```
+
+
+# Examples
+
+```php
+<?php
+// Require composer autoload
+require_once __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new \Mpdf\Mpdf(['defaultPageNumStyle' => 'a']);
+
+// Set a simple Footer including the page number
+$mpdf->setFooter('{PAGENO}');
+
+$mpdf->WriteHTML('Section 1');
+$mpdf->WriteHTML('Page a ');
+
+// add another page
+$mpdf->AddPage();
+$mpdf->WriteHTML('Section 2 - More content');
+
+$mpdf->WriteHTML('<pagebreak resetpagenum="1" pagenumstyle="1" />');
+$mpdf->WriteHTML('Section 3 - Page with page number starting at 1');
+
+$mpdf->Output();
+
+```
+
+
 # See Also
 
 * <a href="{{ "/paging/page-numbering.html" | prepend: site.baseurl }}">Page numbering</a>
