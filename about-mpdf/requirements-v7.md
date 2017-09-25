@@ -15,6 +15,9 @@ and SVG handling.
 
 mPDF is **not** compatible with PHP function overloading (`mbstring.func_overload`)
 
-As for importing existing PDF files with FPDI, PHP requires `zlib` for compression.
+As for importing existing PDF files with FPDI, PHP requires `zlib` extension for compression.
+
+mPDF has some problems with fetching external HTTP resources with single threaded servers such as `php -S`. A proper
+server such as nginx (php-fpm) or Apache is recommended.
 
 For requirements of versions < 7.x see [dedicated page](https://mpdf.github.io/about-mpdf/requirements-v5.html)
