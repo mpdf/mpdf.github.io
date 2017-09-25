@@ -2162,6 +2162,11 @@
                     slug: watermark-font
                     parent_title: 'mPDF Variables'
                 -
+                    title: watermarkAngle
+                    permalink: /reference/mpdf-variables/watermarkangle.html
+                    slug: watermarkangle
+                    parent_title: 'mPDF Variables'
+                -
                     title: watermarkImageAlpha
                     url: index9054.html
                     permalink: /reference/mpdf-variables/watermarkimagealpha.html
