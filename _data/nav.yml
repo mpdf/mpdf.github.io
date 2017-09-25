@@ -1689,6 +1689,11 @@
                     slug: footer-line-spacing
                     parent_title: 'mPDF Variables'
                 -
+                    title: fontdata
+                    permalink: /reference/mpdf-variables/fontdata.html
+                    slug: fontdata
+                    parent_title: 'mPDF Variables'
+                -
                     title: forcePortraitHeaders
                     url: indexe465.html
                     permalink: /reference/mpdf-variables/forceportraitheaders.html
