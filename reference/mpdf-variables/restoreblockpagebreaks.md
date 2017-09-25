@@ -13,7 +13,7 @@ modification_time: 2015-08-05T12:02:23+00:00
 boolean **restoreBlockPageBreaks**
 
 Specifies whether or not to restore open HTML block elements after a forced pagebreak. When a pagebreak is forced by
-<a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or 
+<a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or
 &lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;, mPDF by default
 will close any HTML block elements, expecting the HTML code to start afresh after the pagebreak. If this value is set to
 `true` mPDF will attempt to carry over any CSS style values for the current block elements
@@ -62,7 +62,7 @@ Values of `1` or `0` can also be used
 
 ```php
 <?php
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->restoreBlockPageBreaks = true;
 

@@ -50,12 +50,6 @@
             slug: installation-v7-x
             parent_title: 'Installation & Setup'
         -
-            title: 'Installation v6.x'
-            url: index00a1.html
-            permalink: /installation-setup/installation-v6-x.html
-            slug: installation-v6-x
-            parent_title: 'Installation & Setup'
-        -
             title: 'Reducing memory usage'
             url: indexbe43.html
             permalink: /installation-setup/reducing-memory-usage.html
@@ -66,6 +60,17 @@
             url: indexec16.html
             permalink: /installation-setup/folders-for-temporary-files.html
             slug: folders-for-temporary-files
+            parent_title: 'Installation & Setup'
+        -
+            title: 'Logging'
+            permalink: /installation-setup/logging.html
+            slug: logging
+            parent_title: 'Installation & Setup'
+        -
+            title: 'Installation v6.x'
+            url: index00a1.html
+            permalink: /installation-setup/installation-v6-x.html
+            slug: installation-v6-x
             parent_title: 'Installation & Setup'
 -
     title: 'Getting Started'
@@ -1117,6 +1122,11 @@
                     url: indexc4be.html
                     permalink: /reference/mpdf-functions/setkeywords.html
                     slug: setkeywords
+                    parent_title: 'mPDF functions'
+                -
+                    title: setLogger()
+                    permalink: /reference/mpdf-functions/setlogger.html
+                    slug: setlogger
                     parent_title: 'mPDF functions'
                 -
                     title: SetPageTemplate()

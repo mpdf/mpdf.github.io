@@ -13,19 +13,21 @@ modification_time: 2016-25-06T07:30:29+00:00
     ```php
     <?php
     try {
-        $mpdf = new mPDF();
+        $mpdf = \Mpdf\Mpdf();
         $mpdf->WriteHTML('Hello World');
         // Other code
         $mpdf->Output();
-    } catch (\Mpdf\MpdfException $e) { // Note: safer fully qualified exception
-                                       //       name used for catch
+    } catch (\Mpdf\MpdfException $e) { // Note: safer fully qualified exception name used for catch
         // Process the exception, log, print etc.
         echo $e->getMessage();
     }
-    
+
     ```
 
 2.  Enable error_reporting in your development environment or look into PHP error logs.
+3.  Enable <a href="{{ "/reference/mpdf-variables/debug.html" | prepend: site.baseurl }}">debug mode</a> and/or
+    <a href="{{ "/installation-setup/logging.html" | prepend: site.baseurl }}">Inject a Psr\Log\LoggerInterface</a>
+    and see logs
 
 ## Crashing with no error message whatsoever
 
@@ -50,7 +52,7 @@ at runtime if your system allows; alternatively, break your HTML into chunks and
 The default value was increased from 100,000 to 1,000,000 from PHP >= 5.3.7
 
 ```
-ini_set("pcre.backtrack_limit","1000000");
+ini_set("pcre.backtrack_limit", "1000000");
 ```
 
 ## Keep-with-table

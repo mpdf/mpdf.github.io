@@ -47,9 +47,12 @@ To use core fonts only, use `'c'` for the `mode` configuration key:
 ```php
 <?php
 
-$mpdf = new mPDF(['mode' => 'c']);
+$mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 
 ```
+
+Note: due to encoding conversion, mPDF changes mb_internal_encoding and mb_regex_encoding internally when core fonts
+are being used. To restore original values, call `$mpdf->cleanup()` when you are done with generating the PDF.
 
 # 2. Embedded Unicode fonts
 
@@ -128,63 +131,63 @@ you need to tell mPDF to select a suitable font.
 There are several different methods to do this:
 
 1.  Write your HTML code to specify the exact fonts needed:
-    
+
     ```php
-    
+
     เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
-    
+
     仝娃阿哀愛挨姶
-    
+
     仝娃阿哀愛挨姶
-    
+
     البرادعی البرادعی
-    
-    
+
+
     ```
-    
+
 2.  Write your HTML code using the `lang` attribute to define the language. 
-    
+
     ```php
-    
+
     เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
-    
+
     仝娃阿哀愛挨姶
-    
+
     البرادعی البرادعی
-    
+
     पहला पन्ना
-    
-    
+
+
     ```
-    
+
     This needs to be used in conjunction with either:
-    
+
     - `autoLangToFont`
     - CSS stylesheet using the `:lang` selector
-    
+
 3.  Use `autoScriptToLang` to mark up HTML text by inserting the `lang` attribute, based on the Unicode script block
     in question, and values in a `Mpdf\Language\LanguageToFontInterface` implementation.
-    
+
     ```php
-    <?php    
+    <?php
     $mpdf->autoScriptToLang = true;
-    
+
     ```
-    
+
     As for (2) this needs to be used in conjunction with either:
-    
+
     - `autoLangToFont`
     - CSS stylesheet using the `:lang` selector
-    
+
 4.  Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a>
     to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not
     represented in the specified font, it will try to substitute it from one of the fonts defined in `backupSubsFont`
     configuration key.
-    
+
     ```php
     <?php
     $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
-    
+
     ```
 
 ## Which method should I use?
