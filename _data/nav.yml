@@ -725,6 +725,12 @@
             slug: slow
             parent_title: Troubleshooting
         -
+            title: Browser output as strange characters
+            url: index1773.html
+            permalink: /troubleshooting/strange-character-output-in-browser.html
+            slug: slow
+            parent_title: Troubleshooting
+        -
             title: 'Text is replaced'
             url: index11fd.html
             permalink: /troubleshooting/text-is-replaced.html
@@ -821,6 +827,11 @@
                     url: index0183.html
                     permalink: /reference/mpdf-functions/addcolumn.html
                     slug: addcolumn
+                    parent_title: 'mPDF functions'
+                -
+                    title: AddFontDirectory()
+                    permalink: /reference/mpdf-functions/addfontdirectory.html
+                    slug: addfontdirectory
                     parent_title: 'mPDF functions'
                 -
                     title: AddPage()
