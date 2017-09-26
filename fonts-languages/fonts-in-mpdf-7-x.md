@@ -12,7 +12,7 @@ in Truetype format are also supported.
 
 # Easy to add new fonts
 
-- Add your font directory to `fontDir` configuration parameter
+- Add your font directory to `fontDir` configuration parameter or by calling `$mpdf->AddFontDirectory()` method
 - Define the font file details in the `fontData` parameter array
 - Access the font by specifying it in your HTML code as the CSS font-family
 - Specifying languages for the font by defining custom `Mpdf\Language\LanguageToFontInterface`
@@ -102,7 +102,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
 
     ```
 
-    This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable 
+    This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable
     <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">`autoLangToFont`</a> is set to `true` (default):
 
     ```html
