@@ -8,7 +8,7 @@ modification_time: 2015-08-05T11:59:28+00:00
 
 ## CSS font-family name
 
-Every font family has a name which is defined in the font file. This is the name by which your computer OS 
+Every font family has a name which is defined in the font file. This is the name by which your computer OS
 registers and recognises the font family.
 
 This is also the name used in CSS.
@@ -61,10 +61,10 @@ $this->fontdata = [
 
 Each font-family must have a Regular (`'R'`) file defined - the others (Bold `'B'`, Italic `'I'`, bold-italic `'BI'`) are optional.
 
-mPDF looks for files based on the `fontDir` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">
+mPDF looks for files based on the `fontDirectory` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">
 configuration variable</a>. This is, by default set to `ttfonts` directory in the root of mPDF installation.
 
-Any readable path or an array of paths can be set to the `fontDir` directive. When an array is set, mPDF will scan
+Any readable path or an array of paths can be set to the `fontDirectory` directive. When an array is set, mPDF will scan
 directories in the defined order.
 
 This is useful if you are running mPDF on a computer which already has a directory with TTF fonts in (e.g. on Windows)
