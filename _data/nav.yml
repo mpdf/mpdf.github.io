@@ -613,6 +613,11 @@
             slug: writing-non-html-text
             parent_title: 'What Else Can I Do'
         -
+            title: 'PDF/A-3 associated files + additional xmp rdf'
+            permalink: /what-else-can-i-do/pdf-a3-xmp-rdf.html
+            slug: pdf-a3-xmp-rdf
+            parent_title: 'What Else Can I Do'
+        -
             title: 'PDF/A1-b compliance'
             url: index2366.html
             permalink: /what-else-can-i-do/pdf-a1-b-compliance.html
