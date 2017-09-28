@@ -4,6 +4,7 @@ title: mPDF
 permalink: /
 ---
 
+
 mPDF is a PHP library which generates PDF files from UTF-8 encoded HTML.
 
 It is based on <a href="http://www.fpdf.org/">FPDF</a> and <a href="http://html2fpdf.sourceforge.net/">HTML2FPDF</a>
@@ -12,6 +13,9 @@ with a number of enhancements.
 The original author, Ian Back, wrote mPDF to output PDF files 'on-the-fly' from his website, handling different
 languages. It is slower than the original scripts e.g. HTML2FPDF and produces larger files when using Unicode
 fonts, but support for CSS styles etc. and has been much enhanced – see the <a href="/about-mpdf/features.html">features</a>.
+
+## TEMPORARY location of mPDF 7.0RC documentation: <a href="https://klap-in.github.io/">https://klap-in.github.io/</a>
+**Any feedback on documentation is welcome at: <a href="https://github.com/mpdf/mpdf.github.io">https://github.com/mpdf/mpdf.github.io</a>**
 
 ## Support
 
