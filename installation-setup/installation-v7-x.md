@@ -34,6 +34,15 @@ $mpdf->Output();
 All <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">configuration directives</a> can
 be set by the `$config` parameter of the <a href="{{ "/reference/mpdf-functions/construct.html" | prepend: site.baseurl }}">constructor</a>.
 
+```php
+<?php
+...
+// Define a page using all default values except "L" for Landscape orientation
+$mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
+...
+
+```
+
 It is recommended to set custom temporary directory via `tempDir` configuration key.
 The directory must have write permissions (mode `775` is recommended).
 

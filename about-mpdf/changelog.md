@@ -5,8 +5,12 @@ parent_title: About mPDF
 permalink: /about-mpdf/changelog.html
 modification_time: 2016-07-01T10:10:21+00:00
 ---
+## Versions 5.5+, 6.x, 7.x and newer
 
-Newer changes can be seen [in the original repository](https://github.com/mpdf/mpdf/blob/development/CHANGELOG.md).
+The changes between versions can be seen in the [changelog in the repository](https://github.com/mpdf/mpdf/blob/development/CHANGELOG.md).
+
+
+## Versions 5.4 and before
 
 ```
 ===========================
