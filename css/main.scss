@@ -57,6 +57,14 @@ dd {
 	}
 }
 
+code {
+    padding: .1rem .3rem;
+}
+
+pre {
+	padding: .5rem;
+}
+
 nav > .list-group .list-group-item:first-child {border-top-right-radius: 0;border-top-left-radius: 0;}
 nav > .list-group .list-group-item {border-width: 1px 0;}
 nav > .list-group {margin-bottom: 0;}

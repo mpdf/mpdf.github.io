@@ -20,6 +20,7 @@ Any library implementing the interface can be used to leverage logging posibilit
 Following code will output all debugging messages into a file on disk.
 
 ```php
+<?php
 
 use Monolog\Logger;
 use Monolog\Handler\StreamHandler;
@@ -39,6 +40,8 @@ See [Monolog documentation][2] for more information on its usage.
 For simple one-time logging an anonymous class can be used with PHP >=7.0
 
 ```php
+<?php
+
 $mpdf = new Mpdf\Mpdf();
 $mpdf->setLogger(new class extends \Psr\Log\AbstractLogger {
     public function log($level, $message, $context)
