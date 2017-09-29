@@ -20,26 +20,33 @@ For more information, see <a href="{{ "/what-else-can-i-do/line-breaking.html" |
 
 # Values
 
-<span class="parameter">$useTibetanLBR = <span class="smallblock">FALSE</span>|<span class="smallblock">TRUE</span></span>
+<span class="parameter">$useTibetanLBR</span> =`false`\|`true`
 
 **Values**
 
-*<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> use mPDF algorithm to determine appropriate places for line breaks when using Tibetan text.
+* `true`: use mPDF algorithm to determine appropriate places for line breaks when using Tibetan text.
+* `false`: algorithm not used. Line breaks will only be allowed according to usual line-breaking rules.
 
-<span class="smallblock">FALSE</span>: algorithm not used. Line breaks will only be allowed according to usual line-breaking rules.
+Default: `true`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>6.0</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>6.0</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # See Also
 
-<a href="{{ "/what-else-can-i-do/line-breaking.html" | prepend: site.baseurl }}">Line breaking</a>
+* <a href="{{ "/what-else-can-i-do/line-breaking.html" | prepend: site.baseurl }}">Line breaking</a>
 

@@ -10,13 +10,13 @@ mPDF >= 5.0
 
 Control fonts/subsetting
 
-// Set maximum size of TTF font file to allow non-subsets - in kB
+Set maximum size of TTF font file to allow non-subsets - in kB
 
-// Used to avoid e.g. Arial Unicode MS (perhaps used for substituteCharsMB) to ever be fully embedded
+Used to avoid e.g. Arial Unicode MS (perhaps used for `$mpdf->substituteCharsMB()`) to ever be fully embedded
 
-// NB Free serif is 1.5MB, most files are <= 600kB (most 200-400KB)
+NB: Free serif is 1.5 MB, most files are <= 600 kB (most 200-400 KB)
 
-Default set in config.php
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: 2000
+Default value: `2000`
 

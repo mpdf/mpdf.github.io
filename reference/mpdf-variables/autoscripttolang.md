@@ -3,12 +3,8 @@ layout: page
 title: autoScriptToLang
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/autoscripttolang.html
-modification_time: 2015-08-05T12:01:41+00:00
+modification_time: 2017-03-13T15:06:17+01:00
 ---
-
-<div>
-<div>
-<div>
 
 (mPDF >= 6.0)
 
@@ -16,25 +12,27 @@ modification_time: 2015-08-05T12:01:41+00:00
 
 boolean **autoScriptToLang**
 
-When <span class="smallblock">TRUE</span>, `marks up HTML text using the lang attribute, based on the Unicode script block in question, and configurable values in <span class="code">config_script2lang.php`.</span>
+When `true`, marks up HTML text using the lang attribute, based on the Unicode script
+block in question, and values in `\Mpdf\Language\ScriptToLanguageIntergface` interface implementation set for mPDF.
+
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note**: Prior to mPDF 7.0 this behaviour is being set-up by altering `config_script2lang.php` file in mPDF path root.
+</div>
 
 # Values
 
-<span class="parameter">$autoScriptToLang</span> = *<span class="smallblock">TRUE</span>*|<span class="smallblock">FALSE</span>
+<span class="parameter">$autoScriptToLang</span> = `true`\|`false`
 
 **Values**
 
-*<span class="smallblock">TRUE</span>*: <span class="smallblock">DEFAULT</span> mark up HTML text using the lang attribute, based on the Unicode script block in question, and configurable values in `config_script2lang.php`.
+* `true`: Mark up HTML text using the lang
+  attribute, based on the Unicode script block in question, and values in `\Mpdf\ScriptToLang` class.
+* `false`: No markup applied.
 
-<span class="smallblock">FALSE</span>: No markup applied.
+Default: `true`
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">autoLangToFont</a> - selects the font to use, based on the HTML lang attribute, using configurable values in `config_lang2font.php`</li>
-<li class="manual_boxlist"><a href="{{ "/fonts-languages/automatic-font-selection.html" | prepend: site.baseurl }}">Automatic Font selection</a></li>
-</ul>
-
-</div>
-</div>
-</div>
+- <a href="{{ "/fonts-languages/fonts-in-mpdf-7-x.html" | prepend: site.baseurl }}">Fonts in mPDF 7.x</a>
+- <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">autoLangToFont</a> - selects the font to use, based on the HTML lang attribute
+- <a href="{{ "/fonts-languages/automatic-font-selection.html" | prepend: site.baseurl }}">Automatic Font selection</a>

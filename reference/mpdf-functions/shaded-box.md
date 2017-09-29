@@ -6,68 +6,105 @@ permalink: /reference/mpdf-functions/shaded-box.html
 modification_time: 2015-08-05T12:01:11+00:00
 ---
 
-<div class="alert alert-info" role="alert">**Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is recommended where possible to use the preferred spelling.</div>
+Shaded_box – Writes line of text surrounded by box
 
-`**Shaded_box**(**string** title[, **string** font[, **float** fontstyle[, **float** fontsize[, **float** width[, **string** style[, **float** radius[, **string** backgroundcolor[, **string** color[, **float** padding]]]]]]]]])
+# Description
 
-` Writes a single line of text surrounded by a box directly to the PDF document at the current position. The box can have rounded corners, and be filled with background-colour.
+void **Shaded_box**(
+string <span class="parameter">$title</span>
+[, string <span class="parameter">$font</span>
+[, float <span class="parameter">$fontstyle</span>
+[, float <span class="parameter">$fontsize</span>
+[, float <span class="parameter">$width</span>
+[, string <span class="parameter">$style</span>
+[, float <span class="parameter">$radius</span>
+[, string <span class="parameter">$backgroundcolor</span>
+[, string <span class="parameter">$color</span>
+[, float <span class="parameter">$padding</span>
+]]]]]]]]])
 
-<ul>
-<li>`title`
+Writes a single line of text surrounded by a box directly to the PDF document at the current position. The box can
+have rounded corners, and be filled with background-colour.
 
-UTF-8 encoded text (single line)</li>
-<li>`font`
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name.
+  As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it
+  is recommended where possible to use the preferred spelling.
+</div>
 
-Font family
+# Parameters
 
-Default = '' i.e. default document font</li>
-<li>`fontstyle`
+`$title`
 
-Font style as one of B (bold), I (italic), BI (bold-italic) or blank for normal
+: UTF-8 encoded text (single line)
 
-Default = 'B' i.e. bold</li>
-<li>`fontsize`
+  This method accepts UTF-8 encoded text, and will reverse RTL (right-to-left) text when appropriate.
+  
+  Text containing HTML entities, as well as decimal and hex e.g. `&apos;` `&#8812;` or `&#x21a4;` can be used, by setting:   
+  `$mpdf->text_input_as_HTML = true;` (default: `false`)   
+  This will convert all the above to their apropriate characters, otherwise the text will be output as it is.
 
-Font size in points (pt)
+`$font`
 
-Default = '' i.e. default document font size</li>
-<li>`width`
+: Font family
 
-Width of the box - any units acceptable in CSS can be used e.g. pt, px, mm, % (of page width)
+  Default: `''` i.e. default document font
 
-Default = '70%'</li>
-<li>`style`
+`$fontstyle`
 
-Box style: D or empty string - draw border (default); F - fill; DF or FD - draw and fill
+: Font style as one of 
+  * `'B'` (bold) 
+  * `'I'` (italic) 
+  * `'BI'` (bold-italic) 
+  * or blank for normal
 
-Default = 'DF' i.e. border and fill</li>
-<li>`radius`
+  Default: `'B'` i.e. bold
 
-Radius of the rounded corners
+`$fontsize`
 
-Default = 2.5</li>
-<li>`backgroundcolor`
+: Font size in points (pt)
 
-Fill colour for the box - as #rrggbb
+  Default: `''` i.e. default document font size
 
-Default = '#FFFFFF'</li>
-<li>`color`
+`$width`
 
-Text colour - as #rrggbb
+: Width of the box - any units acceptable in CSS can be used e.g. `pt`, `px`, `mm`, `%` (of page width)
 
-Default = '#000000'</li>
-<li>`padding`
+  Default: `'70%'`
 
-Padding between text and box border, in millimeters
+`$style`
 
-Default = 2</li>
-</ul>
+: Box style: 
+  * `'D'` or empty string - draw border (default); 
+  * `'F'` - fill; 
+  * `'DF'` or `'FD'` - draw and fill
 
-This method accepts UTF-8 encoded text, and will reverse RTL (right-to-left) text when appropriate.
+   Default: `'DF'` i.e. border and fill
 
-Text containing HTML entities, as well as decimal and hex e.g. &amp; apos; &amp; #8812; or &amp; #x21a4; can be used, by setting:
+`$radius`
 
-$mpdf-&gt;text_input_as_HTML = true; (default = false)
+: Radius of the rounded corners
 
-This will convert all the above to their apropriate characters, otherwise the text will be output as it is.
+  Default: `2.5`
+
+`$backgroundcolor`
+
+: Fill colour for the box - as `'#rrggbb'`
+
+  Default: `'#FFFFFF'`
+
+`$color`
+
+: Text colour - as `'#rrggbb'`
+
+  Default: `'#000000'`
+
+`$padding`
+
+: Padding between text and box border, in millimeters
+
+  Default: `2`
+
+
+
 

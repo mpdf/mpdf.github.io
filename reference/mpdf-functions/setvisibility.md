@@ -3,11 +3,9 @@ layout: page
 title: SetVisibility()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setvisibility.html
-modification_time: 2015-08-05T12:01:09+00:00
+modification_time: 2017-03-16T12:01:09+00:00
 ---
 
-<div>
-<div>
 
 (mPDF >= 5.4)
 
@@ -23,64 +21,55 @@ Set the visibility of subsequent objects
 
 <span class="parameter">$visibility</span>
 
-This parameter specifies the visibility.
-
-**Values**
-
-<span class="smallblock">STRING</span> - One of the following:
-
-visible
-
-hidden
-
-printonly
-
-screenonly
-
-<span class="smallblock">DEFAULT</span>: visible
+: This parameter specifies the visibility.
+  
+  **Values**
+  
+  <span class="smallblock">STRING</span> - One of the following:
+  
+  * `'visible'`
+  * `'hidden'`
+  * `'printonly'`
+  * `'screenonly'`
+  
+  Default: `'visible'`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>5.4</td>
-<td>Function was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>5.4</td>
+  <td>Function was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
-Example #1
+## Example #1
 
-{% highlight php %}
+```php
 <?php
 
-...
-
 $mpdf->SetVisibility('printonly');
-
-$mpdf->WriteHTML('
-This text will only be visible when the document is printed
-');
+$mpdf->WriteHTML('This text will only be visible when the document is printed');
 
 $mpdf->SetVisibility('screenonly');
-
-$mpdf->WriteHTML('
-This text will only be visible on screen, and will not be included when the document is printed
-');
+$mpdf->WriteHTML('This text will only be visible on screen, and will not 
+be included when the document is printed');
 
 ...
 
-?>
-{% endhighlight %}
+```
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> - 'visibility'</li>
-</ul>
+* <a href="{{ "/css-stylesheets/supported-css.html" | prepend: site.baseurl }}">Supported CSS</a> - `'visibility'`
 
-</div>
-</div>

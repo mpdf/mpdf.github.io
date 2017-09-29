@@ -14,56 +14,53 @@ watermarkImgAlphaBlend – Specify the blend mode for overlying watermark images
 
 void **watermarkImgAlphaBlend**
 
-Specify the blend mode for overlying watermark images. Different blend modes work with different types of images. The blend modes are those specified in the <a href="{{ "/reference/pdf-files-adobe/pdf-reference.html" | prepend: site.baseurl }}">PDF reference</a>. The value of Normal gives acceptable results for most cases. 'Multiply' may produce better results with overlying WMF or SVG images.
+Specify the blend mode for overlying watermark images. Different blend modes work with different types of images.
+The blend modes are those specified in the
+<a href="{{ "/reference/pdf-files-adobe/pdf-reference.html" | prepend: site.baseurl }}">PDF reference</a>. The value of
+`'Normal'` gives acceptable results for most cases. `'Multiply'` may produce better results with overlying WMF or SVG images.
 
-<div class="alert alert-info" role="alert">**Note:** This variable can be changed either in the configuration file <span class="filename">config.php</span>  or at runtime</div>
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This variable can be changed as any other
+  <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
+</div>
 
 # Values
 
 <span class="parameter">$watermarkImgAlphaBlend</span>
 
-**Values**
+- `'Normal'`
+- `'Multiply'`
+- `'Screen'`
+- `'Overlay'`
+- `'Darken'`
+- `'Lighten'`
+- `'ColorDodge'`
+- `'ColorBurn'`
+- `'HardLight'`
+- `'SoftLight'`
+- `'Difference'`
+- `'Exclusion'`
 
-Normal
-
-Multiply
-
-Screen
-
-Overlay
-
-Darken
-
-Lighten
-
-ColorDodge
-
-ColorBurn
-
-HardLight
-
-SoftLight
-
-Difference
-
-Exclusion
-
-<span class="smallblock">DEFAULT</span>: Normal
+Default: `'Normal'`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>4.5</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>4.5</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/watermarkimgbehind.html" | prepend: site.baseurl }}">watermarkImgBehind</a> - Specify whether to place watermark images behind page contents</li>
-</ul>
+- <a href="{{ "/reference/mpdf-variables/watermarkimgbehind.html" | prepend: site.baseurl }}">watermarkImgBehind</a> - Specify whether to place watermark images behind page contents
 

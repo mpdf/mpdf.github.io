@@ -12,20 +12,20 @@ modification_time: 2015-08-05T12:02:37+00:00
 
 boolean **useKerning**
 
-When <span class="smallblock">TRUE</span>, mPDF will support the CSS style <span class="parameter">$font-kerning</span>. This should only be set to <span class="smallblock">TRUE</span> when required to conserve memory and processing time.
+When `true`, mPDF will support the CSS style `font-kerning`. 
+This should only be set to `true` when required to conserve memory and processing time.
 
 # Values
 
-<span class="parameter">$useKerning</span> = <span class="smallblock">TRUE</span>|<span class="smallblock">*FALSE*</span>
+<span class="parameter">$useKerning</span> =`true`\|`false`
 
 **Values**
 
-<span class="smallblock">TRUE</span>: Enable support for CSS style <span class="parameter">$font-kerning</span>
+* `true`: Enable support for CSS style `font-kerning`
+* `false`: Default
 
-<span class="smallblock">*FALSE*</span>: <span class="smallblock">DEFAULT</span>
+Default: `false`
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/what-else-can-i-do/kerning.html" | prepend: site.baseurl }}">Kerning</a></li>
-</ul>
+* <a href="{{ "/what-else-can-i-do/kerning.html" | prepend: site.baseurl }}">Kerning</a>

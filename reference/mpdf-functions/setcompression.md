@@ -14,33 +14,32 @@ SetCompression – Specifies that mPDF should compress the data for the PDF file
 
 void **SetCompression** ( boolean <span class="parameter">$flag</span> )
 
-Specifies that mPDF should compress the data for the PDF file. This makes a smaller PDF file and is set by default to <span class="smallblock">TRUE</span> on initialising the mPDF class.
+Specifies that mPDF should compress the data for the PDF file. This makes a smaller PDF file and is set by 
+default to `true` on initialising the mPDF class.
 
 # Parameters
 
 <span class="parameter">$flag</span>
 
-TRUE or FALSE to specify whether mPDF should compress the data for the PDF file.
+: `true` or `false` to specify whether mPDF should compress the data for the PDF file.
 
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
+  Default: `true`
 
 # Examples
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
-
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->SetCompression(false);
 
 $mpdf->WriteHTML('
-Hallo World
+Hello World
 ');
 
 $mpdf->Output('filename.pdf');
 
-?>
-{% endhighlight %}
+```
 

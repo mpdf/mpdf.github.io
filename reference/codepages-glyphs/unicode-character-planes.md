@@ -8,160 +8,171 @@ modification_time: 2015-08-05T12:03:01+00:00
 
 As of Unicode 5.1, The BMP includes the following scripts:
 
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Basic_Latin">Basic Latin</a> (0000–007F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Latin-1">Latin-1</a> Supplement (0080–00FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Latin_Extended-A">Latin Extended-A</a> (0100–017F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Latin_Extended-B">Latin Extended-B</a> (0180–024F)</li>
-<li><a href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet">IPA</a> Extensions (0250–02AF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Spacing_Modifier_Letters">Spacing Modifier Letters</a> (02B0–02FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Combining_Diacritical_Marks">Combining Diacritical Marks</a> (0300–036F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Greek_alphabet">Greek</a> and <a href="http://en.wikipedia.org/wiki/Coptic_alphabet">Coptic</a> (0370–03FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Cyrillic_alphabet">Cyrillic</a> (0400–04FF)</li>
-<li>Cyrillic Supplement (0500–052F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Armenian_alphabet">Armenian</a> (0530–058F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Hebrew_alphabet">Hebrew</a> (0590–05FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Arabic_alphabet">Arabic</a> (0600–06FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Syriac_alphabet">Syriac</a> (0700–074F)</li>
-<li>Arabic Supplement (0750–077F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Thaana_alphabet">Thaana</a> (0780–07BF)</li>
-<li><a href="http://en.wikipedia.org/wiki/N%27Ko">N'Ko</a> (Mandenkan) (07C0–07FF)</li>
-<li>Arabic Extended-A (08A0-08FF)</li>
-<li>Indic scripts:
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Devanagari">Devanagari</a> (0900–097F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Bengali_script">Bengali</a> (0980–09FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Gurmukh%C4%AB">Gurmukhi</a> (0A00–0A7F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Gujar%C4%81ti_script">Gujarati</a> (0A80–0AFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Oriya_script">Oriya</a> (0B00–0B7F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Tamil_script">Tamil</a> (0B80–0BFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Telugu_script">Telugu</a> (0C00–0C7F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Kannada_script">Kannada</a> (0C80–0CFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Malayalam_script">Malayalam</a> (0D00–0D7F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Sinhala_script">Sinhala</a> (0D80–0DFF)</li>
-</ul>
-</li>
-<li> <a href="http://en.wikipedia.org/wiki/Thai_alphabet">Thai</a> (0E00–0E7F) </li>
-<li><a href="http://en.wikipedia.org/wiki/Lao_alphabet">Lao</a> (0E80–0EFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Tibetan_script">Tibetan</a> (0F00–0FFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Burmese_alphabet">Burmese</a> (Myanmar) (1000–109F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Georgian_alphabet">Georgian</a> (10A0–10FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/List_of_Hangul_Jamo">Hangul Jamo</a> (1100–11FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Ge%27ez_alphabet">Ethiopic</a> (1200–137F)</li>
-<li>Ethiopic Supplement (1380–139F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Cherokee_syllabary">Cherokee</a> (13A0–13FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Canadian_Aboriginal_Syllabics">Unified Canadian Aboriginal Syllabics</a> (1400–167F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Ogham">Ogham</a> (1680–169F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Runic">Runic</a> (16A0–16FF)</li>
-<li>Philippine scripts:
-<ul>
-<li><a href="http://en.wikipedia.org/wiki/Baybayin">Tagalog</a> (1700–171F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Hanun%C3%B3o">Hanunóo</a> (1720–173F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Buhid_script">Buhid</a> (1740–175F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Tagbanwa">Tagbanwa</a> (1760–177F)</li>
-</ul>
-</li>
-<li><a href="http://en.wikipedia.org/wiki/Khmer_alphabet">Khmer</a> (1780–17FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Mongolian_alphabet">Mongolian</a> (1800–18AF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Limbu_script">Limbu</a> (1900–194F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Tai_Le_script">Tai Le</a> (1950–197F)</li>
-<li>New <a href="http://en.wikipedia.org/wiki/Tai_L%C3%BC_language">Tai Lue</a> (1980–19DF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Khmer_script">Khmer</a> Symbols (19E0–19FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Buginese_language">Buginese</a> (1A00–1A1F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Balinese_alphabet">Balinese</a> (1B00–1B7F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Sundanese_script">Sundanese</a> (1B80–1BBF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Lepcha_script">Lepcha</a> (Rong) (1C00–1C4F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Ol_Chiki_script">Ol Chiki</a> (Santali / Ol Cemet’) (1C50–1C7F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Phonetic_Extensions">Phonetic Extensions</a> (1D00–1D7F)</li>
-<li>Phonetic Extensions Supplement (1D80–1DBF)</li>
-<li>Combining Diacritical Marks Supplement (1DC0–1DFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Latin_Extended_Additional">Latin Extended Additional</a> (1E00–1EFF)</li>
-<li>Greek Extended (1F00–1FFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Unicode_Symbols">Symbols</a>:
-<ul>
-<li>General <a href="http://en.wikipedia.org/wiki/Punctuation">Punctuation</a> (2000–206F)</li>
-<li>Superscripts and Subscripts (2070–209F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Currency_Symbol">Currency Symbols</a> (20A0–20CF)</li>
-<li>Combining Diacritical Marks for Symbols (20D0–20FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> (2100–214F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Number_Forms">Number Forms</a> (2150–218F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Arrow_(symbol)">Arrows</a> (2190–21FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Unicode_Mathematical_Operators">Mathematical Operators</a> (2200–22FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Miscellaneous_Technical_(Unicode)">Miscellaneous Technical</a> (2300–23FF)</li>
-<li>Control Pictures (2400–243F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Optical_Character_Recognition">Optical Character Recognition</a> (2440–245F)</li>
-<li>Enclosed Alphanumerics (2460–24FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Box_drawing_characters">Box Drawing</a> (2500–257F)</li>
-<li>Block Elements (2580–259F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Unicode_Geometric_Shapes">Geometric Shapes</a> (25A0–25FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Miscellaneous_Symbols">Miscellaneous Symbols</a> (2600–26FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Unicode_Dingbats">Dingbats</a> (2700–27BF)</li>
-<li>Miscellaneous Mathematical Symbols-A (27C0–27EF)</li>
-<li>Supplemental Arrows-A (27F0–27FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Braille">Braille</a> Patterns (2800–28FF)</li>
-<li>Supplemental Arrows-B (2900–297F)</li>
-<li>Miscellaneous Mathematical Symbols-B (2980–29FF)</li>
-<li>Supplemental Mathematical Operators (2A00–2AFF)</li>
-<li>Miscellaneous Symbols and Arrows (2B00–2BFF)</li>
-</ul>
-</li>
-<li><a href="http://en.wikipedia.org/wiki/Glagolitic_alphabet">Glagolitic</a> (2C00–2C5F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Latin_Extended-C">Latin Extended-C</a> (2C60–2C7F)</li>
-<li>Coptic (2C80–2CFF)</li>
-<li>Georgian Supplement (2D00–2D2F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Tifinagh">Tifinagh</a> (2D30–2D7F)</li>
-<li>Ethiopic Extended (2D80–2DDF)</li>
-<li>Cyrillic Extended-A (2DE0–2DFF)</li>
-<li>Supplemental Punctuation (2E00–2E7F)</li>
-<li><a href="http://en.wikipedia.org/wiki/CJK">CJK</a> <a href="http://en.wikipedia.org/wiki/Radical_(Chinese_character)">Radicals</a> Supplement (2E80–2EFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Kangxi_Radicals">Kangxi Radicals</a> (2F00–2FDF)</li>
-<li>Ideographic Description Characters (2FF0–2FFF)</li>
-<li>CJK Symbols and Punctuation (3000–303F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Hiragana">Hiragana</a> (3040–309F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Katakana">Katakana</a> (30A0–30FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Bopomofo">Bopomofo</a> (3100–312F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Hangul">Hangul</a> Compatibility <a href="http://en.wikipedia.org/wiki/Jamo">Jamo</a> (3130–318F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Kanbun">Kanbun</a> (3190–319F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Bopomofo">Bopomofo</a> Extended (31A0–31BF)</li>
-<li>CJK <a href="http://en.wikipedia.org/wiki/Stroke_(Chinese_character)">Strokes</a> (31C0–31EF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Katakana">Katakana</a> Phonetic Extensions (31F0–31FF)</li>
-<li>Enclosed CJK Letters and Months (3200–32FF)</li>
-<li>CJK Compatibility (3300–33FF)</li>
-<li>CJK Unified Ideographs Extension A (3400–4DBF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Yijing">Yijing</a> Hexagram Symbols (4DC0–4DFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/CJK_Unified_Ideographs">CJK Unified Ideographs</a> (4E00–9FFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Yi_script">Yi</a> Syllables (A000–A48F)</li>
-<li>Yi Radicals (A490–A4CF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Vai_syllabary">Vai</a> (A500–A63F)</li>
-<li>Cyrillic Extended-B (A640–A69F)</li>
-<li>Modifier Tone Letters (A700–A71F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Latin_Extended-D">Latin Extended-D</a> (A720–A7FF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Syloti_Nagri">Syloti Nagri</a> (A800–A82F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Phagspa_script">Phags-pa</a> (A840–A87F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Saurashtra_script">Saurashtra</a> (A880–A8DF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Kayah_Li_script">Kayah Li</a> (A900–A92F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Rejang_script">Rejang</a> (A930–A95F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Cham_alphabet">Cham</a> (AA00–AA5F)</li>
-<li><a href="http://en.wikipedia.org/wiki/Hangul">Hangul</a> Syllables (AC00–D7AF)</li>
-<li><a href="http://en.wikipedia.org/wiki/UTF-16#Encoding_of_characters_outside_the_BMP">High Surrogates</a> (D800–DB7F)</li>
-<li>High Private Use Surrogates (DB80–DBFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/UTF-16#Encoding_of_characters_outside_the_BMP">Low Surrogates</a> (DC00–DFFF)</li>
-<li>Private Use Area (E000–F8FF)</li>
-<li>CJK Compatibility Ideographs (F900–FAFF)</li>
-<li>Alphabetic Presentation Forms (FB00–FB4F)</li>
-<li>Arabic Presentation Forms-A (FB50–FDFF)</li>
-<li>Variation Selectors (FE00–FE0F)</li>
-<li>Vertical Forms (FE10–FE1F)</li>
-<li>Combining Half Marks (FE20–FE2F)</li>
-<li>CJK Compatibility Forms (FE30–FE4F)</li>
-<li>Small Form Variants (FE50–FE6F)</li>
-<li>Arabic Presentation Forms-B (FE70–FEFF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms">Halfwidth and Fullwidth Forms</a> (FF00–FFEF)</li>
-<li><a href="http://en.wikipedia.org/wiki/Unicode_Specials">Specials</a> (FFF0–FFFF)</li>
-</ul>
+* <a href="http://en.wikipedia.org/wiki/Basic_Latin">Basic Latin</a> (0000–007F)
+* <a href="http://en.wikipedia.org/wiki/Latin-1">Latin-1</a> Supplement (0080–00FF)
+* <a href="http://en.wikipedia.org/wiki/Latin_Extended-A">Latin Extended-A</a> (0100–017F)
+* <a href="http://en.wikipedia.org/wiki/Latin_Extended-B">Latin Extended-B</a> (0180–024F)
+* <a href="http://en.wikipedia.org/wiki/International_Phonetic_Alphabet">IPA</a> Extensions (0250–02AF)
+* <a href="http://en.wikipedia.org/wiki/Spacing_Modifier_Letters">Spacing Modifier Letters</a> (02B0–02FF)
+* <a href="http://en.wikipedia.org/wiki/Combining_Diacritical_Marks">Combining Diacritical Marks</a> (0300–036F)
+* <a href="http://en.wikipedia.org/wiki/Greek_alphabet">Greek</a> and <a href="http://en.wikipedia.org/wiki/Coptic_alphabet">Coptic</a> (0370–03FF)
+* <a href="http://en.wikipedia.org/wiki/Cyrillic_alphabet">Cyrillic</a> (0400–04FF)
+* Cyrillic Supplement (0500–052F)
+* <a href="http://en.wikipedia.org/wiki/Armenian_alphabet">Armenian</a> (0530–058F)
+* <a href="http://en.wikipedia.org/wiki/Hebrew_alphabet">Hebrew</a> (0590–05FF)
+* <a href="http://en.wikipedia.org/wiki/Arabic_alphabet">Arabic</a> (0600–06FF)
+* <a href="http://en.wikipedia.org/wiki/Syriac_alphabet">Syriac</a> (0700–074F)
+* Arabic Supplement (0750–077F)
+* <a href="http://en.wikipedia.org/wiki/Thaana_alphabet">Thaana</a> (0780–07BF)
+* <a href="http://en.wikipedia.org/wiki/N%27Ko">N'Ko</a> (Mandenkan) (07C0–07FF)
+* Arabic Extended-A (08A0-08FF)
+* Indic scripts:
+  * <a href="http://en.wikipedia.org/wiki/Devanagari">Devanagari</a> (0900–097F)
+  * <a href="http://en.wikipedia.org/wiki/Bengali_script">Bengali</a> (0980–09FF)
+  * <a href="http://en.wikipedia.org/wiki/Gurmukh%C4%AB">Gurmukhi</a> (0A00–0A7F)
+  * <a href="http://en.wikipedia.org/wiki/Gujar%C4%81ti_script">Gujarati</a> (0A80–0AFF)
+  * <a href="http://en.wikipedia.org/wiki/Oriya_script">Oriya</a> (0B00–0B7F)
+  * <a href="http://en.wikipedia.org/wiki/Tamil_script">Tamil</a> (0B80–0BFF)
+  * <a href="http://en.wikipedia.org/wiki/Telugu_script">Telugu</a> (0C00–0C7F)
+  * <a href="http://en.wikipedia.org/wiki/Kannada_script">Kannada</a> (0C80–0CFF)
+  * <a href="http://en.wikipedia.org/wiki/Malayalam_script">Malayalam</a> (0D00–0D7F)
+  * <a href="http://en.wikipedia.org/wiki/Sinhala_script">Sinhala</a> (0D80–0DFF)
 
-<table class="table"> <tbody>
-<tr> <th>  </th> <th> 0</th> <th> 1</th> <th> 2</th> <th> 3</th> <th> 4</th> <th> 5</th> <th> 6</th> <th> 7</th> <th> 8</th> <th> 9</th> <th> A</th> <th> B</th> <th> C</th> <th> D</th> <th> E</th> <th> F</th> </tr>
+* <a href="http://en.wikipedia.org/wiki/Thai_alphabet">Thai</a> (0E00–0E7F) 
+* <a href="http://en.wikipedia.org/wiki/Lao_alphabet">Lao</a> (0E80–0EFF)
+* <a href="http://en.wikipedia.org/wiki/Tibetan_script">Tibetan</a> (0F00–0FFF)
+* <a href="http://en.wikipedia.org/wiki/Burmese_alphabet">Burmese</a> (Myanmar) (1000–109F)
+* <a href="http://en.wikipedia.org/wiki/Georgian_alphabet">Georgian</a> (10A0–10FF)
+* <a href="http://en.wikipedia.org/wiki/List_of_Hangul_Jamo">Hangul Jamo</a> (1100–11FF)
+* <a href="http://en.wikipedia.org/wiki/Ge%27ez_alphabet">Ethiopic</a> (1200–137F)
+* Ethiopic Supplement (1380–139F)
+* <a href="http://en.wikipedia.org/wiki/Cherokee_syllabary">Cherokee</a> (13A0–13FF)
+* <a href="http://en.wikipedia.org/wiki/Canadian_Aboriginal_Syllabics">Unified Canadian Aboriginal Syllabics</a> (1400–167F)
+* <a href="http://en.wikipedia.org/wiki/Ogham">Ogham</a> (1680–169F)
+* <a href="http://en.wikipedia.org/wiki/Runic">Runic</a> (16A0–16FF)
+* Philippine scripts:
+  * <a href="http://en.wikipedia.org/wiki/Baybayin">Tagalog</a> (1700–171F)
+  * <a href="http://en.wikipedia.org/wiki/Hanun%C3%B3o">Hanunóo</a> (1720–173F)
+  * <a href="http://en.wikipedia.org/wiki/Buhid_script">Buhid</a> (1740–175F)
+  * <a href="http://en.wikipedia.org/wiki/Tagbanwa">Tagbanwa</a> (1760–177F)
+
+* <a href="http://en.wikipedia.org/wiki/Khmer_alphabet">Khmer</a> (1780–17FF)
+* <a href="http://en.wikipedia.org/wiki/Mongolian_alphabet">Mongolian</a> (1800–18AF)
+* <a href="http://en.wikipedia.org/wiki/Limbu_script">Limbu</a> (1900–194F)
+* <a href="http://en.wikipedia.org/wiki/Tai_Le_script">Tai Le</a> (1950–197F)
+* New <a href="http://en.wikipedia.org/wiki/Tai_L%C3%BC_language">Tai Lue</a> (1980–19DF)
+* <a href="http://en.wikipedia.org/wiki/Khmer_script">Khmer</a> Symbols (19E0–19FF)
+* <a href="http://en.wikipedia.org/wiki/Buginese_language">Buginese</a> (1A00–1A1F)
+* <a href="http://en.wikipedia.org/wiki/Balinese_alphabet">Balinese</a> (1B00–1B7F)
+* <a href="http://en.wikipedia.org/wiki/Sundanese_script">Sundanese</a> (1B80–1BBF)
+* <a href="http://en.wikipedia.org/wiki/Lepcha_script">Lepcha</a> (Rong) (1C00–1C4F)
+* <a href="http://en.wikipedia.org/wiki/Ol_Chiki_script">Ol Chiki</a> (Santali / Ol Cemet’) (1C50–1C7F)
+* <a href="http://en.wikipedia.org/wiki/Phonetic_Extensions">Phonetic Extensions</a> (1D00–1D7F)
+* Phonetic Extensions Supplement (1D80–1DBF)
+* Combining Diacritical Marks Supplement (1DC0–1DFF)
+* <a href="http://en.wikipedia.org/wiki/Latin_Extended_Additional">Latin Extended Additional</a> (1E00–1EFF)
+* Greek Extended (1F00–1FFF)
+* <a href="http://en.wikipedia.org/wiki/Unicode_Symbols">Symbols</a>:
+  * General <a href="http://en.wikipedia.org/wiki/Punctuation">Punctuation</a> (2000–206F)
+  * Superscripts and Subscripts (2070–209F)
+  * <a href="http://en.wikipedia.org/wiki/Currency_Symbol">Currency Symbols</a> (20A0–20CF)
+  * Combining Diacritical Marks for Symbols (20D0–20FF)
+  * <a href="http://en.wikipedia.org/wiki/Letterlike_Symbols">Letterlike Symbols</a> (2100–214F)
+  * <a href="http://en.wikipedia.org/wiki/Number_Forms">Number Forms</a> (2150–218F)
+  * <a href="http://en.wikipedia.org/wiki/Arrow_(symbol)">Arrows</a> (2190–21FF)
+  * <a href="http://en.wikipedia.org/wiki/Unicode_Mathematical_Operators">Mathematical Operators</a> (2200–22FF)
+  * <a href="http://en.wikipedia.org/wiki/Miscellaneous_Technical_(Unicode)">Miscellaneous Technical</a> (2300–23FF)
+  * Control Pictures (2400–243F)
+  * <a href="http://en.wikipedia.org/wiki/Optical_Character_Recognition">Optical Character Recognition</a> (2440–245F)
+  * Enclosed Alphanumerics (2460–24FF)
+  * <a href="http://en.wikipedia.org/wiki/Box_drawing_characters">Box Drawing</a> (2500–257F)
+  * Block Elements (2580–259F)
+  * <a href="http://en.wikipedia.org/wiki/Unicode_Geometric_Shapes">Geometric Shapes</a> (25A0–25FF)
+  * <a href="http://en.wikipedia.org/wiki/Miscellaneous_Symbols">Miscellaneous Symbols</a> (2600–26FF)
+  * <a href="http://en.wikipedia.org/wiki/Unicode_Dingbats">Dingbats</a> (2700–27BF)
+  * Miscellaneous Mathematical Symbols-A (27C0–27EF)
+  * Supplemental Arrows-A (27F0–27FF)
+  * <a href="http://en.wikipedia.org/wiki/Braille">Braille</a> Patterns (2800–28FF)
+  * Supplemental Arrows-B (2900–297F)
+  * Miscellaneous Mathematical Symbols-B (2980–29FF)
+  * Supplemental Mathematical Operators (2A00–2AFF)
+  * Miscellaneous Symbols and Arrows (2B00–2BFF)
+
+* <a href="http://en.wikipedia.org/wiki/Glagolitic_alphabet">Glagolitic</a> (2C00–2C5F)
+* <a href="http://en.wikipedia.org/wiki/Latin_Extended-C">Latin Extended-C</a> (2C60–2C7F)
+* Coptic (2C80–2CFF)
+* Georgian Supplement (2D00–2D2F)
+* <a href="http://en.wikipedia.org/wiki/Tifinagh">Tifinagh</a> (2D30–2D7F)
+* Ethiopic Extended (2D80–2DDF)
+* Cyrillic Extended-A (2DE0–2DFF)
+* Supplemental Punctuation (2E00–2E7F)
+* <a href="http://en.wikipedia.org/wiki/CJK">CJK</a> <a href="http://en.wikipedia.org/wiki/Radical_(Chinese_character)">Radicals</a> Supplement (2E80–2EFF)
+* <a href="http://en.wikipedia.org/wiki/Kangxi_Radicals">Kangxi Radicals</a> (2F00–2FDF)
+* Ideographic Description Characters (2FF0–2FFF)
+* CJK Symbols and Punctuation (3000–303F)
+* <a href="http://en.wikipedia.org/wiki/Hiragana">Hiragana</a> (3040–309F)
+* <a href="http://en.wikipedia.org/wiki/Katakana">Katakana</a> (30A0–30FF)
+* <a href="http://en.wikipedia.org/wiki/Bopomofo">Bopomofo</a> (3100–312F)
+* <a href="http://en.wikipedia.org/wiki/Hangul">Hangul</a> Compatibility <a href="http://en.wikipedia.org/wiki/Jamo">Jamo</a> (3130–318F)
+* <a href="http://en.wikipedia.org/wiki/Kanbun">Kanbun</a> (3190–319F)
+* <a href="http://en.wikipedia.org/wiki/Bopomofo">Bopomofo</a> Extended (31A0–31BF)
+* CJK <a href="http://en.wikipedia.org/wiki/Stroke_(Chinese_character)">Strokes</a> (31C0–31EF)
+* <a href="http://en.wikipedia.org/wiki/Katakana">Katakana</a> Phonetic Extensions (31F0–31FF)
+* Enclosed CJK Letters and Months (3200–32FF)
+* CJK Compatibility (3300–33FF)
+* CJK Unified Ideographs Extension A (3400–4DBF)
+* <a href="http://en.wikipedia.org/wiki/Yijing">Yijing</a> Hexagram Symbols (4DC0–4DFF)
+* <a href="http://en.wikipedia.org/wiki/CJK_Unified_Ideographs">CJK Unified Ideographs</a> (4E00–9FFF)
+* <a href="http://en.wikipedia.org/wiki/Yi_script">Yi</a> Syllables (A000–A48F)
+* Yi Radicals (A490–A4CF)
+* <a href="http://en.wikipedia.org/wiki/Vai_syllabary">Vai</a> (A500–A63F)
+* Cyrillic Extended-B (A640–A69F)
+* Modifier Tone Letters (A700–A71F)
+* <a href="http://en.wikipedia.org/wiki/Latin_Extended-D">Latin Extended-D</a> (A720–A7FF)
+* <a href="http://en.wikipedia.org/wiki/Syloti_Nagri">Syloti Nagri</a> (A800–A82F)
+* <a href="http://en.wikipedia.org/wiki/Phagspa_script">Phags-pa</a> (A840–A87F)
+* <a href="http://en.wikipedia.org/wiki/Saurashtra_script">Saurashtra</a> (A880–A8DF)
+* <a href="http://en.wikipedia.org/wiki/Kayah_Li_script">Kayah Li</a> (A900–A92F)
+* <a href="http://en.wikipedia.org/wiki/Rejang_script">Rejang</a> (A930–A95F)
+* <a href="http://en.wikipedia.org/wiki/Cham_alphabet">Cham</a> (AA00–AA5F)
+* <a href="http://en.wikipedia.org/wiki/Hangul">Hangul</a> Syllables (AC00–D7AF)
+* <a href="http://en.wikipedia.org/wiki/UTF-16#Encoding_of_characters_outside_the_BMP">High Surrogates</a> (D800–DB7F)
+* High Private Use Surrogates (DB80–DBFF)
+* <a href="http://en.wikipedia.org/wiki/UTF-16#Encoding_of_characters_outside_the_BMP">Low Surrogates</a> (DC00–DFFF)
+* Private Use Area (E000–F8FF)
+* CJK Compatibility Ideographs (F900–FAFF)
+* Alphabetic Presentation Forms (FB00–FB4F)
+* Arabic Presentation Forms-A (FB50–FDFF)
+* Variation Selectors (FE00–FE0F)
+* Vertical Forms (FE10–FE1F)
+* Combining Half Marks (FE20–FE2F)
+* CJK Compatibility Forms (FE30–FE4F)
+* Small Form Variants (FE50–FE6F)
+* Arabic Presentation Forms-B (FE70–FEFF)
+* <a href="http://en.wikipedia.org/wiki/Halfwidth_and_Fullwidth_Forms">Halfwidth and Fullwidth Forms</a> (FF00–FFEF)
+* <a href="http://en.wikipedia.org/wiki/Unicode_Specials">Specials</a> (FFF0–FFFF)
+
+<table class="table">
+<tbody>
+<tr> 
+  <th>  </th> 
+  <th> 0</th> 
+  <th> 1</th> 
+  <th> 2</th> 
+  <th> 3</th> 
+  <th> 4</th> 
+  <th> 5</th> 
+  <th> 6</th> 
+  <th> 7</th> 
+  <th> 8</th> 
+  <th> 9</th> 
+  <th> A</th> 
+  <th> B</th> 
+  <th> C</th> 
+  <th> D</th> 
+  <th> E</th> 
+  <th> F</th> 
+</tr>
 <tr> <th> 00 </th>
 <td colspan="2" class="control">C0 Controls</td>
 <td colspan="6" class="alloc"><a href="http://www.unicode.org/charts/PDF/U0000.pdf">Basic Latin</a></td>
@@ -920,103 +931,103 @@ As of Unicode 5.1, The BMP includes the following scripts:
 <td colspan="5" class="alloc"><a href="http://www.unicode.org/charts/PDF/UD7B0.pdf">Hangul Jamo Extended-B</a></td>
 </tr>
 <tr> <th> D8 </th>
-<td colspan="16" class="alloc">**High-half zone of UTF-16**</td>
+<td colspan="16" class="alloc"><b>High-half zone of UTF-16</b></td>
 </tr>
 <tr> <th> D9 </th>
-<td colspan="16" class="alloc">**High-half zone of UTF-16**</td>
+<td colspan="16" class="alloc"><b>High-half zone of UTF-16</b></td>
 </tr>
 <tr> <th> DA </th>
-<td colspan="16" class="alloc">**High-half zone of UTF-16**</td>
+<td colspan="16" class="alloc"><b>High-half zone of UTF-16</b></td>
 </tr>
 <tr> <th> DB </th>
-<td colspan="16" class="alloc">**High-half zone of UTF-16**</td>
+<td colspan="16" class="alloc"><b>High-half zone of UTF-16</b></td>
 </tr>
 <tr> <th> DC </th>
-<td colspan="16" class="alloc">**Low-half zone of UTF-16**</td>
+<td colspan="16" class="alloc"><b>Low-half zone of UTF-16</b></td>
 </tr>
 <tr> <th> DD </th>
-<td colspan="16" class="alloc">**Low-half zone of UTF-16**</td>
+<td colspan="16" class="alloc"><b>Low-half zone of UTF-16</b></td>
 </tr>
 <tr> <th> DE </th>
-<td colspan="16" class="alloc">**Low-half zone of UTF-16**</td>
+<td colspan="16" class="alloc"><b>Low-half zone of UTF-16</b></td>
 </tr>
 <tr> <th> DF </th>
-<td colspan="16" class="alloc">**Low-half zone of UTF-16**</td>
+<td colspan="16" class="alloc"><b>Low-half zone of UTF-16</b></td>
 </tr>
 <tr> <th> E0 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E1 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E2 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E3 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E4 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E5 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E6 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E7 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E8 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> E9 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> EA </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> EB </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> EC </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> ED </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> EE </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> EF </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F0 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F1 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F2 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F3 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F4 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F5 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F6 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F7 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F8 </th>
-<td colspan="16" class="alloc">**Private Use Zone**</td>
+<td colspan="16" class="alloc"><b>Private Use Zone</b></td>
 </tr>
 <tr> <th> F9 </th>
 <td colspan="16" class="alloc"><a href="http://www.unicode.org/charts/PDF/UF900.pdf">CJK Compatibility Ideographs</a></td>

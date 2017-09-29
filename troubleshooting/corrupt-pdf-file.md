@@ -6,27 +6,31 @@ permalink: /troubleshooting/corrupt-pdf-file.html
 modification_time: 2015-08-05T12:00:33+00:00
 ---
 
-If you get a message saying "Corrupt PDF file: does not start with %PDF", it may be because your script - either mPDF or an error in your PHP code - has output an error message. The browser is expecting a file in PDF format, which should start with "%PDF" and instead it gets some text like an error message.
+If you get a message saying "*Corrupt PDF file: does not start with %PDF*", it may be because your script - either
+mPDF or an error in your PHP code - has output an error message. The browser is expecting a file in PDF format,
+which should start with `%PDF` and instead it gets some text like an error message.
 
 To show error message(s):
 
-{% highlight php %}
+```php
 <?php
 
-<?
-
-$mpdf = new mPDF();
-
+$mpdf = new \Mpdf\Mpdf();
 $mpdf->debug = true;
-
-...
-
 $mpdf->Output();
+```
 
-?>
-{% endhighlight %}
+Also, you should always use try/catch block for a `\Mpdf\MpdfException` to find out more:
 
-## Adding exit
-
-A number of errors can be caused by not explicitly ending your script with <span class="parameter">$exit;</span>
-
+```php
+<?php
+try {
+    $mpdf = new \Mpdf\Mpdf();
+    $mpdf->WriteHTML('Hello World');
+    // Other code
+    $mpdf->Output();
+} catch (\Mpdf\MpdfException $e) { // Note: safer fully qualified exception name used for catch
+    // Process the exception, log, print etc.
+    echo $e->getMessage();
+}
+```

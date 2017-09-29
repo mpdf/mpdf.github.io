@@ -14,57 +14,61 @@ collapseBlockMargins – Specify whether to collapse (vertical) margins between 
 
 void **collapseBlockMargins**
 
-Specify whether to collapse (vertical) margins between block elements. In line with CSS specification, the top/bottom margins of adjoining block-style elements are collapsed to the larger of the two. This works between all block elements such as DIV, P, H1-6 etc. and also lists and tables.
+Specify whether to collapse (vertical) margins between block elements. In line with CSS specification, the top/bottom
+margins of adjoining block-style elements are collapsed to the larger of the two. This works between all block elements
+such as DIV, P, H1-6 etc. and also lists and tables.
 
 NB Firefox does not collapse margins above and below tables, but IE8 does.
 
 # Values
 
-<span class="parameter">$collapseBlockMargins</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$collapseBlockMargins</span> =  `true`\|`false`
 
 **Values**
 
-<span class="smallblock">TRUE </span>: enable collapse
+* `true`: enable collapse
+* `false`: disable collapse
 
-<span class="smallblock">FALSE</span>: disable collapse
-
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">TRUE</span>
+Default: `true`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>4.2</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>4.2</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
-Example #1
-
-{% highlight php %}
+```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $html = '
-
 <div style="margin-bottom: 3em;">This DIV has a bottom margin defined as 3em</div>
-
-<div style="margin-top: 2em;">This DIV has a top margin defined as 2em. The space between these DIVs will collapse to 3em</div>';
+<div style="margin-top: 2em;">This DIV has a top margin defined as 2em. The 
+space between these DIVs will collapse to 3em</div>';
 
 $mpdf->WriteHTML($html);
-
 $mpdf->Output();
 
-?>
-{% endhighlight %}
+```
 
-<div class="alert alert-info" role="alert">**Note:** The collapse of margins at the top and bottom of the page is unaffected by this variable. This is set by the custom CSS property `margin-collapse: collapse|none` which can be defined in the `defaultCSS` variable in <span class="filename">config.php</span> or elsewhere.</div>
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** The collapse of margins at the top and bottom of the page is unaffected by this variable.
+  This is set by the custom CSS property `margin-collapse: collapse|none` which can be defined in the `defaultCSS`
+  <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
+</div>
 

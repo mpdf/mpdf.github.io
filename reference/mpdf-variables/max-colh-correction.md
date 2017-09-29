@@ -12,47 +12,46 @@ max_colH_correction – Sets maximum ratio to allow when adjusting column height
 
 # Description
 
-**max_colH_correction** ( *1.15* | float )
+float **max_colH_correction**
 
 The maximum ratio to adjust column height when justifying - too large a value can give ugly results
 
-<div class="alert alert-info" role="alert">**Note:** The <span class="parameter">$vAlign</span> parameter of &lt;<a href="{{ "/reference/html-control-tags/columnbreak.html" | prepend: site.baseurl }}">columnbreak</a>&gt; or <a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a> must be set to J or justify</div>
+Default: `1.15`
+
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** The <span class="parameter">$vAlign</span> parameter of 
+  &lt;<a href="{{ "/reference/html-control-tags/columnbreak.html" | prepend: site.baseurl }}">columnbreak</a>&gt;
+  or <a href="{{ "/reference/mpdf-functions/setcolumns.html" | prepend: site.baseurl }}">SetColumns()</a> must
+  be set to `J` or `justify`
+</div>
 
 # Values
 
-<table class="table"> <thead>
+<table class="table">
+<thead>
 <tr>
-<td>value</td>
-<td>description</td>
+  <th>value</th>
+  <th>description</th>
 </tr>
 </thead> <tbody>
 <tr>
-<td>default
-
-</td>
-<td>1.15
-
-</td>
+  <td>default</td>
+  <td>1.15</td>
 </tr>
 <tr>
-<td>range</td>
-<td>Values above 1.0
-
-</td>
+  <td>range</td>
+  <td>Values above 1.0</td>
 </tr>
-</tbody> </table>
+</tbody>
+</table>
 
-Examples
+# Examples
 
-Example #1
-
-{% highlight php %}
+```php
 <?php
-
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->max_colH_correction = 1.3;
 
-?>
-{% endhighlight %}
+```
 

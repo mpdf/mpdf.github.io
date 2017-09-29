@@ -6,18 +6,20 @@ permalink: /reference/mpdf-variables/iterationcounter.html
 modification_time: 2015-08-05T12:02:03+00:00
 ---
 
-<div>
-<div>
-
 mPDF >= 5.0
 
-Allow use of {iteration varname} in THEAD
+Allow use of `{iteration varname}` in THEAD
 
-Default set in config.php or at runtime
+Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 
-Default value: FALSE
 
-Values: TRUE|FALSE
+Values: `true`\|`false`
 
-</div>
-</div>
+Default value: `false`
+
+
+
+
+See also:
+
+* <a href="{{ "/what-else-can-i-do/replaceable-aliases.html" | prepend: site.baseurl }}">Replaceable Aliases</a>

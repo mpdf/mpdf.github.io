@@ -6,15 +6,33 @@ permalink: /reference/mpdf-variables/annotopacity.html
 modification_time: 2015-08-05T12:01:38+00:00
 ---
 
-float $annotOpacity = 0.5;    // default Opacity for Annotations;
+float **$annotOpacity** = `0.5`    
 
-Value &gt;0 - <= 1
+Default Opacity for Annotations;
 
-Suggest 0.5 if using in-line with text, or 1 if using in the margins (with annotMargin &lt;&gt; 0)
+**Value** 
+
+* >`0` to <= `1`
+
+Suggest `0.5` if using in-line with text, or `1` if using in the margins (with annotMargin &lt; &gt; `0`)
+
+Default: `0.5`
+
+# Usage
+
+Set at document initiation
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf([
+    'annotMargin' => 5,
+    'annotOpacity' => 1
+]);
+
+```
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">Annotation()</a> - Add an Annotation to the document</li>
-</ul>
+* <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">Annotation()</a> - Add an Annotation to the document
+* <a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotMargin</a> - Default position for Annotations
+
 

@@ -6,30 +6,47 @@ permalink: /reference/mpdf-functions/autosizetext.html
 modification_time: 2015-08-05T12:00:42+00:00
 ---
 
-`**AutosizeText**(**string** text, **float** width, **string** font, **string** style[, **float** fontsize])
+# Description
 
-` Writes a single line of text directly to the PDF document at the current position.
+void **AutosizeText**( 
+string <span class="parameter">$text</span>, 
+float <span class="parameter">$width</span>, 
+string <span class="parameter">$font</span>, 
+string <span class="parameter">$style</span>
+[, float <span class="parameter">$fontsize</span>
+])
 
+Writes a single line of text directly to the PDF document at the current position.
 Font size will be automatically reduced to fit width (but is not increased).
 
 NB Does not reverse RTL text
 
-<ul>
-<li>`text`
+## Parameters
 
-UTF-8 encoded text to write. Single line only.</li>
-<li>`width`
+<span class="parameter">$text</span>
 
-Width of text in millimeters. The font size will be reduced if required to fit this size.</li>
-<li>`font`
+: UTF-8 encoded text to write. Single line only.
 
-Font family to use</li>
-<li>`style
+<span class="parameter">$width</span>
 
-`Font style used [blank for normal]|i|b|bi</li>
-<li>`fontsize`
+: Width of text in millimeters. The font size will be reduced if required to fit this size.
 
-Maximm font size in points (pt)
+<span class="parameter">$font</span>
 
-Default = 72</li>
-</ul>
+: Font family to use
+
+<span class="parameter">$style</span>
+
+: Font style used
+
+  **Values**
+  * [blank for normal]
+  * `'i'` - italic
+  * `'b'` - bold
+  * `'bi'` - italic and bold
+
+<span class="parameter">$fontsize</span>
+
+: Maximum font size in points (pt)
+
+  Default: `72`

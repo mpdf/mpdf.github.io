@@ -4,13 +4,16 @@
     items:
         -
             title: 'Features'
-            url: index0f5a.html
-            permalink: /about-mpdf/features-v5.html
+            permalink: /about-mpdf/features.html
             slug: features
             parent_title: 'About mPDF'
         -
-            title: 'Requirements v5'
-            url: index969a.html
+            title: 'Requirements'
+            permalink: /about-mpdf/requirements-v7.html
+            slug: requirements-v7
+            parent_title: 'About mPDF'
+        -
+            title: 'Requirements < v7.0'
             permalink: /about-mpdf/requirements-v5.html
             slug: requirements-v5
             parent_title: 'About mPDF'
@@ -27,6 +30,11 @@
             slug: credits
             parent_title: 'About mPDF'
         -
+            title: Changelog
+            permalink: /about-mpdf/changelog.html
+            slug: changelog
+            parent_title: 'About mPDF'
+        -
             title: License
             url: index1652.html
             permalink: /about-mpdf/license.html
@@ -37,16 +45,9 @@
     slug: installation-setup
     items:
         -
-            title: 'Installation v5.x'
-            url: index619b.html
-            permalink: /installation-setup/installation-v5-x.html
-            slug: installation-v5-x
-            parent_title: 'Installation & Setup'
-        -
-            title: 'Installation v6.x'
-            url: index00a1.html
-            permalink: /installation-setup/installation-v6-x.html
-            slug: installation-v6-x
+            title: 'Installation v7.x'
+            permalink: /installation-setup/installation-v7-x.html
+            slug: installation-v7-x
             parent_title: 'Installation & Setup'
         -
             title: 'Reducing memory usage'
@@ -59,6 +60,17 @@
             url: indexec16.html
             permalink: /installation-setup/folders-for-temporary-files.html
             slug: folders-for-temporary-files
+            parent_title: 'Installation & Setup'
+        -
+            title: 'Logging'
+            permalink: /installation-setup/logging.html
+            slug: logging
+            parent_title: 'Installation & Setup'
+        -
+            title: 'Installation v6.x'
+            url: index00a1.html
+            permalink: /installation-setup/installation-v6-x.html
+            slug: installation-v6-x
             parent_title: 'Installation & Setup'
 -
     title: 'Getting Started'
@@ -81,22 +93,27 @@
     slug: fonts-languages
     items:
         -
-            title: 'About PDF files'
-            url: index8fa3.html
-            permalink: /fonts-languages/about-pdf-files.html
-            slug: about-pdf-files
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Fonts in mPDF 5.x'
-            url: index84a8.html
-            permalink: /fonts-languages/fonts-in-mpdf-5-x.html
-            slug: fonts-in-mpdf-5-x
+            title: 'Fonts in mPDF 7.x'
+            permalink: /fonts-languages/fonts-in-mpdf-7-x.html
+            slug: fonts-in-mpdf-7-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Fonts in mPDF 6.x'
             url: indexa2f8.html
             permalink: /fonts-languages/fonts-in-mpdf-6-x.html
             slug: fonts-in-mpdf-6-x
+            parent_title: 'Fonts & Languages'
+        -
+            title: 'Fonts in mPDF 5.x'
+            url: indexa2f8.html
+            permalink: /fonts-languages/fonts-in-mpdf-5-x.html
+            slug: fonts-in-mpdf-5-x
+            parent_title: 'Fonts & Languages'
+        -
+            title: 'About PDF files'
+            url: index8fa3.html
+            permalink: /fonts-languages/about-pdf-files.html
+            slug: about-pdf-files
             parent_title: 'Fonts & Languages'
         -
             title: 'OpenType layout (OTL)'
@@ -111,22 +128,21 @@
             slug: font-names
             parent_title: 'Fonts & Languages'
         -
+            title: 'Available Fonts v6 and v7'
+            url: index3517.html
+            permalink: /fonts-languages/available-fonts-v6.html
+            slug: available-fonts-v6
+            parent_title: 'Fonts & Languages'
+        -
             title: 'Available Fonts v5.x'
             url: index3ad8.html
             permalink: /fonts-languages/available-fonts-v5-x.html
             slug: available-fonts-v5-x
             parent_title: 'Fonts & Languages'
         -
-            title: 'Available fonts v6'
-            url: index3517.html
-            permalink: /fonts-languages/available-fonts-v6.html
-            slug: available-fonts-v6
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Choosing a configuration v5.x'
-            url: index93f4.html
-            permalink: /fonts-languages/choosing-a-configuration-v5-x.html
-            slug: choosing-a-configuration-v5-x
+            title: 'Choosing a configuration v7.x'
+            permalink: /fonts-languages/choosing-a-configuration-v7-x.html
+            slug: choosing-a-configuration-v7-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Choosing a configuration v6.x'
@@ -135,16 +151,16 @@
             slug: choosing-a-configuration-v6-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'Choosing a configuration v5.x'
+            url: index93f4.html
+            permalink: /fonts-languages/choosing-a-configuration-v5-x.html
+            slug: choosing-a-configuration-v5-x
+            parent_title: 'Fonts & Languages'
+        -
             title: 'Automatic font selection'
             url: index0ee5.html
             permalink: /fonts-languages/automatic-font-selection.html
             slug: automatic-font-selection
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'lang v5.x'
-            url: indexe65f.html
-            permalink: /fonts-languages/lang-v5-x.html
-            slug: lang-v5-x
             parent_title: 'Fonts & Languages'
         -
             title: 'lang 6.x'
@@ -153,22 +169,16 @@
             slug: lang-6-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'lang v5.x'
+            url: indexe65f.html
+            permalink: /fonts-languages/lang-v5-x.html
+            slug: lang-v5-x
+            parent_title: 'Fonts & Languages'
+        -
             title: 'Input encoding'
             url: indexd870.html
             permalink: /fonts-languages/input-encoding.html
             slug: input-encoding
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Fonts & Language cover v5.x'
-            url: index39c1.html
-            permalink: /fonts-languages/fonts-language-cover-v5-x.html
-            slug: fonts-language-cover-v5-x
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Arabic (RTL) text v5.x'
-            url: index5202.html
-            permalink: /fonts-languages/arabic-rtl-text-v5-x.html
-            slug: arabic-rtl-text-v5-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Bidirectional (RTL) text v6.x'
@@ -177,16 +187,16 @@
             slug: bidirectional-rtl-text-v6-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'Arabic (RTL) text v5.x'
+            url: index5202.html
+            permalink: /fonts-languages/arabic-rtl-text-v5-x.html
+            slug: arabic-rtl-text-v5-x
+            parent_title: 'Fonts & Languages'
+        -
             title: 'CJK Languages'
             url: index57bf.html
             permalink: /fonts-languages/cjk-languages.html
             slug: cjk-languages
-            parent_title: 'Fonts & Languages'
-        -
-            title: 'Indic fonts v5.x'
-            url: indexee38.html
-            permalink: /fonts-languages/indic-fonts-v5-x.html
-            slug: indic-fonts-v5-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Default Font'
@@ -195,10 +205,9 @@
             slug: default-font
             parent_title: 'Fonts & Languages'
         -
-            title: 'Font substitution 5.x'
-            url: indexf1b3.html
-            permalink: /fonts-languages/font-substitution-5-x.html
-            slug: font-substitution-5-x
+            title: 'Font substitution 7.x'
+            permalink: /fonts-languages/font-substitution-7-x.html
+            slug: font-substitution-7-x
             parent_title: 'Fonts & Languages'
         -
             title: 'Font substitution 6.x'
@@ -207,20 +216,37 @@
             slug: font-substitution-6-x
             parent_title: 'Fonts & Languages'
         -
+            title: 'Font substitution 5.x'
+            url: indexf1b3.html
+            permalink: /fonts-languages/font-substitution-5-x.html
+            slug: font-substitution-5-x
+            parent_title: 'Fonts & Languages'
+        -
             title: 'Character substitution'
             url: index9a8f.html
             permalink: /fonts-languages/character-substitution.html
             slug: character-substitution
+            parent_title: 'Fonts & Languages'
+        -
+            title: 'Fonts & Language cover v5.x'
+            url: index39c1.html
+            permalink: /fonts-languages/fonts-language-cover-v5-x.html
+            slug: fonts-language-cover-v5-x
+            parent_title: 'Fonts & Languages'
+        -
+            title: 'Indic fonts v5.x'
+            url: indexee38.html
+            permalink: /fonts-languages/indic-fonts-v5-x.html
+            slug: indic-fonts-v5-x
             parent_title: 'Fonts & Languages'
 -
     title: Configuration
     slug: configuration
     items:
         -
-            title: 'Configuration files v5.x'
-            url: index136f.html
-            permalink: /configuration/configuration-files-v5-x.html
-            slug: configuration-files-v5-x
+            title: 'Configuration v7.x'
+            permalink: /configuration/configuration-v7-x.html
+            slug: configuration-files-v7-x
             parent_title: Configuration
         -
             title: 'Configuration files v6.x'
@@ -341,25 +367,25 @@
             slug: headers-footers
             parent_title: 'Headers & Footers'
         -
-            title: 'Method 1'
+            title: 'Method 1 - Runtime Non-HTML'
             url: indexd017.html
             permalink: /headers-footers/method-1.html
             slug: method-1
             parent_title: 'Headers & Footers'
         -
-            title: 'Method 2'
+            title: 'Method 2 - Runtime HTML'
             url: index8f9d.html
             permalink: /headers-footers/method-2.html
             slug: method-2
             parent_title: 'Headers & Footers'
         -
-            title: 'Method 3'
+            title: 'Method 3 - Named Non-HTML'
             url: index9405.html
             permalink: /headers-footers/method-3.html
             slug: method-3
             parent_title: 'Headers & Footers'
         -
-            title: 'Method 4'
+            title: 'Method 4 - Named HTML'
             url: index2fc7.html
             permalink: /headers-footers/method-4.html
             slug: method-4
@@ -557,12 +583,6 @@
             slug: watermarks
             parent_title: 'What Else Can I Do'
         -
-            title: Graphs
-            url: index4d44.html
-            permalink: /what-else-can-i-do/graphs.html
-            slug: graphs
-            parent_title: 'What Else Can I Do'
-        -
             title: 'Replaceable Aliases'
             url: index2da5.html
             permalink: /what-else-can-i-do/replaceable-aliases.html
@@ -593,6 +613,11 @@
             slug: writing-non-html-text
             parent_title: 'What Else Can I Do'
         -
+            title: 'PDF/A-3 associated files + additional xmp rdf'
+            permalink: /what-else-can-i-do/pdf-a3-xmp-rdf.html
+            slug: pdf-a3-xmp-rdf
+            parent_title: 'What Else Can I Do'
+        -
             title: 'PDF/A1-b compliance'
             url: index2366.html
             permalink: /what-else-can-i-do/pdf-a1-b-compliance.html
@@ -609,12 +634,6 @@
             url: index04c8.html
             permalink: /what-else-can-i-do/capture-html-output.html
             slug: capture-html-output
-            parent_title: 'What Else Can I Do'
-        -
-            title: 'Saving to a database'
-            url: indexdd7c.html
-            permalink: /what-else-can-i-do/saving-to-a-database.html
-            slug: saving-to-a-database
             parent_title: 'What Else Can I Do'
         -
             title: 'Math Formulae with MathJax'
@@ -706,6 +725,12 @@
             slug: slow
             parent_title: Troubleshooting
         -
+            title: Browser output as strange characters
+            url: index1773.html
+            permalink: /troubleshooting/strange-character-output-in-browser.html
+            slug: slow
+            parent_title: Troubleshooting
+        -
             title: 'Text is replaced'
             url: index11fd.html
             permalink: /troubleshooting/text-is-replaced.html
@@ -786,22 +811,27 @@
             slug: mpdf-functions
             items:
                 -
-                    title: mPDF()
-                    url: index7d44.html
-                    permalink: /reference/mpdf-functions/mpdf.html
-                    slug: mpdf
-                    parent_title: 'mPDF functions'
-                -
                     title: Overview
                     url: indexf571.html
                     permalink: /reference/mpdf-functions/overview.html
                     slug: overview
                     parent_title: 'mPDF functions'
                 -
+                    title: __construct()
+                    url: index7d44.html
+                    permalink: /reference/mpdf-functions/construct.html
+                    slug: construct
+                    parent_title: 'mPDF functions'
+                -
                     title: AddColumn()
                     url: index0183.html
                     permalink: /reference/mpdf-functions/addcolumn.html
                     slug: addcolumn
+                    parent_title: 'mPDF functions'
+                -
+                    title: AddFontDirectory()
+                    permalink: /reference/mpdf-functions/addfontdirectory.html
+                    slug: addfontdirectory
                     parent_title: 'mPDF functions'
                 -
                     title: AddPage()
@@ -1020,16 +1050,16 @@
                     slug: setdefaultfont
                     parent_title: 'mPDF functions'
                 -
-                    title: SetDirectionality()
-                    url: index11d2.html
-                    permalink: /reference/mpdf-functions/setdirectionality.html
-                    slug: setdirectionality
-                    parent_title: 'mPDF functions'
-                -
                     title: SetDefaultFontSize()
                     url: index82cf.html
                     permalink: /reference/mpdf-functions/setdefaultfontsize.html
                     slug: setdefaultfontsize
+                    parent_title: 'mPDF functions'
+                -
+                    title: SetDirectionality()
+                    url: index11d2.html
+                    permalink: /reference/mpdf-functions/setdirectionality.html
+                    slug: setdirectionality
                     parent_title: 'mPDF functions'
                 -
                     title: SetDisplayMode()
@@ -1108,6 +1138,11 @@
                     url: indexc4be.html
                     permalink: /reference/mpdf-functions/setkeywords.html
                     slug: setkeywords
+                    parent_title: 'mPDF functions'
+                -
+                    title: setLogger()
+                    permalink: /reference/mpdf-functions/setlogger.html
+                    slug: setlogger
                     parent_title: 'mPDF functions'
                 -
                     title: SetPageTemplate()
@@ -1670,6 +1705,11 @@
                     slug: footer-line-spacing
                     parent_title: 'mPDF Variables'
                 -
+                    title: fontdata
+                    permalink: /reference/mpdf-variables/fontdata.html
+                    slug: fontdata
+                    parent_title: 'mPDF Variables'
+                -
                     title: forcePortraitHeaders
                     url: indexe465.html
                     permalink: /reference/mpdf-variables/forceportraitheaders.html
@@ -2136,6 +2176,11 @@
                     url: index0d7c.html
                     permalink: /reference/mpdf-variables/watermark-font.html
                     slug: watermark-font
+                    parent_title: 'mPDF Variables'
+                -
+                    title: watermarkAngle
+                    permalink: /reference/mpdf-variables/watermarkangle.html
+                    slug: watermarkangle
                     parent_title: 'mPDF Variables'
                 -
                     title: watermarkImageAlpha

@@ -3,69 +3,77 @@ layout: page
 title: debug
 parent_title: mPDF Variables
 permalink: /reference/mpdf-variables/debug.html
-modification_time: 2015-08-05T12:01:50+00:00
+modification_time: 2017-09-25T18:01:50+00:00
 ---
 
 (mPDF >= 3.1)
 
-debug – Turn on debugging messages
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This variable was partially succeeded by usage of `\Psr\Log\LogInterface` in 7.0
+</div>
+
+debug – increase severity of error messages - throw a `\Mpdf\MpdfException` where an error is possible
 
 # Description
 
 void **debug**
 
-Specify whether to show debugging messages. If you are having problems with mPDF, set <span class="parameter">$debug</span> to TRUE to show error and warning  messages that may otherwise be suppressed.
+Specify whether to show debugging messages. If you are having problems with mPDF, set
+<span class="parameter">$debug</span> to `true` to throw a `\Mpdf\MpdfException` where an error that may otherwise be suppressed is possible.
 
 # Values
 
-<span class="parameter">$debug</span> =  <span class="smallblock">TRUE </span>| <span class="smallblock">FALSE</span>
+<span class="parameter">$debug</span> =  `true`\|`false`
 
 **Values**
 
-<span class="smallblock">TRUE </span>: enable debugging
+* `true`: enable debugging
+* `false`: disable debugging
 
-<span class="smallblock">FALSE</span>: disable debugging
-
-<span class="smallblock">DEFAULT</span>: <span class="smallblock">FALSE</span>
+Default: `false`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>3.1</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>3.1</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
 Example #1
 
-{% highlight php %}
+```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf(['debug' => true]);
 
-$mpdf->debug = true;
-
-$mpdf->WriteHTML("Hallo World");
-
+$mpdf->WriteHTML("Hello World");
 $mpdf->Output();
 
-?>
-{% endhighlight %}
+```
 
-<div class="alert alert-info" role="alert">**Note:** This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages inadvertently picked up suppressed errors such as those caused by @fopen()  - even though the @ is deliberately there to prevent interruption of the script.</div>
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This was introduced in mPDF 3.1 as the method used by mPDF to catch error messages
+  inadvertently picked up suppressed errors such as those caused by `@fopen()`  - even though the @ is deliberately
+  there to prevent interruption of the script.
+</div>
 
 # See Also
 
-<ul>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images</li>
-<li class="manual_boxlist"><a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a> - prevent error mesages when using output buffering</li>
-</ul>
+- <a href="{{ "/installation-setup/logging.html" | prepend: site.baseurl }}">Logging</a>
+- <a href="{{ "/reference/mpdf-variables/showimageerrors.html" | prepend: site.baseurl }}">showImageErrors</a> - show/hide error reporting for problems with Images
+- <a href="{{ "/reference/mpdf-variables/allow-output-buffering.html" | prepend: site.baseurl }}">allow_output_buffering</a> - prevent error mesages when using output buffering
 

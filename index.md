@@ -4,27 +4,16 @@ title: mPDF
 permalink: /
 ---
 
-<p>mPDF is a PHP class which generates PDF files from UTF-8 encoded HTML. It is based on <a href="http://www.fpdf.org/">FPDF</a>
-	and <a href="http://html2fpdf.sourceforge.net/">HTML2FPDF</a> with a number of enhancements.</p>
+mPDF is a PHP library which generates PDF files from UTF-8 encoded HTML.
 
-<p>The original author, Ian Back, wrote mPDF to output PDF files 'on-the-fly' from his website, handling different
-	languages. It is slower than the original scripts e.g. HTML2FPDF and produces larger files when using Unicode
-	fonts, but support for CSS styles etc. and has been much enhanced – see the <a href="/user-s-guide/about-mpdf/features-v5.html">features</a>.</p>
+It is based on <a href="http://www.fpdf.org/">FPDF</a> and <a href="http://html2fpdf.sourceforge.net/">HTML2FPDF</a>
+with a number of enhancements.
 
-<h2>Useful manual pages</h2>
+The original author, Ian Back, wrote mPDF to output PDF files 'on-the-fly' from his website, handling different
+languages. It is slower than the original scripts e.g. HTML2FPDF and produces larger files when using Unicode
+fonts, but support for CSS styles etc. and has been much enhanced – see the <a href="/about-mpdf/features.html">features</a>.
 
-- <a href="{{ "/about-mpdf/features-v5.html" | prepend: site.baseurl }}">Main features</a>
-- <a href="{{ "/about-mpdf/requirements-v5.html" | prepend: site.baseurl }}">Requirements</a>
-- <a href="{{ "/about-mpdf/limitations.html" | prepend: site.baseurl }}">Known limitations</a>
-- <a href="{{ "/about-mpdf/credits.html" | prepend: site.baseurl }}">Credits</a>
-- <a href="{{ "/about-mpdf/licence.html" | prepend: site.baseurl }}">Licence</a>
-
-- <a href="https://github.com/mpdf/mpdf">GitHub repository</a>
-- <a href="{{ "/installation-setup/installation-v6-x.html" | prepend: site.baseurl }}">Installation</a>
-
-- <a href="{{ "/getting-started/creating-your-first-file.html" | prepend: site.baseurl }}">Creating your first document</a>
-
-<h2>Support</h2>
+## Support
 
 Consider supporting development of mPDF with a donation of any value.
 
@@ -36,9 +25,31 @@ Consider supporting development of mPDF with a donation of any value.
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
-<h2>Acronyms</h2>
 
-<p>These are the most used acronyms throughout this manual.</p>
+
+## Useful manual pages
+
+- <a href="{{ "/about-mpdf/requirements-v7.html" | prepend: site.baseurl }}">Requirements</a>
+- <a href="{{ "/installation-setup/installation-v7-x.html" | prepend: site.baseurl }}">Installation</a>
+- <a href="{{ "/getting-started/creating-your-first-file.html" | prepend: site.baseurl }}">Creating your first document</a>
+- <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">Configuration</a>
+
+- <a href="{{ "/about-mpdf/features.html" | prepend: site.baseurl }}">Main features</a>
+- <a href="{{ "/about-mpdf/limitations.html" | prepend: site.baseurl }}">Known limitations</a>
+- <a href="{{ "/about-mpdf/credits.html" | prepend: site.baseurl }}">Credits</a>
+- <a href="{{ "/about-mpdf/licence.html" | prepend: site.baseurl }}">Licence</a>
+
+
+## Development
+
+- <a href="https://github.com/mpdf/mpdf">GitHub repository of mPDF library</a>
+- <a href="https://github.com/mpdf/mpdf.github.io">GitHub repository of the documentation of the mPDF library</a>
+
+
+
+## Acronyms
+
+These are the most used acronyms throughout this manual.
 
 - <acronym>CJK</acronym> - Chinese-Japanese-Korean languages
 - <acronym>HTML</acronym> - Hypertext Markup Language (code used to display Internet pages)

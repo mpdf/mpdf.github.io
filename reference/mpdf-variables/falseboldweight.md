@@ -14,7 +14,10 @@ falseBoldWeight – Specify weight used for bold text when using an artificial (
 
 void **falseBoldWeight**
 
-Specify weight used for bold text when using an artificial (outline) bold. If bold text is set by &lt;b&gt; and the current font does not have a font file for the bold variant, an artificial bold is created by stroking the outline of the characters. This variable sets the width of the line and thus the "weight" of the bold text. Values between 0 and 10 are recommended.
+Specify weight used for bold text when using an artificial (outline) bold. If bold text is set by `<b>` and the
+current font does not have a font file for the bold variant, an artificial bold is created by stroking the outline of
+the characters. This variable sets the width of the line and thus the "weight" of the bold text. Values between `0` and
+`10` are recommended.
 
 # Values
 
@@ -22,41 +25,43 @@ Specify weight used for bold text when using an artificial (outline) bold. If bo
 
 **Values**
 
-<span class="smallblock">INTEGER </span>: set weight of bold text
+* <span class="smallblock">INTEGER </span>: set weight of bold text
 
-<span class="smallblock"></span><span class="smallblock">DEFAULT</span>: 5
+Default: `5`
 
 # Changelog
 
-<table class="table"> <thead>
-<tr> <th>Version</th><th>Description</th> </tr>
-</thead> <tbody>
+<table class="table">
+<thead>
 <tr>
-<td>4.2</td>
-<td>Variable was added.</td>
+  <th>Version</th>
+  <th>Description</th>
 </tr>
-</tbody> </table>
+</thead>
+<tbody>
+<tr>
+  <td>4.2</td>
+  <td>Variable was added.</td>
+</tr>
+</tbody>
+</table>
 
 # Examples
 
-Example #1
-
-{% highlight php %}
+```php
 <?php
-
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-
-$mpdf = new mPDF();
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->falseBoldWeight = 8;
 
-$mpdf->WriteHTML('<p style="font-family: mysimplefont">**Hallo World**<p>');
-
+$mpdf->WriteHTML('<p style="font-family: mysimplefont"><b>Hello World</b><p>');
 $mpdf->Output();
 
-?>
-{% endhighlight %}
+```
 
-<div class="alert alert-info" role="alert">**Note:** False bold text has the same character widths as the normal text.</div>
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** False bold text has the same character widths as the normal text.
+</div>
 

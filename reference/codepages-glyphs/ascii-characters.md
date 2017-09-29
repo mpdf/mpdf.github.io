@@ -16,9 +16,7 @@ modification_time: 2015-08-05T12:02:44+00:00
 <td>#</td>
 <td>$</td>
 <td>%</td>
-<td>&amp;
-
-</td>
+<td>&amp;</td>
 <td>'</td>
 <td>(</td>
 <td>)</td>
