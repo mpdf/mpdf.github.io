@@ -1609,6 +1609,21 @@
                     slug: crossmarkmargin
                     parent_title: 'mPDF Variables'
                 -
+                    title: curlAllowUnsafeSslRequests
+                    permalink: /reference/mpdf-variables/curlallowunsafesslrequests.html
+                    slug: curlallowunsafesslrequests
+                    parent_title: 'mPDF Variables'
+                -
+                    title: curlTimeout
+                    permalink: /reference/mpdf-variables/curltimeout.html
+                    slug: curltimeout
+                    parent_title: 'mPDF Variables'
+                -
+                    title: curlFollowLocation
+                    permalink: /reference/mpdf-variables/curlfollowlocation.html
+                    slug: curlfollowlocation
+                    parent_title: 'mPDF Variables'
+                -
                     title: CSSselectMedia
                     url: index14aa.html
                     permalink: /reference/mpdf-variables/cssselectmedia.html
