@@ -8,7 +8,7 @@ modification_time: 2015-08-05T12:01:01+00:00
 
 (mPDF >= 1.0)
 
-SetFooter – Sets a page header
+SetFooter – Sets a page footer
 
 # Description
 
@@ -42,7 +42,7 @@ Set a page footer.
     A text string containing 2 characters `|` - will be split into three strings and set as content for, respectively, the
     `left | centre | right` parts of the footer 
     
-    e.g. `$header = 'Chapter 1|{PAGENO}|Book Title'`.
+    e.g. `$footer = 'Chapter 1|{PAGENO}|Book Title'`.
   
     If <span class="smallblock">DOUBLE-SIDED</span> document, this is mirrored on <span class="smallblock">EVEN</span>
     pages i.e. `right|centre|left`.
