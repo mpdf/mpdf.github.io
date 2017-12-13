@@ -120,6 +120,7 @@ $this->fonttrans = array(
 
 Indic languages always require special handling
 (cf. <a href="{{ "/fonts-languages/indic-fonts-v5-x.html" | prepend: site.baseurl }}">Indic fonts</a>).
+
 Other than this, whether you need to do anything special is determined by the choice of fonts you use in the document,
 and whether they contain the necessary characters to display your text. The DejaVu fonts distributed with mPDF will
 usually display most Western and Eastern European languages, Cyrillic text, Baltic languages, Turkish, and Greek.
@@ -131,17 +132,12 @@ There are a number of different ways to do this:
 
 1.  Write your HTML code to specify the exact fonts needed:
 
-    ```
-    เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
-
-    仝娃阿哀愛挨姶
-
-    仝娃阿哀愛挨姶
-
-    البرادعی البرادعی
-
-    पहला पन्ना
-
+    ```php
+    <p style="font-family: Garuda">เป็นมนุษย์สุดประเสริฐเลิศคุณค่า</p>
+    <p style="font-family: BIG5">仝娃阿哀愛挨姶</p>
+    <p style="font-family: sun-exta">仝娃阿哀愛挨姶</p>
+    <p style="font-family: 'XB Riyaz'">البرادعی البرادعی</p>
+    <p style="font-family: ind_hi_1_001">पहला पन्ना</p>
     ```
 
 2.  Use the `lang` attribute to define the language. This causes mPDF to use a font as specified in the
@@ -149,14 +145,11 @@ There are a number of different ways to do this:
     in the list defined as `$unifonts`, otherwise the first font specified in the `$unifonts` list will be selected.
 
 
-    ```
-    เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
-
-    仝娃阿哀愛挨姶
-
-    البرادعی البرادعی
-
-    पहला पन्ना
+    ```php
+    <p lang="th">เป็นมนุษย์สุดประเสริฐเลิศคุณค่า</p>
+    <p lang="zh-CN">仝娃阿哀愛挨姶</p>
+    <p lang="ar">البرادعی البرادعی</p>
+    <p lang="hi">पहला पन्ना</p>
     ```
 
 
