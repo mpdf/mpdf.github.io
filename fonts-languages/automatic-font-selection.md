@@ -12,11 +12,11 @@ modification_time: 2015-08-05T11:59:31+00:00
 
 mPDF has two functions which can be used together or separately:
 
- * <a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">`autoScriptToLang`</a> - marks up HTML text using the lang attribute, based on the Unicode script block in question,
-and values in `\Mpdf\ScriptToLang` class.
+ * <a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">`autoScriptToLang`</a> - marks 
+   up HTML text using the lang attribute, based on the Unicode script block in question, and values in `\Mpdf\ScriptToLang` class.
 
- * <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">`autoLangToFont`</a> - selects the font to use, based on the HTML lang attribute, using values from
-`\Mpdf\LangToFont` class.
+ * <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">`autoLangToFont`</a> - selects 
+   the font to use, based on the HTML lang attribute, using values from `\Mpdf\LangToFont` class.
 
 For automatic font selection, ideally we would choose the font based on the language in use. However it is actually
 impossible to determine the language used from a string of HTML text. The Unicode script block can be ascertained,
@@ -55,14 +55,15 @@ $mpdf->autoArabic = true;
 
 ```
 
-<a href="{{ "/reference/mpdf-variables/basescript.html" | prepend: site.baseurl }}">`baseScript`</a> tells mPDF which Script to ignore. It is set by default to `1` which is for Latin script.
-In this mode, all scripts *except* Latin script are marked up with `lang` attribute. To select other scripts as
-the base, see the `\Mpdf\Ucdn` class
+<a href="{{ "/reference/mpdf-variables/basescript.html" | prepend: site.baseurl }}">`baseScript`</a> tells mPDF which 
+Script to ignore. It is set by default to `1` which is for Latin script. In this mode, all scripts *except* Latin script 
+are marked up with `lang` attribute. To select other scripts as the base, see the `\Mpdf\Ucdn` class
 
-Using <a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">`autoScriptToLang`</a>, mPDF detects text runs based on Unicode script block; using the values in
-`\Mpdf\ScriptToLang` it then encloses the text run within a span tag with the appropriate language attribute.
-For many scripts, the language cannot be determined: see the example above which recognises Cyrillic script and
-marks it up using `und-Cyrl`, which is a valid IETF tag, coding for language="undetermined", script="Cyrillic".
+Using <a href="{{ "/reference/mpdf-variables/autoscripttolang.html" | prepend: site.baseurl }}">`autoScriptToLang`</a>, 
+mPDF detects text runs based on Unicode script block; using the values in `\Mpdf\ScriptToLang` it then encloses the 
+text run within a span tag with the appropriate language attribute. For many scripts, the language cannot be determined: 
+see the example above which recognises Cyrillic script and marks it up using `und-Cyrl`, which is a valid IETF tag, 
+coding for language="undetermined", script="Cyrillic".
 
 Two optional refinements are added: Vietnamese text can often be recognised by the presence of certain characters
 which do not appear in other Latin script languages, and similarly analysis of the text can attempt to distinguish
@@ -70,7 +71,8 @@ Arabic, Farsi, Pashto, Urdu and Sindhi. If active, the text will then be marked 
 `vi`, `pa`, `ur`, `fa` etc.
 
 These features can be disabled or enabled (default) using the 
-<a href="{{ "/reference/mpdf-variables/autoarabic.html" | prepend: site.baseurl }}">`autoArabic`</a> and <a href="{{ "/reference/mpdf-variables/autovietnamese.html" | prepend: site.baseurl }}">`autoVietnamese`</a> configuration variables.
+<a href="{{ "/reference/mpdf-variables/autoarabic.html" | prepend: site.baseurl }}">`autoArabic`</a> and 
+<a href="{{ "/reference/mpdf-variables/autovietnamese.html" | prepend: site.baseurl }}">`autoVietnamese`</a> configuration variables.
 
 # autoLangToFont
 
