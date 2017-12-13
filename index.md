@@ -45,7 +45,14 @@ Consider supporting development of mPDF with a donation of any value.
 - <a href="https://github.com/mpdf/mpdf">GitHub repository of mPDF library</a>
 - <a href="https://github.com/mpdf/mpdf.github.io">GitHub repository of the documentation of the mPDF library</a>
 
+## Troubleshooting
 
+Please use [https://stackoverflow.com/questions/tagged/mpdf](https://stackoverflow.com/questions/tagged/mpdf) for 
+*all* your general questions or troubleshooting!
+
+Contributions are welcome :-) For contributing with a bug report, feature request or pull request, please see 
+the [guideline at GitHub](https://github.com/mpdf/mpdf/blob/development/.github/CONTRIBUTING.md). Please provide a nice 
+small example case or unit test, that is really helpful for everybody. Thanks!
 
 ## Acronyms
 
