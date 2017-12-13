@@ -52,7 +52,7 @@ Please use [https://stackoverflow.com/questions/tagged/mpdf](https://stackoverfl
 
 Contributions are welcome :-) For contributing with a bug report, feature request or pull request, please see 
 the [guideline at GitHub](https://github.com/mpdf/mpdf/blob/development/.github/CONTRIBUTING.md). Please provide a nice 
-small example case or unit test, that is really helpful for everybody. Thanks!
+small example case or unit test. That will be really helpful for everybody. Thanks!
 
 ## Acronyms
 
