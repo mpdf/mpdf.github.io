@@ -6,7 +6,7 @@ permalink: /installation-setup/folders-for-temporary-files.html
 modification_time: 2017-03-14T11:59:24+00:00
 ---
 
-mPDF is pre-configured to use `<path to mpdf>/tmp/` as a directory to write temporary files
+mPDF is pre-configured to use `<path to mpdf>/tmp` as a directory to write temporary files
 (mainly for images). Write permissions must be set for read/write access for the tmp directory.
 
 As the default temp directory will be in vendor folder, is is advised to set custom temporary directory.
