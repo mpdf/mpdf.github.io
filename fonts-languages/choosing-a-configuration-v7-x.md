@@ -135,7 +135,6 @@ There are several different methods to do this:
     <p style="font-family: BIG5">仝娃阿哀愛挨姶</p>
     <p style="font-family: sun-exta">仝娃阿哀愛挨姶</p>
     <p style="font-family: 'XB Riyaz'">البرادعی البرادعی</p>
-    <p style="font-family: ind_hi_1_001">पहला पन्ना</p>
     ```
 
 2.  Write your HTML code using the `lang` attribute to define the language. 
