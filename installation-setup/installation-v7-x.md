@@ -28,7 +28,6 @@ require_once __DIR__ . '/vendor/autoload.php';
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->WriteHTML('<h1>Hello world!</h1>');
 $mpdf->Output();
-
 ```
 
 All <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">configuration directives</a> can
@@ -40,11 +39,16 @@ be set by the `$config` parameter of the <a href="{{ "/reference/mpdf-functions/
 // Define a page using all default values except "L" for Landscape orientation
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
 ...
-
 ```
 
-It is recommended to set custom temporary directory via `tempDir` configuration key.
-The directory must have write permissions (mode `775` is recommended).
+It is recommended to <a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">set custom temporary directory</a>
+via `tempDir` configuration key. The directory must have write permissions (mode `775` is recommended).
+
+```php
+<?php
+// Define a page using all default values except "L" for Landscape orientation
+$mpdf = new \Mpdf\Mpdf(['tempDir' => __DIR__ . '/custom/temp/dir/path']);
+```
 
 If you have problems, please read the section on
 <a href="{{ "/troubleshooting/known-issues.html" | prepend: site.baseurl }}">troubleshooting</a> in the manual.
