@@ -196,5 +196,5 @@ It is possible to use method (4) together with (1), (2) or (3), to ensure that a
 
 # See Also
 
-- <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL & Bidirectional text</a>
+- <a href="{{ "/fonts-languages/bidirectional-rtl-text-v6-x.html" | prepend: site.baseurl }}">RTL & Bidirectional text</a>
 

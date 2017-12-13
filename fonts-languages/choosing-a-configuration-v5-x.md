@@ -291,7 +291,7 @@ $mpdf = new mPDF('ru-x');     // behaves as though ('ru') called (Russian)
 
 # See Also
 
-- <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL & Bidirectional text</a>
+- <a href="{{ "/fonts-languages/arabic-rtl-text-v5-x.html" | prepend: site.baseurl }}">RTL & Bidirectional text</a>
 - <a href="{{ "/reference/mpdf-functions/setautofont.html" | prepend: site.baseurl }}">SetAutoFont()</a> - Automatically detect language in the input HTML text and use appropriate fonts
 
 There is a useful list of language/country codes at:
