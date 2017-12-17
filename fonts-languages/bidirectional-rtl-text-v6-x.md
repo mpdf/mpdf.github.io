@@ -36,14 +36,12 @@ Direction can be set for any HTML block elements e.g. `<div><p><table><ul>` etc 
 
 ```html
 <div style="direction: rtl;">
-
 ```
 
 or
 
 ```css
 div.right { direction: rtl; }
-
 ```
 
 Block-level direction *may* affect text alignment, and will also influence text reversal in

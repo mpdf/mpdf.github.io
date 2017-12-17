@@ -12,7 +12,8 @@ in Truetype format are also supported.
 
 # Easy to add new fonts
 
-- Add your font directory to `fontDir` configuration parameter or by calling `$mpdf->AddFontDirectory()` method
+- Add your font directory to `fontDir` configuration parameter or by calling
+  `$mpdf-><a href="{{ "/reference/mpdf-functions/addfontdirectory.html" | prepend: site.baseurl }}">AddFontDirectory()</a>` method
 - Define the font file details in the `fontData` parameter array
 - Access the font by specifying it in your HTML code as the CSS font-family
 - Specifying languages for the font by defining custom `Mpdf\Language\LanguageToFontInterface`
@@ -110,6 +111,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
 
     ```
 
+
 # Full Unicode support
 
 The DejaVu fonts distributed with mPDF contain an extensive set of characters - see
@@ -180,7 +182,7 @@ other (mainly) ancient scripts - see
 coverage of free fonts</a> for full list.
 
 mPDF uses a different method to embed fonts in the PDF file if they include characters from SMP or SIP, because the
-characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less eficient than the default
+characters cannot be represented by a 4 character hex code 0000-FFFF. This method is less efficient than the default
 method, and it can be suppressed by adding the font name to the configuration key `BMPonly` configuration key.
 
 Note that the DejaVu fonts  distributed with mPDF do contain a few characters in the SMP plane, but most users will

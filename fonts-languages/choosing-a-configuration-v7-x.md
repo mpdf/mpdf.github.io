@@ -51,7 +51,7 @@ $mpdf = new \Mpdf\Mpdf(['mode' => 'c']);
 
 ```
 
-Note: due to encoding conversion, mPDF changes mb_internal_encoding and mb_regex_encoding internally when core fonts
+Note: due to encoding conversion, mPDF changes `mb_internal_encoding()` and `mb_regex_encoding()` internally when core fonts
 are being used. To restore original values, call `$mpdf->cleanup()` when you are done with generating the PDF.
 
 # 2. Embedded Unicode fonts
@@ -79,7 +79,6 @@ configuration settings and force subsetting of all fonts e.g.
 
 ```php
 <?php
-
 $mpdf = new mPDF(['mode' => 's']);
 
 ```
@@ -91,8 +90,7 @@ the document by selecting the fontnames: `'chelvetica'`, `'ccourier'` and `'ctim
 
 ```php
 
-This paragraph will use core fonts
-
+<p style="font-family:chelvetica">This paragraph will use core fonts</p>
 
 ```
 
@@ -101,7 +99,6 @@ translation configuration key `fonttrans` e.g.:
 
 ```php
 <?php
-
 $this->fonttrans = array(
 	'arial' => 'chelvetica',
 	'helvetica' => 'chelvetica',
@@ -124,40 +121,29 @@ of font selection:
   <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>
 
 The DejaVu fonts distributed with mPDF contain characters (glyphs) to display most Western and Eastern European
-languages, Cyrillic text, Baltic languages, Turkish, and Greek. Languages which usually need special consideration
-are: CJK (chinese - japanese - korean) languages, Indic languages, Vietnamese, Thai, and Arabic languages. With these,
-you need to tell mPDF to select a suitable font.
+languages, Cyrillic text, Baltic languages, Turkish, and Greek. 
+
+Languages which usually need special consideration are: CJK (chinese - japanese - korean) languages, Indic languages, 
+Vietnamese, Thai, and Arabic languages. With these, you need to tell mPDF to select a suitable font.
 
 There are several different methods to do this:
 
 1.  Write your HTML code to specify the exact fonts needed:
 
     ```php
-
-    เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
-
-    仝娃阿哀愛挨姶
-
-    仝娃阿哀愛挨姶
-
-    البرادعی البرادعی
-
-
+    <p style="font-family: Garuda">เป็นมนุษย์สุดประเสริฐเลิศคุณค่า</p>
+    <p style="font-family: BIG5">仝娃阿哀愛挨姶</p>
+    <p style="font-family: sun-exta">仝娃阿哀愛挨姶</p>
+    <p style="font-family: 'XB Riyaz'">البرادعی البرادعی</p>
     ```
 
 2.  Write your HTML code using the `lang` attribute to define the language. 
 
     ```php
-
-    เป็นมนุษย์สุดประเสริฐเลิศคุณค่า
-
-    仝娃阿哀愛挨姶
-
-    البرادعی البرادعی
-
-    पहला पन्ना
-
-
+    <p lang="th">เป็นมนุษย์สุดประเสริฐเลิศคุณค่า</p>
+    <p lang="zh-CN">仝娃阿哀愛挨姶</p>
+    <p lang="ar">البرادعی البرادعی</p>
+    <p lang="hi">पहला पन्ना</p>
     ```
 
     This needs to be used in conjunction with either:
@@ -180,7 +166,7 @@ There are several different methods to do this:
     - CSS stylesheet using the `:lang` selector
 
 4.  Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a>
-    to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not
+    to use character substitution. mPDF will inspect every character in the HTML code, and if the character is not
     represented in the specified font, it will try to substitute it from one of the fonts defined in `backupSubsFont`
     configuration key.
 
@@ -209,5 +195,5 @@ It is possible to use method (4) together with (1), (2) or (3), to ensure that a
 
 # See Also
 
-- <a href="{{ "/reference/mpdf-functions/annotation.html" | prepend: site.baseurl }}">RTL & Bidirectional text</a>
+- <a href="{{ "/fonts-languages/bidirectional-rtl-text-v6-x.html" | prepend: site.baseurl }}">RTL & Bidirectional text</a>
 
