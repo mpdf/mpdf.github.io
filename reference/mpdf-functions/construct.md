@@ -22,14 +22,14 @@ Initialise an instance of mPDF class.
 
 <span class="parameter">$config</span>
 
-: This parameter specifies configuration of the new document. 
+: This parameter specifies configuration of the new document.
 
   * Apart from configuration variables defined in
   `ConfigVariables` and `FontVariables` classes it can obtain variables which where the arguments
-  from the constructor of   mPDF&nbsp;<&nbsp;7.0: `mode`, `format`, `default_font_size`, `default_font`, `margin_left`,
-  `margin_right`, `margin_top`, `margin_bottom`, `margin_header`, `margin_footer`, `orientation`. These variables are described with 
-  their defaults in the next section. 
-  
+  from the constructor of   mPDF&nbsp;<&nbsp;7.0: `mode`, `format`, `default_font_size`, `default_font`, `margin_left` (formerly `$mgl`),
+  `margin_right` (formerly `$mgr`), `margin_top` (formerly `$mgt`), `$margin_bottom` (formerly `mgb`), `$margin_header` (formerly `$mgh`),
+  `margin_footer` (formerly `$mgf`), `orientation`. These variables with their defaults are described in the next section.
+
   * The other configuration keys are listed at the <a href="{{ "/reference/mpdf-variables/overview.html" | prepend: site.baseurl }}">configuration overview</a>.
 
 ## Variables with defaults from constructor
@@ -37,24 +37,24 @@ Initialise an instance of mPDF class.
 `mode`
 
 : Mode of the document. Is parsed from values of various formats:
-  
+
   * **Codepage Values** (case-insensitive)
-    
-    `'c'`  
-    `'...-x'`  
-    `'...-s'` or `'s'`  
-    `'...+aCJK'` or `'+aCJK'`  
-    `'...-aCJK'` or `'-aCJK'`  
-    
+
+    `'c'`
+    `'...-x'`
+    `'...-s'` or `'s'`
+    `'...+aCJK'` or `'+aCJK'`
+    `'...-aCJK'` or `'-aCJK'`
+
     where `...` can be any string. Only language/country codes will have any effect, but other strings are parsed for
     backwards compatability (but have no effect).
-    
+
     Only some combinations make sense. See
     <a href="{{ "/fonts-languages/choosing-a-configuration-v7-x.html" | prepend: site.baseurl }}">Choosing a configuration</a>
     for more details.
-  
+
   * **Country/Language code values** (case-insensitive)
-  
+
     Country/language codes are defined in `\Mpdf\LangToFont` class
 
     A country/language code can be passed as e.g. `'en-GB'` or `'en_GB'` or `'en'`
@@ -77,7 +77,7 @@ Initialise an instance of mPDF class.
   Default value: `'A4'`
 
   **Values** (case-insensitive)
-  
+
   - `'A0`' - `'A10'`, `'B0'` - `'B10'`, `'C0'` - `'C10'`
   - `'4A0'`, `'2A0'`, `'RA0'` - `'RA4'`, `'SRA0'` - `'SRA4'`
   - `'Letter'`, `'Legal'`, `'Executive'`, `'Folio'`
@@ -99,7 +99,7 @@ Initialise an instance of mPDF class.
 
 : Sets the default document font size in **points** (pt)
 
-  <span class="smallblock">BLANK</span> or omitted or `0` uses the default value set in <span class="parameter">defaultCSS</span> 
+  <span class="smallblock">BLANK</span> or omitted or `0` uses the default value set in <span class="parameter">defaultCSS</span>
   configuration variable for the font-size of the BODY.
 
 `default_font`
@@ -115,7 +115,7 @@ Initialise an instance of mPDF class.
 `margin_top`
 `margin_bottom`
 `margin_header`
-`margin_footer`  
+`margin_footer`
 
 : Set the page margins for the new document.
 
@@ -140,10 +140,10 @@ Initialise an instance of mPDF class.
 
 : This attribute specifies the default page orientation of the new document if <span class="parameter">format</span>
   is defined as an array. This value will be ignored if <span class="parameter">format</span> is a string value.
-  
-  
+
+
   Default value: `'P'`
-  
+
   **Values** (case-insensitive)
 
    * `'P'`: Portrait
