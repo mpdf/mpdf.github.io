@@ -508,14 +508,6 @@ You can redefine the variables in individual scripts as a
         </tr>
         <tr>
             <td> </td>
-            <td><a href="{{ " /reference/mpdf-variables/showstats.html " | prepend: site.baseurl }}">showStats</a></td>
-            <td><code>false</code></td>
-            <td><span class="smallblock">DOCUMENT</span></td>
-            <td>4.0</td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td> </td>
             <td><a href="{{ " /reference/mpdf-variables/progressbar.html " | prepend: site.baseurl }}">progressBar</a></td>
             <td><code>false</code></td>
             <td><span class="smallblock">DOCUMENT*</span></td>
