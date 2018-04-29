@@ -77,15 +77,11 @@ and you will refer to them in HTML/CSS as `frutiger`.
 
     ```
 
-4.  To use the font with specific languages, you need also to add the font to return of a custom
-    `Mpdf\Language\LanguageToFontInterface` implementation.
-
-    You can also extend existing `Mpdf\Language\LanguageToFontInterface` class.
+4.  To use the font with specific languages you need to extend the `Mpdf\Language\LanguageToFont` class (if you require granular control you should implement `Mpdf\Language\LanguageToFontInterface` yourself).
 
     ```php
     <?php
-
-    class CustomLanguageToFontImplementation extends \Mpdf\Language\LanguageToFontInterface implements \Mpdf\Language\LanguageToFontInterface
+    class CustomLanguageToFontImplementation extends \Mpdf\Language\LanguageToFont
     {
 
         public function getLanguageOptions($llcc, $adobeCJK)
@@ -110,7 +106,8 @@ and you will refer to them in HTML/CSS as `frutiger`.
     <p lang="th">Text in Frutiger</p>
 
     ```
-
+    
+    When using <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">`autoLangToFont`</a> mPDF may identify the script but not the language and `$llcc` will be set to `und-{$script}`.
 
 # Full Unicode support
 
