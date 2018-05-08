@@ -37,7 +37,7 @@ Consider supporting development of mPDF with a donation of any value.
 - <a href="{{ "/about-mpdf/features.html" | prepend: site.baseurl }}">Main features</a>
 - <a href="{{ "/about-mpdf/limitations.html" | prepend: site.baseurl }}">Known limitations</a>
 - <a href="{{ "/about-mpdf/credits.html" | prepend: site.baseurl }}">Credits</a>
-- <a href="{{ "/about-mpdf/licence.html" | prepend: site.baseurl }}">Licence</a>
+- <a href="{{ "/about-mpdf/license.html" | prepend: site.baseurl }}">Licence</a>
 
 
 ## Development
@@ -47,11 +47,11 @@ Consider supporting development of mPDF with a donation of any value.
 
 ## Troubleshooting
 
-Please use [https://stackoverflow.com/questions/tagged/mpdf](https://stackoverflow.com/questions/tagged/mpdf) for 
+Please use [https://stackoverflow.com/questions/tagged/mpdf](https://stackoverflow.com/questions/tagged/mpdf) for
 *all* your general questions or troubleshooting!
 
-Contributions are welcome :-) For contributing with a bug report, feature request or pull request, please see 
-the [guideline at GitHub](https://github.com/mpdf/mpdf/blob/development/.github/CONTRIBUTING.md). Please provide a nice 
+Contributions are welcome :-) For contributing with a bug report, feature request or pull request, please see
+the [guideline at GitHub](https://github.com/mpdf/mpdf/blob/development/.github/CONTRIBUTING.md). Please provide a nice
 small example case or unit test. That will be really helpful for everybody. Thanks!
 
 ## Acronyms
