@@ -9,7 +9,7 @@ modification_time: 2015-08-05T11:59:30+00:00
 (mPDF >= 6.0 & < 7.0)
 
 In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing
-speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at 
+speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at
 least in some form).
 
 Some of the things you can change are:
@@ -123,15 +123,15 @@ of font selection:
   <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>
 
 The DejaVu fonts distributed with mPDF contain characters (glyphs) to display most Western and Eastern European
-languages, Cyrillic text, Baltic languages, Turkish, and Greek. 
+languages, Cyrillic text, Baltic languages, Turkish, and Greek.
 
-Languages which usually need special consideration are: CJK (chinese - japanese - korean) languages, Indic languages, 
+Languages which usually need special consideration are: CJK (chinese - japanese - korean) languages, Indic languages,
 Vietnamese, Thai, and Arabic languages. With these, you need to tell mPDF to select a suitable font.
 
 There are several different methods to do this:
 
 1.  Write your HTML code to specify the exact fonts needed:
-    
+
     ```php
     <p style="font-family: Garuda">เป็นมนุษย์สุดประเสริฐเลิศคุณค่า</p>
     <p style="font-family: BIG5">仝娃阿哀愛挨姶</p>
@@ -139,44 +139,44 @@ There are several different methods to do this:
     <p style="font-family: 'XB Riyaz'">البرادعی البرادعی</p>
     <p style="font-family: ind_hi_1_001">पहला पन्ना</p>
     ```
-    
+
 2.  Write your HTML code using the `lang` attribute to define the language. 
-    
-    ```php    
+
+    ```php
     <p lang="th">เป็นมนุษย์สุดประเสริฐเลิศคุณค่า</p>
     <p lang="zh-CN">仝娃阿哀愛挨姶</p>
     <p lang="ar">البرادعی البرادعی</p>
     <p lang="hi">पहला पन्ना</p>
     ```
-    
+
     This needs to be used in conjunction with either:
-    
+
     * `autoLangToFont`
     * CSS stylesheet using the `:lang` selector
-    
+
 3.  Use `autoScriptToLang` to mark up HTML text by inserting the `lang` attribute, based on the Unicode script block
     in question, and configurable values in `config_script2lang.php`
-    
+
     ```php
     <?php
     $mpdf->autoScriptToLang = true;
-    
+
     ```
-    
+
     As for (2) this needs to be used in conjunction with either:
-    
+
     * `autoLangToFont`
     * CSS stylesheet using the `:lang` selector
-    
+
 4.  Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a>
     to use character susbstitution. mPDF will inspect every character in the HTML code, and if the character is not
     represented in the specified font, it will try to substitute it from one of the fonts defined in `$this->backupSubsFont`
     in <span class="filename">config_fonts.php</span>.
-    
+
     ```php
     <?php
-    $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
-    
+    $this->backupSubsFont = ['dejavusanscondensed'];
+
     ```
 
 ## Which method should I use?
