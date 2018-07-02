@@ -27,6 +27,10 @@ methods have been added.
   e.g. `MyFooter` (non-HTML) **overwrites** `html_MyFooter` (HTML).
 </div>
 
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** As from mPDF v7.1 Headers and Footers support <a href="{{ " what-else-can-i-do/fixed-position-blocks.html " | prepend: site.baseurl }}">absolute positioning</a>, however <a href="https://github.com/mpdf/mpdf/issues/791">you cannot use both absolute and non-absolute positioned content together</a> in the Headers and Footers.
+</div>
+
 # Types
 
 RUNTIME
