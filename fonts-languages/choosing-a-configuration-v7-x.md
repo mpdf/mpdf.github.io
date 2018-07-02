@@ -121,9 +121,9 @@ of font selection:
   <a href="{{ "/fonts-languages/opentype-layout-otl.html" | prepend: site.baseurl }}">OpenType layout (OTL)</a>
 
 The DejaVu fonts distributed with mPDF contain characters (glyphs) to display most Western and Eastern European
-languages, Cyrillic text, Baltic languages, Turkish, and Greek. 
+languages, Cyrillic text, Baltic languages, Turkish, and Greek.
 
-Languages which usually need special consideration are: CJK (chinese - japanese - korean) languages, Indic languages, 
+Languages which usually need special consideration are: CJK (chinese - japanese - korean) languages, Indic languages,
 Vietnamese, Thai, and Arabic languages. With these, you need to tell mPDF to select a suitable font.
 
 There are several different methods to do this:
@@ -164,16 +164,16 @@ There are several different methods to do this:
 
     - `autoLangToFont`
     - CSS stylesheet using the `:lang` selector
-    
+
     When enabling `autoScriptToLang` and your primary language is not English you should [set the appropriate `baseScript`](https://github.com/mpdf/mpdf/blob/development/src/Ucdn.php#L12-L114) so your primary font (set using the CSS property `font-family`) is not automatically overridden:
-    
+
     ```php
     <?php
     /* Set the base langage to Chinese */
     $mpdf->baseScript = \Mpdf\Ucdn:SCRIPT_HAN;
     ```
-    
-    If you want to control the fonts used for fallback languages you'll need to extend the `Mpdf\Language\LanguageToFont` class and pass that class to the `languageToFont` configuration option when initializing mPDF (<a href="{{ "/fonts-languages/fonts-in-mpdf-7-x.html" | prepend: site.baseurl }}">see option 4 in the Fonts in mPDF 7.x page</a>). 
+
+    If you want to control the fonts used for fallback languages you'll need to extend the `Mpdf\Language\LanguageToFont` class and pass that class to the `languageToFont` configuration option when initializing mPDF (<a href="{{ "/fonts-languages/fonts-in-mpdf-7-x.html" | prepend: site.baseurl }}">see option 4 in the Fonts in mPDF 7.x page</a>).
 
 4.  Use <a href="{{ "/reference/mpdf-variables/usesubstitutions.html" | prepend: site.baseurl }}">$useSubstitutions</a>
     to use character substitution. mPDF will inspect every character in the HTML code, and if the character is not
@@ -182,7 +182,7 @@ There are several different methods to do this:
 
     ```php
     <?php
-    $this->backupSubsFont = array('dejavusanscondensed','arialunicodems');
+    $this->backupSubsFont = ['dejavusanscondensed'];
 
     ```
 
