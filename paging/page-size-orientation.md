@@ -41,10 +41,10 @@ $mpdf->Output();
 <?php
 
 // Define a default Landscape page size/format by name
-$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-L');
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'A4-L']);
 
 // Define a default page size/format by array - page will be 190mm wide x 236mm height
-$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'utf-8', [190, 236]);
+$mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8', 'format' => 'utf-8', [190, 236]]);
 
 // Define a default page using all default values except "L" for Landscape orientation
 $mpdf = new \Mpdf\Mpdf(['orientation' => 'L']);
