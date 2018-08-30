@@ -6,7 +6,7 @@ permalink: /reference/mpdf-utilities/preparepretext.html
 modification_time: 2015-08-05T12:02:43+00:00
 ---
 
-(htmltoolkit >= 2.4)
+(htmltoolkit >= 2.4, mPDF < 7.0)
 
 PreparePreText – Prepares text to be output ignoring the HTML markup
 
@@ -56,6 +56,10 @@ Returns a text string.
 <tr>
   <td>2.4</td>
   <td>Function was added.</td>
+</tr>
+<tr>
+  <td>7.0</td>
+  <td>Function was removed.</td>
 </tr>
 </tbody>
 </table>

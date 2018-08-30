@@ -6,9 +6,13 @@ permalink: /reference/mpdf-utilities/strcode2utf.html
 modification_time: 2015-08-05T12:02:42+00:00
 ---
 
-(mPDF >=1.0)
+(mPDF >=1.0 && < 7.0)
 
 strcode2utf – Convert HTML numerical entities to UTF-8 encoded string
+
+<div class="alert alert-warning" role="alert" markdown="1">
+  **Note:** in mPDF >= 7.0 use `\Mpdf\Utils\UtfString::strcode2utf` method.
+</div>
 
 # Description
 
@@ -31,11 +35,11 @@ Returns a UTF-8 encoded string.
 <span class="parameter">$low</span>
 
 : Specifies whether to convert HTML numerical entities of ASCII characters (< 128).
-  
+
   Default: `true`
-  
+
   **Values**
-  
+
   * `true`: Convert all HTML numerical entities to UTF-8 characters
   * `false`: Only convert characters above codepoint 127
 
@@ -48,13 +52,34 @@ Returns a UTF-8 encoded string.
 
 Returns a UTF-8 encoded string.
 
+# Changelog
+
+<table class="table">
+<thead>
+<tr>
+  <th>Version</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1.0</td>
+  <td>Function was added.</td>
+</tr>
+<tr>
+  <td>7.0</td>
+  <td>Function was removed in favor of <code>\Mpdf\Utils\UtfString::strcode2utf</code> static class method</td>
+</tr>
+</tbody>
+</table>
+
 # Examples
 
 ```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
-$wm = strcode2utf("&#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575; 
+$wm = strcode2utf("&#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575;
     &#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575;");
 $mpdf->SetWatermarkText($wm);
 
