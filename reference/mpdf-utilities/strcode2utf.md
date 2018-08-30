@@ -77,16 +77,16 @@ Returns a UTF-8 encoded string.
 
 ```php
 <?php
-$mpdf = new \Mpdf\Mpdf();
 
-$wm = strcode2utf("&#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575;
-    &#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575;");
-$mpdf->SetWatermarkText($wm);
+$mpdf = new \Mpdf\Mpdf();
 
 $mpdf->showWatermark = true;
 
-$mpdf->WriteHTML('Hello World');
+$wm = \Mpdf\Utils\UtfString::strcode2utf("&#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575;
+    &#1575;&#1610;&#1604;&#1575;&#1578; &#1601;&#1610;&#1605;&#1575;");
 
+$mpdf->SetWatermarkText($wm);
+$mpdf->WriteHTML('Hello World');
 ```
 
 # See Also
