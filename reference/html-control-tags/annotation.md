@@ -200,7 +200,7 @@ Annotations cannot be moved or deleted by the reader.
 <tr>
   <td>7.0</td>
   <td markdown="1">
-    Attribute <span class="parameter">$file</span> is ignored unless mPDF `allowAnnotationFiles` config key is set to `true`
+Attribute <span class="parameter">$file</span> is ignored unless mPDF `allowAnnotationFiles` config key is set to `true`
   </td>
 </tr>
 </tbody>
