@@ -41,6 +41,15 @@ inside the PDF document.
   and can therefore contain any Unicode character even if the document font restricts to a specific codepage.
 </div>
 
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** To embed files, the `allowAnnotationFiles` config key has to be set to `true`.
+</div>
+
+<div class="alert alert-danger" role="alert" markdown="1">
+  **Warning:** Embedding files is disabled by default, when enabling it, always ensure the path of the file
+  is restricted to harmless files, otherwise the PDF could leak your system files.
+</div>
+
 Annotations cannot be moved or deleted by the reader.
 
 # Parameters
@@ -154,18 +163,9 @@ Annotations cannot be moved or deleted by the reader.
 
 <span class="parameter">$file</span>
 
-: <span class="parameter">$file</span> specifies the name of a file to embed in the PDF document.
+: Path to the file to embed in the PDF document.
 
   Default: <span class="smallblock">BLANK</span>
-
-<div class="alert alert-info" role="alert" markdown="1">
-  **Note:** To embed files, the `allowAnnotationFiles` config key has to be set to `true`.
-</div>
-
-<div class="alert alert-danger" role="alert" markdown="1">
-  **Warning:** Embedding files is disabled by default, when enabling it, always ensure the path of the file
-  is restricted to harmless files, otherwise the PDF could leak your system files.
-</div>
 
 # Changelog
 
