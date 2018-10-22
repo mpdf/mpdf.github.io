@@ -802,6 +802,11 @@
             permalink: /troubleshooting/postcript-printers.html
             slug: postcript-printers
             parent_title: Troubleshooting
+        -
+            title: 'Incompatible PHP version'
+            permalink: /troubleshooting/incompatible-php-version.html
+            slug: incompatible-php-version
+            parent_title: Troubleshooting
 -
     title: Reference
     slug: reference
