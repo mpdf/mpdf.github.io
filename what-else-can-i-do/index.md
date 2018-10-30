@@ -3,7 +3,7 @@ layout: page
 title: Index
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/index.html
-modification_time: 2015-08-05T12:00:14+00:00
+modification_time: 2018-10-30T17:34:14+00:00
 ---
 
 mPDF can generate an index at the end of document using:
@@ -31,7 +31,6 @@ When an Index is inserted in the PDF document using `<indexinsert>` or `InsertIn
     </div>
     ...
 </div>
-
 ```
 
 CSS stylesheets can thus be used to control the layout of the Index e.g.:
@@ -65,7 +64,6 @@ a.mpdf_index_link {
     color: #000000;
     text-decoration: none;
 }
-
 ```
 
 A default stylesheet for Indexes is included in `[mpdf root]/data/mpdf.css`. (Custom defaults file could be set by
@@ -76,6 +74,7 @@ the <a href="{{ "/reference/mpdf-variables/defaultcssfile.html" | prepend: site.
 In order to generate an Index with non-ASCII characters, entries need to be sorted accordingly (collation), and
 non-ASCII characters should map to the appropriate Dividing letter e.g.:
 
+<div class="well" markdown="1">
 **A**
 
 Alonso, Fernando
@@ -85,15 +84,14 @@ Arroyo Molino, David
 **B**
 
 Benitez, Carlos
+</div>
 
 Entries in an Index can now be sorted using any of the Locale values available on your system. Set it using
 the "collation" property/parameter e.g.:
 
 ```html
-
 <indexinsert usedivletters="on" links="off" collation="es_ES.utf8"
     collation-group="Spanish_Spain" />
-
 ```
 
 or
@@ -121,11 +119,9 @@ mPDF handles all text internally as UTF-8 encoded.
 If you have set your index to use Dividing letters, you can also determine how letters are grouped under a dividing
 letter. In the example index above, we want `Ã` to be grouped under the letter `a`/`A`. Set the "collation-group" using:
 
-```php
-
+```html
 <indexinsert usedivletters="on" links="off" collation="es_ES.utf8"
     collation-group="Spanish_Spain" />
-
 ```
 
 or
