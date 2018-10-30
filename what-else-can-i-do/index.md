@@ -8,9 +8,9 @@ modification_time: 2015-08-05T12:00:14+00:00
 
 mPDF can generate an index at the end of document using:
 
-- `<indexentry content="Buffalo" />`  
+- `<indexentry content="Buffalo" />`
   to make index entries at the appropriate place in the HTML text
-- `<indexinsert ... />`  
+- `<indexinsert ... />`
   generates and inserts the Index at the end of document
 
 <div class="alert alert-info" role="alert" markdown="1">
@@ -27,7 +27,7 @@ When an Index is inserted in the PDF document using `<indexinsert>` or `InsertIn
 <div class="mpdf_index_main">
     <div class="mpdf_index_letter">A</div>
     <div class="mpdf_index_entry">
-        Aardvark<a class="mpdf_index_link" href="#page37">37</a>    
+        Aardvark<a class="mpdf_index_link" href="#page37">37</a>
     </div>
     ...
 </div>
@@ -78,20 +78,20 @@ non-ASCII characters should map to the appropriate Dividing letter e.g.:
 
 **A**
 
-Alonso, Fernando  
-Ãlvarez, Isaac  
+Alonso, Fernando
+Ãlvarez, Isaac
 Arroyo Molino, David
 
 **B**
 
 Benitez, Carlos
 
-Entries in an Index can now be sorted using any of the Locale values available on your system. Set it using 
+Entries in an Index can now be sorted using any of the Locale values available on your system. Set it using
 the "collation" property/parameter e.g.:
 
 ```html
 
-<indexinsert usedivletters="on" links="off" collation="es_ES.utf8" 
+<indexinsert usedivletters="on" links="off" collation="es_ES.utf8"
     collation-group="Spanish_Spain" />
 
 ```
@@ -107,16 +107,23 @@ $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
 NB You should always choose a UTF-8 collation, even when you are using Core fonts or e.g. `charset-in="win-1252"`, because
 mPDF handles all text internally as UTF-8 encoded.
 
-You can see which Locales are available on your (Unix) system: `<?php system('locale -a') ?>`
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Used locale has to be installed on your system.
+  You can see which locales are available on your (Unix) system with `locale -a` console command
+  or with `<?php system('locale -a') ?>` from PHP
+</div>
 
-Note: Index collation will probably not work on Windows servers because of the problems setting Locales under Windows.
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** Index collation will probably not work on Windows servers because of the problems setting Locales under Windows.
+</div>
+
 
 If you have set your index to use Dividing letters, you can also determine how letters are grouped under a dividing
 letter. In the example index above, we want `Ã` to be grouped under the letter `a`/`A`. Set the "collation-group" using:
 
 ```php
 
-<indexinsert usedivletters="on" links="off" collation="es_ES.utf8" 
+<indexinsert usedivletters="on" links="off" collation="es_ES.utf8"
     collation-group="Spanish_Spain" />
 
 ```
@@ -156,7 +163,7 @@ produced by:
 
 <columns column-count="2" column-gap="5" />
 
-<indexinsert usedivletters="on" links="on" collation="en_US.utf8" 
+<indexinsert usedivletters="on" links="on" collation="en_US.utf8"
     collationgroup="English_United_States" />
 
 <columns column-count="1" />
@@ -174,7 +181,7 @@ Index entries can contain sub-entries, separated by colons e.g.
 A shorthand way of displaying subentries is set by default, which suppresses the main entry if > 1 subEntry.
 It can be disabled/enabled using the configurable variable `indexUseSubentries` in config constructor parameter.
 
-This is the default appearance, with 
+This is the default appearance, with
 ```php
 <?php
 $this->indexUseSubentries = false;
@@ -207,7 +214,7 @@ Mammals
 - <b>elephants</b>: breeding 15
 ```
 
-This is the appearance with 
+This is the appearance with
 ```php
 <?php
 $this->indexUseSubentries = false;
