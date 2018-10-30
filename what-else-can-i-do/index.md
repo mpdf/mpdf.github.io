@@ -138,10 +138,14 @@ $mpdf->InsertIndex(true, false, "es_ES.utf8", "Spanish_Spain");
 
 Values should be selected from the available file names in directory `[mpdf root]/data/collations/`.
 
-Note: This will not affect the overall order of entries, which is determined by the value of "collation".
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This will not affect the overall order of entries, which is determined by the value of "collation".
+</div>
 
-Note: The groupings do not always match the order set by locale. This is because the data for collations has come from
-different sources. The files in `[mpdf root]/data/collations/` can be edited.
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** The groupings do not always match the order set by locale. This is because the data for collations has come from
+  different sources. The files in `[mpdf root]/data/collations/` can be edited.
+</div>
 
 The array consists of [index]: unicode decimal value of character => unicode decimal value of character to group
 under: e.g. `Ã` [A tilde] (U+00C3) (decimal 195) => `a` (U+0061) (decimal 97). The target character should always be
@@ -149,8 +153,10 @@ the lowercase form.
 
 ## Non-ASCII chcracters in Index entries
 
-Note: `htmlspecials_encode()` should be used to encode the text of content in `<indexentry>` - although not when using
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** `htmlspecials_encode()` should be used to encode the text of content in `<indexentry>` - although not when using
 `IndexEntry()`.
+</div>
 
 ## Columns
 
