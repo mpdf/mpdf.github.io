@@ -34,19 +34,22 @@ Write <span class="parameter">$html</span> code to the document.
 
 <span class="parameter">$mode</span>
 
-: Controls what parts of the <span class="parameter">$html</span> code is parsed.
+: Controls what parts of the <span class="parameter">$html</span> code is parsed. Use class constants from 
+`\Mpdf\HTMLParserMode` for better readability and understanding.
 
   **Values**
 
-  * `0` - Parses a whole <span class="parameter">$html</span> document
-  * `1` - Parses the <span class="parameter">$html</span> as styles and stylesheets only
-  * `2` - Parses the <span class="parameter">$html</span> as output elements only
-  * `3` - (For internal use only - parses the <span class="parameter">$html</span> code without writing to document)
-  * `4` - (For internal use only - writes the <span class="parameter">$html</span> code to a buffer)
+  * `\Mpdf\HTMLParserMode::DEFAULT_MODE` - Parses a whole <span class="parameter">$html</span> document
+  * `\Mpdf\HTMLParserMode::HEADER_CSS` - Parses the <span class="parameter">$html</span> as styles and stylesheets only
+  * `\Mpdf\HTMLParserMode::HTML_BODY` - Parses the <span class="parameter">$html</span> as output elements only
+  * `\Mpdf\HTMLParserMode::HTML_PARSE_NO_WRITE` - (For internal use only - parses the <span class="parameter">$html</span> code without writing to document)
+  * `\Mpdf\HTMLParserMode::HTML_HEADER_BUFFER` - (For internal use only - writes the <span class="parameter">$html</span> code to a buffer)
 
-  Default: `0`
+  Default: `\Mpdf\HTMLParserMode::DEFAULT_MODE`
 
-  **Mode #0** (Default)
+  **Values**:
+    
+  `\Mpdf\HTMLParserMode::DEFAULT_MODE`:
 
   Metadata:
   - title is read from `<title>...</title>` tags
@@ -70,23 +73,21 @@ Write <span class="parameter">$html</span> code to the document.
 
   If no `<body>` tags are found, all remaining <span class="parameter">$html</span> is parsed as content.
 
-
-  **Mode #1**
+  `\Mpdf\HTMLParserMode::HEADER_CSS`:
 
   The html input is only parsed as CSS style information only.
 
   The code does not have to be surrounded by `<style>` tags, so you can pass the contents of a stylesheet directly -
   see Example #1.
 
-
-  **Mode #2**
+  `\Mpdf\HTMLParserMode::HTML_BODY`:
 
   If `<body>` tags are found, all <span class="parameter">$html</span> outside these tags are discarded, and the
   rest is parsed as content for the document.
 
   If no `<body>` tags are found, all <span class="parameter">$html</span> is parsed as content.
 
-  Prior to mPDF 4.2 the default CSS was not parsed when using `$mode = 2`.
+  Prior to mPDF 4.2 the default CSS was not parsed when using `$mode = \Mpdf\HTMLParserMode::HEADER_BODY`.
 
 <span class="parameter">$initialise</span>
 
@@ -145,9 +146,9 @@ Example #1
 $mpdf = new \Mpdf\Mpdf();
 
 $stylesheet = file_get_contents('style.css');
-$mpdf->WriteHTML($stylesheet, 1);
+$mpdf->WriteHTML($stylesheet, \Mpdf\HTMLParserMode::HEADER_CSS);
 
-$mpdf->WriteHTML('Hello World', 2);
+$mpdf->WriteHTML('Hello World', \Mpdf\HTMLParserMode::HTML_BODY);
 
 $mpdf->Output();
 
@@ -159,9 +160,9 @@ Example #2
 <?php
 // You can write parts of HTML elements by using the initialise and close parameters:
 
-$mpdf->WriteHTML('This is the beginning...', 2, true, false);
-$mpdf->WriteHTML('...this is the middle...', 2, false, false);
-$mpdf->WriteHTML('...and this is the end', 2, false, true);
+$mpdf->WriteHTML('This is the beginning...', \Mpdf\HTMLParserMode::HTML_BODY, true, false);
+$mpdf->WriteHTML('...this is the middle...', \Mpdf\HTMLParserMode::HTML_BODY, false, false);
+$mpdf->WriteHTML('...and this is the end', \Mpdf\HTMLParserMode::HTML_BODY, false, true);
 
 ```
 # See Also
