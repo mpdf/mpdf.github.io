@@ -23,7 +23,7 @@ output file.
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** Prior to mPDF 5.1 you should use the
   <span class="parameter">$mode </span>parameter of
-  <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> as `'2'`
+  <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> as `\Mpdf\HTMLParserMode::HTML_BODY`
   to avoid parsing the text for style tags. See example below.
 </div>
 
@@ -82,7 +82,7 @@ $mpdf->tabSpaces = 6;
 $mpdf->allow_charset_conversion = true;
 $mpdf->charset_in = 'windows-1252';
 
-$mpdf->WriteHTML($text, 2);
+$mpdf->WriteHTML($text, \Mpdf\HTMLParserMode::HTML_BODY);
 
 $mpdf->Output();
 

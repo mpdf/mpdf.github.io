@@ -81,7 +81,7 @@ $mpdf->WriteHTML('Your text which refers
 to a buffalo,<indexentry content="Buffalo" /> which you would like to see in the Index');
 
 $mpdf->AddPage();
-$mpdf->WriteHTML('<h2>Index</h2>',2);
+$mpdf->WriteHTML('<h2>Index</h2>', \Mpdf\HTMLParserMode::HTML_BODY);
 $mpdf->CreateIndex(2, '', '', 3, 1, '', 5, 'serif','sans-serif');
 $mpdf->Output();
 
