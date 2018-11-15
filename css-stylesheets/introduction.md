@@ -71,8 +71,8 @@ for details of this and other parameters.
 
 $stylesheet = file_get_contents('style.css');
 
-$mpdf->WriteHTML($stylesheet,1);
-$mpdf->WriteHTML($html,2);
+$mpdf->WriteHTML($stylesheet,\Mpdf\HTMLParserMode::HEADER_CSS);
+$mpdf->WriteHTML($html,\Mpdf\HTMLParserMode::HTML_BODY);
 
 ```
 
