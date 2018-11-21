@@ -26,6 +26,7 @@ requiring mpdf.php file).
 
 ```php
 define('_MPDF_TTFONTPATH', __DIR__ . '/fonts');
+$mpdf = new mPDF();
 ```
 You may want to copy font files included in the distribution for defaults and font substitutions to work.
 
