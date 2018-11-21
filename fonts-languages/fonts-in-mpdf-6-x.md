@@ -18,6 +18,17 @@ in Truetype format are also supported.
 - To use the font with specific languages, you need also to edit the configuration file
   (<span class="filename">config_lang2fonts.php</span>) - see the example
 
+## Specify custom font directory
+
+You can specify a custom font directory (eg when installing mPDF with composer or when you want to share custom
+fonts between instances) by defining `_MPDF_TTFONTPATH` constant with the path before initializing mPDF library (ie
+requiring mpdf.php file).
+
+```php
+define('_MPDF_TTFONTPATH', __DIR__ . '/fonts');
+```
+You may want to copy font files included in the distribution for defaults and font substitutions to work.
+
 ## Example
 
 You have 2 font files `Frutiger-Normal.ttf` and `FrutigerObl-Normal.ttf` which you want to be available in mPDF,
@@ -47,11 +58,21 @@ and you will refer to them in HTML/CSS as "Frutiger".
     ),
     ```
 
+    If you are not able to edit config_fonts.php from the distribution, just edit `fontdata` property of your mPDF instance:
+
+    ```php
+    $mpdf = new mPDF();
+    $mpdf["frutiger"] = [
+        'R' => "Frutiger-Normal.ttf",
+        'I' => "FrutigerObl-Normal.ttf",
+    ];
+    ```
+
 3. In your HTML or CSS code use something like this:
 
     ```php
 
-    ....
+    <p style="font-family: frutiger"></p>
 
     ```
 
@@ -62,19 +83,13 @@ and you will refer to them in HTML/CSS as "Frutiger".
     ```php
     <?php
     // THAI
-    case "th":  
-        $unifont = "frutiger";  
+    case "th":
+        $unifont = "frutiger";
         break;
     ```
 
     This will enable the Frutiger font whenever the lang attribute is set, if the configurable variable
     `autoLangToFont` is set to `true`:
-
-    ```php
-
-    ...
-
-    ```
 
 # Full Unicode support
 
@@ -195,12 +210,12 @@ This is a sample of HTML code containing CJK characters in both BMP and SIP - no
 needs to be referenced:
 
 ```html
-<div style="font-family:sun-extA;"> 
-    &#40706; &#40712; &#40727; &#x2320f; &#x23225; &#40742; 
-    &#40743; &#x2322f; &#x23231; &#40761; &#40772; &#x23232; 
-    &#x23233; &#40773; &#40784; &#x23234; &#x23256; &#40787; 
-    &#40794; &#x23262; &#x23281; &#40802; &#40809; &#x23289; 
-    &#x2328a; 
+<div style="font-family:sun-extA;">
+    &#40706; &#40712; &#40727; &#x2320f; &#x23225; &#40742;
+    &#40743; &#x2322f; &#x23231; &#40761; &#40772; &#x23232;
+    &#x23233; &#40773; &#40784; &#x23234; &#x23256; &#40787;
+    &#40794; &#x23262; &#x23281; &#40802; &#40809; &#x23289;
+    &#x2328a;
 </div>
 
 ```
@@ -278,19 +293,19 @@ $this->fontdata = array(
 This is an example of HTML code containing CJK characters from both BMP and SIP, and selecting the different fonts:
 
 ```html
-<div style="font-family:mingliu;"> 
-    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
-    &#x23289; &#x2328a; 
+<div style="font-family:mingliu;">
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809;
+    &#x23289; &#x2328a;
 </div>
 
-<div style="font-family:mingliu_hkscs;"> 
-    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
-    &#x23289; &#x2328a; 
+<div style="font-family:mingliu_hkscs;">
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809;
+    &#x23289; &#x2328a;
 </div>
 
-<div style="font-family:pmingliu;"> 
-    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809; 
-    &#x23289; &#x2328a; 
+<div style="font-family:pmingliu;">
+    &#40706; &#40742; &#40772; &#40784; &#40802; &#40809;
+    &#x23289; &#x2328a;
 </div>
 
 ```
