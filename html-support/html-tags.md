@@ -9,7 +9,7 @@ modification_time: 2015-08-05T11:59:41+00:00
 # HTML tags supported
 
 The following HTML tags/elements are recognised and supported (to some extent) by mPDF. All HTML elements are
-hard-coded in mPDF to be treated as block or in-line elements (e.g. equivalent to CSS `display:block` or `display:in-line`).
+hard-coded in mPDF to be treated as block or in-line elements (e.g. equivalent to CSS `display:block` or `display:inline`).
 This cannot be changed using CSS.
 
 <table class="table">
