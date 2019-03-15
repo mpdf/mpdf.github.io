@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Choosing a configuration v7.x
+title: Choosing a configuration v7+
 parent_title: Fonts & Languages
 permalink: /fonts-languages/choosing-a-configuration-v7-x.html
 modification_time: 2017-03-13T15:06:17+01:00

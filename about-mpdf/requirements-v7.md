@@ -1,13 +1,13 @@
 ---
 layout: page
-title: Requirements v7
+title: Requirements v7+
 parent_title: About mPDF
 permalink: /about-mpdf/requirements-v7.html
 modification_time: 2017-03-14T10:03:20+02:00
 ---
 
-mPDF 7.0 requires:
- * PHP >= 5.6.0 and < 7.3.0. 
+Since mPDF 7.0 requires:
+ * PHP >= 5.6.0 and < 7.3.0.
  * PHP `mbstring` (including `mbregex`, which needs to
 be explicitly enabled in some environments) and `gd` extensions have to be loaded.
 

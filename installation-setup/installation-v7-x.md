@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Installation v7.x
+title: Installation v7+
 parent_title: Installation & Setup
 permalink: /installation-setup/installation-v7-x.html
 modification_time: 2017-03-08T10:02:23+02:00

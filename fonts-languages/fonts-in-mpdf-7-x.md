@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Fonts in mPDF 7.x
+title: Fonts in mPDF v7+
 parent_title: Fonts & Languages
 permalink: /fonts-languages/fonts-in-mpdf-7-x.html
 modification_time: 2017-09-05T14:19:17+01:00
@@ -106,7 +106,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
     <p lang="th">Text in Frutiger</p>
 
     ```
-    
+
     When using <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">`autoLangToFont`</a> mPDF may identify the script but not the language and `$llcc` will be set to `und-{$script}`.
 
 # Full Unicode support
