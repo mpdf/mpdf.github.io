@@ -16,20 +16,20 @@ current document. This can be used for:
 - a whole document template
 - create thumbnails as handouts etc. from a document you have produced
 
-<div class="alert alert-info" role="alert" markdown="1">
-  **Note:** On limited testing, mPDF appears to import any PDF file (with a version <= 1.4, or one
-  produced by mPDF) as long as it is not password protected. Text and images are imported, but links, bookmarks etc.
-  are not. LZW encoding is supported from mPDF 4.3 onwards
-</div>
-
 <div class="alert alert-success" role="alert" markdown="1">
   **Tip:** mPDF imports all embedded fonts required for the document, even if they are the same as the
   ones used in the document being written. Try to keep the file size of the external source PDF file down to a minimum.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
+  **Note:** On limited testing, mPDF appears to import any PDF file (with a version &lte; 1.4, or one
+  produced by mPDF) as long as it is not password protected. Text and images are imported, but links, bookmarks etc.
+  are not. LZW encoding is supported from mPDF 4.3 onwards
+</div>
+
+<div class="alert alert-info" role="alert" markdown="1">
   **Note:** Prior to mPDF 4.3, this required calling `mPDFI()`. The functions have now been incorporated
-  into the main `\Mpdf\Mpdf` class, but you must use
+  into the main `\Mpdf\Mpdf` class, Until mPDF 8.0, you must use
   <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a> to
   enable them.
 </div>
