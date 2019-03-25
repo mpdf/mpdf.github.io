@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/dpi.html
 modification_time: 2015-08-05T12:01:55+00:00
 ---
 
-(mPDF >= 4.5)
+(mPDF &ge; 4.5)
 
 # Description
 
@@ -23,7 +23,7 @@ The dots-per-inch (dpi) affects all conversions from pixels ***except images***,
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** This variable can be changed as any other 
+  **Note:** This variable can be changed as any other
   <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
 </div>
 

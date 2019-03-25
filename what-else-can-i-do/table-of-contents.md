@@ -16,7 +16,7 @@ will insert a Table of Contents (ToC) at the current position.
 &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">tocentry</a>&gt; can be used
 to mark entries for the <acronym title="Table of Contents">ToC</acronym> .
 
-From mPDF >= 5.7, CSS styles can be used to control layout of the ToC.
+From mPDF &ge; 5.7, CSS styles can be used to control layout of the ToC.
 
 At the end of the document, the ToC is generated, creating HTML code (internally) which looks like this:
 
@@ -65,18 +65,18 @@ An example CSS stylesheet for this:
 
 ```css
 div.mpdf_toc {
-    font-family: sans-serif; 
+    font-family: sans-serif;
     font-size: 11pt;
 }
 a.mpdf_toc_a  {
-    text-decoration: none; 
+    text-decoration: none;
     color: black;
 }
 
 /* Whole line level 0 */
 div.mpdf_toc_level_0 {
-    line-height: 1.5; 
-    margin-left: 0; 
+    line-height: 1.5;
+    margin-left: 0;
     padding-right: 2em;
 }
 
@@ -91,15 +91,15 @@ span.mpdf_toc_p_level_0 {}
 
 /* Whole line level 1 */
 div.mpdf_toc_level_1 {
-    margin-left: 2em; 
-    text-indent: -2em; 
+    margin-left: 2em;
+    text-indent: -2em;
     padding-right: 2em;
 }
 
 /* padding-right should match <dottab outdent="2em" /> 2em is default */
 /* Title level 1 */
 span.mpdf_toc_t_level_1 {
-    font-style: italic; 
+    font-style: italic;
     font-weight: bold;
 }
 
@@ -108,8 +108,8 @@ span.mpdf_toc_p_level_1  {}
 
 /* Whole line level 2 */
 div.mpdf_toc_level_2 {
-    margin-left: 4em; 
-    text-indent: -2em; 
+    margin-left: 4em;
+    text-indent: -2em;
     padding-right: 2em;
 }
 
@@ -125,11 +125,11 @@ For additional ToCs, these will have `<toc name="">` attribute. Use the lowercas
 
 ```css
 #mpdf_toc_figures {
-    font-family:Calibri; 
+    font-family:Calibri;
     font-size: 10pt;
 }
 #mpdf_toc_figures span.mpdf_toc_t_level_0 {
-    color: red; 
+    color: red;
 }
 ```
 
@@ -154,8 +154,8 @@ Example:
 <?php
 
 $mpdf->h2toc = array(
-    'H1' => 0, 
-    'H2' => 1, 
+    'H1' => 0,
+    'H2' => 1,
     'H3' => 2
 );
 

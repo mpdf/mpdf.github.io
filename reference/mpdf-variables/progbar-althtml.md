@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/progbar-althtml.html
 modification_time: 2015-08-05T12:02:21+00:00
 ---
 
-(mPDF >= 5.0 && < 7.0)
+(mPDF &ge; 5.0 && < 7.0)
 
 <div class="alert alert-danger" role="alert" markdown="1">
   **Note:** This feature was removed in mPDF 7.0
@@ -18,8 +18,8 @@ Default set in `config.php`
 
 Default value: `''`
 
-e.g. `'<html><body>Creating PDF file. Please wait...';`  
-Should include `<html>` and `<body>` but NOT end tags  
+e.g. `'<html><body>Creating PDF file. Please wait...';`
+Should include `<html>` and `<body>` but NOT end tags
 Can include `<head>` and link to stylesheet etc.
 
 # Changelog

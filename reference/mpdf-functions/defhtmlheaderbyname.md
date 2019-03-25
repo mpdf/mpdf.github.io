@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/defhtmlheaderbyname.html
 modification_time: 2015-08-05T12:00:46+00:00
 ---
 
-(mPDF >= 2.0)
+(mPDF &ge; 2.0)
 
 DefHTMLHeaderByName – Define an HTML page header with a given name
 

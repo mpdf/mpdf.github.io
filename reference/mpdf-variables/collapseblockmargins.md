@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/collapseblockmargins.html
 modification_time: 2015-08-05T12:01:47+00:00
 ---
 
-(mPDF >= 4.2)
+(mPDF &ge; 4.2)
 
 collapseBlockMargins – Specify whether to collapse (vertical) margins between block elements
 
@@ -58,7 +58,7 @@ $mpdf = new \Mpdf\Mpdf();
 
 $html = '
 <div style="margin-bottom: 3em;">This DIV has a bottom margin defined as 3em</div>
-<div style="margin-top: 2em;">This DIV has a top margin defined as 2em. The 
+<div style="margin-top: 2em;">This DIV has a top margin defined as 2em. The
 space between these DIVs will collapse to 3em</div>';
 
 $mpdf->WriteHTML($html);

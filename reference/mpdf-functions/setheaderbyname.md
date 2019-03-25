@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setheaderbyname.html
 modification_time: 2015-08-05T12:01:03+00:00
 ---
 
-(mPDF >= 2.0)
+(mPDF &ge; 2.0)
 
 SetHeaderByName – Sets a page header by a given name
 
@@ -29,30 +29,30 @@ Sets a page header that has previously been defined by name.
 
 : This parameter specifies the name of a previously defined page header. If a <span class="smallblock">BLANK</span>
   string or `null` is passed, mPDF will use the value `_default` if such a page header exists.
-  
+
 <span class="parameter">$side</span>
 
 : Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>
   pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
-  
-  
+
+
   **Values** (case-sensitive)
-  
+
   `'O'`
   : set the header for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span>
     document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a
     <span class="smallblock">SINGLE-SIDED</span> document.
-  
+
   `'E'`
   : set the header for <span class="smallblock">EVEN</span> pages
-  
+
   Default: `'O'`
-  
+
 <span class="parameter">$write</span>
 
 : If `true` it forces the Header to be written immediately to the current page.
   Use if the header is being set after the new page has been added.
-  
+
   Default: `false`
 
 # Changelog

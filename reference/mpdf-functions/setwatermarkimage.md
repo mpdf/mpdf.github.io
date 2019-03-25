@@ -6,21 +6,21 @@ permalink: /reference/mpdf-functions/setwatermarkimage.html
 modification_time: 2015-08-05T12:01:10+00:00
 ---
 
-(mPDF >= 2.2)
+(mPDF &ge; 2.2)
 
 SetWatermarkImage – Set an image to use as a Watermark
 
 # Description
 
-void **SetWatermarkImage** ( 
-string <span class="parameter">$src</span> 
-[, float <span class="parameter">$alpha</span> 
-[, mixed <span class="parameter">$size</span> 
+void **SetWatermarkImage** (
+string <span class="parameter">$src</span>
+[, float <span class="parameter">$alpha</span>
+[, mixed <span class="parameter">$size</span>
 [, mixed <span class="parameter">$position</span> ]]])
 
-Set an image to use as a Watermark. The watermark is a semi-transparent background printed on each page, 
-used for text such as "DRAFT" or a background image. The watermark will be added to each page when the 
-Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">$showWatermarkImage</a> 
+Set an image to use as a Watermark. The watermark is a semi-transparent background printed on each page,
+used for text such as "DRAFT" or a background image. The watermark will be added to each page when the
+Footer is printed if the variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">$showWatermarkImage</a>
 is set to `1` or `true`. 
 
 # Parameters
@@ -38,36 +38,36 @@ is set to `1` or `true`. 
 <span class="parameter">$size</span>
 
 : Defines the size of the watermark.
-  This parameter takes either a pre-defined string, an integer, or an array of width and height. 
+  This parameter takes either a pre-defined string, an integer, or an array of width and height.
 
   **Values**
-  
+
   * `'D'`
-    : default i.e. original size of image - may depend on <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a> 
+    : default i.e. original size of image - may depend on <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a>
   * `'P'`
-    : Resize to fit the full page size, keeping aspect ratio  
+    : Resize to fit the full page size, keeping aspect ratio
   * `'F'`
-    : Resize to fit the print-area (frame) respecting current page margins, keeping aspect ratio  
+    : Resize to fit the print-area (frame) respecting current page margins, keeping aspect ratio
   * <span class="smallblock">INT</span>
-    : Resize to full page size minus a margin set by this integer in millimeters, keeping aspect ratio  
+    : Resize to full page size minus a margin set by this integer in millimeters, keeping aspect ratio
   * `array($width, $height)`
     : Specify a size; units in millimeters
-  
+
   Default: `'D'`
- 
-  
+
+
 <span class="parameter">$position</span>
 
-: Defines the position of the watermark on the page. 
-  This parameter takes either a pre-defined string or an array of <span class="parameter">$x</span> 
-  and <span class="parameter">$y</span>. 
-  
+: Defines the position of the watermark on the page.
+  This parameter takes either a pre-defined string or an array of <span class="parameter">$x</span>
+  and <span class="parameter">$y</span>.
+
   **Values**
-  
-  * `'P'`: Centred on the whole page area  
+
+  * `'P'`: Centred on the whole page area
   * `'F'`: Centred on the page print-area (frame) respecting page margins
   * `array($x, $y)`: Specify a position; units in millimeters
-  
+
   Default: `'P'`
 
 # Changelog
@@ -113,12 +113,12 @@ $mpdf = new \Mpdf\Mpdf([
 	'margin_bottom' => 10
 ]);
 
-// Setting transparency to 1, and exact positioning, you can use a Watermark Image 
+// Setting transparency to 1, and exact positioning, you can use a Watermark Image
 // as a 'Header'. Note that the page top-margin is set to accomodate the image.
 $mpdf->SetWatermarkImage(
-    'http://www.yourdomain.com/images/logo.jpg', 
-    1, 
-    '', 
+    'http://www.yourdomain.com/images/logo.jpg',
+    1,
+    '',
     array(160,10)
 );
 $mpdf->showWatermarkImage = true;

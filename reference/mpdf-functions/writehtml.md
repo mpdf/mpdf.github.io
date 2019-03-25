@@ -6,16 +6,16 @@ permalink: /reference/mpdf-functions/writehtml.html
 modification_time: 2015-08-05T12:01:16+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 WriteHTML — Write HTML code to the document
 
 # Description
 
-void **WriteHTML** ( 
-string <span class="parameter">$html</span> 
+void **WriteHTML** (
+string <span class="parameter">$html</span>
 [, int <span class="parameter">$mode</span>
-[, boolean <span class="parameter">$initialise</span> 
+[, boolean <span class="parameter">$initialise</span>
 [, boolean <span class="parameter">$close</span> ]]])
 
 Write <span class="parameter">$html</span> code to the document.
@@ -34,7 +34,7 @@ Write <span class="parameter">$html</span> code to the document.
 
 <span class="parameter">$mode</span>
 
-: Controls what parts of the <span class="parameter">$html</span> code is parsed. Use class constants from 
+: Controls what parts of the <span class="parameter">$html</span> code is parsed. Use class constants from
 `\Mpdf\HTMLParserMode` for better readability and understanding.
 
   **Values**
@@ -48,7 +48,7 @@ Write <span class="parameter">$html</span> code to the document.
   Default: `\Mpdf\HTMLParserMode::DEFAULT_MODE`
 
   **Values**:
-    
+
   `\Mpdf\HTMLParserMode::DEFAULT_MODE`:
 
   Metadata:

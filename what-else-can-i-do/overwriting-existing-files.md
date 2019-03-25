@@ -6,11 +6,11 @@ permalink: /what-else-can-i-do/overwriting-existing-files.html
 modification_time: 2015-08-05T12:00:19+00:00
 ---
 
-(mPDF >= 2.3)
+(mPDF &ge; 2.3)
 
-Using `Overwrite()` function, an existing PDF file can be overwritten, replacing specified text with alternatives. 
+Using `Overwrite()` function, an existing PDF file can be overwritten, replacing specified text with alternatives.
 For example you may have created a long complex PDF file, and you wish to produce copies with an individual number on
-each copy without having to re-generate the whole document each time. 
+each copy without having to re-generate the whole document each time.
 
 Use first `SetImportUse()` to enable pdf import functions.
 

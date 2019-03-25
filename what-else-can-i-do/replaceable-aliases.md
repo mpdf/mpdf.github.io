@@ -10,7 +10,7 @@ modification_time: 2015-08-05T12:00:17+00:00
   **Note:** Prior to mPDF 6.0 you could include
   `{nb​}` and `{nbpg​}` anywhere in the text of the
   document, including headers/footers.
-  
+
   In mPDF v6.0+ these will only be replaced when used in headers/footers.
 </div>
 
@@ -66,7 +66,7 @@ Will be replaced by today's date - but **only** in headers/footers. The alias is
 defined using any of the values in the PHP function <a href="http://www.php.net/manual/en/function.date.php">date()</a>.
 There must be a space after `{DATE `
 
-Example: 
+Example:
 ```html
 {DATE j-m-Y H:m}
 ```
@@ -77,7 +77,7 @@ Example:
 
 Place in cell inside a table footer i.e. `<tfoot><td>`. The total of values in the corresponding column will
 be output at the bottom of every page, and the end of the tale. Default output is an integer. An optional integer
-`N` after colsum will specify a fixed number of decimal places. (mPDF >= 5.4)
+`N` after colsum will specify a fixed number of decimal places. (mPDF &ge; 5.4)
 
 ```html
 {iteration varName}

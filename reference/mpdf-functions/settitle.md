@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/settitle.html
 modification_time: 2015-08-05T12:01:09+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 SetTitle – Set the document title
 
@@ -32,7 +32,7 @@ and is included in the document metadata, which can be seen when inspecting the 
 <span class="parameter">$text</span>
 
 : Defines the text to appear as a Title. The text should be UTF-8 encoded, but should not contain HTML mark-up tags.
-  
+
   <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful
   function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.
 

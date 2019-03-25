@@ -6,15 +6,15 @@ permalink: /reference/mpdf-functions/thumbnail.html
 modification_time: 2015-08-05T12:01:12+00:00
 ---
 
-(mPDF >= 2.3)
+(mPDF &ge; 2.3)
 
 Thumbnail – Create thumbnails of an external PDF file and insert in current document
 
 # Description
 
-void **Thumbnail** ( 
-string <span class="parameter">$file</span> 
-[, integer <span class="parameter">$numberperrow</span> 
+void **Thumbnail** (
+string <span class="parameter">$file</span>
+[, integer <span class="parameter">$numberperrow</span>
 [, float <span class="parameter">$spacing</span> ]])
 
 Create thumbnails of an external PDF file and insert in current document.
@@ -23,7 +23,7 @@ Create thumbnails of an external PDF file and insert in current document.
 
 <span class="parameter">$file</span>
 
-: This parameter specifies the source PDF file to import.  
+: This parameter specifies the source PDF file to import. 
 
   **Note**: <span class="parameter">$file</span> should be a **relative path** to a local file.
 

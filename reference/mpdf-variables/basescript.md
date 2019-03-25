@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/basescript.html
 modification_time: 2015-08-05T12:01:43+00:00
 ---
 
-(mPDF >= 6.0)
+(mPDF &ge; 6.0)
 
 # Description
 
@@ -20,9 +20,9 @@ Tells mPDF which Script to ignore when using `autoScriptToLang`.
 
 **Values**
 
-* *<span class="smallblock">INTEGER</span>*:  Number representing the 
-  script block to be ignored when using `autoScriptToLang`. It is set by default to `1` which is for Latin script. 
-  In this mode, all scripts *except* Latin script are marked up with `lang=` attribute. To select other scripts as the base, 
+* *<span class="smallblock">INTEGER</span>*:  Number representing the
+  script block to be ignored when using `autoScriptToLang`. It is set by default to `1` which is for Latin script.
+  In this mode, all scripts *except* Latin script are marked up with `lang=` attribute. To select other scripts as the base,
   see the `\Mpdf\Ucdn` class.
 
 Default: `1`

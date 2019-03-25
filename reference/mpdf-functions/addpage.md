@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/addpage.html
 modification_time: 2015-08-05T12:00:38+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 AddPage — Add a new page
 
@@ -113,7 +113,7 @@ Number of pages added:
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to
+  **Note:** From mPDF &ge; 3.0 the page numbering can be reset to any positive number. Prior to
   this, it was only possible to reset it to `1`.
 </div>
 
@@ -129,7 +129,7 @@ Number of pages added:
 
   `'L'` or `'landscape'`
   : Landscape
-  
+
   `'P'` or `'portrait'`
   : Portrait
 
@@ -286,7 +286,7 @@ Number of pages added:
 <span class="parameter">$sheet-size</span>
 
 : <span class="parameter">$sheet-size</span> can be specified either as:
-   * a pre-defined page size (see below), 
+   * a pre-defined page size (see below),
    * or as an array of width and height in millimetres e.g. `array(210,297)`.
 
   Default: <span class="smallblock">BLANK</span> - makes no change to the current sheet-size
@@ -308,7 +308,7 @@ Number of pages added:
 # Changelog
 
 <table class="table"> <thead>
-<tr> 
+<tr>
   <th>Version</th>
   <th>Description</th>
 </tr>
@@ -316,19 +316,19 @@ Number of pages added:
 <tr>
   <td>1.3</td>
   <td>
-  Parameters <span class="parameter">$resetpagenum</span> , <span class="parameter">$pagenumstyle</span> 
+  Parameters <span class="parameter">$resetpagenum</span> , <span class="parameter">$pagenumstyle</span>
   and <span class="parameter">$suppress</span> were added.
   </td>
 </tr>
 <tr>
   <td>2.0</td>
   <td>
-  Parameters <span class="parameter">$margin-left</span> , <span class="parameter">$margin-right</span> , 
-  <span class="parameter">$margin-top</span> , <span class="parameter">$margin-bottom</span> , 
-  <span class="parameter">$margin-header</span> , <span class="parameter">$margin-footer</span> , 
-  <span class="parameter">$odd-header-name</span> , <span class="parameter">$odd-header-value</span> , 
-  <span class="parameter">$even-header-name</span> , <span class="parameter">$even-header-value</span> , 
-  <span class="parameter">$odd-footer-name</span> , <span class="parameter">$odd-footer-value</span> , 
+  Parameters <span class="parameter">$margin-left</span> , <span class="parameter">$margin-right</span> ,
+  <span class="parameter">$margin-top</span> , <span class="parameter">$margin-bottom</span> ,
+  <span class="parameter">$margin-header</span> , <span class="parameter">$margin-footer</span> ,
+  <span class="parameter">$odd-header-name</span> , <span class="parameter">$odd-header-value</span> ,
+  <span class="parameter">$even-header-name</span> , <span class="parameter">$even-header-value</span> ,
+  <span class="parameter">$odd-footer-name</span> , <span class="parameter">$odd-footer-value</span> ,
   <span class="parameter">$even-footer-name</span> , <span class="parameter">$even-footer-value</span>  were added.
   </td>
 </tr>
@@ -406,8 +406,8 @@ $mpdf->defHeaderByName(
         'L' => array (),
         'R' => array (),
         'C' => array (
-            'content' => 'Chapter 2', 
-            'font-style' => 'B', 
+            'content' => 'Chapter 2',
+            'font-style' => 'B',
             'font-family' => 'serif'
         ),
         'line' => 1,
@@ -422,8 +422,8 @@ $mpdf->WriteHTML('Your Introduction');
 // Selects new headers for ODD and EVEN pages to use from the new page onwards
 // Note the html_ prefix before the named HTML header
 $mpdf->AddPage(
-    '','NEXT-ODD','','','','','','','','','', 
-    'myHeader', 'html_myHeader2', '', '', 
+    '','NEXT-ODD','','','','','','','','','',
+    'myHeader', 'html_myHeader2', '', '',
     1, 1, 0, 0
 );
 $mpdf->WriteHTML('Your Book text');

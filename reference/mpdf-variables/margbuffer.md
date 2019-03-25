@@ -6,9 +6,9 @@ permalink: /reference/mpdf-variables/margbuffer.html
 modification_time: 2015-08-05T12:02:11+00:00
 ---
 
-(mPDF >= 5.5)
+(mPDF &ge; 5.5)
 
-Allows an (empty) end of block to extend beyond the bottom margin by this amount (mm). Avoids just the 
+Allows an (empty) end of block to extend beyond the bottom margin by this amount (mm). Avoids just the
 border/background-color of the end of a block being moved on to next page.
 
 Default: `2`

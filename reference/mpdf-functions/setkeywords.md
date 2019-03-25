@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setkeywords.html
 modification_time: 2015-08-05T12:01:06+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 SetKeywords – Set the document metadata Keywords
 

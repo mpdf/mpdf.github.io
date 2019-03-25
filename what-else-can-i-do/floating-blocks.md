@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/floating-blocks.html
 modification_time: 2015-08-05T12:00:01+00:00
 ---
 
-mPDF >= 3.0
+mPDF &ge; 3.0
 
 The CSS property `float` is **partially** supported in mPDF, allowing block elements (p, div etc.) to be placed
 alongside one another. They can also be used to create "columns" that span more than one page.

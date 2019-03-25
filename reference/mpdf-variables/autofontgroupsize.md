@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/autofontgroupsize.html
 modification_time: 2015-08-05T12:01:39+00:00
 ---
 
-(mPDF >= 2.3 & < 6.0)
+(mPDF &ge; 2.3 & < 6.0)
 
 autoFontGroupSize – Specify the chunk size of text to group when auto-detecting languages using SetAutoFont()
 
@@ -70,12 +70,12 @@ $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8']);
 
 $html = "
 <style>
-p { 
-    font-family: FreeSerif; 
+p {
+    font-family: FreeSerif;
 }
 </style>
 
-Most of this text is in English, but has occasional words in Chinese:来自商务 
+Most of this text is in English, but has occasional words in Chinese:来自商务
 or Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: الابيض
 
 الابيض "بشدة" تفجير
@@ -96,11 +96,11 @@ $mpdf->autoFontGroupSize = 3;
 $mpdf->WriteHTML($html);
 
 $html2 = "
-In this example, the word boundaries from different languages are already defined 
+In this example, the word boundaries from different languages are already defined
 by marking with &lt;span&gt; tags
 
-Most of this text is in English, but has occasional words in 
-Chinese:<span>来自商务</span> or Vietnamese: <span>Một khảo sát mới cho biết</span>, 
+Most of this text is in English, but has occasional words in
+Chinese:<span>来自商务</span> or Vietnamese: <span>Một khảo sát mới cho biết</span>,
 or maybe even Arabic: <span>الابيض</span>
 ";
 

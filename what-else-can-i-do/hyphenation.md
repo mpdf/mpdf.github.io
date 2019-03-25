@@ -6,11 +6,11 @@ permalink: /what-else-can-i-do/hyphenation.html
 modification_time: 2015-08-05T12:00:01+00:00
 ---
 
-(mPDF >= 2.5)
+(mPDF &ge; 2.5)
 
 Hyphenation was changed in mPDF 5.7 to support the CSS property hyphens (cf.)
 
-The CSS property `hyphens` is supported on block elements (e.g. `<div>`), 
+The CSS property `hyphens` is supported on block elements (e.g. `<div>`),
 inline elements (e.g. `<span>`) and `<td>`/`<th>`.
 
 ```css
@@ -25,14 +25,14 @@ The default can be changed by altering `defaultCSS`
 Values:
 
 * `none` - Words are not broken at line breaks, even if characters inside the word suggest line break points.
-* `manual` - Words are only broken at line breaks where there are characters inside the word that suggest line break opportunities.  
+* `manual` - Words are only broken at line breaks where there are characters inside the word that suggest line break opportunities.
   Characters can be explicit or conditional.
-* `auto` - Words can be broken at appropriate hyphenation points, as determined by characters inside the word, resources.  
+* `auto` - Words can be broken at appropriate hyphenation points, as determined by characters inside the word, resources.
   SHY (i.e. soft-hyphen) inside the word take priority over hyphenation points determined by other resources.
 
 ## Soft hyphens
 
-The soft-hyphen character (U+00AD or `&shy;`) and the `<wbr>` tag (from mPDF 5.7) are supported in 
+The soft-hyphen character (U+00AD or `&shy;`) and the `<wbr>` tag (from mPDF 5.7) are supported in
 <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a>.
 
 ## Automatic hyphenation
@@ -43,7 +43,7 @@ Automatic hyphenation is set using CSS:
 hyphens: auto;
 ```
 
-Automatic hyphenation is based on the commonly used TeX algorithm and requires pattern files for each language. 
+Automatic hyphenation is based on the commonly used TeX algorithm and requires pattern files for each language.
 The following languages are supplied with mPDF 2.5:
 
 <table class="table">
@@ -98,10 +98,10 @@ The following languages are supplied with mPDF 2.5:
 </table>
 
 
-A pattern file for each language is found in the directory `[mpdf root]/data/patterns/` and the 
+A pattern file for each language is found in the directory `[mpdf root]/data/patterns/` and the
 <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
-<span class="parameter">$SHYlanguages</span> needs to be updated if any additions are made. 
-The <span class="parameter">$SHYlang</span> variable specifies which language to use for the automatic hyphenation from 
+<span class="parameter">$SHYlanguages</span> needs to be updated if any additions are made.
+The <span class="parameter">$SHYlang</span> variable specifies which language to use for the automatic hyphenation from
 the <span class="parameter">$SHYlanguages</span> array.
 
 Pattern checking can be fine-tuned by four variables if required:
@@ -132,7 +132,7 @@ Pattern checking can be fine-tuned by four variables if required:
             <td><span class="parameter">$SHYcharmax</span></td>
             <td><code>10</code></td>
             <td>
-                Maximum number of characters in a pattern used for pattern checking (10 usually is more than enough). 
+                Maximum number of characters in a pattern used for pattern checking (10 usually is more than enough).
                 This is NOT the maximum length of words to be checked.
             </td>
         </tr>
@@ -156,9 +156,9 @@ $mpdf->Output();
 
 # Hyphenation Dictionary
 
-If automatic hyphenation does not recognise a particular word, you can add words to a dictionary file with your own 
-hyphenation. Edit the file `[path to mpdf]/patterns/dictionary.txt` and add a new line for each word, marking the 
-possible hyphenations with a forward slash. You can mark more than one place for each word e.g. 
+If automatic hyphenation does not recognise a particular word, you can add words to a dictionary file with your own
+hyphenation. Edit the file `[path to mpdf]/patterns/dictionary.txt` and add a new line for each word, marking the
+possible hyphenations with a forward slash. You can mark more than one place for each word e.g.
 `dis/es/tab/lish/men/tar/i/an/ism`
 
 # See Also

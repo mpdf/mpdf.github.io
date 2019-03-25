@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/autopagebreak.html
 modification_time: 2015-08-05T12:01:41+00:00
 ---
 
-(mPDF >= 3.1)
+(mPDF &ge; 3.1)
 
 autoPageBreak – Specify whether to allow automatic page breaks
 

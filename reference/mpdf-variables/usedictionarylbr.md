@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/usedictionarylbr.html
 modification_time: 2015-08-05T12:02:35+00:00
 ---
 
-(mPDF >= 6.0)
+(mPDF &ge; 6.0)
 
 # Description
 

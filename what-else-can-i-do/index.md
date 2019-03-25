@@ -14,7 +14,7 @@ mPDF can generate an index at the end of document using:
   generates and inserts the Index at the end of document
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Indexes have been completely rewritten in mPDF 6. The notes below refer to mPDF >= 6.0
+  **Note:** Indexes have been completely rewritten in mPDF 6. The notes below refer to mPDF &ge; 6.0
 </div>
 
 - `<indexentry>` or `IndexEntry()` should be used to create Index entries during document writing.

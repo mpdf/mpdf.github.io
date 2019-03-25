@@ -56,5 +56,5 @@ the other constraints. This can lead to an ugly or inefficiently laid out table 
 If there is a conflict between respecting `$page-break-inside:avoid` and respecting
 the maximum value allowed for <span class="parameter">$autosize</span>, the configurable variable
 <a href="{{ "/reference/mpdf-variables/tableminsizepriority.html" | prepend: site.baseurl }}">tableMinSizePriority</a>
-will determine which factor takes priority. (mPDF v>=4.6)
+will determine which factor takes priority. (mPDF v&ge;4.6)
 

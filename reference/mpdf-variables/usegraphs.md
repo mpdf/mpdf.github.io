@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/usegraphs.html
 modification_time: 2015-08-05T12:02:37+00:00
 ---
 
-(mPDF >= 2.4 && <7.0)
+(mPDF &ge; 2.4 && <7.0)
 
 <div class="alert alert-danger" role="alert" markdown="1">
   **Note:** This feature was removed in mPDF 7.0
@@ -33,7 +33,7 @@ and processing time.
 
 **Values**
 
-* `true`: Parse table data from the HTML, and allow the use 
+* `true`: Parse table data from the HTML, and allow the use
   of &lt;<a href="{{ "/reference/html-control-tags/jpgraph.html" | prepend: site.baseurl }}">jpgraph</a>&gt;
 * `false`: Default
 

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/curlallowunsafesslrequests.html
 modification_time: 2017-09-30T11:03:32+00:00
 ---
 
-(mPDF >= 7.0)
+(mPDF &ge; 7.0)
 
 # Description
 

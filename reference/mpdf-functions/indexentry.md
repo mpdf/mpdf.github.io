@@ -6,23 +6,23 @@ permalink: /reference/mpdf-functions/indexentry.html
 modification_time: 2015-08-05T12:00:48+00:00
 ---
 
-(mPDF >= 2.2)
+(mPDF &ge; 2.2)
 
 IndexEntry – Insert an Index entry for the document
 
 # Description
 
-void **IndexEntry** ( 
+void **IndexEntry** (
 string <span class="parameter">$content</span>
 [ , string <span class="parameter">$xref</span> ])
 
-Insert an Index entry for the document Index, referencing the current writing position in the document. 
-If <span class="parameter">$xref</span> is set, it will appear as a cross-referencing entry in the index 
+Insert an Index entry for the document Index, referencing the current writing position in the document.
+If <span class="parameter">$xref</span> is set, it will appear as a cross-referencing entry in the index
 as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: site.baseurl }}">IndexEntrySee()</a>.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** The Index must be generated explicity at the end of the document using 
-  <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a> 
+  **Note:** The Index must be generated explicity at the end of the document using
+  <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>
   at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.
 </div>
 
@@ -36,11 +36,11 @@ as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: sit
 
 : This parameter sets the text as it will appear in the Index entry.
 
-  <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and 
+  <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and
   must use the appropriate HTML entities e.g. `<annotation content="This is &amp;lt; 40" />`
 
   It is recommended that you use `htmlspecialchars('Content', ENT_QUOTES)` for this.
-  
+
   Text entries passed in the form `Subject:Subcategory` will appear in the Index as "Subject, Subcategory"
 
   <span class="smallblock">REQUIRED</span>
@@ -49,7 +49,7 @@ as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: sit
 
 : This parameter sets the text used as a cross-reference. Text should be UTF-8 encoded.
 
-  <span class="parameter">$xref</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and 
+  <span class="parameter">$xref</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and
   must use the appropriate HTML entities e.g. `<indexentry xref="&amp;lt; 40" />`
 
   It is recommended that you use e.g. `htmlspecialchars($xref, ENT_QUOTES)` for this.
@@ -113,8 +113,8 @@ Dromedary - see Camel, types
 # Notes
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; 
-  may be a preferred form, as it will allow more precise identification of the position and page - the &lt;indexentry&gt; 
+  **Note:** &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt;
+  may be a preferred form, as it will allow more precise identification of the position and page - the &lt;indexentry&gt;
   can be placed just next to the appropriate word.
 </div>
 

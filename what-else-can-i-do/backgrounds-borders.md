@@ -30,14 +30,14 @@ NB CSS2.1 states that the area for background-image should include the padding a
 Firefox 3 starts the tiling position 0 inside the border. mPDF complies with CSS and IE7.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Background-color and background-image set on the <body> element 
+  **Note:** Background-color and background-image set on the <body> element
   will cover the whole page i.e. not inside the "margins". 
   (cf. <a href="{{ "/what-else-can-i-do/backgrounds-borders.html" | prepend: site.baseurl }}">Backgrounds & borders</a>)
 </div>
 
 ## Gradients defined as background-image
 
-(mPDF >= 5.1) Gradients can be defined as `background-image`: both the Mozilla or the draft CSS3 syntax are supported e.g.:
+(mPDF &ge; 5.1) Gradients can be defined as `background-image`: both the Mozilla or the draft CSS3 syntax are supported e.g.:
 
 ```css
 background: -moz-repeating-linear-gradient(red, blue 20px, red 40px)

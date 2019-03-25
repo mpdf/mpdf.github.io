@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/createindex.html
 modification_time: 2015-08-05T12:00:43+00:00
 ---
 
-(mPDF >= 2.2)
+(mPDF &ge; 2.2)
 
 CreateIndex — Generate an Index for the document
 
@@ -17,20 +17,20 @@ CreateIndex — Generate an Index for the document
 # Description
 
 void **CreateIndex** (
- [ int <span class="parameter">$numberofcolumns</span> 
-[, float <span class="parameter">$fontsize</span> 
-[, float <span class="parameter">$linespacing</span> 
-[, float <span class="parameter">$offset</span> 
-[, int <span class="parameter">$usedivletters</span> 
-[, float <span class="parameter">$divlettersfontsize</span> 
-[, float <span class="parameter">$columngap</span> 
-[, string <span class="parameter">$font</span> 
-[, string <span class="parameter">$divletterfont</span> 
-[, boolean <span class="parameter">$uselinking</span> 
+ [ int <span class="parameter">$numberofcolumns</span>
+[, float <span class="parameter">$fontsize</span>
+[, float <span class="parameter">$linespacing</span>
+[, float <span class="parameter">$offset</span>
+[, int <span class="parameter">$usedivletters</span>
+[, float <span class="parameter">$divlettersfontsize</span>
+[, float <span class="parameter">$columngap</span>
+[, string <span class="parameter">$font</span>
+[, string <span class="parameter">$divletterfont</span>
+[, boolean <span class="parameter">$uselinking</span>
 ]]]]]]]]])
 
-Inserts an Index for the document based on index entries made 
-using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; 
+Inserts an Index for the document based on index entries made
+using &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt;
 or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a>.
 
 <div class="alert alert-info" role="alert" markdown="1">
@@ -123,9 +123,9 @@ or <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseu
 # Changelog
 
 <table class="table"> <thead>
-<tr> 
+<tr>
   <th>Version</th>
-  <th>Description</th> 
+  <th>Description</th>
 </tr>
 </thead> <tbody>
 <tr>
@@ -176,4 +176,4 @@ $mpdf->Output();
 
 * Replacement: <a href="{{ "/reference/mpdf-functions/insertindex.html" | prepend: site.baseurl }}">InsertIndex()</a> - Generate an Index for the document
 * <a href="{{ "/reference/mpdf-functions/indexentry.html" | prepend: site.baseurl }}">IndexEntry()</a> - Add an Index entry in the document
-* &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; - Mark an Index entry in the document 
+* &lt;<a href="{{ "/reference/html-control-tags/tocentry.html" | prepend: site.baseurl }}">indexentry</a>&gt; - Mark an Index entry in the document

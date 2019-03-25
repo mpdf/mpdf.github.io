@@ -6,15 +6,15 @@ permalink: /reference/mpdf-variables/iccprofile.html
 modification_time: 2015-08-05T12:01:59+00:00
 ---
 
-(mPDF >= 4.3)
+(mPDF &ge; 4.3)
 
-ICCProfile – Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a (mPDF >= 5.1) compliant documents
+ICCProfile – Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a (mPDF &ge; 5.1) compliant documents
 
 # Description
 
 void **ICCProfile**
 
-Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a compliant documents. 
+Specify ICC colour profile to use when creating PDF/A1-b or PDF/X-1a compliant documents.
 
 Either a 3-colour RGB profile or a 4-colour CMYK profile should be used depending on other settings.
 
@@ -22,7 +22,7 @@ The default colorspace for a PDF/A1-b document is RGB. The default for a PDF/X-1
 
 Specify the full path to ICC profile file.
 
-`sRGB_IEC61966-2-1.icc` is used as the default file for PDF/A1-b documents if none is specified 
+`sRGB_IEC61966-2-1.icc` is used as the default file for PDF/A1-b documents if none is specified
 (a profile must be specified for PDF/X-1a)
 
 # Values

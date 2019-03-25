@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/enableimports.html
 modification_time: 2015-08-05T12:01:55+00:00
 ---
 
-(mPDF >= 4.3)
+(mPDF &ge; 4.3)
 
 enableImports – Enable the use of imported PDF files or templates
 
@@ -18,10 +18,10 @@ Enable the use of imported PDF files or templates. This causes additional files 
 functions allowing you to import PDF files into the document you are writing, and using templates.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** You should only change this variable as a constructor parameter key 
+  **Note:** You should only change this variable as a constructor parameter key
   <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>
-  
-  If you want to set this at runtime, use	
+
+  If you want to set this at runtime, use
   <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}">SetImportUse()</a>.
 </div>
 

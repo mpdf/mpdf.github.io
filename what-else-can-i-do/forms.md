@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/forms.html
 modification_time: 2015-08-05T12:00:13+00:00
 ---
 
-mPDF can generate a static view of HTML forms and their elements, or (from mPDF >= 5.3) can produce an "Active Form".
+mPDF can generate a static view of HTML forms and their elements, or (from mPDF &ge; 5.3) can produce an "Active Form".
 
 # "Active" Forms
 
@@ -103,7 +103,7 @@ Acrobat Javascript reference manual from the Adobe Developer's site).
 For select, text and textarea you can use `onChange=""` which is triggered after the value has been changed.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** From mPDF >= 5.4, `<textarea>` and `<input type="text">`
+  **Note:** From mPDF &ge; 5.4, `<textarea>` and `<input type="text">`
   will accept javascript as: `onKeystroke`, `onValidate`, `onCalculate` and `onFormat`.
 
   `onChange` is deprecated but works as `onCalculate` (for `<textarea>` and `<input>`).
@@ -127,7 +127,7 @@ Radio buttons and check-boxes use Adobe Reader's own icons, but Foxit uses infor
 variable `$this->formUseZapD` determines whether ZapfDingbat symbols are used, or mPDF's appearance streams designed
 to mimic Adobe Reader's appearance.
 
-Some components of interactive forms may be output in RGB colorspace even if you have specified 
+Some components of interactive forms may be output in RGB colorspace even if you have specified
 <a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a> setting.
 Since restricted colorSpace is mainly used for PDFA/PDFX files - which cannot contain active form fields anyway - this
 shouldn't matter.

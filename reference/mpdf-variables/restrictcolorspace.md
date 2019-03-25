@@ -7,7 +7,7 @@ modification_time: 2015-08-05T12:02:24+00:00
 ---
 
 
-(mPDF >= 5.1)
+(mPDF &ge; 5.1)
 
 restrictColorSpace – Specify whether to automatically limit the colorspaces used
 
@@ -15,14 +15,14 @@ restrictColorSpace – Specify whether to automatically limit the colorspaces us
 
 void **PDFAauto**
 
-Specify whether to automatically limit the colorspaces used when creating PDF/A1-b or PDF/X-1a compliant documents. 
-PDF files can contain objects using different colorSpaces e.g. Grayscale, RGB and CMYK. By default, mPDF creates PDF 
-files using the colours as they are specified: font colour may be set (e.g. `#880000`) as an RGB colour, and the file 
+Specify whether to automatically limit the colorspaces used when creating PDF/A1-b or PDF/X-1a compliant documents.
+PDF files can contain objects using different colorSpaces e.g. Grayscale, RGB and CMYK. By default, mPDF creates PDF
+files using the colours as they are specified: font colour may be set (e.g. `#880000`) as an RGB colour, and the file
 may contain JPG images in RGB or CMYK format.
 
-In some circumstances, you may wish to create a PDF file with restricted colorSpaces e.g. printers will often want 
-files which contain only CMYK, spot colours, or grayscale, but not RGB. Using restrictColorSpace will attempt to 
-convert every colour value used in the document to the permitted colorSpace(s). Almost everything including images 
+In some circumstances, you may wish to create a PDF file with restricted colorSpaces e.g. printers will often want
+files which contain only CMYK, spot colours, or grayscale, but not RGB. Using restrictColorSpace will attempt to
+convert every colour value used in the document to the permitted colorSpace(s). Almost everything including images
 will be converted (except BMP images), and the conversion of images may take significant time.
 
 # Values

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/restartdoctemplate.html
 modification_time: 2015-08-05T12:00:51+00:00
 ---
 
-(mPDF >= 2.4)
+(mPDF &ge; 2.4)
 
 RestartDocTemplate – Re-start the use of a Document template from the next page
 
@@ -48,7 +48,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->SetImportUse();
 
-// Document template consisting of 2 pages, 
+// Document template consisting of 2 pages,
 // first with logo and addresses, 2nd with a simple header
 $mpdf->SetDocTemplate('logoheader.pdf',true);
 $mpdf->AddPage();

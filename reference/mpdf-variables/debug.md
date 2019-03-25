@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/debug.html
 modification_time: 2017-09-25T18:01:50+00:00
 ---
 
-(mPDF >= 3.1)
+(mPDF &ge; 3.1)
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** This variable was partially succeeded by usage of `\Psr\Log\LogInterface` in 7.0

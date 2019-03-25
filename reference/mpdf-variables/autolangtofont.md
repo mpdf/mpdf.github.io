@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/autolangtofont.html
 modification_time: 2017-03-13T15:06:17+01:00
 ---
 
-(mPDF >= 6.0)
+(mPDF &ge; 6.0)
 
 # Description
 

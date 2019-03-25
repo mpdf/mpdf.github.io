@@ -7,7 +7,7 @@ modification_time: 2017-03-16T12:01:09+00:00
 ---
 
 
-(mPDF >= 5.4)
+(mPDF &ge; 5.4)
 
 SetVisibility – Set the visibility of subsequent objects
 
@@ -22,16 +22,16 @@ Set the visibility of subsequent objects
 <span class="parameter">$visibility</span>
 
 : This parameter specifies the visibility.
-  
+
   **Values**
-  
+
   <span class="smallblock">STRING</span> - One of the following:
-  
+
   * `'visible'`
   * `'hidden'`
   * `'printonly'`
   * `'screenonly'`
-  
+
   Default: `'visible'`
 
 # Changelog
@@ -62,7 +62,7 @@ $mpdf->SetVisibility('printonly');
 $mpdf->WriteHTML('This text will only be visible when the document is printed');
 
 $mpdf->SetVisibility('screenonly');
-$mpdf->WriteHTML('This text will only be visible on screen, and will not 
+$mpdf->WriteHTML('This text will only be visible on screen, and will not
 be included when the document is printed');
 
 ...

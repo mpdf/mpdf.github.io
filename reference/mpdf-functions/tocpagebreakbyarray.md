@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/tocpagebreakbyarray.html
 modification_time: 2015-08-05T12:01:13+00:00
 ---
 
-(mPDF >= 5.0)
+(mPDF &ge; 5.0)
 
 TOCpagebreakByArray — Insert a table of contents in the document using an array of parameters
 
@@ -107,7 +107,7 @@ generated automatically at the end of the document when
 
   `'L'` or `'landscape'`
   : Landscape
-  
+
   `'P'` or `'portrait'`
   : Portrait
 
@@ -236,7 +236,7 @@ generated automatically at the end of the document when
   See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information
 
 <span class="parameter">$toc-sheet-size</span>
-<span class="parameter">$sheet-size</span> 
+<span class="parameter">$sheet-size</span>
 
 : Can be specified either as:
   * string for a pre-defined page size, see values below, e.g. `'A5'`
@@ -269,9 +269,9 @@ for further details.
 
 <table class="table">
 <thead>
-<tr> 
+<tr>
   <th>Version</th>
-  <th>Description</th> 
+  <th>Description</th>
 </tr>
 </thead>
 <tbody>
@@ -284,7 +284,7 @@ for further details.
   <td markdown="1">
   <span class="parameter">$outdent</span> parameter added
 
-  and parameters <span class="parameter">$font</span>, <span class="parameter">$font-size</span> 
+  and parameters <span class="parameter">$font</span>, <span class="parameter">$font-size</span>
   and <span class="parameter">$indent</span> redundant/ignored
   </td>
 </tr>
@@ -376,8 +376,8 @@ $mpdf->Output();
 
 - <a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> - Add an entry for Table of Contents
 - <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page
-- <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a> - Add a new page 
+- <a href="{{ "/reference/mpdf-functions/addpagebyarray.html" | prepend: site.baseurl }}">AddPageByArray()</a> - Add a new page
   using an array of parameters
-- &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; - Custom HTML tag - 
+- &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; - Custom HTML tag -
   equivalent to `TOCpagebreakByArray()`
 

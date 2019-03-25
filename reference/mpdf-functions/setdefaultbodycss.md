@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdefaultbodycss.html
 modification_time: 2015-08-05T12:00:57+00:00
 ---
 
-(mPDF >= 4.2)
+(mPDF &ge; 4.2)
 
 SetDefaultBodyCSS – Change default CSS properties at runtime
 
@@ -21,11 +21,11 @@ Change default CSS properties at runtime. This changes the default CSS styleshee
 <span class="parameter">$property</span>
 
 : Specifies the CSS property to set. Any valid CSS property that mPDF supports for the BODY element e.g.
-  
+
   `font-family`, `font-size`, `color`
-  
+
   Case-insensitive
-  
+
 <span class="parameter">$value</span>
 
 : Specifies the value for the given property.

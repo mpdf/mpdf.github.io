@@ -6,12 +6,12 @@ permalink: /reference/mpdf-utilities/strcode2utf.html
 modification_time: 2015-08-05T12:02:42+00:00
 ---
 
-(mPDF >=1.0 && < 7.0)
+(mPDF &ge;1.0 && < 7.0)
 
 strcode2utf – Convert HTML numerical entities to UTF-8 encoded string
 
 <div class="alert alert-warning" role="alert" markdown="1">
-  **Note:** in mPDF >= 7.0 use `\Mpdf\Utils\UtfString::strcode2utf` method.
+  **Note:** in mPDF &ge; 7.0 use `\Mpdf\Utils\UtfString::strcode2utf` method.
 </div>
 
 # Description

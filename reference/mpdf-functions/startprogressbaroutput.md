@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/startprogressbaroutput.html
 modification_time: 2015-08-05T12:01:11+00:00
 ---
 
-(mPDF >= 4.2 & < 7.0)
+(mPDF &ge; 4.2 & < 7.0)
 
 <div class="alert alert-danger" role="alert" markdown="1">
   **Note:** This feature was removed in mPDF 7.0
@@ -26,10 +26,10 @@ development purposes, or for slow document generation. To set this value globall
   **Note:** You may need to define the constant `_MPDF_URI`
   if you use progress bars. The constant `_MPDF_URI` is needed to redirect the user to the PDF file (and prior to
   mPDF 5.0 to locate a javascript file within the progress bar script). It must be either a relative path
-  (e.g. `'../'`) or a full URI (e.g. `'http://www.mydomain.com/mpdf/'`). 
-  
-  If you do not define it before calling `mPDF()` mPDF will assign it the same value as `_MPDF_PATH`. This is 
-  fine if you have used a relative path. `_MPDF_PATH` requires either a relative path or a filesystem real path 
+  (e.g. `'../'`) or a full URI (e.g. `'http://www.mydomain.com/mpdf/'`).
+
+  If you do not define it before calling `mPDF()` mPDF will assign it the same value as `_MPDF_PATH`. This is
+  fine if you have used a relative path. `_MPDF_PATH` requires either a relative path or a filesystem real path
   (e.g. `'/homepages/27/d84233457/htdocs/'`)
 </div>
 
@@ -39,8 +39,8 @@ development purposes, or for slow document generation. To set this value globall
 
 : **Values** (case-insensitive)
 
-  * `1` or <span class="smallblock">BLANK</span> or omitted: Shows 1 progress bar (simple form) 
-  
+  * `1` or <span class="smallblock">BLANK</span> or omitted: Shows 1 progress bar (simple form)
+
   * `2`: Shows multiple progress bars for detailed examination of progress
 
   Default: `1`

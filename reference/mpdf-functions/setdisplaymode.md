@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdisplaymode.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 SetDisplayMode – Specify the initial Display Mode when the PDF file is opened in Adobe Reader
 
@@ -14,7 +14,7 @@ SetDisplayMode – Specify the initial Display Mode when the PDF file is opened 
 
 void **SetDisplayMode** ( mixed <span class="parameter">$zoom</span> [, string <span class="parameter">$layout</span> ])
 
-Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in 
+Specify the initial Display Mode when the PDF file is opened in Adobe Reader. When the user opens the finished file in
 Adobe Reader, these values will determine the initial appearance and layout.
 
 # Parameters
@@ -22,9 +22,9 @@ Adobe Reader, these values will determine the initial appearance and layout.
 <span class="parameter">$zoom</span>
 
 : This parameter specifies the magnification (zoom) of the display when the document is opened.
-  
+
   **Values** (case-sensitive)
-  
+
   * `'fullpage'`
     : Fit a whole page in the screen
   * `'fullwidth'`
@@ -35,13 +35,13 @@ Adobe Reader, these values will determine the initial appearance and layout.
     : User's default setting in Adobe Reader
   * or an <span class="smallblock">INTEGER</span>
     : Display at a percentage zoom (e.g. `90` will display at 90% zoom)
-  
+
 <span class="parameter">$layout</span>
 
 : Specify the page layout to be used when the document is opened.
-  
+
   **Values** (case-sensitive)
-  
+
   * `'single'`
     : Display one page at a time
   * `'continuous'`
@@ -49,9 +49,9 @@ Adobe Reader, these values will determine the initial appearance and layout.
   * `'two'`
     : Display the pages in two columns (first page determined by document direction (e.g. RTL))
   * `'twoleft'`
-    : Display the pages in two columns, with the first page displayed on the left side (mPDF >= 5.2)
+    : Display the pages in two columns, with the first page displayed on the left side (mPDF &ge; 5.2)
   * `'tworight'`
-    : Display the pages in two columns, with the first page displayed on the right side (mPDF >= 5.2)
+    : Display the pages in two columns, with the first page displayed on the right side (mPDF &ge; 5.2)
   * `'default'`
     : User's default setting in Adobe Reader
 

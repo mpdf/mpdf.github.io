@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/bleedmargin.html
 modification_time: 2015-08-05T12:01:45+00:00
 ---
 
-mPDF >= 5.1
+mPDF &ge; 5.1
 
 **$bleedMargin**
 

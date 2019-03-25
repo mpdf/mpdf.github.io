@@ -6,14 +6,14 @@ permalink: /reference/mpdf-variables/tabspaces.html
 modification_time: 2015-08-05T12:02:32+00:00
 ---
 
-(mPDF >= 2.3)
+(mPDF &ge; 2.3)
 
 # Description
 
 int **tabSpaces**
 
-Specifies the number of spaces to substitue for a <span class="smallblock">TAB</span> character when parsing HTML input 
-between `<pre>...</pre>` tags. The default value (`8`) is consistent with the HTML specification, but many programs 
+Specifies the number of spaces to substitue for a <span class="smallblock">TAB</span> character when parsing HTML input
+between `<pre>...</pre>` tags. The default value (`8`) is consistent with the HTML specification, but many programs
 including Windows NotePad uses a value of `6`.
 
 # Values

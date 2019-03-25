@@ -9,7 +9,7 @@ modification_time: 2017-06-22T12:02:00+00:00
 
 Types page breaks for forced pagebreaks using `<pagebreak />`.
 
-(mPDF >= 6.0)
+(mPDF &ge; 6.0)
 
 # Description
 

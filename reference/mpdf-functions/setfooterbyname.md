@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setfooterbyname.html
 modification_time: 2015-08-05T12:01:02+00:00
 ---
 
-(mPDF >= 2.0)
+(mPDF &ge; 2.0)
 
 SetFooterByName – Sets a page footer by a given name
 
@@ -26,7 +26,7 @@ Sets a page footer that has previously been defined by name.
 
 <span class="parameter">$name</span>
 
-: This parameter specifies the name of a previously defined page footer. 
+: This parameter specifies the name of a previously defined page footer.
 
   If a <span class="smallblock">BLANK</span> string
   or `null` is passed, mPDF will use the value `_default` if such a page footer exists.
@@ -35,17 +35,17 @@ Sets a page footer that has previously been defined by name.
 
 : Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages
   in a <span class="smallblock">DOUBLE-SIDED</span> document.
-  
+
   **Values** (case-sensitive)
-  
+
   * `'O'`
     : set the footer for <span class="smallblock">ODD</span> pages in a <span class="smallblock">DOUBLE-SIDED</span>
       document, or for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> in a
       <span class="smallblock">SINGLE-SIDED</span> document.
-  
-  * `'E'` 
+
+  * `'E'`
     : set the footer for <span class="smallblock">EVEN</span> pages
-  
+
       Default sets the footer for <span class="smallblock">ODD</span> in a
       <span class="smallblock">DOUBLE-SIDED</span> document, or for both <span class="smallblock">ODD</span>
       and <span class="smallblock">EVEN</span> in a <span class="smallblock">SINGLE-SIDED</span> document.

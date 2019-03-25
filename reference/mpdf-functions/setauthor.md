@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setauthor.html
 modification_time: 2015-08-05T12:00:54+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 SetAuthor – Set the document Author
 
@@ -17,7 +17,7 @@ void **SetAuthor** ( string <span class="parameter">$text</span> )
 Set the Author for the document. This metadata can be seen when inspecting the document properties in Adobe Reader.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text 
+  **Note:** Adobe Reader uses system fonts to display the document metadata, therefore any Unicode text
   can be used, even if a unibyte codepage is being used for the document.
 </div>
 
@@ -27,7 +27,7 @@ Set the Author for the document. This metadata can be seen when inspecting the d
 
 : Defines the text to appear as the Author. The text should be UTF-8 encoded, but should not contain HTML mark-up tags.
 
-  <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful 
+  <a href="{{ "/reference/mpdf-utilities/strcode2utf.html" | prepend: site.baseurl }}">strcode2utf()</a> is a useful
   function provided with mPDF which converts HTML numerical entities to UTF-8 encoded string.
 
 # Examples

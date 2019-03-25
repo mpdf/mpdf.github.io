@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/useadobecjk.html
 modification_time: 2015-08-05T12:02:34+00:00
 ---
 
-(mPDF >= 5.0)
+(mPDF &ge; 5.0)
 
 # Description
 
@@ -21,7 +21,7 @@ The precise effect it has on different languages/fonts is specified in the `\Mpd
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** This value can only be set as a configuration variable
-  
+
   To change the value at runtime, you must use `$mpdf = new \Mpdf\Mpdf(['mode' => '-aCJK']);` to set as
   `false` or `$mpdf = new \Mpdf\Mpdf(['mode' => '-aCJK']); `to set as
   `true`

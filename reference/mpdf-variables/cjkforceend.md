@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/cjkforceend.html
 modification_time: 2015-08-05T12:01:46+00:00
 ---
 
-(mPDF >= 5.7)
+(mPDF &ge; 5.7)
 
 bool **$CJKforceend**
 
@@ -16,7 +16,7 @@ Configurable variables allow fine control of behaviour:
 
 ```php
 <?php
-$this->CJKforceend = false; 
+$this->CJKforceend = false;
 ```
 
  * `false`: Forces overflowing punctuation to hang outside right margin (used with CJK script)
@@ -46,15 +46,15 @@ $this->allowCJKoverflow = false;
 
 Default: `false`
 
-IF `$this->allowCJKorphans == true`  
-AND `$this->allowCJKoverflow == true`  
-AND `$this->CJKforceend == true`  
+IF `$this->allowCJKorphans == true`
+AND `$this->allowCJKoverflow == true`
+AND `$this->CJKforceend == true`
 AND `text-align:justify`
 
 will force hanging punctuation to hang outside right margin.
 
 
 See also:
- * <a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a> 
+ * <a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a>
  * <a href="{{ "/reference/mpdf-variables/allowcjkorphans.html" | prepend: site.baseurl }}">allowCJKorphans</a>
 

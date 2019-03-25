@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/cropmarklength.html
 modification_time: 2015-08-05T12:01:47+00:00
 ---
 
-mPDF >= 5.1
+mPDF &ge; 5.1
 
 Default length in mm of crop line
 

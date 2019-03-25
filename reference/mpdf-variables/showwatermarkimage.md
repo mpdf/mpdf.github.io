@@ -6,14 +6,14 @@ permalink: /reference/mpdf-variables/showwatermarkimage.html
 modification_time: 2015-08-05T12:02:27+00:00
 ---
 
-(mPDF >= 2.2)
+(mPDF &ge; 2.2)
 
 # Description
 
 boolean **showWatermarkImage**
 
-Specifies whether or not to show/print the watermark image on each page. The file for the watermark must be defined 
-using <a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a>. 
+Specifies whether or not to show/print the watermark image on each page. The file for the watermark must be defined
+using <a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a>.
 The watermark is added to the document at the end of each page.
 
 # Values

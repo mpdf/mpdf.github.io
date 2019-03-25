@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/watermarktext.html
 modification_time: 2015-08-05T12:01:31+00:00
 ---
 
-(mPDF >= 3.0)
+(mPDF &ge; 3.0)
 
 watermarktext – Set the text to use as a Watermark
 
@@ -14,9 +14,9 @@ watermarktext – Set the text to use as a Watermark
 
 &lt;**watermarktext**  <span class="parameter">$content</span> [ <span class="parameter">$alpha</span> ] /&gt;
 
-Set the text to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text 
-such as "DRAFT". The watermark will be added to each page when the Footer is printed if the variable 
-<a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermark</a> is set 
+Set the text to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text
+such as "DRAFT". The watermark will be added to each page when the Footer is printed if the variable
+<a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermark</a> is set
 to `1` or `true`. 
 
 # Parameters
@@ -25,19 +25,19 @@ to `1` or `true`. 
 
 : This parameter defines the text to use for the watermark.
 
-  <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and must use the 
-  appropriate HTML entities e.g. `<watermarktext content="Brian&amp;#039;s document" />`  It is recommended that you 
+  <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and must use the
+  appropriate HTML entities e.g. `<watermarktext content="Brian&amp;#039;s document" />`  It is recommended that you
   use `htmlspecialchars('Content', ENT_QUOTES)` for this.
 
   If the text is blank, it will clear the watermark text, so nothing appears.
-  
+
   Default: <span class="smallblock">BLANK</span>
 
 <span class="parameter">$alpha</span>
 
-: This parameter defines the transparency value (alpha) to use for the watermark: either text or image. The Value should 
+: This parameter defines the transparency value (alpha) to use for the watermark: either text or image. The Value should
 be between `'0'` and `'1'`.
-    
+
   Default: `'0.2'`
 
 # Changelog

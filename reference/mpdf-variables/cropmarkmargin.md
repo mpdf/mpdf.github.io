@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/cropmarkmargin.html
 modification_time: 2015-08-05T12:01:48+00:00
 ---
 
-mPDF >= 5.1
+mPDF &ge; 5.1
 
 Distance of crop mark from margin in mm
 

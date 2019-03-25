@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setadditionalxmprdf.html
 modification_time: 2017-09-26T19:18:38+00:00
 ---
 
-(mPDF >= 7.0)
+(mPDF &ge; 7.0)
 
 # Description
 

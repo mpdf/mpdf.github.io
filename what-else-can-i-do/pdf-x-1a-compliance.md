@@ -6,22 +6,22 @@ permalink: /what-else-can-i-do/pdf-x-1a-compliance.html
 modification_time: 2015-08-05T12:00:20+00:00
 ---
 
-(mPDF >= 5.1)
+(mPDF &ge; 5.1)
 
 PDF/X-1a is a file format to facilitate printing of electronic documents.
 
-Two key elements to this function are the requirement for PDF/X documents to be 100% self-contained, and all images 
+Two key elements to this function are the requirement for PDF/X documents to be 100% self-contained, and all images
 need to be CMYK or spot colors.
 
-A PDF/X document can be identified as such through PDF/X-specific metadata located in the document. However, 
+A PDF/X document can be identified as such through PDF/X-specific metadata located in the document. However,
 claiming to be PDF/X compliant and being so are not necessarily the same.
 
-**Important**: mPDF is ***not guaranteed*** to produce fully PDF/X-1a compliant files in all circumstances. 
+**Important**: mPDF is ***not guaranteed*** to produce fully PDF/X-1a compliant files in all circumstances.
 It is the users responsibility to check compliance if this is essential.
 
 # mPDF and PDF/X-1a compliance
 
-You can make mPDF produce mPDF/X-1a:2003 compliant files by setting 
+You can make mPDF produce mPDF/X-1a:2003 compliant files by setting
 a <a href="{{ "/reference/mpdf-variables/pdfx.html" | prepend: site.baseurl }}">PDFX</a> configuration variable:
 
 ```php
@@ -32,13 +32,13 @@ $this->PDFX = true;
 
 ## Colorspaces and ICC Profiles
 
-PDF files handle colours internally in a number of different colorspaces. PDFX files can only use CMYK and spot colours, 
+PDF files handle colours internally in a number of different colorspaces. PDFX files can only use CMYK and spot colours,
 and a colorspace profile must be embedded in the document.
 
-It is likely that most content in a PDF file will be RGB unless you have specifically defined otherwise e.g. 
+It is likely that most content in a PDF file will be RGB unless you have specifically defined otherwise e.g.
 a CMYK JPG image file, or colours defined as CMYK() etc.
 
-Colorspaces can be altered using 
+Colorspaces can be altered using
 <a href="{{ "/reference/mpdf-variables/restrictcolorspace.html" | prepend: site.baseurl }}">restrictColorSpace</a>.
 
 An ICC Color profile must be embedded in the file.
@@ -49,11 +49,11 @@ Sources of free ICC profiles are:
 
 - [http://www.color.org](http://www.color.org)
 - [http://www.eci.org](http://www.eci.org)
-- [http://www.color.org/profiles2.xalter](http://www.color.org/profiles2.xalter) 
-- [http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html](http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html) 
+- [http://www.color.org/profiles2.xalter](http://www.color.org/profiles2.xalter)
+- [http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html](http://www.adobe.com/support/downloads/iccprofiles/iccprofiles_win.html)
 
-You can change the color profile used by mPDF by specifying 
-<a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a> configuration variable as 
+You can change the color profile used by mPDF by specifying
+<a href="{{ "/reference/mpdf-variables/iccprofile.html" | prepend: site.baseurl }}">ICCProfile</a> configuration variable as
 a path to your ICC profile:
 
 ```php
@@ -65,7 +65,7 @@ $mpdf->ICCProfile = __DIR__ . '/SWOP2006_Coated5v2';
 
 ## Fonts
 
-All fonts must be embedded in a PDF/X file. mPDF normally uses the core Adobe fonts (Helvetica, Times, Courier, 
+All fonts must be embedded in a PDF/X file. mPDF normally uses the core Adobe fonts (Helvetica, Times, Courier,
 Symbol and Zapfdingbats) in a number of situations, and these font files are not available to embed. This affects:
 
 - <span class="parameter">$useCoreFontsOnly</span> is not permitted
@@ -77,7 +77,7 @@ Also, the fonts GB, BIG5, UHC and SJIS which reference the free CJK font pack fr
 
 ## Transparency and Annotations
 
-Because PDF/X-1a has the objective of ensuring reliable reproduction of the document, no objects may be transparent 
+Because PDF/X-1a has the objective of ensuring reliable reproduction of the document, no objects may be transparent
 or semi-transparent. This affects:
 
 - watermarks text or images
@@ -88,26 +88,26 @@ or semi-transparent. This affects:
 
 When `$this->PDFX` is set to `true`, the following changes will automatically and silently happen:
 
-- list bullets will use the characters from the current font (if available) e.g. `•`, `⚬`, `▪` 
+- list bullets will use the characters from the current font (if available) e.g. `•`, `⚬`, `▪`
 - the default font (which in some circumstances is set to a core Adobe font) is set to an alternative embedded font
-- annotations (including hyperlinks) have their 'flag' changed to /F 28 which should force printing 
+- annotations (including hyperlinks) have their 'flag' changed to /F 28 which should force printing
   (this seems to make no difference but is required for PDFX compliance)
 - a /Charset entry is included for each font when using embedded subsets
-- a Metadata object is added to the file 
+- a Metadata object is added to the file
 - an ICC Color Profile is added as /OuputIntent
 
 Only the first change may make a discernible change to the displayed document. All other changes are to the file structure.
 
 ## Warnings
 
-Some problems can be fixed by mPDF, but will cause a change to the appearance of your document. By default they will 
-generate warning messages. Once you have assessed the warnings, you can direct mPDF to make these changes automatically 
+Some problems can be fixed by mPDF, but will cause a change to the appearance of your document. By default they will
+generate warning messages. Once you have assessed the warnings, you can direct mPDF to make these changes automatically
 by setting in your script:
 
 ```php
 <?php
 // Overrides warnings making changes when possible to force PDFX-1a compliance
-$mpdf->PDFXauto = true; 
+$mpdf->PDFXauto = true;
 
 ```
 
@@ -126,8 +126,8 @@ The following issues will cause a warning message when you try to generate a PDF
   <td>Bullets substituted by a hypen <code>'-'</code></td>
 </tr>
 <tr>
-  <td>Character substitution (<span class="parameter">$useSubstitutions</span> or 
-  <span class="parameter">$useSubstitutionsMB</span>) is enabled. This would attempt to substitute 
+  <td>Character substitution (<span class="parameter">$useSubstitutions</span> or
+  <span class="parameter">$useSubstitutionsMB</span>) is enabled. This would attempt to substitute
   missing characters using core Adobe fonts which are disallowed.</td>
   <td>Character substitution is disabled</td>
 </tr>
@@ -136,7 +136,7 @@ The following issues will cause a warning message when you try to generate a PDF
   <td>Annotation markers are placed in the right margin</td>
 </tr>
 <tr>
-  <td>Images which have CSS property opacity set less than 1 - PDFX does not allow transparency. NB GIF or 
+  <td>Images which have CSS property opacity set less than 1 - PDFX does not allow transparency. NB GIF or
   PNG images with a simple transparency set (not alpha-channel mask) are valid.
   </td>
   <td>Opacity is changed to 1 (no transparency)</td>
@@ -147,7 +147,7 @@ The following issues will cause a warning message when you try to generate a PDF
 </tr>
 <tr>
   <td>
-  Barcode of ISBN, ISSN or EAN-13 type which specifies the code to appear above the barcode 
+  Barcode of ISBN, ISSN or EAN-13 type which specifies the code to appear above the barcode
   (normally uses Helvetica font).
   </td>
   <td>Substitutes available sans-serif font</td>

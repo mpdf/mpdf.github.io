@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/tocpagebreak.html
 modification_time: 2015-08-05T12:01:12+00:00
 ---
 
-(mPDF >= 2.0)
+(mPDF &ge; 2.0)
 
 TOCpagebreak — Insert a table of contents in the document
 
@@ -79,8 +79,8 @@ The numerous parameters specify both paging details for the continuing document,
 <div class="alert alert-warning" role="alert" markdown="1">
   **Note:** From mPDF 5.7 the layout of a table of contents can be controlled using CSS.
 	<span class="parameter">$font</span>, <span class="parameter">$font-size</span> and
-	<span class="parameter">$indent</span> have become redundant. 
-	
+	<span class="parameter">$indent</span> have become redundant.
+
   Any values set for these are ignored, but they are kept as useless parameters to allow backwards
   compatibility.
 </div>
@@ -128,7 +128,7 @@ generated automatically at the end of the document when
 <span class="parameter">$font </span>
 
 : <div class="alert alert-warning" role="alert" markdown="1">
-    From mPDF >= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any
+    From mPDF &ge; 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any
     value set for this is ignored.
   </div>
 
@@ -141,10 +141,10 @@ generated automatically at the end of the document when
 <span class="parameter">$font-size</span>
 
 : <div class="alert alert-warning" role="alert" markdown="1">
-    From mPDF >= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any
+    From mPDF &ge; 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s. Any
     value set for this is ignored.
   </div>
-  
+
   Sets the font size for the <acronym title="Table of Contents">ToC</acronym> in ***points*** (pt)
 
   <span class="smallblock">BLANK</span> or omitted or `0` uses the default font-size for the document.
@@ -153,7 +153,7 @@ generated automatically at the end of the document when
 <span class="parameter">$indent</span>
 
 : <div class="alert alert-warning" role="alert" markdown="1">
-    From mPDF >= 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s.
+    From mPDF &ge; 5.7 CSS styles are used to control layout of <acronym title="Table of Contents">ToC</acronym>s.
     Any value set for this is ignored.
   </div>
 
@@ -207,7 +207,7 @@ generated automatically at the end of the document when
   **Values** (case-insensitive)
   `'L'`or`'landscape'`
   : Landscape
-  
+
   `'P'` or `'portrait'`
   : Portrait
 
@@ -326,7 +326,7 @@ generated automatically at the end of the document when
   See <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">Using @page</a> for more information
 
 <span class="parameter">$toc-sheet-size</span>
-<span class="parameter">$sheet-size</span> 
+<span class="parameter">$sheet-size</span>
 
 : Can be specified either as:
   * string for a pre-defined page size, see values below, e.g. `'A5'`
@@ -388,10 +388,10 @@ generated automatically at the end of the document when
 
 
 <span class="parameter">$toc-suppress</span> = `true` \| `false` \| `1` \| `0`
-<span class="parameter">$suppress</span> = `'on'` 
+<span class="parameter">$suppress</span> = `'on'`
 
-: will suppress document page numbers in the <acronym title="Table of Contents">ToC</acronym> 
-  
+: will suppress document page numbers in the <acronym title="Table of Contents">ToC</acronym>
+
   <span class="smallblock">BLANK</span> or omitted leaves the current condition unchanged.
 
   **Values** (case-insensitive)
@@ -408,13 +408,13 @@ generated automatically at the end of the document when
   in the final document this will be the part of the document immediately after the <acronym title="Table of Contents">ToC</acronym>.
 
   Please refer to <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> for
-  further details. But **note** there are differences in the order of the parameters especially take care with 
+  further details. But **note** there are differences in the order of the parameters especially take care with
    <span class="parameter">$orientation</span>
 
 # Changelog
 
 <table class="table"> <thead>
-<tr> 
+<tr>
   <th>Version</th>
   <th>Description</th> </tr>
 </thead> <tbody>
@@ -445,14 +445,14 @@ generated automatically at the end of the document when
   <td markdown="1">
   <span class="parameter">$outdent</span> parameter added
 
-  and parameters <span class="parameter">$font</span>, <span class="parameter">$font-size</span> and 
+  and parameters <span class="parameter">$font</span>, <span class="parameter">$font-size</span> and
   <span class="parameter">$indent</span> redundant and ignored
   </td>
 </tr>
 <tr>
   <td>6.0</td>
   <td>
-    Parameters added:  <span class="parameter">$toc-resetpagenum</span>, <span class="parameter">$toc-pagenumstyle</span> 
+    Parameters added:  <span class="parameter">$toc-resetpagenum</span>, <span class="parameter">$toc-pagenumstyle</span>
     and <span class="parameter">$toc-suppress</span>
   </td>
 </tr>
@@ -479,5 +479,5 @@ $mpdf->Output();
 
 - <a href="{{ "/reference/mpdf-functions/toc-entry.html" | prepend: site.baseurl }}">TOC_Entry()</a> - Add an entry for Table of Contents
 - <a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> - Add a new page
-- &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; - Custom HTML tag - 
-  equivalent to `TOCpagebreak()` 
+- &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt; - Custom HTML tag -
+  equivalent to `TOCpagebreak()`

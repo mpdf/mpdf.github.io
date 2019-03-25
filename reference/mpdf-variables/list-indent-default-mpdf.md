@@ -6,13 +6,13 @@ permalink: /reference/mpdf-variables/list-indent-default-mpdf.html
 modification_time: 2015-08-05T12:02:09+00:00
 ---
 
-(mPDF >= 6.0)
+(mPDF &ge; 6.0)
 
 # Description
 
 void **list_indent_default_mpdf**
 
-Define the default indentation of a list item, when in (backwards-compatible) `'mpdf'` list mode. Note that in mpdf mode, 
+Define the default indentation of a list item, when in (backwards-compatible) `'mpdf'` list mode. Note that in mpdf mode,
 the real indentation is calculated by adding the value of this property to the width of the widest list-marker.
 
 For more information, see <a href="{{ "/what-else-can-i-do/lists.html" | prepend: site.baseurl }}">Lists</a>.

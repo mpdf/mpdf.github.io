@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/watermarkimagealpha.html
 modification_time: 2015-08-05T12:02:40+00:00
 ---
 
-(mPDF >= 2.2)
+(mPDF &ge; 2.2)
 
 # Description
 
@@ -21,7 +21,7 @@ Specifies the transparency (alpha value) to use for the watermark text on each p
 * Define as a value between `0` and `1`.
 * <span class="smallblock">BLANK</span> is default value.
 
-Default: `0.2` 
+Default: `0.2`
 
 # Examples
 

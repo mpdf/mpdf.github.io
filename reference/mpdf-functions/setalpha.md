@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setalpha.html
 modification_time: 2015-08-05T12:00:53+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 SetAlpha – Set the opacity for Images
 
@@ -23,7 +23,7 @@ Set the opacity and blend mode for Images
 : This parameter specifies the opacity for any subsequent images written to the current document.
 
   **Values**
-  
+
   Float: `0` (transparent) to `1` (opaque)
 
 <span class="parameter">$blend</span>

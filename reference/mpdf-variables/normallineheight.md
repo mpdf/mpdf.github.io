@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/normallineheight.html
 modification_time: 2015-08-05T12:02:16+00:00
 ---
 
-(mPDF >= 4.2)
+(mPDF &ge; 4.2)
 
 normalLineheight – Define the default line-height
 

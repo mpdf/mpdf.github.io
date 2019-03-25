@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/addcolumn.html
 modification_time: 2015-08-05T12:00:38+00:00
 ---
 
-(mPDF >= 2.2)
+(mPDF &ge; 2.2)
 
 AddColumn – Start a new Column
 

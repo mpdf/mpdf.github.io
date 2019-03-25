@@ -7,7 +7,7 @@ modification_time: 2015-08-05T12:01:50+00:00
 ---
 
 
-mPDF >= 5.0
+mPDF &ge; 5.0
 
 Show errors and warning notes for fonts.
 
@@ -15,7 +15,7 @@ Default set as a <a href="{{ "/configuration/configuration-v7-x.html" | prepend:
 
 Default value: `false`
 
-Values: 
+Values:
 * `true`
 * `false`
 

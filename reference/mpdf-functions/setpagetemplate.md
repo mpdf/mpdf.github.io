@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setpagetemplate.html
 modification_time: 2015-08-05T12:01:07+00:00
 ---
 
-(mPDF >= 2.3)
+(mPDF &ge; 2.3)
 
 SetPageTemplate – Specify a page from an external PDF file to use as a template
 
@@ -14,19 +14,19 @@ SetPageTemplate – Specify a page from an external PDF file to use as a templat
 
 void **SetPageTemplate** ([ int <span class="parameter">$templateID</span> ])
 
-Specify a page from an external PDF file to use as a template. The page must have already been stored as a 'template' 
-using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. Once 
-a 'page template' has been set, the template is inserted on every subsequent page of the document. The template is 
+Specify a page from an external PDF file to use as a template. The page must have already been stored as a 'template'
+using <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. Once
+a 'page template' has been set, the template is inserted on every subsequent page of the document. The template is
 added to the page at the same time as a new page is started (in the Header).
 
 # Parameters
 
 <span class="parameter">$templateID</span>
 
-: This parameter specifies the ID of the page template to use. Value must be a valid template ID 
+: This parameter specifies the ID of the page template to use. Value must be a valid template ID
   from <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>.
 
-  Default or <span class="smallblock">BLANK</span> will clear the template, so 
+  Default or <span class="smallblock">BLANK</span> will clear the template, so
   subsequent pages will not have the template added.
 
 # Changelog

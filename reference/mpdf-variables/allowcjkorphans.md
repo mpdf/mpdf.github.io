@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/allowcjkorphans.html
 modification_time: 2015-08-05T12:01:36+00:00
 ---
 
-(mPDF >= 5.7)
+(mPDF &ge; 5.7)
 
 bool **$allowCJKorphans**
 
@@ -36,7 +36,7 @@ $this->allowCJKoverflow = false;
 
 Default: `false`
 
-See also 
-* <a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a> 
+See also
+* <a href="{{ "/reference/mpdf-variables/allowcjkoverflow.html" | prepend: site.baseurl }}">allowCJKoverflow</a>
 * <a href="{{ "/reference/mpdf-variables/cjkforceend.html" | prepend: site.baseurl }}">CJKforceend </a>
 

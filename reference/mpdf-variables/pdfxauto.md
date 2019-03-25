@@ -7,7 +7,7 @@ modification_time: 2015-08-05T12:02:19+00:00
 ---
 
 
-(mPDF >= 5.1)
+(mPDF &ge; 5.1)
 
 PDFXauto – Specify whether to automatically fix issues to create PDF/X-1a compliant document
 

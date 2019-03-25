@@ -6,18 +6,18 @@ permalink: /reference/mpdf-functions/writefixedposhtml.html
 modification_time: 2015-08-05T12:01:16+00:00
 ---
 
-(mPDF >= 4.0)
+(mPDF &ge; 4.0)
 
 WriteFixedPosHTML — Write HTML to a fixed position on the current page
 
 # Description
 
-void **WriteFixedPosHTML** ( 
-string <span class="parameter">$html</span> , 
-float <span class="parameter">$x</span> , 
-float <span class="parameter">$y</span> , 
-float <span class="parameter">$w</span> , 
-float <span class="parameter">$h</span> 
+void **WriteFixedPosHTML** (
+string <span class="parameter">$html</span> ,
+float <span class="parameter">$x</span> ,
+float <span class="parameter">$y</span> ,
+float <span class="parameter">$w</span> ,
+float <span class="parameter">$h</span>
 [, string <span class="parameter">$overflow</span> ])
 
 Write HTML to a fixed position on the current page.
@@ -30,13 +30,13 @@ Write HTML to a fixed position on the current page.
 
 <span class="parameter">$x</span>
 
-: Sets the <span class="parameter">$x</span> position of the (left edge) of the block element, 
+: Sets the <span class="parameter">$x</span> position of the (left edge) of the block element,
   set in mm from the left of the page.<span class="smallblock">
 
 
 <span class="parameter">$y</span>
 
-: Sets the <span class="parameter">$y</span> position of the (top edge) of the block element, 
+: Sets the <span class="parameter">$y</span> position of the (top edge) of the block element,
   set in mm from the top of the page.<span class="smallblock">
 
 <span class="parameter">$w</span>
@@ -49,7 +49,7 @@ Write HTML to a fixed position on the current page.
 
 <span class="parameter">$overflow</span>
 
-: Specifies how to handle text which would not fit inside the block element, with its dimensions 
+: Specifies how to handle text which would not fit inside the block element, with its dimensions
   as specified.
 
   **Values**
@@ -99,7 +99,7 @@ $mpdf->Output();
 
 # See Also
 
-* <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML</a> - 
+* <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML</a> -
   Add an Index entry in the document
-* <a href="{{ "/what-else-can-i-do/fixed-position-blocks.html" | prepend: site.baseurl }}">Fixed position elements</a> - 
+* <a href="{{ "/what-else-can-i-do/fixed-position-blocks.html" | prepend: site.baseurl }}">Fixed position elements</a> -
   About fixed-position elements (using CSS)

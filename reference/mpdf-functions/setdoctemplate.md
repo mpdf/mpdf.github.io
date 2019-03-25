@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setdoctemplate.html
 modification_time: 2015-08-05T12:01:00+00:00
 ---
 
-(mPDF >= 2.3)
+(mPDF &ge; 2.3)
 
 SetDocTemplate – Specify an external PDF file to use as a template
 
@@ -27,20 +27,20 @@ source document, the last page will (optionally) continue to be used for any rem
 
 : This parameter specifies the source PDF file used as the template document.  <span class="parameter">$file</span>
   should be a relative path to a local file.
-  
+
   Default: <span class="smallblock">BLANK</span>
-  
+
 <span class="parameter">$continue</span>
 
 : **Values**: `1` \| `0` \| `true` \| `false`
-  
+
   If `true` (or any positive value) it forces the last page of the source file to
   continue to be used as a template, if the current mPDF document contains more pages than the source file.
-  
+
   Default: `false`
-  
+
   <div class="alert alert-info" role="alert" markdown="1">
-    **Note:** If you want to turn the template off, just use 
+    **Note:** If you want to turn the template off, just use
     <code>$mpdf->SetDocTemplate()</code> with no parameters.
   </div>
 

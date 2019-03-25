@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/deffooterbyname.html
 modification_time: 2015-08-05T12:00:45+00:00
 ---
 
-(mPDF >= 2.0)
+(mPDF &ge; 2.0)
 
 DefFooterByName – Define a page footer with a given name
 
@@ -14,20 +14,20 @@ DefFooterByName – Define a page footer with a given name
 
 void **DefFooterByName** (
 [ string <span class="parameter">$name</span>
-[, array <span class="parameter">$footer</span> 
+[, array <span class="parameter">$footer</span>
 ]])
 
 Define a page footer with a given name. Named footers can be referenced and set later in the document
 e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: site.baseurl }}">SetFooterByName()</a>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Do not name any header or footer starting with `html_` - This prefix is reserved to identify 
+  **Note:** Do not name any header or footer starting with `html_` - This prefix is reserved to identify
 	an <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name. 
-	As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is 
+  **Note:** This function/method was altered in mPDF 2.2 by capitalising the first letter of the name.
+	As function/method names in PHP have hitherto been case-insensitive, this should not cause any problems, but it is
 	recommended where possible to use the preferred spelling.
 </div>
 
@@ -49,7 +49,7 @@ e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: sit
   * <span class="parameter">L</span>: subarray for left
   * <span class="parameter">C</span>: subarray for center
   * <span class="parameter">R</span>: subarray for right
-    
+
     Subarray with following entries:
     * <span class="parameter">content</span>:  <span class="smallblock">TEXT STRING</span>
     * <span class="parameter">font-size</span>:  <span class="smallblock">FLOAT</span> font size in **pts**
@@ -60,7 +60,7 @@ e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: sit
 
   ```php
   <?php
-  
+
   $footer = array (
       'L' => array (
           'content' => '',
@@ -91,9 +91,9 @@ e.g. <a href="{{ "/reference/mpdf-functions/setheaderbyname.html" | prepend: sit
 
 <table class="table">
 <thead>
-<tr> 
+<tr>
   <th>Version</th>
-  <th>Description</th> 
+  <th>Description</th>
 </tr>
 </thead>
 <tbody>

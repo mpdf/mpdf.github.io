@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/defheaderbyname.html
 modification_time: 2015-08-05T12:00:45+00:00
 ---
 
-(mPDF >= 2.0)
+(mPDF &ge; 2.0)
 
 DefHeaderByName – Define a page header with a given name
 
@@ -48,7 +48,7 @@ Define a page header with a given name. Named headers can be referenced and set 
   * <span class="parameter">L</span>: subarray for left
   * <span class="parameter">C</span>: subarray for center
   * <span class="parameter">R</span>: subarray for right
-    
+
     Subarray with following entries:
     * <span class="parameter">content</span>: <span class="smallblock">TEXT STRING</span>
     * <span class="parameter">font-size</span>: <span class="smallblock">FLOAT</span> font size in **pts**
@@ -89,11 +89,11 @@ Define a page header with a given name. Named headers can be referenced and set 
 
 <table class="table">
 <thead>
-<tr> 
+<tr>
     <th>Version</th>
     <th>Description</th>
 </tr>
-</thead> 
+</thead>
 <tbody>
 <tr>
     <td>2.0</td>

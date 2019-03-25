@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/defaultcssfile.html
 modification_time: 2015-08-05T12:01:55+00:00
 ---
 
-(mPDF >= 7.0)
+(mPDF &ge; 7.0)
 
 defaultCssFile – Path of custom default CSS file
 

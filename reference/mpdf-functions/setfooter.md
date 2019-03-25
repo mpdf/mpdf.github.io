@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setfooter.html
 modification_time: 2015-08-05T12:01:01+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 SetFooter – Sets a page footer
 
@@ -26,50 +26,50 @@ Set a page footer.
 
 <span class="parameter">$footer</span>
 
-: This parameter specifies the content of the page footer. It can accept a string or array.  
-  
+: This parameter specifies the content of the page footer. It can accept a string or array.
+
   Default: `array()`
-  
+
   **Values**
   `''` (<span class="smallblock">BLANK</span> string) or `null` or `array()`
   : This will clear the page footer.
-    
+
   `TEXT STRING`
   : A simple text string is set as content for the <span class="smallblock">RIGHT</span> margin. If
     <span class="smallblock">DOUBLE-SIDED</span> document, this is mirrored on <span class="smallblock">EVEN</span>
     pages i.e. <span class="smallblock">LEFT</span> margin.
-  
+
     A text string containing 2 characters `|` - will be split into three strings and set as content for, respectively, the
-    `left | centre | right` parts of the footer 
-    
+    `left | centre | right` parts of the footer
+
     e.g. `$footer = 'Chapter 1|{PAGENO}|Book Title'`.
-  
+
     If <span class="smallblock">DOUBLE-SIDED</span> document, this is mirrored on <span class="smallblock">EVEN</span>
     pages i.e. `right|centre|left`.
-  
+
   `ARRAY`
   : An array can be in two forms:
-    * (Deprecated) The first form includes information for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> 
-      footers, and is the expected form 
+    * (Deprecated) The first form includes information for both <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span>
+      footers, and is the expected form
       if <span class="parameter">$side</span> = <span class="smallblock">BLANK</span>.
-      
+
       **Values**
       * `'odd'`: subarray for <span class="smallblock">ODD</span>
       * `'even'`: subarray for <span class="smallblock">EVEN</span>
-        
-        Subarray with following entries:  
+
+        Subarray with following entries:
         * `'L'`: subarray for left
         * `'C'`: subarray for center
         * `'R'`: subarray for right
-          
+
           Subarray with following entries:
-          * `'content'`: <span class="smallblock">TEXT STRING</span> 
+          * `'content'`: <span class="smallblock">TEXT STRING</span>
           * `'font-size'`: <span class="smallblock">FLOAT</span> font size in **pts**
           * `'font-style'`: `B` \| `I` \| `BI` \| <span class="smallblock">BLANK STRING</span>
-          * `'font-family'`: Any available font-family  
-          * `'color'`: CSS `#RRGGBB` string 
+          * `'font-family'`: Any available font-family
+          * `'color'`: CSS `#RRGGBB` string
         * `'line'`: `0` \| `1` - specify whether to draw a line above the Footer
-    
+
       Example:
       ```php
       <?php
@@ -100,14 +100,14 @@ Set a page footer.
           ),
           'even' => array ()
       );
-      
+
       ```
-    
-    
+
+
     * The second form includes information for either <span class="smallblock">ODD</span> or
       <span class="smallblock">EVEN</span> footers, and must be accompanied by a valid value for
       <span class="parameter">$side</span> = `'O'` \| `'E'`
-      
+
       Example:
       ```php
       <?php
@@ -136,17 +136,17 @@ Set a page footer.
           'line' => 1
       );
       ```
-  
+
 <span class="parameter">$side</span>
 
 : Specify whether to set the footer for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span>
   pages in a <span class="smallblock">DOUBLE-SIDED</span> document.
-  
+
   Default: <span class="smallblock">BLANK</span>
 
   **Values** (case-sensitive)
-  
-  * `O` - set the footer for <span class="smallblock">ODD</span> pages 
+
+  * `O` - set the footer for <span class="smallblock">ODD</span> pages
   * `E` - set the footer for <span class="smallblock">EVEN</span> pages
   * <span class="smallblock">BLANK</span> - sets both <span class="smallblock">ODD</span> or
     <span class="smallblock">EVEN</span> page footers

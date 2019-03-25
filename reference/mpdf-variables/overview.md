@@ -288,7 +288,7 @@ You can redefine the variables in individual scripts as a
             <td><span class="smallblock">DOCUMENT*</span></td>
             <td>5.0</td>
             <td>
-                * You must only change this variable as a <a href="{{ " /configuration/configuration-v7-x.html " | prepend: site.baseurl }}">constructor parameter</a> 
+                * You must only change this variable as a <a href="{{ " /configuration/configuration-v7-x.html " | prepend: site.baseurl }}">constructor parameter</a>
                 Use initial parameter to change at runtime e.g. <code>$mpdf = new \Mpdf\Mpdf(['mode' => '+aCJK']);</code>
             </td>
         </tr>
@@ -433,7 +433,7 @@ You can redefine the variables in individual scripts as a
             <td> </td>
             <td>(4.0)</td>
             <td>
-                NB Altered behaviour mPDF >= 5.0 Default value <code>true</code> before v4.0
+                NB Altered behaviour mPDF &ge; 5.0 Default value <code>true</code> before v4.0
             </td>
         </tr>
         <tr>
@@ -469,8 +469,8 @@ You can redefine the variables in individual scripts as a
             <td><span class="smallblock">DOCUMENT*</span></td>
             <td>4.3</td>
             <td>Enable Imported PDF files (templates) [was mPDFI()] * You must only change this variable as a
-                <a href="{{ " /configuration/configuration-v7-x.html " | prepend: site.baseurl }}">constructor parameter</a> 
-                Use <a href="{{ " /reference/mpdf-functions/setimportuse.html " | prepend: site.baseurl }}">SetImportUse()</a> to 
+                <a href="{{ " /configuration/configuration-v7-x.html " | prepend: site.baseurl }}">constructor parameter</a>
+                Use <a href="{{ " /reference/mpdf-functions/setimportuse.html " | prepend: site.baseurl }}">SetImportUse()</a> to
                 change at runtime.
             </td>
         </tr>
@@ -513,8 +513,8 @@ You can redefine the variables in individual scripts as a
             <td><span class="smallblock">DOCUMENT*</span></td>
             <td>4.2</td>
             <td>Shows progress-bars whilst generating file * You must only change this variable as a
-                <a href="{{ " /configuration/configuration-v7-x.html " | prepend: site.baseurl }}">constructor parameter key</a> 
-                Use <a href="{{ " /reference/mpdf-functions/startprogressbaroutput.html " | prepend: site.baseurl }}">StartProgressBarOutput()</a> 
+                <a href="{{ " /configuration/configuration-v7-x.html " | prepend: site.baseurl }}">constructor parameter key</a>
+                Use <a href="{{ " /reference/mpdf-functions/startprogressbaroutput.html " | prepend: site.baseurl }}">StartProgressBarOutput()</a>
                 to set at runtime.</td>
         </tr>
         <tr>
@@ -677,7 +677,7 @@ You can redefine the variables in individual scripts as a
             <td><code>null</code></td>
             <td><span class="smallblock">DOCUMENT</span></td>
             <td> </td>
-            <td><span class="smallblock">deprecated</span> from >= 4.4</td>
+            <td><span class="smallblock">deprecated</span> from &ge; 4.4</td>
         </tr>
         <tr>
             <td> </td>
@@ -693,7 +693,7 @@ You can redefine the variables in individual scripts as a
             <td> </td>
             <td><span class="smallblock">DOCUMENT</span></td>
             <td> </td>
-            <td><span class="smallblock">deprecated</span> from >= 2.2</td>
+            <td><span class="smallblock">deprecated</span> from &ge; 2.2</td>
         </tr>
         <tr>
             <td>Page Headers &amp; Footers</td>
@@ -773,7 +773,7 @@ You can redefine the variables in individual scripts as a
             <td><code>"!|"</code></td>
             <td><span class="smallblock">DOCUMENT</span></td>
             <td> </td>
-            <td><span class="smallblock">deprecated</span> from >= 4.0</td>
+            <td><span class="smallblock">deprecated</span> from &ge; 4.0</td>
         </tr>
         <tr>
             <td>Tables</td>
@@ -951,7 +951,7 @@ You can redefine the variables in individual scripts as a
             <td><code>null</code></td>
             <td> </td>
             <td> </td>
-            <td> <span class="smallblock">deprecated</span> from >= 5.1</td>
+            <td> <span class="smallblock">deprecated</span> from &ge; 5.1</td>
         </tr>
         <tr>
             <td> </td>

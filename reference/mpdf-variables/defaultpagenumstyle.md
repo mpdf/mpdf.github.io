@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/defaultpagenumstyle.html
 modification_time: 2015-08-05T12:01:54+00:00
 ---
 
-(mPDF >= 6.0)
+(mPDF &ge; 6.0)
 
 # Description
 
@@ -24,18 +24,18 @@ For more information, see <a href="{{ "/paging/page-numbering.html" | prepend: s
 
 (Uses the same values as for list-style-type)
 
-`'1'` \| `'A'` \| `'a'` \| `'I'` \| `'i'` \| `'disc'` \| `'circle'` \| `'square'` \| `'decimal'` \| `'lower-roman'` \| 
+`'1'` \| `'A'` \| `'a'` \| `'I'` \| `'i'` \| `'disc'` \| `'circle'` \| `'square'` \| `'decimal'` \| `'lower-roman'` \|
 `'upper-roman'` \| `'lower-latin'` \| `'upper-latin'` \| `'lower-alpha'` \| `'upper-alpha'` \| `'none'`
 
-`'arabic-indic'` \| `'bengali'` \| `'cambodian'` \| `'cjk-decimal'` \| `'devanagari'` \| `'gujarati'` \| `'gurmukhi'` \| 
-`'hebrew'` \|`'kannada'` \| `'khmer'` \| `'lao'` \| `'malayalam'` \| `'oriya'` \| `'persian'` \| `'telugu'` \| 
+`'arabic-indic'` \| `'bengali'` \| `'cambodian'` \| `'cjk-decimal'` \| `'devanagari'` \| `'gujarati'` \| `'gurmukhi'` \|
+`'hebrew'` \|`'kannada'` \| `'khmer'` \| `'lao'` \| `'malayalam'` \| `'oriya'` \| `'persian'` \| `'telugu'` \|
 `'thai'` \| `'urdu'` \| `'tamil'`
 
-`'1'` = decimal  
-`'A'` = upper-latin  
-`'a'` = lower-latin  
-`'I'` = upper-roman  
-`'i'` = lower-roman   
+`'1'` = decimal
+`'A'` = upper-latin
+`'a'` = lower-latin
+`'I'` = upper-roman
+`'i'` = lower-roman
 
 Default: `'1'`
 

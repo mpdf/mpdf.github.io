@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/construct.html
 modification_time: 2016-06-24T15:36:37+02:00
 ---
 
-(mPDF >= 7.0)
+(mPDF &ge; 7.0)
 
 @todo
 

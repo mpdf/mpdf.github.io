@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/addfontdirectory.html
 modification_time: 2017-09-26T10:00:41+00:00
 ---
 
-(mPDF >= 7.0)
+(mPDF &ge; 7.0)
 
 Adds a user-defined directory where to look for fonts
 

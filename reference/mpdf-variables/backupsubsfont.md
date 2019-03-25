@@ -6,7 +6,7 @@ permalink: /reference/mpdf-variables/backupsubsfont.html
 modification_time: 2015-08-05T12:01:42+00:00
 ---
 
-mPDF >= 5.0
+mPDF &ge; 5.0
 
 Optional array containing font(s) to use for missing characters when using useSubstitutions.
 

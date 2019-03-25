@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setwatermarktext.html
 modification_time: 2015-08-05T12:01:10+00:00
 ---
 
-(mPDF >= 2.2)
+(mPDF &ge; 2.2)
 
 SetWatermarkText – Set the text to use as a Watermark
 
@@ -29,13 +29,13 @@ to `1` or `true`. 
 <span class="parameter">$text</span>
 
 : This parameter defines the text to use for the watermark. The text should be UTF-8 encoded, but should not contain HTML
-  mark-up tags. 
-  
+  mark-up tags.
+
   If the text is blank, it will clear the watermark text, so nothing appears.
-  
+
   Default: <span class="smallblock">BLANK</span>
 
-  
+
 <span class="parameter">$alpha</span>
 
 : This parameter defines the transparency value (alpha) to use for the watermark: either text or image. The Value should
@@ -68,8 +68,8 @@ to `1` or `true`. 
 <tr>
   <td>3.0</td>
   <td markdown="1">
-  No parameters are required from v3.0 onwards     
-  e.g. `$mpdf->SetWatermarkText();` can be used   
+  No parameters are required from v3.0 onwards
+  e.g. `$mpdf->SetWatermarkText();` can be used
   as well as `$mpdf->SetWatermarkText('');`
   </td>
 </tr>

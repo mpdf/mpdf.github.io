@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/sethtmlheader.html
 modification_time: 2015-08-05T12:01:04+00:00
 ---
 
-(mPDF >= 1.2)
+(mPDF &ge; 1.2)
 
 SetHTMLHeader – Sets an HTML page header
 
@@ -27,34 +27,34 @@ Set an HTML page header.
 : This parameter specifies the content of the page header as a string of valid HTML code.
 
   Default: <span class="smallblock">BLANK</span>
-  
+
 <span class="parameter">$side</span>
 
 : Specify whether to set the header for <span class="smallblock">ODD</span> or <span class="smallblock">EVEN</span> pages
   in a <span class="smallblock">DOUBLE-SIDED</span> document.
-  
+
   **Values** (case-sensitive)
-  
+
   `'O'` - set the header for <span class="smallblock">ODD</span> pages
-  
+
   `'E'` - set the header for <span class="smallblock">EVEN</span> pages
-  
+
   Default: <span class="smallblock">BLANK</span>, which sets `'O'`
-  
-  
+
+
 <span class="parameter">$write</span>
 
 : If `true` it forces the Header to be written immediately to the current page. Use if the
   header is being set after the new page has been added.
-  
+
   Default: `false`
-  
+
   <div class="alert alert-info" role="alert" markdown="1">
     **Note:** Important Difference
     * <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a> and
       <a href="{{ "/reference/mpdf-functions/setfooter.html" | prepend: site.baseurl }}">SetFooter()</a> called without
       specifying a <span class="parameter">$side</span> sets both <span class="smallblock">ODD</span> &amp;
-      <span class="smallblock">EVEN</span> headers/footers; 
+      <span class="smallblock">EVEN</span> headers/footers;
     * `SetHTMLHeader()` and <a href="{{ "/reference/mpdf-functions/sethtmlfooter.html" | prepend: site.baseurl }}">SetHTMLFooter()</a>
       without a <span class="parameter">$side</span> - sets <span class="smallblock">ODD</span> page header/footer only
       as default

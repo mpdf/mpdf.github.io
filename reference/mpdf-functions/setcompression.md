@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setcompression.html
 modification_time: 2015-08-05T12:00:56+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 SetCompression – Specifies that mPDF should compress the data for the PDF file
 
@@ -14,7 +14,7 @@ SetCompression – Specifies that mPDF should compress the data for the PDF file
 
 void **SetCompression** ( boolean <span class="parameter">$flag</span> )
 
-Specifies that mPDF should compress the data for the PDF file. This makes a smaller PDF file and is set by 
+Specifies that mPDF should compress the data for the PDF file. This makes a smaller PDF file and is set by
 default to `true` on initialising the mPDF class.
 
 # Parameters

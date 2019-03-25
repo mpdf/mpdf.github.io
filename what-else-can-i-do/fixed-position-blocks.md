@@ -6,7 +6,7 @@ permalink: /what-else-can-i-do/fixed-position-blocks.html
 modification_time: 2015-08-05T12:00:00+00:00
 ---
 
-mPDF >= 4.0
+mPDF &ge; 4.0
 
 # Position
 
@@ -25,7 +25,7 @@ Values:
 top|left|bottom|right: LENGTH (any valid length unit: em, mm, px, % etc.)
 ```
 
-Values: 
+Values:
 * <span class="parameter">LENGTH</span> (any valid length unit: `em`, `mm`, `px`, `%` etc.)
 
 Default: `auto`
@@ -119,9 +119,9 @@ This is text in a fixed position block element.
 </style>
 
 <div class="myfixed">
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur 
-ridiculus mus. Donec mattis lacus ac purus feugiat semper. Donec aliquet nunc odio, vitae 
-pellentesque diam. Pellentesque sed velit lacus. Duis quis dui quis sem consectetur 
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+ridiculus mus. Donec mattis lacus ac purus feugiat semper. Donec aliquet nunc odio, vitae
+pellentesque diam. Pellentesque sed velit lacus. Duis quis dui quis sem consectetur
 sollicitudin. Cras dolor quam, dapibus et pretium sit amet, elementum vel arcu.
 </div>
 

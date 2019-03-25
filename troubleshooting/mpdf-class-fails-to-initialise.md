@@ -19,6 +19,6 @@ function mPDF(...)
 ```
 
 This means it is still compatible with PHP4, and is backwards compatible using PHP5 -
-**UNLESS** you are using namespaces in PHP >= 5.3
+**UNLESS** you are using namespaces in PHP &ge; 5.3
 
 In this case you will need to upgrade at least to mPDF 6.1
