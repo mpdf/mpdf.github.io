@@ -6,7 +6,7 @@ permalink: /fonts-languages/character-substitution.html
 modification_time: 2015-08-05T11:59:38+00:00
 ---
 
-(mPDF >= 5.0)
+(mPDF &ge; 5.0)
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** Prior to mPDF 5.0 there were 2 configurable variables, `$this->useSubstitutions` and

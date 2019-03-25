@@ -6,7 +6,7 @@ permalink: /fonts-languages/font-substitution-7-x.html
 modification_time: 2017-03-13T15:06:17+01:00
 ---
 
-(mPDF >= 7.0)
+(mPDF &ge; 7.0)
 
 If a font or default font is declared in HTML or CSS, the font that is actually set is determined by:
 

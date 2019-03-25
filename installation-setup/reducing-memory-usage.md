@@ -66,6 +66,6 @@ Do not delete the <span class="filename">mpdf_source</span> file, which will rem
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** mPDF >= 5.0 Ensure that you have set write permissions to
+  **Note:** mPDF &ge; 5.0 Ensure that you have set write permissions to
   <a href="{{ "/installation-setup/folders-for-temporary-files.html" | prepend: site.baseurl }}">temporary folders</a>
 </div>

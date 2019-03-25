@@ -12,7 +12,7 @@ the bidirectional algorithm to be applied.
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** This variable originally started with an uppercase
-  letter (<= mPDF 2.2). Support for the uppercase version was removed in mPDF >= 6.0
+  letter (&le; mPDF 2.2). Support for the uppercase version was removed in mPDF &ge; 6.0
 </div>
 
 bool **$biDirectional**

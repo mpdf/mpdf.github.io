@@ -6,7 +6,7 @@ permalink: /fonts-languages/choosing-a-configuration-v7-x.html
 modification_time: 2017-03-13T15:06:17+01:00
 ---
 
-(mPDF >= 7.0)
+(mPDF &ge; 7.0)
 
 In mPDF there are a number of ways to configure your set-up. There is often a trade-off between file size, processing
 speed, appearance (support for different fonts), and reliability (i.e. ensuring that text is always displayed, at

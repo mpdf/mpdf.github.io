@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/htmlpagefooter.html
 modification_time: 2015-08-05T12:01:23+00:00
 ---
 
-(mPDF >= 2.0)
+(mPDF &ge; 2.0)
 
 htmlpagefooter – Define an HTML page footer with a given name
 
@@ -14,19 +14,19 @@ htmlpagefooter – Define an HTML page footer with a given name
 
 &lt;**htmlpagefooter**  <span class="parameter">$name</span>  &gt; <span class="parameter">$html</span> &lt;/**htmlpagefooter**&gt;
 
-Define an HTML page footer with a given name. Named footer can be referenced and set later in the document e.g. 
+Define an HTML page footer with a given name. Named footer can be referenced and set later in the document e.g.
 &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Do not name any header or footer starting with `html_`. This prefix is reserved to identify an 
+  **Note:** Do not name any header or footer starting with `html_`. This prefix is reserved to identify an
   <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Remember that, unlike most mPDF custom tags which are self-closing with `/>`, htmlpageheader 
-  and htmlpagefooter require end tags. 
-  
-  If you wish to make the HTML code compatible with browsers, see 
+  **Note:** Remember that, unlike most mPDF custom tags which are self-closing with `/>`, htmlpageheader
+  and htmlpagefooter require end tags.
+
+  If you wish to make the HTML code compatible with browsers, see
   <a href="{{ "/html-support/custom-html-tags.html" | prepend: site.baseurl }}">Custom tags</a>
 </div>
 
@@ -71,7 +71,7 @@ For examples and further information please see:
 # See Also
 
 - <a href="{{ "/reference/mpdf-functions/defhtmlfooterbyname.html" | prepend: site.baseurl }}">DefHTMLFooterByName()</a>
-- &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt; 
+- &lt;<a href="{{ "/reference/html-control-tags/htmlpageheader.html" | prepend: site.baseurl }}">htmlpageheader</a>&gt;
 - <a href="{{ "/reference/mpdf-functions/sethtmlfooterbyname.html" | prepend: site.baseurl }}">SetHTMLFooterByName()</a>
-- &lt;<a href="{{ "/reference/html-control-tags/sethtmlpagefooter.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt; 
+- &lt;<a href="{{ "/reference/html-control-tags/sethtmlpagefooter.html" | prepend: site.baseurl }}">sethtmlpagefooter</a>&gt;
 - <a href="{{ "/paging/using-page.html" | prepend: site.baseurl }}">@page</a>

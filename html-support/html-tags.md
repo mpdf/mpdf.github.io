@@ -128,7 +128,7 @@ This cannot be changed using CSS.
             <td>✓</td>
             <td><span class="smallblock">INLINE</span></td>
             <td> </td>
-            <td>Isolates a part of text that might be formatted in a different direction from other text outside it. mPDF>=6.0
+            <td>Isolates a part of text that might be formatted in a different direction from other text outside it. mPDF&ge;6.0
 
             </td>
         </tr>
@@ -867,7 +867,7 @@ This cannot be changed using CSS.
             <td>✓</td>
             <td> </td>
             <td> </td>
-            <td>Defines a possible line-break (treated as identical to soft-hyphen) mPDF >=5.7
+            <td>Defines a possible line-break (treated as identical to soft-hyphen) mPDF &ge;5.7
 
             </td>
         </tr>

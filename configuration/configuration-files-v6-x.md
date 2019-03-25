@@ -6,7 +6,7 @@ permalink: /configuration/configuration-files-v6-x.html
 modification_time: 2015-08-05T11:59:39+00:00
 ---
 
-(mPDF >= 6.0 & < 7.0)
+(mPDF &ge; 6.0 & < 7.0)
 
 Four configuration files are included in the root directory of mPDF:
 
@@ -20,7 +20,7 @@ Four configuration files are included in the root directory of mPDF:
   <td><span class="filename">config.php</span></td>
   <td markdown="1">
   Configure most <a href="{{ "/configuration/configuration-variables.html" | prepend: site.baseurl }}">variables</a> which affect mPDF. These values can be set at the beginning of individual scripts, but changes here will affect all of your PDF files.
-  
+
   Also contains basic default CSS stylesheet properties.
   </td>
 </tr>

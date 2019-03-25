@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/barcode.html
 modification_time: 2015-08-05T12:01:19+00:00
 ---
 
-(mPDF >= 4.0)
+(mPDF &ge; 4.0)
 
 barcode – Add a Barcode to the document
 

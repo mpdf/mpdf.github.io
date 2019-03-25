@@ -6,20 +6,20 @@ permalink: /reference/html-control-tags/watermarkimage.html
 modification_time: 2015-08-05T12:01:31+00:00
 ---
 
-(mPDF >= 3.0)
+(mPDF &ge; 3.0)
 
 watermarkimage – Set an image to use as a Watermark
 
 # Description
 
-&lt;**watermarkimage**  <span class="parameter">$src</span> 
-[ <span class="parameter">$alpha</span> ] 
-[ <span class="parameter">$size</span> ] 
+&lt;**watermarkimage**  <span class="parameter">$src</span>
+[ <span class="parameter">$alpha</span> ]
+[ <span class="parameter">$size</span> ]
 [ <span class="parameter">$position</span> ] /&gt;
 
-Set an image to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text 
-such as "DRAFT" or a background image. The watermark will be added to each page when the Footer is printed if the 
-variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a> 
+Set an image to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text
+such as "DRAFT" or a background image. The watermark will be added to each page when the Footer is printed if the
+variable <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">showWatermarkImage</a>
 is set to `1` or `true`.
 
 # Parameters
@@ -36,30 +36,30 @@ is set to `1` or `true`.
 
 <span class="parameter">$size</span>
 
-: This parameter takes either a pre-defined string, an integer, or an array of width and height. Defines the size of 
+: This parameter takes either a pre-defined string, an integer, or an array of width and height. Defines the size of
   the watermark.
 
   **Values**
-  
-  * `'D'`: default i.e. original size of image - may depend on <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a>  
-  * `'P'`: Resize to fit the full page size, keeping aspect ratio  
+
+  * `'D'`: default i.e. original size of image - may depend on <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a>
+  * `'P'`: Resize to fit the full page size, keeping aspect ratio
   * `'F'`: Resize to fit the print-area (frame) respecting current page margins, keeping aspect ratio
-  * <span class="smallblock">INT</span>: Resize to full page size minus a margin set by this integer in millimeters, 
+  * <span class="smallblock">INT</span>: Resize to full page size minus a margin set by this integer in millimeters,
     keeping aspect ratio
-  * 2 comma-separated numbers (<span class="parameter">$width</span>, <span class="parameter">$height</span>) 
+  * 2 comma-separated numbers (<span class="parameter">$width</span>, <span class="parameter">$height</span>)
     e.g `'200,250'`: Specify a size; units in millimeters
-  
+
   Default: `"D"`
 
 <span class="parameter">$position</span>
 
-: This parameter takes either a pre-defined string or an array of <span class="parameter">$x</span> and 
+: This parameter takes either a pre-defined string or an array of <span class="parameter">$x</span> and
   <span class="parameter">$y</span>. Defines the position of the watermark on the page.
 
   **Values**
-  
-  * `'P'`: Centred on the whole page area  
-  * `'F'`: Centred on the page print-area (frame) respecting page margins 
+
+  * `'P'`: Centred on the whole page area
+  * `'F'`: Centred on the page print-area (frame) respecting page margins
   * 2 comma-separated numbers (<span class="parameter">$x</span>, <span class="parameter">$y</span>) e.g `'200,250'`: Specify a position; units in millimeters
 
   Default: `"P"`

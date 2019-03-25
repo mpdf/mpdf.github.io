@@ -15,7 +15,7 @@ You can optionally:
 * reset numbering - reset the numbering anywhere in the document
 * define/change the style of the numbering - as for lists it can be roman, alphabetical or decimal
 
-From mPDF >= 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to
+From mPDF &ge; 3.0 the page numbering can be reset to any positive number. Prior to this, it was only possible to
 reset it to `1`.
 
 From mPDF 6.0 the page number style can include any of the values used for `list-style-type`.
@@ -103,9 +103,9 @@ causes problems (a blank first page), an alternative way to do this is:
 ```php
 <?php
 $mpdf->PageNumSubstitutions[] = [
-    'from' => 1, 
-    'reset' => 0, 
-    'type' => 'I', 
+    'from' => 1,
+    'reset' => 0,
+    'type' => 'I',
     'suppress' => 'on'
 ];
 

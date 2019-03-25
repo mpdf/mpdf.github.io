@@ -6,10 +6,10 @@ permalink: /configuration/configuration-v7-x.html
 modification_time: 2017-03-14T08:51:39+00:00
 ---
 
-(mPDF >= 7.0)
+(mPDF &ge; 7.0)
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** This describes configuration of mPDF **>= 7.0**. Please refer to
+  **Note:** This describes configuration of mPDF **&ge; 7.0**. Please refer to
   <a href="{{ "/configuration/configuration-files-v6-x.html" | prepend: site.baseurl }}">6.x</a> or
   <a href="{{ "/configuration/configuration-files-v5-x.html" | prepend: site.baseurl }}">5.x</a> for
   configuration methods if you are using lesser version.

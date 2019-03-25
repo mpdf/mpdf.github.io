@@ -6,28 +6,28 @@ permalink: /reference/html-control-tags/pagefooter.html
 modification_time: 2015-08-05T12:01:27+00:00
 ---
 
-(mPDF >= 2.0)
+(mPDF &ge; 2.0)
 
 pagefooter – Define a page footer with a given name
 
 # Description
 
-&lt;**pagefooter** 
-[ <span class="parameter">$name</span> ] 
-[ <span class="parameter">$content-left</span> ] 
-[ <span class="parameter">$content-center</span> ] 
-[ <span class="parameter">$content-right</span> ] 
-[ <span class="parameter">$footer-style</span> ] 
-[ <span class="parameter">$footer-style-left</span> ] 
+&lt;**pagefooter**
+[ <span class="parameter">$name</span> ]
+[ <span class="parameter">$content-left</span> ]
+[ <span class="parameter">$content-center</span> ]
+[ <span class="parameter">$content-right</span> ]
+[ <span class="parameter">$footer-style</span> ]
+[ <span class="parameter">$footer-style-left</span> ]
 [ <span class="parameter">$footer-style-center</span> ]
-[ <span class="parameter">$footer-style-right</span> ] 
+[ <span class="parameter">$footer-style-right</span> ]
 [ <span class="parameter">$line</span> ] /&gt;
 
 Define a page footer with a given name. Named footers can be referenced and set later in the document e.g.
 &lt;<a href="{{ "/reference/html-control-tags/setpageheader.html" | prepend: site.baseurl }}">setpagefooter</a>&gt;
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Do not name any header or footer starting with `html_`. This prefix is reserved to identify 
+  **Note:** Do not name any header or footer starting with `html_`. This prefix is reserved to identify
   a <span class="smallblock">HTML</span> header/footer when passing its name in a reference.
 </div>
 
@@ -48,7 +48,7 @@ Define a page footer with a given name. Named footers can be referenced and set 
   At least one `content-` must be defined.
 
   **Values**
-  
+
   * <span class="parameter">$content-left</span>: Text to appear at left margin
   * <span class="parameter">$content-center</span>: Text to appear in centre of page
   * <span class="parameter">$content-right</span>: Text to appear at right margin
@@ -61,12 +61,12 @@ Define a page footer with a given name. Named footers can be referenced and set 
 
 : This attribute can optionally set CSS style properties for the page footer.
 
-  <span class="parameter">$footer-style</span> will set the same style for left, right and center content, whereas 
+  <span class="parameter">$footer-style</span> will set the same style for left, right and center content, whereas
   <span class="parameter">$footer-style-left</span>, <span class="parameter">$footer-style-center</span> and 
   <span class="parameter">$footer-style-right</span> set the style for one part of the content only.
-  
+
   **Values**
-  
+
   Valid CSS inline style declaration but only 5 properties can be set:
 
   * `font-family`
@@ -74,7 +74,7 @@ Define a page footer with a given name. Named footers can be referenced and set 
   * `font-weight`
   * `font-style`
   * `color`
-  
+
   If style is not set, the default values for the document are used.
 
 <span class="parameter">$line</span>

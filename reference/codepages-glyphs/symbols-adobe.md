@@ -39,7 +39,7 @@ modification_time: 2015-08-05T12:02:49+00:00
 <td>:</td>
 <td>;</td>
 <td>&lt;</td>
-<td>=</td>
+<td&ge;</td>
 <td>&gt;</td>
 <td>?</td>
 <td>[</td>

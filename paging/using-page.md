@@ -6,7 +6,7 @@ permalink: /paging/using-page.html
 modification_time: 2015-08-05T11:59:48+00:00
 ---
 
-(mPDF >= 4.2)
+(mPDF &ge; 4.2)
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** If you are referencing an HTML header/footer, you must add the prefix `html_` before the name.
@@ -14,7 +14,7 @@ modification_time: 2015-08-05T11:59:48+00:00
 
 # About CSS Paged Media
 
-The paged media model of CSS (<a href="http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html">http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html</a>) 
+The paged media model of CSS (<a href="http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html">http://www.w3.org/TR/1998/REC-CSS2-19980512/page.html</a>)
 is used as a basis
 
 ```
@@ -53,7 +53,7 @@ The CSS `@page` selector is partially supported in mPDF with the following prope
 
 ```css
 @page {
-	size: 8.5in 11in; /* <length>{1,2} | auto | portrait | landscape */ 
+	size: 8.5in 11in; /* <length>{1,2} | auto | portrait | landscape */
 	      /* 'em' 'ex' and % are not allowed; length values are width height */
 	margin: 10%; /* <any of the usual CSS values for margins> */
 	             /*(% of page-box width for LR, of height for TB) */
@@ -137,7 +137,7 @@ first page only
 Named pages are also supported e.g.:
 
 ```css
-@page rotated { 
+@page rotated {
     size: landscape;
 }
 ```
@@ -145,8 +145,8 @@ Named pages are also supported e.g.:
 You can then refer to the named page in other CSS style sheets:
 
 ```css
-div.onitsside { 
-    page: rotated; 
+div.onitsside {
+    page: rotated;
     page-break-before: right;
 }
 ```
@@ -219,19 +219,19 @@ $html = '
 </head>
 
 <body>
-    
+
     <htmlpageheader name="myHeader1" style="display:none">
         <div style="text-align: right; border-bottom: 1px solid #000000; font-weight: bold; font-size: 10pt;">
             My document
         </div>
     </htmlpageheader>
-    
+
     <htmlpageheader name="myHeader2" style="display:none">
         <div style="border-bottom: 1px solid #000000; font-weight: bold;  font-size: 10pt;">
             My document
         </div>
     </htmlpageheader>
-    
+
     <htmlpagefooter name="myFooter1" style="display:none">
         <table width="100%">
             <tr>
@@ -247,7 +247,7 @@ $html = '
             </tr>
         </table>
     </htmlpagefooter>
-    
+
     <htmlpagefooter name="myFooter2" style="display:none">
         <table width="100%">
             <tr>
@@ -257,29 +257,29 @@ $html = '
             </tr>
         </table>
     </htmlpagefooter>
-    
+
     <htmlpageheader name="Chapter2HeaderOdd" style="display:none">
         <div style="text-align: right;">Chapter 2</div>
     </htmlpageheader>
-    
+
     <htmlpageheader name="Chapter2HeaderEven" style="display:none">
         <div>Chapter 2</div>
     </htmlpageheader>
-    
+
     <htmlpagefooter name="Chapter2FooterOdd" style="display:none">
         <div style="text-align: right;">Chapter 2 Footer</div>
     </htmlpagefooter>
-    
+
     <htmlpagefooter name="Chapter2FooterEven" style="display:none">
         <div>Chapter 2 Footer</div>
     </htmlpagefooter>
-    
+
     Hello World
-    
+
     <div class="chapter2">Text of Chapter 2</div>
-    
+
     <div class="noheader">No-Header page</div>
-    
+
 </body>
 </html>';
 

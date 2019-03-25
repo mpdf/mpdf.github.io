@@ -31,12 +31,12 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>dir</td>
-            <td>rtl | ltr (mPDF >= 6.0)</td>
+            <td>rtl | ltr (mPDF &ge; 6.0)</td>
         </tr>
         <tr>
             <td>HTML, BODY</td>
             <td>dir</td>
-            <td>rtl | ltr (mPDF >= 5.0)</td>
+            <td>rtl | ltr (mPDF &ge; 5.0)</td>
         </tr>
         <tr>
             <td>P, DIV</td>
@@ -55,16 +55,16 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td>align</td>
   <td markdown="1">
-  left \| center \| right \| char 
-  
+  left \| center \| right \| char
+
   char was added in mPDF 5.7
   </td>
         </tr>
         <tr>
             <td>char</td>
-  <td markdown="1">  
+  <td markdown="1">
   Used in conjunction with `align="char"`. Default if omitted is period `"."` Non-ASCII characters can be
-  defined with HTML entities e.g. `&middot;` or `&#183;` As per HTML 4 spec. Added mPDF 5.7  
+  defined with HTML entities e.g. `&middot;` or `&#183;` As per HTML 4 spec. Added mPDF 5.7
   </td>
         </tr>
         <tr>
@@ -82,19 +82,19 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td><i>(repeat_header)</i></td>
   <td markdown="1">
-  1   (removed from mPDF >= 5.4; use `<thead>`)
+  1   (removed from mPDF &ge; 5.4; use `<thead>`)
   </td>
         </tr>
         <tr>
             <td><i>autosize</i></td>
-  <td markdown="1">  
-  <span class="smallblock">FLOAT</span>  
-  
-  * The value >= 0 shrinks a table to fit if width is too small to allow
-  complete words to fit.  
-  * The value (must be >=1) determines the maximum allowable factor to shrink i.e.
-  `autosize="2"` will allow the font-size to be reduced to a minimum of 1/2 the original size.   
-  * A value of 1 prevents automatic resizing of the table. (custom attribute)  
+  <td markdown="1">
+  <span class="smallblock">FLOAT</span> 
+
+  * The value &ge; 0 shrinks a table to fit if width is too small to allow
+  complete words to fit.
+  * The value (must be &ge;1) determines the maximum allowable factor to shrink i.e.
+  `autosize="2"` will allow the font-size to be reduced to a minimum of 1/2 the original size.
+  * A value of 1 prevents automatic resizing of the table. (custom attribute)
   </td>
         </tr>
         <tr>
@@ -151,7 +151,7 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>start</td>
-            <td><span class="smallblock">INTEGER</span> (mPDF >= 5.7)</td>
+            <td><span class="smallblock">INTEGER</span> (mPDF &ge; 5.7)</td>
         </tr>
         <tr>
             <td>UL</td>
@@ -170,8 +170,8 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td><i>rotate</i></td>
   <td markdown="1">
-  90 \| -90 \| 180, where  90 = clockwise 
-  
+  90 \| -90 \| 180, where  90 = clockwise
+
   When width is specified e.g. `width="3cm"` this is applied to the rotated
   image i.e. will be width 3 cm after rotating
   </td>
@@ -206,14 +206,14 @@ XHTML specification is recommended for best compliance with mPDF.
             <td rowspan="2">FORM</td>
             <td>method</td>
   <td markdown="1">
-  get \| post  
-  
-  Default: post (mPDF >= 5.3)
+  get \| post 
+
+  Default: post (mPDF &ge; 5.3)
   </td>
         </tr>
         <tr>
             <td>action</td>
-            <td><span class="smallblock">URI</span>  (mPDF >= 5.3</td>
+            <td><span class="smallblock">URI</span>  (mPDF &ge; 5.3</td>
         </tr>
         <tr>
             <td rowspan="6">TEXTAREA</td>
@@ -230,22 +230,22 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>required</td>
-            <td>required  [HTML5] (mPDF >= 5.3)</td>
+            <td>required  [HTML5] (mPDF &ge; 5.3)</td>
         </tr>
         <tr>
             <td>spellcheck</td>
   <td markdown="1">
   true \| false [HTML5]
-  
-  Default: false (mPDF >= 5.3)
+
+  Default: false (mPDF &ge; 5.3)
   </td>
         </tr>
         <tr>
             <td>onChange</td>
   <td markdown="1">
-  <span class="smallblock">JAVASCRIPT</span> 
-  
-  In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)
+  <span class="smallblock">JAVASCRIPT</span>
+
+  In Active Forms; uses "Acrobat" Javascript (mPDF &ge; 5.3)
   </td>
         </tr>
         <tr>
@@ -259,22 +259,22 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>name</td>
-  <td markdown="1">  
-  <span class="smallblock">TEXT</span>   
-  
+  <td markdown="1">
+  <span class="smallblock">TEXT</span>  
+
   Field names in Active Forms must only contain letters, numbers,
   colon(`:`), undersore(`_`) or hyphen(`-`). (This is largely as per HTML spec, but cannot contain period(`.`) as
-  this is part of PDF spec for name hierarchies)  
+  this is part of PDF spec for name hierarchies)
   </td>
         </tr>
         <tr>
             <td rowspan="6">SELECT</td>
             <td>size</td>
   <td markdown="1">
-  <span class="smallblock">INTEGER</span> 
-  
-  size = n, n rows visible. 
-  
+  <span class="smallblock">INTEGER</span>
+
+  size = n, n rows visible.
+
   Default: 1
   </td>
         </tr>
@@ -284,23 +284,23 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>required</td>
-            <td>required [HTML5] (mPDF >= 5.3)</td>
+            <td>required [HTML5] (mPDF &ge; 5.3)</td>
         </tr>
         <tr>
             <td>spellcheck</td>
   <td markdown="1">
-  true \| false [HTML5] 
-  
-  Default: false (mPDF >= 5.3)  
+  true \| false [HTML5]
+
+  Default: false (mPDF &ge; 5.3)
   Only if also editable and size=1
   </td>
         </tr>
         <tr>
             <td>editable</td>
   <td markdown="1">
-  editable  [HTML5] 
-  
-  Default: false (mPDF >= 5.3)  
+  editable  [HTML5]
+
+  Default: false (mPDF &ge; 5.3)
   Only if size=1
   </td>
         </tr>
@@ -308,8 +308,8 @@ XHTML specification is recommended for best compliance with mPDF.
             <td>onChange</td>
   <td markdown="1">
   <span class="smallblock">JAVASCRIPT</span>
-  
-  In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)
+
+  In Active Forms; uses "Acrobat" Javascript (mPDF &ge; 5.3)
   </td>
         </tr>
         <tr>
@@ -331,7 +331,7 @@ XHTML specification is recommended for best compliance with mPDF.
             <td>size</td>
   <td markdown="1">
   <span class="smallblock">INTEGER</span>
-  
+
   size=n, width as number of characters
   </td>
         </tr>
@@ -350,22 +350,22 @@ XHTML specification is recommended for best compliance with mPDF.
         </tr>
         <tr>
             <td>required</td>
-            <td>required [HTML5] (mPDF >= 5.3)</td>
+            <td>required [HTML5] (mPDF &ge; 5.3)</td>
         </tr>
         <tr>
             <td>spellcheck</td>
   <td>
-  true \| false [HTML5] 
-  
-  Default: false (mPDF >= 5.3)
+  true \| false [HTML5]
+
+  Default: false (mPDF &ge; 5.3)
   </td>
         </tr>
         <tr>
             <td>onChange</td>
   <td markdown="1">
-  <span class="smallblock">JAVASCRIPT</span> 
-  
-  In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)
+  <span class="smallblock">JAVASCRIPT</span>
+
+  In Active Forms; uses "Acrobat" Javascript (mPDF &ge; 5.3)
   </td>
         </tr>
         <tr>
@@ -380,22 +380,22 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td>onClick</td>
   <td markdown="1">
-  <span class="smallblock">JAVASCRIPT</span> 
-  
-  In Active Forms; uses "Acrobat" Javascript (mPDF >= 5.3)
+  <span class="smallblock">JAVASCRIPT</span>
+
+  In Active Forms; uses "Acrobat" Javascript (mPDF &ge; 5.3)
   </td>
         </tr>
         <tr>
             <td>INPUT (button, submit, reset)</td>
             <td><i>noprint</i></td>
-            <td>noprint (mPDF >= 5.3)</td>
+            <td>noprint (mPDF &ge; 5.3)</td>
         </tr>
         <tr>
             <td>INPUT (radio, checkbox)</td>
             <td>value</td>
   <td markdown="1">
-  <span class="smallblock">TEXT</span> 
-  
+  <span class="smallblock">TEXT</span>
+
   In Active Forms value(s) for radio buttons and checkboxes are
   required, and can only contain letters, numbers, colon(`:`), undersore(`_`), hyphen(`-`) or period(.)
   </td>
@@ -403,7 +403,7 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td>DOTTAB</td>
             <td><i>outdent</i></td>
-            <td><span class="smallblock">LENGTH</span> (mPDF >= 5.7)</td>
+            <td><span class="smallblock">LENGTH</span> (mPDF &ge; 5.7)</td>
         </tr>
         <tr>
             <td>METER</td>
@@ -423,8 +423,8 @@ XHTML specification is recommended for best compliance with mPDF.
         <tr>
             <td><i>type</i></td>
   <td markdown="1">
-  Any alphanumeric string. 
-  
+  Any alphanumeric string.
+
   If present, will select custom progress/meter formats - IF they have been
   defined in `\Mpdf\Meter` class
   </td>
@@ -468,13 +468,13 @@ XHTML specification is recommended for best compliance with mPDF.
 <tr>
   <td>2.0</td>
   <td markdown="1">
-  TD `border="1"` was supported mPDF <= 1.3, but is not valid HTML and is now ignored
+  TD `border="1"` was supported mPDF &le; 1.3, but is not valid HTML and is now ignored
   </td>
 </tr>
 <tr>
   <td> </td>
   <td markdown="1">
-  TABLE `align="..."` with a rotated table - changed to set the alignment ignoring the rotation 
+  TABLE `align="..."` with a rotated table - changed to set the alignment ignoring the rotation
   i.e. `align="right"` sets the table to the right side of the page (looking as though it is bottom-aligned)
   </td>
 </tr>

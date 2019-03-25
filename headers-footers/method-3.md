@@ -7,8 +7,8 @@ modification_time: 2015-08-05T11:59:51+00:00
 ---
 
 <div class="alert alert-danger" role="alert" markdown="1">
-  **Deprecated** since mPDF >= 6
-  
+  **Deprecated** since mPDF &ge; 6
+
   non-HTML is now handled as HTML as well
 </div>
 
@@ -70,9 +70,9 @@ $mpdf = new \Mpdf\Mpdf();
 
 // Define the Headers and Footers with names
 $html = '
-<pagefooter name="MyFooter1" 
-  content-left="{DATE j-m-Y}" content-center="{PAGENO}/{nbpg}" 
-  content-right="My document" footer-style="font-family: serif; font-size: 8pt; 
+<pagefooter name="MyFooter1"
+  content-left="{DATE j-m-Y}" content-center="{PAGENO}/{nbpg}"
+  content-right="My document" footer-style="font-family: serif; font-size: 8pt;
   font-weight: bold; font-style: italic; color: #000000;" />
 
 <div>Now starts the document text... </div>';
@@ -134,11 +134,11 @@ In this example using custom HTML tags to set the <span class="smallblock">NON-H
 $mpdf = new \Mpdf\Mpdf();
 
 $html = '
-<pagefooter name="MyFooter1" 
-  content-left="{DATE j-m-Y}" content-center="{PAGENO}/{nbpg}" 
-  content-right="My document" footer-style="font-family: serif; font-size: 8pt; 
+<pagefooter name="MyFooter1"
+  content-left="{DATE j-m-Y}" content-center="{PAGENO}/{nbpg}"
+  content-right="My document" footer-style="font-family: serif; font-size: 8pt;
   font-weight: bold; font-style: italic; color: #000000;" />
-  
+
 <setpageheader name="MyHeader1" value="on" show-this-page="1" />
 <setpagefooter name="MyFooter1" value="on" />
 
@@ -185,13 +185,13 @@ $html = '
 </style>
 </head>
 <body>
-    <pageheader name="MyHeader1" content-right="My document" 
+    <pageheader name="MyHeader1" content-right="My document"
         header-style="font-weight: bold; color: #000000;" line="on" />
-    <pagefooter name="MyFooter1" content-left="{DATE j-m-Y}" 
+    <pagefooter name="MyFooter1" content-left="{DATE j-m-Y}"
         content-center="{PAGENO}/{nbpg}" footer-style="font-size: 8pt;" />
-    <pageheader name="MyHeader2" content-right="Chapter 2" 
+    <pageheader name="MyHeader2" content-right="Chapter 2"
         header-style="font-weight: bold; color: #000000;" line="on" />
-    <pagefooter name="MyFooter2" content-left="{DATE j-m-Y}" 
+    <pagefooter name="MyFooter2" content-left="{DATE j-m-Y}"
         content-center="2: {PAGENO}" footer-style="font-size: 8pt;" />
 
     <div>Here is the text of the first chapter</div>
@@ -216,7 +216,7 @@ $mpdf->WriteHTML('Document text');
 
 // In a SINGLE-SIDED document, the 'ODD' values set the default for all pages.
 $mpdf->AddPage(
-    '','','','','','','','','','','', 
+    '','','','','','','','','','','',
     'MyHeader2', '', 'MyFooter2', '', 1, 0, 1, 0
 );
 
@@ -254,14 +254,14 @@ $mpdf->WriteHTML($html);
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
-// Define headers here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 
+// Define headers here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter',
 // 'MyHeader2', 'MyFooter2' (as Example #1)
 $mpdf->SetHeaderByName('MyHeader1');
 $mpdf->WriteHTML('Introduction of document...');
 $mpdf->TOCpagebreak (
-    '', '', '', '', '', '', '', '', '', '', '', '', 
-    'MyTOCHeader', '', 'MyTOCFooter', '', 1, 0 , 1, 0, 
-    '', '', '', '', '', '', '', '', '', '', '', '', '', 
+    '', '', '', '', '', '', '', '', '', '', '', '',
+    'MyTOCHeader', '', 'MyTOCFooter', '', 1, 0 , 1, 0,
+    '', '', '', '', '', '', '', '', '', '', '', '', '',
     'MyHeader2', '', 'MyFooter2', '', 1, 0,  1,0
 );
 
@@ -276,14 +276,14 @@ $mpdf->Output();
 ```php
 <?php
 $html = "
-<!-- Define headers etc. here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter', 
+<!-- Define headers etc. here named 'MyHeader1', 'MyTOCHeader', 'MyTOCFooter',
 'MyHeader2', 'MyFooter2' (as Example #2) -->
 
 <p>Introduction: Here starts the document</p>
 
-<tocpagebreak toc-odd-header-name='MyTOCHeader' toc-odd-header-value=\"1\" 
-    toc-odd-footer-name='MyTOCFooter' toc-odd-footer-value=\"1\" 
-    odd-header-name='MyHeader2' odd-header-value=\"1\"  
+<tocpagebreak toc-odd-header-name='MyTOCHeader' toc-odd-header-value=\"1\"
+    toc-odd-footer-name='MyTOCFooter' toc-odd-footer-value=\"1\"
+    odd-header-name='MyHeader2' odd-header-value=\"1\"
     odd-footer-name='MyFooter2' odd-footer-value=\"1\" />
 
 <p>Text of Chapter 2...</p>";

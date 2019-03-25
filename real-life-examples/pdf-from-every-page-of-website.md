@@ -11,7 +11,7 @@ If you want to add a link to pages on your website to create a PDF version of th
 (If you have already set up a CSS stylesheet for `media="print"` which works for mPDF, you can omit the first 2 steps.)
 
 Write a stylesheet suitable for presenting your webpage in mPDF. Most webpages have a header and menu on the left or right
-which you will not want to appear in the PDF document. You can use `display: none` to omit these elements. From mPDF >= 5.0
+which you will not want to appear in the PDF document. You can use `display: none` to omit these elements. From mPDF &ge; 5.0
 this will also work for inline elements. You may have something like this:
 
 ```css
@@ -96,7 +96,7 @@ $mpdf->Output();
 
 Now, the link from your webpages. This code can be inserted anywhere on the page. (The `<![CDATA[` bit is to make the
 page compatible with XHTML.) This code will work if your webpages are simple files e.g. <span class="filename">myfile.html</span>
-or if they are selected using variables in the URI (i.e. HTTP GET method) e.g. `myfile.php?cc=1&var=35` 
+or if they are selected using variables in the URI (i.e. HTTP GET method) e.g. `myfile.php?cc=1&var=35`
 
 ```html
 <script language="javascript" type="text/javascript">

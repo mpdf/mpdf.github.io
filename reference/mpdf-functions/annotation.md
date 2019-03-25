@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/annotation.html
 modification_time: 2015-08-05T12:00:41+00:00
 ---
 
-(mPDF >= 2.2)
+(mPDF &ge; 2.2)
 
 Annotation – Add an Annotation to the document
 
@@ -112,7 +112,7 @@ Annotations cannot be moved or deleted by the reader
 
 <span class="parameter">$opacity</span>
 
-: Sets the opacity of the Annotation marker. Values must be greater than `0` and <= `1`.
+: Sets the opacity of the Annotation marker. Values must be greater than `0` and &le; `1`.
 
   <span class="smallblock">BLANK</span> or omitted or `0`: sets the opacity to the value of
   <a href="{{ "/reference/mpdf-variables/annotopacity.html" | prepend: site.baseurl }}">annotOpacity</a>

@@ -37,7 +37,7 @@ $mpdf->setLogger($logger);
 
 See [Monolog documentation][2] for more information on its usage.
 
-For simple one-time logging an anonymous class can be used with PHP >=7.0
+For simple one-time logging an anonymous class can be used with PHP &ge;7.0
 
 ```php
 <?php

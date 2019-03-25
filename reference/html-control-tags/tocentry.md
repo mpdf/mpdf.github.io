@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/tocentry.html
 modification_time: 2015-08-05T12:01:30+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 tocentry – Insert an entry for the Table of Contents
 
@@ -36,20 +36,20 @@ Insert an entry for the Table of Contents referencing the current writing positi
 <span class="parameter">$content</span>
 
 : This parameter sets the text as it will appear in the ToC entry. Text should be UTF-8 encoded.
-  
+
   <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and must use
   the appropriate HTML entities e.g. `<tocentry content="&lt; 40" />`
-  
+
   It is recommended that you use `htmlspecialchars('Content', ENT_QUOTES)` for this.
-  
+
   <span class="smallblock">REQUIRED</span>
 
 <span class="parameter">$level</span>
 
 : Specify the level of this entry (i.e. like heading 1, 2, 3) as a positive integer 
-  
+
   Starts at level 0
-  
+
   Default: `'0'`
 
 <span class="parameter">$name</span>
@@ -57,11 +57,11 @@ Insert an entry for the Table of Contents referencing the current writing positi
 : Specify which <acronym title="Table of Contents">ToC</acronym> to add this entry, if using more than one
   <acronym title="Table of Contents">ToC</acronym> in the document. <span class="parameter">$name</span> can
   be any alphanumeric characters (except just `"0"`) and is case-insensitive.
-  
+
   <span class="smallblock">BLANK</span> or omitted or `'0'` uses the default <acronym title="Table of Contents">ToC</acronym>.
-  
+
   **Values** (case-insensitive)
-  
+
   `"ALL"` will add this entry to every ToC active in the document.
 
 # Changelog

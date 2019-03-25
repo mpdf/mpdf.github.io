@@ -8,18 +8,18 @@ modification_time: 2017-03-04T08:57:57+00:00
 
 mPDF uses a default "stylesheet" for default settings of style and layout; this is in
 `defaultCSS` <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variable</a>,
-which is based on the recommended default values for HTML4 - 
-<http://www.w3.org/TR/CSS21/sample.html> 
+which is based on the recommended default values for HTML4 -
+<http://www.w3.org/TR/CSS21/sample.html>
 
 The appearance of a default mPDF document based on HTML should approximate to its appearance in a browser.
 
 
-**mPDF >= 7.0** 
+**mPDF &ge; 7.0**
 
-: It is possible to define custom default CSS file by 
+: It is possible to define custom default CSS file by
   <a href="{{ "/reference/mpdf-variables/defaultcssfile.html" | prepend: site.baseurl }}">defaultCssFile</a> configuration key.
 
-**mPDF >= 6.0** 
+**mPDF &ge; 6.0**
 
 : A new mpdf.css file includes defaults for Lists top/bottom margins, and also examples for
   Indexes and ToCs. This now acts like a normal CSS file, including cascading selectors i.e. not just main tags.
@@ -27,26 +27,26 @@ The appearance of a default mPDF document based on HTML should approximate to it
   to this act like a user stylesheet when considering precedence e.g. cellSpacing and border-spacing. (The following
   text describes behaviour prior to mPDF v6.0)
 
-**mPDF >= 2.2** 
+**mPDF &ge; 2.2**
 
 : will load an optional file `[mpdf root]/data/mpdf.css` (located in the data directory of
   mPDF installation root).
-  
+
   The file should be a valid CSS stylesheet, but will only support changing properties at element level i.e. P, DIV,
   TABLE, TD and not P.classname.
-  
+
   The `mpdf.css` file supplied is inactive as it has all the entries commented out by `/* ... */`
-  
+
   The following values will restore behaviour of pre-4.2 versions to 4.2:
-  
+
   ```css
   img { margin: 0.83em 0; vertical-align: bottom; }
   table { margin: 0.5em; }
   textarea { vertical-align: top; }
   ```
-  
+
   The following values will restore behaviour of 2.2 versions:
-  
+
   ```css
   body {
       font-family: sans-serif;
@@ -90,7 +90,7 @@ The appearance of a default mPDF document based on HTML should approximate to it
 
 ## Prior to mPDF 2.2
 
-The original default styles (mPDF <= 2.0) were extensively changed with improvements in CSS handling in mPDF 2.0
+The original default styles (mPDF &le; 2.0) were extensively changed with improvements in CSS handling in mPDF 2.0
 (this particularly changed table borders, and table cell alignment, as well as a serif default font-family).
 
 In order to allow backwards compatibility, a secondary "stylesheet" - a configuration variable `$defaultCSS2` was introduced in

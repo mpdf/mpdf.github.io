@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setsourcefile.html
 modification_time: 2019-03-25T08:21:00+00:00
 ---
 
-(mPDF >= 2.3 && mPDF < 8.0)
+(mPDF &ge; 2.3 && mPDF < 8.0)
 
 SetSourceFile – Specify the source PDF file used to import pages into the document
 

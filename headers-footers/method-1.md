@@ -7,22 +7,22 @@ modification_time: 2015-08-05T11:59:50+00:00
 ---
 
 <div class="alert alert-danger" role="alert" markdown="1">
-  **Deprecated** since mPDF >= 6
-  
+  **Deprecated** since mPDF &ge; 6
+
   non-HTML is now handled as HTML as well
 </div>
 
-This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">NON-HTML</span> headers & footers. 
-This is the simplest & quickest way to define a header/footer for the whole document if you need limited control 
-over styling. There are several variants of this method, using string or array. The simplest form does not allow 
+This uses <span class="smallblock">RUNTIME</span> <span class="smallblock">NON-HTML</span> headers & footers.
+This is the simplest & quickest way to define a header/footer for the whole document if you need limited control
+over styling. There are several variants of this method, using string or array. The simplest form does not allow
 different header/footer for <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> pages.
 
 # Setting a Header/Footer at the start of a document
 
 ## Variant #1 (Simplest form)
 
-Use a single command with a string as parameter, to set a header/footer at the right margin of the page on 
-<span class="smallblock">ODD</span> pages, and left margin for <span class="smallblock">EVEN</span> pages 
+Use a single command with a string as parameter, to set a header/footer at the right margin of the page on
+<span class="smallblock">ODD</span> pages, and left margin for <span class="smallblock">EVEN</span> pages
 (if <span class="smallblock">DOUBLE-SIDED</span> document), or right margin for all pages.
 
 ```php
@@ -38,9 +38,9 @@ $mpdf->Output();
 
 ## Variant #2 (Split string)
 
-Set a header/footer in three parts. The text string defines three strings divided by `|` which will set a header at the 
-left/centre/right margin of the page on <span class="smallblock">ODD</span> pages and right/centre/left margin for 
-<span class="smallblock">EVEN</span> pages (if  <span class="smallblock">DOUBLE-SIDED</span> document), or 
+Set a header/footer in three parts. The text string defines three strings divided by `|` which will set a header at the
+left/centre/right margin of the page on <span class="smallblock">ODD</span> pages and right/centre/left margin for
+<span class="smallblock">EVEN</span> pages (if  <span class="smallblock">DOUBLE-SIDED</span> document), or
 left/centre/right margin for all pages. Note the use of {PAGENO} which can be used in any type of header or footer.
 
 ```php
@@ -57,7 +57,7 @@ $mpdf->Output();
 
 ## Variant #3 (Controlling style with variables)
 
-This is the same as Variant #2, but you can control some aspects of style for the headers/footers by altering certain 
+This is the same as Variant #2, but you can control some aspects of style for the headers/footers by altering certain
 mPDF variables.
 
 ```php
@@ -81,8 +81,8 @@ $mpdf->Output();
 
 ## Variant #4 (Array) - DEPRECATED
 
-Set a header/footer using an array of values. This allows greater control over styling. Recommended to use Variant #5, 
-which is very similar, but specifies <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> 
+Set a header/footer using an array of values. This allows greater control over styling. Recommended to use Variant #5,
+which is very similar, but specifies <span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span>
 forms separately.
 
 ```php
@@ -122,9 +122,9 @@ $mpdf->SetHeader($arr);
 
 ## Variant #5 (Array)
 
-Set a header/footer using an array of values. This allows greater control over styling.  
-<span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately 
-using the second parameter of 
+Set a header/footer using an array of values. This allows greater control over styling. 
+<span class="smallblock">ODD</span> and <span class="smallblock">EVEN</span> headers/footers are set separately
+using the second parameter of
 <a href="{{ "/reference/mpdf-functions/setheader.html" | prepend: site.baseurl }}">SetHeader()</a>.
 
 ```php
@@ -158,8 +158,8 @@ $mpdf->SetHeader($arr, 'O');  // 'O' for Odd header
 ```
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** When you are using the array form, any values that are not defined in the array use the 
-  document default values, not the defaultheader values (like the previous Simple form)  i.e. an undefined font-size 
+  **Note:** When you are using the array form, any values that are not defined in the array use the
+  document default values, not the defaultheader values (like the previous Simple form)  i.e. an undefined font-size
   uses the document default of 10pt, not the <span class="parameter">$defaultheaderfontsize</span> of 8pt.
 </div>
 
@@ -178,10 +178,10 @@ $mpdf->SetHeader($arr, 'O');
 
 # Changing Header/Footer during the document
 
-This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use, whichever of the 
-Variants above you are using. When a new page is added to the document (e.g. using 
-<a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or 
-&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;) 
+This is where <span class="smallblock">RUNTIME</span> headers/footers get much more clumsy to use, whichever of the
+Variants above you are using. When a new page is added to the document (e.g. using
+<a href="{{ "/reference/mpdf-functions/addpage.html" | prepend: site.baseurl }}">AddPage()</a> or
+&lt;<a href="{{ "/reference/html-control-tags/pagebreak.html" | prepend: site.baseurl }}">pagebreak</a>&gt;)
 mPDF does the following:
 
 - writes the footer for the current page
@@ -226,7 +226,7 @@ $mpdf->SetHeader('First section header');
 $mpdf->SetFooter('First section footer');
 $mpdf->WriteHTML('First section text...');
 
-// Use a conditional page-break to ensure you are on an EVEN page before 
+// Use a conditional page-break to ensure you are on an EVEN page before
 // changing the Header
 $mpdf->AddPage('','E');
 
@@ -243,8 +243,8 @@ $mpdf->Output();
 
 # Table of Contents
 
-Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Contents gets so clumsy, it is 
-recommended that you consider one of the <span class="smallblock">NAMED</span> methods. Here for the record is 
+Using <span class="smallblock">RUNTIME</span> headers/footers with a Table of Contents gets so clumsy, it is
+recommended that you consider one of the <span class="smallblock">NAMED</span> methods. Here for the record is
 how you would do it:
 
 ```php
@@ -280,8 +280,8 @@ $mpdf->setHeader($main_header_odd_array,'O');
 $mpdf->setHeader($main_header_even_array,'E');
 
 $mpdf->TOCpagebreak(
-    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 
-    $toc-preHTML, $toc-postHTML, $toc-bookmarkText, 
+    '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+    $toc-preHTML, $toc-postHTML, $toc-bookmarkText,
     1, 'A', 'off'); // sets numbering to start at A
 
 $mpdf->setFooter($main_footer_odd_array,'O');
@@ -340,7 +340,7 @@ $mpdf->setFooter($main_footer_odd_array,'O');
 $mpdf->setFooter($main_footer_even_array,'E');
 
 $mpdf->TOC(
-    $tocfont, $tocfontsize, $tocindent, $resetpagenum, $pagenumstyle, 
+    $tocfont, $tocfontsize, $tocindent, $resetpagenum, $pagenumstyle,
     $suppress, $toc_orientation, $TOCusePaging, $TOCuseLinking
 );
 

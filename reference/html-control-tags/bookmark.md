@@ -6,7 +6,7 @@ permalink: /reference/html-control-tags/bookmark.html
 modification_time: 2015-08-05T12:01:20+00:00
 ---
 
-(mPDF >= 1.0)
+(mPDF &ge; 1.0)
 
 bookmark – Add a Bookmark to the document
 
@@ -14,11 +14,11 @@ bookmark – Add a Bookmark to the document
 
 &lt;**bookmark**  <span class="parameter">$content</span> [ <span class="parameter">$level</span> ] /&gt;
 
-Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target 
+Add a Bookmark to the document. Bookmarks appear in Adobe Reader and link to specific points in the text. The target
 is set as the current writing position in the document when the Bookmark is defined.
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if 
+  **Note:** Bookmarks use Adobe Reader system fonts, therefore any Unicode text can be used, even if
   a unibyte codepage is being used for the document.
 </div>
 
@@ -28,16 +28,16 @@ is set as the current writing position in the document when the Bookmark is defi
 
 : Specifies the text to appear as a Bookmark.
 
-  <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and must use 
+  <span class="parameter">$content</span> cannot contain any of the characters: `<`, `>`, `&`, `'` or `"` and must use
   the appropriate HTML entities e.g. `<bookmark content="&lt; 40" />`
-  
+
   It is recommended that you use `htmlspecialchars('Content', ENT_QUOTES)` for this.
-  
+
 <span class="parameter">$level</span>
 
-: <span class="parameter">$level</span> specifies the "tree" level for the Bookmark. The top level is `0`. See Example #2 
+: <span class="parameter">$level</span> specifies the "tree" level for the Bookmark. The top level is `0`. See Example #2
   below. Accepts an integer from `0` to the maximum depth you wish.
-  
+
   Default: `0`
 
 # Examples
@@ -62,16 +62,16 @@ is set as the current writing position in the document when the Bookmark is defi
 
     <bookmark content="Section 1" />
     <div>Section 1 text</div>
-    
+
     <bookmark content="Chapter 1" />
     <div>Chapter 1 text</div>
-    
+
     <bookmark content="Chapter 2" />
     <div>Chapter 2 text</div>
-    
+
     <bookmark content="Section 2" />
     <div>Section 2 text</div>
-    
+
     <bookmark content="Chapter 3" />
     <div>Chapter 3 text</div>
 
@@ -90,8 +90,8 @@ This will produce a Bookmark tree in Adobe Reader:
 # Notes
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** To set the Bookmark for a Table of Contents, see 
-  <span class="parameter">$toc-bookmarkText</span> in 
+  **Note:** To set the Bookmark for a Table of Contents, see
+  <span class="parameter">$toc-bookmarkText</span> in
   &lt;<a href="{{ "/reference/html-control-tags/tocpagebreak.html" | prepend: site.baseurl }}">tocpagebreak</a>&gt;.
 </div>
 
@@ -123,7 +123,7 @@ or just after a word to be marked:
 
 ## Automatically Generated Bookmarks
 
-You can automatically generate bookmarks from h1 - h6 tags, by setting the variable 
+You can automatically generate bookmarks from h1 - h6 tags, by setting the variable
 <span class="parameter">$h2bookmarks</span>.
 
 Define arrays with e.g. the `tag => Bookmark level`

@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setautofont.html
 modification_time: 2015-08-05T12:00:55+00:00
 ---
 
-(mPDF >= 2.3   <= 5.7)
+(mPDF &ge; 2.3   &le; 5.7)
 
 SetAutoFont – Automatically detect language in the input HTML text and use appropriate fonts
 
@@ -17,13 +17,13 @@ void **SetAutoFont** ( int <span class="parameter">$flag</span> )
 Turns on the AutoFont function, which automatically detects language in the input HTML text and uses appropriate fonts.
 
 <div class="alert alert-danger" role="alert" markdown="1">
-  **Note:** This function was removed in mPDF 6.0  Use the 
+  **Note:** This function was removed in mPDF 6.0  Use the
   <a href="{{ "/reference/mpdf-variables/autolangtofont.html" | prepend: site.baseurl }}">`$autoLangToFont`</a> variable
   for the same results
 </div>
 
-AutoFont uses `<span lang="" class="lang_xx">...</span>` to mark text which is auto-detected. 
-See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for further details, 
+AutoFont uses `<span lang="" class="lang_xx">...</span>` to mark text which is auto-detected.
+See <a href="{{ "/fonts-languages/lang-v5-x.html" | prepend: site.baseurl }}">lang</a> for further details,
 but note that `SetAutoFont()` also:
 
 - disables support for `text-align=justify`
@@ -31,29 +31,29 @@ but note that `SetAutoFont()` also:
 - sets <a href="{{ "/reference/mpdf-variables/bidirectional.html" | prepend: site.baseurl }}">`$biDirectional`</a>`= true` (if `AUTOFONT_RTL` is set)
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Using automatic language detection adds considerable processing 
+  **Note:** Using automatic language detection adds considerable processing
   time when creating a large document.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** It is better to mark the HTML text yourself using block tags e.g. `<p lang="">` 
-  rather than relying on mPDF to set `<span lang="">` if possible; when set at block level, it allows appropriate 
+  **Note:** It is better to mark the HTML text yourself using block tags e.g. `<p lang="">`
+  rather than relying on mPDF to set `<span lang="">` if possible; when set at block level, it allows appropriate
   changes to text alignment, character spacing and text-justification.
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Automatic language detection is based on analysis of the characters in the text. It is 
-  therefore not precise, and in particular it may be difficult to distinguish between different arabic languages 
+  **Note:** Automatic language detection is based on analysis of the characters in the text. It is
+  therefore not precise, and in particular it may be difficult to distinguish between different arabic languages
   (arabic, farsi, urdu, pashto etc), CJK languages (even between Chinese and Japanese text in same text chunk).
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Chinese Traditional and Simplified Chinese share so many characters that mPDF does not 
-  even try to distinguish which is being used. If AutoFont is being used and a chinese languages is identified, 
+  **Note:** Chinese Traditional and Simplified Chinese share so many characters that mPDF does not
+  even try to distinguish which is being used. If AutoFont is being used and a chinese languages is identified,
   it is marked as `<span lang="zh">...</span>`.
-    
-  The font actually used for default chinese is determined by the settings in function 
-  <span class="function">GetCodepage()</span> in `\Mpdf\LangToFont` class. 
+
+  The font actually used for default chinese is determined by the settings in function
+  <span class="function">GetCodepage()</span> in `\Mpdf\LangToFont` class.
   By default this is Chinese Simplified (GB, GBK).
 </div>
 
@@ -68,12 +68,12 @@ but note that `SetAutoFont()` also:
 : This parameter specifies which languages are auto-detected. Either an integer or one of the defined constants can be used.
 
   `SetAutoFont(0)` will turn off any auto-detection.
-   
+
   Bitwise operators can be used for combining the defined constants e.g.
   `SetAutoFont(AUTOFONT_CJK | AUTOFONT_THAIVIET)` will turn on autodetection for CJK languages and Thai and Vietnamese.
 
   **Values**
-  
+
   * `0` - Turn off any auto-detection
   * `AUTOFONT_CJK` = 1 - Any CJK languages (Chinese - Japanese - Korean)
   * `AUTOFONT_THAIVIET` = 2 - Thai and Vietnamese
@@ -129,7 +129,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 $mpdf = new \Mpdf\Mpdf(['mode' => 'utf-8']);
 
 $html = '
-Most of this text is in English, but has occasional words in Chinese:其貢獻在 or 
+Most of this text is in English, but has occasional words in Chinese:其貢獻在 or
 Vietnamese: Một khảo sát mới cho biết, or maybe even Arabic: البرادعی
 
 البرادعی -12- البرادعی

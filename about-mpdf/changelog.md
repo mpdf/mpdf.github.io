@@ -864,7 +864,7 @@ Bug fixes
 - SVG now works with Adobe 7
 - background in header overwriting text
 - vertical text in table header not correctly horizontally positioned when repeated
-- compatibility with PHP >= 4.3 (htmlspecialchars_decode, stripos)
+- compatibility with PHP &ge; 4.3 (htmlspecialchars_decode, stripos)
 - updated depracated script PHP 5.3.0 ($string{1} to $string[1], $var =& new Object(), set_magic_quotes_runtime)
 - index (CreateIndex) number string incorrect if arabic(rtl) text anywhere in document
 - MultiCell incorrectly calculate string length/width when using core fonts
@@ -958,7 +958,7 @@ $this->useAdobeCJK = true;      // Uses Adobe CJK fonts for CJK languages
 
 // Set maximum size of TTF font file to allow non-subsets - in kB
 // Used to avoid e.g. Arial Unicode MS (perhaps used for substituteCharsMB) to ever be fully embedded
-// NB Free serif is 1.5MB, most files are <= 600kB (most 200-400KB)
+// NB Free serif is 1.5MB, most files are &le; 600kB (most 200-400KB)
 $this->maxTTFFilesize = 2000;
 
 // If not -s (i.e. forced subset) this value determines whether to subset or not
@@ -1580,7 +1580,7 @@ Bug fixes (other)
 - width: auto caused collapse of border and padding on L & R of ordinary block elements
 - text-indent not inherited correctly (including em and % values)
 - named colour "steelblue" corrected RRGGBB hex code
-- table cell widths in %: if width of table cells set to >=100%, and not all columns are set
+- table cell widths in %: if width of table cells set to &ge;100%, and not all columns are set
     This was fixed in 3.2 but led to problem where 2 cols: 1) 80% and 2) not set (see Table sizing test)
     Now fixed again to work for both(?)
 - parse PNG error fixed
@@ -1607,7 +1607,7 @@ mPDF v3.2  (25/10/2009)
 ===========================
 Bug fixes
 ---------
-- Table cell widths in %: if width of table cells set to >=100%, and not all columns are set -> froze, because tries to produce a column of no width
+- Table cell widths in %: if width of table cells set to &ge;100%, and not all columns are set -> froze, because tries to produce a column of no width
 - Ouput download file changed to allow compatability with IE6 (http://mpdf.bpm1.com/forum/comments.php?DiscussionID=120&page=1#Item_4)
 - Image error if relative path used on domain root (e.g. img src="image.png" and basepath is http://www.yourdomain.com) [attempted fix in 3.1 not working]
 - Table: if font changed in cell, font was not retoring properly afterwards causing errors (restoreInlineProperties())
@@ -1704,7 +1704,7 @@ graph.php
 
 Developers only
 ---------------
-mPDF<=3.1 generated a large number of warning "Notices" if run with full eror_reporting on, due to array indexes not being initiated e.g.
+mPDF&le;3.1 generated a large number of warning "Notices" if run with full eror_reporting on, due to array indexes not being initiated e.g.
 $arr = array();
 ...
 if ($arr['index'] == 5 ) {...}
@@ -2129,7 +2129,7 @@ UPGRADING
 =========
 IMPORTANT - Before Upgrading: Please note that some of the changes will cause mPDF 2.0 to render the pages differently from earlier versions i.e. it is not totally backwards comaptible. Read the notes on Backward compatibility before deleting your original set-up.
 
-To upgrade from v<=1.3 to v2.0 you only need to copy and overwrite the following 2 files:
+To upgrade from v&le;1.3 to v2.0 you only need to copy and overwrite the following 2 files:
 mpdf.php
 htmltoolkit.php
 
@@ -2203,7 +2203,7 @@ Allows media="print" but can exclude by: $mpdf->disablePrintCSS = true; (default
 Works on both <link... and <style media="print">@import...
 See the web page example - this stops the CSS stylesheets specifically marked for "print" to be ignored
 
-Table borders (in collapsed model) incorrectly calculated which border had dominance (mPDF <=1.3 determined the overriding border by its color)
+Table borders (in collapsed model) incorrectly calculated which border had dominance (mPDF &le;1.3 determined the overriding border by its color)
 (Fixed to follow CSS 2.1 specifications: width >> CSS dominance (cell>table) >> T & L > B & R)
 In the border-collapse=collapse mode, the following rules determine which border style "wins" in case of a conflict:
 1. Borders with the 'border-style' of 'hidden' take precedence over all other conflicting borders.
@@ -2292,7 +2292,7 @@ Useful for e.g. a cover page for your document
 
 Cumulative CSS
 ==============
-In version <=1.3, if you call:
+In version &le;1.3, if you call:
 $mpdf->WriteHTML($stylesheet,1);
 $mpdf->WriteHTML($html);    // this one cleared the array $this->cascadeCSS; conatining cascaded CSS information from stylesheets
 You were meant to call:

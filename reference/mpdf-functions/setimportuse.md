@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setimportuse.html
 modification_time: 2015-08-05T12:01:06+00:00
 ---
 
-(mPDF >= 4.3 && < 8.0)
+(mPDF &ge; 4.3 && < 8.0)
 
 SetImportUse – Enable the use of imported PDF files or templates
 
