@@ -12,7 +12,7 @@ setSourceFile – Specify the source PDF file used to import pages into the docu
 
 # Description
 
-int **SetSourceFile** ( string <span class="parameter">$file</span> )
+int **setSourceFile** ( string <span class="parameter">$file</span> )
 
 Specify the source PDF file used to import pages into the document.
 
