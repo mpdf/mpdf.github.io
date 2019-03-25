@@ -1,48 +1,52 @@
 ---
 layout: page
-title: ImportPage()
+title: ImportPage() (until 8.0)
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/importpage.html
-modification_time: 2015-08-05T12:00:47+00:00
+modification_time: 2019-03-25T08:21:00+00:00
 ---
 
-(mPDF >= 2.3)
+(mPDF >= 2.3 && mPDF < 8.0)
 
 ImportPage – Import a page from an external PDF file
 
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This method was superseded by <a href="{{ "/reference/mpdf-functions/importpage-v8.html" | prepend: site.baseurl }}">importPage()</a> in mPDF 8.0.
+</div>
+
 # Description
 
-int **ImportPage** ( 
-int <span class="parameter">$pageno</span> 
-[, float <span class="parameter">$crop_x</span> 
-[, float <span class="parameter">$crop_y</span> 
-[, float <span class="parameter">$crop_w</span> 
-[, float <span class="parameter">$crop_h</span> 
+int **ImportPage** (
+int <span class="parameter">$pageno</span>
+[, float <span class="parameter">$crop_x</span>
+[, float <span class="parameter">$crop_y</span>
+[, float <span class="parameter">$crop_w</span>
+[, float <span class="parameter">$crop_h</span>
 [, string <span class="parameter">$boxname</span> ]]]]])
 
-Import a page, or part of a page, from an external PDF file. The external source file must first be set 
-with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template' 
+Import a page, or part of a page, from an external PDF file. The external source file must first be set
+with <a href="{{ "/reference/mpdf-functions/setsourcefile.html" | prepend: site.baseurl }}">SetSourceFile()</a>. A 'template'
 is created in mPDF which stores the image of this page, ready to insert into the document.
 
 # Parameters
 
 <span class="parameter">$pageno</span>
 
-: This parameter specifies the page number from the source PDF file to import.  <span class="parameter">$pageno</span> should 
+: This parameter specifies the page number from the source PDF file to import.  <span class="parameter">$pageno</span> should
   be a positive integer value.
 
   Default: `1`
 
 <span class="parameter">$crop_x</span>
 
-: Specifies the x-coordinate (abscissa) for the page of the source PDF file, when importing a 'cropped' page into the template. 
+: Specifies the x-coordinate (abscissa) for the page of the source PDF file, when importing a 'cropped' page into the template.
   Value in millimetres.
 
   Default: `0`
 
 <span class="parameter">$crop_y</span>
 
-: Specifies the y-coordinate (ordinate) for the page of the source PDF file, when importing a 'cropped' page into the template. 
+: Specifies the y-coordinate (ordinate) for the page of the source PDF file, when importing a 'cropped' page into the template.
   Value in millimetres.
 
   Default: `0`
@@ -65,8 +69,8 @@ is created in mPDF which stores the image of this page, ready to insert into the
 
 # Return Value
 
-**ImportPage()** returns an ID for the template which it has created. This ID can be used at any time to insert the template 
-into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a> 
+**ImportPage()** returns an ID for the template which it has created. This ID can be used at any time to insert the template
+into the document with <a href="{{ "/reference/mpdf-functions/usetemplate.html" | prepend: site.baseurl }}">UseTemplate()</a>
 or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.baseurl }}">SetPageTemplate()</a>
 
 # Changelog
@@ -106,6 +110,24 @@ $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
 ```
+
+
+# Changelog
+
+<table class="table">
+<thead>
+<tr>
+  <th>Version</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>8.0</td>
+  <td>Function was replaced by <a href="{{ "/reference/mpdf-functions/importpage-v8.html" | prepend: site.baseurl }}">importPage()</a>.</td>
+</tr>
+</tbody>
+</table>
 
 
 Example #2 - Using a 'cropped' page

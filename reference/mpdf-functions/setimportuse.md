@@ -6,7 +6,7 @@ permalink: /reference/mpdf-functions/setimportuse.html
 modification_time: 2015-08-05T12:01:06+00:00
 ---
 
-(mPDF >= 4.3)
+(mPDF >= 4.3 && < 8.0)
 
 SetImportUse – Enable the use of imported PDF files or templates
 
@@ -18,9 +18,14 @@ Enable the use of imported PDF files or templates. This causes additional files 
 functions allowing you to import PDF files into the document you are writing, and using templates.
 
 <div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This method was removed in mPDF 8.0, it is no longer needed.
+</div>
+
+<div class="alert alert-info" role="alert" markdown="1">
   **Note:** Prior to mPDF 4.3, this required calling `mPDFI()`. The functions have now been incorporated
   into the main `\Mpdf\Mpdf` class, but you must use `SetImportUse()` to enable them.
 </div>
+
 
 # Changelog
 
@@ -35,6 +40,10 @@ functions allowing you to import PDF files into the document you are writing, an
 <tr>
   <td>4.3</td>
   <td>Function added.</td>
+</tr>
+<tr>
+  <td>8.0</td>
+  <td>Function removed.</td>
 </tr>
 </tbody>
 </table>

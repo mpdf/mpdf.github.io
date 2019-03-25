@@ -8,14 +8,18 @@ modification_time: 2015-08-05T12:00:12+00:00
 
 (mPDF >= 4.0)
 
-A variety of barcodes can be produced with mPDF. Please see 
-the <a href="https://github.com/mpdf/mpdf-examples/blob/master/example37_barcodes.php">example file</a> for 
+A variety of barcodes can be produced with mPDF. Please see
+the <a href="https://github.com/mpdf/mpdf-examples/blob/master/example37_barcodes.php">example file</a> for
 more information.
+
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** As of mPDF 8.0, composer package mpdf/qrcode is needed for generating QR codes automatically.
+</div>
 
 ## Specifications in mPDF
 
-All values in millimeters, unless specified as a factor of X-dim e.g. `10X`.  
-`X` = width of narrowest bar (also known as module width)  
+All values in millimeters, unless specified as a factor of X-dim e.g. `10X`.
+`X` = width of narrowest bar (also known as module width)
 Pr ratio is ratio of narrow bar to wide bar
 
 <table class="table">
@@ -172,7 +176,7 @@ Pr ratio is ratio of narrow bar to wide bar
   <td>10X</td>
   <td>0</td>
   <td> </td>
-  <td markdown="1">  
+  <td markdown="1">
   2.5[^1]
   </td>
 </tr>
@@ -253,8 +257,8 @@ Pr ratio is ratio of narrow bar to wide bar
 </tbody>
 </table>
 
-All values in millimeters, unless specified as a factor of X-dim e.g. `10X`.  
-`X` = width of narrowest bar (also known as module width)  
+All values in millimeters, unless specified as a factor of X-dim e.g. `10X`.
+`X` = width of narrowest bar (also known as module width)
 Pr ratio is ratio of narrow bar to wide bar
 
 Notes:

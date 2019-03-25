@@ -1,23 +1,27 @@
 ---
 layout: page
-title: UseTemplate()
+title: UseTemplate() (until 8.0)
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/usetemplate.html
-modification_time: 2015-08-05T12:01:14+00:00
+modification_time: 2019-03-25T08:21:00+00:00
 ---
 
-(mPDF >= 2.3)
+(mPDF >= 2.3 && mPDF < 8.0)
 
 UseTemplate – Insert an imported page from an external PDF file
 
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This method was superseded by <a href="{{ "/reference/mpdf-functions/usetemplate-v8.html" | prepend: site.baseurl }}">useTemplate()</a> in mPDF 8.0.
+</div>
+
 # Description
 
-array **UseTemplate** ( 
-int <span class="parameter">$templateID</span> 
-[, float <span class="parameter">$x</span> 
-[, float <span class="parameter">$y</span> 
-[, float <span class="parameter">$width</span> 
-[, float <span class="parameter">$height</span> 
+array **UseTemplate** (
+int <span class="parameter">$templateID</span>
+[, float <span class="parameter">$x</span>
+[, float <span class="parameter">$y</span>
+[, float <span class="parameter">$width</span>
+[, float <span class="parameter">$height</span>
 ]]]])
 
 Insert an imported page/template from an external PDF file into the current document. The page, or 'cropped' page, must have
@@ -28,25 +32,25 @@ imported page as it is printed (see Example #1).
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** The template will be printed onto the page as the bottom 'layer' i.e.
 	anything else written to that page by mPDF will be written on top of the template. NB If you use `WriteHTML()` and have
-	a background-color set on BODY this will hide the template from view e.g.  
+	a background-color set on BODY this will hide the template from view e.g.
   `<body style="background-color:#FFFFFF;">`
 </div>
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** If you are using automatic header-margins, you need to set the header before starting the first page; if you start
   the document with `UseTemplate()` this will move it to page 1, so the order needs to be:
-  
+
   ```php
   <?php
   $mpdf = new \Mpdf\Mpdf();
   $mpdf->SetImportUse();
-  
+
   $mpdf->SetHTMLHeader($header);
-  
+
   $pagecount = $mpdf->SetSourceFile('logoheader.pdf');
   $tplIdx = $mpdf->ImportPage($pagecount);
   $mpdf->UseTemplate($tplIdx);
-  
+
   $mpdf->WriteHTML($html);
   ```
 </div>
@@ -59,7 +63,7 @@ imported page as it is printed (see Example #1).
 
 <span class="parameter">$x</span>
 
-: Sets the <span class="parameter">$x</span> co-ordinate (abscissa) to output the template. Value should be 
+: Sets the <span class="parameter">$x</span> co-ordinate (abscissa) to output the template. Value should be
   specified as <span class="smallblock">LENGTH</span> in millimetres.
 
   Default: `null` - Sets <span class="parameter">$x</span> co-ordinate to `0`
@@ -70,7 +74,7 @@ imported page as it is printed (see Example #1).
 
 <span class="parameter">$y</span>
 
-: Sets the <span class="parameter">$y</span> co-ordinate (ordinate) to output the template. Value should be 
+: Sets the <span class="parameter">$y</span> co-ordinate (ordinate) to output the template. Value should be
   specified as <span class="smallblock">LENGTH</span> in millimetres.
 
   Default: `null` - Sets <span class="parameter">$y</span> co-ordinate to `0`
@@ -81,22 +85,22 @@ imported page as it is printed (see Example #1).
 
 <span class="parameter">$width</span>
 
-: Specifies the width for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> 
+: Specifies the width for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span>
   in millimetres.
 
-  Default or `0` will output the template at the original size (if 
-  neither <span class="parameter">$width</span> nor <span class="parameter">$height</span> are set) or 
-  if <span class="parameter">$height</span> is set, the <span class="parameter">$width</span> is automatically 
+  Default or `0` will output the template at the original size (if
+  neither <span class="parameter">$width</span> nor <span class="parameter">$height</span> are set) or
+  if <span class="parameter">$height</span> is set, the <span class="parameter">$width</span> is automatically
   set to output the template in proportion to the original.
 
 <span class="parameter">$height</span>
 
-: Specifies the height for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span> 
+: Specifies the height for the template to appear on the page. Value should be specified as <span class="smallblock">LENGTH</span>
   in millimetres.
 
-  Default or `0` will output the template at the original size (if 
-  neither <span class="parameter">$width</span> nor <span class="parameter">$height</span> are set) or 
-  if <span class="parameter">$width</span> is set, the <span class="parameter">$height</span> is automatically 
+  Default or `0` will output the template at the original size (if
+  neither <span class="parameter">$width</span> nor <span class="parameter">$height</span> are set) or
+  if <span class="parameter">$width</span> is set, the <span class="parameter">$height</span> is automatically
   set to output the template in proportion to the original.
 
 ## Return Value
@@ -116,6 +120,10 @@ imported page as it is printed (see Example #1).
 <tr>
   <td>2.3</td>
   <td>Function was added.</td>
+</tr>
+<tr>
+  <td>8.0</td>
+  <td>Function was removed in favour of <a href="{{ "/reference/mpdf-functions/usetemplate-v8.html" | prepend: site.baseurl }}">useTemplate()</a>.</td>
 </tr>
 </tbody>
 </table>

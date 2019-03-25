@@ -935,10 +935,15 @@
                     slug: image
                     parent_title: 'mPDF functions'
                 -
-                    title: ImportPage()
+                    title: ImportPage() (until 8.0)
                     url: index5c09.html
                     permalink: /reference/mpdf-functions/importpage.html
                     slug: importpage
+                    parent_title: 'mPDF functions'
+                -
+                    title: importPage() (since 8.0)
+                    permalink: /reference/mpdf-functions/importpage-v8.html
+                    slug: importpage-v8
                     parent_title: 'mPDF functions'
                 -
                     title: IndexEntry()
@@ -1162,10 +1167,15 @@
                     slug: setprotection
                     parent_title: 'mPDF functions'
                 -
-                    title: SetSourceFile()
+                    title: SetSourceFile() (until 8.0)
                     url: indexde5d.html
                     permalink: /reference/mpdf-functions/setsourcefile.html
                     slug: setsourcefile
+                    parent_title: 'mPDF functions'
+                -
+                    title: setSourceFile() (since 8.0)
+                    permalink: /reference/mpdf-functions/setsourcefile-v8.html
+                    slug: setsourcefile-v8
                     parent_title: 'mPDF functions'
                 -
                     title: SetSubject()
@@ -1234,10 +1244,15 @@
                     slug: toc-entry
                     parent_title: 'mPDF functions'
                 -
-                    title: UseTemplate()
+                    title: UseTemplate() (until 8.0)
                     url: index7247.html
                     permalink: /reference/mpdf-functions/usetemplate.html
                     slug: usetemplate
+                    parent_title: 'mPDF functions'
+                -
+                    title: useTemplate() (since 8.0)
+                    permalink: /reference/mpdf-functions/usetemplate-v8.html
+                    slug: usetemplate-v8
                     parent_title: 'mPDF functions'
                 -
                     title: WriteBarcode()

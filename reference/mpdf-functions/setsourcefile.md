@@ -1,14 +1,18 @@
 ---
 layout: page
-title: SetSourceFile()
+title: SetSourceFile() (until 8.0)
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setsourcefile.html
-modification_time: 2015-08-05T12:01:08+00:00
+modification_time: 2019-03-25T08:21:00+00:00
 ---
 
-(mPDF >= 2.3)
+(mPDF >= 2.3 && mPDF < 8.0)
 
 SetSourceFile – Specify the source PDF file used to import pages into the document
+
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** This method was superseded by <a href="{{ "/reference/mpdf-functions/setsourcefile-v8.html" | prepend: site.baseurl }}">setSourceFile()</a> in mPDF 8.0.
+</div>
 
 # Description
 
@@ -20,7 +24,7 @@ Specify the source PDF file used to import pages into the document.
 
 <span class="parameter">$file</span>
 
-: This parameter specifies the source PDF file used to import pages into the document. 
+: This parameter specifies the source PDF file used to import pages into the document.
 
   **Note**:  <span class="parameter">$file</span> should be a **relative path** to a local file.
 
@@ -41,6 +45,10 @@ Specify the source PDF file used to import pages into the document.
 <tr>
   <td>2.3</td>
   <td>Function was added.</td>
+</tr>
+<tr>
+  <td>8.0</td>
+  <td>Function was removed in favour of <a href="{{ "/reference/mpdf-functions/setsourcefile-v8.html" | prepend: site.baseurl }}">setSourceFile()</a>.</td>
 </tr>
 </tbody>
 </table>
