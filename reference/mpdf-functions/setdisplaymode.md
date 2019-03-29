@@ -105,13 +105,13 @@ $mpdf->SetDisplayMode('fullpage','two');
 <tr>
   <td>5.2</td>
   <td markdown="1">
-    2 options for `$layout` parameter added (`twoleft` and `tworight`)
+2 options for `$layout` parameter added (`twoleft` and `tworight`)
   </td>
 </tr>
 <tr>
   <td>8.0.1</td>
   <td markdown="1">
-    `none` option for `$zoom` parameter added
+`none` option for `$zoom` parameter added
   </td>
 </tr>
 </tbody>
