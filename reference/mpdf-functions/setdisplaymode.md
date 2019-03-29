@@ -3,7 +3,7 @@ layout: page
 title: SetDisplayMode()
 parent_title: mPDF functions
 permalink: /reference/mpdf-functions/setdisplaymode.html
-modification_time: 2015-08-05T12:01:00+00:00
+modification_time: 2019-03-29T12:33:00+00:00
 ---
 
 (mPDF &ge; 1.0)
@@ -33,6 +33,8 @@ Adobe Reader, these values will determine the initial appearance and layout.
     : Display at real size
   * `'default'`
     : User's default setting in Adobe Reader
+  * `'none'`
+    : Default setting in PDF reader; No OpenAction is written in the document, so the file should be safer for e-mailing
   * or an <span class="smallblock">INTEGER</span>
     : Display at a percentage zoom (e.g. `90` will display at 90% zoom)
 
@@ -72,7 +74,6 @@ $mpdf->WriteHTML('
 Hello World
 ');
 $mpdf->Output('filename.pdf');
-
 ```
 
 Example #2
@@ -85,7 +86,6 @@ $mpdf->SetDisplayMode(90);
 
 // Display two pages side by side (book style)
 $mpdf->SetDisplayMode('fullpage','two');
-
 ```
 
 # Changelog
@@ -105,7 +105,13 @@ $mpdf->SetDisplayMode('fullpage','two');
 <tr>
   <td>5.2</td>
   <td markdown="1">
-  2 options for layout parameter added (`'twoleft'` and `'tworight'`)
+    2 options for `$layout` parameter added (`twoleft` and `tworight`)
+  </td>
+</tr>
+<tr>
+  <td>8.0.1</td>
+  <td markdown="1">
+    `none` option for `$zoom` parameter added
   </td>
 </tr>
 </tbody>
