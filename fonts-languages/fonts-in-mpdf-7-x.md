@@ -27,7 +27,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
 1.  Define the directory with the font via `fontDir` configuration key or add it after instantiation
     with `$mpdf->AddFontDirectory()` method
 
-2.  Define the font details in `fontdata` configuration variable
+2.  Define the font details in `fontdata` configuration variable - font name must be lowercase, i.e. `frutiger`.
 
     Example below shows how to maintain default fonts and their settings
 
