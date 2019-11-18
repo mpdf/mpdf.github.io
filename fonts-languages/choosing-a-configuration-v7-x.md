@@ -170,7 +170,7 @@ There are several different methods to do this:
     ```php
     <?php
     /* Set the base langage to Chinese */
-    $mpdf->baseScript = \Mpdf\Ucdn:SCRIPT_HAN;
+    $mpdf->baseScript = \Mpdf\Ucdn::SCRIPT_HAN;
     ```
 
     If you want to control the fonts used for fallback languages you'll need to extend the `Mpdf\Language\LanguageToFont` class and pass that class to the `languageToFont` configuration option when initializing mPDF (<a href="{{ "/fonts-languages/fonts-in-mpdf-7-x.html" | prepend: site.baseurl }}">see option 4 in the Fonts in mPDF 7.x page</a>).
