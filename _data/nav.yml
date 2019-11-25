@@ -1728,6 +1728,11 @@
                     slug: enableimports
                     parent_title: 'mPDF Variables'
                 -
+                    title: exposeVersion
+                    permalink: /reference/mpdf-variables/exposeversion.html
+                    slug: exposeversion
+                    parent_title: 'mPDF Variables'
+                -
                     title: falseBoldWeight
                     url: indexa94c.html
                     permalink: /reference/mpdf-variables/falseboldweight.html
