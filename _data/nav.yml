@@ -45,7 +45,7 @@
     slug: installation-setup
     items:
         -
-            title: 'Installation v7.x'
+            title: 'Installation v7.x+'
             permalink: /installation-setup/installation-v7-x.html
             slug: installation-v7-x
             parent_title: 'Installation & Setup'
