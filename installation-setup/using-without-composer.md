@@ -6,6 +6,8 @@ permalink: /installation-setup/using-without-composer.html
 modification_time: 2020-03-10T12:33:00+01:00
 ---
 
+Using mPDF without Composer is discouraged and not officially supported.
+
 # Just use Composer
 
 Generally, there is no real reason why you couldn't use Composer. Install Composer locally, use it to install
