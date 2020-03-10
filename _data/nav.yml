@@ -708,17 +708,17 @@
             items:
                 -
                     title: Overview
-                            permalink: /reference/mpdf-functions/overview.html
+                    permalink: /reference/mpdf-functions/overview.html
                     slug: overview
                     parent_title: 'mPDF functions'
                 -
                     title: __construct()
-                            permalink: /reference/mpdf-functions/construct.html
+                    permalink: /reference/mpdf-functions/construct.html
                     slug: construct
                     parent_title: 'mPDF functions'
                 -
                     title: AddColumn()
-                            permalink: /reference/mpdf-functions/addcolumn.html
+                    permalink: /reference/mpdf-functions/addcolumn.html
                     slug: addcolumn
                     parent_title: 'mPDF functions'
                 -
@@ -728,87 +728,87 @@
                     parent_title: 'mPDF functions'
                 -
                     title: AddPage()
-                            permalink: /reference/mpdf-functions/addpage.html
+                    permalink: /reference/mpdf-functions/addpage.html
                     slug: addpage
                     parent_title: 'mPDF functions'
                 -
                     title: AddPageByArray()
-                            permalink: /reference/mpdf-functions/addpagebyarray.html
+                    permalink: /reference/mpdf-functions/addpagebyarray.html
                     slug: addpagebyarray
                     parent_title: 'mPDF functions'
                 -
                     title: AddSpotColor
-                            permalink: /reference/mpdf-functions/addspotcolor.html
+                    permalink: /reference/mpdf-functions/addspotcolor.html
                     slug: addspotcolor
                     parent_title: 'mPDF functions'
                 -
                     title: AliasNbPages()
-                            permalink: /reference/mpdf-functions/aliasnbpages.html
+                    permalink: /reference/mpdf-functions/aliasnbpages.html
                     slug: aliasnbpages
                     parent_title: 'mPDF functions'
                 -
                     title: AliasNbPageGroups()
-                            permalink: /reference/mpdf-functions/aliasnbpagegroups.html
+                    permalink: /reference/mpdf-functions/aliasnbpagegroups.html
                     slug: aliasnbpagegroups
                     parent_title: 'mPDF functions'
                 -
                     title: Annotation()
-                            permalink: /reference/mpdf-functions/annotation.html
+                    permalink: /reference/mpdf-functions/annotation.html
                     slug: annotation
                     parent_title: 'mPDF functions'
                 -
                     title: AutosizeText()
-                            permalink: /reference/mpdf-functions/autosizetext.html
+                    permalink: /reference/mpdf-functions/autosizetext.html
                     slug: autosizetext
                     parent_title: 'mPDF functions'
                 -
                     title: Bookmark()
-                            permalink: /reference/mpdf-functions/bookmark.html
+                    permalink: /reference/mpdf-functions/bookmark.html
                     slug: bookmark
                     parent_title: 'mPDF functions'
                 -
                     title: CircularText()
-                            permalink: /reference/mpdf-functions/circulartext.html
+                    permalink: /reference/mpdf-functions/circulartext.html
                     slug: circulartext
                     parent_title: 'mPDF functions'
                 -
                     title: CreateIndex()
-                            permalink: /reference/mpdf-functions/createindex.html
+                    permalink: /reference/mpdf-functions/createindex.html
                     slug: createindex
                     parent_title: 'mPDF functions'
                 -
                     title: CreateReference()
-                            permalink: /reference/mpdf-functions/createreference.html
+                    permalink: /reference/mpdf-functions/createreference.html
                     slug: createreference
                     parent_title: 'mPDF functions'
                 -
                     title: DefFooterByName()
-                            permalink: /reference/mpdf-functions/deffooterbyname.html
+                    permalink: /reference/mpdf-functions/deffooterbyname.html
                     slug: deffooterbyname
                     parent_title: 'mPDF functions'
                 -
                     title: DefHeaderByName()
-                            permalink: /reference/mpdf-functions/defheaderbyname.html
+                    permalink: /reference/mpdf-functions/defheaderbyname.html
                     slug: defheaderbyname
                     parent_title: 'mPDF functions'
                 -
                     title: DefHTMLFooterByName()
-                            permalink: /reference/mpdf-functions/defhtmlfooterbyname.html
+                    permalink: /reference/mpdf-functions/defhtmlfooterbyname.html
                     slug: defhtmlfooterbyname
                     parent_title: 'mPDF functions'
                 -
                     title: DefHTMLHeaderByName()
-                            permalink: /reference/mpdf-functions/defhtmlheaderbyname.html
+                    permalink: /reference/mpdf-functions/defhtmlheaderbyname.html
                     slug: defhtmlheaderbyname
                     parent_title: 'mPDF functions'
                 -
                     title: Image()
-                            permalink: /reference/mpdf-functions/image.html
+                    permalink: /reference/mpdf-functions/image.html
                     slug: image
                     parent_title: 'mPDF functions'
                 -
                     title: ImportPage() (until 8.0)
-                            permalink: /reference/mpdf-functions/importpage.html
+                    permalink: /reference/mpdf-functions/importpage.html
                     slug: importpage
                     parent_title: 'mPDF functions'
                 -
@@ -818,172 +818,172 @@
                     parent_title: 'mPDF functions'
                 -
                     title: IndexEntry()
-                            permalink: /reference/mpdf-functions/indexentry.html
+                    permalink: /reference/mpdf-functions/indexentry.html
                     slug: indexentry
                     parent_title: 'mPDF functions'
                 -
                     title: IndexEntrySee()
-                            permalink: /reference/mpdf-functions/indexentrysee.html
+                    permalink: /reference/mpdf-functions/indexentrysee.html
                     slug: indexentrysee
                     parent_title: 'mPDF functions'
                 -
                     title: InsertIndex()
-                            permalink: /reference/mpdf-functions/insertindex.html
+                    permalink: /reference/mpdf-functions/insertindex.html
                     slug: insertindex
                     parent_title: 'mPDF functions'
                 -
                     title: MultiCell()
-                            permalink: /reference/mpdf-functions/multicell.html
+                    permalink: /reference/mpdf-functions/multicell.html
                     slug: multicell
                     parent_title: 'mPDF functions'
                 -
                     title: Output()
-                            permalink: /reference/mpdf-functions/output.html
+                    permalink: /reference/mpdf-functions/output.html
                     slug: output
                     parent_title: 'mPDF functions'
                 -
                     title: OverWrite()
-                            permalink: /reference/mpdf-functions/overwrite.html
+                    permalink: /reference/mpdf-functions/overwrite.html
                     slug: overwrite
                     parent_title: 'mPDF functions'
                 -
                     title: RestartDocTemplate()
-                            permalink: /reference/mpdf-functions/restartdoctemplate.html
+                    permalink: /reference/mpdf-functions/restartdoctemplate.html
                     slug: restartdoctemplate
                     parent_title: 'mPDF functions'
                 -
                     title: RestrictUnicodeFonts()
-                            permalink: /reference/mpdf-functions/restrictunicodefonts.html
+                    permalink: /reference/mpdf-functions/restrictunicodefonts.html
                     slug: restrictunicodefonts
                     parent_title: 'mPDF functions'
                 -
                     title: RoundedRect()
-                            permalink: /reference/mpdf-functions/roundedrect.html
+                    permalink: /reference/mpdf-functions/roundedrect.html
                     slug: roundedrect
                     parent_title: 'mPDF functions'
                 -
                     title: SetAlpha()
-                            permalink: /reference/mpdf-functions/setalpha.html
+                    permalink: /reference/mpdf-functions/setalpha.html
                     slug: setalpha
                     parent_title: 'mPDF functions'
                 -
                     title: SetAnchor2Bookmark()
-                            permalink: /reference/mpdf-functions/setanchor2bookmark.html
+                    permalink: /reference/mpdf-functions/setanchor2bookmark.html
                     slug: setanchor2bookmark
                     parent_title: 'mPDF functions'
                 -
                     title: SetAuthor()
-                            permalink: /reference/mpdf-functions/setauthor.html
+                    permalink: /reference/mpdf-functions/setauthor.html
                     slug: setauthor
                     parent_title: 'mPDF functions'
                 -
                     title: SetAutoFont()
-                            permalink: /reference/mpdf-functions/setautofont.html
+                    permalink: /reference/mpdf-functions/setautofont.html
                     slug: setautofont
                     parent_title: 'mPDF functions'
                 -
                     title: SetBasePath()
-                            permalink: /reference/mpdf-functions/setbasepath.html
+                    permalink: /reference/mpdf-functions/setbasepath.html
                     slug: setbasepath
                     parent_title: 'mPDF functions'
                 -
                     title: SetColumns()
-                            permalink: /reference/mpdf-functions/setcolumns.html
+                    permalink: /reference/mpdf-functions/setcolumns.html
                     slug: setcolumns
                     parent_title: 'mPDF functions'
                 -
                     title: SetCompression()
-                            permalink: /reference/mpdf-functions/setcompression.html
+                    permalink: /reference/mpdf-functions/setcompression.html
                     slug: setcompression
                     parent_title: 'mPDF functions'
                 -
                     title: SetCreator()
-                            permalink: /reference/mpdf-functions/setcreator.html
+                    permalink: /reference/mpdf-functions/setcreator.html
                     slug: setcreator
                     parent_title: 'mPDF functions'
                 -
                     title: SetDefaultBodyCSS()
-                            permalink: /reference/mpdf-functions/setdefaultbodycss.html
+                    permalink: /reference/mpdf-functions/setdefaultbodycss.html
                     slug: setdefaultbodycss
                     parent_title: 'mPDF functions'
                 -
                     title: SetDefaultFont()
-                            permalink: /reference/mpdf-functions/setdefaultfont.html
+                    permalink: /reference/mpdf-functions/setdefaultfont.html
                     slug: setdefaultfont
                     parent_title: 'mPDF functions'
                 -
                     title: SetDefaultFontSize()
-                            permalink: /reference/mpdf-functions/setdefaultfontsize.html
+                    permalink: /reference/mpdf-functions/setdefaultfontsize.html
                     slug: setdefaultfontsize
                     parent_title: 'mPDF functions'
                 -
                     title: SetDirectionality()
-                            permalink: /reference/mpdf-functions/setdirectionality.html
+                    permalink: /reference/mpdf-functions/setdirectionality.html
                     slug: setdirectionality
                     parent_title: 'mPDF functions'
                 -
                     title: SetDisplayMode()
-                            permalink: /reference/mpdf-functions/setdisplaymode.html
+                    permalink: /reference/mpdf-functions/setdisplaymode.html
                     slug: setdisplaymode
                     parent_title: 'mPDF functions'
                 -
                     title: SetDisplayPreferences()
-                            permalink: /reference/mpdf-functions/setdisplaypreferences.html
+                    permalink: /reference/mpdf-functions/setdisplaypreferences.html
                     slug: setdisplaypreferences
                     parent_title: 'mPDF functions'
                 -
                     title: SetDocTemplate()
-                            permalink: /reference/mpdf-functions/setdoctemplate.html
+                    permalink: /reference/mpdf-functions/setdoctemplate.html
                     slug: setdoctemplate
                     parent_title: 'mPDF functions'
                 -
                     title: SetFooter()
-                            permalink: /reference/mpdf-functions/setfooter.html
+                    permalink: /reference/mpdf-functions/setfooter.html
                     slug: setfooter
                     parent_title: 'mPDF functions'
                 -
                     title: SetFooterByName()
-                            permalink: /reference/mpdf-functions/setfooterbyname.html
+                    permalink: /reference/mpdf-functions/setfooterbyname.html
                     slug: setfooterbyname
                     parent_title: 'mPDF functions'
                 -
                     title: SetHeader()
-                            permalink: /reference/mpdf-functions/setheader.html
+                    permalink: /reference/mpdf-functions/setheader.html
                     slug: setheader
                     parent_title: 'mPDF functions'
                 -
                     title: SetHeaderByName()
-                            permalink: /reference/mpdf-functions/setheaderbyname.html
+                    permalink: /reference/mpdf-functions/setheaderbyname.html
                     slug: setheaderbyname
                     parent_title: 'mPDF functions'
                 -
                     title: SetHTMLFooter()
-                            permalink: /reference/mpdf-functions/sethtmlfooter.html
+                    permalink: /reference/mpdf-functions/sethtmlfooter.html
                     slug: sethtmlfooter
                     parent_title: 'mPDF functions'
                 -
                     title: SetHTMLFooterByName()
-                            permalink: /reference/mpdf-functions/sethtmlfooterbyname.html
+                    permalink: /reference/mpdf-functions/sethtmlfooterbyname.html
                     slug: sethtmlfooterbyname
                     parent_title: 'mPDF functions'
                 -
                     title: SetHTMLHeader()
-                            permalink: /reference/mpdf-functions/sethtmlheader.html
+                    permalink: /reference/mpdf-functions/sethtmlheader.html
                     slug: sethtmlheader
                     parent_title: 'mPDF functions'
                 -
                     title: SetHTMLHeaderByName()
-                            permalink: /reference/mpdf-functions/sethtmlheaderbyname.html
+                    permalink: /reference/mpdf-functions/sethtmlheaderbyname.html
                     slug: sethtmlheaderbyname
                     parent_title: 'mPDF functions'
                 -
                     title: SetImportUse()
-                            permalink: /reference/mpdf-functions/setimportuse.html
+                    permalink: /reference/mpdf-functions/setimportuse.html
                     slug: setimportuse
                     parent_title: 'mPDF functions'
                 -
                     title: SetKeywords()
-                            permalink: /reference/mpdf-functions/setkeywords.html
+                    permalink: /reference/mpdf-functions/setkeywords.html
                     slug: setkeywords
                     parent_title: 'mPDF functions'
                 -
@@ -993,17 +993,17 @@
                     parent_title: 'mPDF functions'
                 -
                     title: SetPageTemplate()
-                            permalink: /reference/mpdf-functions/setpagetemplate.html
+                    permalink: /reference/mpdf-functions/setpagetemplate.html
                     slug: setpagetemplate
                     parent_title: 'mPDF functions'
                 -
                     title: SetProtection()
-                            permalink: /reference/mpdf-functions/setprotection.html
+                    permalink: /reference/mpdf-functions/setprotection.html
                     slug: setprotection
                     parent_title: 'mPDF functions'
                 -
                     title: SetSourceFile() (until 8.0)
-                            permalink: /reference/mpdf-functions/setsourcefile.html
+                    permalink: /reference/mpdf-functions/setsourcefile.html
                     slug: setsourcefile
                     parent_title: 'mPDF functions'
                 -
@@ -1013,62 +1013,62 @@
                     parent_title: 'mPDF functions'
                 -
                     title: SetSubject()
-                            permalink: /reference/mpdf-functions/setsubject.html
+                    permalink: /reference/mpdf-functions/setsubject.html
                     slug: setsubject
                     parent_title: 'mPDF functions'
                 -
                     title: SetTitle()
-                            permalink: /reference/mpdf-functions/settitle.html
+                    permalink: /reference/mpdf-functions/settitle.html
                     slug: settitle
                     parent_title: 'mPDF functions'
                 -
                     title: SetVisibility()
-                            permalink: /reference/mpdf-functions/setvisibility.html
+                    permalink: /reference/mpdf-functions/setvisibility.html
                     slug: setvisibility
                     parent_title: 'mPDF functions'
                 -
                     title: SetWatermarkImage()
-                            permalink: /reference/mpdf-functions/setwatermarkimage.html
+                    permalink: /reference/mpdf-functions/setwatermarkimage.html
                     slug: setwatermarkimage
                     parent_title: 'mPDF functions'
                 -
                     title: SetWatermarkText()
-                            permalink: /reference/mpdf-functions/setwatermarktext.html
+                    permalink: /reference/mpdf-functions/setwatermarktext.html
                     slug: setwatermarktext
                     parent_title: 'mPDF functions'
                 -
                     title: Shaded_box()
-                            permalink: /reference/mpdf-functions/shaded-box.html
+                    permalink: /reference/mpdf-functions/shaded-box.html
                     slug: shaded-box
                     parent_title: 'mPDF functions'
                 -
                     title: StartProgressBarOutput()
-                            permalink: /reference/mpdf-functions/startprogressbaroutput.html
+                    permalink: /reference/mpdf-functions/startprogressbaroutput.html
                     slug: startprogressbaroutput
                     parent_title: 'mPDF functions'
                 -
                     title: Thumbnail()
-                            permalink: /reference/mpdf-functions/thumbnail.html
+                    permalink: /reference/mpdf-functions/thumbnail.html
                     slug: thumbnail
                     parent_title: 'mPDF functions'
                 -
                     title: TOCpagebreak()
-                            permalink: /reference/mpdf-functions/tocpagebreak.html
+                    permalink: /reference/mpdf-functions/tocpagebreak.html
                     slug: tocpagebreak
                     parent_title: 'mPDF functions'
                 -
                     title: TOCpagebreakByArray()
-                            permalink: /reference/mpdf-functions/tocpagebreakbyarray.html
+                    permalink: /reference/mpdf-functions/tocpagebreakbyarray.html
                     slug: tocpagebreakbyarray
                     parent_title: 'mPDF functions'
                 -
                     title: TOC_Entry()
-                            permalink: /reference/mpdf-functions/toc-entry.html
+                    permalink: /reference/mpdf-functions/toc-entry.html
                     slug: toc-entry
                     parent_title: 'mPDF functions'
                 -
                     title: UseTemplate() (until 8.0)
-                            permalink: /reference/mpdf-functions/usetemplate.html
+                    permalink: /reference/mpdf-functions/usetemplate.html
                     slug: usetemplate
                     parent_title: 'mPDF functions'
                 -
@@ -1078,32 +1078,32 @@
                     parent_title: 'mPDF functions'
                 -
                     title: WriteBarcode()
-                            permalink: /reference/mpdf-functions/writebarcode.html
+                    permalink: /reference/mpdf-functions/writebarcode.html
                     slug: writebarcode
                     parent_title: 'mPDF functions'
                 -
                     title: WriteCell()
-                            permalink: /reference/mpdf-functions/writecell.html
+                    permalink: /reference/mpdf-functions/writecell.html
                     slug: writecell
                     parent_title: 'mPDF functions'
                 -
                     title: WriteFixedPosHTML()
-                            permalink: /reference/mpdf-functions/writefixedposhtml.html
+                    permalink: /reference/mpdf-functions/writefixedposhtml.html
                     slug: writefixedposhtml
                     parent_title: 'mPDF functions'
                 -
                     title: WriteHTML()
-                            permalink: /reference/mpdf-functions/writehtml.html
+                    permalink: /reference/mpdf-functions/writehtml.html
                     slug: writehtml
                     parent_title: 'mPDF functions'
                 -
                     title: WriteText()
-                            permalink: /reference/mpdf-functions/writetext.html
+                    permalink: /reference/mpdf-functions/writetext.html
                     slug: writetext
                     parent_title: 'mPDF functions'
                 -
                     title: 'FPDF Original Functions'
-                            permalink: /reference/mpdf-functions/fpdf-original-functions.html
+                    permalink: /reference/mpdf-functions/fpdf-original-functions.html
                     slug: fpdf-original-functions
                     parent_title: 'mPDF functions'
         -
@@ -1112,122 +1112,122 @@
             items:
                 -
                     title: Overview
-                            permalink: /reference/html-control-tags/overview.html
+                    permalink: /reference/html-control-tags/overview.html
                     slug: overview
                     parent_title: 'HTML control tags'
                 -
                     title: annotation
-                            permalink: /reference/html-control-tags/annotation.html
+                    permalink: /reference/html-control-tags/annotation.html
                     slug: annotation
                     parent_title: 'HTML control tags'
                 -
                     title: barcode
-                            permalink: /reference/html-control-tags/barcode.html
+                    permalink: /reference/html-control-tags/barcode.html
                     slug: barcode
                     parent_title: 'HTML control tags'
                 -
                     title: bookmark
-                            permalink: /reference/html-control-tags/bookmark.html
+                    permalink: /reference/html-control-tags/bookmark.html
                     slug: bookmark
                     parent_title: 'HTML control tags'
                 -
                     title: columnbreak
-                            permalink: /reference/html-control-tags/columnbreak.html
+                    permalink: /reference/html-control-tags/columnbreak.html
                     slug: columnbreak
                     parent_title: 'HTML control tags'
                 -
                     title: columns
-                            permalink: /reference/html-control-tags/columns.html
+                    permalink: /reference/html-control-tags/columns.html
                     slug: columns
                     parent_title: 'HTML control tags'
                 -
                     title: dottab
-                            permalink: /reference/html-control-tags/dottab.html
+                    permalink: /reference/html-control-tags/dottab.html
                     slug: dottab
                     parent_title: 'HTML control tags'
                 -
                     title: formfeed
-                            permalink: /reference/html-control-tags/formfeed.html
+                    permalink: /reference/html-control-tags/formfeed.html
                     slug: formfeed
                     parent_title: 'HTML control tags'
                 -
                     title: htmlpagefooter
-                            permalink: /reference/html-control-tags/htmlpagefooter.html
+                    permalink: /reference/html-control-tags/htmlpagefooter.html
                     slug: htmlpagefooter
                     parent_title: 'HTML control tags'
                 -
                     title: htmlpageheader
-                            permalink: /reference/html-control-tags/htmlpageheader.html
+                    permalink: /reference/html-control-tags/htmlpageheader.html
                     slug: htmlpageheader
                     parent_title: 'HTML control tags'
                 -
                     title: indexentry
-                            permalink: /reference/html-control-tags/indexentry.html
+                    permalink: /reference/html-control-tags/indexentry.html
                     slug: indexentry
                     parent_title: 'HTML control tags'
                 -
                     title: indexinsert
-                            permalink: /reference/html-control-tags/indexinsert.html
+                    permalink: /reference/html-control-tags/indexinsert.html
                     slug: indexinsert
                     parent_title: 'HTML control tags'
                 -
                     title: pagebreak
-                            permalink: /reference/html-control-tags/pagebreak.html
+                    permalink: /reference/html-control-tags/pagebreak.html
                     slug: pagebreak
                     parent_title: 'HTML control tags'
                 -
                     title: pageheader
-                            permalink: /reference/html-control-tags/pageheader.html
+                    permalink: /reference/html-control-tags/pageheader.html
                     slug: pageheader
                     parent_title: 'HTML control tags'
                 -
                     title: pagefooter
-                            permalink: /reference/html-control-tags/pagefooter.html
+                    permalink: /reference/html-control-tags/pagefooter.html
                     slug: pagefooter
                     parent_title: 'HTML control tags'
                 -
                     title: sethtmlpagefooter
-                            permalink: /reference/html-control-tags/sethtmlpagefooter.html
+                    permalink: /reference/html-control-tags/sethtmlpagefooter.html
                     slug: sethtmlpagefooter
                     parent_title: 'HTML control tags'
                 -
                     title: sethtmlpageheader
-                            permalink: /reference/html-control-tags/sethtmlpageheader.html
+                    permalink: /reference/html-control-tags/sethtmlpageheader.html
                     slug: sethtmlpageheader
                     parent_title: 'HTML control tags'
                 -
                     title: setpagefooter
-                            permalink: /reference/html-control-tags/setpagefooter.html
+                    permalink: /reference/html-control-tags/setpagefooter.html
                     slug: setpagefooter
                     parent_title: 'HTML control tags'
                 -
                     title: setpageheader
-                            permalink: /reference/html-control-tags/setpageheader.html
+                    permalink: /reference/html-control-tags/setpageheader.html
                     slug: setpageheader
                     parent_title: 'HTML control tags'
                 -
                     title: textcircle
-                            permalink: /reference/html-control-tags/textcircle.html
+                    permalink: /reference/html-control-tags/textcircle.html
                     slug: textcircle
                     parent_title: 'HTML control tags'
                 -
                     title: tocentry
-                            permalink: /reference/html-control-tags/tocentry.html
+                    permalink: /reference/html-control-tags/tocentry.html
                     slug: tocentry
                     parent_title: 'HTML control tags'
                 -
                     title: tocpagebreak
-                            permalink: /reference/html-control-tags/tocpagebreak.html
+                    permalink: /reference/html-control-tags/tocpagebreak.html
                     slug: tocpagebreak
                     parent_title: 'HTML control tags'
                 -
                     title: watermarkimage
-                            permalink: /reference/html-control-tags/watermarkimage.html
+                    permalink: /reference/html-control-tags/watermarkimage.html
                     slug: watermarkimage
                     parent_title: 'HTML control tags'
                 -
                     title: watermarktext
-                            permalink: /reference/html-control-tags/watermarktext.html
+                    permalink: /reference/html-control-tags/watermarktext.html
                     slug: watermarktext
                     parent_title: 'HTML control tags'
         -
@@ -1236,157 +1236,157 @@
             items:
                 -
                     title: Overview
-                            permalink: /reference/mpdf-variables/overview.html
+                    permalink: /reference/mpdf-variables/overview.html
                     slug: overview
                     parent_title: 'mPDF Variables'
                 -
                     title: adjustFontDescLineheight
-                            permalink: /reference/mpdf-variables/adjustfontdesclineheight.html
+                    permalink: /reference/mpdf-variables/adjustfontdesclineheight.html
                     slug: adjustfontdesclineheight
                     parent_title: 'mPDF Variables'
                 -
                     title: aliasNbPg
-                            permalink: /reference/mpdf-variables/aliasnbpg.html
+                    permalink: /reference/mpdf-variables/aliasnbpg.html
                     slug: aliasnbpg
                     parent_title: 'mPDF Variables'
                 -
                     title: aliasNbPgGp
-                            permalink: /reference/mpdf-variables/aliasnbpggp.html
+                    permalink: /reference/mpdf-variables/aliasnbpggp.html
                     slug: aliasnbpggp
                     parent_title: 'mPDF Variables'
                 -
                     title: allow_charset_conversion
-                            permalink: /reference/mpdf-variables/allow-charset-conversion.html
+                    permalink: /reference/mpdf-variables/allow-charset-conversion.html
                     slug: allow-charset-conversion
                     parent_title: 'mPDF Variables'
                 -
                     title: allow_html_optional_endtags
-                            permalink: /reference/mpdf-variables/allow-html-optional-endtags.html
+                    permalink: /reference/mpdf-variables/allow-html-optional-endtags.html
                     slug: allow-html-optional-endtags
                     parent_title: 'mPDF Variables'
                 -
                     title: allow_output_buffering
-                            permalink: /reference/mpdf-variables/allow-output-buffering.html
+                    permalink: /reference/mpdf-variables/allow-output-buffering.html
                     slug: allow-output-buffering
                     parent_title: 'mPDF Variables'
                 -
                     title: allowCJKorphans
-                            permalink: /reference/mpdf-variables/allowcjkorphans.html
+                    permalink: /reference/mpdf-variables/allowcjkorphans.html
                     slug: allowcjkorphans
                     parent_title: 'mPDF Variables'
                 -
                     title: allowCJKoverflow
-                            permalink: /reference/mpdf-variables/allowcjkoverflow.html
+                    permalink: /reference/mpdf-variables/allowcjkoverflow.html
                     slug: allowcjkoverflow
                     parent_title: 'mPDF Variables'
                 -
                     title: anchor2Bookmark
-                            permalink: /reference/mpdf-variables/anchor2bookmark.html
+                    permalink: /reference/mpdf-variables/anchor2bookmark.html
                     slug: anchor2bookmark
                     parent_title: 'mPDF Variables'
                 -
                     title: annotMargin
-                            permalink: /reference/mpdf-variables/annotmargin.html
+                    permalink: /reference/mpdf-variables/annotmargin.html
                     slug: annotmargin
                     parent_title: 'mPDF Variables'
                 -
                     title: annotOpacity
-                            permalink: /reference/mpdf-variables/annotopacity.html
+                    permalink: /reference/mpdf-variables/annotopacity.html
                     slug: annotopacity
                     parent_title: 'mPDF Variables'
                 -
                     title: autoArabic
-                            permalink: /reference/mpdf-variables/autoarabic.html
+                    permalink: /reference/mpdf-variables/autoarabic.html
                     slug: autoarabic
                     parent_title: 'mPDF Variables'
                 -
                     title: autoFontGroupSize
-                            permalink: /reference/mpdf-variables/autofontgroupsize.html
+                    permalink: /reference/mpdf-variables/autofontgroupsize.html
                     slug: autofontgroupsize
                     parent_title: 'mPDF Variables'
                 -
                     title: autoLangToFont
-                            permalink: /reference/mpdf-variables/autolangtofont.html
+                    permalink: /reference/mpdf-variables/autolangtofont.html
                     slug: autolangtofont
                     parent_title: 'mPDF Variables'
                 -
                     title: autoMarginPadding
-                            permalink: /reference/mpdf-variables/automarginpadding.html
+                    permalink: /reference/mpdf-variables/automarginpadding.html
                     slug: automarginpadding
                     parent_title: 'mPDF Variables'
                 -
                     title: autoPageBreak
-                            permalink: /reference/mpdf-variables/autopagebreak.html
+                    permalink: /reference/mpdf-variables/autopagebreak.html
                     slug: autopagebreak
                     parent_title: 'mPDF Variables'
                 -
                     title: autoScriptToLang
-                            permalink: /reference/mpdf-variables/autoscripttolang.html
+                    permalink: /reference/mpdf-variables/autoscripttolang.html
                     slug: autoscripttolang
                     parent_title: 'mPDF Variables'
                 -
                     title: autoVietnamese
-                            permalink: /reference/mpdf-variables/autovietnamese.html
+                    permalink: /reference/mpdf-variables/autovietnamese.html
                     slug: autovietnamese
                     parent_title: 'mPDF Variables'
                 -
                     title: backupSubsFont
-                            permalink: /reference/mpdf-variables/backupsubsfont.html
+                    permalink: /reference/mpdf-variables/backupsubsfont.html
                     slug: backupsubsfont
                     parent_title: 'mPDF Variables'
                 -
                     title: backupSIPFont
-                            permalink: /reference/mpdf-variables/backupsipfont.html
+                    permalink: /reference/mpdf-variables/backupsipfont.html
                     slug: backupsipfont
                     parent_title: 'mPDF Variables'
                 -
                     title: baseScript
-                            permalink: /reference/mpdf-variables/basescript.html
+                    permalink: /reference/mpdf-variables/basescript.html
                     slug: basescript
                     parent_title: 'mPDF Variables'
                 -
                     title: biDirectional
-                            permalink: /reference/mpdf-variables/bidirectional.html
+                    permalink: /reference/mpdf-variables/bidirectional.html
                     slug: bidirectional
                     parent_title: 'mPDF Variables'
                 -
                     title: bleedMargin
-                            permalink: /reference/mpdf-variables/bleedmargin.html
+                    permalink: /reference/mpdf-variables/bleedmargin.html
                     slug: bleedmargin
                     parent_title: 'mPDF Variables'
                 -
                     title: bookmarkStyles
-                            permalink: /reference/mpdf-variables/bookmarkstyles.html
+                    permalink: /reference/mpdf-variables/bookmarkstyles.html
                     slug: bookmarkstyles
                     parent_title: 'mPDF Variables'
                 -
                     title: charset_in
-                            permalink: /reference/mpdf-variables/charset-in.html
+                    permalink: /reference/mpdf-variables/charset-in.html
                     slug: charset-in
                     parent_title: 'mPDF Variables'
                 -
                     title: CJKforceend
-                            permalink: /reference/mpdf-variables/cjkforceend.html
+                    permalink: /reference/mpdf-variables/cjkforceend.html
                     slug: cjkforceend
                     parent_title: 'mPDF Variables'
                 -
                     title: collapseBlockMargins
-                            permalink: /reference/mpdf-variables/collapseblockmargins.html
+                    permalink: /reference/mpdf-variables/collapseblockmargins.html
                     slug: collapseblockmargins
                     parent_title: 'mPDF Variables'
                 -
                     title: cropMarkLength
-                            permalink: /reference/mpdf-variables/cropmarklength.html
+                    permalink: /reference/mpdf-variables/cropmarklength.html
                     slug: cropmarklength
                     parent_title: 'mPDF Variables'
                 -
                     title: cropMarkMargin
-                            permalink: /reference/mpdf-variables/cropmarkmargin.html
+                    permalink: /reference/mpdf-variables/cropmarkmargin.html
                     slug: cropmarkmargin
                     parent_title: 'mPDF Variables'
                 -
                     title: crossMarkMargin
-                            permalink: /reference/mpdf-variables/crossmarkmargin.html
+                    permalink: /reference/mpdf-variables/crossmarkmargin.html
                     slug: crossmarkmargin
                     parent_title: 'mPDF Variables'
                 -
@@ -1406,72 +1406,72 @@
                     parent_title: 'mPDF Variables'
                 -
                     title: CSSselectMedia
-                            permalink: /reference/mpdf-variables/cssselectmedia.html
+                    permalink: /reference/mpdf-variables/cssselectmedia.html
                     slug: cssselectmedia
                     parent_title: 'mPDF Variables'
                 -
                     title: decimal_align
-                            permalink: /reference/mpdf-variables/decimal-align.html
+                    permalink: /reference/mpdf-variables/decimal-align.html
                     slug: decimal-align
                     parent_title: 'mPDF Variables'
                 -
                     title: debug
-                            permalink: /reference/mpdf-variables/debug.html
+                    permalink: /reference/mpdf-variables/debug.html
                     slug: debug
                     parent_title: 'mPDF Variables'
                 -
                     title: debugfonts
-                            permalink: /reference/mpdf-variables/debugfonts.html
+                    permalink: /reference/mpdf-variables/debugfonts.html
                     slug: debugfonts
                     parent_title: 'mPDF Variables'
                 -
                     title: defaultfooterfontsize
-                            permalink: /reference/mpdf-variables/defaultfooterfontsize.html
+                    permalink: /reference/mpdf-variables/defaultfooterfontsize.html
                     slug: defaultfooterfontsize
                     parent_title: 'mPDF Variables'
                 -
                     title: defaultfooterfontstyle
-                            permalink: /reference/mpdf-variables/defaultfooterfontstyle.html
+                    permalink: /reference/mpdf-variables/defaultfooterfontstyle.html
                     slug: defaultfooterfontstyle
                     parent_title: 'mPDF Variables'
                 -
                     title: defaultfooterline
-                            permalink: /reference/mpdf-variables/defaultfooterline.html
+                    permalink: /reference/mpdf-variables/defaultfooterline.html
                     slug: defaultfooterline
                     parent_title: 'mPDF Variables'
                 -
                     title: defaultheaderfontsize
-                            permalink: /reference/mpdf-variables/defaultheaderfontsize.html
+                    permalink: /reference/mpdf-variables/defaultheaderfontsize.html
                     slug: defaultheaderfontsize
                     parent_title: 'mPDF Variables'
                 -
                     title: defaultheaderfontstyle
-                            permalink: /reference/mpdf-variables/defaultheaderfontstyle.html
+                    permalink: /reference/mpdf-variables/defaultheaderfontstyle.html
                     slug: defaultheaderfontstyle
                     parent_title: 'mPDF Variables'
                 -
                     title: defaultheaderline
-                            permalink: /reference/mpdf-variables/defaultheaderline.html
+                    permalink: /reference/mpdf-variables/defaultheaderline.html
                     slug: defaultheaderline
                     parent_title: 'mPDF Variables'
                 -
                     title: displayDefaultOrientation
-                            permalink: /reference/mpdf-variables/displaydefaultorientation.html
+                    permalink: /reference/mpdf-variables/displaydefaultorientation.html
                     slug: displaydefaultorientation
                     parent_title: 'mPDF Variables'
                 -
                     title: defaultPageNumStyle
-                            permalink: /reference/mpdf-variables/defaultpagenumstyle.html
+                    permalink: /reference/mpdf-variables/defaultpagenumstyle.html
                     slug: defaultpagenumstyle
                     parent_title: 'mPDF Variables'
                 -
                     title: dpi
-                            permalink: /reference/mpdf-variables/dpi.html
+                    permalink: /reference/mpdf-variables/dpi.html
                     slug: dpi
                     parent_title: 'mPDF Variables'
                 -
                     title: enableImports
-                            permalink: /reference/mpdf-variables/enableimports.html
+                    permalink: /reference/mpdf-variables/enableimports.html
                     slug: enableimports
                     parent_title: 'mPDF Variables'
                 -
@@ -1481,12 +1481,12 @@
                     parent_title: 'mPDF Variables'
                 -
                     title: falseBoldWeight
-                            permalink: /reference/mpdf-variables/falseboldweight.html
+                    permalink: /reference/mpdf-variables/falseboldweight.html
                     slug: falseboldweight
                     parent_title: 'mPDF Variables'
                 -
                     title: footer_line_spacing
-                            permalink: /reference/mpdf-variables/footer-line-spacing.html
+                    permalink: /reference/mpdf-variables/footer-line-spacing.html
                     slug: footer-line-spacing
                     parent_title: 'mPDF Variables'
                 -
@@ -1496,392 +1496,392 @@
                     parent_title: 'mPDF Variables'
                 -
                     title: forcePortraitHeaders
-                            permalink: /reference/mpdf-variables/forceportraitheaders.html
+                    permalink: /reference/mpdf-variables/forceportraitheaders.html
                     slug: forceportraitheaders
                     parent_title: 'mPDF Variables'
                 -
                     title: forcePortraitMargins
-                            permalink: /reference/mpdf-variables/forceportraitmargins.html
+                    permalink: /reference/mpdf-variables/forceportraitmargins.html
                     slug: forceportraitmargins
                     parent_title: 'mPDF Variables'
                 -
                     title: header_line_spacing
-                            permalink: /reference/mpdf-variables/header-line-spacing.html
+                    permalink: /reference/mpdf-variables/header-line-spacing.html
                     slug: header-line-spacing
                     parent_title: 'mPDF Variables'
                 -
                     title: h2bookmarks
-                            permalink: /reference/mpdf-variables/h2bookmarks.html
+                    permalink: /reference/mpdf-variables/h2bookmarks.html
                     slug: h2bookmarks
                     parent_title: 'mPDF Variables'
                 -
                     title: h2toc
-                            permalink: /reference/mpdf-variables/h2toc.html
+                    permalink: /reference/mpdf-variables/h2toc.html
                     slug: h2toc
                     parent_title: 'mPDF Variables'
                 -
                     title: ICCProfile
-                            permalink: /reference/mpdf-variables/iccprofile.html
+                    permalink: /reference/mpdf-variables/iccprofile.html
                     slug: iccprofile
                     parent_title: 'mPDF Variables'
                 -
                     title: ignore_invalid_utf8
-                            permalink: /reference/mpdf-variables/ignore-invalid-utf8.html
+                    permalink: /reference/mpdf-variables/ignore-invalid-utf8.html
                     slug: ignore-invalid-utf8
                     parent_title: 'mPDF Variables'
                 -
                     title: ignore_table_percents
-                            permalink: /reference/mpdf-variables/ignore-table-percents.html
+                    permalink: /reference/mpdf-variables/ignore-table-percents.html
                     slug: ignore-table-percents
                     parent_title: 'mPDF Variables'
                 -
                     title: ignore_table_widths
-                            permalink: /reference/mpdf-variables/ignore-table-widths.html
+                    permalink: /reference/mpdf-variables/ignore-table-widths.html
                     slug: ignore-table-widths
                     parent_title: 'mPDF Variables'
                 -
                     title: img_dpi
-                            permalink: /reference/mpdf-variables/img-dpi.html
+                    permalink: /reference/mpdf-variables/img-dpi.html
                     slug: img-dpi
                     parent_title: 'mPDF Variables'
                 -
                     title: 'incrementFPR1 [1-4]'
-                            permalink: /reference/mpdf-variables/incrementfpr1-1-4.html
+                    permalink: /reference/mpdf-variables/incrementfpr1-1-4.html
                     slug: incrementfpr1-1-4
                     parent_title: 'mPDF Variables'
                 -
                     title: iterationCounter
-                            permalink: /reference/mpdf-variables/iterationcounter.html
+                    permalink: /reference/mpdf-variables/iterationcounter.html
                     slug: iterationcounter
                     parent_title: 'mPDF Variables'
                 -
                     title: jSmaxChar
-                            permalink: /reference/mpdf-variables/jsmaxchar.html
+                    permalink: /reference/mpdf-variables/jsmaxchar.html
                     slug: jsmaxchar
                     parent_title: 'mPDF Variables'
                 -
                     title: jSmaxCharLast
-                            permalink: /reference/mpdf-variables/jsmaxcharlast.html
+                    permalink: /reference/mpdf-variables/jsmaxcharlast.html
                     slug: jsmaxcharlast
                     parent_title: 'mPDF Variables'
                 -
                     title: jSmaxWordLast
-                            permalink: /reference/mpdf-variables/jsmaxwordlast.html
+                    permalink: /reference/mpdf-variables/jsmaxwordlast.html
                     slug: jsmaxwordlast
                     parent_title: 'mPDF Variables'
                 -
                     title: jSWord
-                            permalink: /reference/mpdf-variables/jsword.html
+                    permalink: /reference/mpdf-variables/jsword.html
                     slug: jsword
                     parent_title: 'mPDF Variables'
                 -
                     title: justifyB4br
-                            permalink: /reference/mpdf-variables/justifyb4br.html
+                    permalink: /reference/mpdf-variables/justifyb4br.html
                     slug: justifyb4br
                     parent_title: 'mPDF Variables'
                 -
                     title: keepColumns
-                            permalink: /reference/mpdf-variables/keepcolumns.html
+                    permalink: /reference/mpdf-variables/keepcolumns.html
                     slug: keepcolumns
                     parent_title: 'mPDF Variables'
                 -
                     title: keep_table_proportions
-                            permalink: /reference/mpdf-variables/keep-table-proportions.html
+                    permalink: /reference/mpdf-variables/keep-table-proportions.html
                     slug: keep-table-proportions
                     parent_title: 'mPDF Variables'
                 -
                     title: list_align_style
-                            permalink: /reference/mpdf-variables/list-align-style.html
+                    permalink: /reference/mpdf-variables/list-align-style.html
                     slug: list-align-style
                     parent_title: 'mPDF Variables'
                 -
                     title: list_auto_mode
-                            permalink: /reference/mpdf-variables/list-auto-mode.html
+                    permalink: /reference/mpdf-variables/list-auto-mode.html
                     slug: list-auto-mode
                     parent_title: 'mPDF Variables'
                 -
                     title: list_indent_default
-                            permalink: /reference/mpdf-variables/list-indent-default.html
+                    permalink: /reference/mpdf-variables/list-indent-default.html
                     slug: list-indent-default
                     parent_title: 'mPDF Variables'
                 -
                     title: list_indent_default_mpdf
-                            permalink: /reference/mpdf-variables/list-indent-default-mpdf.html
+                    permalink: /reference/mpdf-variables/list-indent-default-mpdf.html
                     slug: list-indent-default-mpdf
                     parent_title: 'mPDF Variables'
                 -
                     title: list_indent_first_level
-                            permalink: /reference/mpdf-variables/list-indent-first-level.html
+                    permalink: /reference/mpdf-variables/list-indent-first-level.html
                     slug: list-indent-first-level
                     parent_title: 'mPDF Variables'
                 -
                     title: list_marker_offset
-                            permalink: /reference/mpdf-variables/list-marker-offset.html
+                    permalink: /reference/mpdf-variables/list-marker-offset.html
                     slug: list-marker-offset
                     parent_title: 'mPDF Variables'
                 -
                     title: list_number_suffix
-                            permalink: /reference/mpdf-variables/list-number-suffix.html
+                    permalink: /reference/mpdf-variables/list-number-suffix.html
                     slug: list-number-suffix
                     parent_title: 'mPDF Variables'
                 -
                     title: list_symbol_size
-                            permalink: /reference/mpdf-variables/list-symbol-size.html
+                    permalink: /reference/mpdf-variables/list-symbol-size.html
                     slug: list-symbol-size
                     parent_title: 'mPDF Variables'
                 -
                     title: margBuffer
-                            permalink: /reference/mpdf-variables/margbuffer.html
+                    permalink: /reference/mpdf-variables/margbuffer.html
                     slug: margbuffer
                     parent_title: 'mPDF Variables'
                 -
                     title: max_colH_correction
-                            permalink: /reference/mpdf-variables/max-colh-correction.html
+                    permalink: /reference/mpdf-variables/max-colh-correction.html
                     slug: max-colh-correction
                     parent_title: 'mPDF Variables'
                 -
                     title: maxTTFFilesize
-                            permalink: /reference/mpdf-variables/maxttffilesize.html
+                    permalink: /reference/mpdf-variables/maxttffilesize.html
                     slug: maxttffilesize
                     parent_title: 'mPDF Variables'
                 -
                     title: mirrorMargins
-                            permalink: /reference/mpdf-variables/mirrormargins.html
+                    permalink: /reference/mpdf-variables/mirrormargins.html
                     slug: mirrormargins
                     parent_title: 'mPDF Variables'
                 -
                     title: nbpgPrefix
-                            permalink: /reference/mpdf-variables/nbpgprefix.html
+                    permalink: /reference/mpdf-variables/nbpgprefix.html
                     slug: nbpgprefix
                     parent_title: 'mPDF Variables'
                 -
                     title: nbpgSuffix
-                            permalink: /reference/mpdf-variables/nbpgsuffix.html
+                    permalink: /reference/mpdf-variables/nbpgsuffix.html
                     slug: nbpgsuffix
                     parent_title: 'mPDF Variables'
                 -
                     title: nonPrintMargin
-                            permalink: /reference/mpdf-variables/nonprintmargin.html
+                    permalink: /reference/mpdf-variables/nonprintmargin.html
                     slug: nonprintmargin
                     parent_title: 'mPDF Variables'
                 -
                     title: normalLineheight
-                            permalink: /reference/mpdf-variables/normallineheight.html
+                    permalink: /reference/mpdf-variables/normallineheight.html
                     slug: normallineheight
                     parent_title: 'mPDF Variables'
                 -
                     title: packTableData
-                            permalink: /reference/mpdf-variables/packtabledata.html
+                    permalink: /reference/mpdf-variables/packtabledata.html
                     slug: packtabledata
                     parent_title: 'mPDF Variables'
                 -
                     title: pagenumPrefix
-                            permalink: /reference/mpdf-variables/pagenumprefix.html
+                    permalink: /reference/mpdf-variables/pagenumprefix.html
                     slug: pagenumprefix
                     parent_title: 'mPDF Variables'
                 -
                     title: pagenumSuffix
-                            permalink: /reference/mpdf-variables/pagenumsuffix.html
+                    permalink: /reference/mpdf-variables/pagenumsuffix.html
                     slug: pagenumsuffix
                     parent_title: 'mPDF Variables'
                 -
                     title: PDFA
-                            permalink: /reference/mpdf-variables/pdfa.html
+                    permalink: /reference/mpdf-variables/pdfa.html
                     slug: pdfa
                     parent_title: 'mPDF Variables'
                 -
                     title: PDFAauto
-                            permalink: /reference/mpdf-variables/pdfaauto.html
+                    permalink: /reference/mpdf-variables/pdfaauto.html
                     slug: pdfaauto
                     parent_title: 'mPDF Variables'
                 -
                     title: PDFX
-                            permalink: /reference/mpdf-variables/pdfx.html
+                    permalink: /reference/mpdf-variables/pdfx.html
                     slug: pdfx
                     parent_title: 'mPDF Variables'
                 -
                     title: PDFXauto
-                            permalink: /reference/mpdf-variables/pdfxauto.html
+                    permalink: /reference/mpdf-variables/pdfxauto.html
                     slug: pdfxauto
                     parent_title: 'mPDF Variables'
                 -
                     title: percentSubset
-                            permalink: /reference/mpdf-variables/percentsubset.html
+                    permalink: /reference/mpdf-variables/percentsubset.html
                     slug: percentsubset
                     parent_title: 'mPDF Variables'
                 -
                     title: printers_info
-                            permalink: /reference/mpdf-variables/printers-info.html
+                    permalink: /reference/mpdf-variables/printers-info.html
                     slug: printers-info
                     parent_title: 'mPDF Variables'
                 -
                     title: progbar_altHTML
-                            permalink: /reference/mpdf-variables/progbar-althtml.html
+                    permalink: /reference/mpdf-variables/progbar-althtml.html
                     slug: progbar-althtml
                     parent_title: 'mPDF Variables'
                 -
                     title: progbar_heading
-                            permalink: /reference/mpdf-variables/progbar-heading.html
+                    permalink: /reference/mpdf-variables/progbar-heading.html
                     slug: progbar-heading
                     parent_title: 'mPDF Variables'
                 -
                     title: progressBar
-                            permalink: /reference/mpdf-variables/progressbar.html
+                    permalink: /reference/mpdf-variables/progressbar.html
                     slug: progressbar
                     parent_title: 'mPDF Variables'
                 -
                     title: repackageTTF
-                            permalink: /reference/mpdf-variables/repackagettf.html
+                    permalink: /reference/mpdf-variables/repackagettf.html
                     slug: repackagettf
                     parent_title: 'mPDF Variables'
                 -
                     title: restoreBlockPagebreaks
-                            permalink: /reference/mpdf-variables/restoreblockpagebreaks.html
+                    permalink: /reference/mpdf-variables/restoreblockpagebreaks.html
                     slug: restoreblockpagebreaks
                     parent_title: 'mPDF Variables'
                 -
                     title: restrictColorSpace
-                            permalink: /reference/mpdf-variables/restrictcolorspace.html
+                    permalink: /reference/mpdf-variables/restrictcolorspace.html
                     slug: restrictcolorspace
                     parent_title: 'mPDF Variables'
                 -
                     title: setAutoBottomMargin
-                            permalink: /reference/mpdf-variables/setautobottommargin.html
+                    permalink: /reference/mpdf-variables/setautobottommargin.html
                     slug: setautobottommargin
                     parent_title: 'mPDF Variables'
                 -
                     title: setAutoTopMargin
-                            permalink: /reference/mpdf-variables/setautotopmargin.html
+                    permalink: /reference/mpdf-variables/setautotopmargin.html
                     slug: setautotopmargin
                     parent_title: 'mPDF Variables'
                 -
                     title: showImageErrors
-                            permalink: /reference/mpdf-variables/showimageerrors.html
+                    permalink: /reference/mpdf-variables/showimageerrors.html
                     slug: showimageerrors
                     parent_title: 'mPDF Variables'
                 -
                     title: showStats
-                            permalink: /reference/mpdf-variables/showstats.html
+                    permalink: /reference/mpdf-variables/showstats.html
                     slug: showstats
                     parent_title: 'mPDF Variables'
                 -
                     title: showWatermarkImage
-                            permalink: /reference/mpdf-variables/showwatermarkimage.html
+                    permalink: /reference/mpdf-variables/showwatermarkimage.html
                     slug: showwatermarkimage
                     parent_title: 'mPDF Variables'
                 -
                     title: showWatermarkText
-                            permalink: /reference/mpdf-variables/showwatermarktext.html
+                    permalink: /reference/mpdf-variables/showwatermarktext.html
                     slug: showwatermarktext
                     parent_title: 'mPDF Variables'
                 -
                     title: shrink_tables_to_fit
-                            permalink: /reference/mpdf-variables/shrink-tables-to-fit.html
+                    permalink: /reference/mpdf-variables/shrink-tables-to-fit.html
                     slug: shrink-tables-to-fit
                     parent_title: 'mPDF Variables'
                 -
                     title: SHYlang
-                            permalink: /reference/mpdf-variables/shylang.html
+                    permalink: /reference/mpdf-variables/shylang.html
                     slug: shylang
                     parent_title: 'mPDF Variables'
                 -
                     title: simpleTables
-                            permalink: /reference/mpdf-variables/simpletables.html
+                    permalink: /reference/mpdf-variables/simpletables.html
                     slug: simpletables
                     parent_title: 'mPDF Variables'
                 -
                     title: smCapsScale
-                            permalink: /reference/mpdf-variables/smcapsscale.html
+                    permalink: /reference/mpdf-variables/smcapsscale.html
                     slug: smcapsscale
                     parent_title: 'mPDF Variables'
                 -
                     title: smCapsStretch
-                            permalink: /reference/mpdf-variables/smcapsstretch.html
+                    permalink: /reference/mpdf-variables/smcapsstretch.html
                     slug: smcapsstretch
                     parent_title: 'mPDF Variables'
                 -
                     title: table_error_report
-                            permalink: /reference/mpdf-variables/table-error-report.html
+                    permalink: /reference/mpdf-variables/table-error-report.html
                     slug: table-error-report
                     parent_title: 'mPDF Variables'
                 -
                     title: table_error_report_param
-                            permalink: /reference/mpdf-variables/table-error-report-param.html
+                    permalink: /reference/mpdf-variables/table-error-report-param.html
                     slug: table-error-report-param
                     parent_title: 'mPDF Variables'
                 -
                     title: tableMinSizePriority
-                            permalink: /reference/mpdf-variables/tableminsizepriority.html
+                    permalink: /reference/mpdf-variables/tableminsizepriority.html
                     slug: tableminsizepriority
                     parent_title: 'mPDF Variables'
                 -
                     title: tabSpaces
-                            permalink: /reference/mpdf-variables/tabspaces.html
+                    permalink: /reference/mpdf-variables/tabspaces.html
                     slug: tabspaces
                     parent_title: 'mPDF Variables'
                 -
                     title: text_input_as_HTML
-                            permalink: /reference/mpdf-variables/text-input-as-html.html
+                    permalink: /reference/mpdf-variables/text-input-as-html.html
                     slug: text-input-as-html
                     parent_title: 'mPDF Variables'
                 -
                     title: title2annots
-                            permalink: /reference/mpdf-variables/title2annots.html
+                    permalink: /reference/mpdf-variables/title2annots.html
                     slug: title2annots
                     parent_title: 'mPDF Variables'
                 -
                     title: use_kwt
-                            permalink: /reference/mpdf-variables/use-kwt.html
+                    permalink: /reference/mpdf-variables/use-kwt.html
                     slug: use-kwt
                     parent_title: 'mPDF Variables'
                 -
                     title: useAdobeCJK
-                            permalink: /reference/mpdf-variables/useadobecjk.html
+                    permalink: /reference/mpdf-variables/useadobecjk.html
                     slug: useadobecjk
                     parent_title: 'mPDF Variables'
                 -
                     title: useDictionaryLBR
-                            permalink: /reference/mpdf-variables/usedictionarylbr.html
+                    permalink: /reference/mpdf-variables/usedictionarylbr.html
                     slug: usedictionarylbr
                     parent_title: 'mPDF Variables'
                 -
                     title: useFixedNormalLineHeight
-                            permalink: /reference/mpdf-variables/usefixednormallineheight.html
+                    permalink: /reference/mpdf-variables/usefixednormallineheight.html
                     slug: usefixednormallineheight
                     parent_title: 'mPDF Variables'
                 -
                     title: useFixedTextBaseline
-                            permalink: /reference/mpdf-variables/usefixedtextbaseline.html
+                    permalink: /reference/mpdf-variables/usefixedtextbaseline.html
                     slug: usefixedtextbaseline
                     parent_title: 'mPDF Variables'
                 -
                     title: useGraphs
-                            permalink: /reference/mpdf-variables/usegraphs.html
+                    permalink: /reference/mpdf-variables/usegraphs.html
                     slug: usegraphs
                     parent_title: 'mPDF Variables'
                 -
                     title: useKerning
-                            permalink: /reference/mpdf-variables/usekerning.html
+                    permalink: /reference/mpdf-variables/usekerning.html
                     slug: usekerning
                     parent_title: 'mPDF Variables'
                 -
                     title: useLang
-                            permalink: /reference/mpdf-variables/uselang.html
+                    permalink: /reference/mpdf-variables/uselang.html
                     slug: uselang
                     parent_title: 'mPDF Variables'
                 -
                     title: useSubstitutions
-                            permalink: /reference/mpdf-variables/usesubstitutions.html
+                    permalink: /reference/mpdf-variables/usesubstitutions.html
                     slug: usesubstitutions
                     parent_title: 'mPDF Variables'
                 -
                     title: useTibetanLBR
-                            permalink: /reference/mpdf-variables/usetibetanlbr.html
+                    permalink: /reference/mpdf-variables/usetibetanlbr.html
                     slug: usetibetanlbr
                     parent_title: 'mPDF Variables'
                 -
                     title: watermark_font
-                            permalink: /reference/mpdf-variables/watermark-font.html
+                    permalink: /reference/mpdf-variables/watermark-font.html
                     slug: watermark-font
                     parent_title: 'mPDF Variables'
                 -
@@ -1891,22 +1891,22 @@
                     parent_title: 'mPDF Variables'
                 -
                     title: watermarkImageAlpha
-                            permalink: /reference/mpdf-variables/watermarkimagealpha.html
+                    permalink: /reference/mpdf-variables/watermarkimagealpha.html
                     slug: watermarkimagealpha
                     parent_title: 'mPDF Variables'
                 -
                     title: watermarkImgAlphaBlend
-                            permalink: /reference/mpdf-variables/watermarkimgalphablend.html
+                    permalink: /reference/mpdf-variables/watermarkimgalphablend.html
                     slug: watermarkimgalphablend
                     parent_title: 'mPDF Variables'
                 -
                     title: watermarkImgBehind
-                            permalink: /reference/mpdf-variables/watermarkimgbehind.html
+                    permalink: /reference/mpdf-variables/watermarkimgbehind.html
                     slug: watermarkimgbehind
                     parent_title: 'mPDF Variables'
                 -
                     title: watermarkTextAlpha
-                            permalink: /reference/mpdf-variables/watermarktextalpha.html
+                    permalink: /reference/mpdf-variables/watermarktextalpha.html
                     slug: watermarktextalpha
                     parent_title: 'mPDF Variables'
         -
@@ -1915,12 +1915,12 @@
             items:
                 -
                     title: strcode2utf()
-                            permalink: /reference/mpdf-utilities/strcode2utf.html
+                    permalink: /reference/mpdf-utilities/strcode2utf.html
                     slug: strcode2utf
                     parent_title: 'mPDF Utilities'
                 -
                     title: preparePreText()
-                            permalink: /reference/mpdf-utilities/preparepretext.html
+                    permalink: /reference/mpdf-utilities/preparepretext.html
                     slug: preparepretext
                     parent_title: 'mPDF Utilities'
         -
@@ -1929,137 +1929,137 @@
             items:
                 -
                     title: Win-1252
-                            permalink: /reference/codepages-glyphs/win-1252.html
+                    permalink: /reference/codepages-glyphs/win-1252.html
                     slug: win-1252
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'ASCII characters'
-                            permalink: /reference/codepages-glyphs/ascii-characters.html
+                    permalink: /reference/codepages-glyphs/ascii-characters.html
                     slug: ascii-characters
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: Win-1251
-                            permalink: /reference/codepages-glyphs/win-1251.html
+                    permalink: /reference/codepages-glyphs/win-1251.html
                     slug: win-1251
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: ISO-8859-2
-                            permalink: /reference/codepages-glyphs/iso-8859-2.html
+                    permalink: /reference/codepages-glyphs/iso-8859-2.html
                     slug: iso-8859-2
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: ISO-8859-4
-                            permalink: /reference/codepages-glyphs/iso-8859-4.html
+                    permalink: /reference/codepages-glyphs/iso-8859-4.html
                     slug: iso-8859-4
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: ISO-8859-7
-                            permalink: /reference/codepages-glyphs/iso-8859-7.html
+                    permalink: /reference/codepages-glyphs/iso-8859-7.html
                     slug: iso-8859-7
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: ISO-8859-9
-                            permalink: /reference/codepages-glyphs/iso-8859-9.html
+                    permalink: /reference/codepages-glyphs/iso-8859-9.html
                     slug: iso-8859-9
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'ISO-8859/win comparison chart'
-                            permalink: /reference/codepages-glyphs/iso-8859-win-comparison-chart.html
+                    permalink: /reference/codepages-glyphs/iso-8859-win-comparison-chart.html
                     slug: iso-8859-win-comparison-chart
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'ZapfDingbats (Adobe)'
-                            permalink: /reference/codepages-glyphs/zapfdingbats-adobe.html
+                    permalink: /reference/codepages-glyphs/zapfdingbats-adobe.html
                     slug: zapfdingbats-adobe
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Symbols (Adobe)'
-                            permalink: /reference/codepages-glyphs/symbols-adobe.html
+                    permalink: /reference/codepages-glyphs/symbols-adobe.html
                     slug: symbols-adobe
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: Vietnamese
-                            permalink: /reference/codepages-glyphs/vietnamese.html
+                    permalink: /reference/codepages-glyphs/vietnamese.html
                     slug: vietnamese
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'BIG-5 (Traditional Chinese)'
-                            permalink: /reference/codepages-glyphs/big-5-traditional-chinese.html
+                    permalink: /reference/codepages-glyphs/big-5-traditional-chinese.html
                     slug: big-5-traditional-chinese
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'HKCS (Hong Kong Character Set)'
-                            permalink: /reference/codepages-glyphs/hkcs-hong-kong-character-set.html
+                    permalink: /reference/codepages-glyphs/hkcs-hong-kong-character-set.html
                     slug: hkcs-hong-kong-character-set
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'GBK (Simplified Chinese)'
-                            permalink: /reference/codepages-glyphs/gbk-simplified-chinese.html
+                    permalink: /reference/codepages-glyphs/gbk-simplified-chinese.html
                     slug: gbk-simplified-chinese
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'SHIFT_JIS (Japanese)'
-                            permalink: /reference/codepages-glyphs/shift-jis-japanese.html
+                    permalink: /reference/codepages-glyphs/shift-jis-japanese.html
                     slug: shift-jis-japanese
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'UHC (Korean)'
-                            permalink: /reference/codepages-glyphs/uhc-korean.html
+                    permalink: /reference/codepages-glyphs/uhc-korean.html
                     slug: uhc-korean
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Demo - Pangrams'
-                            permalink: /reference/codepages-glyphs/demo-pangrams.html
+                    permalink: /reference/codepages-glyphs/demo-pangrams.html
                     slug: demo-pangrams
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Demo - Other languages'
-                            permalink: /reference/codepages-glyphs/demo-other-languages.html
+                    permalink: /reference/codepages-glyphs/demo-other-languages.html
                     slug: demo-other-languages
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Demo - 1000 Character Classic'
-                            permalink: /reference/codepages-glyphs/demo-1000-character-classic.html
+                    permalink: /reference/codepages-glyphs/demo-1000-character-classic.html
                     slug: demo-1000-character-classic
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Demo - Other Unicode character'
-                            permalink: /reference/codepages-glyphs/demo-other-unicode-character.html
+                    permalink: /reference/codepages-glyphs/demo-other-unicode-character.html
                     slug: demo-other-unicode-character
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Equivalent codepages'
-                            permalink: /reference/codepages-glyphs/equivalent-codepages.html
+                    permalink: /reference/codepages-glyphs/equivalent-codepages.html
                     slug: equivalent-codepages
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: iconv
-                            permalink: /reference/codepages-glyphs/iconv.html
+                    permalink: /reference/codepages-glyphs/iconv.html
                     slug: iconv
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: mbstring
-                            permalink: /reference/codepages-glyphs/mbstring.html
+                    permalink: /reference/codepages-glyphs/mbstring.html
                     slug: mbstring
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Unicode character planes'
-                            permalink: /reference/codepages-glyphs/unicode-character-planes.html
+                    permalink: /reference/codepages-glyphs/unicode-character-planes.html
                     slug: unicode-character-planes
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'ISO 639-1 language codes'
-                            permalink: /reference/codepages-glyphs/iso-639-1-language-codes.html
+                    permalink: /reference/codepages-glyphs/iso-639-1-language-codes.html
                     slug: iso-639-1-language-codes
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Useful links'
-                            permalink: /reference/codepages-glyphs/useful-links.html
+                    permalink: /reference/codepages-glyphs/useful-links.html
                     slug: useful-links
                     parent_title: 'Codepages & Glyphs'
                 -
                     title: 'Unicode coverage of Free Fonts'
-                            permalink: /reference/codepages-glyphs/unicode-coverage-of-free-fonts.html
+                    permalink: /reference/codepages-glyphs/unicode-coverage-of-free-fonts.html
                     slug: unicode-coverage-of-free-fonts
                     parent_title: 'Codepages & Glyphs'
         -
@@ -2068,6 +2068,6 @@
             items:
                 -
                     title: 'PDF reference'
-                            permalink: /reference/pdf-files-adobe/pdf-reference.html
+                    permalink: /reference/pdf-files-adobe/pdf-reference.html
                     slug: pdf-reference
                     parent_title: 'PDF Files (Adobe)'
