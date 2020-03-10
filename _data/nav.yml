@@ -50,6 +50,11 @@
             slug: installation-v7-x
             parent_title: 'Installation & Setup'
         -
+            title: 'Using mPDF without Composer'
+            permalink: /installation-setup/using-without-composer.html
+            slug: using-without-composer
+            parent_title: 'Installation & Setup'
+        -
             title: 'Reducing memory usage'
             url: indexbe43.html
             permalink: /installation-setup/reducing-memory-usage.html
