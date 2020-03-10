@@ -27,4 +27,4 @@ You can do this manually (reload, find the file with missing class, add require 
 [an autoloading library](https://packagist.org/search/?q=autoload) of your choice.
 
 Further usage is then the <a href="{{ "/getting-started/creating-your-first-file.html" | prepend: site.baseurl }}">same as when using Composer</a>,
-just don't require your autoloading script instead of Composer `autoload.php`.
+just require your autoloading script instead of Composer `autoload.php`.
