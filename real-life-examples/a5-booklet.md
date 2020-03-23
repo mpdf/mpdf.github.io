@@ -38,14 +38,15 @@ $pagecount = $mpdf->SetSourceFile('A4sourcefile.pdf');
 $pp = GetBookletPages($pagecount);
 
 foreach ($pp as $v) {
+
     $mpdf->AddPage();
 
-    if ($v[0] > 0 && $v[0] &le; $pagecount) {
+    if ($v[0] > 0 && $v[0] &le;= $pagecount) {
         $tplIdx = $mpdf->ImportPage($v[0], 0, 0, $ow, $oh);
         $mpdf->UseTemplate($tplIdx, 0, 0, $pw, $ph);
     }
 
-    if ($v[1] > 0 && $v[1] &le; $pagecount) {
+    if ($v[1] > 0 && $v[1] &le;= $pagecount) {
         $tplIdx = $mpdf->ImportPage($v[1], 0, 0, $ow, $oh);
         $mpdf->UseTemplate($tplIdx, $pw, 0, $pw, $ph);
     }
@@ -57,9 +58,9 @@ exit;
 function GetBookletPages($np, $backcover = true) {
     $lastpage = $np;
     $np = 4 * ceil($np / 4);
-    $pp = array();
+    $pp = [];
 
-    for ($i = 1; $i &le; $np / 2; $i++) {
+    for ($i = 1; $i &le;= $np / 2; $i++) {
 
         $p1 = $np - $i + 1;
 
@@ -72,8 +73,8 @@ function GetBookletPages($np, $backcover = true) {
         }
 
         $pp[] = ($i % 2 == 1)
-            ? array( $p1,  $i );
-            : array( $i, $p1 );
+            ? [ $p1,  $i ];
+            : [ $i, $p1 ];
     }
 
     return $pp;

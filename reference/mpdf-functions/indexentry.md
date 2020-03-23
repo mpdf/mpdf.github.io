@@ -22,7 +22,7 @@ as for <a href="{{ "/reference/mpdf-functions/indexentrysee.html" | prepend: sit
 
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** The Index must be generated explicity at the end of the document using
-  <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.baseurl }}">CreateIndex()</a>
+  <a href="{{ "/reference/mpdf-functions/insertindex.html" | prepend: site.baseurl }}">InsertIndex()</a>
   at some point before <a href="{{ "/reference/mpdf-functions/output.html" | prepend: site.baseurl }}">Output()</a> is called.
 </div>
 
