@@ -23,7 +23,7 @@ The precise effect it has on different languages/fonts is specified in the `\Mpd
   **Note:** This value can only be set as a configuration variable
 
   To change the value at runtime, you must use `$mpdf = new \Mpdf\Mpdf(['mode' => '-aCJK']);` to set as
-  `false` or `$mpdf = new \Mpdf\Mpdf(['mode' => '-aCJK']); `to set as
+  `false` or `$mpdf = new \Mpdf\Mpdf(['mode' => '+aCJK']); `to set as
   `true`
 </div>
 
