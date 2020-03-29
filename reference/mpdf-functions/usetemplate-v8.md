@@ -121,12 +121,14 @@ imported page as it is printed (see Example #1).
 
 # Examples
 
-Example #1
+## Example #1
 
 ```php
 <?php
+
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
+
 $mpdf = new \Mpdf\Mpdf();
 
 // Add First page
@@ -134,10 +136,12 @@ $mpdf->AddPage();
 
 $pagecount = $mpdf->setSourceFile('logoheader.pdf');
 $tplId = $mpdf->importPage($pagecount);
+
 $actualsize = $mpdf->useTemplate($tplId);
 
 // The height of the template as it was printed is returned as $actualsize['h']
 // The width of the template as it was printed is returned as $actualsize['w']
+
 $mpdf->WriteHTML('Hello World');
 
 $mpdf->Output();
@@ -145,10 +149,11 @@ $mpdf->Output();
 ```
 
 
-Example #2 - Using a 'cropped' page
+## Example #2 - Using a 'cropped' page
 
 ```php
 <?php
+
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -156,6 +161,7 @@ $mpdf = new \Mpdf\Mpdf();
 
 $pagecount = $mpdf->setSourceFile('testfile.pdf');
 $tplId = $mpdf->importPage($pagecount);
+
 $mpdf->useTemplate($tplId, 50, 50, 100, 100);
 
 $mpdf->Output();

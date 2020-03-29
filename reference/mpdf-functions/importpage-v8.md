@@ -67,8 +67,7 @@ or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.
 
 # Examples
 
-
-Example #1 - Using a full page
+## Example #1 - Using a full page
 
 ```php
 <?php
@@ -79,7 +78,7 @@ $mpdf = new \Mpdf\Mpdf();
 $mpdf->SetImportUse();
 
 $pagecount = $mpdf->SetSourceFile('logoheader.pdf');
-$tplId = $mpdf->ImportPage($pagecount);
+$tplId = $mpdf->importPage($pagecount);
 $mpdf->useTemplate($tplId);
 
 $mpdf->WriteHTML('Hello World');
@@ -88,7 +87,7 @@ $mpdf->Output();
 ```
 
 
-Example #2 - Using a 'cropped' page
+## Example #2 - Using a 'cropped' page
 
 ```php
 <?php
