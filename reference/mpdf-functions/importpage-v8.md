@@ -80,7 +80,7 @@ $mpdf->SetImportUse();
 
 $pagecount = $mpdf->SetSourceFile('logoheader.pdf');
 $tplId = $mpdf->ImportPage($pagecount);
-$mpdf->UseTemplate($tplId);
+$mpdf->useTemplate($tplId);
 
 $mpdf->WriteHTML('Hello World');
 
@@ -98,9 +98,9 @@ require_once __DIR__ . '/vendor/autoload.php';
 $mpdf = new \Mpdf\Mpdf();
 
 $pagecount = $mpdf->setSourceFile('testfile.pdf');
-$tplId = $mpdf->importPage($pagecount, 50, 50, 100, 100);
+$tplId = $mpdf->importPage($pagecount);
 
-$mpdf->UseTemplate($tplId, '', '', 100, 100);
+$mpdf->useTemplate($tplId, 50, 50, 100, 100);
 
 $mpdf->Output();
 
