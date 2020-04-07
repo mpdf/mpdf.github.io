@@ -85,7 +85,7 @@ is longer than the <span class="parameter">$search</span> string, it may overlap
   * `'S'`: returns the PDF document as a string
   * `'F'`: save as file <span class="parameter">$file_out</span>
 
-<span class="parameter">$sourcefile</span>
+<span class="parameter">$file_out</span>
 
 : This parameter specifies the filename for the output PDF file. No path should be included unless
   <span class="parameter">$dest</span> is set as `"F"`.
