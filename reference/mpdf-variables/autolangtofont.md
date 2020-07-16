@@ -29,7 +29,7 @@ using values in `\Mpdf\Language\LanguageToFontInterface` interface implementatio
   the HTML lang attribute, using values in `\Mpdf\LangToFont` class.
 * `false`: Font selection unaffected.
 
-Default: `true`
+Default: `false`
 
 # Usage
 
