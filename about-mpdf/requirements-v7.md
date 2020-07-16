@@ -7,8 +7,9 @@ modification_time: 2017-03-14T10:03:20+02:00
 ---
 
 Since mPDF 7.0 requires:
- * PHP &ge; 5.6.0 and < 7.3.0.
+ * PHP &ge; 5.6.0 and < 7.4.0.
  * PHP 7.3 is supported since mPDF `v7.1.7`
+ * PHP 7.4 is supported since mPDF `v8.0.4`
  * PHP `mbstring` (including `mbregex`, which needs to
    be explicitly enabled in some environments) and `gd` extensions have to be loaded.
 
