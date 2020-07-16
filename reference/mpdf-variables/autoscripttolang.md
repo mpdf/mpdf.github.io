@@ -29,7 +29,7 @@ block in question, and values in `\Mpdf\Language\ScriptToLanguageIntergface` int
   attribute, based on the Unicode script block in question, and values in `\Mpdf\ScriptToLang` class.
 * `false`: No markup applied.
 
-Default: `true`
+Default: `false`
 
 # See Also
 
