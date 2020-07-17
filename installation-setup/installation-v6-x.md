@@ -16,7 +16,7 @@ Installation:
 - Ensure that you have write permissions set for the following folders:
     + <span class="filename">/ttfontdata/</span>
     + <span class="filename">/tmp/</span>
-    + <span class="filename">/graph_cache/</span
+    + <span class="filename">/graph_cache/</span>
 
 To test the installation, point your browser to the example files directory e.g. 
 <span class="filename">[path_to_mpdf_folder]/mpdf/examples/</span>
