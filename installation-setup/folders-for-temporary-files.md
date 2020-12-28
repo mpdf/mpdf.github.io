@@ -10,7 +10,8 @@ mPDF is pre-configured to use `<path to mpdf>/tmp` as a directory to write tempo
 (mainly for images and fonts).
 
 It is advised to set custom temporary directory as the default temporary directory is in composer `vendor` directory.
-Permissions must be set for read/write access for the specified path.
+Permissions must be set for read/write access for the specified path.  
+Make sure your custom temporary directory is not the same are your output directory.
 
 If you wish to use a different directory for temporary files, you should define `tempDir` key in constructor
 `$config` parameter.
