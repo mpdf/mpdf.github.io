@@ -43,10 +43,12 @@ Example #1
 
 ```php
 <?php
+
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
+
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->SetImportUse();
+$mpdf->SetImportUse(); // only with mPDF <8.0
 
 // Document template consisting of 2 pages,
 // first with logo and addresses, 2nd with a simple header
