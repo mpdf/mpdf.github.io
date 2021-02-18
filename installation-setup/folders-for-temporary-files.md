@@ -15,6 +15,13 @@ Permissions must be set for read/write access for the specified path.
 If you wish to use a different directory for temporary files, you should define `tempDir` key in constructor
 `$config` parameter.
 
+Since 8.0.9, mPDF will create a subdirectory to store cache files to not interfere with other temporary
+files (eg. when `sys_get_temp_dir()` is used for `tempDir`)
+
+mPDF autocleans its temp directory from potentialy stale files. By default it removes files older than 1 hour.
+Since 8.0.9, this can be changed by `cacheCleanupInterval`
+config variable set either to number of seconds of stale files age, or `false` to turn the cleanup off.
+
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** Never use `777` permissions for directories as those can mean a security issue.
 </div>

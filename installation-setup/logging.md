@@ -44,9 +44,9 @@ For simple one-time logging an anonymous class can be used with PHP &ge;7.0
 
 $mpdf = new Mpdf\Mpdf();
 $mpdf->setLogger(new class extends \Psr\Log\AbstractLogger {
-    public function log($level, $message, $context)
+    public function log($level, $message, array $context = [])
     {
-        echo $level . ': ' . $message;
+        echo $level . ': ' . $message . "\n";
     }
 });
 ```
