@@ -25,7 +25,7 @@ $mpdf = new \Mpdf\Mpdf([
     'margin_footer' => 0,
 ]);
 
-$mpdf->SetImportUse();
+$mpdf->SetImportUse(); // only with mPDF <8.0
 
 $ow = $mpdf->h;
 $oh = $mpdf->w;

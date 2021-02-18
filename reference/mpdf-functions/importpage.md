@@ -100,7 +100,7 @@ Example #1 - Using a full page
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->SetImportUse();
+$mpdf->SetImportUse(); // only with mPDF <8.0
 
 $pagecount = $mpdf->SetSourceFile('logoheader.pdf');
 $tplId = $mpdf->ImportPage($pagecount);
@@ -138,7 +138,7 @@ Example #2 - Using a 'cropped' page
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->SetImportUse();
+$mpdf->SetImportUse(); // only with mPDF <8.0
 
 $pagecount = $mpdf->SetSourceFile('testfile.pdf');
 $tplId = $mpdf->ImportPage($pagecount, 50, 50, 100, 100);

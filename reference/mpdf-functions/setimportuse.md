@@ -52,11 +52,13 @@ functions allowing you to import PDF files into the document you are writing, an
 
 ```php
 <?php
+
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
+
 $mpdf = new \Mpdf\Mpdf();
 
-$mpdf->SetImportUse();
+$mpdf->SetImportUse(); // only with mPDF <8.0
 
 $mpdf->WriteHTML('You can use this just like normal, but also import and use templates...');
 $mpdf->Output();

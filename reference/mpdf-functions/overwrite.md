@@ -20,7 +20,7 @@ mixed <span class="parameter">$replacement</span>
 [, string <span class="parameter">$file_out</span>
 ]])
 
-Using the class mPDF, after enabling with `SetImportUse`, an existing PDF file can be overwritten, replacing specified text with alternatives.
+Using the class mPDF, (until mPDF 8.0 after enabling with <a href="{{ "/reference/mpdf-functions/setimportuse.html" | prepend: site.baseurl }}" markdown="1">`SetImportUse`</a>), an existing PDF file can be overwritten, replacing specified text with alternatives.
 For example you may have created a long complex PDF file, and you wish to produce copies with an individual number on
 each copy without having to re-generate the whole document each time.
 
@@ -119,12 +119,14 @@ Example #1
 
 ```php
 <?php
+
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
+
 // Must set codepage (e.g. UTF-8 or Core fonts) the same as for original document
 // The rest of the parameters do nothing
-$mpdf = new \Mpdf\Mpdf('');
-$mpdf->SetImportUse();
+$mpdf = new \Mpdf\Mpdf();
+$mpdf->SetImportUse(); // only with mPDF <8.0
 
 // forces no subsetting - otherwise the inserted characters may not be contained
 // in a subset font
@@ -148,8 +150,10 @@ Example #2  Using encryption
 
 ```php
 <?php
+
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
+
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->percentSubset = 0;
 $mpdf->SetProtection(array(), '', 'bread');   // Need to specify a password
@@ -170,7 +174,7 @@ unset($mpdf);
 //==============================================================
 
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->SetImportUse();
+$mpdf->SetImportUse(); // only with mPDF <8.0
 
 // Re-instate saved encryption keys from original document
 $mpdf->encrypted = true;

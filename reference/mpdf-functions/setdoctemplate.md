@@ -67,11 +67,13 @@ Example #1
 
 ```php
 <?php
+
 // Require composer autoload
 require_once __DIR__ . '/vendor/autoload.php';
-$mpdf = new \Mpdf\Mpdf();
 
-$mpdf->SetImportUse();
+$mpdf = new \Mpdf\Mpdf();
+$mpdf->SetImportUse(); // only with mPDF <8.0
+
 $mpdf->SetDocTemplate('logoheader.pdf',true);
 
 // Do not add page until doc template set, as it is inserted at the start of each page
