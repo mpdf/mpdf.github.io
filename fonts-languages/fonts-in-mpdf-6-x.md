@@ -63,7 +63,7 @@ and you will refer to them in HTML/CSS as "Frutiger".
 
     ```php
     $mpdf = new mPDF();
-    $mpdf["frutiger"] = [
+    $mpdf->fontdata["frutiger"] = [
         'R' => "Frutiger-Normal.ttf",
         'I' => "FrutigerObl-Normal.ttf",
     ];
