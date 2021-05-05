@@ -21,7 +21,7 @@ Standard use
   1. If the font[style] exists - selected e.g. `trebuchetms['B']`
   2. If the font[nostyle] exists - selected e.g. `trebuchetms['R']`
   3. Looks up the font-family in the three arrays `sans_fonts, serif_fonts,` and `mono_fonts` defined in
-     <span class="filename">mpdf_config.php</span> , in this case looking for '`trebuchetms`'. If found,
+     mPDF $config, in this case looking for '`trebuchetms`'. If found,
      substitutes a font of similar type (sans-serif, serif, or mono) - the first font in the `sans_fonts, serif_fonts,`
      or `mono_fonts` arrays is used.
   4. If no font has yet been selected, the first font in the array `$available_unifonts`\* is selected
