@@ -19,7 +19,7 @@ void **SetDocTemplate** (
 
 Specify an external PDF file to use as a template. Each page of the external source PDF file will be used as a template
 for the corresponding page in your new document. If the current mPDF document has more pages than the external PDF
-source document, the last page will (optionally) continue to be used for any remaining pages.
+source document, the last page or last 2 pages will (optionally) continue to be used for any remaining pages.
 
 # Parameters
 
@@ -44,6 +44,22 @@ source document, the last page will (optionally) continue to be used for any rem
     <code>$mpdf->SetDocTemplate()</code> with no parameters.
   </div>
 
+<span class="parameter">$continue2pages</span>
+
+: **Values**: `1` \| `0` \| `true` \| `false`
+  
+  If `true` (or any positive value) it forces the last 2 pages of the source file to continue
+  to be used alternately as a template, if the current mPDF document contains more pages than the source file.
+  The source file should contain at least 2 pages to enable this functionality.
+  If this option is set to `true` (or any positive value) the `$continue` parameter will automatically be set to the same positive value.
+  
+  Default: `false`
+  
+  <div class="alert alert-info" role="alert" markdown="1">
+    **Note:** If you want to turn the template off, just use
+    <code>$mpdf->SetDocTemplate()</code> with no parameters.
+  </div>
+
 # Changelog
 
 <table class="table">
@@ -57,6 +73,10 @@ source document, the last page will (optionally) continue to be used for any rem
 <tr>
   <td>2.3</td>
   <td>Function was added.</td>
+</tr>
+<tr>
+  <td>8.*</td>
+  <td>$continue2pages parameter was added.</td>
 </tr>
 </tbody>
 </table>
