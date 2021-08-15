@@ -198,6 +198,8 @@ This is an embedded SVG image:
 
 All units with no dimension are taken as pixels.
 
+An SVG image embedded in HTML will be extracted to a temporary svg file which in turn is loaded via the `<img>` element. All attributes except the class attribute will be removed during this process.
+
 ## Size of SVG image
 
 The viewBox attribute of the `<svg>` element is used (if present) to determine the intrinsic size of the image.
