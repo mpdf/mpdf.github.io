@@ -3,10 +3,10 @@ layout: page
 title: Images
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/images.html
-modification_time: 2015-08-05T12:00:04+00:00
+modification_time: 2021-11-10T11:27:04+00:00
 ---
 
-Images are supported by mPDF: GIF, PNG, JPG, WMF, SVG, BMP and generated images from
+Images are supported by mPDF: GIF, PNG, JPG, WMF, SVG, BMP, WEBP and generated images from
 <acronym title="PHP: Hypertext Preprocessor">PHP</acronym> scripts.
 
 Transparent GIF images are supported, and so are interlaced and transparent PNG files,
@@ -38,10 +38,14 @@ including transparency using alpha channel.
   <td>SVG image (will only show in some browsers e.g. Firefox which support SVG, and PDF)</td>
   <td><img src="/files/images/tiger.svg" alt="tiger.svg" width="100" /></td>
 </tr>
+<tr>
+  <td>WEBP image (since v8.0.16; will only show in browsers with WEBP support)</td>
+  <td><img src="/files/images/tiger.webp" alt="tiger.webp" width="100" /></td>
+</tr>
 </tbody>
 </table>
 
-**Debugging Errors:** If you are having trouble with images not displaying correctly, set the 
+**Debugging Errors:** If you are having trouble with images not displaying correctly, set the
 variable `$mpdf->showImageErrors = true`.
 
 Images are handled in mPDF as in-line elements.
@@ -61,7 +65,7 @@ dimensions e.g. `mm`, `pt` etc. 
 <img src="image.jpg" style="width:90mm;" />  // Can also use CSS
 ```
 
-Images for which the size is not defined are output at a default dpi set in by 
+Images for which the size is not defined are output at a default dpi set in by
 the <a href="{{ "/reference/mpdf-variables/img-dpi.html" | prepend: site.baseurl }}">img_dpi</a> configuration variable:
 
 ```php
@@ -86,7 +90,7 @@ Images can be used in:
 ## Size constraint
 
 When writing HTML, image size is automatically constrained to current margins and page position. An extra parameter
-added to end of the <a href="{{ "/reference/mpdf-functions/image.html" | prepend: site.baseurl }}">Image()</a> function 
+added to end of the <a href="{{ "/reference/mpdf-functions/image.html" | prepend: site.baseurl }}">Image()</a> function
 allows you to override this:
 
 ```php
@@ -102,7 +106,7 @@ This can be achieved using HTML and CSS like this:
 
 ```html
 <div style="position: absolute; left:0; right: 0; top: 0; bottom: 0;">
-    <img src="/files/images/frontcover.jpg" 
+    <img src="/files/images/frontcover.jpg"
          style="width: 210mm; height: 297mm; margin: 0;" />
 </div>
 
@@ -112,7 +116,7 @@ This can be achieved using HTML and CSS like this:
 
 mPDF partially supports the CSS style `float` with IMG elements. Text will wrap around these images, with certain limitations:
 
-- only 1 `float:right` and 1 `float:left` image are allowed at a time  
+- only 1 `float:right` and 1 `float:left` image are allowed at a time
   i.e. you cannot overlap 2 right or 2 left
 - the containing HTML element is extended at the bottom if necessary to enclose the last image (unlike your browser)
 - the float is ignored if the image is too wide, inside a table, columns are on, or `div page-break-inside: avoid` is set
@@ -148,8 +152,8 @@ Embedded image data can be used either in `<img>` elements or in CSS `background
 ```
 
 ```css
-div { 
-    background: url(data:image/gif;base64,....) no-repeat 4px center; 
+div {
+    background: url(data:image/gif;base64,....) no-repeat 4px center;
 }
 ```
 
@@ -166,7 +170,7 @@ $mpdf->imageVars['myvariable'] = file_get_contents('alpha.png');
 
 ```
 
-The image can then be referred to by use of `var:varname` instead of a file name, either in `src=""` or 
+The image can then be referred to by use of `var:varname` instead of a file name, either in `src=""` or
 direct to <a href="{{ "/reference/mpdf-functions/image.html" | prepend: site.baseurl }}">Image()</a>
 function e.g.
 
