@@ -1149,7 +1149,7 @@ You can redefine the variables in individual scripts as a
             <td> </td>
             <td>2.2
             </td>
-            <td>Can be changed by <a href="{{ " /reference/mpdf-functions/setwatermarktext.html " | prepend: site.baseurl }}">SetWatermarkImage()</a></td>
+            <td>Can be changed by <a href="{{ " /reference/mpdf-functions/setwatermarkimage.html " | prepend: site.baseurl }}">SetWatermarkImage()</a></td>
         </tr>
         <tr>
             <td> </td>

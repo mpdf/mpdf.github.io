@@ -108,7 +108,7 @@ $mpdf->WriteHTML('Hello World');
 # See Also
 
 - &lt;<a href="{{ "/reference/html-control-tags/watermarktext.html" | prepend: site.baseurl }}">watermarktext</a>&gt; - HTML equivalent of SetWatermarkText()
-- <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkImage()</a> - Set an image to use as a Watermark
+- <a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a> - Set an image to use as a Watermark
 - <a href="{{ "/reference/mpdf-variables/watermarkimagealpha.html" | prepend: site.baseurl }}">$watermarkImageAlpha</a> - Specifies the transparency (alpha value) for the watermark image
 - <a href="{{ "/reference/mpdf-variables/watermarktextalpha.html" | prepend: site.baseurl }}">$watermarkTextAlpha</a> - Specifies the transparency (alpha value) for the watermark text
 - <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">$showWatermarkText</a> - Specifies whether or not to show/print the watermark text
