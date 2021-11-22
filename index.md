@@ -25,7 +25,18 @@ Consider supporting development of mPDF with a donation of any value.
 <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 </form>
 
+## About CSS support and development state
 
+mPDF as a whole is a quite dated software. Nowadays, better alternatives are available, albeit not written in PHP.
+
+Use mPDF if you cannot use non-PHP approach to generate PDF files or if you want to leverage some of the benefits of mPDF
+over browser approach – color handling, pre-print, barcodes support, headers and footers, page numbering, TOCs, etc.
+But beware that a HTML/CSS template tailored for mPDF might be necessary.
+
+If you are looking for state of the art CSS support, mirroring existing HTML pages to PDF, use headless Chrome.
+
+mPDF will still be updated to enhance some internal capabilities and to support newer versions of PHP,
+but better and/or newer CSS support will most likely not be implemented.
 
 ## Useful manual pages
 
