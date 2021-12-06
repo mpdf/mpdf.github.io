@@ -64,7 +64,9 @@ A shrunk table may not be what you want. You can prevent this resizing either by
 for a particular table e.g.  `<table autosize="1">` or by setting the variable for the whole document i.e.
 `$mpdf->shrink_tables_to_fit = 1;`
 
-(Note that mPDF will always resize tables if it is the only way to fit a row or whole table onto a full page.)
+<div class="alert alert-warning" role="alert" markdown="1">
+  **Note**: mPDF will always resize tables if it is the only way to fit a row or whole table onto a full page.
+</div>
 
 # Repeating Table Header row on new page
 
@@ -75,8 +77,8 @@ If a table is split onto more than one page, the first row of the table will be 
 NB two <a href="{{ "/configuration/configuration-v7-x.html" | prepend: site.baseurl }}">configuration variables</a> values
 are defined which control error reporting for tables:
 
-* `'table_error_report' => false`  
+* `'table_error_report' => false`
   Die and report error if table is too wide to contain whole words (even after autosizing)
-* `'table_error_report_param' => ''`  
+* `'table_error_report_param' => ''`
   Parameter which can be passed to show in error report i.e. chapter number being processed.
 
