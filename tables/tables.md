@@ -52,10 +52,6 @@ A value of 1 will prevent any (unnecessary) resizing.
 
 # page-break-inside:avoid
 
-A shrunk table may not be what you want. You can prevent this resizing either by setting the maximum shrink-factor for
-a particular table e.g. `<table autosize="1">` or by setting the variable for the whole document
-i.e. `$mpdf->shrink_tables_to_fit = 1;`
-
 If a table has the property `page-break-inside:avoid` and will not fit on the page, mPDF tries to shrink it to fit -
 up to a maximum "shrink-factor" set by the variable `$mpdf->shrink_tables_to_fit` - default is `1.4` (i.e. about 70%
 original size). If this still won't fit, it moves it to the next page.
