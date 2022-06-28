@@ -48,14 +48,16 @@ $mpdf->Output();
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
-$mpdf->useOddEven = 1;    // Use different Odd/Even headers and footers and mirror margins
-
 // Define the Headers before writing anything so they appear on the first page
-$mpdf->SetHTMLHeader('
-<div style="text-align: right; font-weight: bold;">
-    My document
-</div>','O');
-$mpdf->SetHTMLHeader('<div style="border-bottom: 1px solid #000000;">My document</div>','E');
+$mpdf->SetHTMLHeader(
+    '<div style="text-align: right; font-weight: bold;">My document</div>',
+    'O'
+);
+
+$mpdf->SetHTMLHeader(
+    '<div style="border-bottom: 1px solid #000000;">My document</div>',
+    'E'
+);
 
 $mpdf->SetHTMLFooter('
 <table width="100%" style="vertical-align: bottom; font-family: serif; 
@@ -159,8 +161,6 @@ Here for the record is how you would do it:
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
-$mpdf->useOddEven = true;
-
 // Set the headers/footers for the Introduction
 $mpdf->SetHTMLHeader('
 <div style="text-align: right; font-weight: bold;">
@@ -203,17 +203,20 @@ $mpdf->Output();
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
-$mpdf->useOddEven = true;
-
 // Set the headers/footers for the Introduction
-$mpdf->SetHTMLHeader('
-<div style="text-align: right; font-weight: bold;">
-    Introduction
-</div>','O');
-$mpdf->SetHTMLHeader('
-<div style="border-bottom: 1px solid #000000;">
-    Introduction
-</div>','E');
+$mpdf->SetHTMLHeader(
+    '<div style="text-align: right; font-weight: bold;">
+        Introduction
+    </div>',
+    'O'
+);
+
+$mpdf->SetHTMLHeader(
+    '<div style="border-bottom: 1px solid #000000;">
+        Introduction
+    </div>',
+    'E'
+);
 
 $mpdf->SetHTMLFooter('<div style="font-weight: bold;">{PAGENO}</div>','O');
 $mpdf->SetHTMLFooter('<div style="text-align: right;">{PAGENO}</div>','E');

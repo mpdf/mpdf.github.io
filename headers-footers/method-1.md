@@ -220,8 +220,6 @@ It gets even more complicated if you are using <span class="smallblock">DOUBLE-S
 <?php
 $mpdf = new \Mpdf\Mpdf();
 
-$mpdf->useOddEven = true;
-
 $mpdf->SetHeader('First section header');
 $mpdf->SetFooter('First section footer');
 $mpdf->WriteHTML('First section text...');
@@ -250,8 +248,6 @@ how you would do it:
 ```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
-
-$mpdf->useOddEven = true;
 
 // Set header and footer arrays for section:Introduction
 $intro_header_odd_array = array(...);
@@ -298,8 +294,6 @@ $mpdf->Output();
 ```php
 <?php
 $mpdf = new \Mpdf\Mpdf();
-
-$mpdf->useOddEven = true;
 
 // Set header and footer arrays for section:Introduction
 $intro_header_odd_array = array(...);
