@@ -12,7 +12,7 @@ setSourceFile – Specify the source PDF file used to import pages into the docu
 
 # Description
 
-int **setSourceFile** ( string|resource|StreamReader <span class="parameter">$file</span> )
+int **setSourceFile** ( string\|resource\|StreamReader <span class="parameter">$file</span> )
 
 Specify the source PDF file used to import pages into the document.
 
