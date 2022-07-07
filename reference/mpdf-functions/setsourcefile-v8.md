@@ -12,7 +12,7 @@ setSourceFile – Specify the source PDF file used to import pages into the docu
 
 # Description
 
-int **setSourceFile** ( string <span class="parameter">$file</span> )
+int **setSourceFile** ( string|resource|StreamReader <span class="parameter">$file</span> )
 
 Specify the source PDF file used to import pages into the document.
 
@@ -20,9 +20,9 @@ Specify the source PDF file used to import pages into the document.
 
 <span class="parameter">$file</span>
 
-: This parameter specifies the source PDF file used to import pages into the document.
+: This parameter specifies the source PDF file used to import pages into the document. It can either be a path to a file, file resource handle, or a StreamReader instance with contents of the file.
 
-  **Note**:  <span class="parameter">$file</span> should be a **relative path** to a local file.
+  **Note**:  If path to a file, <span class="parameter">$file</span> should be a **relative path** to a local file.
 
 # Return Value
 
@@ -56,9 +56,8 @@ Example #1
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->SetImportUse(); // only with mPDF <8.0
 
-$pagecount = $mpdf->SetSourceFile('logoheader.pdf');
+$pagecount = $mpdf->setSourceFile('logoheader.pdf');
 
 // Import the last page of the source PDF file
 $tplId = $mpdf->ImportPage($pagecount);
