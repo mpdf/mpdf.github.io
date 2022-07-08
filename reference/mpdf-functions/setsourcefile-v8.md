@@ -12,7 +12,7 @@ setSourceFile – Specify the source PDF file used to import pages into the docu
 
 # Description
 
-int **setSourceFile** ( string\|resource\|StreamReader <span class="parameter">$file</span> )
+int **setSourceFile** ( string\|resource\|\\setasign\\Fpdi\\PdfParser\\Streamreader <span class="parameter">$file</span> )
 
 Specify the source PDF file used to import pages into the document.
 
@@ -20,7 +20,7 @@ Specify the source PDF file used to import pages into the document.
 
 <span class="parameter">$file</span>
 
-: This parameter specifies the source PDF file used to import pages into the document. It can either be a path to a file, file resource handle, or a StreamReader instance with contents of the file.
+: This parameter specifies the source PDF file used to import pages into the document. It can either be a path to a file, file resource handle, or a FPDI StreamReader instance with contents of the file.
 
   **Note**:  If path to a file, <span class="parameter">$file</span> should be a **relative path** to a local file.
 
