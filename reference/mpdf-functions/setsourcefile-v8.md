@@ -57,10 +57,11 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
 
+// Specify a PDF template
 $pagecount = $mpdf->setSourceFile('logoheader.pdf');
 
 // Import the last page of the source PDF file
-$tplId = $mpdf->ImportPage($pagecount);
+$tplId = $mpdf->importPage($pagecount);
 $mpdf->UseTemplate($tplId);
 
 $mpdf->WriteHTML('Hello World');

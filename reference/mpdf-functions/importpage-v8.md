@@ -76,9 +76,8 @@ or <a href="{{ "/reference/mpdf-functions/setpagetemplate.html" | prepend: site.
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->SetImportUse(); // only with mPDF <8.0
 
-$pagecount = $mpdf->SetSourceFile('logoheader.pdf');
+$pagecount = $mpdf->setSourceFile('logoheader.pdf');
 $tplId = $mpdf->importPage($pagecount);
 $mpdf->useTemplate($tplId);
 

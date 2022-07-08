@@ -64,8 +64,11 @@ Example #1
 require_once __DIR__ . '/vendor/autoload.php';
 
 $mpdf = new \Mpdf\Mpdf();
-$mpdf->SetImportUse(); // only with mPDF <8.0
 
+// Enable imports
+$mpdf->SetImportUse();
+
+// Specify a PDF template
 $pagecount = $mpdf->SetSourceFile('logoheader.pdf');
 
 // Import the last page of the source PDF file
