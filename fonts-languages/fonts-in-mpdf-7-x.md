@@ -19,6 +19,8 @@ in Truetype format are also supported.
 - Specifying languages for the font by defining custom `Mpdf\Language\LanguageToFontInterface`
 and `Mpdf\Language\ScriptToLanguage` implementation
 
+For working code example, feel free to look into the [examples repository](https://github.com/mpdf/mpdf-examples/blob/development/example67_custom_font.php).
+
 ## Example
 
 You have 2 font files `Frutiger-Normal.ttf` and `FrutigerObl-Normal.ttf` which you want to be available in mPDF,
@@ -27,7 +29,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
 1.  Define the directory with the font via `fontDir` configuration key or add it after instantiation
     with `$mpdf->AddFontDirectory()` method
 
-2.  Define the font details in `fontdata` configuration variable - font name must be lowercase, i.e. `frutiger`.
+2.  Define the font details in `fontdata` configuration variable - font name must contain **lowercase letters only**, i.e. `frutiger`.
 
     Example below shows how to maintain default fonts and their settings
 
@@ -44,7 +46,7 @@ and you will refer to them in HTML/CSS as `frutiger`.
         'fontDir' => array_merge($fontDirs, [
             __DIR__ . '/custom/font/directory',
         ]),
-        'fontdata' => $fontData + [
+        'fontdata' => $fontData + [ // lowercase letters only in font key
             'frutiger' => [
                 'R' => 'Frutiger-Normal.ttf',
                 'I' => 'FrutigerObl-Normal.ttf',
@@ -74,6 +76,14 @@ and you will refer to them in HTML/CSS as `frutiger`.
     ```html
 
     <p style="font-family: frutiger">Text in Frutiger</p>
+
+    ```
+
+    You can use full names even with spaces in CSS font-family definition
+
+    ```html
+
+    <p style="font-family: Frutiger">Text in Frutiger</p>
 
     ```
 
