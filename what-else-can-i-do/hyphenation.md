@@ -148,7 +148,7 @@ $mpdf = new \Mpdf\Mpdf();
 $mpdf->SHYlang = 'fr';
 $mpdf->SHYleftmin = 3;
 
-$mpdf->WriteHTML('La grande texte....');
+$mpdf->WriteHTML('Le long texte....');
 
 $mpdf->Output();
 
