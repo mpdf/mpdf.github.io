@@ -13,7 +13,7 @@ Output – Finalise the document and send it to specified destination
   <a href="{{ "/reference/mpdf-functions/outputbinarydata.html" | prepend: site.baseurl }}">`OutputBinaryData`,</a>
   <a href="{{ "/reference/mpdf-functions/outputhttpinline.html" | prepend: site.baseurl }}">`OutputHttpInline`,</a>
   <a href="{{ "/reference/mpdf-functions/outputhttpdownload.html" | prepend: site.baseurl }}">`OutputHttpDownload`,</a>
-  and <a href="{{ "/reference/mpdf-functions/outputfile.html" | prepend: site.baseurl }}">`OutputFile</a>
+  and <a href="{{ "/reference/mpdf-functions/outputfile.html" | prepend: site.baseurl }}">`OutputFile`</a>
 </div>
 
 # Description
