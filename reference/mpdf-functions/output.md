@@ -8,9 +8,17 @@ modification_time: 2015-08-05T12:00:50+00:00
 
 Output – Finalise the document and send it to specified destination
 
+<div class="alert alert-info" role="alert" markdown="1">
+  **Note:** As of mPDF v8.1.2 it is preferred to use verbose aliases 
+  <a href="{{ "/reference/mpdf-functions/outputbinarydata.html" | prepend: site.baseurl }}">`OutputBinaryData`,</a>
+  <a href="{{ "/reference/mpdf-functions/outputhttpinline.html" | prepend: site.baseurl }}">`OutputHttpInline`,</a>
+  <a href="{{ "/reference/mpdf-functions/outputhttpdownload.html" | prepend: site.baseurl }}">`OutputHttpDownload`,</a>
+  and <a href="{{ "/reference/mpdf-functions/outputfile.html" | prepend: site.baseurl }}">`OutputFile</a>
+</div>
+
 # Description
 
-string **Output** (
+string|void **Output** (
 [ string <span class="parameter">$filename</span>
 [, string <span class="parameter">$dest</span> ])
 
