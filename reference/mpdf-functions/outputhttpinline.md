@@ -16,8 +16,6 @@ void **OutputHttpInline**()
 
 # Examples
 
-## Example #1
-
 ```php
 <?php
 

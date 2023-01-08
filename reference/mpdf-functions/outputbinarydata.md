@@ -16,8 +16,6 @@ string **OutputBinaryData**()
 
 # Examples
 
-## Example #1
-
 ```php
 <?php
 

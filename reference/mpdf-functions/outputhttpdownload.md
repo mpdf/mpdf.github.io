@@ -22,8 +22,6 @@ void **OutputHttpDownload**(string <span class="parameter">$filename</span>)
 
 # Examples
 
-## Example #1
-
 ```php
 <?php
 

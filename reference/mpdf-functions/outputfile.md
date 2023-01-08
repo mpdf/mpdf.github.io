@@ -22,15 +22,13 @@ void **OutputFile**(string <span class="parameter">$filename</span>)
 
 # Examples
 
-## Example #1
-
 ```php
 <?php
 
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->WriteHTML('Hello World');
 
-$pdfContent = $mpdf->OutputBinaryData();
+$mpdf->OutputFile();
 ```
 
 # Changelog
