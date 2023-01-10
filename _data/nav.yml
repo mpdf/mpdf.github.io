@@ -842,6 +842,26 @@
                     slug: output
                     parent_title: 'mPDF functions'
                 -
+                    title: OutputBinaryData()
+                    permalink: /reference/mpdf-functions/outputbinarydata.html
+                    slug: outputbinarydata
+                    parent_title: 'mPDF functions'
+                -
+                    title: OutputFile()
+                    permalink: /reference/mpdf-functions/outputfile.html
+                    slug: outputfile
+                    parent_title: 'mPDF functions'
+                -
+                    title: OutputHttpDownload()
+                    permalink: /reference/mpdf-functions/outputhttpdownload.html
+                    slug: outputhttpdownload
+                    parent_title: 'mPDF functions'
+                -
+                    title: OutputHttpInline()
+                    permalink: /reference/mpdf-functions/outputhttpinline.html
+                    slug: outputhttpinline
+                    parent_title: 'mPDF functions'
+                -
                     title: OverWrite()
                     permalink: /reference/mpdf-functions/overwrite.html
                     slug: overwrite
