@@ -28,7 +28,7 @@ void **OutputFile**(string <span class="parameter">$filename</span>)
 $mpdf = new \Mpdf\Mpdf();
 $mpdf->WriteHTML('Hello World');
 
-$mpdf->OutputFile();
+$mpdf->OutputFile(__DIR__ . '/file.pdf');
 ```
 
 # Changelog
