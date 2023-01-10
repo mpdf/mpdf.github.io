@@ -8,7 +8,7 @@ modification_time: 2022-01-08T12:00:50+00:00
 
 mPDF &ge; 8.1.2
 
-OutputBinaryData – Finalise the document and return binary data of resulting PDF
+OutputBinaryData – Finalise the document and return binary data of resulting PDF.
 
 # Description
 

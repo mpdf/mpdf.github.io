@@ -18,7 +18,7 @@ void **OutputFile**(string <span class="parameter">$filename</span>)
 
 <span class="parameter">$filename</span>
 
-: The path to the resulting file.
+: The path to file to save.
 
 # Examples
 

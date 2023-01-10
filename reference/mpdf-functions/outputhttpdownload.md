@@ -8,7 +8,9 @@ modification_time: 2022-01-08T12:00:50+00:00
 
 mPDF &ge; 8.1.2
 
-OutputHttpDownload – Finalise the document and return binary data of resulting PDF
+OutputHttpDownload – Finalise the document and return binary data of resulting PDF.
+
+This methods sets HTTP headers using standard `header` PHP function.
 
 # Description
 

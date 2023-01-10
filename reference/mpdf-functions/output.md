@@ -44,11 +44,11 @@ Send the document to a given destination: browser, file or string. In the case o
   `\Mpdf\Output\Destination::INLINE`, or `"I"`
   : send the file inline to the browser. The plug-in is used if available.
     The name given by <span class="parameter">$filename</span> is used when one selects the "Save as" option on
-    the link generating the PDF.
+    the link generating the PDF. This parameter sets HTTP headers using standard `header` PHP function.
 
   `\Mpdf\Output\Destination::DOWNLOAD`, or `"D"`
   : send to the browser and force a file download with the name given by
-    <span class="parameter">$filename</span>.
+    <span class="parameter">$filename</span>. This parameter sets HTTP headers using standard `header` PHP function.
 
   `\Mpdf\Output\Destination::FILE`, or `"F"`
   : save to a local file with the name given by <span class="parameter">$filename</span>
