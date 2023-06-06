@@ -11,6 +11,18 @@ You can add a watermark to the page(s) either text (e.g. "DRAFT") and/or a backg
 Set the following before writing the HTML code. NB The watermark is added when writing the footer at the end of a page,
 so it can be set anytime before ending the page/document.
 
+Since version 8.2.0, watermark data objects were introduced. <a href="#v816">See below</a> for previous style of setting watermarks which is still supported, but will be deprecated in the next major version.
+
+<h2 id="v816">Version >=8.2.0</h2>
+
+```php
+<?php
+$mpdf->SetWatermarkText(new \Mpdf\WatermarkText('DRAFT')); // Will cope with UTF-8 encoded text
+
+```
+
+<h2 id="v816">Version <=8.1.6</h2>
+
 ```php
 <?php
 $mpdf->SetWatermarkText('DRAFT'); // Will cope with UTF-8 encoded text
@@ -24,7 +36,6 @@ You can alter the transparency values (Default: `0.2`) using
 <?php
 $mpdf->watermarkTextAlpha = 0.1;
 $mpdf->watermarkImageAlpha = 0.5;
-
 ```
 
 A watermark image is set by default to print on top of the page contents. The opacity setting will alter the appearance
@@ -48,8 +59,27 @@ Set the watermark(s) to show using:
   actually printed over the top of everything else, but is semi-transparent.
 </div>
 
+<h2 id="changelog">Changelog</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Version</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>8.2.0</td>
+            <td>Watermark objects were introduced.</td>
+        </tr>
+    </tbody>
+</table>
+
 # See
 
+- <a href="{{ "/reference/mpdf-classes/watermark.html" | prepend: site.baseurl }}">\Mpdf\WatermarkText()</a> - Watermark text data transfer object
+- <a href="{{ "/reference/mpdf-classes/watermarkimage.html" | prepend: site.baseurl }}">\Mpdf\WatermarkImage()</a> - Watermark image data transfer object
 - <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Set the text to use as a Watermark
 - &lt;<a href="{{ "/reference/html-control-tags/watermarktext.html" | prepend: site.baseurl }}">watermarktext</a>&gt; - HTML equivalent to `SetWatermarkText()`
 - <a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a> - Set the image to use as a Watermark

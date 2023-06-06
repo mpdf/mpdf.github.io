@@ -12,17 +12,15 @@ SetWatermarkText – Set the text to use as a Watermark
 
 # Description
 
-void **SetWatermarkText** ( [ string <span class="parameter">$text</span> [, float <span class="parameter">$alpha</span> ]])
+void **SetWatermarkText** (
+  [ string|\Mpdf\WatermarkText <span class="parameter">$text</span> [,
+  float <span class="parameter">$alpha</span> ]]
+)
 
 Set the text to use as a Watermark. The watermark is a semi-transparent background printed on each page, used for text
 such as "DRAFT". The watermark will be added to each page when the Footer is printed if the variable
 <a href="{{ "/reference/mpdf-variables/showwatermarktext.html" | prepend: site.baseurl }}">$showWatermark</a> is set
-to `1` or `true`. 
-
-<div class="alert alert-info" role="alert" markdown="1">
-  **Note:** Prior to mPDF 2.2 the function `setUnvalidatedText()`
-  was used. `SetWatermarkText()` is now the preferred form.
-</div>
+to a truthy value. 
 
 # Parameters
 
@@ -30,6 +28,8 @@ to `1` or `true`. 
 
 : This parameter defines the text to use for the watermark. The text should be UTF-8 encoded, but should not contain HTML
   mark-up tags.
+
+  Since 8.2.0 the value can be an instance of <a href="{{ "/reference/mpdf-classes/watermark.html" | prepend: site.baseurl }}">\Mpdf\WatermarkText</a> class. Its properties then overwrite internal watermark variables.
 
   If the text is blank, it will clear the watermark text, so nothing appears.
 
@@ -73,12 +73,26 @@ to `1` or `true`. 
   as well as `$mpdf->SetWatermarkText('');`
   </td>
 </tr>
+<tr>
+  <td>8.2.0</td>
+  <td>\Mpdf\WatermarkText object was introduced.</td>
+</tr>
 </tbody>
 </table>
 
 # Examples
 
-Example #1
+Example #1 (Since mPDF 8.2.0)
+
+```php
+<?php
+$mpdf = new \Mpdf\Mpdf();
+
+$mpdf->SetWatermarkText(new \Mpdf\WatermarkText('DRAFT'));
+$mpdf->showWatermarkText = true;
+```
+
+Example #2
 
 ```php
 <?php
@@ -90,7 +104,7 @@ $mpdf->showWatermarkText = true;
 $mpdf->WriteHTML('Hello World');
 ```
 
-Example #2
+Example #3
 
 ```php
 <?php
@@ -107,6 +121,7 @@ $mpdf->WriteHTML('Hello World');
 
 # See Also
 
+- <a href="{{ "/reference/mpdf-classes/watermarktext.html" | prepend: site.baseurl }}">\Mpdf\WatermarkText()</a> - Watermark text data transfer object
 - &lt;<a href="{{ "/reference/html-control-tags/watermarktext.html" | prepend: site.baseurl }}">watermarktext</a>&gt; - HTML equivalent of SetWatermarkText()
 - <a href="{{ "/reference/mpdf-functions/setwatermarkimage.html" | prepend: site.baseurl }}">SetWatermarkImage()</a> - Set an image to use as a Watermark
 - <a href="{{ "/reference/mpdf-variables/watermarkimagealpha.html" | prepend: site.baseurl }}">$watermarkImageAlpha</a> - Specifies the transparency (alpha value) for the watermark image
