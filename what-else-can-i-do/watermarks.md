@@ -78,7 +78,7 @@ Set the watermark(s) to show using:
 
 # See
 
-- <a href="{{ "/reference/mpdf-classes/watermark.html" | prepend: site.baseurl }}">\Mpdf\WatermarkText()</a> - Watermark text data transfer object
+- <a href="{{ "/reference/mpdf-classes/watermarktext.html" | prepend: site.baseurl }}">\Mpdf\WatermarkText()</a> - Watermark text data transfer object
 - <a href="{{ "/reference/mpdf-classes/watermarkimage.html" | prepend: site.baseurl }}">\Mpdf\WatermarkImage()</a> - Watermark image data transfer object
 - <a href="{{ "/reference/mpdf-functions/setwatermarktext.html" | prepend: site.baseurl }}">SetWatermarkText()</a> - Set the text to use as a Watermark
 - &lt;<a href="{{ "/reference/html-control-tags/watermarktext.html" | prepend: site.baseurl }}">watermarktext</a>&gt; - HTML equivalent to `SetWatermarkText()`
