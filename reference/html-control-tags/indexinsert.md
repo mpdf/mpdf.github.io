@@ -110,7 +110,7 @@ or <a href="{{ "/reference/mpdf-functions/tocpagebreak.html" | prepend: site.bas
 
   `'OFF'` or `'0'`: do not show hyperlinks in the Index
 
-<span class="parameter">$usedivletters </span&ge; `1|on|0|off|-1`
+<span class="parameter">$usedivletters </span> `1|on|0|off|-1`
 
 : Specify whether to insert a CAPITAL letter to divide each group of entries starting with the same letter in the Index.
 
