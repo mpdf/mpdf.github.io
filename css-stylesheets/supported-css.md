@@ -1111,7 +1111,7 @@ Unless otherwise stated, the following values are supported:
   <td>left | center | right</td>
 </tr>
 <tr>
-  <th rowspan="9">TR</th>
+  <th rowspan="10">TR</th>
   <td>background-color</td>
   <td><span class="smallblock">COLOR</span></td>
 </tr>
@@ -1206,6 +1206,15 @@ Unless otherwise stated, the following values are supported:
   odd \| even \| *a*n+*b*
 
   As per CSS3 specification
+  </td>
+</tr>
+<tr>
+  <td>page-break-before, page-break-after</td>
+  <td markdown="1">
+  avoid \| allow
+
+  Allows grouping of table rows and avoiding page breaks between two pages inside a group.
+  since 8.2.4
   </td>
 </tr>
 <tr>
