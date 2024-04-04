@@ -1211,9 +1211,10 @@ Unless otherwise stated, the following values are supported:
 <tr>
   <td>page-break-before, page-break-after</td>
   <td markdown="1">
-  avoid | allow
+  avoid \| allow
 
   Allows grouping of table rows and avoiding page breaks between two pages inside a group.
+  since 8.2.4
   </td>
 </tr>
 <tr>
