@@ -38,6 +38,8 @@ Add a Barcode to the document.
 
   Check-digits can be optionally included for EAN13 / ISBN / ISSN / UPCA / UPCE
 
+  It is recommended you convert HTML special characters to entities using `htmlspecialchars('Content')`.
+
   <span class="smallblock">REQUIRED</span>
 
 <span class="parameter">$type</span>
