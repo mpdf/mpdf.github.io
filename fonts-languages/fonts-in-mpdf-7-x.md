@@ -3,7 +3,7 @@ layout: page
 title: Fonts in mPDF v7+
 parent_title: Fonts & Languages
 permalink: /fonts-languages/fonts-in-mpdf-7-x.html
-modification_time: 2017-09-05T14:19:17+01:00
+modification_time: 2024-10-04T22:54:17+02:00
 ---
 
 mPDF supports Truetype fonts, reading and embedding directly from the .ttf font files. Fonts must follow the Truetype
@@ -36,10 +36,10 @@ and you will refer to them in HTML/CSS as `frutiger`.
     ```php
     <?php
 
-    $defaultConfig = (new Mpdf\Config\ConfigVariables())->getDefaults();
+    $defaultConfig = (new \Mpdf\Config\ConfigVariables())->getDefaults();
     $fontDirs = $defaultConfig['fontDir'];
 
-    $defaultFontConfig = (new Mpdf\Config\FontVariables())->getDefaults();
+    $defaultFontConfig = (new \Mpdf\Config\FontVariables())->getDefaults();
     $fontData = $defaultFontConfig['fontdata'];
 
     $mpdf = new \Mpdf\Mpdf([
