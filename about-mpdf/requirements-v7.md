@@ -3,7 +3,7 @@ layout: page
 title: Requirements v7+
 parent_title: About mPDF
 permalink: /about-mpdf/requirements-v7.html
-modification_time: 2023-03-02T14:03:20+01:00
+modification_time: 2024-11-18T16:37:20+01:00
 ---
 
 Since mPDF 7.0 is compatible with these PHP versions:
@@ -15,6 +15,7 @@ Since mPDF 7.0 is compatible with these PHP versions:
   * `PHP 8.1` is supported as of `mPDF v8.0.13`
   * `PHP 8.2` is supported as of `mPDF v8.1.3`
   * `PHP 8.3` is supported as of `mPDF v8.2.1`
+  * `PHP 8.4` is supported as of `mPDF v8.2.5`
 
 PHP extensions required, partially required or recommended:
 
