@@ -3,7 +3,7 @@ layout: page
 title: pagebreak
 parent_title: HTML control tags
 permalink: /reference/html-control-tags/pagebreak.html
-modification_time: 2015-08-05T12:01:25+00:00
+modification_time: 2024-12-03T12:01:25+00:00
 ---
 
 (mPDF &ge; 1.0)
@@ -344,7 +344,9 @@ Number of pages added:
 ```html
 <html>
 
-Text of introduction...
+<p>Text of introduction...
+
+<pagebreak type="NEXT-ODD" resetpagenum="1" pagenumstyle="i" suppress="off" />
 
 <p>Text of main book...
 
@@ -357,18 +359,21 @@ Text of introduction...
 ```html
 <html>
 
-Text of introduction...
+<p>Text of introduction...
+
+<pagebreak orientation="landscape" margin-left="60mm" margin-right="40mm" margin-top="55mm" margin-bottom="30mm" margin-header="12mm" margin-footer="12mm" />
 
 <p>Text of main book...
 
 </html>
-
 ```
 
 ## Example #3 - Changing headers/footers
 
 ```html
 <html>
+    <pageheader name="myHeader1" content-center="My document" header-style="font-weight: bold;" line="on" />
+
     <htmlpageheader name="myHeader2">
 
     <div style="text-align: center; font-weight: bold;">
@@ -376,6 +381,8 @@ Text of introduction...
     </div>
 
     </htmlpageheader>
+
+    <pagebreak type="NEXT-ODD" odd-header-name="myHeader1" odd-header-value="1" even-header-name="html_myHeader2" even-header-value="1" odd-footer-value="-1" even-footer-value="-1" />
 
     <p>Text of introduction...
     <p>Text of main book...
