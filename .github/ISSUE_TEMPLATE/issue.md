@@ -1,6 +1,6 @@
 ---
-name: Issue
-about: Create a general Issue
+name: mPDF documentation Issue
+about: Create an Issue about mPDF documentation. Use mpdf/mpdf for code Issues/QA
 title: ''
 labels: ''
 assignees: ''
