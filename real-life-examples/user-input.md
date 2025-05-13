@@ -3,13 +3,21 @@ layout: page
 title: User Input
 parent_title: Real life examples
 permalink: /real-life-examples/user-input.html
-modification_time: 2015-08-05T12:00:28+00:00
+modification_time: 2025-05-13T16:54:28+02:00
 ---
 
 These scripts allow you to present a form to the user, who can enter text and upload an image; these are displayed first
 in the browser, with the option to create a PDF file from the output. These scripts should only be considered the basis
 of a full script and will need adapting considerably. In particular, note that the uploaded image files may need to be
 deleted at some point.
+
+<div class="alert alert-danger" role="alert" markdown="1">
+  **Warning:** All user input passed to mPDF should be sanitized properly.
+
+  Examples below serve only as a preview what can be done and must not be used as such.
+
+  Also, for purposes of these examples, note that the file upload mechanics were simplified and do not solve data validation and/or verification.
+</div>
 
 `example_userinput.php`
 
@@ -49,15 +57,16 @@ if (($_FILES["file"]["type"] == "image/gif" || $_FILES["file"]["type"] == "image
 
 $html = '<html>
     <body>
-        <div>' . $_POST['text'] . '</div>
-        <img src="' ."../tmp/" . $_FILES["file"]["name"] . '" />
+        <div>' . htmlspecialchars($_POST['text']) . '</div>
+
+        <img src="' ."../tmp/" . htmlspecialchars($_FILES["file"]["name"]) . '" />
     
         <form action="example_userinput3.php" method="post" enctype="multipart/form-data">
             <textarea style="display:none" name="text" id="text">' 
-            . $_POST['text'] 
+            . htmlspecialchars($_POST['text'])
             . '</textarea>
             <input type="hidden" name="filename" id="filename" 
-                value="'. $_FILES["file"]["name"].'" />
+                value="'. htmlspecialchars($_FILES["file"]["name"]) .'" />
             <input type="submit" name="submit" value="Create PDF file" />
         </form>
     </body>
@@ -77,8 +86,8 @@ $mpdf = new \Mpdf\Mpdf();
 
 $html ='<html>
 <body>
-    <div>'.$_POST['text'].'</div>
-    <img src="' . "../tmp/" . $_POST['filename'] . '" />
+    <div>' . htmlspecialchars($_POST['text']).'</div>
+    <img src="' . "../tmp/" . htmlspecialchars($_POST['filename']) . '" />
 </body>
 </html>';
 
