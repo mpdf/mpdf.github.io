@@ -1713,6 +1713,11 @@
                     title: PDFAauto
                     permalink: /reference/mpdf-variables/pdfaauto.html
                     slug: pdfaauto
+                    parent_title: 'mPDF Variables'                -
+                -
+                    title: PDFAversion
+                    permalink: /reference/mpdf-variables/pdfaversion.html
+                    slug: pdfaversion
                     parent_title: 'mPDF Variables'
                 -
                     title: PDFX
