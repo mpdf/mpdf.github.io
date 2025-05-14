@@ -20,6 +20,8 @@ string <span class="parameter">$html</span>
 
 Write <span class="parameter">$html</span> code to the document.
 
+{% include outside-html-alert.html %}
+
 <div class="alert alert-info" role="alert" markdown="1">
   **Note:** Prior to mPDF 4.2 a fatal error was caused if
   <span class="parameter">$html</span> was passed as a `null` value,

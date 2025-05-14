@@ -20,6 +20,8 @@ $ composer require mpdf/mpdf
 
 The simplest usage of the library would be as follows:
 
+{% include outside-html-alert.html %}
+
 ```php
 <?php
 

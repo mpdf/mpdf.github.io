@@ -65,6 +65,8 @@ Send the document to a given destination: browser, file or string. In the case o
 
 # Examples
 
+{% include outside-html-alert.html %}
+
 ## Example #1
 
 ```php

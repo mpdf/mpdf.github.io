@@ -15,6 +15,8 @@ Use whichever suits your purpose better, and you can always combine a mixture of
 If you are new to mPDF, I would recommend using HTML/CSS for everything - you can test most things out in a browser
 this way as you are writing it.
 
+{% include outside-html-alert.html %}
+
 # Examples
 
 Example #1 PHP Command

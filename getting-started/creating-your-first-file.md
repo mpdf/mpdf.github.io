@@ -7,6 +7,8 @@ modification_time: 2017-03-13T14:34:39+01:00
 ---
 The following PHP will produce the most basic example with mPDF &ge; 7.0.
 
+{% include outside-html-alert.html %}
+
 ```php
 <?php
 // Require composer autoload
@@ -19,7 +21,6 @@ $mpdf->WriteHTML('Hello World');
 
 // Output a PDF file directly to the browser
 $mpdf->Output();
-
 ```
 
 Note: For mPDF < 7.0 use `$mpdf = new \mPDF();`

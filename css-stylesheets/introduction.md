@@ -47,6 +47,8 @@ Note the OUTLINE style (which is not supported in most browsers) does work in mP
 
 # Using a stylesheet
 
+{% include outside-html-alert.html %}
+
 The `WriteHTML()` method takes second parameter i.e. <span class="parameter">$mode</span>. 
 See <a href="{{ "/reference/mpdf-functions/writehtml.html" | prepend: site.baseurl }}">WriteHTML()</a> 
 for details of this and other parameters.
@@ -71,8 +73,8 @@ for details of this and other parameters.
 
 $stylesheet = file_get_contents('style.css');
 
-$mpdf->WriteHTML($stylesheet,\Mpdf\HTMLParserMode::HEADER_CSS);
-$mpdf->WriteHTML($html,\Mpdf\HTMLParserMode::HTML_BODY);
+$mpdf->WriteHTML($stylesheet, \Mpdf\HTMLParserMode::HEADER_CSS);
+$mpdf->WriteHTML($html, \Mpdf\HTMLParserMode::HTML_BODY);
 
 ```
 

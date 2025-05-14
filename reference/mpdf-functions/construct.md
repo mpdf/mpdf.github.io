@@ -174,6 +174,8 @@ Initialise an instance of mPDF class.
 
 # Examples
 
+{% include outside-html-alert.html %}
+
 ## Example #1
 
 ```php
