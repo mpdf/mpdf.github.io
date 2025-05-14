@@ -38,6 +38,13 @@ If you are looking for state of the art CSS support, mirroring existing HTML pag
 mPDF will still be updated to enhance some internal capabilities and to support newer versions of PHP,
 but better and/or newer CSS support will most likely not be implemented.
 
+## Using user input in HTML/CSS code
+
+mPDF is not meant to receive HMTL/CSS from an outside user.
+
+All user input passed to mPDF should be vetted and sanitized properly _above_ the level
+of standard browser-level sanitization (such is `htmlspecialchars`).
+
 ## Useful manual pages
 
 - <a href="{{ "/about-mpdf/requirements-v7.html" | prepend: site.baseurl }}">Requirements</a>
