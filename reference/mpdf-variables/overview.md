@@ -584,6 +584,14 @@ You can redefine the variables in individual scripts as a
         </tr>
         <tr>
             <td> </td>
+            <td><a href="{{ " /reference/mpdf-variables/pdfaversion.html " | prepend: site.baseurl }}">PDFAversion</a></td>
+            <td><code>1-B</code></td>
+            <td><span class="smallblock">DOCUMENT</span></td>
+            <td>7.1</td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
             <td><a href="{{ " /reference/mpdf-variables/pdfx.html " | prepend: site.baseurl }}">PDFX</a></td>
             <td><code>false</code></td>
             <td><span class="smallblock">DOCUMENT</span></td>
