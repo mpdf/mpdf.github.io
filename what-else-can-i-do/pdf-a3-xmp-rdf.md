@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PDF/A-3 associated files + Additional XMP RDF
+title: PDF/A-3 associated files + Additional XMP RDF (ZUGFeRD/Factur-X)
 parent_title: What Else Can I Do
 permalink: /what-else-can-i-do/pdf-a3-xmp-rdf.html
 modification_time: 2017-09-25T19:00:07+00:00
@@ -9,7 +9,7 @@ modification_time: 2017-09-25T19:00:07+00:00
 It is possible to attach files "PDF/A-3" way (via "Associated Files" /AF key)
 and inject additional XMP RDF to the document metadata.
 
-This allows to generate ZUGFeRD Invoices as defined by [ZUGFeRD standard][1].
+This allows to generate ZUGFeRD/Factur-X Invoices as defined by [ZUGFeRD standard][1] and [Factur-X standard][2] respectively.
 
 ```php
 <?php
@@ -37,4 +37,5 @@ $rdf .= '</rdf:Description>'."\n";
 $mpdf->SetAdditionalXmpRdf($rdf);
 ```
 
-[1]: http://www.ferd-net.de/zugferd/specification/index.html
+[1]: https://www.ferd-net.de/en/standards/zugferd/factur-x
+[2]: https://fnfe-mpe.org/factur-x/factur-x_en/
