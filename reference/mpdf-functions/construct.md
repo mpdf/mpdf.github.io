@@ -57,7 +57,7 @@ Initialise an instance of mPDF class.
 
     Country/language codes are defined in `\Mpdf\LangToFont` class
 
-    A country/language code can be passed as e.g. `'en-GB'` or `'en_GB'` or `'en'`
+    A country/language code can be passed as `'en-GB'` or `'en'`, and should follow the [BCP 47 language tag format](https://developer.mozilla.org/en-US/docs/Glossary/BCP_47_language_tag). 
 
     <div class="alert alert-info" role="alert" markdown="1">
       **Note:** If the <span class="parameter">mode</span> is set by passing a country/language string,
