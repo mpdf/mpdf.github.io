@@ -10,6 +10,8 @@ This script was written to create a new PDF file based on a pre-existing PDF doc
 into an A5 booklet ready for duplex printing. Page order is adjusted, and page orientation is rotated so that
 it prints a landscape booklet.
 
+## For mpdf 8.0
+
 ```php
 <?php
 // require composer autoload
@@ -25,7 +27,51 @@ $mpdf = new \Mpdf\Mpdf([
     'margin_footer' => 0,
 ]);
 
-$mpdf->SetImportUse(); // only with mPDF <8.0
+$pw = $mpdf->w / 2;
+$ph = $mpdf->h;
+
+$mpdf->SetDisplayMode('fullpage');
+
+$pagecount = $mpdf->SetSourceFile('A4sourcefile.pdf');
+
+for ($i = 1; $i <= $pagecount; $i++) {
+    $mpdf->AddPage();
+
+    // add odd pages on the left side
+    $tplId = $mpdf->importPage($i);
+    $mpdf->useTemplate($tplId, 0, 0, $pw, $ph);
+
+    // add even pages on the right side
+    ++$i;
+    if ($i <= $pagecount) {
+        $tplId = $mpdf2->importPage($i);
+        $mpdf2->useTemplate($tplId, $pw, 0, $pw, $ph);
+     }
+}
+
+$mpdf->Output();
+exit;
+```
+
+
+## For mpdf <8.0
+
+```php
+<?php
+// require composer autoload
+require __DIR__ . '/vendor/autoload.php';
+
+$mpdf = new \Mpdf\Mpdf([
+    'format' => 'A4-L',
+    'margin_left' => 0,
+    'margin_right' => 0,
+    'margin_top' => 0,
+    'margin_bottom' => 0,
+    'margin_header' => 0,
+    'margin_footer' => 0,
+]);
+
+$mpdf->SetImportUse(); 
 
 $ow = $mpdf->h;
 $oh = $mpdf->w;
@@ -35,50 +81,19 @@ $ph = $mpdf->h;
 $mpdf->SetDisplayMode('fullpage');
 
 $pagecount = $mpdf->SetSourceFile('A4sourcefile.pdf');
-$pp = GetBookletPages($pagecount);
 
-foreach ($pp as $v) {
-
+for ($i = 1; $i <= $pagecount; $i++) {
     $mpdf->AddPage();
 
-    if ($v[0] > 0 && $v[0] <= $pagecount) {
-        $tplIdx = $mpdf->ImportPage($v[0], 0, 0, $ow, $oh);
-        $mpdf->UseTemplate($tplIdx, 0, 0, $pw, $ph);
-    }
+    // add odd pages on the left side
+    $tplIdx = $mpdf->ImportPage($i, 0, 0, $ow, $oh);
+    $mpdf->UseTemplate($tplIdx, 0, 0, $pw, $ph);
 
-    if ($v[1] > 0 && $v[1] <= $pagecount) {
-        $tplIdx = $mpdf->ImportPage($v[1], 0, 0, $ow, $oh);
+    // add even pages on the right side
+    ++$i;
+    if ($i <= $pagecount) {
+        $tplIdx = $mpdf->ImportPage($i, 0, 0, $ow, $oh);
         $mpdf->UseTemplate($tplIdx, $pw, 0, $pw, $ph);
-    }
+     }
 }
-
-$mpdf->Output();
-exit;
-
-function GetBookletPages($np, $backcover = true) {
-    $lastpage = $np;
-    $np = 4 * ceil($np / 4);
-    $pp = [];
-
-    for ($i = 1; $i <= $np / 2; $i++) {
-
-        $p1 = $np - $i + 1;
-
-        if ($backcover) {
-            if ($i == 1) {
-                $p1 = $lastpage;
-            } elseif ($p1 >= $lastpage) {
-                $p1 = 0;
-            }
-        }
-
-        $pp[] = ($i % 2 == 1)
-            ? [ $p1,  $i ]
-            : [ $i, $p1 ];
-    }
-
-    return $pp;
-}
-
 ```
-
